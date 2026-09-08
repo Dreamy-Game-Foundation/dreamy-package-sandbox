@@ -1,0 +1,14 @@
+{
+  "name": "Dreamy.DataSave.Sandbox",
+  "rootNamespace": "Dreamy.Sandbox.DataSave",
+  "references": ["Dreamy.Datasave.Runtime"],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

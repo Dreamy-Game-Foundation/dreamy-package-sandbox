@@ -1,0 +1,14 @@
+{
+  "name": "Dreamy.Audio.Sandbox",
+  "rootNamespace": "Dreamy.Sandbox.Audio",
+  "references": ["Dreamy.Audio.Runtime", "Dreamy.Audio.Runtime.Components"],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

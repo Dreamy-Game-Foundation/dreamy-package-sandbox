@@ -1,0 +1,14 @@
+{
+  "name": "Dreamy.Feedback.Sandbox",
+  "rootNamespace": "Dreamy.Sandbox.Feedback",
+  "references": ["Dreamy.Core.Runtime", "Dreamy.Feedback"],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

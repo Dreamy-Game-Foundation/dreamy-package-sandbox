@@ -1,0 +1,14 @@
+{
+  "name": "Dreamy.Assets.Sandbox",
+  "rootNamespace": "Dreamy.Sandbox.Assets",
+  "references": ["Dreamy.Core.Runtime", "Dreamy.Assets.Runtime"],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

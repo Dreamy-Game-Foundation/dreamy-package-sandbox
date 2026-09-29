@@ -1,0 +1,29 @@
+{
+    "name": "Dreamy.Template.Runtime",
+    "rootNamespace": "Dreamy.Template",
+    "references": [
+        "Dreamy.Core.Runtime",
+        "Dreamy.Datasave.Runtime",
+        "Dreamy.DataConfig.Runtime",
+        "Dreamy.Assets.Runtime",
+        "Dreamy.UI.Runtime",
+        "UniTask",
+        "Unity.TextMeshPro",
+        "LeanPool",
+        "Unity.ResourceManager",
+        "Unity.Addressables",
+        "UniTask.Addressables",
+        "Dreamy.Audio.Runtime",
+        "Dreamy.Audio.Runtime.Components",
+        "Dreamy.Audio.Editor"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

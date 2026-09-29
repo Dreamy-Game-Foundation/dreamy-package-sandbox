@@ -9,23 +9,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfbc92e368fc5fb46b24472b420e3eae, type: 3}
-  m_Name: UiDerJonasDaAdventureTime167405
-  m_EditorClassIdentifier: Dreamy.Audio.Runtime::Dreamy.Audio.MusicAudioFile
-  key: music.main
-  displayName: BGM
-  category: UI
-  bus: music
-  eventType: 2
+  m_Script: {fileID: 11500000, guid: a8718cac20a83e1479f841bcd34e9b33, type: 3}
+  m_Name: New Sound
+  m_EditorClassIdentifier: Dreamy.Audio.Runtime::Dreamy.Audio.SoundAudioFile
+  key: 
+  displayName: 
+  category: 
+  bus: sfx
+  eventType: 0
   selectionMode: 0
-  clips:
-  - {fileID: 8300000, guid: 0d3687de932166b42b46616cc69befd4, type: 3}
+  clips: []
   volume: 1
   pitch: 1
   randomPitch: 0.05
   fadeInSeconds: 0
   fadeOutSeconds: 0
-  loop: 1
+  startSeconds: 0
+  endSeconds: 0
+  loop: 0
+  loopMode: 0
+  loopStartSeconds: 0
+  loopEndSeconds: 0
   neverRepeat: 0
   timeMode: 0
   priority: 128

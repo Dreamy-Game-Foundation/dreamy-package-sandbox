@@ -16,9 +16,12 @@ MonoBehaviour:
   generatedNamespace: Dreamy.Audio.Generated
   soundEnumName: SoundKeys
   musicEnumName: MusicKeys
-  soundCategories: []
+  soundCategories:
+  - UI
   musicCategories: []
   sounds:
+  - {fileID: 11400000, guid: 8f785f16e51439ede9b243f2676ab487, type: 2}
   - {fileID: 11400000, guid: 6ff37d2fa46c95a4ea4e2f133338f5a7, type: 2}
+  - {fileID: 11400000, guid: 2ea1642c9969c0881b0e7c4cdfef55a4, type: 2}
   music:
   - {fileID: 11400000, guid: e6238f7bc8301f64e8a5c6980a4c6ae4, type: 2}

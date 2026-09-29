@@ -15,7 +15,7 @@
       "hash": "4c1537e2a618043d52436f65411f18919b8c1318"
     },
     "com.dreamy.assets": {
-      "version": "file:../../Packages/com.dreamy.assets",
+      "version": "file:../LocalPackages/com.dreamy.assets",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -25,7 +25,7 @@
       }
     },
     "com.dreamy.audio": {
-      "version": "file:../../Packages/com.dreamy.audio",
+      "version": "file:../LocalPackages/com.dreamy.audio",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -36,13 +36,13 @@
       }
     },
     "com.dreamy.core": {
-      "version": "file:../../Packages/com.dreamy.core",
+      "version": "file:../LocalPackages/com.dreamy.core",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "com.dreamy.dataconfig": {
-      "version": "file:../../Packages/com.dreamy.dataconfig",
+      "version": "file:../LocalPackages/com.dreamy.dataconfig",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -50,7 +50,7 @@
       }
     },
     "com.dreamy.datasave": {
-      "version": "file:../../Packages/com.dreamy.datasave",
+      "version": "file:../LocalPackages/com.dreamy.datasave",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -58,7 +58,7 @@
       }
     },
     "com.dreamy.editor-tools": {
-      "version": "file:../../Packages/com.dreamy.editor-tools",
+      "version": "file:../LocalPackages/com.dreamy.editor-tools",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -66,7 +66,7 @@
       }
     },
     "com.dreamy.ui": {
-      "version": "file:../../Packages/com.dreamy.ui",
+      "version": "file:../LocalPackages/com.dreamy.ui",
       "depth": 0,
       "source": "local",
       "dependencies": {

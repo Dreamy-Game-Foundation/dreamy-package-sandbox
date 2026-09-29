@@ -13,9 +13,17 @@ MonoBehaviour:
   m_Name: DreamyAudioProfile
   m_EditorClassIdentifier: Dreamy.Audio.Runtime::Dreamy.Audio.DreamyAudioProfile
   schemaVersion: 1
-  buses: []
-  catalogs:
-  - {fileID: 11400000, guid: f19e906e9c664d344b14da77ddd6716b, type: 2}
+  buses:
+  - id: sfx
+    displayName: SFX
+    mixerGroup: {fileID: 0}
+    exposedVolumeParameter: 
+    defaultVolume: 1
+    persistVolume: 1
+    preferenceKey: 
+    voiceBudget: 32
+  libraries:
+  - {fileID: 11400000, guid: 3db2eb35a6c335645b8bb78adfec4059, type: 2}
   initialPoolSize: 16
   maxPoolSize: 64
   dontDestroyOnLoad: 1

@@ -3,6 +3,8 @@ using Dreamy.Core;
 using Dreamy.DataConfig;
 using Dreamy.Datasave;
 using Dreamy.Audio;
+using Dreamy.Audio.Generated;
+
 using UnityEngine;
 
 namespace Dreamy.Template
@@ -25,7 +27,7 @@ namespace Dreamy.Template
             }
 
             await SceneLoader.Instance.LoadScene(Address.MainScene);
-            DreamyAudio.PlayMusic(new AudioKey("core", "music.main"));
+            DreamyAudio.PlayMusic(AudioLibraryIds.Music.MusicMain);
         }
     }
 }

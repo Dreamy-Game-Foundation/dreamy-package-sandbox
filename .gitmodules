@@ -1,0 +1,21 @@
+[submodule "LocalPackages/com.dreamy.assets"]
+	path = LocalPackages/com.dreamy.assets
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.assets.git
+[submodule "LocalPackages/com.dreamy.audio"]
+	path = LocalPackages/com.dreamy.audio
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.audio.git
+[submodule "LocalPackages/com.dreamy.core"]
+	path = LocalPackages/com.dreamy.core
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.core.git
+[submodule "LocalPackages/com.dreamy.dataconfig"]
+	path = LocalPackages/com.dreamy.dataconfig
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.dataconfig.git
+[submodule "LocalPackages/com.dreamy.datasave"]
+	path = LocalPackages/com.dreamy.datasave
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.datasave.git
+[submodule "LocalPackages/com.dreamy.editor-tools"]
+	path = LocalPackages/com.dreamy.editor-tools
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.editor-tools.git
+[submodule "LocalPackages/com.dreamy.ui"]
+	path = LocalPackages/com.dreamy.ui
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.ui.git

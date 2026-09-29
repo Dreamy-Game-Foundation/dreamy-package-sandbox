@@ -15,7 +15,8 @@
         "UniTask.Addressables",
         "Dreamy.Audio.Runtime",
         "Dreamy.Audio.Runtime.Components",
-        "Dreamy.Audio.Editor"
+        "Dreamy.Audio.Editor",
+        "Dreamy.Generated"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

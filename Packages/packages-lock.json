@@ -65,6 +65,33 @@
         "com.unity.nuget.newtonsoft-json": "3.2.1"
       }
     },
+    "com.dreamy.feature": {
+      "version": "file:../LocalPackages/com.dreamy.feature",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.dreamy.ui": "0.2.0"
+      }
+    },
+    "com.dreamy.feature.daily-reward": {
+      "version": "file:../LocalPackages/com.dreamy.feature.daily-reward",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.dreamy.core": "1.1.2",
+        "com.dreamy.dataconfig": "0.2.0",
+        "com.dreamy.datasave": "0.2.0",
+        "com.dreamy.audio": "0.1.0",
+        "com.dreamy.feature": "0.1.0",
+        "com.dreamy.feature.economy": "0.1.0"
+      }
+    },
+    "com.dreamy.feature.economy": {
+      "version": "file:../LocalPackages/com.dreamy.feature.economy",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.dreamy.ui": {
       "version": "file:../LocalPackages/com.dreamy.ui",
       "depth": 0,

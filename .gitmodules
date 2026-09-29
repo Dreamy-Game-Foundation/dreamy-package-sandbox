@@ -19,3 +19,12 @@
 [submodule "LocalPackages/com.dreamy.ui"]
 	path = LocalPackages/com.dreamy.ui
 	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.ui.git
+[submodule "LocalPackages/com.dreamy.feature"]
+	path = LocalPackages/com.dreamy.feature
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.git
+[submodule "LocalPackages/com.dreamy.feature.economy"]
+	path = LocalPackages/com.dreamy.feature.economy
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.economy.git
+[submodule "LocalPackages/com.dreamy.feature.daily-reward"]
+	path = LocalPackages/com.dreamy.feature.daily-reward
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.daily-reward.git

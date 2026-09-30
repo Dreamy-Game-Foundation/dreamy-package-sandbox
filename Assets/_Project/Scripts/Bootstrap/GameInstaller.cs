@@ -1,11 +1,13 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Dreamy.Audio;
 using Dreamy.Core;
 using Dreamy.DataConfig;
 using Dreamy.Datasave;
 using Dreamy.DailyReward;
 using Dreamy.Economy;
+using Dreamy.Feature.Shop.Integration;
 using Dreamy.Shop;
 using Dreamy.Template.Demo;
 using Dreamy.Template.Pooling;
@@ -18,6 +20,7 @@ namespace Dreamy.Template
     public sealed class GameInstaller : MonoBehaviour
     {
         [SerializeField] private bool prettySaveInEditor = true;
+        [SerializeField] private DreamyAudioProfile audioProfile;
 
         private IDatasaveService datasave;
         private IPoolService poolService;
@@ -42,8 +45,10 @@ namespace Dreamy.Template
                 // 1. Install Datasave Service
                 InstallDatasaveService();
 
-                // 2. Install Pool and other future services
+                // 2. Install Pool and audio services
                 InstallOtherServices();
+                InstallAudioService();
+
 
                 // 3. Install DataConfig Service (called last due to async loading)
                 await InstallDataConfigServiceAsync(cancellationToken);
@@ -84,8 +89,23 @@ namespace Dreamy.Template
             poolService = new LeanPoolService();
             ServiceLocator.Register<IPoolService>(poolService);
 
-            resourceWallet = new FoundationResourceWallet(100);
+            resourceWallet = new DatasaveResourceWallet(
+                datasave,
+                initialBalances: new[] { new ResourceAmount(new ResourceId("currency.coin"), 100) });
             ServiceLocator.Register<IResourceWallet>(resourceWallet);
+            ServiceLocator.Register<IResourceBalanceProvider>((IResourceBalanceProvider)resourceWallet);
+            ServiceLocator.Register<IShopPurchaseGateway>(new SimulatedShopPurchaseGateway());
+        }
+
+private void InstallAudioService()
+        {
+            if (audioProfile == null)
+            {
+                throw new InvalidOperationException("GameInstaller requires a DreamyAudioProfile for Settings.");
+            }
+
+            DreamyAudio.Initialize(audioProfile);
+            ServiceLocator.Register<IAudioService>(DreamyAudio.Service);
         }
 
         private async UniTask InstallDataConfigServiceAsync(CancellationToken cancellationToken)
@@ -133,6 +153,9 @@ namespace Dreamy.Template
 
             ServiceLocator.Unregister<IPoolService>();
             ServiceLocator.Unregister<IResourceWallet>();
+            ServiceLocator.Unregister<IResourceBalanceProvider>();
+            ServiceLocator.Unregister<IShopPurchaseGateway>();
+            ServiceLocator.Unregister<IAudioService>();
             ServiceLocator.Unregister<IShopService>();
             ServiceLocator.Unregister<IDailyRewardService>();
         }

@@ -24,9 +24,11 @@ namespace Dreamy.Feature.Shop.Integration
             ShopOfferConfig offer = state.Offer;
             offerId = offer.Id;
             titleText.text = offer.TitleKey;
-            costText.text = $"{offer.Cost.Amount} {offer.Cost.ResourceId}";
+            costText.text = state.PurchaseLabel;
             rewardText.text = $"{offer.Rewards[0].Resource.Amount} {offer.Rewards[0].Resource.ResourceId}";
         }
+
+        public void SetPurchaseInteractable(bool interactable) => purchaseButton.interactable = interactable;
 
         private void RequestPurchase() => PurchaseRequested?.Invoke(offerId);
     }

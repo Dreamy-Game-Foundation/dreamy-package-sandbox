@@ -22,6 +22,38 @@ MonoBehaviour:
     persistVolume: 1
     preferenceKey: 
     voiceBudget: 32
+  - id: music
+    displayName: Music
+    mixerGroup: {fileID: 0}
+    exposedVolumeParameter: 
+    defaultVolume: 0.8
+    persistVolume: 1
+    preferenceKey: 
+    voiceBudget: 2
+  - id: ui
+    displayName: UI
+    mixerGroup: {fileID: 0}
+    exposedVolumeParameter: 
+    defaultVolume: 1
+    persistVolume: 1
+    preferenceKey: 
+    voiceBudget: 8
+  - id: voice
+    displayName: Voice
+    mixerGroup: {fileID: 0}
+    exposedVolumeParameter: 
+    defaultVolume: 1
+    persistVolume: 1
+    preferenceKey: 
+    voiceBudget: 4
+  - id: ambience
+    displayName: Ambience
+    mixerGroup: {fileID: 0}
+    exposedVolumeParameter: 
+    defaultVolume: 0.7
+    persistVolume: 1
+    preferenceKey: 
+    voiceBudget: 4
   libraries:
   - {fileID: 11400000, guid: 3db2eb35a6c335645b8bb78adfec4059, type: 2}
   initialPoolSize: 16

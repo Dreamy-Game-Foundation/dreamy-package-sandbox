@@ -21,6 +21,8 @@ namespace Dreamy.Template.Demo
         [SerializeField] private Button loadButton;
         [SerializeField] private Button openShopButton;
         [SerializeField] private Button openDailyRewardButton;
+        [SerializeField] private Button openSettingsButton;
+        [SerializeField] private Button openRateUsButton;
 
         public override bool CanBack => true;
 
@@ -31,6 +33,8 @@ namespace Dreamy.Template.Demo
         public event Action LoadRequested;
         public event Action OpenShopRequested;
         public event Action OpenDailyRewardRequested;
+        public event Action OpenSettingsRequested;
+        public event Action OpenRateUsRequested;
         public event Action Destroyed;
 
         private void OnEnable()
@@ -42,6 +46,8 @@ namespace Dreamy.Template.Demo
             loadButton.onClick.AddListener(OnLoad);
             if (openShopButton != null) openShopButton.onClick.AddListener(OnOpenShop);
             if (openDailyRewardButton != null) openDailyRewardButton.onClick.AddListener(OnOpenDailyReward);
+            if (openSettingsButton != null) openSettingsButton.onClick.AddListener(OnOpenSettings);
+            if (openRateUsButton != null) openRateUsButton.onClick.AddListener(OnOpenRateUs);
         }
 
         protected override void OnDisable()
@@ -53,6 +59,8 @@ namespace Dreamy.Template.Demo
             loadButton.onClick.RemoveListener(OnLoad);
             if (openShopButton != null) openShopButton.onClick.RemoveListener(OnOpenShop);
             if (openDailyRewardButton != null) openDailyRewardButton.onClick.RemoveListener(OnOpenDailyReward);
+            if (openSettingsButton != null) openSettingsButton.onClick.RemoveListener(OnOpenSettings);
+            if (openRateUsButton != null) openRateUsButton.onClick.RemoveListener(OnOpenRateUs);
             base.OnDisable();
         }
 
@@ -67,6 +75,8 @@ namespace Dreamy.Template.Demo
         private void OnLoad() => LoadRequested?.Invoke();
         private void OnOpenShop() => OpenShopRequested?.Invoke();
         private void OnOpenDailyReward() => OpenDailyRewardRequested?.Invoke();
+        private void OnOpenSettings() => OpenSettingsRequested?.Invoke();
+        private void OnOpenRateUs() => OpenRateUsRequested?.Invoke();
 
         protected override void OnDestroy()
         {

@@ -5,6 +5,7 @@ using Dreamy.DataConfig;
 using Dreamy.Datasave;
 using Dreamy.DailyReward;
 using Dreamy.Feature.DailyReward.Integration;
+
 using Dreamy.Feature.Shop.Integration;
 using Dreamy.Shop;
 using Dreamy.Template.Pooling;
@@ -20,6 +21,8 @@ namespace Dreamy.Template.Demo
         [SerializeField] private Button togglePanelButton;
         [SerializeField] private ShopPanel featureShopPrefab;
         [SerializeField] private DailyRewardPanel dailyRewardPrefab;
+        [SerializeField] private GameObject settingsPrefab;
+        [SerializeField] private GameObject rateUsPrefab;
 
         private IDatasaveService datasave;
         private TemplateSave saveData;
@@ -46,6 +49,13 @@ namespace Dreamy.Template.Demo
             if (featureShopPrefab == null)
             {
                 Debug.LogError("[FoundationDemo] Feature Shop prefab is not assigned.", this);
+                enabled = false;
+                return;
+            }
+
+            if (settingsPrefab == null || rateUsPrefab == null)
+            {
+                Debug.LogError("[FoundationDemo] Settings and Rate Us prefabs must be assigned.", this);
                 enabled = false;
                 return;
             }
@@ -115,6 +125,8 @@ namespace Dreamy.Template.Demo
             target.LoadRequested += Load;
             target.OpenShopRequested += OpenShop;
             target.OpenDailyRewardRequested += OpenDailyReward;
+            target.OpenSettingsRequested += OpenSettings;
+            target.OpenRateUsRequested += OpenRateUs;
             target.Destroyed += OnPanelDestroyed;
         }
 
@@ -128,6 +140,8 @@ namespace Dreamy.Template.Demo
             target.LoadRequested -= Load;
             target.OpenShopRequested -= OpenShop;
             target.OpenDailyRewardRequested -= OpenDailyReward;
+            target.OpenSettingsRequested -= OpenSettings;
+            target.OpenRateUsRequested -= OpenRateUs;
             target.Destroyed -= OnPanelDestroyed;
         }
 
@@ -177,6 +191,16 @@ namespace Dreamy.Template.Demo
         {
             if (dailyRewardPanel != null || dailyRewardPrefab == null) return;
             OpenDailyRewardAsync().Forget();
+        }
+
+        private void OpenSettings()
+        {
+            if (settingsPrefab != null) Instantiate(settingsPrefab, PanelManager.Instance.transform);
+        }
+
+        private void OpenRateUs()
+        {
+            if (rateUsPrefab != null) Instantiate(rateUsPrefab, PanelManager.Instance.transform);
         }
 
         private async UniTaskVoid OpenDailyRewardAsync()
@@ -382,7 +406,8 @@ namespace Dreamy.Template.Demo
                 dailyRewardPanel = null;
             }
             dailyRewardPresenter?.Dispose();
-            dailyRewardPresenter = null;
+            dailyRewardPresenter = null;if (togglePanelButton != null)
+dailyRewardPresenter = null;
 
             if (togglePanelButton != null)
             {

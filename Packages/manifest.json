@@ -13,6 +13,7 @@
     "com.dreamy.feature.daily-reward": "file:../LocalPackages/com.dreamy.feature.daily-reward",
     "com.dreamy.feature.economy": "file:../LocalPackages/com.dreamy.feature.economy",
     "com.dreamy.feature.shop": "file:../LocalPackages/com.dreamy.feature.shop",
+    "com.dreamy.feature.settings": "file:../LocalPackages/com.dreamy.feature.settings",
     "com.dreamy.ui": "file:../LocalPackages/com.dreamy.ui",
     "com.unity.addressables": "2.9.1",
     "com.unity.ai.navigation": "2.0.13",

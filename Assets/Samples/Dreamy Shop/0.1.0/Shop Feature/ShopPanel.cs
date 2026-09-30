@@ -37,6 +37,14 @@ namespace Dreamy.Feature.Shop.Integration
         public void ShowPurchaseResult(ShopPurchaseResult result) =>
             statusText.text = result.IsSuccess ? "Purchase complete" : result.Status.ToString();
 
+        public void SetPurchaseInteractable(bool interactable)
+        {
+            foreach (ShopOfferItem item in items)
+            {
+                item.SetPurchaseInteractable(interactable);
+            }
+        }
+
         public void Close() => Hide();
 
         protected override void OnDestroy()

@@ -54,6 +54,8 @@ MonoBehaviour:
   togglePanelButton: {fileID: 6335627652823668855}
   featureShopPrefab: {fileID: 8165051096297724194, guid: d6e00e3d3e7b2714581cc90c53ce61c2, type: 3}
   dailyRewardPrefab: {fileID: 894007173020597777, guid: 618a53c7404df3345904c4882b8fdaad, type: 3}
+  settingsPrefab: {fileID: 3536928556136900550, guid: aaf44ae2917c45749a7bdf79e64c2cc7, type: 3}
+  rateUsPrefab: {fileID: 3936894159055043097, guid: 38d8c1e2b942447a8e425a434326091e, type: 3}
 --- !u!223 &9023249614989747020
 Canvas:
   m_ObjectHideFlags: 0

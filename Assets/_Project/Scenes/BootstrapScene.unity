@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prettySaveInEditor: 1
+  audioProfile: {fileID: 11400000, guid: c4e3953452108ec49a054a2887fda1ed, type: 2}
 --- !u!4 &793437582
 Transform:
   m_ObjectHideFlags: 0

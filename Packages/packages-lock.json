@@ -63,7 +63,8 @@
       "depth": 0,
       "source": "local",
       "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "3.2.1"
+        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.cysharp.unitask": "2.5.10"
       }
     },
     "com.dreamy.datasave": {
@@ -97,14 +98,32 @@
         "com.dreamy.dataconfig": "0.2.0",
         "com.dreamy.datasave": "0.2.0",
         "com.dreamy.audio": "0.1.0",
-        "com.dreamy.feature.economy": "0.1.0"
+        "com.dreamy.feature.economy": "0.1.0",
+        "com.dreamy.feature": "0.1.0",
+        "com.dreamy.ui": "0.2.0"
       }
     },
     "com.dreamy.feature.economy": {
       "version": "file:../LocalPackages/com.dreamy.feature.economy",
       "depth": 0,
       "source": "local",
-      "dependencies": {}
+      "dependencies": {
+        "com.dreamy.core": "1.1.2",
+        "com.dreamy.ui": "0.2.0",
+        "com.dreamy.datasave": "0.2.0"
+      }
+    },
+    "com.dreamy.feature.settings": {
+      "version": "file:../LocalPackages/com.dreamy.feature.settings",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.dreamy.core": "1.1.2",
+        "com.dreamy.audio": "0.1.0",
+        "com.dreamy.feature": "0.1.0",
+        "com.dreamy.ui": "0.2.0",
+        "com.cysharp.unitask": "2.5.10"
+      }
     },
     "com.dreamy.feature.shop": {
       "version": "file:../LocalPackages/com.dreamy.feature.shop",
@@ -115,7 +134,8 @@
         "com.dreamy.dataconfig": "0.2.0",
         "com.dreamy.feature.economy": "0.1.0",
         "com.dreamy.feature": "0.1.0",
-        "com.dreamy.ui": "0.2.0"
+        "com.dreamy.ui": "0.2.0",
+        "com.cysharp.unitask": "2.5.10"
       }
     },
     "com.dreamy.ui": {

@@ -3,6 +3,10 @@ using Cysharp.Threading.Tasks;
 using Dreamy.Core;
 using Dreamy.DataConfig;
 using Dreamy.Datasave;
+using Dreamy.DailyReward;
+using Dreamy.Feature.DailyReward.Integration;
+using Dreamy.Feature.Shop.Integration;
+using Dreamy.Shop;
 using Dreamy.Template.Pooling;
 using Dreamy.UI;
 using UnityEngine;
@@ -14,11 +18,16 @@ namespace Dreamy.Template.Demo
     public sealed class FoundationDemoRoot : MonoBehaviour
     {
         [SerializeField] private Button togglePanelButton;
+        [SerializeField] private ShopPanel featureShopPrefab;
+        [SerializeField] private DailyRewardPanel dailyRewardPrefab;
 
         private IDatasaveService datasave;
         private TemplateSave saveData;
         private FoundationDemoPanel panel;
-        private UIShopPanel shopPanel;
+        private ShopPanel shopPanel;
+        private ShopPresenter shopPresenter;
+        private DailyRewardPanel dailyRewardPanel;
+        private DailyRewardPresenter dailyRewardPresenter;
         
         private int score;
         private float health = 100f;
@@ -34,10 +43,18 @@ namespace Dreamy.Template.Demo
                 return;
             }
 
+            if (featureShopPrefab == null)
+            {
+                Debug.LogError("[FoundationDemo] Feature Shop prefab is not assigned.", this);
+                enabled = false;
+                return;
+            }
+
             togglePanelButton.onClick.AddListener(TogglePanel);
+            InitializeAsync().Forget();
         }
 
-        private async void Start()
+        private async UniTaskVoid InitializeAsync()
         {
             try
             {
@@ -97,6 +114,7 @@ namespace Dreamy.Template.Demo
             target.SaveRequested += Save;
             target.LoadRequested += Load;
             target.OpenShopRequested += OpenShop;
+            target.OpenDailyRewardRequested += OpenDailyReward;
             target.Destroyed += OnPanelDestroyed;
         }
 
@@ -109,6 +127,7 @@ namespace Dreamy.Template.Demo
             target.SaveRequested -= Save;
             target.LoadRequested -= Load;
             target.OpenShopRequested -= OpenShop;
+            target.OpenDailyRewardRequested -= OpenDailyReward;
             target.Destroyed -= OnPanelDestroyed;
         }
 
@@ -154,6 +173,44 @@ namespace Dreamy.Template.Demo
             OpenShopAsync().Forget();
         }
 
+        private void OpenDailyReward()
+        {
+            if (dailyRewardPanel != null || dailyRewardPrefab == null) return;
+            OpenDailyRewardAsync().Forget();
+        }
+
+        private async UniTaskVoid OpenDailyRewardAsync()
+        {
+            try
+            {
+                DailyRewardPanel created = Instantiate(dailyRewardPrefab, PanelManager.Instance.transform);
+                await created.Init();
+                await created.PostInit();
+                dailyRewardPanel = created;
+                dailyRewardPanel.Destroyed += OnDailyRewardDestroyed;
+                dailyRewardPresenter = new DailyRewardPresenter(
+                    ServiceLocator.Get<IDailyRewardService>(), created);
+                dailyRewardPresenter.Show();
+                await created.Show();
+            }
+            catch (Exception exception)
+            {
+                Debug.LogException(exception, this);
+            }
+        }
+
+        private void OnDailyRewardDestroyed()
+        {
+            if (dailyRewardPanel != null)
+            {
+                dailyRewardPanel.Destroyed -= OnDailyRewardDestroyed;
+                dailyRewardPanel = null;
+            }
+
+            dailyRewardPresenter?.Dispose();
+            dailyRewardPresenter = null;
+        }
+
         private async UniTaskVoid OpenShopAsync()
         {
             if (isTransitioning) return;
@@ -168,9 +225,14 @@ namespace Dreamy.Template.Demo
                     await hidingPanel.Hide();
                 }
 
-                UIShopPanel created = await PanelManager.Instance.Show<UIShopPanel>(Address.ShopPanel);
+                ShopPanel created = Instantiate(featureShopPrefab, PanelManager.Instance.transform);
+                await created.Init();
+                await created.PostInit();
+                shopPresenter = new ShopPresenter(ServiceLocator.Get<IShopService>(), created);
                 shopPanel = created;
                 shopPanel.Destroyed += OnShopDestroyed;
+                shopPresenter.Show();
+                await shopPanel.Show();
             }
             catch (Exception exception)
             {
@@ -195,7 +257,7 @@ namespace Dreamy.Template.Demo
             {
                 if (shopPanel != null)
                 {
-                    UIShopPanel hidingShop = shopPanel;
+                    ShopPanel hidingShop = shopPanel;
                     shopPanel = null;
                     hidingShop.Destroyed -= OnShopDestroyed;
                     await hidingShop.Hide();
@@ -222,6 +284,13 @@ namespace Dreamy.Template.Demo
             {
                 shopPanel.Destroyed -= OnShopDestroyed;
                 shopPanel = null;
+            }
+
+            shopPresenter?.Dispose();
+            shopPresenter = null;
+            if (!isShuttingDown)
+            {
+                OpenDemoFromShop();
             }
         }
 
@@ -262,7 +331,7 @@ namespace Dreamy.Template.Demo
                     }
                     if (shopPanel != null)
                     {
-                        UIShopPanel hidingShop = shopPanel;
+                        ShopPanel hidingShop = shopPanel;
                         shopPanel = null;
                         hidingShop.Destroyed -= OnShopDestroyed;
                         await hidingShop.Hide();
@@ -304,6 +373,16 @@ namespace Dreamy.Template.Demo
                 shopPanel.Destroyed -= OnShopDestroyed;
                 shopPanel = null;
             }
+            shopPresenter?.Dispose();
+            shopPresenter = null;
+
+            if (dailyRewardPanel != null)
+            {
+                dailyRewardPanel.Destroyed -= OnDailyRewardDestroyed;
+                dailyRewardPanel = null;
+            }
+            dailyRewardPresenter?.Dispose();
+            dailyRewardPresenter = null;
 
             if (togglePanelButton != null)
             {

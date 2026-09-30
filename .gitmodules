@@ -28,3 +28,6 @@
 [submodule "LocalPackages/com.dreamy.feature.daily-reward"]
 	path = LocalPackages/com.dreamy.feature.daily-reward
 	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.daily-reward.git
+[submodule "LocalPackages/com.dreamy.feature.shop"]
+	path = LocalPackages/com.dreamy.feature.shop
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.shop.git

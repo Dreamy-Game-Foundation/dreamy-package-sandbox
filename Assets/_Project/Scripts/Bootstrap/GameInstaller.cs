@@ -4,6 +4,10 @@ using Cysharp.Threading.Tasks;
 using Dreamy.Core;
 using Dreamy.DataConfig;
 using Dreamy.Datasave;
+using Dreamy.DailyReward;
+using Dreamy.Economy;
+using Dreamy.Shop;
+using Dreamy.Template.Demo;
 using Dreamy.Template.Pooling;
 using Newtonsoft.Json;
 using UnityEngine;
@@ -17,6 +21,7 @@ namespace Dreamy.Template
 
         private IDatasaveService datasave;
         private IPoolService poolService;
+        private IResourceWallet resourceWallet;
 
         public static BootstrapState State { get; private set; }
         public static Exception InitializationException { get; private set; }
@@ -42,6 +47,8 @@ namespace Dreamy.Template
 
                 // 3. Install DataConfig Service (called last due to async loading)
                 await InstallDataConfigServiceAsync(cancellationToken);
+                ShopInstaller.Install();
+                DailyRewardInstaller.Install();
 
                 State = BootstrapState.Ready;
             }
@@ -77,7 +84,8 @@ namespace Dreamy.Template
             poolService = new LeanPoolService();
             ServiceLocator.Register<IPoolService>(poolService);
 
-            // [Add future services here]
+            resourceWallet = new FoundationResourceWallet(100);
+            ServiceLocator.Register<IResourceWallet>(resourceWallet);
         }
 
         private async UniTask InstallDataConfigServiceAsync(CancellationToken cancellationToken)
@@ -95,6 +103,8 @@ namespace Dreamy.Template
             // Example of registering a Table Config
             dataConfig.Register<DataConfigTable<TestConfig>>("testConfigs");
             dataConfig.Register<OfferConfigTable>("offerConfigs");
+            ShopInstaller.RegisterConfig(dataConfig);
+            DailyRewardInstaller.RegisterConfig(dataConfig);
 
             await dataConfig.InitializeAsync(cancellationToken);
             ServiceLocator.Register<IDataConfigService>(dataConfig);
@@ -122,6 +132,9 @@ namespace Dreamy.Template
             }
 
             ServiceLocator.Unregister<IPoolService>();
+            ServiceLocator.Unregister<IResourceWallet>();
+            ServiceLocator.Unregister<IShopService>();
+            ServiceLocator.Unregister<IDailyRewardService>();
         }
     }
 }

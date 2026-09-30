@@ -16,7 +16,12 @@
         "Dreamy.Audio.Runtime",
         "Dreamy.Audio.Runtime.Components",
         "Dreamy.Audio.Editor",
-        "Dreamy.Generated"
+        "Dreamy.Generated",
+        "Dreamy.Economy.Runtime",
+        "Dreamy.Shop.Runtime",
+        "Dreamy.Feature.Shop.Integration.Runtime"
+        ,"Dreamy.DailyReward.Runtime"
+        ,"Dreamy.Feature.DailyReward.Integration.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

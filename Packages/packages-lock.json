@@ -1,5 +1,22 @@
 {
   "dependencies": {
+    "com.coplaydev.unity-mcp": {
+      "version": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.modules.animation": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.physics2d": "1.0.0",
+        "com.unity.modules.uielements": "1.0.0",
+        "com.unity.modules.screencapture": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.nuget.newtonsoft-json": "3.0.2",
+        "com.unity.test-framework": "1.1.31"
+      },
+      "hash": "30d22075093d1d35dfb0091c1c7550e9ad948577"
+    },
     "com.cysharp.unitask": {
       "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
       "depth": 0,
@@ -69,9 +86,7 @@
       "version": "file:../LocalPackages/com.dreamy.feature",
       "depth": 0,
       "source": "local",
-      "dependencies": {
-        "com.dreamy.ui": "0.2.0"
-      }
+      "dependencies": {}
     },
     "com.dreamy.feature.daily-reward": {
       "version": "file:../LocalPackages/com.dreamy.feature.daily-reward",
@@ -82,7 +97,6 @@
         "com.dreamy.dataconfig": "0.2.0",
         "com.dreamy.datasave": "0.2.0",
         "com.dreamy.audio": "0.1.0",
-        "com.dreamy.feature": "0.1.0",
         "com.dreamy.feature.economy": "0.1.0"
       }
     },
@@ -91,6 +105,18 @@
       "depth": 0,
       "source": "local",
       "dependencies": {}
+    },
+    "com.dreamy.feature.shop": {
+      "version": "file:../LocalPackages/com.dreamy.feature.shop",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.dreamy.core": "1.1.2",
+        "com.dreamy.dataconfig": "0.2.0",
+        "com.dreamy.feature.economy": "0.1.0",
+        "com.dreamy.feature": "0.1.0",
+        "com.dreamy.ui": "0.2.0"
+      }
     },
     "com.dreamy.ui": {
       "version": "file:../LocalPackages/com.dreamy.ui",

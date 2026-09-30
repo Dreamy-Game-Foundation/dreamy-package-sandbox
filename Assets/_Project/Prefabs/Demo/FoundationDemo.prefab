@@ -52,6 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   togglePanelButton: {fileID: 6335627652823668855}
+  featureShopPrefab: {fileID: 8165051096297724194, guid: d6e00e3d3e7b2714581cc90c53ce61c2, type: 3}
+  dailyRewardPrefab: {fileID: 894007173020597777, guid: 618a53c7404df3345904c4882b8fdaad, type: 3}
 --- !u!223 &9023249614989747020
 Canvas:
   m_ObjectHideFlags: 0
@@ -70,6 +72,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -198,6 +201,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -406,12 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20ba6cf1c8b4c88a7dc40411527d24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originScale: 1
+  originScale: {x: 1, y: 1, z: 1}
   pressScaleMultiplier: 0.9
   releaseScaleMultiplier: 1.15
   duration: 0.1
-  playIdleAnimation: 1
-  idleScaleMultiplier: 1.15
-  idleDuration: 0.8
-  idleDelay: 0.2
-  idleEase: 4

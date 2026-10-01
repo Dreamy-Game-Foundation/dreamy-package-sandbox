@@ -43,6 +43,7 @@ Hai lệnh trên:
 | `com.dreamy.datasave` | `LocalPackages/com.dreamy.datasave` | [GitHub](https://github.com/Dreamy-Game-Foundation/com.dreamy.datasave) |
 | `com.dreamy.editor-tools` | `LocalPackages/com.dreamy.editor-tools` | [GitHub](https://github.com/Dreamy-Game-Foundation/com.dreamy.editor-tools) |
 | `com.dreamy.ui` | `LocalPackages/com.dreamy.ui` | [GitHub](https://github.com/Dreamy-Game-Foundation/com.dreamy.ui) |
+| `com.dreamy.feature.missions` | `LocalPackages/com.dreamy.feature.missions` | [GitHub](https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.missions) |
 
 Kiểm tra trạng thái sau khi khởi tạo:
 

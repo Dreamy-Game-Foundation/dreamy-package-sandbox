@@ -1,4 +1,5 @@
 {
+  "testables": ["com.dreamy.feature.missions"],
   "dependencies": {
     "com.coplaydev.unity-mcp": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#main",
     "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
@@ -13,6 +14,7 @@
     "com.dreamy.feature.daily-reward": "file:../LocalPackages/com.dreamy.feature.daily-reward",
     "com.dreamy.feature.economy": "file:../LocalPackages/com.dreamy.feature.economy",
     "com.dreamy.feature.progression": "file:../LocalPackages/com.dreamy.feature.progression",
+    "com.dreamy.feature.missions": "file:../LocalPackages/com.dreamy.feature.missions",
     "com.dreamy.feature.shop": "file:../LocalPackages/com.dreamy.feature.shop",
     "com.dreamy.feature.settings": "file:../LocalPackages/com.dreamy.feature.settings",
     "com.dreamy.ui": "file:../LocalPackages/com.dreamy.ui",

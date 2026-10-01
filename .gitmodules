@@ -34,3 +34,6 @@
 [submodule "LocalPackages/com.dreamy.feature.settings"]
 	path = LocalPackages/com.dreamy.feature.settings
 	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.settings.git
+[submodule "LocalPackages/com.dreamy.feature.progression"]
+	path = LocalPackages/com.dreamy.feature.progression
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.progression.git

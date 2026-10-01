@@ -12,6 +12,7 @@
     "com.dreamy.feature": "file:../LocalPackages/com.dreamy.feature",
     "com.dreamy.feature.daily-reward": "file:../LocalPackages/com.dreamy.feature.daily-reward",
     "com.dreamy.feature.economy": "file:../LocalPackages/com.dreamy.feature.economy",
+    "com.dreamy.feature.progression": "file:../LocalPackages/com.dreamy.feature.progression",
     "com.dreamy.feature.shop": "file:../LocalPackages/com.dreamy.feature.shop",
     "com.dreamy.feature.settings": "file:../LocalPackages/com.dreamy.feature.settings",
     "com.dreamy.ui": "file:../LocalPackages/com.dreamy.ui",

@@ -63,8 +63,7 @@
       "depth": 0,
       "source": "local",
       "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "3.2.1",
-        "com.cysharp.unitask": "2.5.10"
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
       }
     },
     "com.dreamy.datasave": {
@@ -111,6 +110,18 @@
         "com.dreamy.core": "1.1.2",
         "com.dreamy.ui": "0.2.0",
         "com.dreamy.datasave": "0.2.0"
+      }
+    },
+    "com.dreamy.feature.progression": {
+      "version": "file:../LocalPackages/com.dreamy.feature.progression",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.dreamy.core": "1.1.2",
+        "com.dreamy.dataconfig": "0.2.0",
+        "com.dreamy.datasave": "0.2.0",
+        "com.dreamy.feature.economy": "0.1.0",
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
       }
     },
     "com.dreamy.feature.settings": {

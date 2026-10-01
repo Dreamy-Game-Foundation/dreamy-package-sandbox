@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 9023249614989747020}
   - component: {fileID: 7201267720371771646}
+  - component: {fileID: 7617593298125286912}
   m_Layer: 5
   m_Name: FoundationDemo
   m_TagString: Untagged
@@ -97,6 +98,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 55
+--- !u!114 &7617593298125286912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379b7857ec555c054b172ade75ed9536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.Template.Runtime::Dreamy.Template.Demo.FoundationTutorialAdapter
+  demoRoot: {fileID: 11400000}
+  overlayPrefab: {fileID: 221460424617847799, guid: 60d34a9fda7f832b6a3da65e17bea3ec, type: 3}
 --- !u!1 &480009875226559304
 GameObject:
   m_ObjectHideFlags: 0

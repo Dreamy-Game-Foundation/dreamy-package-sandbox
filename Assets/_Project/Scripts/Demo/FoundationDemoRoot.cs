@@ -24,6 +24,15 @@ namespace Dreamy.Template.Demo
         [SerializeField] private GameObject settingsPrefab;
         [SerializeField] private GameObject rateUsPrefab;
 
+        public FoundationDemoPanel CurrentPanel => panel;
+        public ShopPanel CurrentShop => shopPanel;
+        public bool IsTransitioning => isTransitioning;
+        public void OpenShopForTutorial() => OpenShop();
+        public event Action<FoundationDemoPanel> DemoPanelReady;
+        public event Action ScoreAdded;
+        public event Action ShopOpening;
+        public event Action<ShopPanel> ShopReady;
+
         private IDatasaveService datasave;
         private TemplateSave saveData;
         private FoundationDemoPanel panel;
@@ -114,6 +123,7 @@ namespace Dreamy.Template.Demo
                 .GetTable<TemplateConfig>();
             created.SetStatus(
                 $"PASS | launch={saveData.LaunchCount} | config coins={config.StartingCoins}");
+            DemoPanelReady?.Invoke(created);
         }
 
         private void BindPanel(FoundationDemoPanel target)
@@ -150,6 +160,7 @@ namespace Dreamy.Template.Demo
             score += 10;
             RefreshPanel();
             panel?.SetStatus($"Score changed | score={score}");
+            ScoreAdded?.Invoke();
         }
 
         private void Damage()
@@ -184,6 +195,8 @@ namespace Dreamy.Template.Demo
 
         private void OpenShop()
         {
+            if (isTransitioning || isShuttingDown) return;
+            ShopOpening?.Invoke();
             OpenShopAsync().Forget();
         }
 
@@ -257,6 +270,7 @@ namespace Dreamy.Template.Demo
                 shopPanel.Destroyed += OnShopDestroyed;
                 shopPresenter.Show();
                 await shopPanel.Show();
+                ShopReady?.Invoke(created);
             }
             catch (Exception exception)
             {
@@ -406,8 +420,7 @@ namespace Dreamy.Template.Demo
                 dailyRewardPanel = null;
             }
             dailyRewardPresenter?.Dispose();
-            dailyRewardPresenter = null;if (togglePanelButton != null)
-dailyRewardPresenter = null;
+            dailyRewardPresenter = null;
 
             if (togglePanelButton != null)
             {

@@ -40,3 +40,6 @@
 [submodule "LocalPackages/com.dreamy.feature.missions"]
 	path = LocalPackages/com.dreamy.feature.missions
 	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.missions.git
+[submodule "LocalPackages/com.dreamy.feature.tutorial"]
+	path = LocalPackages/com.dreamy.feature.tutorial
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.tutorial.git

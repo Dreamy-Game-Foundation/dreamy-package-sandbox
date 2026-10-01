@@ -6,6 +6,7 @@ using Dreamy.Core;
 using Dreamy.DataConfig;
 using Dreamy.Datasave;
 using Dreamy.DailyReward;
+using Dreamy.Tutorial;
 using Dreamy.Economy;
 using Dreamy.Feature.Shop.Integration;
 using Dreamy.Shop;
@@ -125,6 +126,7 @@ private void InstallAudioService()
             dataConfig.Register<OfferConfigTable>("offerConfigs");
             ShopInstaller.RegisterConfig(dataConfig);
             DailyRewardInstaller.RegisterConfig(dataConfig);
+            TutorialInstaller.RegisterConfig(dataConfig);
 
             await dataConfig.InitializeAsync(cancellationToken);
             ServiceLocator.Register<IDataConfigService>(dataConfig);

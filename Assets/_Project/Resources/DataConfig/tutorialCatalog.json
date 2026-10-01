@@ -1,0 +1,46 @@
+{
+  "catalogId": "foundation",
+  "revision": 1,
+  "flows": [
+    {
+      "id": "foundation",
+      "allowSkip": true,
+      "steps": [
+        {
+          "id": "welcome",
+          "messageKey": "Welcome to Dreamy! Press Next.",
+          "completionMode": "Next"
+        },
+        {
+          "id": "add-score",
+          "messageKey": "Press Add Score.",
+          "targetId": "foundation.add-score",
+          "completionMode": "HostSignal",
+          "signalKey": "foundation.score-added",
+          "blockOutsideTarget": true
+        },
+        {
+          "id": "open-shop",
+          "messageKey": "Open the Shop.",
+          "targetId": "foundation.open-shop",
+          "completionMode": "HostSignal",
+          "signalKey": "foundation.shop-opened",
+          "blockOutsideTarget": true
+        },
+        {
+          "id": "close-shop",
+          "messageKey": "Close the Shop to return to the demo.",
+          "targetId": "foundation.close-shop",
+          "completionMode": "HostSignal",
+          "signalKey": "foundation.shop-closed",
+          "blockOutsideTarget": true
+        },
+        {
+          "id": "done",
+          "messageKey": "All done! Press Next to save tutorial completion.",
+          "completionMode": "Next"
+        }
+      ]
+    }
+  ]
+}

@@ -25,6 +25,8 @@ namespace Dreamy.Template.Demo
         [SerializeField] private Button openRateUsButton;
 
         public override bool CanBack => true;
+        public Button TutorialAddScoreButton => addScoreButton;
+        public Button TutorialOpenShopButton => openShopButton;
 
         public event Action AddScoreRequested;
         public event Action DamageRequested;

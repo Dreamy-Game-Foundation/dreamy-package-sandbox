@@ -15,13 +15,14 @@
         "UniTask.Addressables",
         "Dreamy.Audio.Runtime",
         "Dreamy.Audio.Runtime.Components",
-        "Dreamy.Audio.Editor",
         "Dreamy.Generated",
         "Dreamy.Economy.Runtime",
         "Dreamy.Shop.Runtime",
-        "Dreamy.Feature.Shop.Integration.Runtime"
-        ,"Dreamy.DailyReward.Runtime"
-        ,"Dreamy.Feature.DailyReward.Integration.Runtime"
+        "Dreamy.Feature.Shop.Integration.Runtime",
+        "Dreamy.DailyReward.Runtime",
+        "Dreamy.Feature.DailyReward.Integration.Runtime",
+        "Dreamy.Tutorial.Runtime",
+        "Dreamy.Tutorial.Integration.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

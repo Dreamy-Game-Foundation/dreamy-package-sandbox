@@ -86,9 +86,7 @@
       "version": "file:../LocalPackages/com.dreamy.feature",
       "depth": 0,
       "source": "local",
-      "dependencies": {
-        "com.dreamy.ui": "0.2.0"
-      }
+      "dependencies": {}
     },
     "com.dreamy.feature.daily-reward": {
       "version": "file:../LocalPackages/com.dreamy.feature.daily-reward",

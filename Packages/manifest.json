@@ -1,5 +1,6 @@
 {
   "testables": [
+    "com.dreamy.ui",
     "com.dreamy.feature.missions",
     "com.dreamy.feature.tutorial"
   ],

@@ -275,7 +275,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -463,7 +463,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -601,6 +601,8 @@ GameObject:
   - component: {fileID: 5724529848136342407}
   - component: {fileID: 4266536088131643934}
   - component: {fileID: 5883443657634684101}
+  - component: {fileID: 1780883621317051592}
+  - component: {fileID: 6487329844967053870}
   m_Layer: 0
   m_Name: Heading
   m_TagString: Untagged
@@ -677,7 +679,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -727,6 +729,43 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!225 &1780883621317051592
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8727217754355303937}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &6487329844967053870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8727217754355303937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2cd429e7cb458993bb2e71ea9a75ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenFade
+  runType: 0
+  settings: {fileID: 0}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  delayIn: 0
+  delayOut: 0
+  canvasGroup: {fileID: 1780883621317051592}
 --- !u!1001 &4105353670702683644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -854,36 +893,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1316269333568228854, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 290964563489649799}
-    - targetCorrespondingSourceObject: {fileID: 1316269333568228854, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3896902883064450761}
-    - targetCorrespondingSourceObject: {fileID: 1316269333568228854, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5603717502191737323}
   m_SourcePrefab: {fileID: 100100000, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}
 --- !u!1 &3079748105659701258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1316269333568228854, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}
   m_PrefabInstance: {fileID: 4105353670702683644}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &290964563489649799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3079748105659701258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dced0c9c356b4e05a29ad221753e4d27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenPlayer
-  collectionMode: 0
-  manualTargets: []
-  references:
-    version: 2
-    RefIds: []
 --- !u!114 &3896902883064450761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,25 +913,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Dreamy.Feature.Missions.Integration.Runtime::Dreamy.Feature.Missions.Integration.MissionPanel
   canvasGroup: {fileID: 7156283177868296969}
-  tweenPlayer: {fileID: 290964563489649799}
-  transitionBehaviour: {fileID: 290964563489649799}
+  tweenPlayer: {fileID: 0}
   closeButton: {fileID: 6666648991590412807}
   statusText: {fileID: 467262465902807759}
   itemContainer: {fileID: 2092908241073525461}
   itemPrefab: {fileID: 1533647845342229257, guid: fdc0583514cca4bfcbaa49ed942fd524, type: 3}
---- !u!114 &5603717502191737323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3079748105659701258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9207ba7fe4958e654ac31d473fe472be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Dreamy.Feature.Missions.Integration.Runtime::Dreamy.Feature.Missions.Integration.MissionController
-  panel: {fileID: 3896902883064450761}
 --- !u!225 &7156283177868296969 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 6604841990668801781, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}

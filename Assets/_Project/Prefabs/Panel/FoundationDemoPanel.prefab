@@ -15,8 +15,6 @@ GameObject:
   - component: {fileID: 6810968695658144868}
   - component: {fileID: 84304267062081357}
   - component: {fileID: 8628232602437784626}
-  - component: {fileID: 4232888082883245110}
-  - component: {fileID: 6287782867841749559}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -120,7 +118,9 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0
+  overrideDelayOut: 0
   delayOut: 0
   canvasGroup: {fileID: 6592066560449092358}
 --- !u!114 &84304267062081357
@@ -171,39 +171,12 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0
+  overrideDelayOut: 0
   delayOut: 0
   inactiveScale: 0
   activeScale: 1
---- !u!114 &4232888082883245110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188340758429967369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d077923416a4022816ced37f60db8a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showInterval: 0.2
-  hideInterval: 0.03
-  reverseHideOrder: 1
-  includeInactive: 1
---- !u!114 &6287782867841749559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188340758429967369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 0
 --- !u!1 &335314545269600949
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +191,9 @@ GameObject:
   - component: {fileID: 302496712631505360}
   - component: {fileID: 2846259834804603762}
   - component: {fileID: 5055050108484648207}
-  - component: {fileID: 7665080236709557020}
+  - component: {fileID: 3928421366088195541}
+  - component: {fileID: 9109632419196244316}
+  - component: {fileID: 5419768549044087225}
   m_Layer: 0
   m_Name: ShopButton
   m_TagString: Untagged
@@ -239,11 +214,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7573925822677768964}
-  m_Father: {fileID: 7012579014006903029}
+  m_Father: {fileID: 3792220186689772678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 485.16516, y: -896.5342}
+  m_AnchoredPosition: {x: 485.16516, y: -50}
   m_SizeDelta: {x: 970.3303, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5388600733478953319
@@ -364,7 +339,7 @@ MonoBehaviour:
   pressScaleMultiplier: 0.9
   releaseScaleMultiplier: 1.15
   duration: 0.1
---- !u!114 &7665080236709557020
+--- !u!114 &3928421366088195541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -373,10 +348,64 @@ MonoBehaviour:
   m_GameObject: {fileID: 335314545269600949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
+  m_Script: {fileID: 11500000, guid: 44b1eceab8dc41a6914ccfb189c9f2d9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  index: 5
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenScale
+  runType: 0
+  settings: {fileID: 11400000, guid: 0229910a5ad190348bd43a7a843eb43a, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  inactiveScale: 0
+  activeScale: 1
+--- !u!225 &9109632419196244316
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335314545269600949}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &5419768549044087225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335314545269600949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2cd429e7cb458993bb2e71ea9a75ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenFade
+  runType: 0
+  settings: {fileID: 11400000, guid: 03827c79be381164eb2d9e7e255cc946, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  canvasGroup: {fileID: 9109632419196244316}
 --- !u!1 &413751026472371782
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,7 +896,9 @@ GameObject:
   - component: {fileID: 2379147128085599507}
   - component: {fileID: 2518158806618329457}
   - component: {fileID: 5110008403300152850}
-  - component: {fileID: 3266520744302298573}
+  - component: {fileID: 2734856200079796230}
+  - component: {fileID: 7892226065510588711}
+  - component: {fileID: 853785637337029987}
   m_Layer: 0
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -888,11 +919,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5903642207660507026}
-  m_Father: {fileID: 7012579014006903029}
+  m_Father: {fileID: 3792220186689772678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 485.16516, y: -1404.4547}
+  m_AnchoredPosition: {x: 485.16516, y: -557.92053}
   m_SizeDelta: {x: 970.3303, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1218887342672100060
@@ -1013,7 +1044,7 @@ MonoBehaviour:
   pressScaleMultiplier: 0.9
   releaseScaleMultiplier: 1.15
   duration: 0.1
---- !u!114 &3266520744302298573
+--- !u!114 &2734856200079796230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1022,10 +1053,64 @@ MonoBehaviour:
   m_GameObject: {fileID: 655763947999205477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
+  m_Script: {fileID: 11500000, guid: e2f99e352bce4b86a32d8e8fe25ca17c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  index: 5
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenMove
+  runType: 0
+  settings: {fileID: 11400000, guid: 032c4d29dea91954d887dbb7001f8920, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  rectTransform: {fileID: 5162973958086704068}
+  offset: {x: -100, y: 0}
+--- !u!225 &7892226065510588711
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655763947999205477}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &853785637337029987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655763947999205477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2cd429e7cb458993bb2e71ea9a75ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenFade
+  runType: 0
+  settings: {fileID: 11400000, guid: 03827c79be381164eb2d9e7e255cc946, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  canvasGroup: {fileID: 7892226065510588711}
 --- !u!1 &671882249702080212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,7 +1446,9 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0
+  overrideDelayOut: 0
   delayOut: 0
   canvasGroup: {fileID: 7231868485364798759}
 --- !u!114 &3869872837342733695
@@ -1386,7 +1473,9 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0
+  overrideDelayOut: 0
   delayOut: 0
   inactiveScale: 0
   activeScale: 1
@@ -1404,9 +1493,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenPlayer
   collectionMode: 1
   stagger:
-    enabled: 1
-    showInterval: 0.02
-    hideInterval: 0.01
+    enabled: 0
+    showInterval: 0.5
+    hideInterval: 0.03
     reverseHideOrder: 1
   manualTargets:
   - target: {fileID: 3784656449236372689}
@@ -1783,7 +1872,9 @@ GameObject:
   - component: {fileID: 1641517813905054731}
   - component: {fileID: 8427272138766698744}
   - component: {fileID: 8713872578241906403}
-  - component: {fileID: 8484926235553169084}
+  - component: {fileID: 618326233958642625}
+  - component: {fileID: 2350416459559328060}
+  - component: {fileID: 7194308739508518514}
   m_Layer: 0
   m_Name: RateUsButton
   m_TagString: Untagged
@@ -1804,11 +1895,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4609419904410683303}
-  m_Father: {fileID: 7012579014006903029}
+  m_Father: {fileID: 3792220186689772678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 485.16516, y: -1573.7616}
+  m_AnchoredPosition: {x: 485.16516, y: -727.2273}
   m_SizeDelta: {x: 970.3303, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1616465093905569581
@@ -1929,7 +2020,7 @@ MonoBehaviour:
   pressScaleMultiplier: 0.9
   releaseScaleMultiplier: 1.15
   duration: 0.1
---- !u!114 &8484926235553169084
+--- !u!114 &618326233958642625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1938,10 +2029,122 @@ MonoBehaviour:
   m_GameObject: {fileID: 1448086884726375974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
+  m_Script: {fileID: 11500000, guid: e2f99e352bce4b86a32d8e8fe25ca17c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  index: 5
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenMove
+  runType: 0
+  settings: {fileID: 11400000, guid: 032c4d29dea91954d887dbb7001f8920, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  rectTransform: {fileID: 2269858384989497269}
+  offset: {x: -100, y: 0}
+--- !u!225 &2350416459559328060
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448086884726375974}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &7194308739508518514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448086884726375974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2cd429e7cb458993bb2e71ea9a75ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenFade
+  runType: 0
+  settings: {fileID: 11400000, guid: 03827c79be381164eb2d9e7e255cc946, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  canvasGroup: {fileID: 2350416459559328060}
+--- !u!1 &1625595807432198667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4904066018106425310}
+  - component: {fileID: 9095394753454198393}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4904066018106425310
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625595807432198667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3784656449236372689}
+  - {fileID: 5550230624205942266}
+  - {fileID: 6736887662100468145}
+  - {fileID: 2920607503628510941}
+  - {fileID: 1612149209386115467}
+  m_Father: {fileID: 7012579014006903029}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 455.4205}
+  m_SizeDelta: {x: 970.3303, y: 777.22736}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9095394753454198393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625595807432198667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378a36daf4c34e7fb08e092adbbc2c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.TweenDelayGroup
+  stagger:
+    enabled: 1
+    showInterval: 0.5
+    hideInterval: 0.3
+    reverseHideOrder: 1
 --- !u!1 &2588096922508651609
 GameObject:
   m_ObjectHideFlags: 0
@@ -2129,16 +2332,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3784656449236372689}
-  - {fileID: 5550230624205942266}
-  - {fileID: 6736887662100468145}
-  - {fileID: 2920607503628510941}
-  - {fileID: 1612149209386115467}
-  - {fileID: 7656351079820920510}
-  - {fileID: 1542621657398451611}
-  - {fileID: 1391311239697287278}
-  - {fileID: 5162973958086704068}
-  - {fileID: 2269858384989497269}
+  - {fileID: 4904066018106425310}
+  - {fileID: 3792220186689772678}
   m_Father: {fileID: 5865705770912914880}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -2660,7 +2855,9 @@ GameObject:
   - component: {fileID: 3418612760640152625}
   - component: {fileID: 2426936197776607461}
   - component: {fileID: 2437199358172825633}
-  - component: {fileID: 2702602506632647048}
+  - component: {fileID: 3248398948176932302}
+  - component: {fileID: 7292350143622958612}
+  - component: {fileID: 4729564776109112918}
   m_Layer: 0
   m_Name: LoadButton
   m_TagString: Untagged
@@ -2681,7 +2878,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2127501199053885540}
-  m_Father: {fileID: 7012579014006903029}
+  m_Father: {fileID: 4904066018106425310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2806,7 +3003,7 @@ MonoBehaviour:
   pressScaleMultiplier: 0.9
   releaseScaleMultiplier: 1.15
   duration: 0.1
---- !u!114 &2702602506632647048
+--- !u!114 &3248398948176932302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2815,10 +3012,64 @@ MonoBehaviour:
   m_GameObject: {fileID: 3625861122596294078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
+  m_Script: {fileID: 11500000, guid: 44b1eceab8dc41a6914ccfb189c9f2d9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  index: 5
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenScale
+  runType: 0
+  settings: {fileID: 11400000, guid: 0229910a5ad190348bd43a7a843eb43a, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  inactiveScale: 0
+  activeScale: 1
+--- !u!225 &7292350143622958612
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3625861122596294078}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &4729564776109112918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3625861122596294078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2cd429e7cb458993bb2e71ea9a75ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenFade
+  runType: 0
+  settings: {fileID: 11400000, guid: 03827c79be381164eb2d9e7e255cc946, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  canvasGroup: {fileID: 7292350143622958612}
 --- !u!1 &5110462360972014237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2836,7 +3087,6 @@ GameObject:
   - component: {fileID: 7116398962150220192}
   - component: {fileID: 3164948743647717712}
   - component: {fileID: 5542305380617747553}
-  - component: {fileID: 5765546036137441441}
   m_Layer: 0
   m_Name: HealButton
   m_TagString: Untagged
@@ -2857,7 +3107,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 349813856318447109}
-  m_Father: {fileID: 7012579014006903029}
+  m_Father: {fileID: 4904066018106425310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3004,7 +3254,9 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0
+  overrideDelayOut: 0
   delayOut: 0
   rectTransform: {fileID: 6736887662100468145}
   offset: {x: -300, y: 0}
@@ -3030,7 +3282,9 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 1.5
+  overrideDelayOut: 0
   delayOut: 0
   canvasGroup: {fileID: 5542305380617747553}
 --- !u!225 &5542305380617747553
@@ -3045,19 +3299,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &5765546036137441441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5110462360972014237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 3
 --- !u!1 &5406023506112310962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3522,7 +3763,9 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0
+  overrideDelayOut: 0
   delayOut: 0
   rectTransform: {fileID: 2507895657494244915}
   offset: {x: -300, y: 0}
@@ -3560,7 +3803,9 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0
+  overrideDelayOut: 0
   delayOut: 0
   canvasGroup: {fileID: 2647103163546391173}
 --- !u!114 &7726854940602817930
@@ -3750,7 +3995,9 @@ GameObject:
   - component: {fileID: 6550244583072780065}
   - component: {fileID: 8468238187588366459}
   - component: {fileID: 4015870024940224147}
-  - component: {fileID: 6963695218348060256}
+  - component: {fileID: 3159764526086222014}
+  - component: {fileID: 1982415288554950638}
+  - component: {fileID: 7188842320076508512}
   m_Layer: 0
   m_Name: DailyRewardButton
   m_TagString: Untagged
@@ -3771,11 +4018,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7787467286754597936}
-  m_Father: {fileID: 7012579014006903029}
+  m_Father: {fileID: 3792220186689772678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 485.16516, y: -1065.8411}
+  m_AnchoredPosition: {x: 485.16516, y: -219.30688}
   m_SizeDelta: {x: 970.3303, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6365640358739518121
@@ -3896,7 +4143,7 @@ MonoBehaviour:
   pressScaleMultiplier: 0.9
   releaseScaleMultiplier: 1.15
   duration: 0.1
---- !u!114 &6963695218348060256
+--- !u!114 &3159764526086222014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3905,10 +4152,64 @@ MonoBehaviour:
   m_GameObject: {fileID: 5840091760963007381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
+  m_Script: {fileID: 11500000, guid: 44b1eceab8dc41a6914ccfb189c9f2d9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  index: 5
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenScale
+  runType: 0
+  settings: {fileID: 11400000, guid: 0229910a5ad190348bd43a7a843eb43a, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  inactiveScale: 0
+  activeScale: 1
+--- !u!225 &1982415288554950638
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840091760963007381}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &7188842320076508512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5840091760963007381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2cd429e7cb458993bb2e71ea9a75ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenFade
+  runType: 0
+  settings: {fileID: 11400000, guid: 03827c79be381164eb2d9e7e255cc946, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  canvasGroup: {fileID: 1982415288554950638}
 --- !u!1 &6369116771246508488
 GameObject:
   m_ObjectHideFlags: 0
@@ -3924,7 +4225,6 @@ GameObject:
   - component: {fileID: 5683773363397555312}
   - component: {fileID: 9060738868065808899}
   - component: {fileID: 8378731232440836022}
-  - component: {fileID: 5830824389687136809}
   m_Layer: 0
   m_Name: AddScoreButton
   m_TagString: Untagged
@@ -3945,7 +4245,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8971918200565187333}
-  m_Father: {fileID: 7012579014006903029}
+  m_Father: {fileID: 4904066018106425310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -4076,7 +4376,9 @@ MonoBehaviour:
   durationIn: 1
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0.5
+  overrideDelayOut: 0
   delayOut: 0
   inactiveScale: 0
   activeScale: 1
@@ -4096,19 +4398,6 @@ MonoBehaviour:
   pressScaleMultiplier: 0.9
   releaseScaleMultiplier: 1.15
   duration: 0.1
---- !u!114 &5830824389687136809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6369116771246508488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 1
 --- !u!1 &6746603474466082373
 GameObject:
   m_ObjectHideFlags: 0
@@ -4126,7 +4415,6 @@ GameObject:
   - component: {fileID: 724811351183663332}
   - component: {fileID: 1258124262588477523}
   - component: {fileID: 2468869684690471514}
-  - component: {fileID: 6769057601769336165}
   m_Layer: 0
   m_Name: DamageButton
   m_TagString: Untagged
@@ -4147,7 +4435,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5393182314872846363}
-  m_Father: {fileID: 7012579014006903029}
+  m_Father: {fileID: 4904066018106425310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -4278,7 +4566,9 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 1
+  overrideDelayOut: 0
   delayOut: 0
   inactiveRotation: {x: 0, y: 0, z: -12}
 --- !u!114 &724811351183663332
@@ -4319,7 +4609,9 @@ MonoBehaviour:
   durationIn: 0
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0
+  overrideDelayOut: 0
   delayOut: 0
   canvasGroup: {fileID: 2468869684690471514}
 --- !u!225 &2468869684690471514
@@ -4334,19 +4626,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &6769057601769336165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6746603474466082373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 2
 --- !u!1 &7352230783136953202
 GameObject:
   m_ObjectHideFlags: 0
@@ -4529,7 +4808,9 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 2
+  overrideDelayOut: 0
   delayOut: 0
   rectTransform: {fileID: 5207179079994530821}
   inactiveSize: {x: 1, y: 0.5}
@@ -5179,10 +5460,10 @@ GameObject:
   - component: {fileID: 6680050287135101467}
   - component: {fileID: 7119468613225202612}
   - component: {fileID: 5687172285414627587}
-  - component: {fileID: 9084954254299348674}
   - component: {fileID: 5657090088106525939}
   - component: {fileID: 886108003826368169}
   - component: {fileID: 6863353765838429936}
+  - component: {fileID: 1551518388155502604}
   m_Layer: 0
   m_Name: SoundButton
   m_TagString: Untagged
@@ -5203,11 +5484,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3182104795822778778}
-  m_Father: {fileID: 7012579014006903029}
+  m_Father: {fileID: 3792220186689772678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 485.16516, y: -1235.1478}
+  m_AnchoredPosition: {x: 485.16516, y: -388.61365}
   m_SizeDelta: {x: 970.3303, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7594300806318165748
@@ -5328,19 +5609,6 @@ MonoBehaviour:
   pressScaleMultiplier: 0.9
   releaseScaleMultiplier: 1.15
   duration: 0.1
---- !u!114 &9084954254299348674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8497544299517347510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: 5
 --- !u!114 &5657090088106525939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5392,9 +5660,39 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0
+  overrideDelayOut: 0
   delayOut: 0
   canvasGroup: {fileID: 886108003826368169}
+--- !u!114 &1551518388155502604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8497544299517347510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f99e352bce4b86a32d8e8fe25ca17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenMove
+  runType: 0
+  settings: {fileID: 11400000, guid: 032c4d29dea91954d887dbb7001f8920, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  rectTransform: {fileID: 1391311239697287278}
+  offset: {x: -100, y: 0}
 --- !u!1 &8608169805853060568
 GameObject:
   m_ObjectHideFlags: 0
@@ -5448,6 +5746,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applyHorizontal: 1
   applyVertical: 1
+--- !u!1 &8695934379251732904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3792220186689772678}
+  - component: {fileID: 5607676577960857459}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3792220186689772678
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695934379251732904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7656351079820920510}
+  - {fileID: 1542621657398451611}
+  - {fileID: 1391311239697287278}
+  - {fileID: 5162973958086704068}
+  - {fileID: 2269858384989497269}
+  m_Father: {fileID: 7012579014006903029}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -568}
+  m_SizeDelta: {x: 970.3303, y: 777.2274}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5607676577960857459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695934379251732904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378a36daf4c34e7fb08e092adbbc2c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.TweenDelayGroup
+  stagger:
+    enabled: 1
+    showInterval: 0.5
+    hideInterval: 0.5
+    reverseHideOrder: 1
 --- !u!1 &9114989927422000304
 GameObject:
   m_ObjectHideFlags: 0
@@ -5462,7 +5818,9 @@ GameObject:
   - component: {fileID: 5490815129248955805}
   - component: {fileID: 7398576871448879032}
   - component: {fileID: 6040741370590552795}
-  - component: {fileID: 5024712705670706434}
+  - component: {fileID: 5959564835264662536}
+  - component: {fileID: 4126691176716705692}
+  - component: {fileID: 6207336505639667598}
   m_Layer: 0
   m_Name: SaveButton
   m_TagString: Untagged
@@ -5483,7 +5841,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3687023291591062948}
-  m_Father: {fileID: 7012579014006903029}
+  m_Father: {fileID: 4904066018106425310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -5608,7 +5966,7 @@ MonoBehaviour:
   pressScaleMultiplier: 0.9
   releaseScaleMultiplier: 1.15
   duration: 0.1
---- !u!114 &5024712705670706434
+--- !u!114 &5959564835264662536
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5617,7 +5975,61 @@ MonoBehaviour:
   m_GameObject: {fileID: 9114989927422000304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
+  m_Script: {fileID: 11500000, guid: 44b1eceab8dc41a6914ccfb189c9f2d9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  index: 4
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenScale
+  runType: 0
+  settings: {fileID: 11400000, guid: 0229910a5ad190348bd43a7a843eb43a, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  inactiveScale: 0
+  activeScale: 1
+--- !u!225 &4126691176716705692
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9114989927422000304}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &6207336505639667598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9114989927422000304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2cd429e7cb458993bb2e71ea9a75ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenFade
+  runType: 0
+  settings: {fileID: 11400000, guid: 03827c79be381164eb2d9e7e255cc946, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  canvasGroup: {fileID: 4126691176716705692}

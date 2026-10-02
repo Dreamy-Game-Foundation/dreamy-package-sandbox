@@ -29,6 +29,9 @@ namespace Dreamy.Feature.LuckyWheel.Integration
         public event Action RetryRequested;
         public event Action<string> RevealCompleted;
         public event Action CloseRequested;
+        public event Action<string> RevealInterrupted;
+        
+        public event Action Activated;
 
         private void OnEnable()
         {

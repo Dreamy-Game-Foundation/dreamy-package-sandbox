@@ -13,7 +13,9 @@ namespace Dreamy.Feature.Settings.Integration
         [SerializeField] private Toggle sfxToggle;
         [SerializeField] private Button gdprButton;
         [SerializeField] private Button restorePurchasesButton;
-        [SerializeField] private Button openStoreButton;
+        
+        [SerializeField] private Button openRateUsButton;
+[SerializeField] private Button openStoreButton;
         [SerializeField] private Button closeButton;
         [SerializeField] private TMP_Text statusText;
 
@@ -23,7 +25,9 @@ namespace Dreamy.Feature.Settings.Integration
         public event Action<float> SfxVolumeChanged;
         public event Action GdprRequested;
         public event Action RestorePurchasesRequested;
-        public event Action OpenStoreRequested;
+        
+        public event Action OpenRateUsRequested;
+public event Action OpenStoreRequested;
         public event Action CloseRequested;
 
         private void OnEnable()
@@ -32,7 +36,9 @@ namespace Dreamy.Feature.Settings.Integration
             sfxToggle.onValueChanged.AddListener(RequestSfxEnabled);
             gdprButton.onClick.AddListener(RequestGdpr);
             restorePurchasesButton.onClick.AddListener(RequestRestorePurchases);
-            openStoreButton.onClick.AddListener(RequestOpenStore);
+            
+            openRateUsButton.onClick.AddListener(RequestOpenRateUs);
+openStoreButton.onClick.AddListener(RequestOpenStore);
             closeButton.onClick.AddListener(RequestClose);
         }
 
@@ -42,7 +48,9 @@ namespace Dreamy.Feature.Settings.Integration
             sfxToggle.onValueChanged.RemoveListener(RequestSfxEnabled);
             gdprButton.onClick.RemoveListener(RequestGdpr);
             restorePurchasesButton.onClick.RemoveListener(RequestRestorePurchases);
-            openStoreButton.onClick.RemoveListener(RequestOpenStore);
+            
+            openRateUsButton.onClick.RemoveListener(RequestOpenRateUs);
+openStoreButton.onClick.RemoveListener(RequestOpenStore);
             closeButton.onClick.RemoveListener(RequestClose);
             base.OnDisable();
         }
@@ -72,7 +80,9 @@ namespace Dreamy.Feature.Settings.Integration
         private void RequestSfxEnabled(bool isEnabled) => SfxVolumeChanged?.Invoke(isEnabled ? 1f : 0f);
         private void RequestGdpr() => GdprRequested?.Invoke();
         private void RequestRestorePurchases() => RestorePurchasesRequested?.Invoke();
-        private void RequestOpenStore() => OpenStoreRequested?.Invoke();
+        
+        private void RequestOpenRateUs() => OpenRateUsRequested?.Invoke();
+private void RequestOpenStore() => OpenStoreRequested?.Invoke();
         private void RequestClose() => CloseRequested?.Invoke();
     }
 }

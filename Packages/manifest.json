@@ -1,6 +1,7 @@
 {
   "testables": [
     "com.dreamy.ui",
+    "com.dreamy.feature.lucky-wheel",
     "com.dreamy.feature.missions",
     "com.dreamy.feature.tutorial"
   ],
@@ -17,6 +18,7 @@
     "com.dreamy.feature": "file:../LocalPackages/com.dreamy.feature",
     "com.dreamy.feature.daily-reward": "file:../LocalPackages/com.dreamy.feature.daily-reward",
     "com.dreamy.feature.economy": "file:../LocalPackages/com.dreamy.feature.economy",
+    "com.dreamy.feature.lucky-wheel": "file:../LocalPackages/com.dreamy.feature.lucky-wheel",
     "com.dreamy.feature.progression": "file:../LocalPackages/com.dreamy.feature.progression",
     "com.dreamy.feature.missions": "file:../LocalPackages/com.dreamy.feature.missions",
     "com.dreamy.feature.shop": "file:../LocalPackages/com.dreamy.feature.shop",

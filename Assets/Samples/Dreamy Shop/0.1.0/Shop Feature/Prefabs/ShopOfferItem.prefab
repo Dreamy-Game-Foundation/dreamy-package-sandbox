@@ -713,6 +713,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3993568841356084011, guid: 68d8c2132ae54f1fb919cc3ec4fa3e1b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5563508889273868629}
+    - targetCorrespondingSourceObject: {fileID: 3993568841356084011, guid: 68d8c2132ae54f1fb919cc3ec4fa3e1b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8862300477882601877}
   m_SourcePrefab: {fileID: 100100000, guid: 68d8c2132ae54f1fb919cc3ec4fa3e1b, type: 3}
 --- !u!224 &1137975266467523420 stripped
 RectTransform:
@@ -745,3 +748,16 @@ MonoBehaviour:
   costText: {fileID: 1996149388026350287}
   rewardText: {fileID: 8324881571062263111}
   purchaseButton: {fileID: 8842975571567534651}
+--- !u!114 &8862300477882601877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7269925309337669171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.TweenDelayByIndex
+  index: 0

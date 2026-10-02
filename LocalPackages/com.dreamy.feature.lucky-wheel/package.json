@@ -1,0 +1,39 @@
+{
+  "name": "com.dreamy.feature.lucky-wheel",
+  "version": "0.1.0",
+  "displayName": "Dreamy Lucky Wheel",
+  "description": "Reusable weighted lucky wheel with recoverable, idempotent economy rewards and host-owned presentation.",
+  "unity": "6000.0",
+  "type": "library",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Dreamy Studio"
+  },
+  "dependencies": {
+    "com.dreamy.core": "1.1.2",
+    "com.dreamy.dataconfig": "0.2.0",
+    "com.dreamy.datasave": "0.2.0",
+    "com.dreamy.feature.economy": "0.1.0",
+    "com.dreamy.feature": "0.1.0",
+    "com.dreamy.ui": "0.2.0",
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.unity.ugui": "2.0.0"
+  },
+  "keywords": [
+    "lucky-wheel",
+    "reward",
+    "economy",
+    "mvp",
+    "dreamy"
+  ],
+  "testables": [
+    "Tests"
+  ],
+  "samples": [
+    {
+      "displayName": "Lucky Wheel Feature",
+      "description": "Six-reward wheel with post-selection spin animation and a prefab variant of BaseFeaturePanel.",
+      "path": "Samples~/Lucky Wheel Feature"
+    }
+  ]
+}

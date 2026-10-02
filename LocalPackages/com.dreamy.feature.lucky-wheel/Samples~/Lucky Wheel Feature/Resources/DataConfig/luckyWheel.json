@@ -1,0 +1,13 @@
+{
+  "wheelId": "sample-wheel",
+  "revision": 1,
+  "cooldownSeconds": 0,
+  "segments": [
+    { "id": "coin-100", "weight": 40, "resourceId": "currency.coin", "amount": 100 },
+    { "id": "coin-250", "weight": 25, "resourceId": "currency.coin", "amount": 250 },
+    { "id": "coin-500", "weight": 15, "resourceId": "currency.coin", "amount": 500 },
+    { "id": "gem-5", "weight": 10, "resourceId": "currency.gem", "amount": 5 },
+    { "id": "gem-10", "weight": 7, "resourceId": "currency.gem", "amount": 10 },
+    { "id": "chest-1", "weight": 3, "resourceId": "item.chest", "amount": 1 }
+  ]
+}

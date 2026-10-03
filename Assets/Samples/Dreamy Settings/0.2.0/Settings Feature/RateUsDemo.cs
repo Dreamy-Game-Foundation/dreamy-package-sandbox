@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Dreamy.Feature.Settings.Integration
 {
-    public sealed class RateUsController : MonoBehaviour
+    public sealed class RateUsDemo : MonoBehaviour
     {
         [SerializeField] private RateUsPanel panel;
         [SerializeField] private string rewardResourceId = "currency.gem";

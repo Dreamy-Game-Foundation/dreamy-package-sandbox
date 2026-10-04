@@ -65,7 +65,7 @@ namespace Dreamy.Feature.Settings.Integration
             }
         }
 
-        public void SetInteractable(bool interactable)
+        public new void SetInteractable(bool interactable)
         {
             rateButton.interactable = interactable;
             closeButton.interactable = interactable;

@@ -27,6 +27,11 @@ namespace Dreamy.Template.Demo
         public FoundationDemoPanel CurrentPanel => panel;
         public ShopPanel CurrentShop => shopPanel;
         public bool IsTransitioning => isTransitioning;
+        public bool HasFeatureDemo => (GetComponent<FoundationFeatureDemos>()?.IsBusy ?? false)
+            || dailyRewardOpening || dailyRewardPanel != null || settingsInstance != null || rateUsInstance != null;
+        private GameObject settingsInstance;
+        private GameObject rateUsInstance;
+        private bool dailyRewardOpening;
         public void OpenShopForTutorial() => OpenShop();
         public event Action<FoundationDemoPanel> DemoPanelReady;
         public event Action ScoreAdded;
@@ -195,34 +200,39 @@ namespace Dreamy.Template.Demo
 
         private void OpenShop()
         {
-            if (isTransitioning || isShuttingDown) return;
+            if (isTransitioning || isShuttingDown || HasFeatureDemo) return;
             ShopOpening?.Invoke();
             OpenShopAsync().Forget();
         }
 
         private void OpenDailyReward()
         {
-            if (dailyRewardPanel != null || dailyRewardPrefab == null) return;
+            if (isTransitioning || isShuttingDown || HasFeatureDemo || dailyRewardOpening || dailyRewardPrefab == null) return;
+            dailyRewardOpening = true;
             OpenDailyRewardAsync().Forget();
         }
 
         private void OpenSettings()
         {
-            if (settingsPrefab != null) Instantiate(settingsPrefab, PanelManager.Instance.transform);
+            if (isTransitioning || isShuttingDown || HasFeatureDemo || dailyRewardOpening) return;
+            if (settingsPrefab != null) settingsInstance = Instantiate(settingsPrefab, PanelManager.Instance.transform);
         }
 
         private void OpenRateUs()
         {
-            if (rateUsPrefab != null) Instantiate(rateUsPrefab, PanelManager.Instance.transform);
+            if (isTransitioning || isShuttingDown || HasFeatureDemo || dailyRewardOpening) return;
+            if (rateUsPrefab != null) rateUsInstance = Instantiate(rateUsPrefab, PanelManager.Instance.transform);
         }
 
         private async UniTaskVoid OpenDailyRewardAsync()
         {
+            DailyRewardPanel created = null;
             try
             {
-                DailyRewardPanel created = Instantiate(dailyRewardPrefab, PanelManager.Instance.transform);
+                created = Instantiate(dailyRewardPrefab, PanelManager.Instance.transform);
                 await created.Init();
                 await created.PostInit();
+                if (isShuttingDown) { Destroy(created.gameObject); return; }
                 dailyRewardPanel = created;
                 dailyRewardPanel.Destroyed += OnDailyRewardDestroyed;
                 dailyRewardPresenter = new DailyRewardPresenter(
@@ -232,8 +242,11 @@ namespace Dreamy.Template.Demo
             }
             catch (Exception exception)
             {
+                if (created != null) Destroy(created.gameObject);
+                OnDailyRewardDestroyed();
                 Debug.LogException(exception, this);
             }
+            finally { dailyRewardOpening = false; }
         }
 
         private void OnDailyRewardDestroyed()
@@ -341,7 +354,7 @@ namespace Dreamy.Template.Demo
 
         private void TogglePanel()
         {
-            if (!isTransitioning)
+            if (!isTransitioning && !HasFeatureDemo && !dailyRewardOpening)
             {
                 bool showDemo = (panel == null && shopPanel == null);
                 SetPanelVisibleAsync(showDemo).Forget();
@@ -413,6 +426,8 @@ namespace Dreamy.Template.Demo
             }
             shopPresenter?.Dispose();
             shopPresenter = null;
+            if (settingsInstance != null) Destroy(settingsInstance);
+            if (rateUsInstance != null) Destroy(rateUsInstance);
 
             if (dailyRewardPanel != null)
             {

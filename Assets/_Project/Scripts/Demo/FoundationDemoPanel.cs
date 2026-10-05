@@ -24,6 +24,12 @@ namespace Dreamy.Template.Demo
         [SerializeField] private Button openSettingsButton;
         [SerializeField] private Button openRateUsButton;
 
+        [SerializeField] private Button openMissionsButton;
+        [SerializeField] private Button openProgressionButton;
+        [SerializeField] private Button openLuckyWheelButton;
+        [SerializeField] private Button openTutorialButton;
+        [SerializeField] private Button openEconomyButton;
+
         public override bool CanBack => true;
         public Button TutorialAddScoreButton => addScoreButton;
         public Button TutorialOpenShopButton => openShopButton;
@@ -37,10 +43,20 @@ namespace Dreamy.Template.Demo
         public event Action OpenDailyRewardRequested;
         public event Action OpenSettingsRequested;
         public event Action OpenRateUsRequested;
+        public event Action OpenMissionsRequested;
+        public event Action OpenProgressionRequested;
+        public event Action OpenLuckyWheelRequested;
+        public event Action OpenTutorialRequested;
+        public event Action OpenEconomyRequested;
         public event Action Destroyed;
 
         private void OnEnable()
         {
+            if (openMissionsButton != null) openMissionsButton.onClick.AddListener(OnOpenMissions);
+            if (openProgressionButton != null) openProgressionButton.onClick.AddListener(OnOpenProgression);
+            if (openLuckyWheelButton != null) openLuckyWheelButton.onClick.AddListener(OnOpenLuckyWheel);
+            if (openTutorialButton != null) openTutorialButton.onClick.AddListener(OnOpenTutorial);
+            if (openEconomyButton != null) openEconomyButton.onClick.AddListener(OnOpenEconomy);
             addScoreButton.onClick.AddListener(OnAddScore);
             damageButton.onClick.AddListener(OnDamage);
             healButton.onClick.AddListener(OnHeal);
@@ -54,6 +70,11 @@ namespace Dreamy.Template.Demo
 
         protected override void OnDisable()
         {
+            if (openMissionsButton != null) openMissionsButton.onClick.RemoveListener(OnOpenMissions);
+            if (openProgressionButton != null) openProgressionButton.onClick.RemoveListener(OnOpenProgression);
+            if (openLuckyWheelButton != null) openLuckyWheelButton.onClick.RemoveListener(OnOpenLuckyWheel);
+            if (openTutorialButton != null) openTutorialButton.onClick.RemoveListener(OnOpenTutorial);
+            if (openEconomyButton != null) openEconomyButton.onClick.RemoveListener(OnOpenEconomy);
             addScoreButton.onClick.RemoveListener(OnAddScore);
             damageButton.onClick.RemoveListener(OnDamage);
             healButton.onClick.RemoveListener(OnHeal);
@@ -79,6 +100,16 @@ namespace Dreamy.Template.Demo
         private void OnOpenDailyReward() => OpenDailyRewardRequested?.Invoke();
         private void OnOpenSettings() => OpenSettingsRequested?.Invoke();
         private void OnOpenRateUs() => OpenRateUsRequested?.Invoke();
+
+        private void OnOpenMissions() => OpenMissionsRequested?.Invoke();
+
+        private void OnOpenProgression() => OpenProgressionRequested?.Invoke();
+
+        private void OnOpenLuckyWheel() => OpenLuckyWheelRequested?.Invoke();
+
+        private void OnOpenTutorial() => OpenTutorialRequested?.Invoke();
+
+        private void OnOpenEconomy() => OpenEconomyRequested?.Invoke();
 
         protected override void OnDestroy()
         {

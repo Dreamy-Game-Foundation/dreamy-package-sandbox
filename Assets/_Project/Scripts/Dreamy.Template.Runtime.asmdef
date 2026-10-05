@@ -22,7 +22,15 @@
         "Dreamy.DailyReward.Runtime",
         "Dreamy.Feature.DailyReward.Integration.Runtime",
         "Dreamy.Tutorial.Runtime",
-        "Dreamy.Tutorial.Integration.Runtime"
+        "Dreamy.Tutorial.Integration.Runtime",
+        "Dreamy.Missions.Runtime",
+        "Dreamy.Progression.Runtime",
+        "Dreamy.LuckyWheel.Runtime",
+        "Dreamy.Feature.Missions.Integration.Runtime",
+        "Dreamy.Feature.Progression.Integration.Runtime",
+        "Dreamy.Feature.LuckyWheel.Integration.Runtime",
+        "Dreamy.Feature.Economy.Integration.Runtime",
+        "Dreamy.Tutorial.Sample.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

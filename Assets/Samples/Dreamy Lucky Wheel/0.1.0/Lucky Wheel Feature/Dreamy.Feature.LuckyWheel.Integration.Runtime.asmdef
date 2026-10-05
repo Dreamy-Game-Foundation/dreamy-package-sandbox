@@ -1,0 +1,24 @@
+{
+  "name": "Dreamy.Feature.LuckyWheel.Integration.Runtime",
+  "rootNamespace": "Dreamy.Feature.LuckyWheel.Integration",
+  "references": [
+    "Dreamy.LuckyWheel.Runtime",
+    "Dreamy.DataConfig.Runtime",
+    "Dreamy.UI.Runtime",
+    "Dreamy.Datasave.Runtime",
+    "Dreamy.Economy.Runtime",
+    "Unity.Newtonsoft.Json",
+    "UniTask",
+    "Unity.UGUI",
+    "Unity.TextMeshPro"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

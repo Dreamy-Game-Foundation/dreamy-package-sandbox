@@ -6,6 +6,9 @@ using Dreamy.Core;
 using Dreamy.DataConfig;
 using Dreamy.Datasave;
 using Dreamy.DailyReward;
+using Dreamy.Missions;
+using Dreamy.Progression;
+using Dreamy.LuckyWheel;
 using Dreamy.Tutorial;
 using Dreamy.Economy;
 using Dreamy.Feature.Shop.Integration;
@@ -55,6 +58,9 @@ namespace Dreamy.Template
                 await InstallDataConfigServiceAsync(cancellationToken);
                 ShopInstaller.Install();
                 DailyRewardInstaller.Install();
+                MissionInstaller.Install();
+                ProgressionInstaller.Install();
+                LuckyWheelInstaller.Install();
 
                 State = BootstrapState.Ready;
             }
@@ -127,6 +133,9 @@ private void InstallAudioService()
             ShopInstaller.RegisterConfig(dataConfig);
             DailyRewardInstaller.RegisterConfig(dataConfig);
             TutorialInstaller.RegisterConfig(dataConfig);
+            MissionInstaller.RegisterConfig(dataConfig);
+            ProgressionInstaller.RegisterConfig(dataConfig);
+            LuckyWheelInstaller.RegisterConfig(dataConfig);
 
             await dataConfig.InitializeAsync(cancellationToken);
             ServiceLocator.Register<IDataConfigService>(dataConfig);
@@ -160,6 +169,9 @@ private void InstallAudioService()
             ServiceLocator.Unregister<IAudioService>();
             ServiceLocator.Unregister<IShopService>();
             ServiceLocator.Unregister<IDailyRewardService>();
+            ServiceLocator.Unregister<IMissionService>();
+            ServiceLocator.Unregister<IProgressionService>();
+            ServiceLocator.Unregister<ILuckyWheelService>();
         }
     }
 }

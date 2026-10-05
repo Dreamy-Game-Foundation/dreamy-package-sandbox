@@ -101,4 +101,21 @@ Các package dùng author **Dreamy Game Studio**. Mở README của từng packa
 4. Với panel kế thừa UIPanel, đặt prefab thành Addressable, khai báo address và dùng PanelManager sau khi bind presenter/service. HUD Economy/Progression và TutorialOverlay cần instantiate/bind riêng.
 5. Thay wallet/gateway mô phỏng bằng implementation của game. Build Addressables trước khi kiểm tra player.
 
-Package lucky-wheel đang chưa có nội dung trong checkout này nên chưa có README/package.json để cập nhật.
+Package lucky-wheel đã được checkout và khai báo trong Unity manifest; sample Lucky Wheel Feature được dùng trong Foundation demo.
+
+## Foundation feature demos
+
+Chạy `Assets/_Project/Scenes/BootstrapScene.unity`, hoàn thành hoặc Skip tutorial tự động, rồi mở demo từ Foundation panel:
+
+| Button | Demo |
+| --- | --- |
+| Shop / Daily Reward / Settings / Rate Us | Sample có sẵn của package |
+| Missions | Sample MissionDemoPanel: giả lập stage win/collect coin, claim thưởng |
+| Progression | Sample ProgressionDemoPanel: Complete Stage ho?c Grant XP theo catalog |
+| Lucky Wheel | Sample LuckyWheelPanel: spin/reveal, grant vào wallet dùng chung |
+| Economy | Sample Wallet Demo: xem coin/gem/gold/chest, Grant 100 Coins và Retry Last Grant |
+| Tutorial Demo | Chạy lại walkthrough Foundation với save trong bộ nhớ riêng |
+
+Các feature dùng DataConfig, Datasave và wallet của GameInstaller. Tutorial Demo không xóa save người chơi. Progression sample hiện dùng Sequential và thưởng `currency.gold`; xem số dư trong Economy. Demo platform gateway của Settings/Shop vẫn là giả lập.
+
+UI/logic mới nằm trong `Samples~` của package và bản import tương ứng trong `Assets/Samples`; FoundationFeatureDemos chỉ nối service và navigation. Khi cần dựng lại các prefab demo, dùng `Dreamy > Sandbox > Build Foundation Feature Demos` ngoài Play Mode và đóng Prefab Stage trước; lệnh này cập nhật Foundation cùng các prefab demo được chỉ định.

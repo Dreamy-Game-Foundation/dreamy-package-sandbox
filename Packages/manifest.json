@@ -1,5 +1,6 @@
 {
   "testables": [
+    "com.dreamy.audio",
     "com.dreamy.ui",
     "com.dreamy.feature.lucky-wheel",
     "com.dreamy.feature.missions",
@@ -18,11 +19,11 @@
     "com.dreamy.feature": "file:../LocalPackages/com.dreamy.feature",
     "com.dreamy.feature.daily-reward": "file:../LocalPackages/com.dreamy.feature.daily-reward",
     "com.dreamy.feature.economy": "file:../LocalPackages/com.dreamy.feature.economy",
-    "com.dreamy.feature.lucky-wheel": "file:../LocalPackages/com.dreamy.feature.lucky-wheel",
-    "com.dreamy.feature.progression": "file:../LocalPackages/com.dreamy.feature.progression",
     "com.dreamy.feature.missions": "file:../LocalPackages/com.dreamy.feature.missions",
-    "com.dreamy.feature.shop": "file:../LocalPackages/com.dreamy.feature.shop",
+    "com.dreamy.feature.progression": "file:../LocalPackages/com.dreamy.feature.progression",
     "com.dreamy.feature.settings": "file:../LocalPackages/com.dreamy.feature.settings",
+    "com.dreamy.feature.shop": "file:../LocalPackages/com.dreamy.feature.shop",
+    "com.dreamy.feature.tutorial": "file:../LocalPackages/com.dreamy.feature.tutorial",
     "com.dreamy.ui": "file:../LocalPackages/com.dreamy.ui",
     "com.unity.addressables": "2.9.1",
     "com.unity.ai.navigation": "2.0.13",
@@ -71,7 +72,6 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",
-    "com.dreamy.feature.tutorial": "file:../LocalPackages/com.dreamy.feature.tutorial"
+    "com.unity.modules.xr": "1.0.0"
   }
 }

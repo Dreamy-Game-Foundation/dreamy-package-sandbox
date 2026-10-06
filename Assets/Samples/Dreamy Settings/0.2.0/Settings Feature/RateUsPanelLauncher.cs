@@ -1,5 +1,4 @@
 using Cysharp.Threading.Tasks;
-using Dreamy.Core;
 using Dreamy.Settings;
 using UnityEngine;
 
@@ -11,7 +10,7 @@ namespace Dreamy.Feature.Settings.Integration
         private RateUsPanel panel;
         private RateUsPresenter presenter;
 
-private void Awake()
+        private void Awake()
         {
             panel = GetComponent<RateUsPanel>();
             panel.CloseRequested += OnCloseRequested;
@@ -27,7 +26,7 @@ private void Awake()
             await panel.Show();
         }
 
-private void OnCloseRequested()
+        private void OnCloseRequested()
         {
             panel.CloseRequested -= OnCloseRequested;
             presenter?.Dispose();
@@ -37,7 +36,11 @@ private void OnCloseRequested()
 
         private void OnDestroy()
         {
-            if (panel != null) panel.CloseRequested -= OnCloseRequested;
+            if (panel != null)
+            {
+                panel.CloseRequested -= OnCloseRequested;
+            }
+
             presenter?.Dispose();
         }
     }

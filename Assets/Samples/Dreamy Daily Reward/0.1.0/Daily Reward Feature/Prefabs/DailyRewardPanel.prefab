@@ -144,7 +144,9 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0
+  overrideDelayOut: 0
   delayOut: 0
   inactiveScale: 0
   activeScale: 1
@@ -291,7 +293,9 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0
+  overrideDelayOut: 0
   delayOut: 0
   inactiveScale: 0
   activeScale: 1
@@ -443,6 +447,9 @@ GameObject:
   - component: {fileID: 3952339465132559166}
   - component: {fileID: 7876751759062942764}
   - component: {fileID: 2282491683269100613}
+  - component: {fileID: 3726473151100821141}
+  - component: {fileID: 8032987648215872599}
+  - component: {fileID: 6669451658087108531}
   m_Layer: 0
   m_Name: Status
   m_TagString: Untagged
@@ -569,6 +576,73 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!225 &3726473151100821141
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423765640505144275}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &8032987648215872599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423765640505144275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2cd429e7cb458993bb2e71ea9a75ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenFade
+  runType: 0
+  settings: {fileID: 11400000, guid: 03827c79be381164eb2d9e7e255cc946, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  canvasGroup: {fileID: 3726473151100821141}
+--- !u!114 &6669451658087108531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423765640505144275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f99e352bce4b86a32d8e8fe25ca17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenMove
+  runType: 0
+  settings: {fileID: 11400000, guid: 032c4d29dea91954d887dbb7001f8920, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  rectTransform: {fileID: 3952339465132559166}
+  offset: {x: 0, y: 0}
 --- !u!1 &6627342112017212414
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,6 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5278604789965886716}
   - component: {fileID: 4943078564481963709}
+  - component: {fileID: 5318610394548654524}
   m_Layer: 0
   m_Name: Rewards
   m_TagString: Untagged
@@ -629,6 +704,22 @@ MonoBehaviour:
   m_Spacing: {x: 20, y: 20}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &5318610394548654524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6627342112017212414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d077923416a4022816ced37f60db8a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.TweenDelayControl
+  showInterval: 0.05
+  hideInterval: 0.03
+  startDelay: 0
+  reverseHideOrder: 1
 --- !u!1 &7792947242602049657
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +732,8 @@ GameObject:
   - component: {fileID: 3238801482755064150}
   - component: {fileID: 865931486333645031}
   - component: {fileID: 6760346689499639178}
+  - component: {fileID: 9174461191846871759}
+  - component: {fileID: 7465710318830058255}
   m_Layer: 0
   m_Name: Title
   m_TagString: Untagged
@@ -789,10 +882,51 @@ MonoBehaviour:
   durationIn: 0.25
   durationOut: 0.2
   overrideDurationOut: 0
+  overrideDelayIn: 0
   delayIn: 0
+  overrideDelayOut: 0
   delayOut: 0
   rectTransform: {fileID: 6384984736584539442}
   offset: {x: 0, y: 50}
+--- !u!225 &9174461191846871759
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792947242602049657}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &7465710318830058255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792947242602049657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2cd429e7cb458993bb2e71ea9a75ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenFade
+  runType: 0
+  settings: {fileID: 11400000, guid: 03827c79be381164eb2d9e7e255cc946, type: 2}
+  overrideEaseIn: 0
+  easeIn: 27
+  easeOut: 26
+  overrideEaseOut: 0
+  overrideDurationIn: 0
+  durationIn: 0.25
+  durationOut: 0.2
+  overrideDurationOut: 0
+  overrideDelayIn: 0
+  delayIn: 0
+  overrideDelayOut: 0
+  delayOut: 0
+  canvasGroup: {fileID: 9174461191846871759}
 --- !u!1001 &5338205872199953459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -801,6 +935,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 315489837659572907, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}
+      propertyPath: delayOut
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 315489837659572907, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}
+      propertyPath: overrideDelayOut
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1316269333568228854, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}
       propertyPath: m_Name
       value: DailyRewardPanel

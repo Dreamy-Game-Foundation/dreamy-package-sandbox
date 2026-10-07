@@ -190,6 +190,18 @@
         "com.unity.modules.physics": "1.0.0"
       }
     },
+    "com.dreamy.feedback": {
+      "version": "file:../LocalPackages/com.dreamy.feedback",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.ugui": "2.0.0",
+        "com.unity.modules.particlesystem": "1.0.0",
+        "com.cysharp.unitask": "2.5.10",
+        "com.dreamy.core": "1.1.2",
+        "com.unity.modules.imageconversion": "1.0.0"
+      }
+    },
     "com.dreamy.ui": {
       "version": "file:../LocalPackages/com.dreamy.ui",
       "depth": 0,

@@ -130,6 +130,7 @@ MonoBehaviour:
   progressionPrefab: {fileID: 7137185397716339020, guid: c52d39801fa85f74d8c56206e06c38a4, type: 3}
   luckyWheelPrefab: {fileID: 243755289008111586, guid: b29ed8969bcff7b498a49763e1144e7d, type: 3}
   economyPrefab: {fileID: 1414633459637039981, guid: 2c7b45123f7142e44b1ccf6bb1adac2a, type: 3}
+  feedbackPrefab: {fileID: 5803816559875885532, guid: 36c3afc3db3b98543b045371292c8769, type: 3}
 --- !u!1 &480009875226559304
 GameObject:
   m_ObjectHideFlags: 0

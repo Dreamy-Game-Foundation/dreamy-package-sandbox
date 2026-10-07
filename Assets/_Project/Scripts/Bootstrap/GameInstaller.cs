@@ -11,6 +11,8 @@ using Dreamy.Progression;
 using Dreamy.LuckyWheel;
 using Dreamy.Tutorial;
 using Dreamy.Economy;
+using Dreamy.Feedback;
+using Dreamy.Feedback.Samples.Economy;
 using Dreamy.Feature.Shop.Integration;
 using Dreamy.Shop;
 using Dreamy.Template.Demo;
@@ -24,7 +26,13 @@ namespace Dreamy.Template
     public sealed class GameInstaller : MonoBehaviour
     {
         [SerializeField] private bool prettySaveInEditor = true;
+        [SerializeField] private string saveDirectory = "DreamySaves";
         [SerializeField] private DreamyAudioProfile audioProfile;
+        [SerializeField] private FeedbackHost feedbackPrefab;
+        private FeedbackRewardPresenter feedbackPresenter;
+        private FeedbackHost feedbackInstance;
+        private IDisposable feedbackRegistration;
+        public static FeedbackHost Feedback { get; private set; }
 
         private IDatasaveService datasave;
         private IPoolService poolService;
@@ -52,6 +60,7 @@ namespace Dreamy.Template
                 // 2. Install Pool and audio services
                 InstallOtherServices();
                 InstallAudioService();
+                InstallFeedbackService();
 
 
                 // 3. Install DataConfig Service (called last due to async loading)
@@ -84,6 +93,7 @@ namespace Dreamy.Template
 
             datasave = new DatasaveService(new DatasaveOptions
             {
+                DirectoryName = saveDirectory,
                 PrettyPrint = Application.isEditor && prettySaveInEditor,
                 Codec = codec
             });
@@ -113,6 +123,23 @@ private void InstallAudioService()
 
             DreamyAudio.Initialize(audioProfile);
             ServiceLocator.Register<IAudioService>(DreamyAudio.Service);
+        }
+
+        private void InstallFeedbackService()
+        {
+            if (feedbackPrefab == null) throw new InvalidOperationException("GameInstaller needs the FeedbackRig sample prefab.");
+            feedbackInstance = Instantiate(feedbackPrefab, transform);
+            Feedback = feedbackInstance;
+            feedbackInstance.Initialize();
+            feedbackRegistration = FeedbackServiceRegistry.RegisterOwned(Feedback.Vfx, Feedback.Haptic, Feedback.FloatingText,
+                Feedback.IconFly, Feedback.Screen, Feedback.CameraShake, Feedback.Sequence);
+            feedbackPresenter = new FeedbackRewardPresenter((IResourceBalanceSource)resourceWallet,
+                new ResourceId("currency.coin"), (_, delta) =>
+                {
+                    if (delta <= 0 || feedbackInstance == null || !feedbackInstance.isActiveAndEnabled) return;
+                    feedbackInstance.PlayReward(delta, feedbackInstance.transform.Find("WorldTarget").position);
+                    DreamyAudio.Service.Play("ui.click");
+                });
         }
 
         private async UniTask InstallDataConfigServiceAsync(CancellationToken cancellationToken)
@@ -157,6 +184,11 @@ private void InstallAudioService()
 
         private void OnDestroy()
         {
+            feedbackPresenter?.Dispose(); feedbackPresenter = null;
+            feedbackRegistration?.Dispose(); feedbackRegistration = null;
+            if (feedbackInstance != null) feedbackInstance.Shutdown();
+            if (ReferenceEquals(Feedback, feedbackInstance)) Feedback = null;
+            feedbackInstance = null;
             if (poolService is IDisposable disposable)
             {
                 disposable.Dispose();

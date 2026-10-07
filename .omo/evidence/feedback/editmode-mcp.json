@@ -1,0 +1,79 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "3d40e711ced3429b9ef636d67728dae2",
+      "status": "succeeded",
+      "mode": "EditMode",
+      "started_unix_ms": 1791383406977,
+      "finished_unix_ms": 1791383413442,
+      "last_update_unix_ms": 1791383413442,
+      "progress": {
+        "completed": 4,
+        "total": 4,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1791383413215,
+        "last_finished_test_full_name": "Dreamy.Feedback.Tests.FeedbackAuthoringTests.SequenceOptionsRoundTripThroughUnitySerialization",
+        "last_finished_unix_ms": 1791383413219,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "blocked_reason": null,
+        "failures_so_far": [],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": {
+        "mode": "EditMode",
+        "summary": {
+          "total": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "durationSeconds": 0.6317626,
+          "resultState": "Passed"
+        },
+        "results": [
+          {
+            "name": "CameraOptionsRoundTripThroughUnitySerialization",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackAuthoringTests.CameraOptionsRoundTripThroughUnitySerialization",
+            "state": "Passed",
+            "durationSeconds": 0.0170433,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "DuplicateIdAndMissingPrefabAreReported",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackAuthoringTests.DuplicateIdAndMissingPrefabAreReported",
+            "state": "Passed",
+            "durationSeconds": 0.0051167,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "IdGeneratorEscapesControlCharactersAndResolvesNameCollisions",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackAuthoringTests.IdGeneratorEscapesControlCharactersAndResolvesNameCollisions",
+            "state": "Passed",
+            "durationSeconds": 0.0021147,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "SequenceOptionsRoundTripThroughUnitySerialization",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackAuthoringTests.SequenceOptionsRoundTripThroughUnitySerialization",
+            "state": "Passed",
+            "durationSeconds": 0.0042049,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          }
+        ]
+      }
+    },
+    "hint": null
+  }
+}

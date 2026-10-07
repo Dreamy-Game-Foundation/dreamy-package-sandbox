@@ -2,6 +2,9 @@ using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Dreamy.Core;
+using Dreamy.Audio;
+using Dreamy.Feedback;
+using Dreamy.Feedback.Samples.Economy;
 using Dreamy.Economy;
 using Dreamy.Feature.Economy.Integration;
 using Dreamy.Feature.LuckyWheel.Integration;
@@ -23,6 +26,7 @@ namespace Dreamy.Template.Demo
         [SerializeField] private ProgressionDemoPanel progressionPrefab;
         [SerializeField] private LuckyWheelPanel luckyWheelPrefab;
         [SerializeField] private EconomyDemoPanel economyPrefab;
+        [SerializeField] private FeedbackEconomyPanel feedbackPrefab;
         private FoundationDemoPanel boundPanel;
         private UIPanel activePanel;
         private CancellationTokenSource lifetime;
@@ -43,6 +47,7 @@ namespace Dreamy.Template.Demo
             panel.OpenProgressionRequested += OpenProgression;
             panel.OpenLuckyWheelRequested += OpenLuckyWheel;
             panel.OpenEconomyRequested += OpenEconomy;
+            panel.OpenFeedbackRequested += OpenFeedback;
             panel.Destroyed += Unbind;
         }
         private void Unbind()
@@ -53,6 +58,7 @@ namespace Dreamy.Template.Demo
                 boundPanel.OpenProgressionRequested -= OpenProgression;
                 boundPanel.OpenLuckyWheelRequested -= OpenLuckyWheel;
                 boundPanel.OpenEconomyRequested -= OpenEconomy;
+                boundPanel.OpenFeedbackRequested -= OpenFeedback;
                 boundPanel.Destroyed -= Unbind;
             }
             boundPanel = null;
@@ -65,6 +71,9 @@ namespace Dreamy.Template.Demo
         });
         private void OpenProgression() => Open(progressionPrefab, panel => panel.Configure(ServiceLocator.Get<IProgressionService>()));
         private void OpenLuckyWheel() => Open(luckyWheelPrefab, panel => panel.Configure(ServiceLocator.Get<ILuckyWheelService>()));
+        private void OpenFeedback() => Open(feedbackPrefab, panel => panel.Configure(
+            ServiceLocator.Get<IResourceWallet>(), (IResourceBalanceSource)ServiceLocator.Get<IResourceBalanceProvider>(),
+            ServiceLocator.Get<IAudioService>(), GameInstaller.Feedback));
         private void OpenEconomy() => Open(economyPrefab, panel => panel.Configure(
             ServiceLocator.Get<IResourceWallet>(), ServiceLocator.Get<IResourceBalanceProvider>()));
 

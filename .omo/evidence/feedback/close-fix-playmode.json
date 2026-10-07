@@ -1,0 +1,160 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "9673b29d2c244254887b5f656a1a31b9",
+      "status": "succeeded",
+      "mode": "PlayMode",
+      "started_unix_ms": 1791393617407,
+      "finished_unix_ms": 1791393628208,
+      "last_update_unix_ms": 1791393628208,
+      "progress": {
+        "completed": 13,
+        "total": 13,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1791393628117,
+        "last_finished_test_full_name": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.StaleShakeHandleDoesNotStopNewShake",
+        "last_finished_unix_ms": 1791393628180,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "blocked_reason": null,
+        "failures_so_far": [],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": {
+        "mode": "PlayMode",
+        "summary": {
+          "total": 13,
+          "passed": 13,
+          "failed": 0,
+          "skipped": 0,
+          "durationSeconds": 2.7008999,
+          "resultState": "Passed"
+        },
+        "results": [
+          {
+            "name": "DisposedPresenterStopsObservingWallet",
+            "fullName": "Dreamy.Feedback.Samples.Economy.Tests.FeedbackEconomyTests.DisposedPresenterStopsObservingWallet",
+            "state": "Passed",
+            "durationSeconds": 0.0058951,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ImportedPrefabGrantsOnceAndCanReopen",
+            "fullName": "Dreamy.Feedback.Samples.Economy.Tests.FeedbackEconomyTests.ImportedPrefabGrantsOnceAndCanReopen",
+            "state": "Passed",
+            "durationSeconds": 0.2351794,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RetryDoesNotEmitAnotherCommittedReward",
+            "fullName": "Dreamy.Feedback.Samples.Economy.Tests.FeedbackEconomyTests.RetryDoesNotEmitAnotherCommittedReward",
+            "state": "Passed",
+            "durationSeconds": 0.0010666,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "BasicScenePlaysAllChannelsAndClears",
+            "fullName": "Dreamy.Feedback.Samples.Tests.FeedbackSampleTests.BasicScenePlaysAllChannelsAndClears",
+            "state": "Passed",
+            "durationSeconds": 1.470213,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "CancelDuringSequenceDelayDoesNotPlayAction",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.CancelDuringSequenceDelayDoesNotPlayAction",
+            "state": "Passed",
+            "durationSeconds": 0.2046086,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ClearDestroysActiveIconsAndCanReinitialize",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.ClearDestroysActiveIconsAndCanReinitialize",
+            "state": "Passed",
+            "durationSeconds": 0.0494607,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ClearDestroysActiveVfx",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.ClearDestroysActiveVfx",
+            "state": "Passed",
+            "durationSeconds": 0.0490501,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "FlashStopClearsOverlayAndSuppressesCompletion",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.FlashStopClearsOverlayAndSuppressesCompletion",
+            "state": "Passed",
+            "durationSeconds": 0.1724623,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "OldRegistryOwnerDoesNotUnregisterReplacement",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.OldRegistryOwnerDoesNotUnregisterReplacement",
+            "state": "Passed",
+            "durationSeconds": 0.0155759,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "OldVfxHandleCannotStopReusedInstance",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.OldVfxHandleCannotStopReusedInstance",
+            "state": "Passed",
+            "durationSeconds": 0.0382204,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RepeatedFloatingTextStopCannotStopReusedLease",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.RepeatedFloatingTextStopCannotStopReusedLease",
+            "state": "Passed",
+            "durationSeconds": 0.0641416,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ShakeRestoresPositionCapturedAtPlayback",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.ShakeRestoresPositionCapturedAtPlayback",
+            "state": "Passed",
+            "durationSeconds": 0.0548573,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "StaleShakeHandleDoesNotStopNewShake",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.StaleShakeHandleDoesNotStopNewShake",
+            "state": "Passed",
+            "durationSeconds": 0.0617579,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          }
+        ]
+      }
+    },
+    "hint": null
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Dreamy.Feedback.Economy.Sample.Editor",
+  "references": ["Dreamy.Feedback.Runtime", "Dreamy.Feedback.Sample.Runtime", "Dreamy.Feedback.Sample.Editor", "Dreamy.Feedback.Economy.Sample.Runtime", "Dreamy.Audio.Runtime", "Dreamy.UI.Runtime", "Unity.TextMeshPro", "UnityEngine.UI"],
+  "includePlatforms": ["Editor"]
+}

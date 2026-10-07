@@ -4,7 +4,8 @@
     "com.dreamy.ui",
     "com.dreamy.feature.lucky-wheel",
     "com.dreamy.feature.missions",
-    "com.dreamy.feature.tutorial"
+    "com.dreamy.feature.tutorial",
+    "com.dreamy.feedback"
   ],
   "dependencies": {
     "com.coplaydev.unity-mcp": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#main",
@@ -73,6 +74,7 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
+    "com.unity.modules.xr": "1.0.0",
+    "com.dreamy.feedback": "file:../LocalPackages/com.dreamy.feedback"
   }
 }

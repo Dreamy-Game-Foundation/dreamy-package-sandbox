@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-07",
+  "unity": "6000.4.12f1",
+  "renderer": "Direct3D11",
+  "build": [
+    "[Feedback Consumer] Player build passed: 157939942 bytes"
+  ],
+  "smoke": "FEEDBACK_SMOKE_PASSED",
+  "exitCode": 0,
+  "loggedErrors": [],
+  "fixture": "consumer/FeedbackPlayerSmoke.cs",
+  "log": "Logs/feedback-player-verified-smoke.log"
+}

@@ -185,8 +185,8 @@ namespace Dreamy.Template.Editor
                         UnityEngine.Object.DestroyImmediate(tween);
                 var group = card.GetComponentsInChildren<RectTransform>(true).Single(t => t.name == "BtnGroup");
                 var buttons = group.GetComponentsInChildren<Button>(true).ToList();
-                string[] names = { "Missions", "Progression", "LuckyWheel", "Tutorial", "Economy" };
-                string[] captions = { "Missions", "Progression", "Lucky Wheel", "Tutorial Demo", "Economy" };
+                string[] names = { "Missions", "Progression", "LuckyWheel", "Tutorial", "Economy", "Feedback" };
+                string[] captions = { "Missions", "Progression", "Lucky Wheel", "Tutorial Demo", "Economy", "Feedback" };
                 for (int i = 0; i < names.Length; i++)
                 {
                     var existing = group.GetComponentsInChildren<Button>(true).FirstOrDefault(b => b.name == names[i] + "Button");

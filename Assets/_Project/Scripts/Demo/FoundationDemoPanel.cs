@@ -29,6 +29,7 @@ namespace Dreamy.Template.Demo
         [SerializeField] private Button openLuckyWheelButton;
         [SerializeField] private Button openTutorialButton;
         [SerializeField] private Button openEconomyButton;
+        [SerializeField] private Button openFeedbackButton;
 
         public override bool CanBack => true;
         public Button TutorialAddScoreButton => addScoreButton;
@@ -48,10 +49,12 @@ namespace Dreamy.Template.Demo
         public event Action OpenLuckyWheelRequested;
         public event Action OpenTutorialRequested;
         public event Action OpenEconomyRequested;
+        public event Action OpenFeedbackRequested;
         public event Action Destroyed;
 
         private void OnEnable()
         {
+            if (openFeedbackButton != null) openFeedbackButton.onClick.AddListener(OnOpenFeedback);
             if (openMissionsButton != null) openMissionsButton.onClick.AddListener(OnOpenMissions);
             if (openProgressionButton != null) openProgressionButton.onClick.AddListener(OnOpenProgression);
             if (openLuckyWheelButton != null) openLuckyWheelButton.onClick.AddListener(OnOpenLuckyWheel);
@@ -70,6 +73,7 @@ namespace Dreamy.Template.Demo
 
         protected override void OnDisable()
         {
+            if (openFeedbackButton != null) openFeedbackButton.onClick.RemoveListener(OnOpenFeedback);
             if (openMissionsButton != null) openMissionsButton.onClick.RemoveListener(OnOpenMissions);
             if (openProgressionButton != null) openProgressionButton.onClick.RemoveListener(OnOpenProgression);
             if (openLuckyWheelButton != null) openLuckyWheelButton.onClick.RemoveListener(OnOpenLuckyWheel);
@@ -108,6 +112,8 @@ namespace Dreamy.Template.Demo
         private void OnOpenLuckyWheel() => OpenLuckyWheelRequested?.Invoke();
 
         private void OnOpenTutorial() => OpenTutorialRequested?.Invoke();
+
+        private void OnOpenFeedback() => OpenFeedbackRequested?.Invoke();
 
         private void OnOpenEconomy() => OpenEconomyRequested?.Invoke();
 

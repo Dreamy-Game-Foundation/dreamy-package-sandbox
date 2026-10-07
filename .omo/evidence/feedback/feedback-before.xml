@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Failed(Child)" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-07 13:38:06Z" end-time="2026-10-07 13:38:07Z" duration="0.2336001">
+  <test-suite type="TestSuite" id="1030" name="DreamyTemplateProject" fullname="DreamyTemplateProject" runstate="Runnable" testcasecount="10" result="Failed" site="Child" start-time="2026-10-07 13:38:06Z" end-time="2026-10-07 13:38:07Z" duration="0.233600" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1015" name="Dreamy.Feedback.Tests.PlayMode.dll" fullname="D:/Game/dreamy-package-sandbox/Library/ScriptAssemblies/Dreamy.Feedback.Tests.PlayMode.dll" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-07 13:38:06Z" end-time="2026-10-07 13:38:07Z" duration="0.223767" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="49364" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1016" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-07 13:38:06Z" end-time="2026-10-07 13:38:07Z" duration="0.222663" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1017" name="Feedback" fullname="Dreamy.Feedback" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-07 13:38:06Z" end-time="2026-10-07 13:38:07Z" duration="0.222198" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1018" name="Tests" fullname="Dreamy.Feedback.Tests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-07 13:38:06Z" end-time="2026-10-07 13:38:07Z" duration="0.221752" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1010" name="FeedbackLifecycleTests" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-07 13:38:06Z" end-time="2026-10-07 13:38:07Z" duration="0.220237" total="4" passed="0" failed="4" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1011" name="CancelDuringSequenceDelayDoesNotPlayAction" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.CancelDuringSequenceDelayDoesNotPlayAction" methodname="CancelDuringSequenceDelayDoesNotPlayAction" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="67592120" result="Failed" start-time="2026-10-07 13:38:06Z" end-time="2026-10-07 13:38:07Z" duration="0.176675" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Canceled delay must not dispatch its action.
+  Expected: 0
+  But was:  1
+]]></message>
+                  <stack-trace><![CDATA[at Dreamy.Feedback.Tests.FeedbackLifecycleTests+<CancelDuringSequenceDelayDoesNotPlayAction>d__4.MoveNext () [0x00106] in .\LocalPackages\com.dreamy.feedback\Tests\PlayMode\FeedbackLifecycleTests.cs:36
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@996f223345ba\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1014" name="ClearDestroysActiveVfx" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.ClearDestroysActiveVfx" methodname="ClearDestroysActiveVfx" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="1718914281" result="Failed" start-time="2026-10-07 13:38:07Z" end-time="2026-10-07 13:38:07Z" duration="0.010196" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: 0
+  But was:  1
+]]></message>
+                  <stack-trace><![CDATA[at Dreamy.Feedback.Tests.FeedbackLifecycleTests+<ClearDestroysActiveVfx>d__8.MoveNext () [0x00057] in .\LocalPackages\com.dreamy.feedback\Tests\PlayMode\FeedbackLifecycleTests.cs:69
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@996f223345ba\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1013" name="OldVfxHandleCannotStopReusedInstance" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.OldVfxHandleCannotStopReusedInstance" methodname="OldVfxHandleCannotStopReusedInstance" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="636600898" result="Failed" start-time="2026-10-07 13:38:07Z" end-time="2026-10-07 13:38:07Z" duration="0.004867" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                  <stack-trace><![CDATA[at Dreamy.Feedback.Tests.FeedbackLifecycleTests+<OldVfxHandleCannotStopReusedInstance>d__7.MoveNext () [0x00088] in .\LocalPackages\com.dreamy.feedback\Tests\PlayMode\FeedbackLifecycleTests.cs:62
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@996f223345ba\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1012" name="StaleShakeHandleDoesNotStopNewShake" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.StaleShakeHandleDoesNotStopNewShake" methodname="StaleShakeHandleDoesNotStopNewShake" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="364094058" result="Failed" start-time="2026-10-07 13:38:07Z" end-time="2026-10-07 13:38:07Z" duration="0.009855" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: greater than 9.99999975E-06f
+  But was:  0.0f
+]]></message>
+                  <stack-trace><![CDATA[at Dreamy.Feedback.Tests.FeedbackLifecycleTests+<StaleShakeHandleDoesNotStopNewShake>d__5.MoveNext () [0x000f2] in .\LocalPackages\com.dreamy.feedback\Tests\PlayMode\FeedbackLifecycleTests.cs:46
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@996f223345ba\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [TestRunnerNoThrottle] Restored Interaction Mode after test run.
+Saving results to: C:/Users/trinh/AppData/LocalLow/DefaultCompany/DreamyTemplateProject\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

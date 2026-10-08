@@ -14,6 +14,7 @@ namespace Dreamy.Feature.Settings.Integration
         [SerializeField] private Button rateButton;
         [SerializeField] private Button closeButton;
 
+
         public override bool CanBack => true;
 
         public event Action<int> RatingSelected;
@@ -68,7 +69,7 @@ namespace Dreamy.Feature.Settings.Integration
         public new void SetInteractable(bool interactable)
         {
             rateButton.interactable = interactable;
-            closeButton.interactable = interactable;
+            closeButton.interactable = true;
             for (int index = 0; index < starButtons.Length; index++)
             {
                 starButtons[index].interactable = interactable;

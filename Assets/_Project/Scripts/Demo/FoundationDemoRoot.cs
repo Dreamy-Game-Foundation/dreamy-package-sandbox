@@ -5,6 +5,7 @@ using Dreamy.DataConfig;
 using Dreamy.Datasave;
 using Dreamy.DailyReward;
 using Dreamy.Feature.DailyReward.Integration;
+using Dreamy.Feature.Settings.Integration;
 
 using Dreamy.Feature.Shop.Integration;
 using Dreamy.Shop;
@@ -22,7 +23,6 @@ namespace Dreamy.Template.Demo
         [SerializeField] private ShopPanel featureShopPrefab;
         [SerializeField] private DailyRewardPanel dailyRewardPrefab;
         [SerializeField] private GameObject settingsPrefab;
-        [SerializeField] private GameObject rateUsPrefab;
 
         public FoundationDemoPanel CurrentPanel => panel;
         public ShopPanel CurrentShop => shopPanel;
@@ -37,9 +37,7 @@ namespace Dreamy.Template.Demo
         private TemplateSave saveData;
         private FoundationDemoPanel panel;
         private ShopPanel shopPanel;
-        private ShopPresenter shopPresenter;
         private DailyRewardPanel dailyRewardPanel;
-        private DailyRewardPresenter dailyRewardPresenter;
         
         private int score;
         private float health = 100f;
@@ -62,9 +60,9 @@ namespace Dreamy.Template.Demo
                 return;
             }
 
-            if (settingsPrefab == null || rateUsPrefab == null)
+            if (settingsPrefab == null)
             {
-                Debug.LogError("[FoundationDemo] Settings and Rate Us prefabs must be assigned.", this);
+                Debug.LogError("[FoundationDemo] Settings prefab must be assigned.", this);
                 enabled = false;
                 return;
             }
@@ -208,26 +206,22 @@ namespace Dreamy.Template.Demo
 
         private void OpenSettings()
         {
-            if (settingsPrefab != null) Instantiate(settingsPrefab, PanelManager.Instance.transform);
+            if (settingsPrefab != null) PanelManager.Instance.Show<SettingsPanel>(settingsPrefab).Forget();
         }
 
         private void OpenRateUs()
         {
-            if (rateUsPrefab != null) Instantiate(rateUsPrefab, PanelManager.Instance.transform);
+            PanelManager.Instance.Show<RateUsPanel>(Address.RateUsPanel).Forget();
         }
 
         private async UniTaskVoid OpenDailyRewardAsync()
         {
             try
             {
-                DailyRewardPanel created = Instantiate(dailyRewardPrefab, PanelManager.Instance.transform);
-                await created.Init();
-                await created.PostInit();
+                DailyRewardPanel created = await PanelManager.Instance.Create<DailyRewardPanel>(dailyRewardPrefab.gameObject);
+                if (isShuttingDown) return;
                 dailyRewardPanel = created;
                 dailyRewardPanel.Destroyed += OnDailyRewardDestroyed;
-                dailyRewardPresenter = new DailyRewardPresenter(
-                    ServiceLocator.Get<IDailyRewardService>(), created);
-                dailyRewardPresenter.Show();
                 await created.Show();
             }
             catch (Exception exception)
@@ -244,8 +238,6 @@ namespace Dreamy.Template.Demo
                 dailyRewardPanel = null;
             }
 
-            dailyRewardPresenter?.Dispose();
-            dailyRewardPresenter = null;
         }
 
         private async UniTaskVoid OpenShopAsync()
@@ -262,13 +254,10 @@ namespace Dreamy.Template.Demo
                     await hidingPanel.Hide();
                 }
 
-                ShopPanel created = Instantiate(featureShopPrefab, PanelManager.Instance.transform);
-                await created.Init();
-                await created.PostInit();
-                shopPresenter = new ShopPresenter(ServiceLocator.Get<IShopService>(), created);
+                ShopPanel created = await PanelManager.Instance.Create<ShopPanel>(featureShopPrefab.gameObject);
+                if (isShuttingDown) return;
                 shopPanel = created;
                 shopPanel.Destroyed += OnShopDestroyed;
-                shopPresenter.Show();
                 await shopPanel.Show();
                 ShopReady?.Invoke(created);
             }
@@ -324,8 +313,6 @@ namespace Dreamy.Template.Demo
                 shopPanel = null;
             }
 
-            shopPresenter?.Dispose();
-            shopPresenter = null;
             if (!isShuttingDown)
             {
                 OpenDemoFromShop();
@@ -411,16 +398,12 @@ namespace Dreamy.Template.Demo
                 shopPanel.Destroyed -= OnShopDestroyed;
                 shopPanel = null;
             }
-            shopPresenter?.Dispose();
-            shopPresenter = null;
 
             if (dailyRewardPanel != null)
             {
                 dailyRewardPanel.Destroyed -= OnDailyRewardDestroyed;
                 dailyRewardPanel = null;
             }
-            dailyRewardPresenter?.Dispose();
-            dailyRewardPresenter = null;
 
             if (togglePanelButton != null)
             {

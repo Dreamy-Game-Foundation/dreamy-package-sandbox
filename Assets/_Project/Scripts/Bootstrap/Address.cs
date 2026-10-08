@@ -7,6 +7,7 @@ namespace Dreamy.Template
 
         // Panel
         public const string FoundationDemoPanel = "Panel/FoundationDemoPanel.prefab";
+        public const string RateUsPanel = "Panel/RateUsPanel.prefab";
         public const string ShopPanel = "Panel/UIShopPanel.prefab";
 
         // SpriteAtls

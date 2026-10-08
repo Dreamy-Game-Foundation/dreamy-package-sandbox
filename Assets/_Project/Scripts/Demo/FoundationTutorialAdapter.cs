@@ -7,6 +7,7 @@ using Dreamy.Datasave;
 using Dreamy.Feature.Shop.Integration;
 using Dreamy.Tutorial;
 using Dreamy.Tutorial.Integration;
+using Dreamy.UI;
 using UnityEngine;
 using UnityEngine.UI;
 namespace Dreamy.Template.Demo
@@ -35,11 +36,11 @@ namespace Dreamy.Template.Demo
                 await UniTask.WaitUntil(() => GameInstaller.State == BootstrapState.Ready || GameInstaller.State == BootstrapState.Failed,
                     cancellationToken: this.GetCancellationTokenOnDestroy());
                 if (!isActiveAndEnabled || GameInstaller.State != BootstrapState.Ready || demoRoot == null || overlayPrefab == null) return;
-                service = new TutorialModel(ServiceLocator.Get<IDataConfigService>().GetTable<TutorialCatalogConfig>(),
-                    ServiceLocator.Get<IDatasaveService>(), "foundation-tutorials");
-                registry = gameObject.AddComponent<TutorialTargetRegistry>();
+                service = ServiceLocator.Get<ITutorialService>();
                 overlay = Instantiate(overlayPrefab);
-                controller = gameObject.AddComponent<TutorialController>(); controller.Initialize(service, overlay, registry);
+                registry = overlay.gameObject.AddComponent<TutorialTargetRegistry>();
+                controller = gameObject.AddComponent<TutorialController>();
+                controller.Initialize(PanelManager.Instance.PresenterFactory, service, overlay, registry);
                 initialized = true;
                 Bind();
                 if (demoRoot.CurrentPanel != null) PanelReady(demoRoot.CurrentPanel);

@@ -1,48 +1,24 @@
 # Daily Reward Feature
 
-Sample của Dreamy Daily Reward. Import từ Window > Package Manager > Dreamy Daily Reward > Samples > Import. Unity chép nội dung vào Assets/Samples/Dreamy Daily Reward/0.1.0/Daily Reward Feature/.
+Import this sample and move the entire folder to the host game's feature folder. `DailyRewardPanel.prefab` and `DailyRewardItem.prefab` are variants of the base feature prefabs; keep `com.dreamy.feature` and `com.dreamy.ui` installed. Inspect the serialized Buttons, status TMP label, reward container, reward-item prefab, and optional `DailyRewardAudioFeedback` IDs after import.
 
-## Cấu trúc và tích hợp
+Copy `Resources/DataConfig/dailyRewardSchedule.json` to the host DataConfig location. In the host installer, call `DailyRewardInstaller.RegisterConfig(dataConfig)` before config initialization. After registering config and save services, register `new InMemoryResourceWallet()` as `IResourceWallet`, then call `DailyRewardInstaller.Install()`.
 
-Giữ nguyên folder, .meta, asmdef và reference prefab khi chuyển vào project. Chỉ giữ một bản script/asmdef và một JSON cho mỗi key Resources/DataConfig. Bootstrap config/save/wallet/audio tại GameInstaller trước khi bật UI, theo [README package](../../README.md). Link tương đối này dùng trong source package; sau import, mở README package từ Package Manager.
+Replace the in-memory wallet with the host economy service in production. Resource IDs use `category.name`; the shared defaults are `currency.coin` and `currency.gem`.
 
-## Sử dụng và sample
+## Production integration and presenter lifecycle
 
-DailyRewardController tạo presenter ở Start nhưng không tự init/show animation của UIPanel. Host chọn controller sample hoặc tự bind DailyRewardPresenter, không tạo cả hai. Gán reward container/item prefab và feedback audio. Schedule có ngày liên tiếp từ 1; đổi scheduleId sẽ reset tiến trình. Wallet cần idempotency khi claim retry vì grant và save là hai thao tác riêng. IRewardClock mặc định dùng UTC thiết bị; game online nên cung cấp clock server.
-
-
-Assembly Dreamy.Feature.DailyReward.Integration.Runtime reference Dreamy.DailyReward.Runtime, Dreamy.Economy.Runtime, Dreamy.Core.Runtime, Dreamy.UI.Runtime, Dreamy.Audio.Runtime, Unity.TextMeshPro, UnityEngine.UI, UniTask.
-
-## Addressables Group và class address
-
-1. Lưu prefab/variant của game tại Assets/_Project/Prefabs/Panel/DailyRewardPanel.prefab. Với UIPanel, root phải có subclass tương ứng.
-2. Mở Window > Asset Management > Addressables > Groups; tạo settings nếu chưa có.
-3. Tạo group UI Panels và kéo prefab vào group.
-4. Đặt cột Address thành Panel/DailyRewardPanel.prefab.
-5. Tạo class dùng chung trong game:
+The editable integration entry point is `DailyRewardFeatureInstaller` in Samples~. Runtime `DailyRewardInstaller` remains available for custom UI; games using the supplied views call only the feature installer. All presenters implement the engine-independent `IPanelPresenter` lifecycle in `Dreamy.UI.Presentation`.
 
 ```csharp
-public static class PanelAddress
-{
-    public const string Home = "Panel/HomePanel.prefab";
-    public const string Current = "Panel/DailyRewardPanel.prefab";
-}
+DailyRewardFeatureInstaller.RegisterConfig(dataConfig); // Before dataConfig.InitializeAsync.
+// After config/save/wallet readiness, using the same factory as other features:
+DailyRewardFeatureInstaller.Install(factory, config, save, wallet, clock);
+// Or reuse a host-owned service: DailyRewardFeatureInstaller.Install(factory, service);
 ```
 
-Đường dẫn asset trên disk và address là hai giá trị riêng. Address do bạn đặt, constant phải khớp chính xác cột Address. Tên group không phải key tải. HomePanel là ví dụ subclass do game tự tạo.
+Dependencies in this example belong to the composition root. No installer creates an in-memory wallet/save fallback. Model/service own rewards and checkpoints; views only render state and emit intent. Add direct asmdef references to the integration assembly and Dreamy.UI.Presentation wherever their APIs are used.
 
-Scene cần Canvas có PanelManager và EventSystem/input module. Chờ root cài service xong. Các lệnh sau nằm trong method async UniTask; asmdef reference Dreamy.UI.Runtime, UniTask và assembly chứa type panel.
+After assigning the shared factory to the scene's PanelManager, any caller can open `DailyRewardPanel` with Show/Transition by address, or Show with a prefab. Each opening creates one presenter; close, disable, destroy or failed show release it. Cached reopen creates a fresh presenter. No per-feature controller is required.
 
-```csharp
-var panel = await PanelManager.Instance.Create<DailyRewardPanel>(PanelAddress.Current);
-var presenter = new DailyRewardPresenter(
-    ServiceLocator.Get<IDailyRewardService>(), panel);
-presenter.Show();
-await panel.Show();
-// Đóng từ code game:
-await PanelManager.Instance.Close<DailyRewardPanel>();
-```
-
-Host giữ một presenter cho mỗi panel instance, dispose lúc teardown, bind/render lại khi mở panel cache. Không chạy đồng thời controller sample và presenter khác trên cùng panel. PanelManager không tự cài service feature.
-
-Build Addressables content cho target trước khi thử player. AssetLoader cache prefab; đóng panel không tự unload cache. Chỉ unload sau khi mọi instance/consumer đã kết thúc.
+Sandbox validation: `python3 LocalPackages/com.dreamy.feature.settings/Tests~/validate-settings.py --shop --features`. This compiles runtime/integration/sample assemblies against their declared references and runs pure managed model/presenter regressions. Unity scene/coroutine/raycast lifecycle still requires Editor/PlayMode validation.

@@ -6,6 +6,7 @@ using Dreamy.DataConfig;
 using Dreamy.Datasave;
 using Dreamy.Feature.Shop.Integration;
 using Dreamy.Tutorial;
+using Dreamy.Tutorial.Sample;
 using Dreamy.Tutorial.Integration;
 using Dreamy.UI;
 using UnityEngine;
@@ -26,6 +27,21 @@ namespace Dreamy.Template.Demo
         private bool initializationStarted;
         private bool initializeBusy;
         private bool restoringShop;
+        private FoundationDemoPanel boundPanel;
+        private void ReplayTutorial()
+        {
+            if (!initialized || demoRoot.IsTransitioning || demoRoot.HasFeatureDemo) return;
+            service = new TutorialModel(ServiceLocator.Get<IDataConfigService>().GetTable<TutorialCatalogConfig>(),
+                new TutorialDemoMemorySave(), "foundation-manual-demo");
+            controller.Initialize(service, overlay, registry);
+            navigationToken = Guid.Empty;
+            service.TryStart("foundation");
+        }
+        private void UnbindPanel()
+        {
+            if (!ReferenceEquals(boundPanel, null)) boundPanel.OpenTutorialRequested -= ReplayTutorial;
+            boundPanel = null;
+        }
         private void Start() { initializationStarted = true; InitializeAsync().Forget(); }
         private async UniTask InitializeAsync()
         {
@@ -63,6 +79,9 @@ namespace Dreamy.Template.Demo
         }
         private void PanelReady(FoundationDemoPanel panel)
         {
+            UnbindPanel();
+            boundPanel = panel;
+            panel.OpenTutorialRequested += ReplayTutorial;
             Register(panel.TutorialAddScoreButton, "foundation.add-score");
             Register(panel.TutorialOpenShopButton, "foundation.open-shop");
             if (service.GetState().Step?.SignalKey == "foundation.shop-closed")
@@ -117,6 +136,7 @@ namespace Dreamy.Template.Demo
             if (!initialized) return;
             demoRoot.DemoPanelReady -= PanelReady; demoRoot.ScoreAdded -= ScoreAdded;
             demoRoot.ShopOpening -= ShopOpening; demoRoot.ShopReady -= ShopReady;
+            UnbindPanel();
             UnbindShop(); if (controller != null) controller.enabled = false;
         }
         private void OnDestroy() { UnbindShop(); if (overlay != null) Destroy(overlay.gameObject); }

@@ -46,3 +46,6 @@
 [submodule "LocalPackages/com.dreamy.feature.lucky-wheel"]
 	path = LocalPackages/com.dreamy.feature.lucky-wheel
 	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.lucky-wheel.git
+[submodule "LocalPackages/com.dreamy.feedback"]
+	path = LocalPackages/com.dreamy.feedback
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.feedback.git

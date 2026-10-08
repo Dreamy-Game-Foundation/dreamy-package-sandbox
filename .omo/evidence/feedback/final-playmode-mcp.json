@@ -1,0 +1,169 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "07269c5f69f246069a075c0fbd985e69",
+      "status": "succeeded",
+      "mode": "PlayMode",
+      "started_unix_ms": 1791383911281,
+      "finished_unix_ms": 1791383926056,
+      "last_update_unix_ms": 1791383926056,
+      "progress": {
+        "completed": 14,
+        "total": 14,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1791383921658,
+        "last_finished_test_full_name": "Dreamy.Template.Tests.FoundationFeedbackTests.BootstrapAndFoundationOpenSharedWalletFeedback",
+        "last_finished_unix_ms": 1791383926016,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "blocked_reason": null,
+        "failures_so_far": [],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": {
+        "mode": "PlayMode",
+        "summary": {
+          "total": 14,
+          "passed": 14,
+          "failed": 0,
+          "skipped": 0,
+          "durationSeconds": 6.8499428,
+          "resultState": "Passed"
+        },
+        "results": [
+          {
+            "name": "DisposedPresenterStopsObservingWallet",
+            "fullName": "Dreamy.Feedback.Samples.Economy.Tests.FeedbackEconomyTests.DisposedPresenterStopsObservingWallet",
+            "state": "Passed",
+            "durationSeconds": 0.0206197,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ImportedPrefabGrantsOnceAndCanReopen",
+            "fullName": "Dreamy.Feedback.Samples.Economy.Tests.FeedbackEconomyTests.ImportedPrefabGrantsOnceAndCanReopen",
+            "state": "Passed",
+            "durationSeconds": 0.422405,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RetryDoesNotEmitAnotherCommittedReward",
+            "fullName": "Dreamy.Feedback.Samples.Economy.Tests.FeedbackEconomyTests.RetryDoesNotEmitAnotherCommittedReward",
+            "state": "Passed",
+            "durationSeconds": 0.0008567,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "BasicScenePlaysAllChannelsAndClears",
+            "fullName": "Dreamy.Feedback.Samples.Tests.FeedbackSampleTests.BasicScenePlaysAllChannelsAndClears",
+            "state": "Passed",
+            "durationSeconds": 0.9958605,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "CancelDuringSequenceDelayDoesNotPlayAction",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.CancelDuringSequenceDelayDoesNotPlayAction",
+            "state": "Passed",
+            "durationSeconds": 0.2395476,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ClearDestroysActiveIconsAndCanReinitialize",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.ClearDestroysActiveIconsAndCanReinitialize",
+            "state": "Passed",
+            "durationSeconds": 0.0496751,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ClearDestroysActiveVfx",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.ClearDestroysActiveVfx",
+            "state": "Passed",
+            "durationSeconds": 0.0466509,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "FlashStopClearsOverlayAndSuppressesCompletion",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.FlashStopClearsOverlayAndSuppressesCompletion",
+            "state": "Passed",
+            "durationSeconds": 0.1640753,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "OldRegistryOwnerDoesNotUnregisterReplacement",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.OldRegistryOwnerDoesNotUnregisterReplacement",
+            "state": "Passed",
+            "durationSeconds": 0.0141945,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "OldVfxHandleCannotStopReusedInstance",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.OldVfxHandleCannotStopReusedInstance",
+            "state": "Passed",
+            "durationSeconds": 0.0393283,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RepeatedFloatingTextStopCannotStopReusedLease",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.RepeatedFloatingTextStopCannotStopReusedLease",
+            "state": "Passed",
+            "durationSeconds": 0.0613581,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ShakeRestoresPositionCapturedAtPlayback",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.ShakeRestoresPositionCapturedAtPlayback",
+            "state": "Passed",
+            "durationSeconds": 0.0450177,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "StaleShakeHandleDoesNotStopNewShake",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.StaleShakeHandleDoesNotStopNewShake",
+            "state": "Passed",
+            "durationSeconds": 0.0695795,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "BootstrapAndFoundationOpenSharedWalletFeedback",
+            "fullName": "Dreamy.Template.Tests.FoundationFeedbackTests.BootstrapAndFoundationOpenSharedWalletFeedback",
+            "state": "Passed",
+            "durationSeconds": 4.3577106,
+            "message": null,
+            "stackTrace": null,
+            "output": "[TestConfig] Id: item_1, Name: Test Item 1, Value: 100\r\n[TestConfig] Id: item_2, Name: Test Item 2, Value: 200\r\n"
+          }
+        ]
+      }
+    },
+    "hint": null
+  }
+}

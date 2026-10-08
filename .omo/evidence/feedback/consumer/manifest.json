@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "com.dreamy.feedback": "file:D:/Game/dreamy-package-sandbox/LocalPackages/com.dreamy.feedback",
+    "com.dreamy.core": "file:D:/Game/dreamy-package-sandbox/LocalPackages/com.dreamy.core",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+    "com.unity.ugui": "2.0.0",
+    "com.unity.modules.particlesystem": "1.0.0",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.test-framework": "1.6.0",
+    "com.dreamy.feature.economy": "file:D:/Game/dreamy-package-sandbox/LocalPackages/com.dreamy.feature.economy",
+    "com.dreamy.ui": "file:D:/Game/dreamy-package-sandbox/LocalPackages/com.dreamy.ui",
+    "com.dreamy.audio": "file:D:/Game/dreamy-package-sandbox/LocalPackages/com.dreamy.audio",
+    "com.dreamy.assets": "file:D:/Game/dreamy-package-sandbox/LocalPackages/com.dreamy.assets",
+    "com.dreamy.datasave": "file:D:/Game/dreamy-package-sandbox/LocalPackages/com.dreamy.datasave",
+    "com.demigiant.dotween": "https://github.com/grashaar/DOTween.git",
+    "com.unity.addressables": "2.9.1",
+    "com.unity.nuget.newtonsoft-json": "3.2.2",
+    "com.unity.modules.physics2d": "1.0.0"
+  },
+  "testables": [
+    "com.dreamy.feedback"
+  ]
+}

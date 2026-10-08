@@ -1,0 +1,20 @@
+{
+  "name": "Dreamy.Template.Editor",
+  "references": [
+    "Dreamy.Template.Runtime",
+    "Dreamy.UI.Runtime",
+    "Dreamy.Feature.Economy.Integration.Runtime",
+    "Dreamy.Feature.Progression.Integration.Runtime",
+    "Dreamy.Feature.Missions.Integration.Runtime",
+    "Dreamy.Feature.LuckyWheel.Integration.Runtime",
+    "Unity.TextMeshPro",
+    "UnityEngine.UI",
+    "Dreamy.Feedback.Runtime",
+    "Dreamy.Feedback.Sample.Editor",
+    "Dreamy.Feedback.Economy.Sample.Editor",
+    "Dreamy.Feedback.Economy.Sample.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ]
+}

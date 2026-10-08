@@ -32,7 +32,10 @@
         "Dreamy.Missions.Runtime",
         "Dreamy.Tutorial.Sample.Runtime",
         "Dreamy.LuckyWheel.Runtime",
-        "Dreamy.Feature.LuckyWheel.Integration.Runtime"
+        "Dreamy.Feature.LuckyWheel.Integration.Runtime",
+        "Dreamy.Feature.Economy.Integration.Runtime",
+        "Dreamy.Feedback.Runtime",
+        "Dreamy.Feedback.Economy.Sample.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

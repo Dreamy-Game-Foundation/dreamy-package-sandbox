@@ -1,0 +1,36 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "3cf5de2725444eba98e40fc98fc7e1f4",
+      "status": "failed",
+      "mode": "PlayMode",
+      "started_unix_ms": 1791393116291,
+      "finished_unix_ms": 1791393128586,
+      "last_update_unix_ms": 1791393128586,
+      "progress": {
+        "completed": 1,
+        "total": 1,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1791393123439,
+        "last_finished_test_full_name": "Dreamy.Template.Tests.FoundationFeedbackTests.BootstrapAndFoundationOpenSharedWalletFeedback",
+        "last_finished_unix_ms": 1791393128507,
+        "stuck_suspected": false,
+        "editor_is_focused": true,
+        "blocked_reason": null,
+        "failures_so_far": [
+          {
+            "full_name": "Dreamy.Template.Tests.FoundationFeedbackTests.BootstrapAndFoundationOpenSharedWalletFeedback",
+            "message": "  Back/CloseButton blocked by Label\r\n  Expected: same as <Back/CloseButton (UnityEngine.UI.Button)>\r\n  But was:  <ToggleButton (UnityEngine.UI.Button)>\r\n"
+          }
+        ],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": null
+    },
+    "hint": null
+  }
+}

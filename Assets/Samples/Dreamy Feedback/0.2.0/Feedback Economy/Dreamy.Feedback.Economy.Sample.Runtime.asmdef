@@ -1,0 +1,14 @@
+{
+  "name": "Dreamy.Feedback.Economy.Sample.Runtime",
+  "rootNamespace": "Dreamy.Feedback.Samples.Economy",
+  "references": [
+    "Dreamy.Feedback.Runtime",
+    "Dreamy.Economy.Runtime",
+    "Dreamy.Audio.Runtime",
+    "Dreamy.UI.Runtime",
+    "UniTask",
+    "Unity.TextMeshPro",
+    "UnityEngine.UI",
+    "Dreamy.Core.Runtime"
+  ]
+}

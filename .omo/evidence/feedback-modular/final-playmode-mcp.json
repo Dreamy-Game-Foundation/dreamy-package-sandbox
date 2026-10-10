@@ -1,0 +1,295 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "4123d540771f42ff91bd2cb94d3c0e9a",
+      "status": "succeeded",
+      "mode": "PlayMode",
+      "started_unix_ms": 1791522489645,
+      "finished_unix_ms": 1791522506289,
+      "last_update_unix_ms": 1791522506289,
+      "progress": {
+        "completed": 28,
+        "total": 28,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1791522498765,
+        "last_finished_test_full_name": "Dreamy.Template.Tests.FoundationFeedbackTests.BootstrapAndFoundationOpenSharedWalletFeedback",
+        "last_finished_unix_ms": 1791522506269,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "blocked_reason": null,
+        "failures_so_far": [],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": {
+        "mode": "PlayMode",
+        "summary": {
+          "total": 28,
+          "passed": 28,
+          "failed": 0,
+          "skipped": 0,
+          "durationSeconds": 9.8790393,
+          "resultState": "Passed"
+        },
+        "results": [
+          {
+            "name": "AllFiveIconPathsCompleteAndReleaseTheirLeases",
+            "fullName": "Dreamy.Feedback.Dotween.Tests.DotweenFeedbackTests.AllFiveIconPathsCompleteAndReleaseTheirLeases",
+            "state": "Passed",
+            "durationSeconds": 0.6460946,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "CompleteAndStopAreExactlyOnce",
+            "fullName": "Dreamy.Feedback.Dotween.Tests.DotweenFeedbackTests.CompleteAndStopAreExactlyOnce",
+            "state": "Passed",
+            "durationSeconds": 0.0017072,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "DestroyedDestinationStopsIconGroup",
+            "fullName": "Dreamy.Feedback.Dotween.Tests.DotweenFeedbackTests.DestroyedDestinationStopsIconGroup",
+            "state": "Passed",
+            "durationSeconds": 0.0159933,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "DisposedPresenterStopsObservingWallet",
+            "fullName": "Dreamy.Feedback.Samples.Economy.Tests.FeedbackEconomyTests.DisposedPresenterStopsObservingWallet",
+            "state": "Passed",
+            "durationSeconds": 0.0023037,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ImportedPrefabGrantsOnceAndCanReopen",
+            "fullName": "Dreamy.Feedback.Samples.Economy.Tests.FeedbackEconomyTests.ImportedPrefabGrantsOnceAndCanReopen",
+            "state": "Passed",
+            "durationSeconds": 0.1602901,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RetryDoesNotEmitAnotherCommittedReward",
+            "fullName": "Dreamy.Feedback.Samples.Economy.Tests.FeedbackEconomyTests.RetryDoesNotEmitAnotherCommittedReward",
+            "state": "Passed",
+            "durationSeconds": 0.0003759,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "BasicScenePlaysAllChannelsAndClears",
+            "fullName": "Dreamy.Feedback.Samples.Tests.FeedbackSampleTests.BasicScenePlaysAllChannelsAndClears",
+            "state": "Passed",
+            "durationSeconds": 0.4895396,
+            "message": null,
+            "stackTrace": null,
+            "output": "<color=#0099bc><b>DOTWEEN ► </b></color>Max Tweens reached: capacity has automatically been increased from 200/50 to 200/125. Use DOTween.SetTweensCapacity to set it manually at startup\n"
+          },
+          {
+            "name": "CameraShakeMovesBoardProjectionAndRestoresRig",
+            "fullName": "Dreamy.Feedback.Samples.Tests.FeedbackSampleTests.CameraShakeMovesBoardProjectionAndRestoresRig",
+            "state": "Passed",
+            "durationSeconds": 0.3305758,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "BudgetRejectsExcessRequest",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackCompositeTests.BudgetRejectsExcessRequest",
+            "state": "Passed",
+            "durationSeconds": 0.0019748,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "BuilderPreservesAmountAndIntensityWithoutGraphMutation",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackCompositeTests.BuilderPreservesAmountAndIntensityWithoutGraphMutation",
+            "state": "Passed",
+            "durationSeconds": 0.000794,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "CompleteRunsPendingOneShotsExactlyOnce",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackCompositeTests.CompleteRunsPendingOneShotsExactlyOnce",
+            "state": "Passed",
+            "durationSeconds": 0.0006329,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ConcurrentRequestsStopIndependently",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackCompositeTests.ConcurrentRequestsStopIndependently",
+            "state": "Passed",
+            "durationSeconds": 0.0151022,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "GraphRejectsCycleAndUnboundedVfx",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackCompositeTests.GraphRejectsCycleAndUnboundedVfx",
+            "state": "Passed",
+            "durationSeconds": 0.0007654,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "IconCompleteAndStaleHandleDoNotStopReusedPool",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackCompositeTests.IconCompleteAndStaleHandleDoNotStopReusedPool",
+            "state": "Passed",
+            "durationSeconds": 0.0129143,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "OwnerDestroyedStopsOnlyItsRequest",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackCompositeTests.OwnerDestroyedStopsOnlyItsRequest",
+            "state": "Passed",
+            "durationSeconds": 0.0170107,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RequiredFailureStopsParallelSibling",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackCompositeTests.RequiredFailureStopsParallelSibling",
+            "state": "Passed",
+            "durationSeconds": 0.0114323,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "SequenceWaitsForCompletionAndParallelJoinsAll",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackCompositeTests.SequenceWaitsForCompletionAndParallelJoinsAll",
+            "state": "Passed",
+            "durationSeconds": 0.0319456,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "StopDoesNotStartPendingChildren",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackCompositeTests.StopDoesNotStartPendingChildren",
+            "state": "Passed",
+            "durationSeconds": 0.0004768,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "UnscaledAnimationFinishesAtTimeScaleZero",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackCompositeTests.UnscaledAnimationFinishesAtTimeScaleZero",
+            "state": "Passed",
+            "durationSeconds": 0.0915124,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "CancelDuringSequenceDelayDoesNotPlayAction",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.CancelDuringSequenceDelayDoesNotPlayAction",
+            "state": "Passed",
+            "durationSeconds": 0.1662152,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ClearDestroysActiveIconsAndCanReinitialize",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.ClearDestroysActiveIconsAndCanReinitialize",
+            "state": "Passed",
+            "durationSeconds": 0.018124,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ClearDestroysActiveVfx",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.ClearDestroysActiveVfx",
+            "state": "Passed",
+            "durationSeconds": 0.017022,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "FlashStopClearsOverlayAndSuppressesCompletion",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.FlashStopClearsOverlayAndSuppressesCompletion",
+            "state": "Passed",
+            "durationSeconds": 0.1233843,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "OldVfxHandleCannotStopReusedInstance",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.OldVfxHandleCannotStopReusedInstance",
+            "state": "Passed",
+            "durationSeconds": 0.0158269,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RepeatedFloatingTextStopCannotStopReusedLease",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.RepeatedFloatingTextStopCannotStopReusedLease",
+            "state": "Passed",
+            "durationSeconds": 0.0221772,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ShakeRestoresPositionCapturedAtPlayback",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.ShakeRestoresPositionCapturedAtPlayback",
+            "state": "Passed",
+            "durationSeconds": 0.0161226,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "StaleShakeHandleDoesNotStopNewShake",
+            "fullName": "Dreamy.Feedback.Tests.FeedbackLifecycleTests.StaleShakeHandleDoesNotStopNewShake",
+            "state": "Passed",
+            "durationSeconds": 0.020992,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "BootstrapAndFoundationOpenSharedWalletFeedback",
+            "fullName": "Dreamy.Template.Tests.FoundationFeedbackTests.BootstrapAndFoundationOpenSharedWalletFeedback",
+            "state": "Passed",
+            "durationSeconds": 7.5043409,
+            "message": null,
+            "stackTrace": null,
+            "output": "[TestConfig] Id: item_1, Name: Test Item 1, Value: 100\n[TestConfig] Id: item_2, Name: Test Item 2, Value: 200\n"
+          }
+        ]
+      }
+    },
+    "hint": null
+  }
+}

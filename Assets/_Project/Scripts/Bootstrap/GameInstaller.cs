@@ -13,7 +13,7 @@ using Dreamy.LuckyWheel;
 using Dreamy.Tutorial;
 using Dreamy.Economy;
 using Dreamy.Feedback;
-using Dreamy.Feedback.Samples.Economy;
+using Dreamy.Template.Demo;
 using Dreamy.Feature.Shop.Integration;
 using Dreamy.Feature.Settings.Integration;
 using Dreamy.Feature.DailyReward.Integration;
@@ -228,12 +228,15 @@ namespace Dreamy.Template
             Feedback = feedbackInstance;
             feedbackInstance.Initialize();
             feedbackRegistration = FeedbackServiceRegistry.RegisterOwned(Feedback.Vfx, Feedback.Haptic, Feedback.FloatingText,
-                Feedback.IconFly, Feedback.Screen, Feedback.CameraShake, Feedback.Sequence);
+                Feedback.IconFly, Feedback.Screen, Feedback.CameraShake, Feedback.Feedback, Feedback.Ui);
             feedbackPresenter = new FeedbackRewardPresenter((IResourceBalanceSource)resourceWallet,
                 new ResourceId("currency.coin"), (_, delta) =>
                 {
                     if (delta <= 0 || feedbackInstance == null || !feedbackInstance.isActiveAndEnabled) return;
-                    feedbackInstance.PlayReward(delta, feedbackInstance.transform.Find("WorldTarget").position);
+                    var definitions = feedbackInstance.GetComponent<Dreamy.Feedback.Samples.FeedbackSampleDefinitions>();
+                    feedbackInstance.Feedback.Play(FeedbackRequestBuilder.For(definitions.Reward).From(feedbackInstance)
+                        .At(feedbackInstance.transform.Find("WorldTarget").position).To(definitions.IconTarget)
+                        .IconsFrom(definitions.IconSource).WithAmount(delta).Build());
                     DreamyAudio.Service.Play("ui.click");
                 });
         }

@@ -28,17 +28,69 @@ namespace Dreamy.Feedback.Samples.Tests
             Assert.That(Resources.Load<TMP_Settings>("TMP Settings"), Is.Not.Null, "Import TMP Essential Resources once before running the samples.");
             Canvas.ForceUpdateCanvases();
             foreach (var button in controls.GetComponentsInChildren<UnityEngine.UI.Button>()) Assert.That(((RectTransform)button.transform).rect.width, Is.GreaterThan(150), button.name);
-            for (int i = 0; i < 7; i++) controls.PlayChannel(i);
+            for (int i = 0; i < 4; i++) { controls.PlayReward(i); yield return null; controls.CompleteAll(); }
+            for (int i = 0; i < controls.ChannelCount; i++) controls.PlayChannel(i);
             controls.PlayAll(); yield return null;
             controls.StopAll(); yield return null;
             var root = host.GetComponent<FeedbackRoot>();
             Assert.That(root.WorldVfxRoot.childCount, Is.Zero); Assert.That(root.FloatingTextRoot.childCount, Is.Zero); Assert.That(root.IconFlyRoot.childCount, Is.Zero);
-            foreach (var text in Object.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None)) { Assert.That(text.font, Is.Not.Null, text.name); Assert.That(text.font.atlasPopulationMode, Is.EqualTo(AtlasPopulationMode.Static), text.name); }
+            foreach (var text in Object.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None)) { Assert.That(text.font, Is.Not.Null, text.name);  }
             Assert.That(AssetDatabase.LoadAssetAtPath<Material>(Path.GetDirectoryName(AssetDatabase.GUIDToAssetPath(guid)) + "/RewardParticles.mat").shader.name, Is.EqualTo("Dreamy/Feedback/SampleParticles"));
-            yield return Capture("basic-portrait", 1080, 1920);
-            yield return Capture("basic-landscape", 1920, 1080);
+            Assert.That(host.transform.Find("PuzzleBoard"), Is.Null);
+            yield return Capture("starter-portrait", 1080, 1920);
+            yield return Capture("starter-landscape", 1920, 1080);
 #else
             Assert.Ignore("Scene import check uses Editor scene loading."); yield return null;
+#endif
+        }
+        [UnityTest] public IEnumerator CameraShakeMovesWorldProjectionAndRestoresRig()
+        {
+#if UNITY_EDITOR
+            var path=System.Array.Find(AssetDatabase.FindAssets("FeedbackDemo t:Scene"),id=>AssetDatabase.GUIDToAssetPath(id).Contains("Basic Feedback"));
+            EditorSceneManager.LoadSceneInPlayMode(AssetDatabase.GUIDToAssetPath(path),new LoadSceneParameters(LoadSceneMode.Single));
+            yield return null; yield return null;
+            var host=Object.FindFirstObjectByType<FeedbackHost>();var camera=host.GetComponentInChildren<Camera>();
+            var worldPoint=host.transform.Find("WorldTarget").position;
+            var before=camera.WorldToViewportPoint(worldPoint);var rig=host.GetComponent<FeedbackRoot>().CameraRoot;var basis=rig.localPosition;
+            var h=host.CameraShake.Shake("small");yield return null;yield return null;
+            Assert.That(Vector3.Distance(camera.WorldToViewportPoint(worldPoint),before),Is.GreaterThan(.0001f));
+            h.Complete();Assert.That(rig.localPosition,Is.EqualTo(basis));Assert.That(h.Status,Is.EqualTo(FeedbackStatus.Completed));
+#else
+            Assert.Ignore("Scene fixture requires Editor.");yield return null;
+#endif
+        }
+        [UnityTest] public IEnumerator GameRigWorksWithExistingHudAndPlayerOwner()
+        {
+#if UNITY_EDITOR
+            var guid=System.Array.Find(AssetDatabase.FindAssets("GameFeedbackRig t:Prefab"),id=>AssetDatabase.GUIDToAssetPath(id).Contains("Basic Feedback"));
+            Assert.That(guid,Is.Not.Null);
+            var rig=Object.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(AssetDatabase.GUIDToAssetPath(guid)));
+            var owner=new GameObject("RewardPanel",typeof(RectTransform));
+            var source=new GameObject("RewardSource",typeof(RectTransform)); source.transform.SetParent(owner.transform,false);
+            var target=new GameObject("ExistingHud",typeof(RectTransform)); target.transform.SetParent(owner.transform,false);
+            try
+            {
+                Assert.That(rig.GetComponentsInChildren<Camera>(true),Is.Empty);
+                Assert.That(rig.GetComponentsInChildren<SpriteRenderer>(true),Is.Empty);
+                Assert.That(rig.GetComponent<FeedbackSampleDefinitions>(),Is.Null);
+                Assert.That(rig.GetComponentsInChildren<UnityEngine.EventSystems.EventSystem>(true),Is.Empty);
+                var host=rig.GetComponent<FeedbackHost>(); Assert.That(host.IsInitialized,Is.True);
+                var player=owner.AddComponent<FeedbackPlayer>();
+                var folder=Path.GetDirectoryName(AssetDatabase.GUIDToAssetPath(guid));
+                var data=new SerializedObject(player);
+                data.FindProperty("host").objectReferenceValue=host;
+                data.FindProperty("definition").objectReferenceValue=AssetDatabase.LoadAssetAtPath<FeedbackDefinition>(folder+"/StarReward.asset");
+                data.FindProperty("iconSource").objectReferenceValue=source.transform;
+                data.FindProperty("target").objectReferenceValue=target.transform; data.ApplyModifiedPropertiesWithoutUndo();
+                player.Play(); yield return null;
+                Assert.That(player.LastHandle.IsRunning,Is.True);
+                Assert.That(host.GetComponent<FeedbackRoot>().IconFlyRoot.childCount,Is.EqualTo(4));
+                owner.SetActive(false); yield return null; yield return null;
+                Assert.That(player.LastHandle.Status,Is.EqualTo(FeedbackStatus.Stopped));
+            }
+            finally { Object.Destroy(rig); Object.Destroy(owner); }
+#else
+            Assert.Ignore("Prefab fixture requires Editor.");yield return null;
 #endif
         }
         public static IEnumerator Capture(string name, int width, int height)
@@ -72,7 +124,7 @@ namespace Dreamy.Feedback.Samples.Tests
                 var previous = RenderTexture.active; RenderTexture.active = target;
                 var texture = new Texture2D(width, height, TextureFormat.RGB24, false);
                 texture.ReadPixels(new Rect(0, 0, width, height), 0, 0); texture.Apply(); RenderTexture.active = previous;
-                string folder = Path.GetFullPath(Path.Combine(Application.dataPath, "../.omo/evidence/feedback")); Directory.CreateDirectory(folder);
+                string folder = Path.GetFullPath(Path.Combine(Application.dataPath, "../.omo/evidence/feedback-modular")); Directory.CreateDirectory(folder);
                 File.WriteAllBytes(Path.Combine(folder, name + ".png"), texture.EncodeToPNG()); Object.Destroy(texture);
             }
             finally

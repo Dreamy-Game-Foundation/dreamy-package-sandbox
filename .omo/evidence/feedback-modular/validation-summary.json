@@ -1,0 +1,58 @@
+{
+  "unity": "6000.4.12f1",
+  "platform": "Linux",
+  "sandboxPlayMode": {
+    "passed": 29,
+    "failed": 0
+  },
+  "sandboxEditMode": {
+    "passed": 4,
+    "failed": 0
+  },
+  "baseConsumerPlayMode": {
+    "id": "2",
+    "testcasecount": "22",
+    "result": "Passed",
+    "total": "22",
+    "passed": "22",
+    "failed": "0",
+    "inconclusive": "0",
+    "skipped": "0",
+    "asserts": "0",
+    "engine-version": "3.5.0.0",
+    "clr-version": "4.0.30319.42000",
+    "start-time": "2026-10-09 05:15:46Z",
+    "end-time": "2026-10-09 05:15:47Z",
+    "duration": "0.6360921"
+  },
+  "dotweenConsumerPlayMode": {
+    "id": "2",
+    "testcasecount": "25",
+    "result": "Passed",
+    "total": "25",
+    "passed": "25",
+    "failed": "0",
+    "inconclusive": "0",
+    "skipped": "0",
+    "asserts": "0",
+    "engine-version": "3.5.0.0",
+    "clr-version": "4.0.30319.42000",
+    "start-time": "2026-10-09 05:22:29Z",
+    "end-time": "2026-10-09 05:22:30Z",
+    "duration": "1.2323256"
+  },
+  "linuxPlayerBuild": "FEEDBACK_CONSUMER_BUILD_PASS",
+  "linuxPlayerSmoke": {
+    "exitCode": 0,
+    "marker": "FEEDBACK_PLAYER_SMOKE_PASS"
+  },
+  "physicalAndroidIos": "not run",
+  "sampleRigGuid": "6c45ca174b442af4caa0fd53693df50d",
+  "sampleSceneGuid": "5d46f6a009e83d246bd7864d9e681b9b",
+  "static": {
+    "jsonFilesParsed": 16,
+    "runtimeEditorBoundary": "passed",
+    "baseDotweenBoundary": "passed",
+    "legacySequenceRemoval": "passed"
+  }
+}

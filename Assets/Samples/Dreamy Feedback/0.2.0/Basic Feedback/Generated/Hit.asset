@@ -1,0 +1,188 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 264c07d831303a39186ead30e93c886a, type: 3}
+  m_Name: Hit
+  m_EditorClassIdentifier: Dreamy.Feedback.Contracts::Dreamy.Feedback.FeedbackDefinition
+  id: Hit
+  root:
+    rid: 2503060418306769035
+  unscaledTime: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: 2503060418306769035
+      type: {class: FeedbackNode, ns: Dreamy.Feedback, asm: Dreamy.Feedback.Contracts}
+      data:
+        Type: 1
+        Required: 0
+        Id: 
+        Duration: 0
+        Text: +{amount}
+        Haptic: 1
+        IconFly:
+          Icon: {fileID: 0}
+          StartPosition: {x: 0, y: 0, z: 0}
+          EndPosition: {x: 0, y: 0, z: 0}
+          Count: 0
+          Duration: 0
+          Spread: 0
+          Stagger: 0
+          ArcHeight: 0
+          Spin: 0
+          Size: {x: 0, y: 0}
+          Style: 0
+          Ease: 0
+          UnscaledTime: 0
+        Punch:
+          Duration: 0.35
+          Strength: 0.2
+          Vibrato: 3
+          UnscaledTime: 1
+        Shake:
+          Duration: 0.35
+          UnscaledTime: 1
+          Amplitude: 0.18
+          Frequency: 30
+        Flash:
+          Color: {r: 1, g: 1, b: 1, a: 1}
+          UnscaledTime: 0
+          FadeInDuration: 0.05
+          HoldDuration: 0
+          FadeOutDuration: 0.15
+          MaxAlpha: 0.65
+        Children:
+        - rid: 2503060418306769036
+        - rid: 2503060418306769037
+        - rid: 2503060418306769038
+    - rid: 2503060418306769036
+      type: {class: FeedbackNode, ns: Dreamy.Feedback, asm: Dreamy.Feedback.Contracts}
+      data:
+        Type: 3
+        Required: 0
+        Id: reward
+        Duration: 1.2
+        Text: +{amount}
+        Haptic: 1
+        IconFly:
+          Icon: {fileID: 0}
+          StartPosition: {x: 0, y: 0, z: 0}
+          EndPosition: {x: 0, y: 0, z: 0}
+          Count: 0
+          Duration: 0
+          Spread: 0
+          Stagger: 0
+          ArcHeight: 0
+          Spin: 0
+          Size: {x: 0, y: 0}
+          Style: 0
+          Ease: 0
+          UnscaledTime: 0
+        Punch:
+          Duration: 0.35
+          Strength: 0.2
+          Vibrato: 3
+          UnscaledTime: 1
+        Shake:
+          Duration: 0.35
+          UnscaledTime: 1
+          Amplitude: 0.18
+          Frequency: 30
+        Flash:
+          Color: {r: 1, g: 1, b: 1, a: 1}
+          UnscaledTime: 0
+          FadeInDuration: 0.05
+          HoldDuration: 0
+          FadeOutDuration: 0.15
+          MaxAlpha: 0.65
+        Children: []
+    - rid: 2503060418306769037
+      type: {class: FeedbackNode, ns: Dreamy.Feedback, asm: Dreamy.Feedback.Contracts}
+      data:
+        Type: 7
+        Required: 0
+        Id: 
+        Duration: 0
+        Text: +{amount}
+        Haptic: 1
+        IconFly:
+          Icon: {fileID: 0}
+          StartPosition: {x: 0, y: 0, z: 0}
+          EndPosition: {x: 0, y: 0, z: 0}
+          Count: 0
+          Duration: 0
+          Spread: 0
+          Stagger: 0
+          ArcHeight: 0
+          Spin: 0
+          Size: {x: 0, y: 0}
+          Style: 0
+          Ease: 0
+          UnscaledTime: 0
+        Punch:
+          Duration: 0.35
+          Strength: 0.2
+          Vibrato: 3
+          UnscaledTime: 1
+        Shake:
+          Duration: 0.35
+          UnscaledTime: 1
+          Amplitude: 0.18
+          Frequency: 30
+        Flash:
+          Color: {r: 1, g: 1, b: 1, a: 1}
+          UnscaledTime: 0
+          FadeInDuration: 0.05
+          HoldDuration: 0
+          FadeOutDuration: 0.15
+          MaxAlpha: 0.65
+        Children: []
+    - rid: 2503060418306769038
+      type: {class: FeedbackNode, ns: Dreamy.Feedback, asm: Dreamy.Feedback.Contracts}
+      data:
+        Type: 4
+        Required: 0
+        Id: 
+        Duration: 0
+        Text: +{amount}
+        Haptic: 1
+        IconFly:
+          Icon: {fileID: 0}
+          StartPosition: {x: 0, y: 0, z: 0}
+          EndPosition: {x: 0, y: 0, z: 0}
+          Count: 0
+          Duration: 0
+          Spread: 0
+          Stagger: 0
+          ArcHeight: 0
+          Spin: 0
+          Size: {x: 0, y: 0}
+          Style: 0
+          Ease: 0
+          UnscaledTime: 0
+        Punch:
+          Duration: 0.35
+          Strength: 0.2
+          Vibrato: 3
+          UnscaledTime: 1
+        Shake:
+          Duration: 0.35
+          UnscaledTime: 1
+          Amplitude: 0.18
+          Frequency: 30
+        Flash:
+          Color: {r: 1, g: 1, b: 1, a: 1}
+          UnscaledTime: 0
+          FadeInDuration: 0.05
+          HoldDuration: 0
+          FadeOutDuration: 0.15
+          MaxAlpha: 0.65
+        Children: []

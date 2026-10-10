@@ -4,13 +4,13 @@
     "Dreamy.Template.Runtime",
     "Dreamy.Feedback.Runtime",
     "Dreamy.Feedback.Sample.Tests",
-    "Dreamy.Feedback.Economy.Sample.Runtime",
     "Dreamy.Core.Runtime",
     "Dreamy.Economy.Runtime",
     "Dreamy.Audio.Runtime",
     "Dreamy.UI.Runtime",
     "UnityEngine.UI",
-    "UniTask"
+    "UniTask",
+    "Dreamy.Feedback.Contracts"
   ],
   "optionalUnityReferences": [
     "TestAssemblies"

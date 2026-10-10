@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "com.dreamy.feedback": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.feedback",
+    "com.cysharp.unitask": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.cysharp.unitask@360e370345b9",
+    "com.unity.ugui": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.unity.ugui@80c574892b7a",
+    "com.unity.test-framework": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.unity.test-framework@645e1dc04325",
+    "com.unity.ext.nunit": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.unity.ext.nunit@ec2d0043d6fc",
+    "com.dreamy.feedback.dotween": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.feedback.dotween",
+    "com.demigiant.dotween": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.demigiant.dotween@4c1537e2a618",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.physics": "1.0.0",
+    "com.unity.modules.physics2d": "1.0.0"
+  },
+  "testables": [
+    "com.dreamy.feedback",
+    "com.dreamy.feedback.dotween"
+  ]
+}

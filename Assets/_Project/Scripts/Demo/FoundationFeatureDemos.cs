@@ -4,7 +4,6 @@ using Cysharp.Threading.Tasks;
 using Dreamy.Core;
 using Dreamy.Audio;
 using Dreamy.Feedback;
-using Dreamy.Feedback.Samples.Economy;
 using Dreamy.Economy;
 using Dreamy.Feature.Economy.Integration;
 using Dreamy.Feature.LuckyWheel.Integration;
@@ -26,7 +25,6 @@ namespace Dreamy.Template.Demo
         [SerializeField] private ProgressionDemoPanel progressionPrefab;
         [SerializeField] private LuckyWheelPanel luckyWheelPrefab;
         [SerializeField] private EconomyDemoPanel economyPrefab;
-        [SerializeField] private FeedbackEconomyPanel feedbackPrefab;
         private FoundationDemoPanel boundPanel;
         private UIPanel activePanel;
         private CancellationTokenSource lifetime;
@@ -70,9 +68,14 @@ namespace Dreamy.Template.Demo
         });
         private void OpenProgression() => Open(progressionPrefab, panel => panel.Configure(ServiceLocator.Get<IProgressionService>()));
         private void OpenLuckyWheel() => Open(luckyWheelPrefab, panel => { });
-        private void OpenFeedback() => Open(feedbackPrefab, panel => panel.Configure(
-            ServiceLocator.Get<IResourceWallet>(), (IResourceBalanceSource)ServiceLocator.Get<IResourceBalanceProvider>(),
-            ServiceLocator.Get<IAudioService>(), GameInstaller.Feedback));
+        private void OpenFeedback()
+        {
+            var host = GameInstaller.Feedback;
+            if (!host || !boundPanel) return;
+            var definitions = host.GetComponent<Dreamy.Feedback.Samples.FeedbackSampleDefinitions>();
+            host.Feedback.Play(FeedbackRequestBuilder.For(definitions.ButtonClick)
+                .From(boundPanel).To(boundPanel.transform).Build());
+        }
         private void OpenEconomy() => Open(economyPrefab, panel => panel.Configure(
             ServiceLocator.Get<IResourceWallet>(), ServiceLocator.Get<IResourceBalanceProvider>()));
 

@@ -1,0 +1,13 @@
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/RewardParticles.mat=70c72e084a068fe4ca7f2d9dd7a1b79a
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/Coin.png=631043b2b6b88c640af2119bdc068784
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/FontLicense.txt=9331d8c2e35bd394aa1ae1f7cba25d7a
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/RewardText.prefab=c5eff0dbbd5e45244ab53bc6352378e1
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/RewardParticles.prefab=369be32b747911d4ba099eb5b5301220
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/FloatingTextDatabase.asset=2750eaa0775d3d340aab986c390959fc
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/CameraShakeDatabase.asset=b882b54dd3039874bb4716cbd91020ee
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/DemoFont.ttf=9ad42e1505b0745459231e421a38a3cb
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/VfxDatabase.asset=da22b7b604d8e864bb30c4bf8acf5cb1
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/FeedbackRig.prefab=6c45ca174b442af4caa0fd53693df50d
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/FeedbackDemo.unity=5d46f6a009e83d246bd7864d9e681b9b
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/FeedbackSequenceDatabase.asset=ad3d098e86bfe3c4c95e0e11548ea2da
+Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/DemoFont.asset=fff7b476ab954934194d7720b3ea091d

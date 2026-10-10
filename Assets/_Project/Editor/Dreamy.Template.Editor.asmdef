@@ -11,8 +11,7 @@
     "UnityEngine.UI",
     "Dreamy.Feedback.Runtime",
     "Dreamy.Feedback.Sample.Editor",
-    "Dreamy.Feedback.Economy.Sample.Editor",
-    "Dreamy.Feedback.Economy.Sample.Runtime"
+    "Dreamy.Feedback.Contracts"
   ],
   "includePlatforms": [
     "Editor"

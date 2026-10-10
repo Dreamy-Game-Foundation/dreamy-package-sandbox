@@ -1,0 +1,38 @@
+{
+  "sandboxPlayMode": {
+    "passed": 28,
+    "failed": 0
+  },
+  "editMode": {
+    "passed": 4,
+    "failed": 0
+  },
+  "cleanConsumerPlayMode": {
+    "id": "2",
+    "testcasecount": "24",
+    "result": "Passed",
+    "total": "24",
+    "passed": "24",
+    "failed": "0",
+    "inconclusive": "0",
+    "skipped": "0",
+    "asserts": "0",
+    "engine-version": "3.5.0.0",
+    "clr-version": "4.0.30319.42000",
+    "start-time": "2026-10-09 08:37:19Z",
+    "end-time": "2026-10-09 08:37:20Z",
+    "duration": "0.6376917"
+  },
+  "linuxBuild": "FEEDBACK_CONSUMER_BUILD_PASS",
+  "linuxPlayerSmoke": {
+    "exitCode": 0,
+    "marker": "FEEDBACK_PLAYER_SMOKE_PASS"
+  },
+  "static": {
+    "asmdefsParsed": 11,
+    "coreBoundaries": "passed",
+    "economySampleRemoved": true,
+    "puzzleTilesRemoved": true
+  },
+  "physicalDevices": "not tested"
+}

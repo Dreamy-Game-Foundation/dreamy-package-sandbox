@@ -15,6 +15,7 @@ MonoBehaviour:
   presets:
   - id: small
     options:
-      Duration: 0.2
-      Amplitude: 0.08
+      Duration: 0.45
+      UnscaledTime: 1
+      Amplitude: 0.22
       Frequency: 30

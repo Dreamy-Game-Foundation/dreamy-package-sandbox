@@ -38,7 +38,7 @@ namespace Dreamy.Template.Tests
             Set(installer, "saveDirectory", savePath);
             string profilePath = "Assets/_Project/Audio/Feedback/AudioProfile.asset";
             Set(installer, "audioProfile", AssetDatabase.LoadAssetAtPath<DreamyAudioProfile>(profilePath));
-            Set(installer, "feedbackPrefab", AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated/FeedbackRig.prefab").GetComponent<FeedbackHost>());
+            Set(installer, "feedbackPrefab", AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Samples/Dreamy Feedback/0.3.0/Basic Feedback/Generated/FeedbackRig.prefab").GetComponent<FeedbackHost>());
             GameObject panelRoot = null; GameObject demo = null; GameObject eventRoot = null;
             try
             {

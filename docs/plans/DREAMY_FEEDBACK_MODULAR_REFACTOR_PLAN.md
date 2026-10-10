@@ -187,3 +187,7 @@ Evidence mới đặt ở `.omo/evidence/feedback-modular/`, kèm environment/re
 ## 12. Điều chỉnh sample theo phản hồi tiếp theo
 
 Bỏ Economy sample và toàn bộ puzzle tiles. Tách prefab GameFeedbackRig dùng trong game khỏi rig preview; thêm FeedbackPlayer, 4 reward presets và sprite override. Xóa one-time upgrade/generator tooling. Giữ font/confetti mới trong sandbox; source portable dùng asset mặc định có license kèm theo. README tập trung thao tác import và HUD integration. Gates mới: sandbox 28/28, base consumer 24/24; xem VALIDATION cho evidence hiện tại.
+
+## Điều chỉnh đóng gói DOTween — 2026-10-10
+
+Theo yêu cầu mới, quyết định package adapter riêng ở trên được thay bằng sample `Samples~/DOTweenFeedbackSample` trong `com.dreamy.feedback`. Consumer cài DOTween rồi chủ động import sample; giữ GUID và tên assembly. Package base không thêm dependency DOTween. Sandbox dùng bản sample import trong Assets; bỏ package adapter khỏi manifest/testables.

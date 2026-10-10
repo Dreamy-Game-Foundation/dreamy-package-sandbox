@@ -1,0 +1,20 @@
+{
+  "unity": "6000.4.12f1",
+  "date": "2026-10-10",
+  "editmode": {
+    "passed": 11,
+    "failed": 0
+  },
+  "playmode": {
+    "passed": 25,
+    "failed": 0
+  },
+  "common_assets": 7,
+  "tested_paths": [
+    "serialization round-trip of all templates",
+    "normal completion of all authored presets on GameFeedbackRig",
+    "Stop and Complete of all authored presets",
+    "no Core or DOTween required"
+  ],
+  "inspector_visual_manual_review": false
+}

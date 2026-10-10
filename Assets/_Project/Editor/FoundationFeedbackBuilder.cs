@@ -11,7 +11,7 @@ namespace Dreamy.Template.Editor
 {
     public static class FoundationFeedbackBuilder
     {
-        public const string Basic = "Assets/Samples/Dreamy Feedback/0.2.0/Basic Feedback/Generated";
+        public const string Basic = "Assets/Samples/Dreamy Feedback/0.3.0/Basic Feedback/Generated";
         [MenuItem("Dreamy/Sandbox/Wire Feedback Rig")]
         public static void Build()
         {

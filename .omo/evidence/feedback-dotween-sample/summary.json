@@ -1,0 +1,17 @@
+{
+  "unity": "6000.4.12f1",
+  "date": "2026-10-10",
+  "adapter_source": "Samples~/DOTweenFeedbackSample",
+  "adapter_consumer": "Assets/Samples/Dreamy Feedback/0.3.0/DOTween Feedback",
+  "separate_adapter_package": false,
+  "adapter_consumer_playmode": {
+    "passed": 26,
+    "failed": 0
+  },
+  "base_without_dotween_playmode": {
+    "passed": 24,
+    "failed": 0
+  },
+  "runtime_and_tests_byte_identical": true,
+  "script_and_assembly_guids_preserved": true
+}

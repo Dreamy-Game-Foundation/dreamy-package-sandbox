@@ -206,15 +206,6 @@
         "com.unity.modules.imageconversion": "1.0.0"
       }
     },
-    "com.dreamy.feedback.dotween": {
-      "version": "file:../LocalPackages/com.dreamy.feedback.dotween",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.dreamy.feedback": "0.3.0",
-        "com.demigiant.dotween": "0.0.3"
-      }
-    },
     "com.dreamy.ui": {
       "version": "file:../LocalPackages/com.dreamy.ui",
       "depth": 0,

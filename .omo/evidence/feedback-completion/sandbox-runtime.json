@@ -1,0 +1,106 @@
+[
+  {
+    "channel": 0,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 1,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 2,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 3,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 4,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 5,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 6,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 7,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 8,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 9,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 10,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 11,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 12,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "channel": 13,
+    "valid": false,
+    "status": "Invalid",
+    "label": "Unavailable: import the updated Basic Feedback sample presets."
+  },
+  {
+    "reward": 0,
+    "valid": true,
+    "status": "Running"
+  },
+  {
+    "reward": 1,
+    "valid": true,
+    "status": "Running"
+  },
+  {
+    "reward": 2,
+    "valid": true,
+    "status": "Running"
+  },
+  {
+    "reward": 3,
+    "valid": true,
+    "status": "Running"
+  }
+]

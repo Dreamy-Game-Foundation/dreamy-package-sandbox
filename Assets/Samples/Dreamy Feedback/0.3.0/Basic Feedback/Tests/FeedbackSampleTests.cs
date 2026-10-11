@@ -30,15 +30,15 @@ namespace Dreamy.Feedback.Samples.Tests
                 host.Initialize(cameraObject.GetComponent<Camera>());
                 Assert.That(host.Vfx, Is.Not.Null);
                 Assert.That(host.FloatingText, Is.Not.Null);
-                string folder = Path.GetDirectoryName(path).Replace("\\", "/") + "/CommonPresets";
+                string folder = Path.GetDirectoryName(Path.GetDirectoryName(path)).Replace("\\", "/") + "/Definitions";
                 var definitions = AssetDatabase.FindAssets("t:FeedbackDefinition", new[] { folder });
-                Assert.That(definitions.Length, Is.EqualTo(7));
+                Assert.That(definitions.Length, Is.EqualTo(13));
                 foreach (var definitionGuid in definitions)
                 {
                     var definition = AssetDatabase.LoadAssetAtPath<FeedbackDefinition>(AssetDatabase.GUIDToAssetPath(definitionGuid));
                     Assert.That(FeedbackGraphValidation.Validate(definition), Is.Null, definition.name);
                     var request = FeedbackRequestBuilder.For(definition).From(anchor).To(anchor.transform)
-                        .At(Vector3.zero).WithAmount(3).Build();
+                        .At(Vector3.zero).IconsFrom(anchor.transform).WithAmount(3).Build();
                     var handle = host.Feedback.Play(request);
                     float deadline = Time.realtimeSinceStartup + 4;
                     while (handle.IsRunning && Time.realtimeSinceStartup < deadline) yield return null;
@@ -75,7 +75,7 @@ namespace Dreamy.Feedback.Samples.Tests
             var root = host.GetComponent<FeedbackRoot>();
             Assert.That(root.WorldVfxRoot.childCount, Is.Zero); Assert.That(root.FloatingTextRoot.childCount, Is.Zero); Assert.That(root.IconFlyRoot.childCount, Is.Zero);
             foreach (var text in Object.FindObjectsByType<TMP_Text>(FindObjectsSortMode.None)) { Assert.That(text.font, Is.Not.Null, text.name);  }
-            Assert.That(AssetDatabase.LoadAssetAtPath<Material>(Path.GetDirectoryName(AssetDatabase.GUIDToAssetPath(guid)) + "/RewardParticles.mat").shader.name, Is.EqualTo("Dreamy/Feedback/SampleParticles"));
+            Assert.That(AssetDatabase.LoadAssetAtPath<Material>(Path.GetDirectoryName(Path.GetDirectoryName(AssetDatabase.GUIDToAssetPath(guid))) + "/RewardParticles.mat").shader.name, Is.EqualTo("Dreamy/Feedback/SampleParticles"));
             Assert.That(host.transform.Find("PuzzleBoard"), Is.Null);
             yield return Capture("starter-portrait", 1080, 1920);
             yield return Capture("starter-landscape", 1920, 1080);
@@ -119,8 +119,9 @@ namespace Dreamy.Feedback.Samples.Tests
                 var folder=Path.GetDirectoryName(AssetDatabase.GUIDToAssetPath(guid));
                 var data=new SerializedObject(player);
                 data.FindProperty("host").objectReferenceValue=host;
-                data.FindProperty("definition").objectReferenceValue=AssetDatabase.LoadAssetAtPath<FeedbackDefinition>(folder+"/StarReward.asset");
+                data.FindProperty("asset").objectReferenceValue=AssetDatabase.LoadAssetAtPath<FeedbackDefinition>(Path.GetDirectoryName(folder)+"/Definitions/Rewards/StarReward.asset");
                 data.FindProperty("iconSource").objectReferenceValue=source.transform;
+                data.FindProperty("useRuntimeCount").boolValue=true; data.FindProperty("iconCount").intValue=4;
                 data.FindProperty("target").objectReferenceValue=target.transform; data.ApplyModifiedPropertiesWithoutUndo();
                 player.Play(); yield return null;
                 Assert.That(player.LastHandle.IsRunning,Is.True);

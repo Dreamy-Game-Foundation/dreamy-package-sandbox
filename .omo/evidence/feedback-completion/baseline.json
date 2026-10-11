@@ -1,0 +1,11 @@
+{
+  "scene": "Assets/Samples/Dreamy Feedback/0.3.0/Basic Feedback/Generated/FeedbackDemo.unity",
+  "wasDirty": true,
+  "stillDirty": true,
+  "backup": "D:\\Game\\dreamy-package-sandbox\\.omo\\evidence\\feedback-completion/FeedbackDemo-unsaved-backup.unity",
+  "repaired": [
+    "VfxDatabase",
+    "PortableVfxDatabase",
+    "FloatingTextDatabase"
+  ]
+}

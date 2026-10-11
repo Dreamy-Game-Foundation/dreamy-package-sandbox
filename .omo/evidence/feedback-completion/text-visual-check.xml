@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-10 10:03:46Z" end-time="2026-10-10 10:03:46Z" duration="0.7421972">
+  <test-suite type="TestSuite" id="1047" name="feedback-completion-base" fullname="feedback-completion-base" runstate="Runnable" testcasecount="31" result="Passed" start-time="2026-10-10 10:03:46Z" end-time="2026-10-10 10:03:46Z" duration="0.742197" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1008" name="Dreamy.Feedback.Sample.Tests.dll" fullname="D:/Game/dreamy-package-sandbox/.omo/consumers/feedback-completion-base/Library/ScriptAssemblies/Dreamy.Feedback.Sample.Tests.dll" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-10 10:03:46Z" end-time="2026-10-10 10:03:46Z" duration="0.733824" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="49128" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1009" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-10 10:03:46Z" end-time="2026-10-10 10:03:46Z" duration="0.733183" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1010" name="Feedback" fullname="Dreamy.Feedback" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-10 10:03:46Z" end-time="2026-10-10 10:03:46Z" duration="0.732799" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1011" name="Samples" fullname="Dreamy.Feedback.Samples" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-10 10:03:46Z" end-time="2026-10-10 10:03:46Z" duration="0.732500" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1012" name="Tests" fullname="Dreamy.Feedback.Samples.Tests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-10 10:03:46Z" end-time="2026-10-10 10:03:46Z" duration="0.732137" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1003" name="FeedbackSampleTests" fullname="Dreamy.Feedback.Samples.Tests.FeedbackSampleTests" classname="Dreamy.Feedback.Samples.Tests.FeedbackSampleTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-10 10:03:46Z" end-time="2026-10-10 10:03:46Z" duration="0.730776" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1005" name="BasicScenePlaysAllChannelsAndClears" fullname="Dreamy.Feedback.Samples.Tests.FeedbackSampleTests.BasicScenePlaysAllChannelsAndClears" methodname="BasicScenePlaysAllChannelsAndClears" classname="Dreamy.Feedback.Samples.Tests.FeedbackSampleTests" runstate="Runnable" seed="1610378784" result="Passed" start-time="2026-10-10 10:03:46Z" end-time="2026-10-10 10:03:46Z" duration="0.717812" asserts="0">
+                  <properties>
+                    <property name="_JOINTYPE" value="UnityCombinatorial" />
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Saving results to: D:\Game\dreamy-package-sandbox\.omo\evidence\feedback-completion\text-visual-check.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

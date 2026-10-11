@@ -1,0 +1,106 @@
+[
+  {
+    "channel": 0,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: VFX"
+  },
+  {
+    "channel": 1,
+    "valid": true,
+    "status": "Completed",
+    "label": "Haptics unsupported in Editor/desktop; test vibration on a mobile device"
+  },
+  {
+    "channel": 2,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: Floating Text"
+  },
+  {
+    "channel": 3,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: Scatter Magnet"
+  },
+  {
+    "channel": 4,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: Screen Flash"
+  },
+  {
+    "channel": 5,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: Camera Shake"
+  },
+  {
+    "channel": 6,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: Selected Reward"
+  },
+  {
+    "channel": 7,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: Straight"
+  },
+  {
+    "channel": 8,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: Arc"
+  },
+  {
+    "channel": 9,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: Fountain"
+  },
+  {
+    "channel": 10,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: Spiral"
+  },
+  {
+    "channel": 11,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: UI Punch"
+  },
+  {
+    "channel": 12,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: Hit"
+  },
+  {
+    "channel": 13,
+    "valid": true,
+    "status": "Completed",
+    "label": "Running: Button Click"
+  },
+  {
+    "reward": 0,
+    "valid": true,
+    "status": "Completed"
+  },
+  {
+    "reward": 1,
+    "valid": true,
+    "status": "Completed"
+  },
+  {
+    "reward": 2,
+    "valid": true,
+    "status": "Completed"
+  },
+  {
+    "reward": 3,
+    "valid": true,
+    "status": "Completed"
+  }
+]

@@ -22,7 +22,7 @@ namespace Dreamy.Feature.Progression.Integration
         {
             Unbind();
             service = progression ?? throw new ArgumentNullException(nameof(progression));
-            ProgressionFeatureInstaller.Attach(PanelManager.Instance.PresenterFactory, hud);
+            hud.Bind(service);
             if (isActiveAndEnabled) Bind();
             Render(service.GetState());
         }
@@ -39,13 +39,14 @@ namespace Dreamy.Feature.Progression.Integration
             if (service == null) return;
             service.ProgressChanged -= Render;
             service.ProgressChanged += Render;
-            ProgressionFeatureInstaller.Attach(PanelManager.Instance.PresenterFactory, hud);
+            hud.Bind(service);
             Render(service.GetState());
         }
 
         private void Unbind()
         {
             if (service != null) service.ProgressChanged -= Render;
+            if (hud != null) hud.Bind(null);
         }
 
         private void Advance()

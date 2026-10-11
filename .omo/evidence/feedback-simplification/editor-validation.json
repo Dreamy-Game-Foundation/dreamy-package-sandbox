@@ -1,0 +1,46 @@
+{
+  "console": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Retrieved 0 log entries.\",\"data\":[]}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Retrieved 0 log entries.",
+        "data": []
+      },
+      "isError": false
+    }
+  },
+  "authoring": {
+    "status": "fulfilled",
+    "value": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"path\":\"Assets/FeedbackWorkingCopies/FeedbackDemo Authoring Working Copy.unity\",\"isDirty\":true,\"issues\":[],\"libraryErrors\":[],\"effects\":7,\"definitions\":13},\"compiler\":\"codedom\"}}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Code executed successfully.",
+        "data": {
+          "result": {
+            "path": "Assets/FeedbackWorkingCopies/FeedbackDemo Authoring Working Copy.unity",
+            "isDirty": true,
+            "issues": [],
+            "libraryErrors": [],
+            "effects": 7,
+            "definitions": 13
+          },
+          "compiler": "codedom"
+        }
+      },
+      "isError": false
+    }
+  }
+}

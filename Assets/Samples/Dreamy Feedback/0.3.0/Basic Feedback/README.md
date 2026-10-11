@@ -126,3 +126,10 @@ host.Feedback.Play(FeedbackRequestBuilder.For(comboPopup)
 ```
 
 Ví dụ phản hồi button bằng Inspector: thêm FeedbackPlayer vào button, gán Host + ButtonConfirm + Target là RectTransform của button; nối Button.onClick → FeedbackPlayer.Play(). Không cần script mới.
+# SO authoring update
+
+The sample now includes only seven shared effect SO under Generated/Effects, reusing
+the four existing Coin/Star/Energy/Gem icons. The ready-to-use scene already binds the
+four rewards and fourteen channel buttons. No authoring builder is required.
+Drag effect assets into Sequence/Parallel; use step/request overrides for variations.
+See [SO setup, overrides and UniTask waiting](../../Documentation~/effect-assets.md).

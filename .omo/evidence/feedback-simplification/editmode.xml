@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="24" result="Passed" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.3194834">
+  <test-suite type="TestSuite" id="1000" name="feedback-completion-base" fullname="feedback-completion-base" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.319483" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1029" name="Dreamy.Feedback.Tests.EditMode.dll" fullname="D:/Game/dreamy-package-sandbox/.omo/consumers/feedback-completion-base/Library/ScriptAssemblies/Dreamy.Feedback.Tests.EditMode.dll" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.307043" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="6312" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1030" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.306577" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1031" name="Feedback" fullname="Dreamy.Feedback" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.306456" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1032" name="Tests" fullname="Dreamy.Feedback.Tests" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.306287" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="FeedbackAuthoringTests" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.105177" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1010" name="CameraOptionsRoundTripThroughUnitySerialization" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests.CameraOptionsRoundTripThroughUnitySerialization" methodname="CameraOptionsRoundTripThroughUnitySerialization" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" seed="488323086" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.020244" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1009" name="CommonPresetSurvivesSerializationAndValidates" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests.CommonPresetSurvivesSerializationAndValidates" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.063616" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1002" name="CommonPresetSurvivesSerializationAndValidates(ButtonConfirm)" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests.CommonPresetSurvivesSerializationAndValidates(ButtonConfirm)" methodname="CommonPresetSurvivesSerializationAndValidates" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" seed="145519885" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.057187" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1003" name="CommonPresetSurvivesSerializationAndValidates(ButtonReject)" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests.CommonPresetSurvivesSerializationAndValidates(ButtonReject)" methodname="CommonPresetSurvivesSerializationAndValidates" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" seed="125332645" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000743" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1004" name="CommonPresetSurvivesSerializationAndValidates(RewardPop)" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests.CommonPresetSurvivesSerializationAndValidates(RewardPop)" methodname="CommonPresetSurvivesSerializationAndValidates" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" seed="1173841660" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000609" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1005" name="CommonPresetSurvivesSerializationAndValidates(ComboPopup)" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests.CommonPresetSurvivesSerializationAndValidates(ComboPopup)" methodname="CommonPresetSurvivesSerializationAndValidates" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" seed="1466882209" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000460" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1006" name="CommonPresetSurvivesSerializationAndValidates(LevelComplete)" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests.CommonPresetSurvivesSerializationAndValidates(LevelComplete)" methodname="CommonPresetSurvivesSerializationAndValidates" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" seed="2136854475" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000622" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1007" name="CommonPresetSurvivesSerializationAndValidates(SoftShake)" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests.CommonPresetSurvivesSerializationAndValidates(SoftShake)" methodname="CommonPresetSurvivesSerializationAndValidates" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" seed="1605201139" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000271" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1008" name="CommonPresetSurvivesSerializationAndValidates(SuccessFlash)" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests.CommonPresetSurvivesSerializationAndValidates(SuccessFlash)" methodname="CommonPresetSurvivesSerializationAndValidates" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" seed="288250940" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000350" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1012" name="DuplicateIdAndMissingPrefabAreReported" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests.DuplicateIdAndMissingPrefabAreReported" methodname="DuplicateIdAndMissingPrefabAreReported" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" seed="1100104704" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.003573" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1013" name="IdGeneratorEscapesControlCharactersAndResolvesNameCollisions" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests.IdGeneratorEscapesControlCharactersAndResolvesNameCollisions" methodname="IdGeneratorEscapesControlCharactersAndResolvesNameCollisions" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" seed="355563406" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.001658" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1011" name="SequenceOptionsRoundTripThroughUnitySerialization" fullname="Dreamy.Feedback.Tests.FeedbackAuthoringTests.SequenceOptionsRoundTripThroughUnitySerialization" methodname="SequenceOptionsRoundTripThroughUnitySerialization" classname="Dreamy.Feedback.Tests.FeedbackAuthoringTests" runstate="Runnable" seed="424024548" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.001129" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1014" name="FeedbackEffectAuthoringTests" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.200135" total="13" passed="13" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1016" name="DefinitionCycleIsRejectedButRepeatedAssetIsAllowed" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.DefinitionCycleIsRejectedButRepeatedAssetIsAllowed" methodname="DefinitionCycleIsRejectedButRepeatedAssetIsAllowed" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="1313901019" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.007511" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1025" name="EffectSettingsRoundTrip" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.EffectSettingsRoundTrip" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.004903" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1018" name="EffectSettingsRoundTrip(Dreamy.Feedback.VfxFeedbackAsset)" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.EffectSettingsRoundTrip(Dreamy.Feedback.VfxFeedbackAsset)" methodname="EffectSettingsRoundTrip" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="364743038" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000955" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1019" name="EffectSettingsRoundTrip(Dreamy.Feedback.FloatingTextFeedbackAsset)" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.EffectSettingsRoundTrip(Dreamy.Feedback.FloatingTextFeedbackAsset)" methodname="EffectSettingsRoundTrip" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="2046227242" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000595" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1020" name="EffectSettingsRoundTrip(Dreamy.Feedback.IconFlyFeedbackAsset)" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.EffectSettingsRoundTrip(Dreamy.Feedback.IconFlyFeedbackAsset)" methodname="EffectSettingsRoundTrip" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="721643053" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000807" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1021" name="EffectSettingsRoundTrip(Dreamy.Feedback.UiPunchFeedbackAsset)" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.EffectSettingsRoundTrip(Dreamy.Feedback.UiPunchFeedbackAsset)" methodname="EffectSettingsRoundTrip" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="1345617984" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000395" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1022" name="EffectSettingsRoundTrip(Dreamy.Feedback.CameraShakeFeedbackAsset)" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.EffectSettingsRoundTrip(Dreamy.Feedback.CameraShakeFeedbackAsset)" methodname="EffectSettingsRoundTrip" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="63378527" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000436" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1023" name="EffectSettingsRoundTrip(Dreamy.Feedback.ScreenFlashFeedbackAsset)" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.EffectSettingsRoundTrip(Dreamy.Feedback.ScreenFlashFeedbackAsset)" methodname="EffectSettingsRoundTrip" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="628361918" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000415" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1024" name="EffectSettingsRoundTrip(Dreamy.Feedback.HapticFeedbackAsset)" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.EffectSettingsRoundTrip(Dreamy.Feedback.HapticFeedbackAsset)" methodname="EffectSettingsRoundTrip" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="1307279431" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000220" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1017" name="LibraryReportsDuplicatesAndMissingReferences" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.LibraryReportsDuplicatesAndMissingReferences" methodname="LibraryReportsDuplicatesAndMissingReferences" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="1978311255" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.004601" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1027" name="MigrationPreviewIsReadOnlyAndChecksMissingPrefabs" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.MigrationPreviewIsReadOnlyAndChecksMissingPrefabs" methodname="MigrationPreviewIsReadOnlyAndChecksMissingPrefabs" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="593407821" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.003844" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1015" name="RequestOverridesDoNotMutateSharedAssets" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.RequestOverridesDoNotMutateSharedAssets" methodname="RequestOverridesDoNotMutateSharedAssets" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="809333505" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.002091" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1028" name="ResolverFreezesDelayedStepsAndRejectsSharedNodes" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.ResolverFreezesDelayedStepsAndRejectsSharedNodes" methodname="ResolverFreezesDelayedStepsAndRejectsSharedNodes" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="1951452119" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.000883" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1026" name="SOReferenceSurvivesDefinitionSerialization" fullname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests.SOReferenceSurvivesDefinitionSerialization" methodname="SOReferenceSurvivesDefinitionSerialization" classname="Dreamy.Feedback.Tests.FeedbackEffectAuthoringTests" runstate="Runnable" seed="129747131" result="Passed" start-time="2026-10-10 11:15:06Z" end-time="2026-10-10 11:15:06Z" duration="0.173286" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: D:\Game\dreamy-package-sandbox\.omo\evidence\feedback-simplification\editmode.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

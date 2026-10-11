@@ -563,9 +563,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3993568841356084011, guid: 68d8c2132ae54f1fb919cc3ec4fa3e1b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7683441384298889805}
-    - targetCorrespondingSourceObject: {fileID: 3993568841356084011, guid: 68d8c2132ae54f1fb919cc3ec4fa3e1b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5148200469066162380}
   m_SourcePrefab: {fileID: 100100000, guid: 68d8c2132ae54f1fb919cc3ec4fa3e1b, type: 3}
 --- !u!224 &1078119921894559915 stripped
 RectTransform:
@@ -597,16 +594,3 @@ MonoBehaviour:
   dayText: {fileID: 9056527849613250659}
   amountText: {fileID: 2083959693242770998}
   stateText: {fileID: 4494485297841169264}
---- !u!114 &5148200469066162380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6800749813423066690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6e677db9cb4e81a15dc1a26343c56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.TweenDelayByIndex
-  index: 0

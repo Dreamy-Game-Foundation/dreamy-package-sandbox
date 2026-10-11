@@ -13,19 +13,21 @@ Shader "Dreamy/Feedback/SampleText"
         _StencilWriteMask ("Stencil Write Mask", Float) = 255
         _StencilReadMask ("Stencil Read Mask", Float) = 255
         _ColorMask ("Color Mask", Float) = 15
+        _ClipRect ("Clip Rect", Vector) = (-32767,-32767,32767,32767)
+        _ZTestMode ("ZTest", Float) = 4
+        _CullMode ("Cull Mode", Float) = 0
     }
     SubShader
     {
         Tags { "Queue"="Transparent" "RenderType"="Transparent" "IgnoreProjector"="True" }
         Stencil { Ref [_Stencil] Comp [_StencilComp] Pass [_StencilOp] ReadMask [_StencilReadMask] WriteMask [_StencilWriteMask] }
-        Cull Off
+        Cull [_CullMode]
         ZWrite Off
-        ZTest [unity_GUIZTestMode]
+        ZTest [_ZTestMode]
         Blend SrcAlpha OneMinusSrcAlpha
         ColorMask [_ColorMask]
         Pass
         {
-            Tags { "LightMode"="SRPDefaultUnlit" }
             CGPROGRAM
             #pragma target 3.0
             #pragma vertex vert

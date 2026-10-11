@@ -1,0 +1,42 @@
+{
+  "unity": "6000.4.12f1",
+  "platform": "Windows",
+  "version": "0.3.0 Unreleased",
+  "tests": {
+    "editmode": {
+      "result": "Passed",
+      "total": "26",
+      "passed": "26",
+      "failed": "0",
+      "skipped": "0"
+    },
+    "basePlaymode": {
+      "result": "Passed",
+      "total": "35",
+      "passed": "35",
+      "failed": "0",
+      "skipped": "0"
+    },
+    "dotweenPlaymode": {
+      "result": "Passed",
+      "total": "38",
+      "passed": "38",
+      "failed": "0",
+      "skipped": "0"
+    }
+  },
+  "build": "Passed",
+  "playerExitCode": 0,
+  "effects": 7,
+  "icons": 4,
+  "topLevelDefinitions": 13,
+  "nestedDefinitions": 1,
+  "activeUserWorkingCopy": "Assets/FeedbackWorkingCopies/FeedbackDemo Authoring Working Copy.unity",
+  "legacyReaderRetained": true,
+  "limitations": [
+    "Physical mobile checks untested",
+    "Foundation unchanged and not rerun",
+    "Existing CS0108 warning",
+    "Unsupported legacy delay layouts require explicit redesign"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "unity": "6000.4.12f1",
+  "platform": "Windows",
+  "packageVersion": "0.3.0",
+  "published": false,
+  "scope": {
+    "sharedEffectSO": 7,
+    "existingIcons": 4,
+    "compositeDefinitions": 13
+  },
+  "tests": {
+    "editmode": {
+      "result": "Passed",
+      "total": "24",
+      "passed": "24",
+      "failed": "0",
+      "skipped": "0"
+    },
+    "basePlaymode": {
+      "result": "Passed",
+      "total": "32",
+      "passed": "32",
+      "failed": "0",
+      "skipped": "0"
+    },
+    "dotweenPlaymode": {
+      "result": "Passed",
+      "total": "35",
+      "passed": "35",
+      "failed": "0",
+      "skipped": "0"
+    }
+  },
+  "build": "Passed",
+  "player": {
+    "exitCode": 0,
+    "mode": "batchmode graphics enabled"
+  },
+  "editorErrors": 0,
+  "preservedWorkingCopy": "Assets/FeedbackWorkingCopies/FeedbackDemo Working Copy.unity",
+  "limits": [
+    "Physical mobile haptics/builds/performance untested",
+    "Foundation unchanged and not rerun",
+    "Existing CS0108 warning",
+    "Initial interactive player paused without focus and excluded"
+  ]
+}

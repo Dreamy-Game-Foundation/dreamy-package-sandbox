@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bad4a6d0edda28429bf23fd8b0e80c9, type: 3}
+  m_Name: CasualSfxLibrary
+  libraryId: sfx
+  generatedNamespace: Dreamy.Audio.Generated
+  soundEnumName: SoundIds
+  musicEnumName: MusicIds
+  soundCategories: [UI, Gameplay, Rewards, Impacts]
+  musicCategories: []
+  sounds: []
+  music: []

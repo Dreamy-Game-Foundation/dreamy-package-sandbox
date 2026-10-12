@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="34" result="Passed" total="34" passed="34" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:38:00Z" duration="1.5545919">
+  <test-suite type="TestSuite" id="1091" name="DreamyTemplateProject" fullname="DreamyTemplateProject" runstate="Runnable" testcasecount="51" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:38:00Z" duration="1.554592" total="34" passed="34" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1067" name="Dreamy.Feedback.Tests.PlayMode.dll" fullname="/tmp/dreamy-shop-validation/Library/ScriptAssemblies/Dreamy.Feedback.Tests.PlayMode.dll" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:38:00Z" duration="1.542889" total="33" passed="33" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="1937600" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1068" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:38:00Z" duration="1.542318" total="33" passed="33" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1069" name="Feedback" fullname="Dreamy.Feedback" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:38:00Z" duration="1.541945" total="33" passed="33" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1070" name="Tests" fullname="Dreamy.Feedback.Tests" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:38:00Z" duration="1.541584" total="33" passed="33" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1031" name="FeedbackCompositeTests" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.156466" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1038" name="BudgetRejectsExcessRequest" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests.BudgetRejectsExcessRequest" methodname="BudgetRejectsExcessRequest" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" seed="1796297835" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.016393" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1040" name="BuilderPreservesAmountAndIntensityWithoutGraphMutation" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests.BuilderPreservesAmountAndIntensityWithoutGraphMutation" methodname="BuilderPreservesAmountAndIntensityWithoutGraphMutation" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" seed="707763177" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.003244" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1034" name="CompleteRunsPendingOneShotsExactlyOnce" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests.CompleteRunsPendingOneShotsExactlyOnce" methodname="CompleteRunsPendingOneShotsExactlyOnce" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" seed="1417400598" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.002119" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1033" name="ConcurrentRequestsStopIndependently" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests.ConcurrentRequestsStopIndependently" methodname="ConcurrentRequestsStopIndependently" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" seed="1951294216" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.004899" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1039" name="GraphRejectsCycleAndUnboundedVfx" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests.GraphRejectsCycleAndUnboundedVfx" methodname="GraphRejectsCycleAndUnboundedVfx" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" seed="739507348" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.000717" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1042" name="IconCompleteAndStaleHandleDoNotStopReusedPool" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests.IconCompleteAndStaleHandleDoNotStopReusedPool" methodname="IconCompleteAndStaleHandleDoNotStopReusedPool" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" seed="678361832" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.016761" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1037" name="OwnerDestroyedStopsOnlyItsRequest" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests.OwnerDestroyedStopsOnlyItsRequest" methodname="OwnerDestroyedStopsOnlyItsRequest" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" seed="1333250997" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.001300" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1041" name="RequestIconOverrideDoesNotMutateDefinition" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests.RequestIconOverrideDoesNotMutateDefinition" methodname="RequestIconOverrideDoesNotMutateDefinition" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" seed="1490822728" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.014883" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1036" name="RequiredFailureStopsParallelSibling" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests.RequiredFailureStopsParallelSibling" methodname="RequiredFailureStopsParallelSibling" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" seed="1179168014" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.002222" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1032" name="SequenceWaitsForCompletionAndParallelJoinsAll" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests.SequenceWaitsForCompletionAndParallelJoinsAll" methodname="SequenceWaitsForCompletionAndParallelJoinsAll" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" seed="1988947866" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.002469" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1035" name="StopDoesNotStartPendingChildren" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests.StopDoesNotStartPendingChildren" methodname="StopDoesNotStartPendingChildren" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" seed="2128108730" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.000411" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1043" name="UnscaledAnimationFinishesAtTimeScaleZero" fullname="Dreamy.Feedback.Tests.FeedbackCompositeTests.UnscaledAnimationFinishesAtTimeScaleZero" methodname="UnscaledAnimationFinishesAtTimeScaleZero" classname="Dreamy.Feedback.Tests.FeedbackCompositeTests" runstate="Runnable" seed="2020402324" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.081067" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1044" name="FeedbackEffectPlaybackTests" fullname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" classname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:38:00Z" duration="1.111374" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1048" name="DelayedAssetSnapshotAndRequestOverridesStayIndependent" fullname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests.DelayedAssetSnapshotAndRequestOverridesStayIndependent" methodname="DelayedAssetSnapshotAndRequestOverridesStayIndependent" classname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" runstate="Runnable" seed="1630400307" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.153848" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1045" name="DirectVfxAndTextPlayWithoutDatabaseAndReusePrefabPool" fullname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests.DirectVfxAndTextPlayWithoutDatabaseAndReusePrefabPool" methodname="DirectVfxAndTextPlayWithoutDatabaseAndReusePrefabPool" classname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" runstate="Runnable" seed="1130732120" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.212894" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1050" name="DisabledOwnerDoesNotDispatchOneShot" fullname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests.DisabledOwnerDoesNotDispatchOneShot" methodname="DisabledOwnerDoesNotDispatchOneShot" classname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" runstate="Runnable" seed="34546318" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.000725" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1052" name="IdIconArgsUseDefaultsAndZeroWithoutMutatingPreset" fullname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests.IdIconArgsUseDefaultsAndZeroWithoutMutatingPreset" methodname="IdIconArgsUseDefaultsAndZeroWithoutMutatingPreset" classname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" runstate="Runnable" seed="291546298" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:37:59Z" duration="0.005373" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1051" name="ListModesHaveDistinctStartTimingAndCompleteSkipsPendingDelay" fullname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests.ListModesHaveDistinctStartTimingAndCompleteSkipsPendingDelay" methodname="ListModesHaveDistinctStartTimingAndCompleteSkipsPendingDelay" classname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" runstate="Runnable" seed="1256857931" result="Passed" start-time="2026-10-12 07:37:59Z" end-time="2026-10-12 07:38:00Z" duration="0.252765" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1046" name="MultipleUniTaskWaitersAndWaitCancellationAreIndependent" fullname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests.MultipleUniTaskWaitersAndWaitCancellationAreIndependent" methodname="MultipleUniTaskWaitersAndWaitCancellationAreIndependent" classname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" runstate="Runnable" seed="1719528141" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.006290" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1053" name="PerTypeDatabaseRejectsDuplicateIdsAndDefinitionLookupIsSeparate" fullname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests.PerTypeDatabaseRejectsDuplicateIdsAndDefinitionLookupIsSeparate" methodname="PerTypeDatabaseRejectsDuplicateIdsAndDefinitionLookupIsSeparate" classname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" runstate="Runnable" seed="304022475" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.002744" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1049" name="SynchronousRequiredFailureDoesNotStartLaterParallelEffects" fullname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests.SynchronousRequiredFailureDoesNotStartLaterParallelEffects" methodname="SynchronousRequiredFailureDoesNotStartLaterParallelEffects" classname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" runstate="Runnable" seed="993852419" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.000664" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1055" name="UiVfxRespectsScaledTimeAndDisabledOwner" fullname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests.UiVfxRespectsScaledTimeAndDisabledOwner" methodname="UiVfxRespectsScaledTimeAndDisabledOwner" classname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" runstate="Runnable" seed="1788944804" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.206781" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1054" name="UiVfxRunsOnOverlayWhilePausedAndReusesImages" fullname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests.UiVfxRunsOnOverlayWhilePausedAndReusesImages" methodname="UiVfxRunsOnOverlayWhilePausedAndReusesImages" classname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" runstate="Runnable" seed="1246632742" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.265601" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1047" name="ZeroVfxStrengthIsAnExplicitNoSpawnOverride" fullname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests.ZeroVfxStrengthIsAnExplicitNoSpawnOverride" methodname="ZeroVfxStrengthIsAnExplicitNoSpawnOverride" classname="Dreamy.Feedback.Tests.FeedbackEffectPlaybackTests" runstate="Runnable" seed="1248117156" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.000806" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1056" name="FeedbackLifecycleTests" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.272278" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1057" name="CancelDuringSequenceDelayDoesNotPlayAction" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.CancelDuringSequenceDelayDoesNotPlayAction" methodname="CancelDuringSequenceDelayDoesNotPlayAction" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="1794955421" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.151189" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1062" name="ClearDestroysActiveIconsAndCanReinitialize" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.ClearDestroysActiveIconsAndCanReinitialize" methodname="ClearDestroysActiveIconsAndCanReinitialize" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="114969927" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.001938" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1061" name="ClearDestroysActiveVfx" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.ClearDestroysActiveVfx" methodname="ClearDestroysActiveVfx" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="1382231973" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.001827" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1060" name="ExternallyDisabledVfxSettlesItsHandle" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.ExternallyDisabledVfxSettlesItsHandle" methodname="ExternallyDisabledVfxSettlesItsHandle" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="75068918" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.001249" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1064" name="FlashStopClearsOverlayAndSuppressesCompletion" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.FlashStopClearsOverlayAndSuppressesCompletion" methodname="FlashStopClearsOverlayAndSuppressesCompletion" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="1476296345" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.103122" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1066" name="HostResolvesMainCameraAndExplicitBindingWins" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.HostResolvesMainCameraAndExplicitBindingWins" methodname="HostResolvesMainCameraAndExplicitBindingWins" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="1757767827" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.005087" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1059" name="OldVfxHandleCannotStopReusedInstance" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.OldVfxHandleCannotStopReusedInstance" methodname="OldVfxHandleCannotStopReusedInstance" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="917831926" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.000993" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1063" name="RepeatedFloatingTextStopCannotStopReusedLease" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.RepeatedFloatingTextStopCannotStopReusedLease" methodname="RepeatedFloatingTextStopCannotStopReusedLease" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="204738645" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.002576" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1065" name="ShakeRestoresPositionCapturedAtPlayback" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.ShakeRestoresPositionCapturedAtPlayback" methodname="ShakeRestoresPositionCapturedAtPlayback" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="1907030155" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.001007" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1058" name="StaleShakeHandleDoesNotStopNewShake" fullname="Dreamy.Feedback.Tests.FeedbackLifecycleTests.StaleShakeHandleDoesNotStopNewShake" methodname="StaleShakeHandleDoesNotStopNewShake" classname="Dreamy.Feedback.Tests.FeedbackLifecycleTests" runstate="Runnable" seed="1575934279" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.001569" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1076" name="Dreamy.Template.Feedback.Tests.dll" fullname="/tmp/dreamy-shop-validation/Library/ScriptAssemblies/Dreamy.Template.Feedback.Tests.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.005719" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="1937600" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1077" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.005375" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1078" name="Template" fullname="Dreamy.Template" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.005000" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1079" name="Tests" fullname="Dreamy.Template.Tests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.004713" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1071" name="FoundationFeedbackTests" fullname="Dreamy.Template.Tests.FoundationFeedbackTests" classname="Dreamy.Template.Tests.FoundationFeedbackTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.004429" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1073" name="SceneCameraBindsAfterFeedbackBootstrapAndRefreshesRegistry" fullname="Dreamy.Template.Tests.FoundationFeedbackTests.SceneCameraBindsAfterFeedbackBootstrapAndRefreshesRegistry" methodname="SceneCameraBindsAfterFeedbackBootstrapAndRefreshesRegistry" classname="Dreamy.Template.Tests.FoundationFeedbackTests" runstate="Runnable" seed="735364069" result="Passed" start-time="2026-10-12 07:38:00Z" end-time="2026-10-12 07:38:00Z" duration="0.003669" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [TestRunnerNoThrottle] Restored Interaction Mode after test run.
+Saving results to: /home/tutrinh/.config/unity3d/DefaultCompany/DreamyTemplateProject/TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

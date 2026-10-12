@@ -1,0 +1,29 @@
+{
+  "unity": "6000.4.12f1",
+  "date": "2026-10-12",
+  "packagePlayMode": {
+    "passed": 33,
+    "failed": 0
+  },
+  "bootstrapPlayMode": {
+    "passed": 1,
+    "failed": 0
+  },
+  "actualRuntime": {
+    "camera": "Main Camera",
+    "shakeMoved": true,
+    "shakeRestored": true,
+    "uiBurstImages": 8,
+    "canvas": "FeedbackEffects"
+  },
+  "mcpTestRunner": "Two initialization timeouts; batchmode used",
+  "mobileDevice": "not run",
+  "playerBuild": "not run",
+  "finalPlayMode": {
+    "result": "Passed",
+    "total": "34",
+    "passed": "34",
+    "failed": "0",
+    "skipped": "0"
+  }
+}

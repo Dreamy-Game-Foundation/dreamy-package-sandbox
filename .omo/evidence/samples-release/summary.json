@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-12",
+  "unity": "6000.4.12f1",
+  "versions": {
+    "sandbox": "0.1.1",
+    "com.dreamy.core": "1.2.0",
+    "com.dreamy.feature.economy": "0.2.1",
+    "com.dreamy.feature.shop": "0.1.2",
+    "com.dreamy.feedback": "0.4.0"
+  },
+  "editMode": {
+    "passed": 26,
+    "failed": 0,
+    "skipped": 0,
+    "runner": "Unity MCP"
+  },
+  "playMode": {
+    "passed": 63,
+    "failed": 0,
+    "skipped": 0,
+    "runner": "isolated Unity batchmode"
+  },
+  "managedValidation": {
+    "command": "python3 LocalPackages/com.dreamy.feature.settings/Tests~/validate-settings.py --shop",
+    "exitCode": 0
+  },
+  "coreSampleCompile": {
+    "command": "dotnet build /tmp/dreamy-core-pooling-compile/Samples.csproj --verbosity quiet",
+    "exitCode": 0,
+    "backendDependencies": []
+  },
+  "staticChecks": [
+    "sample synchronization: Economy and Shop",
+    "package JSON and asmdef parsing",
+    "Runtime/Contracts have no UnityEditor imports",
+    "sample prefab fileID uniqueness",
+    "pooling contract GUID preserved",
+    "git diff --check with Unity YAML empty-field whitespace allowed"
+  ],
+  "mcpPlayMode": "initialization timeout; successful result is from batchmode",
+  "notRun": [
+    "mobile device",
+    "player build"
+  ],
+  "knownWarnings": [
+    "UI UITweenBase CS4014",
+    "FloatingTextInstance CS0108",
+    "Template duplicate using and unused field",
+    "Core sample serialized-field CS0649 in managed compile"
+  ],
+  "portableFeedbackSample": {
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "fixture": "exact Samples~/BasicFeedbackSample copied into isolated project; shipped prefabs have no DOTween/URP attachments"
+  }
+}

@@ -1,22 +1,38 @@
 {
-  "name": "Dreamy.Template.Feedback.Tests",
-  "references": [
-    "Dreamy.Template.Runtime",
-    "Dreamy.Feedback.Runtime",
-    "Dreamy.Feedback.Sample.Tests",
-    "Dreamy.Core.Runtime",
-    "Dreamy.Economy.Runtime",
-    "Dreamy.Audio.Runtime",
-    "Dreamy.UI.Runtime",
-    "UnityEngine.UI",
-    "UniTask",
-    "Dreamy.Feedback.Contracts"
-  ],
-  "optionalUnityReferences": [
-    "TestAssemblies"
-  ],
-  "autoReferenced": false,
-  "defineConstraints": [
-    "UNITY_INCLUDE_TESTS"
-  ]
+    "name": "Dreamy.Template.Feedback.Tests",
+    "rootNamespace": "",
+    "references": [
+        "Dreamy.Template.Runtime",
+        "Dreamy.Datasave.Runtime",
+        "Dreamy.Feedback.Runtime",
+        "Dreamy.Feedback.Sample.Tests",
+        "Dreamy.Core.Runtime",
+        "Dreamy.Economy.Runtime",
+        "Dreamy.Economy.UI.Runtime",
+        "Dreamy.Shop.Runtime",
+        "Dreamy.DataConfig.Runtime",
+        "Dreamy.Feature.Shop.Integration.Runtime",
+        "Unity.TextMeshPro",
+        "Dreamy.Audio.Runtime",
+        "Dreamy.UI.Runtime",
+        "UnityEngine.UI",
+        "UniTask",
+        "Dreamy.Feedback.Contracts",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "Dreamy.Feature.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

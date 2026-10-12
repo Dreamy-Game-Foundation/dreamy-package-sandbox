@@ -118,7 +118,7 @@ Chạy `Assets/_Project/Scenes/BootstrapScene.unity`, hoàn thành hoặc Skip t
 
 Các feature dùng DataConfig, Datasave và wallet của GameInstaller. Tutorial Demo không xóa save người chơi. Progression sample hiện dùng Sequential và thưởng `currency.gold`; xem số dư trong Economy. Demo platform gateway của Settings/Shop vẫn là giả lập.
 
-UI/logic mới nằm trong `Samples~` của package và bản import tương ứng trong `Assets/Samples`; FoundationFeatureDemos chỉ nối service và navigation. Khi cần dựng lại các prefab demo, dùng `Dreamy > Sandbox > Build Foundation Feature Demos` ngoài Play Mode và đóng Prefab Stage trước; lệnh này cập nhật Foundation cùng các prefab demo được chỉ định.
+UI/logic mới nằm trong `Samples~` của package và bản import tương ứng trong `Assets/Samples`; FoundationFeatureDemos chỉ nối service và navigation. Khi cần dựng lại các prefab demo, dùng `Tools > Dreamy > Sandbox > Build Foundation Feature Demos` ngoài Play Mode và đóng Prefab Stage trước; lệnh này cập nhật Foundation cùng các prefab demo được chỉ định.
 
 ## Feedback samples
 
@@ -127,3 +127,12 @@ UI/logic mới nằm trong `Samples~` của package và bản import tương ứ
 Trong sandbox, ch?y `Assets/_Project/Scenes/BootstrapScene.unity`, r?i ch?n **Feedback** trong Foundation. Grant 100 Coins ph?t text/icon/VFX/audio sau khi wallet thay ??i; Retry kh?ng ph?t th??ng/feedback l?n n?a. Feedback d?ng wallet Datasave v? audio c?a bootstrap; coin reward t? c?c feature kh?c c?ng ???c host quan s?t.
 
 D?ng `Dreamy/Sandbox/Build Feedback Samples and Integration` ?? n?i l?i asset demo ???c ch? ??nh. Xem [README Feedback](LocalPackages/com.dreamy.feedback/README.md), [plan](docs/plans/DREAMY_FEEDBACK_PACKAGE_PLAN.md) v? [validation](LocalPackages/com.dreamy.feedback/VALIDATION.md). Feedback 0.2.0 hi?n l? local, ch?a commit/push/tag.
+
+## Sample release 0.1.1
+
+Package revisions: Core **1.2.0**, Economy **0.2.1**, Shop **0.1.2**, Feedback **0.4.0**.
+Portable sample sources are in each package's `Samples~` directory. Existing
+`Assets/Samples` version folders represent earlier imports and retain their paths
+and GUIDs; fresh Package Manager imports use the released package version.
+Core Demo now includes host-injected pooling. Shop Feature requires Feedback for
+its reward-presentation integration; the Shop runtime package keeps Feedback optional.

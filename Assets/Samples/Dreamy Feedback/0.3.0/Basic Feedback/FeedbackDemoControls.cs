@@ -35,6 +35,9 @@ namespace Dreamy.Feedback.Samples
         [SerializeField] private FeedbackDemoEntry[] entries = Array.Empty<FeedbackDemoEntry>();
         [SerializeField] private Button[] channelButtons;
         [SerializeField] private Button playAllButton, stopButton, completeButton;
+        [SerializeField] private Button uiPreviewButton;
+        [SerializeField] private VfxFeedbackAsset uiVfxEffect;
+        [SerializeField] private FloatingTextFeedbackAsset uiTextEffect;
         [SerializeField] private Toggle hapticToggle;
         [SerializeField] private TMP_Text statusText;
         private UnityEngine.Events.UnityAction[] rewardListeners, listeners;
@@ -66,6 +69,7 @@ namespace Dreamy.Feedback.Samples
             if (playAllButton) playAllButton.onClick.AddListener(PlayAll);
             if (stopButton) stopButton.onClick.AddListener(StopAll);
             if (completeButton) completeButton.onClick.AddListener(CompleteAll);
+            if (uiPreviewButton) uiPreviewButton.onClick.AddListener(PlayUiPreview);
             if (hapticToggle) { hapticToggle.onValueChanged.AddListener(SetHaptic); SetHaptic(hapticToggle.isOn); }
         }
         public void PlayChannel(int channel)
@@ -95,6 +99,17 @@ namespace Dreamy.Feedback.Samples
             string error = Check(request);
             if (error != null) { Unavailable(error); return; }
             Track(host.Feedback.Play(request), definition.name);
+        }
+        public void PlayUiPreview()
+        {
+            if (!iconStart || !uiVfxEffect || !uiTextEffect)
+            { Unavailable("UI anchor or preview presets missing"); return; }
+            var vfx = FeedbackRequestBuilder.For(uiVfxEffect).From(this).AtUi(iconStart).Build();
+            var text = FeedbackRequestBuilder.For(uiTextEffect).From(this).AtUi(iconStart).WithAmount(321).Build();
+            var error = Check(vfx) ?? Check(text);
+            if (error != null) { Unavailable(error); return; }
+            Track(host.Feedback.Play(vfx), "UI VFX");
+            Track(host.Feedback.Play(text), "UI reward text");
         }
         private FeedbackDefinition SelectedReward() => selectedReward < rewardDefinitions.Length ? rewardDefinitions[selectedReward] : null;
         private string Check(FeedbackRequest request)
@@ -169,6 +184,7 @@ namespace Dreamy.Feedback.Samples
             if (playAllButton) playAllButton.onClick.RemoveListener(PlayAll);
             if (stopButton) stopButton.onClick.RemoveListener(StopAll);
             if (completeButton) completeButton.onClick.RemoveListener(CompleteAll);
+            if (uiPreviewButton) uiPreviewButton.onClick.RemoveListener(PlayUiPreview);
             if (hapticToggle) hapticToggle.onValueChanged.RemoveListener(SetHaptic);
             foreach (var h in handles.ToArray()) h.Stop(); handles.Clear(); observed = default;
         }

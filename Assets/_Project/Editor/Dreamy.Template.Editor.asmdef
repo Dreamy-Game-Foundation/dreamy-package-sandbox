@@ -8,10 +8,7 @@
     "Dreamy.Feature.Missions.Integration.Runtime",
     "Dreamy.Feature.LuckyWheel.Integration.Runtime",
     "Unity.TextMeshPro",
-    "UnityEngine.UI",
-    "Dreamy.Feedback.Runtime",
-    "Dreamy.Feedback.Sample.Editor",
-    "Dreamy.Feedback.Contracts"
+    "UnityEngine.UI"
   ],
   "includePlatforms": [
     "Editor"

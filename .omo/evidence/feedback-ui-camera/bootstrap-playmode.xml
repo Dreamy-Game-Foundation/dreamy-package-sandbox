@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-12 07:33:13Z" end-time="2026-10-12 07:33:13Z" duration="0.0405769">
+  <test-suite type="TestSuite" id="1091" name="DreamyTemplateProject" fullname="DreamyTemplateProject" runstate="Runnable" testcasecount="51" result="Passed" start-time="2026-10-12 07:33:13Z" end-time="2026-10-12 07:33:13Z" duration="0.040577" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1076" name="Dreamy.Template.Feedback.Tests.dll" fullname="/tmp/dreamy-shop-validation/Library/ScriptAssemblies/Dreamy.Template.Feedback.Tests.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-12 07:33:13Z" end-time="2026-10-12 07:33:13Z" duration="0.035013" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="1910698" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1077" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-12 07:33:13Z" end-time="2026-10-12 07:33:13Z" duration="0.034580" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1078" name="Template" fullname="Dreamy.Template" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-12 07:33:13Z" end-time="2026-10-12 07:33:13Z" duration="0.034323" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1079" name="Tests" fullname="Dreamy.Template.Tests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-12 07:33:13Z" end-time="2026-10-12 07:33:13Z" duration="0.034067" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1071" name="FoundationFeedbackTests" fullname="Dreamy.Template.Tests.FoundationFeedbackTests" classname="Dreamy.Template.Tests.FoundationFeedbackTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-12 07:33:13Z" end-time="2026-10-12 07:33:13Z" duration="0.033327" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1073" name="SceneCameraBindsAfterFeedbackBootstrapAndRefreshesRegistry" fullname="Dreamy.Template.Tests.FoundationFeedbackTests.SceneCameraBindsAfterFeedbackBootstrapAndRefreshesRegistry" methodname="SceneCameraBindsAfterFeedbackBootstrapAndRefreshesRegistry" classname="Dreamy.Template.Tests.FoundationFeedbackTests" runstate="Runnable" seed="867336548" result="Passed" start-time="2026-10-12 07:33:13Z" end-time="2026-10-12 07:33:13Z" duration="0.025375" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [TestRunnerNoThrottle] Restored Interaction Mode after test run.
+Saving results to: /home/tutrinh/.config/unity3d/DefaultCompany/DreamyTemplateProject/TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

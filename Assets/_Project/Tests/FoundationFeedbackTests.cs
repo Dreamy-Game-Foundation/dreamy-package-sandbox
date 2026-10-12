@@ -25,7 +25,126 @@ namespace Dreamy.Template.Tests
 {
     public sealed class FoundationFeedbackTests
     {
+        [Test] public void ManualEconomyHolderUpdatesOnlyOnRefreshAndRebind()
+        {
+            var root = new GameObject("HolderFixture"); root.SetActive(false);
+            var label = new GameObject("Amount", typeof(RectTransform), typeof(TMPro.TextMeshProUGUI));
+            label.transform.SetParent(root.transform, false);
+            try
+            {
+                var holder = root.AddComponent<Dreamy.Economy.UI.ResourceUIHolder>();
+                var text = label.GetComponent<TMPro.TMP_Text>();
+                Set(holder, "amountText", text);
+                Set(holder, "autoRefresh", false);
+                holder.SetResource("currency.coin");
+                var wallet = new FoundationResourceWallet(100);
+                holder.Bind(wallet);
+                wallet.TryGrant(new ResourceGrantRequest("holder-fixture", new ResourceAmount(new ResourceId("currency.coin"), 50)));
+                Assert.That(wallet.GetBalance(new ResourceId("currency.coin")), Is.EqualTo(150));
+                Assert.That(text.text, Is.EqualTo("100"));
+                holder.RefreshBalance();
+                Assert.That(text.text, Is.EqualTo("150"));
+                root.SetActive(true); root.SetActive(false); root.SetActive(true);
+                holder.Bind(wallet);
+                Assert.That(text.text, Is.EqualTo("150"), "Rebinding reads the latest committed balance.");
+                Set(holder, "autoRefresh", true);
+                holder.Bind(wallet);
+                wallet.TryGrant(new ResourceGrantRequest("holder-auto-fixture", new ResourceAmount(new ResourceId("currency.coin"), 25)));
+                Assert.That(text.text, Is.EqualTo("175"), "Automatic holders still follow wallet changes.");
+            }
+            finally { Object.DestroyImmediate(root); }
+        }
+
         private static void Set(object obj, string name, object value) => obj.GetType().GetField(name, BindingFlags.Instance | BindingFlags.NonPublic).SetValue(obj, value);
+        [UnityTest] public IEnumerator SceneCameraBindsAfterFeedbackBootstrapAndRefreshesRegistry()
+        {
+            var priorCameras = Object.FindObjectsByType<Camera>(FindObjectsSortMode.None).Where(camera => camera.enabled).ToArray();
+            foreach (var camera in priorCameras) camera.enabled = false;
+            var installerObject = new GameObject("InstallerFixture"); installerObject.SetActive(false);
+            var rig = new GameObject("FeedbackFixture"); rig.SetActive(false);
+            GameObject cameraObject = null;
+            GameInstaller installer = null;
+            FeedbackHost host = null;
+            try
+            {
+                var root = rig.AddComponent<FeedbackRoot>();
+                host = rig.AddComponent<FeedbackHost>(); Set(host, "root", root); Set(host, "useMainCamera", false);
+                host.Initialize(); Assert.That(host.CameraShake, Is.Null);
+                installer = installerObject.AddComponent<GameInstaller>(); Set(installer, "feedbackInstance", host);
+                cameraObject = new GameObject("LateMainCamera", typeof(Camera)); cameraObject.tag = "MainCamera";
+                var camera = cameraObject.GetComponent<Camera>();
+                typeof(GameInstaller).GetMethod("OnSceneLoaded", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(installer,
+                    new object[] { UnityEngine.SceneManagement.SceneManager.GetActiveScene(), UnityEngine.SceneManagement.LoadSceneMode.Single });
+                Assert.That(host.WorldCamera, Is.SameAs(camera));
+                Assert.That(ServiceLocator.Get<ICameraShakeService>(), Is.SameAs(host.CameraShake));
+                Assert.That(ServiceLocator.Get<IFeedbackService>(), Is.SameAs(host.Feedback));
+                var basis = camera.transform.localPosition;
+                var handle = host.CameraShake.Shake(CameraShakeOptions.Small);
+                yield return null;
+                Assert.That(camera.transform.localPosition, Is.Not.EqualTo(basis));
+                handle.Stop(); Assert.That(camera.transform.localPosition, Is.EqualTo(basis));
+            }
+            finally
+            {
+                if (installer != null)
+                {
+                    var registration = (IDisposable)typeof(GameInstaller).GetField("feedbackRegistration", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(installer);
+                    registration?.Dispose();
+                }
+                host?.Shutdown();
+                Object.DestroyImmediate(installerObject); Object.DestroyImmediate(rig);
+                if (cameraObject) Object.DestroyImmediate(cameraObject);
+                foreach (var camera in priorCameras) if (camera) camera.enabled = true;
+            }
+        }
+
+        [UnityTest] public IEnumerator ShopPrefabCommitsWalletThenUpdatesHolderAfterRealIconFly()
+        {
+#if UNITY_EDITOR
+            var canvas = new GameObject("ShopFeedbackCanvas", typeof(Canvas));
+            canvas.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceOverlay;
+            var rig = Object.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Samples/Dreamy Feedback/0.3.0/Basic Feedback/Generated/Rigs/GameFeedbackRig.prefab"));
+            var viewRoot = Object.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Samples/Dreamy Shop/0.1.1/Shop Feature/Prefabs/ShopPanel.prefab"), canvas.transform);
+            Dreamy.Shop.ShopPresenter presenter = null;
+            try
+            {
+                var wallet = new FoundationResourceWallet(100);
+                wallet.TryGrant(new ResourceGrantRequest("shop-test-gems", new ResourceAmount(new ResourceId("currency.gem"), 100)));
+                var reward = new Dreamy.Shop.ShopResourceConfig();
+                Set(reward, "resourceId", "currency.coin"); Set(reward, "amount", 1000L);
+                var offer = new Dreamy.Shop.ShopOfferConfig();
+                Set(offer, "id", "test-offer"); Set(offer, "costResourceId", "currency.gem"); Set(offer, "costAmount", 15L);
+                Set(offer, "rewards", new List<Dreamy.Shop.ShopResourceConfig> { reward });
+                var catalog = new Dreamy.Shop.ShopCatalogConfig();
+                Set(catalog, "catalogId", "feedback-test"); Set(catalog, "offers", new List<Dreamy.Shop.ShopOfferConfig> { offer });
+                var panel = viewRoot.GetComponent<Dreamy.Feature.Shop.Integration.ShopPanel>();
+                foreach (var holder in viewRoot.GetComponentsInChildren<Dreamy.Economy.UI.ResourceUIHolder>()) holder.Bind(wallet);
+                var coinHolder = viewRoot.GetComponentsInChildren<Dreamy.Economy.UI.ResourceUIHolder>().Single(h => h.ResourceId.Value == "currency.coin");
+                var text = (TMPro.TMP_Text)typeof(Dreamy.Economy.UI.ResourceUIHolder).GetField("amountText", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(coinHolder);
+                var gemHolder = viewRoot.GetComponentsInChildren<Dreamy.Economy.UI.ResourceUIHolder>().Single(h => h.ResourceId.Value == "currency.gem");
+                var gemText = (TMPro.TMP_Text)typeof(Dreamy.Economy.UI.ResourceUIHolder).GetField("amountText", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(gemHolder);
+                panel.BindFeedbackHost(rig.GetComponent<FeedbackHost>());
+                presenter = new Dreamy.Shop.ShopPresenter(new Dreamy.Shop.ShopModel(catalog, wallet), panel, panel.PresentPurchaseAsync);
+                presenter.Show(); Canvas.ForceUpdateCanvases();
+                typeof(Dreamy.Feature.Shop.Integration.ShopPanel).GetMethod("RequestPurchase", BindingFlags.NonPublic | BindingFlags.Instance).Invoke(panel, new object[] { "test-offer" });
+                Assert.That(wallet.GetBalance(new ResourceId("currency.coin")), Is.EqualTo(1100));
+                Assert.That(text.text, Is.EqualTo("100"), "Reward HUD waits for IconFly completion.");
+                Assert.That(gemText.text, Is.EqualTo("85"), "Cost HUD updates while IconFly is still running.");
+                var player = viewRoot.GetComponent<FeedbackPlayer>();
+                Assert.That(player.LastHandle.IsRunning, Is.True, "The wired prefab must play an actual IconFly.");
+                float deadline = Time.realtimeSinceStartup + 8;
+                while (player.LastHandle.IsRunning && Time.realtimeSinceStartup < deadline) yield return null;
+                yield return null;
+                Assert.That(player.LastHandle.Status, Is.EqualTo(FeedbackStatus.Completed));
+                Assert.That(text.text, Is.EqualTo("1.1K"));
+                Assert.That(wallet.GetBalance(new ResourceId("currency.gem")), Is.EqualTo(85));
+            }
+            finally { presenter?.Dispose(); Object.DestroyImmediate(viewRoot); Object.DestroyImmediate(rig); Object.DestroyImmediate(canvas); }
+#else
+            Assert.Ignore("Prefab fixture requires the Editor."); yield return null;
+#endif
+        }
+
         [UnityTest] public IEnumerator BootstrapAndFoundationUseFeedbackWithoutEconomyPanel()
         {
 #if UNITY_EDITOR
@@ -38,7 +157,7 @@ namespace Dreamy.Template.Tests
             Set(installer, "saveDirectory", savePath);
             string profilePath = "Assets/_Project/Audio/Feedback/AudioProfile.asset";
             Set(installer, "audioProfile", AssetDatabase.LoadAssetAtPath<DreamyAudioProfile>(profilePath));
-            Set(installer, "feedbackPrefab", AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Samples/Dreamy Feedback/0.3.0/Basic Feedback/Generated/FeedbackRig.prefab").GetComponent<FeedbackHost>());
+            Set(installer, "feedbackPrefab", AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Samples/Dreamy Feedback/0.3.0/Basic Feedback/Generated/Rigs/FeedbackRig.prefab").GetComponent<FeedbackHost>());
             GameObject panelRoot = null; GameObject demo = null; GameObject eventRoot = null;
             try
             {

@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 4574536058721740324}
   - component: {fileID: 6187379854591626905}
   - component: {fileID: 5536796177033714545}
+  - component: {fileID: 5453362549138297228}
   m_Layer: 0
   m_Name: GameFeedbackRig
   m_TagString: Untagged
@@ -284,11 +285,28 @@ MonoBehaviour:
   vfxDatabase: {fileID: 11400000, guid: da2b6b5b59481f1f68d4068456d4f5a3, type: 2}
   floatingTextDatabase: {fileID: 11400000, guid: 2750eaa0775d3d340aab986c390959fc, type: 2}
   cameraShakeDatabase: {fileID: 11400000, guid: b882b54dd3039874bb4716cbd91020ee, type: 2}
+  iconFlyDatabase: {fileID: 0}
+  uiPunchDatabase: {fileID: 0}
+  screenFlashDatabase: {fileID: 0}
+  hapticDatabase: {fileID: 0}
+  definitionDatabase: {fileID: 0}
   worldCamera: {fileID: 0}
-  animationProvider: {fileID: 0}
+  animationProvider: {fileID: 5453362549138297228}
   haptics: 1
   iconFly: 1
   screenFlash: 1
+--- !u!114 &5453362549138297228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7518970116825255221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c4b41b68cc86612bd8f2258a71c660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Dreamy.Feedback.Dotween.Runtime::Dreamy.Feedback.Dotween.DotweenFeedbackProvider
 --- !u!1 &7737022413137580408
 GameObject:
   m_ObjectHideFlags: 0

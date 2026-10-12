@@ -53,6 +53,16 @@ namespace Dreamy.Feedback.Samples.Tests
                 controls.CompleteAll();
                 Assert.That(controls.LastHandle.Status, Is.EqualTo(FeedbackStatus.Completed), button.name);
             }
+            var uiPreview = (Button)data.FindProperty("uiPreviewButton").objectReferenceValue;
+            Assert.That(uiPreview, Is.Not.Null);
+            var previewCount = controls.PlayCount;
+            yield return Click(uiPreview);
+            Assert.That(controls.PlayCount, Is.EqualTo(previewCount + 2), controls.Status);
+            Assert.That(controls.LastHandle.IsValid, Is.True, controls.Status);
+            var previewRoot = Object.FindFirstObjectByType<FeedbackHost>().GetComponent<FeedbackRoot>();
+            Assert.That(previewRoot.UiVfxRoot.GetComponentInChildren<UiBurstVfxInstance>(), Is.Not.Null);
+            Assert.That(previewRoot.FloatingTextRoot.GetComponentsInChildren<TMP_Text>().Any(t => t.text == "+321"), Is.True);
+            controls.CompleteAll();
             var rewards = data.FindProperty("rewardButtons");
             Assert.That(rewards.arraySize, Is.EqualTo(4));
             for (int i = 0; i < rewards.arraySize; i++)

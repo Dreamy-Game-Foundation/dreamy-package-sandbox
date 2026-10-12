@@ -4,6 +4,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Dreamy.Audio;
 using Dreamy.Core;
+using Dreamy.Core.Pooling;
 using Dreamy.DataConfig;
 using Dreamy.Datasave;
 using Dreamy.DailyReward;
@@ -41,7 +42,9 @@ namespace Dreamy.Template
         [SerializeField] private DreamyAudioProfile audioProfile;
         [SerializeField] private string storeListingUrl;
         [SerializeField] private FeedbackHost feedbackPrefab;
-        private FeedbackRewardPresenter feedbackPresenter;
+        [SerializeField, Tooltip("Camera used by Feedback camera shake and world-to-UI text. Falls back to MainCamera.")]
+        private Camera feedbackCamera;
+        private IShopPurchaseGateway demoShopPurchaseGateway;
         private FeedbackHost feedbackInstance;
         private IDisposable feedbackRegistration;
         public static FeedbackHost Feedback { get; private set; }
@@ -71,6 +74,9 @@ namespace Dreamy.Template
             {
                 var cancellationToken = this.GetCancellationTokenOnDestroy();
 
+                // Register the pool before any consumer is installed.
+                InstallPoolService();
+
                 // 1. Install Datasave Service
                 InstallDatasaveService();
 
@@ -90,6 +96,7 @@ namespace Dreamy.Template
             {
                 InitializationException = exception;
                 State = BootstrapState.Failed;
+                ReleaseFeedbackAndPool();
                 Debug.LogException(exception, this);
             }
         }
@@ -97,10 +104,11 @@ namespace Dreamy.Template
         private void InstallPanelPresenters()
         {
             presenterFactory = new PanelPresenterFactory();
+            InstallShopPurchaseGateway();
             ServiceLocator.TryGet<IShopPurchaseGateway>(out var purchases);
             ShopFeatureInstaller.Install(presenterFactory,
                 ServiceLocator.Get<IDataConfigService>().GetTable<ShopCatalogConfig>(), resourceWallet,
-                purchases, (IResourceBalanceProvider)resourceWallet);
+                purchases, (IResourceBalanceProvider)resourceWallet, feedbackInstance);
 
             ownsSettingsService = !ServiceLocator.TryGet<ISettingsService>(out var settings);
             if (ownsSettingsService)
@@ -108,6 +116,15 @@ namespace Dreamy.Template
                 ServiceLocator.TryGet<ISettingsPlatformGateway>(out var platform);
                 ServiceLocator.TryGet<ISettingsHapticsGateway>(out var haptics);
                 ServiceLocator.TryGet<ISettingsReviewGateway>(out var review);
+                if (haptics == null && platform is not ISettingsHapticsGateway)
+                {
+                    var hapticService = feedbackInstance.Haptic;
+                    haptics = new PlayerPrefsSettingsHapticsGateway(
+                        enabled => hapticService.Enabled = enabled,
+                        () => hapticService != null &&
+                              (Application.platform == RuntimePlatform.Android ||
+                               Application.platform == RuntimePlatform.IPhonePlayer));
+                }
                 SettingsFeatureInstaller.Install(presenterFactory, ServiceLocator.Get<IAudioService>(), OpenRateUs,
                     platform ?? new SettingsPlatformGateway(storeListingUrl), haptics,
                     review ?? new PlayerPrefsSettingsReviewGateway(resourceWallet));
@@ -128,7 +145,13 @@ namespace Dreamy.Template
             AttachPanelPresenters();
         }
 
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode) => AttachPanelPresenters();
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            var camera = feedbackCamera ? feedbackCamera : Camera.main;
+            if (feedbackInstance && camera && feedbackInstance.WorldCamera != camera)
+                BindFeedbackCamera(camera);
+            AttachPanelPresenters();
+        }
 
         private void AttachPanelPresenters()
         {
@@ -147,6 +170,32 @@ namespace Dreamy.Template
         {
             if (PanelManager.HasInstance)
                 PanelManager.Instance.Show<RateUsPanel>(Address.RateUsPanel).Forget();
+        }
+
+        private void InstallShopPurchaseGateway()
+        {
+            if (ServiceLocator.IsRegistered<IShopPurchaseGateway>()) return;
+
+            demoShopPurchaseGateway = new ShopPurchaseGateway((request, cancellationToken) =>
+            {
+                if (cancellationToken.IsCancellationRequested)
+                    return UniTask.FromResult(ShopGatewayPurchaseResult.Cancelled());
+
+                string transactionId = $"demo:{Guid.NewGuid():N}";
+                Debug.Log($"[Shop Demo] Simulated IAP purchase: {request.StoreProductId} " +
+                          $"(offer={request.OfferId}, transaction={transactionId}).", this);
+                return UniTask.FromResult(ShopGatewayPurchaseResult.Purchased(transactionId));
+            });
+            ServiceLocator.Register<IShopPurchaseGateway>(demoShopPurchaseGateway);
+        }
+
+        private void ReleaseShopPurchaseGateway()
+        {
+            if (demoShopPurchaseGateway != null &&
+                ServiceLocator.TryGet<IShopPurchaseGateway>(out var current) &&
+                ReferenceEquals(current, demoShopPurchaseGateway))
+                ServiceLocator.Unregister<IShopPurchaseGateway>();
+            demoShopPurchaseGateway = null;
         }
 
         private void InstallDatasaveService()
@@ -168,12 +217,30 @@ namespace Dreamy.Template
             ServiceLocator.Register<IDatasaveService>(datasave);
         }
 
-        private void InstallOtherServices()
+        private void InstallPoolService()
         {
-            // Install Pool Service
+            if (poolService != null || ServiceLocator.IsRegistered<IPoolService>())
+                throw new InvalidOperationException("A pool service is already installed. Only one bootstrap may own the registration.");
             poolService = new LeanPoolService();
             ServiceLocator.Register<IPoolService>(poolService);
+        }
 
+        private void ReleaseFeedbackAndPool()
+        {
+            feedbackRegistration?.Dispose(); feedbackRegistration = null;
+            if (feedbackInstance != null) feedbackInstance.Shutdown();
+            if (ReferenceEquals(Feedback, feedbackInstance)) Feedback = null;
+            if (feedbackInstance != null) Destroy(feedbackInstance.gameObject);
+            feedbackInstance = null;
+            if (poolService == null) return;
+            if (ServiceLocator.TryGet<IPoolService>(out var registered) && ReferenceEquals(registered, poolService))
+                ServiceLocator.Unregister<IPoolService>();
+            if (poolService is IDisposable disposable) disposable.Dispose();
+            poolService = null;
+        }
+
+        private void InstallOtherServices()
+        {
             resourceWallet = new DatasaveResourceWallet(
                 datasave,
                 initialBalances: new[] { new ResourceAmount(new ResourceId("currency.coin"), 100) });
@@ -226,19 +293,15 @@ namespace Dreamy.Template
             if (feedbackPrefab == null) throw new InvalidOperationException("GameInstaller needs the FeedbackRig sample prefab.");
             feedbackInstance = Instantiate(feedbackPrefab, transform);
             Feedback = feedbackInstance;
-            feedbackInstance.Initialize();
-            feedbackRegistration = FeedbackServiceRegistry.RegisterOwned(Feedback.Vfx, Feedback.Haptic, Feedback.FloatingText,
-                Feedback.IconFly, Feedback.Screen, Feedback.CameraShake, Feedback.Feedback, Feedback.Ui);
-            feedbackPresenter = new FeedbackRewardPresenter((IResourceBalanceSource)resourceWallet,
-                new ResourceId("currency.coin"), (_, delta) =>
-                {
-                    if (delta <= 0 || feedbackInstance == null || !feedbackInstance.isActiveAndEnabled) return;
-                    var definitions = feedbackInstance.GetComponent<Dreamy.Feedback.Samples.FeedbackSampleDefinitions>();
-                    feedbackInstance.Feedback.Play(FeedbackRequestBuilder.For(definitions.Reward).From(feedbackInstance)
-                        .At(feedbackInstance.transform.Find("WorldTarget").position).To(definitions.IconTarget)
-                        .IconsFrom(definitions.IconSource).WithAmount(delta).Build());
-                    DreamyAudio.Service.Play("ui.click");
-                });
+            BindFeedbackCamera(feedbackCamera ? feedbackCamera : Camera.main);
+        }
+
+        private void BindFeedbackCamera(Camera camera)
+        {
+            feedbackRegistration?.Dispose();
+            feedbackInstance.Initialize(camera);
+            feedbackRegistration = FeedbackServiceRegistry.RegisterOwned(feedbackInstance.Vfx, feedbackInstance.Haptic, feedbackInstance.FloatingText,
+                feedbackInstance.IconFly, feedbackInstance.Screen, feedbackInstance.CameraShake, feedbackInstance.Feedback, feedbackInstance.Ui);
         }
 
         private async UniTask InstallDataConfigServiceAsync(CancellationToken cancellationToken)
@@ -292,21 +355,12 @@ namespace Dreamy.Template
             if (ownsSettingsService) ServiceLocator.Unregister<ISettingsService>();
             foreach (EntitlementEffectBinding binding in entitlementBindings) binding.Dispose();
             entitlementBindings.Clear();
-            feedbackPresenter?.Dispose(); feedbackPresenter = null;
-            feedbackRegistration?.Dispose(); feedbackRegistration = null;
-            if (feedbackInstance != null) feedbackInstance.Shutdown();
-            if (ReferenceEquals(Feedback, feedbackInstance)) Feedback = null;
-            feedbackInstance = null;
-            if (poolService is IDisposable disposable)
-            {
-                disposable.Dispose();
-            }
-
-            ServiceLocator.Unregister<IPoolService>();
+            ReleaseFeedbackAndPool();
             ServiceLocator.Unregister<IResourceWallet>();
             ServiceLocator.Unregister<IResourceBalanceProvider>();
             ServiceLocator.Unregister<IAudioService>();
             ServiceLocator.Unregister<IShopService>();
+            ReleaseShopPurchaseGateway();
             ServiceLocator.Unregister<IDailyRewardService>();
             ServiceLocator.Unregister<IMissionService>();
             ServiceLocator.Unregister<ILuckyWheelService>();

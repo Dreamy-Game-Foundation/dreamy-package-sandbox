@@ -1,0 +1,13 @@
+{
+  "observedAt": "2026-10-14T17:13:08.782Z",
+  "tool": "Unity MCP execute_code",
+  "scope": "Typed reward bundle/identity only, no real wallet or inventory mutation",
+  "result": {
+    "entryCount": 2,
+    "fingerprint": "sha256-v1:afd72df94f001f0f02c24391e7e38e6475cc28b6b2a2f64b4df13612cb1f5a13",
+    "request": "reward-v1:7:request10:qa-profile5:daily8:schedule7:cycle-05:day-1",
+    "duplicateRejected": true,
+    "originalInputDetached": true
+  },
+  "coverageNotes": "Live assembly smoke passed; full Economy regression suite still waits for implementation lane completion."
+}

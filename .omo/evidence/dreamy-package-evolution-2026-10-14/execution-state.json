@@ -1,0 +1,67 @@
+{
+  "plan": ".omo/plans/dreamy-package-evolution-2026-10-14.md",
+  "status": "in_progress",
+  "lastCheckpoint": {
+    "economy": "A2-A4 implemented locally; Unity MCP EditMode 41/41 passed, zero skipped, job a412ea65fed84c6cb01cf6588bdb66f3",
+    "economySample": "Grant -> Delivered; Retry -> AlreadyDelivered; real temporary wallet balance stays 100; prefab GUID unchanged",
+    "sampleInventory": "All five Daily/Missions imported prefabs inspected through MCP: zero missing scripts; MissionPanel and inherited Demo retain original GUIDs",
+    "simplicityConstraint": "Direct user instruction: simple readable clean practical SOLID; propagated to all active workers and plan",
+    "daily": "35/35 PlayMode tests passed, zero skipped; job 69a63c81cb3b439e9057dbe3bbdd2029. Actual sample bundle Pending -> retry -> Claimed: currency remains 100, item count 1.",
+    "missions": "52/52 EditMode tests passed, zero skipped; job 76bfbf7dd2314aa3afd0f67d7c9b3e9d. Actual periodic variant reroll limit, claim retry and cutoff rollover exercised.",
+    "sampleSync": "Five existing source/import prefabs mirrored through Unity MCP with original GUIDs and zero missing scripts. New PeriodicMissionDemoPanel variant generated and mirrored via MCP; portrait layout fixed and captured.",
+    "sandboxBootstrap": "Ready; Daily and Missions both use strict gateway. Actual Foundation Daily open/render seven rows/Back and Permanent Missions open/render three rows/Back passed. Console errors 0.",
+    "conditionalGaps": "D/conditional-gaps.md records actual source/tag comparison: no XP capability extension justified; preserve atomic Shop TryExchange; real SDK/receipt and current consumer integration remain unverified.",
+    "next": "Observe Shop test discovery compile, run affected package suites with nonzero discovery, then finish sample landscape/lifetime and consumer migrations under the pending checkout decision."
+  },
+  "goal": "Implement approved package evolution and synchronize imported/source sample components using Unity MCP.",
+  "startedAt": "2026-10-14T17:01:22.930Z",
+  "delivery": "local source branches; no commit/tag/push/publish authorized",
+  "workspace": "D:/Game/dreamy-package-sandbox",
+  "branch": "feature/package-evolution-20261014",
+  "packageBranch": "feature/reward-evolution-20261014",
+  "modeNotes": [
+    "User requested local sample retesting using the connected Editor; use current source branches and preserve unrelated work. No worktree landing or merge is authorized.",
+    "All 30 plan tasks and 4 final gates are tracked; optional/no-change and external SDK/device gates must remain explicit.",
+    "Plan checkboxes require release commits; local implementation evidence is tracked separately until commits are explicitly authorized."
+  ],
+  "baseline": {
+    "tests": {
+      "total": 28,
+      "passed": 28,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 1.5473381,
+      "resultState": "Passed"
+    },
+    "job": "d3fe3a13988b4369ba4c5d7d16d259ab",
+    "consoleErrors": 0,
+    "missingMissionSampleTween": {
+      "guid": "dced0c9c356b4e05a29ad221753e4d27",
+      "affectedPrefabs": 2
+    }
+  },
+  "localVerified": [
+    {
+      "task": 1,
+      "dependency": "Feature -> DataConfig >=0.2.0 matches existing asmdef GUID; missing-dependency negative fixture rejected",
+      "adr": "LocalPackages/com.dreamy.feature.economy/Documentation~/reward-delivery.md"
+    }
+  ],
+  "running": {
+    "checkpointRegression": "mon_MVW6FGJ4GFCC6203 / bash_14; job f857dba881bb44d6a82be76ba011dd50. Run started with duplicate TestRunner-reference error and must not certify new Shop discovery; explicit duplicate references have been removed and a fresh clean run is required."
+  },
+  "consumerDrift": {
+    "project": "D:/Game/Planet Bunker",
+    "currentHead": "2330bf8a610a77c678986f71728c66d38708aa91",
+    "planBaselineHead": "20e1264e12ad971d9bc02ca33fc5458df55c8b33",
+    "observed": "Current checkout has no PlayerResourceService.Economy.cs or Economy package pin from the planning baseline.",
+    "action": "Question consumer_branch pending; continue package/sample work without changing consumer manifest or route.",
+    "adapterSource": "CurrencyRewardDestination, UnitCardRewardDestination and same-owner receipts authored on current checkout; NOT yet compiled or integrated. Currency aliases include currency.* forms.",
+    "validation": "Host tests authored, not run; task 8 remains open."
+  },
+  "sampleProgress": {
+    "MissionPanel": "Replaced missing stale UITweenPlayer via PrefabUtility and rebound tweenPlayer; GUID preserved; inherited MissionDemoPanel missing-script count 0; source Samples~ synchronized through Unity MCP.",
+    "PeriodicMissionDemoPanel": "Variant GUID 4184db688ed41034293b84aaa8a56d1f; Reroll/Refresh buttons wired; shared clock/random helper and standalone periodic catalog added. Portrait runtime evidence under C/sample-runtime.json.",
+    "Daily": "Imported bundle fake-item assembly plus updated installer/panel/item. Runtime evidence under B/sample-runtime.json. Sandbox GameInstaller strict gateway with concrete demo item destination compiled and bootstrap/normal navigation passed."
+  }
+}

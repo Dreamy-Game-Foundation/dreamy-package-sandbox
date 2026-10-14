@@ -2,8 +2,12 @@
   "testables": [
     "com.dreamy.audio",
     "com.dreamy.ui",
+    "com.dreamy.feature.daily-reward",
+    "com.dreamy.feature.economy",
     "com.dreamy.feature.lucky-wheel",
     "com.dreamy.feature.missions",
+    "com.dreamy.feature.progression",
+    "com.dreamy.feature.shop",
     "com.dreamy.feature.tutorial",
     "com.dreamy.feedback"
   ],

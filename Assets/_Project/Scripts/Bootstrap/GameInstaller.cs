@@ -13,6 +13,7 @@ using Dreamy.Progression;
 using Dreamy.LuckyWheel;
 using Dreamy.Tutorial;
 using Dreamy.Economy;
+using Dreamy.Economy.Rewards;
 using Dreamy.Feedback;
 using Dreamy.Template.Demo;
 using Dreamy.Feature.Shop.Integration;
@@ -131,10 +132,15 @@ namespace Dreamy.Template
             }
             else SettingsFeatureInstaller.Install(presenterFactory, settings, OpenRateUs);
             var config = ServiceLocator.Get<IDataConfigService>();
+            var rewardGateway = new RewardDeliveryGateway(new IRewardDestination[]
+            {
+                (IRewardDestination)resourceWallet,
+                new DemoItemDestination(datasave)
+            });
             ServiceLocator.TryGet<IRewardClock>(out var rewardClock);
             DailyRewardFeatureInstaller.Install(presenterFactory, config.GetTable<DailyRewardScheduleConfig>(),
-                datasave, resourceWallet, rewardClock ?? new SystemRewardClock());
-            MissionFeatureInstaller.Install(presenterFactory, config.GetTable<MissionCatalogConfig>(), datasave, resourceWallet);
+                datasave, rewardGateway, rewardClock ?? new SystemRewardClock());
+            MissionFeatureInstaller.Install(presenterFactory, config.GetTable<MissionCatalogConfig>(), datasave, rewardGateway);
             ServiceLocator.TryGet<ILuckyWheelClock>(out var wheelClock);
             ServiceLocator.TryGet<ILuckyWheelRandom>(out var wheelRandom);
             LuckyWheelFeatureInstaller.Install(presenterFactory, config.GetTable<LuckyWheelConfig>(), datasave,

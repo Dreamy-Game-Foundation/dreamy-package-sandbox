@@ -1,0 +1,67 @@
+{
+  "observedAt": "2026-10-14T16:47:51.210Z",
+  "scope": "Synchronization and planning; not implementation certification",
+  "staticAsmdef": {
+    "monitorId": "mon_Z7ZKVCVEG94J2Z3C",
+    "processExit": 0,
+    "runs": [
+      {
+        "project": "D:/Game/dreamy-package-sandbox",
+        "count": 80,
+        "exitCode": 0,
+        "status": "pass",
+        "observedAt": "2026-10-14T16:36:40.385Z"
+      },
+      {
+        "project": "D:/Game/Planet Bunker",
+        "count": 22,
+        "exitCode": 0,
+        "status": "pass",
+        "observedAt": "2026-10-14T16:36:40.896Z"
+      },
+      {
+        "project": "D:/Game/dreamy-base-project/DreamyTemplateProject",
+        "count": 14,
+        "exitCode": 0,
+        "status": "pass",
+        "observedAt": "2026-10-14T16:36:41.238Z"
+      }
+    ],
+    "command": "node D:/Game/dreamy-codex-toolkit/harness/dreamy-harness asmdef <project>",
+    "limits": "Static Runtime-to-Editor reference check only, not Unity compile or test/runtime evidence"
+  },
+  "sourceConsultations": {
+    "planetBunker": "st_01a13b42: read-only; primary manifest/lock/save/quest/bootstrap evidence independently inspected",
+    "template": "st_01a13b43: read-only; manifest/lock/bootstrap evidence independently inspected",
+    "rewardArchitecture": "st_01a13b44: advisory only; adopted Economy contract/coordinator, feature-owned embedded journal, per-owner durable receipts; no source edits"
+  },
+  "environmentLimits": {
+    "lsp": "Daemon unreachable; no language-server diagnostics available",
+    "unityTests": "Not run; source unchanged and this task is planning",
+    "runtime": "Not run; future implementation gates explicitly unchecked",
+    "sdkDevice": "Not run; SDK real billing/device certification remains a future release gate"
+  },
+  "finalSelfCheck": {
+    "implementationTasks": 30,
+    "finalVerificationTasks": 4,
+    "allImplementationTasksHaveReferencesWorkAcceptanceDependenciesCommitAndCategory": true,
+    "allFutureImplementationCheckboxesUnchecked": true,
+    "planReadCompletely": true,
+    "syncBaselineJsonParsedCompletely": true,
+    "packageHeadsUnchangedFromPreflight": 17,
+    "packageWorktreesCleanAndAheadBehindZero": 17,
+    "planWhitespace": "No whitespace-error output; git diff --no-index --check returned 1 for new-file difference and an LF-to-CRLF notice, not a whitespace failure.",
+    "rootChanges": [
+      "Pre-existing LocalPackages/com.dreamy.feature.settings gitlink difference preserved",
+      "New .omo/plans/dreamy-package-evolution-2026-10-14.md",
+      "New .omo/evidence/dreamy-package-evolution-2026-10-14/"
+    ]
+  },
+  "correctionsToInput": [
+    "Missions already has detached commit/busy and save-failure regressions; preserve these.",
+    "Feature manifest omits DataConfig despite resolved asmdef GUID dependency; narrowly scoped metadata gap.",
+    "Progression HEAD is newer than v0.1.1 despite unchanged package version.",
+    "Journal schema/coordinator belongs to Economy but per-claim durable records embed in feature save, avoiding a new journal save key.",
+    "PB conflict policy explicitly relaxes groups; preserve configured intent while rejecting duplicate selection."
+  ]
+}

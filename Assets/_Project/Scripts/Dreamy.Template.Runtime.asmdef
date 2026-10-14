@@ -21,6 +21,7 @@
     "Dreamy.Feature.Shop.Integration.Runtime",
     "Dreamy.DailyReward.Runtime",
     "Dreamy.Feature.DailyReward.Integration.Runtime",
+    "Dreamy.Feature.DailyReward.Bundle.Integration.Runtime",
     "Dreamy.Tutorial.Runtime",
     "Dreamy.Tutorial.Integration.Runtime",
     "Dreamy.Feature.Settings.Integration.Runtime",

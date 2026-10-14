@@ -1,0 +1,184 @@
+{
+  "observedAt": "2026-10-14T18:35:41.138Z",
+  "jobId": "a412ea65fed84c6cb01cf6588bdb66f3",
+  "summary": {
+    "total": 41,
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 0.754734,
+    "resultState": "Passed"
+  },
+  "tests": [
+    {
+      "name": "Dreamy.Economy.Tests.DatasaveResourceWalletTests.DefaultRequestsAndGrantOverflow_DoNotConsumeTransactions",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.DatasaveResourceWalletTests.Exchange_InvalidLaterRewardOverflowAndSaveFailure_AreAtomic",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.DatasaveResourceWalletTests.LegacyGrant_WriteFailure_DoesNotMutateCacheBalanceReceiptOrEvent",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.DatasaveResourceWalletTests.LegacyIdOnlyReceipt_CannotProveStrictPayloadEquality",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.DatasaveResourceWalletTests.MigratedLegacyTombstone_RemainsStrictlyRejectedAfterLegacyEviction",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.DatasaveResourceWalletTests.Owner_ReentryDuringSaveAndEvent_IsBusy",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.DatasaveResourceWalletTests.StrictGrant_FailedSaveRetriesAgainstCachedState_ThenRecreates",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.DatasaveResourceWalletTests.StrictLedger_RetainsMoreThan4096Receipts_SeparatelyFromLegacyLimit",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.FileBackedWalletTests.RealDataSave_CodecFailureDoesNotPoisonSaveAllCache_AndReceiptSurvivesRecreation",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.FileBackedWalletTests.RealDataSave_MissingMainRestoresWholeOwnerSnapshotFromBackup",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.FileBackedWalletTests.RealDataSave_TempWriteFailureLeavesCommittedOwnerAndCacheUntouched",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardContractTests.Bundle_IsImmutable_AndRoundTripsCurrencyAndConcreteItem",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardContractTests.Bundle_RejectsDefaultDuplicateEmptyAndUnknownSchema",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardContractTests.Identity_IsLengthPrefixed_AndFingerprintIsInvariantAndOrderSensitive",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardContractTests.InvalidEntry_IsRejected(\"\",\"currency\",\"currency.coin\",1)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardContractTests.InvalidEntry_IsRejected(\"entry\",\"\",\"currency.coin\",1)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardContractTests.InvalidEntry_IsRejected(\"entry\",\"currency\",\"\",1)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardContractTests.InvalidEntry_IsRejected(\"entry\",\"currency\",\"currency.coin\",0)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardContractTests.InvalidEntry_IsRejected(\"entry\",\"currency\",\"currency.coin\",-1)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardContractTests.WholeBundleValidation_RejectsMissingRouteAndCombinedOverflowBeforeGrant",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.Coordinator_CallbackReentry_IsBusy_AndPublishedSnapshotsAreDetached",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.CorruptJournal_IsRejectedWithoutDispatch",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryDestinationWriteBoundary_ReplaysDurableReceipt(\"economy\",False)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryDestinationWriteBoundary_ReplaysDurableReceipt(\"items\",False)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryDestinationWriteBoundary_ReplaysDurableReceipt(\"economy\",True)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryDestinationWriteBoundary_ReplaysDurableReceipt(\"items\",True)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryFeatureWriteBoundary_RecreatesAllOwners_AndFinishesOnce(1,False)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryFeatureWriteBoundary_RecreatesAllOwners_AndFinishesOnce(2,False)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryFeatureWriteBoundary_RecreatesAllOwners_AndFinishesOnce(3,False)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryFeatureWriteBoundary_RecreatesAllOwners_AndFinishesOnce(4,False)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryFeatureWriteBoundary_RecreatesAllOwners_AndFinishesOnce(5,False)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryFeatureWriteBoundary_RecreatesAllOwners_AndFinishesOnce(1,True)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryFeatureWriteBoundary_RecreatesAllOwners_AndFinishesOnce(2,True)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryFeatureWriteBoundary_RecreatesAllOwners_AndFinishesOnce(3,True)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryFeatureWriteBoundary_RecreatesAllOwners_AndFinishesOnce(4,True)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.EveryFeatureWriteBoundary_RecreatesAllOwners_AndFinishesOnce(5,True)",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.FailedAcknowledgement_RetryUsesAlreadyDelivered_NotAnotherOwnerMutation",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.FailedFinalCommit_RetainsAwaitingJournal_AndDoesNotDispatchOnRetry",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.IntentWithoutResolverResponse_GrantsNothing_AndResolutionIsFrozenOnceSaved",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.InvalidLaterTarget_PreventsEarlierCurrencyDelivery",
+      "state": "Passed"
+    },
+    {
+      "name": "Dreamy.Economy.Tests.RewardJournalTests.RemotePending_DoesNotAcknowledgeOrReplaceRequestIdentity",
+      "state": "Passed"
+    }
+  ],
+  "implementation": {
+    "contracts": "Runtime/Rewards/*",
+    "wallet": "Runtime/DatasaveResourceWallet.cs",
+    "save": "Runtime/EconomySaveData.cs"
+  },
+  "scope": "Local A2-A4 validation; no commit/publish; cross-feature integration not yet validated"
+}

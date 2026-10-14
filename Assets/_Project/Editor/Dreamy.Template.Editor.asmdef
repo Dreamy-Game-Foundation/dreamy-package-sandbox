@@ -3,6 +3,9 @@
   "references": [
     "Dreamy.Template.Runtime",
     "Dreamy.UI.Runtime",
+    "Dreamy.Missions.Runtime",
+    "Dreamy.Datasave.Runtime",
+    "Dreamy.Economy.Runtime",
     "Dreamy.Feature.Economy.Integration.Runtime",
     "Dreamy.Feature.Progression.Integration.Runtime",
     "Dreamy.Feature.Missions.Integration.Runtime",

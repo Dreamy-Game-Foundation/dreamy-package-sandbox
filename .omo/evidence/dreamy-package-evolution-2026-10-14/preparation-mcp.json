@@ -1,0 +1,55 @@
+{
+  "observedAt": "2026-10-14T17:06:08.595Z",
+  "instance": "dreamy-package-sandbox@4c906ebe8d7b45ef",
+  "unity": "6000.4.12f1",
+  "baselineRuns": [
+    {
+      "jobId": "d3fe3a13988b4369ba4c5d7d16d259ab",
+      "mode": "EditMode",
+      "summary": {
+        "total": 28,
+        "passed": 28,
+        "failed": 0,
+        "skipped": 0,
+        "durationSeconds": 1.5473381,
+        "resultState": "Passed"
+      }
+    },
+    {
+      "jobId": "fa508039711c431d90f3ed84dba11fcc",
+      "mode": "PlayMode",
+      "summary": {
+        "total": 11,
+        "passed": 11,
+        "failed": 0,
+        "skipped": 0,
+        "durationSeconds": 0.208659,
+        "resultState": "Passed"
+      }
+    }
+  ],
+  "testDiscoveryRepair": {
+    "packages": [
+      "com.dreamy.feature.daily-reward",
+      "com.dreamy.feature.progression"
+    ],
+    "observedErrors": [
+      "CS0246 Newtonsoft namespace missing in newly discovered test assemblies"
+    ],
+    "fix": "Explicit precompiled nunit.framework.dll and Newtonsoft.Json.dll references, consistent with existing Missions tests; test platforms and test behavior unchanged",
+    "after": "Unity compileFailed=false; Console 0 errors; PlayMode 11/11 passed"
+  },
+  "sampleRepair": {
+    "asset": "Assets/Samples/Dreamy Missions/0.1.0/Mission Feature/Prefabs/MissionPanel.prefab",
+    "guid": "4133c5f0ad352c7c8a69ebee246c6e65",
+    "prefabType": "Variant",
+    "beforeMissing": 1,
+    "afterMissing": 0,
+    "rootTweenRebound": true,
+    "inheritedDemoMissingAfter": 0,
+    "exportedTo": "LocalPackages/com.dreamy.feature.missions/Samples~/Mission Feature/Prefabs/MissionPanel.prefab",
+    "sourceImportedTextEqual": true,
+    "method": "MCP execute_code: PrefabUtility.LoadPrefabContents, replace only stale missing tween, SerializedObject rebind, SaveAsPrefabAsset, FileUtil.ReplaceFile for generated source sample artifact; .meta unchanged"
+  },
+  "sceneNotice": "Unity serialized existing feedbackCamera:null in BootstrapScene while running baseline; no unrelated scene content reverted."
+}

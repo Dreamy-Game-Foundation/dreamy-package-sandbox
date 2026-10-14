@@ -1,0 +1,623 @@
+{
+  "Success": true,
+  "Failure": null,
+  "SourceIdentity": "{\"missionsHead\":\"def4e23198d5f2e1c6b498352a62654574aab801\",\"missionsRuntimeTextTreeSha256\":\"2ee03a48e68b64ba1cd94ea5a0347730abcb1395f4b234299b2684a8853b301f\",\"runtimeFiles\":22,\"fixtureTextSha256\":\"dc9e08dd016107885680b9a0a30dc037610284e40ba63131bf9193e5d2bd28d0\",\"knownConcurrentWork\":\"Separate template Unity Editor resolving packages; sandbox source stable for this run\",\"metricScope\":\"managed-operation elapsed/allocation; serialized in-memory persistence, not filesystem/device\"}",
+  "UnityVersion": "6000.4.12f1",
+  "Runtime": "4.0.30319.42000",
+  "OS": "Windows 11  (10.0.26200)",
+  "Processor": "AMD Ryzen 5 6600HS Creator Edition ",
+  "ProcessorCount": 12,
+  "ActiveBuildTarget": "StandaloneWindows64",
+  "StartedUtc": "2026-10-14T19:39:40.5378441+00:00",
+  "FinishedUtc": "2026-10-14T19:50:24.7759150+00:00",
+  "FixedSeed": 220014,
+  "RequestedCatalogSizes": [
+    16,
+    100,
+    1000
+  ],
+  "OperationsPerSize": 10000,
+  "WarmupOperationsPerSize": 20,
+  "OperationsPerUpdate": 8,
+  "StopwatchFrequency": 10000000,
+  "CompletedOperations": 30000,
+  "CompletedWarmupOperations": 60,
+  "Measurement": "Main-thread managed operation elapsed ticks and allocated bytes; includes in-memory JSON save serialization. Stopwatch elapsed is not exclusive CPU process time. Setup, warmup, oracle, growth snapshots, restore, state serialization, result-file IO and Editor scheduling excluded. No device/UI/GPU or real filesystem DataSave measurements.",
+  "Distribution": "1000 groups of 10 per size. Slots 0/8 additive (amount 1..5), 1/4/9 replay, 2 distinct, 3 repeated distinct value with new ID, 5 missing key, 6 zero amount, 7 wrong window. LCG 1664525*x+1013904223, high 24 bits modulo bucket; additive/distinct each occupy half the catalog, one matching mission per valid key; targets 100000, no selection/reroll/reward claims. Fixed daily UTC window, unbounded periodic event ledger.",
+  "Sizes": [
+    {
+      "CatalogSize": 16,
+      "FixtureSha256": "91e2a784df70480d35a8e9ee82b40fe1399241bacdce8a3171d850e41ded7a15",
+      "CatalogSha256": "2d7f3515bfbe42fead78e30e305945c916c6c34c95ec7a2568b6193374ae49cc",
+      "ExecutedOperations": 10000,
+      "ExecutedWarmupOperations": 20,
+      "SetupSaves": 1,
+      "SaveCount": 4000,
+      "OperationElapsedTicks": 675497470,
+      "OperationAllocatedBytes": 0,
+      "SerializedSaveUtf8Bytes": 2110073206,
+      "MaxSerializedSaveUtf8Bytes": 1047463,
+      "InitialRetainedSaveUtf8Bytes": 5489,
+      "FinalRetainedSaveUtf8Bytes": 1047463,
+      "RetainedSaveGrowthUtf8Bytes": 1041974,
+      "PublicStateUtf8Bytes": 4427,
+      "ExpectedProgressTotal": 6388,
+      "ExpectedDistinctTotal": 250,
+      "ActualProgressTotal": 6388,
+      "ActualDistinctTotal": 250,
+      "ActualLedgerEntries": 4000,
+      "Assertions": 4074,
+      "Correct": true,
+      "Diagnostics": [],
+      "Growth": [
+        {
+          "Operations": 0,
+          "Saves": 0,
+          "LedgerEntries": 0,
+          "DistinctEntries": 0,
+          "MissionEntries": 16,
+          "RetainedSaveUtf8Bytes": 5489,
+          "RetainedSaveUtf16CodeUnits": 5489
+        },
+        {
+          "Operations": 1000,
+          "Saves": 400,
+          "LedgerEntries": 400,
+          "DistinctEntries": 80,
+          "MissionEntries": 16,
+          "RetainedSaveUtf8Bytes": 109939,
+          "RetainedSaveUtf16CodeUnits": 109939
+        },
+        {
+          "Operations": 2000,
+          "Saves": 800,
+          "LedgerEntries": 800,
+          "DistinctEntries": 141,
+          "MissionEntries": 16,
+          "RetainedSaveUtf8Bytes": 214941,
+          "RetainedSaveUtf16CodeUnits": 214941
+        },
+        {
+          "Operations": 3000,
+          "Saves": 1200,
+          "LedgerEntries": 1200,
+          "DistinctEntries": 181,
+          "MissionEntries": 16,
+          "RetainedSaveUtf8Bytes": 319529,
+          "RetainedSaveUtf16CodeUnits": 319529
+        },
+        {
+          "Operations": 4000,
+          "Saves": 1600,
+          "LedgerEntries": 1600,
+          "DistinctEntries": 208,
+          "MissionEntries": 16,
+          "RetainedSaveUtf8Bytes": 423855,
+          "RetainedSaveUtf16CodeUnits": 423855
+        },
+        {
+          "Operations": 5000,
+          "Saves": 2000,
+          "LedgerEntries": 2000,
+          "DistinctEntries": 222,
+          "MissionEntries": 16,
+          "RetainedSaveUtf8Bytes": 527925,
+          "RetainedSaveUtf16CodeUnits": 527925
+        },
+        {
+          "Operations": 6000,
+          "Saves": 2400,
+          "LedgerEntries": 2400,
+          "DistinctEntries": 235,
+          "MissionEntries": 16,
+          "RetainedSaveUtf8Bytes": 631977,
+          "RetainedSaveUtf16CodeUnits": 631977
+        },
+        {
+          "Operations": 7000,
+          "Saves": 2800,
+          "LedgerEntries": 2800,
+          "DistinctEntries": 238,
+          "MissionEntries": 16,
+          "RetainedSaveUtf8Bytes": 735833,
+          "RetainedSaveUtf16CodeUnits": 735833
+        },
+        {
+          "Operations": 8000,
+          "Saves": 3200,
+          "LedgerEntries": 3200,
+          "DistinctEntries": 241,
+          "MissionEntries": 16,
+          "RetainedSaveUtf8Bytes": 839691,
+          "RetainedSaveUtf16CodeUnits": 839691
+        },
+        {
+          "Operations": 9000,
+          "Saves": 3600,
+          "LedgerEntries": 3600,
+          "DistinctEntries": 247,
+          "MissionEntries": 16,
+          "RetainedSaveUtf8Bytes": 943605,
+          "RetainedSaveUtf16CodeUnits": 943605
+        },
+        {
+          "Operations": 10000,
+          "Saves": 4000,
+          "LedgerEntries": 4000,
+          "DistinctEntries": 250,
+          "MissionEntries": 16,
+          "RetainedSaveUtf8Bytes": 1047463,
+          "RetainedSaveUtf16CodeUnits": 1047463
+        }
+      ],
+      "Categories": [
+        {
+          "Category": "additive",
+          "Operations": 1000,
+          "ElapsedTicks": 163521709,
+          "AllocatedBytes": 0,
+          "Saves": 1000
+        },
+        {
+          "Category": "immediate-additive-replay",
+          "Operations": 1000,
+          "ElapsedTicks": 3665480,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "distinct-value",
+          "Operations": 1000,
+          "ElapsedTicks": 166867237,
+          "AllocatedBytes": 0,
+          "Saves": 1000
+        },
+        {
+          "Category": "distinct-repeat-new-id-ledger-only",
+          "Operations": 1000,
+          "ElapsedTicks": 168223256,
+          "AllocatedBytes": 0,
+          "Saves": 1000
+        },
+        {
+          "Category": "distinct-replay",
+          "Operations": 1000,
+          "ElapsedTicks": 3946237,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "true-no-op-missing-key",
+          "Operations": 1000,
+          "ElapsedTicks": 1056624,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "true-no-op-zero-amount",
+          "Operations": 1000,
+          "ElapsedTicks": 6515,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "true-no-op-wrong-window",
+          "Operations": 1000,
+          "ElapsedTicks": 104984,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "second-additive",
+          "Operations": 1000,
+          "ElapsedTicks": 167663755,
+          "AllocatedBytes": 0,
+          "Saves": 1000
+        },
+        {
+          "Category": "long-distance-replay",
+          "Operations": 1000,
+          "ElapsedTicks": 441673,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        }
+      ]
+    },
+    {
+      "CatalogSize": 100,
+      "FixtureSha256": "b07290d49281bd881ceae6395f2bf483912e88a7f5f1360f4f5d1deefc40e20a",
+      "CatalogSha256": "364f060deb40f7e3985781695a3bce6c37802b74445f9a0579ce4191380e4d64",
+      "ExecutedOperations": 10000,
+      "ExecutedWarmupOperations": 20,
+      "SetupSaves": 1,
+      "SaveCount": 4000,
+      "OperationElapsedTicks": 962762612,
+      "OperationAllocatedBytes": 0,
+      "SerializedSaveUtf8Bytes": 2233306570,
+      "MaxSerializedSaveUtf8Bytes": 1083808,
+      "InitialRetainedSaveUtf8Bytes": 31950,
+      "FinalRetainedSaveUtf8Bytes": 1083808,
+      "RetainedSaveGrowthUtf8Bytes": 1051858,
+      "PublicStateUtf8Bytes": 27814,
+      "ExpectedProgressTotal": 6891,
+      "ExpectedDistinctTotal": 753,
+      "ActualProgressTotal": 6891,
+      "ActualDistinctTotal": 753,
+      "ActualLedgerEntries": 4000,
+      "Assertions": 4410,
+      "Correct": true,
+      "Diagnostics": [],
+      "Growth": [
+        {
+          "Operations": 0,
+          "Saves": 0,
+          "LedgerEntries": 0,
+          "DistinctEntries": 0,
+          "MissionEntries": 100,
+          "RetainedSaveUtf8Bytes": 31950,
+          "RetainedSaveUtf16CodeUnits": 31950
+        },
+        {
+          "Operations": 1000,
+          "Saves": 400,
+          "LedgerEntries": 400,
+          "DistinctEntries": 96,
+          "MissionEntries": 100,
+          "RetainedSaveUtf8Bytes": 136678,
+          "RetainedSaveUtf16CodeUnits": 136678
+        },
+        {
+          "Operations": 2000,
+          "Saves": 800,
+          "LedgerEntries": 800,
+          "DistinctEntries": 188,
+          "MissionEntries": 100,
+          "RetainedSaveUtf8Bytes": 242266,
+          "RetainedSaveUtf16CodeUnits": 242266
+        },
+        {
+          "Operations": 3000,
+          "Saves": 1200,
+          "LedgerEntries": 1200,
+          "DistinctEntries": 271,
+          "MissionEntries": 100,
+          "RetainedSaveUtf8Bytes": 347698,
+          "RetainedSaveUtf16CodeUnits": 347698
+        },
+        {
+          "Operations": 4000,
+          "Saves": 1600,
+          "LedgerEntries": 1600,
+          "DistinctEntries": 357,
+          "MissionEntries": 100,
+          "RetainedSaveUtf8Bytes": 453180,
+          "RetainedSaveUtf16CodeUnits": 453180
+        },
+        {
+          "Operations": 5000,
+          "Saves": 2000,
+          "LedgerEntries": 2000,
+          "DistinctEntries": 436,
+          "MissionEntries": 100,
+          "RetainedSaveUtf8Bytes": 558532,
+          "RetainedSaveUtf16CodeUnits": 558532
+        },
+        {
+          "Operations": 6000,
+          "Saves": 2400,
+          "LedgerEntries": 2400,
+          "DistinctEntries": 508,
+          "MissionEntries": 100,
+          "RetainedSaveUtf8Bytes": 663746,
+          "RetainedSaveUtf16CodeUnits": 663746
+        },
+        {
+          "Operations": 7000,
+          "Saves": 2800,
+          "LedgerEntries": 2800,
+          "DistinctEntries": 578,
+          "MissionEntries": 100,
+          "RetainedSaveUtf8Bytes": 768938,
+          "RetainedSaveUtf16CodeUnits": 768938
+        },
+        {
+          "Operations": 8000,
+          "Saves": 3200,
+          "LedgerEntries": 3200,
+          "DistinctEntries": 644,
+          "MissionEntries": 100,
+          "RetainedSaveUtf8Bytes": 874052,
+          "RetainedSaveUtf16CodeUnits": 874052
+        },
+        {
+          "Operations": 9000,
+          "Saves": 3600,
+          "LedgerEntries": 3600,
+          "DistinctEntries": 693,
+          "MissionEntries": 100,
+          "RetainedSaveUtf8Bytes": 978832,
+          "RetainedSaveUtf16CodeUnits": 978832
+        },
+        {
+          "Operations": 10000,
+          "Saves": 4000,
+          "LedgerEntries": 4000,
+          "DistinctEntries": 753,
+          "MissionEntries": 100,
+          "RetainedSaveUtf8Bytes": 1083808,
+          "RetainedSaveUtf16CodeUnits": 1083808
+        }
+      ],
+      "Categories": [
+        {
+          "Category": "additive",
+          "Operations": 1000,
+          "ElapsedTicks": 237443263,
+          "AllocatedBytes": 0,
+          "Saves": 1000
+        },
+        {
+          "Category": "immediate-additive-replay",
+          "Operations": 1000,
+          "ElapsedTicks": 4088818,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "distinct-value",
+          "Operations": 1000,
+          "ElapsedTicks": 238366090,
+          "AllocatedBytes": 0,
+          "Saves": 1000
+        },
+        {
+          "Category": "distinct-repeat-new-id-ledger-only",
+          "Operations": 1000,
+          "ElapsedTicks": 236578257,
+          "AllocatedBytes": 0,
+          "Saves": 1000
+        },
+        {
+          "Category": "distinct-replay",
+          "Operations": 1000,
+          "ElapsedTicks": 4136616,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "true-no-op-missing-key",
+          "Operations": 1000,
+          "ElapsedTicks": 1921715,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "true-no-op-zero-amount",
+          "Operations": 1000,
+          "ElapsedTicks": 7979,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "true-no-op-wrong-window",
+          "Operations": 1000,
+          "ElapsedTicks": 113305,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "second-additive",
+          "Operations": 1000,
+          "ElapsedTicks": 239144612,
+          "AllocatedBytes": 0,
+          "Saves": 1000
+        },
+        {
+          "Category": "long-distance-replay",
+          "Operations": 1000,
+          "ElapsedTicks": 961957,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        }
+      ]
+    },
+    {
+      "CatalogSize": 1000,
+      "FixtureSha256": "9a9b25658865cb88e51e70bf5b372b3ee0db62615f01846d43a38ced75546d63",
+      "CatalogSha256": "23a01beeded0f99e93623bbc3c3a2ef4537a549a268ec91432afac9139df2680",
+      "ExecutedOperations": 10000,
+      "ExecutedWarmupOperations": 20,
+      "SetupSaves": 1,
+      "SaveCount": 4000,
+      "OperationElapsedTicks": 4685550380,
+      "OperationAllocatedBytes": 0,
+      "SerializedSaveUtf8Bytes": 3393011406,
+      "MaxSerializedSaveUtf8Bytes": 1376419,
+      "InitialRetainedSaveUtf8Bytes": 320851,
+      "FinalRetainedSaveUtf8Bytes": 1376419,
+      "RetainedSaveGrowthUtf8Bytes": 1055568,
+      "PublicStateUtf8Bytes": 279979,
+      "ExpectedProgressTotal": 7105,
+      "ExpectedDistinctTotal": 967,
+      "ActualProgressTotal": 7105,
+      "ActualDistinctTotal": 967,
+      "ActualLedgerEntries": 4000,
+      "Assertions": 8010,
+      "Correct": true,
+      "Diagnostics": [],
+      "Growth": [
+        {
+          "Operations": 0,
+          "Saves": 0,
+          "LedgerEntries": 0,
+          "DistinctEntries": 0,
+          "MissionEntries": 1000,
+          "RetainedSaveUtf8Bytes": 320851,
+          "RetainedSaveUtf16CodeUnits": 320851
+        },
+        {
+          "Operations": 1000,
+          "Saves": 400,
+          "LedgerEntries": 400,
+          "DistinctEntries": 98,
+          "MissionEntries": 1000,
+          "RetainedSaveUtf8Bytes": 425461,
+          "RetainedSaveUtf16CodeUnits": 425461
+        },
+        {
+          "Operations": 2000,
+          "Saves": 800,
+          "LedgerEntries": 800,
+          "DistinctEntries": 198,
+          "MissionEntries": 1000,
+          "RetainedSaveUtf8Bytes": 531073,
+          "RetainedSaveUtf16CodeUnits": 531073
+        },
+        {
+          "Operations": 3000,
+          "Saves": 1200,
+          "LedgerEntries": 1200,
+          "DistinctEntries": 296,
+          "MissionEntries": 1000,
+          "RetainedSaveUtf8Bytes": 636721,
+          "RetainedSaveUtf16CodeUnits": 636721
+        },
+        {
+          "Operations": 4000,
+          "Saves": 1600,
+          "LedgerEntries": 1600,
+          "DistinctEntries": 393,
+          "MissionEntries": 1000,
+          "RetainedSaveUtf8Bytes": 742397,
+          "RetainedSaveUtf16CodeUnits": 742397
+        },
+        {
+          "Operations": 5000,
+          "Saves": 2000,
+          "LedgerEntries": 2000,
+          "DistinctEntries": 489,
+          "MissionEntries": 1000,
+          "RetainedSaveUtf8Bytes": 848021,
+          "RetainedSaveUtf16CodeUnits": 848021
+        },
+        {
+          "Operations": 6000,
+          "Saves": 2400,
+          "LedgerEntries": 2400,
+          "DistinctEntries": 584,
+          "MissionEntries": 1000,
+          "RetainedSaveUtf8Bytes": 953673,
+          "RetainedSaveUtf16CodeUnits": 953673
+        },
+        {
+          "Operations": 7000,
+          "Saves": 2800,
+          "LedgerEntries": 2800,
+          "DistinctEntries": 682,
+          "MissionEntries": 1000,
+          "RetainedSaveUtf8Bytes": 1059405,
+          "RetainedSaveUtf16CodeUnits": 1059405
+        },
+        {
+          "Operations": 8000,
+          "Saves": 3200,
+          "LedgerEntries": 3200,
+          "DistinctEntries": 778,
+          "MissionEntries": 1000,
+          "RetainedSaveUtf8Bytes": 1165103,
+          "RetainedSaveUtf16CodeUnits": 1165103
+        },
+        {
+          "Operations": 9000,
+          "Saves": 3600,
+          "LedgerEntries": 3600,
+          "DistinctEntries": 872,
+          "MissionEntries": 1000,
+          "RetainedSaveUtf8Bytes": 1270743,
+          "RetainedSaveUtf16CodeUnits": 1270743
+        },
+        {
+          "Operations": 10000,
+          "Saves": 4000,
+          "LedgerEntries": 4000,
+          "DistinctEntries": 967,
+          "MissionEntries": 1000,
+          "RetainedSaveUtf8Bytes": 1376419,
+          "RetainedSaveUtf16CodeUnits": 1376419
+        }
+      ],
+      "Categories": [
+        {
+          "Category": "additive",
+          "Operations": 1000,
+          "ElapsedTicks": 1138242763,
+          "AllocatedBytes": 0,
+          "Saves": 1000
+        },
+        {
+          "Category": "immediate-additive-replay",
+          "Operations": 1000,
+          "ElapsedTicks": 4598205,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "distinct-value",
+          "Operations": 1000,
+          "ElapsedTicks": 1138561578,
+          "AllocatedBytes": 0,
+          "Saves": 1000
+        },
+        {
+          "Category": "distinct-repeat-new-id-ledger-only",
+          "Operations": 1000,
+          "ElapsedTicks": 1142285105,
+          "AllocatedBytes": 0,
+          "Saves": 1000
+        },
+        {
+          "Category": "distinct-replay",
+          "Operations": 1000,
+          "ElapsedTicks": 4740638,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "true-no-op-missing-key",
+          "Operations": 1000,
+          "ElapsedTicks": 114456086,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "true-no-op-zero-amount",
+          "Operations": 1000,
+          "ElapsedTicks": 44200,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "true-no-op-wrong-window",
+          "Operations": 1000,
+          "ElapsedTicks": 415823,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        },
+        {
+          "Category": "second-additive",
+          "Operations": 1000,
+          "ElapsedTicks": 1141625297,
+          "AllocatedBytes": 0,
+          "Saves": 1000
+        },
+        {
+          "Category": "long-distance-replay",
+          "Operations": 1000,
+          "ElapsedTicks": 580685,
+          "AllocatedBytes": 0,
+          "Saves": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "tool": "Unity MCP execute_code",
+  "asset": "Assets/Samples/Dreamy Economy Contracts/0.2.0/Wallet Demo/EconomyDemoPanel.prefab",
+  "guid": "2c7b45123f7142e44b1ccf6bb1adac2a",
+  "operation": "Load isolated prefab contents, configure real DatasaveResourceWallet against unique temporary directory, invoke Grant then Retry, read rendered status",
+  "firstStatus": "Delivered",
+  "retryStatus": "AlreadyDelivered",
+  "finalCoinBalance": 100,
+  "missingScripts": 0,
+  "cleanup": "Prefab contents unloaded in finally; unique temporary save directory removed in finally",
+  "playerSaveTouched": false,
+  "limits": "EditMode prefab/component behavior, not a PlayMode visual-layout certification",
+  "simplicity": "Sample directly uses the existing durable destination when provided; legacy wallet path remains explicit without a new adapter or factory."
+}

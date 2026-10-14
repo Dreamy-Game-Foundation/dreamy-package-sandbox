@@ -1,0 +1,45 @@
+{
+  "transport": "Unity MCP execute_code and manage_camera",
+  "project": "D:/Game/dreamy-package-sandbox",
+  "fixture": "Actual DailyRewardPanel prefab and presenter, bundle sample JSON, strict currency destination plus DemoItemDestination, file-backed Datasave in unique temp directory.",
+  "prefabGuid": "618a53c7404df3345904c4882b8fdaad",
+  "presenterShowCallsBeforeClick": 3,
+  "firstClick": {
+    "itemOwnerUnavailable": true,
+    "statusText": "Pending: DestinationUnavailable - claim to retry",
+    "hasPendingClaim": true,
+    "retryButtonInteractable": true,
+    "currency": 100
+  },
+  "retry": {
+    "itemOwnerUnavailable": false,
+    "statusText": "Claimed",
+    "currency": 100,
+    "itemCount": 1,
+    "pendingCleared": true
+  },
+  "additionalClaimButtonInvocation": {
+    "currency": 100,
+    "itemCount": 1
+  },
+  "visual": {
+    "capture": "daily-bundle-portrait.png",
+    "observed": "Both reward lines are visible with distinct claim status and claim button. Existing sample artwork/layout retained.",
+    "remaining": "Landscape and consumer Home route not yet validated."
+  },
+  "sandboxBootstrap": {
+    "state": "Ready",
+    "dailyStrictGateway": true,
+    "missionsStrictGateway": true,
+    "dailyOpenedFromFoundationButton": true,
+    "dailyRewardRows": 7,
+    "dailyClosedFromCloseButton": true,
+    "permanentMissionsOpenedFromFoundationButton": true,
+    "permanentMissionRows": 3,
+    "permanentMissionsClosedFromCloseButton": true,
+    "consoleErrorsAfterSmoke": 0,
+    "playerSaveClaims": "No claims were made against normal sandbox saves; reward grants used only the separate temp fixture."
+  },
+  "sourcePrefabSync": "Five existing Daily/Missions prefabs validated with zero missing scripts and original GUIDs, then mirrored from Unity-authored imported assets into Samples~ through Unity MCP. New periodic variant and meta mirrored likewise. No raw prefab YAML edits.",
+  "cleanup": "Exited PlayMode without saving runtime scene."
+}

@@ -1,0 +1,12 @@
+{
+  "project": "D:/Game/dreamy-base-project/DreamyTemplateProject",
+  "gitRoot": "D:/Game/dreamy-base-project/DreamyTemplateProject",
+  "baselineHead": "f6486d0e8fa7e877360d7b775c96ad419474fe0f",
+  "branch": "feature/reward-evolution-20261014",
+  "sourceHandoff": "docs/reward-evolution-source-rehearsal-20261014.md",
+  "sourceState": "Daily Stop/reset=true and Permanent Missions source/config/tests authored; actual Unity validation pending.",
+  "unrelatedPreserved": ["Assets/generation-report.json", "Assets/generation-report.json.meta"],
+  "parentRepository": "Not the consumer. Inspected identity only; no edits allowed there.",
+  "publication": "No commits, tags, push, publish or merge authorized.",
+  "runtimeClaimsPolicy": "Use test fixture copies/unique temp saves for reward grants. Do not claim real purchases or SDK/device coverage."
+}

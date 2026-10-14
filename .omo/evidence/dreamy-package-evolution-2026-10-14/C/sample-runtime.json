@@ -1,0 +1,30 @@
+{
+  "transport": "Unity MCP execute_code and manage_camera",
+  "project": "D:/Game/dreamy-package-sandbox",
+  "fixture": "Real imported PeriodicMissionDemoPanel prefab, MissionPresenter, strict DatasaveResourceWallet and file-backed Datasave in unique OS temp directory. Fixed injected clock and seeded random.",
+  "prefabGuid": "4184db688ed41034293b84aaa8a56d1f",
+  "prefabType": "Variant",
+  "parentGuid": "10e02867bfe8cc84994a1e1bd218bb05",
+  "originalSelection": ["collect-five-hundred", "win-five", "collect-three-hundred"],
+  "afterReroll": ["win-one", "win-five", "collect-three-hundred"],
+  "rerollsAfterFirstClick": 1,
+  "rerollsAfterSecondClick": 1,
+  "claimedViaButtons": 3,
+  "currencyAfterClaims": 100,
+  "currencyAfterRepeatedClaimButtons": 100,
+  "nextWindow": {
+    "clockAdvance": "2026-10-14T12:00:00Z -> 2026-10-15T12:00:00Z",
+    "action": "refreshButton.onClick.Invoke",
+    "selection": ["win-five", "collect-hundred", "win-three"],
+    "rerollsUsed": 0,
+    "allProgressZeroAndUnclaimed": true,
+    "currency": 100
+  },
+  "visual": {
+    "capture": "periodic-missions-portrait-fixed.png",
+    "observed": "Visible compact reroll/recovery controls and three nonoverlapping rows. Fixed actual flexible-height expansion found in first capture; opaque backdrop prevents underlying panels bleeding through.",
+    "remaining": "Landscape and consumer navigation/lifetime coverage not yet run."
+  },
+  "cleanup": "Exited PlayMode without saving runtime scene.",
+  "scope": "Sample interactions only; not production battle bridge or consumer cutover."
+}

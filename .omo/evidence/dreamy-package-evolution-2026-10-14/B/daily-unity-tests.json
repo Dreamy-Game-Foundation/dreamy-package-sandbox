@@ -1,0 +1,17 @@
+{
+  "project": "D:/Game/dreamy-package-sandbox",
+  "transport": "Unity MCP",
+  "jobId": "69a63c81cb3b439e9057dbe3bbdd2029",
+  "mode": "PlayMode",
+  "assembly": "Dreamy.DailyReward.Runtime.Tests",
+  "status": "succeeded",
+  "summary": {
+    "total": 35,
+    "passed": 35,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 0.2286235
+  },
+  "discoveryNote": "Daily is a PlayMode test assembly. Combined EditMode job discovered only Missions, not Daily.",
+  "scope": "Daily domain/config/save/presenter regressions only. Does not establish consumer migration or visual sample QA."
+}

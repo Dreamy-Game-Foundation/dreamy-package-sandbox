@@ -1,0 +1,16 @@
+{
+  "project": "D:/Game/dreamy-package-sandbox",
+  "transport": "Unity MCP",
+  "jobId": "76bfbf7dd2314aa3afd0f67d7c9b3e9d",
+  "mode": "EditMode",
+  "assembly": "Dreamy.Missions.Runtime.Tests",
+  "status": "succeeded",
+  "summary": {
+    "total": 52,
+    "passed": 52,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 0.4870925
+  },
+  "scope": "Permanent compatibility, period, selection/reroll, distinct/replay, journal failure recovery. Does not establish battle event mapping, sample UI, or consumer cutover."
+}

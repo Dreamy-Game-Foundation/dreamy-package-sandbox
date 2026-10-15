@@ -1,0 +1,608 @@
+{
+  "success": true,
+  "message": "Test job status retrieved.",
+  "error": null,
+  "data": {
+    "job_id": "90d4ffe0719243f6bb31a994c5aeb9f9",
+    "status": "succeeded",
+    "mode": "PlayMode",
+    "started_unix_ms": 1792031145542,
+    "finished_unix_ms": 1792031152650,
+    "last_update_unix_ms": 1792031152650,
+    "progress": {
+      "completed": 63,
+      "total": 63,
+      "current_test_full_name": null,
+      "current_test_started_unix_ms": 1792031152626,
+      "last_finished_test_full_name": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(2147483647L,100)",
+      "last_finished_unix_ms": 1792031152626,
+      "stuck_suspected": false,
+      "editor_is_focused": false,
+      "blocked_reason": null,
+      "failures_so_far": [],
+      "failures_capped": false
+    },
+    "error": null,
+    "result": {
+      "mode": "PlayMode",
+      "summary": {
+        "total": 63,
+        "passed": 63,
+        "failed": 0,
+        "skipped": 0,
+        "durationSeconds": 0.2555562,
+        "resultState": "Passed"
+      },
+      "results": [
+        {
+          "name": "Claim_WhenBundleContainsUnknownOwner_GrantsNothing",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenBundleContainsUnknownOwner_GrantsNothing",
+          "state": "Passed",
+          "durationSeconds": 0.0260646,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenCallbacksReenter_ReturnsBusyWithoutSecondClaim",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenCallbacksReenter_ReturnsBusyWithoutSecondClaim",
+          "state": "Passed",
+          "durationSeconds": 0.0072336,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenClockRollsBack_DoesNotReopenClaimedDate",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenClockRollsBack_DoesNotReopenClaimedDate",
+          "state": "Passed",
+          "durationSeconds": 0.0038395,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenDaysAreSkipped_UsesConfiguredResetPolicy(True,100,\"test-schedule:1:day-1\")",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenDaysAreSkipped_UsesConfiguredResetPolicy(True,100,\"test-schedule:1:day-1\")",
+          "state": "Passed",
+          "durationSeconds": 0.0008157,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenDaysAreSkipped_UsesConfiguredResetPolicy(False,5,\"test-schedule:0:day-2\")",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenDaysAreSkipped_UsesConfiguredResetPolicy(False,5,\"test-schedule:0:day-2\")",
+          "state": "Passed",
+          "durationSeconds": 0.0001545,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenFirstRewardIsAvailable_GrantsRewardAndStartsCooldown",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenFirstRewardIsAvailable_GrantsRewardAndStartsCooldown",
+          "state": "Passed",
+          "durationSeconds": 0.000708,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenGrantFails_DoesNotAdvanceSavedProgress",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenGrantFails_DoesNotAdvanceSavedProgress",
+          "state": "Passed",
+          "durationSeconds": 0.0002497,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenItemOwnerIsUnavailable_ResumesAcrossMidnightWithoutDuplicateCurrency",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenItemOwnerIsUnavailable_ResumesAcrossMidnightWithoutDuplicateCurrency",
+          "state": "Passed",
+          "durationSeconds": 0.0147275,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenLegacySaveFails_DoesNotMutateLoadedSaveOrAdvanceProgress",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenLegacySaveFails_DoesNotMutateLoadedSaveOrAdvanceProgress",
+          "state": "Passed",
+          "durationSeconds": 0.000395,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenLegacyWalletReenters_ReturnsBusyAndKeepsLegacySaveCount",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenLegacyWalletReenters_ReturnsBusyAndKeepsLegacySaveCount",
+          "state": "Passed",
+          "durationSeconds": 0.0003308,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenOwnerSaveFails_RecreationDoesNotLoseOrDuplicateEffects(\"currency\")",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenOwnerSaveFails_RecreationDoesNotLoseOrDuplicateEffects(\"currency\")",
+          "state": "Passed",
+          "durationSeconds": 0.0012047,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenOwnerSaveFails_RecreationDoesNotLoseOrDuplicateEffects(\"items\")",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenOwnerSaveFails_RecreationDoesNotLoseOrDuplicateEffects(\"items\")",
+          "state": "Passed",
+          "durationSeconds": 0.0005497,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenPendingScheduleChanges_RecoversSavedPayloadBeforeMigrationCheck",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenPendingScheduleChanges_RecoversSavedPayloadBeforeMigrationCheck",
+          "state": "Passed",
+          "durationSeconds": 0.0010042,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenRepeatScheduleFinishes_StartsNewCycleWithDistinctClaimId",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenRepeatScheduleFinishes_StartsNewCycleWithDistinctClaimId",
+          "state": "Passed",
+          "durationSeconds": 0.0003278,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenRevisionChangesMidCycle_DefersRewardsUntilNextCycleWithoutReset",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenRevisionChangesMidCycle_DefersRewardsUntilNextCycleWithoutReset",
+          "state": "Passed",
+          "durationSeconds": 0.0006698,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenScheduleIdentityChanges_RequiresMigrationWithoutResettingSave",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenScheduleIdentityChanges_RequiresMigrationWithoutResettingSave",
+          "state": "Passed",
+          "durationSeconds": 0.0003432,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenStopScheduleIsCompleted_StaysCompletedAfterSkippedDaysAndRevision",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenStopScheduleIsCompleted_StaysCompletedAfterSkippedDaysAndRevision",
+          "state": "Passed",
+          "durationSeconds": 0.0005024,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenStrictPersistenceFails_RecreatedOwnersResumeOriginalClaim(2)",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenStrictPersistenceFails_RecreatedOwnersResumeOriginalClaim(2)",
+          "state": "Passed",
+          "durationSeconds": 0.001663,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenStrictPersistenceFails_RecreatedOwnersResumeOriginalClaim(3)",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenStrictPersistenceFails_RecreatedOwnersResumeOriginalClaim(3)",
+          "state": "Passed",
+          "durationSeconds": 0.0005466,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenStrictPersistenceFails_RecreatedOwnersResumeOriginalClaim(4)",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenStrictPersistenceFails_RecreatedOwnersResumeOriginalClaim(4)",
+          "state": "Passed",
+          "durationSeconds": 0.000588,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenStrictPersistenceFails_RecreatedOwnersResumeOriginalClaim(5)",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenStrictPersistenceFails_RecreatedOwnersResumeOriginalClaim(5)",
+          "state": "Passed",
+          "durationSeconds": 0.00113,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenStrictPersistenceFails_RecreatedOwnersResumeOriginalClaim(6)",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenStrictPersistenceFails_RecreatedOwnersResumeOriginalClaim(6)",
+          "state": "Passed",
+          "durationSeconds": 0.0004963,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_WhenStrictRepeatFinishes_UsesNewCycleIdentityWithoutSameDayReplay",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Claim_WhenStrictRepeatFinishes_UsesNewCycleIdentityWithoutSameDayReplay",
+          "state": "Passed",
+          "durationSeconds": 0.001272,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Constructor_WhenBundleUsesLegacyWallet_RejectsItWithoutSaving",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Constructor_WhenBundleUsesLegacyWallet_RejectsItWithoutSaving",
+          "state": "Passed",
+          "durationSeconds": 0.0007052,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Constructor_WhenVersionOneSaveLoads_PreservesCountersAndRoundTripsLegacyConfig",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Constructor_WhenVersionOneSaveLoads_PreservesCountersAndRoundTripsLegacyConfig",
+          "state": "Passed",
+          "durationSeconds": 0.0003885,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GetState_WhenPlayerMissesADay_ResetsToFirstReward",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.GetState_WhenPlayerMissesADay_ResetsToFirstReward",
+          "state": "Passed",
+          "durationSeconds": 0.0003024,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GetState_WhenRevisionRemovesOrReordersEntries_KeepsCurrentCycleSnapshot(True)",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.GetState_WhenRevisionRemovesOrReordersEntries_KeepsCurrentCycleSnapshot(True)",
+          "state": "Passed",
+          "durationSeconds": 0.0011478,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GetState_WhenRevisionRemovesOrReordersEntries_KeepsCurrentCycleSnapshot(False)",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.GetState_WhenRevisionRemovesOrReordersEntries_KeepsCurrentCycleSnapshot(False)",
+          "state": "Passed",
+          "durationSeconds": 0.0003819,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Initialize_WhenRewardConfigIsAmbiguousOrInvalid_RejectsIt(\"\\\"resourceId\\\":\\\"currency.gold\\\",\\\"amount\\\":100,\\\"bundle\\\":{\\\"schemaVersion\\\":1,\\\"resolverVersion\\\":\\\"v1\\\",\\\"entries\\\":[{\\\"entryId\\\":\\\"a\\\",\\\"kindId\\\":\\\"currency\\\",\\\"targetId\\\":\\\"currency.gold\\\",\\\"amount\\\":1}]}\")",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Initialize_WhenRewardConfigIsAmbiguousOrInvalid_RejectsIt(\"\\\"resourceId\\\":\\\"currency.gold\\\",\\\"amount\\\":100,\\\"bundle\\\":{\\\"schemaVersion\\\":1,\\\"resolverVersion\\\":\\\"v1\\\",\\\"entries\\\":[{\\\"entryId\\\":\\\"a\\\",\\\"kindId\\\":\\\"currency\\\",\\\"targetId\\\":\\\"currency.gold\\\",\\\"amount\\\":1}]}\")",
+          "state": "Passed",
+          "durationSeconds": 0.0004085,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Initialize_WhenRewardConfigIsAmbiguousOrInvalid_RejectsIt(\"\\\"bundle\\\":{\\\"schemaVersion\\\":2,\\\"resolverVersion\\\":\\\"v1\\\",\\\"entries\\\":[{\\\"entryId\\\":\\\"a\\\",\\\"kindId\\\":\\\"currency\\\",\\\"targetId\\\":\\\"currency.gold\\\",\\\"amount\\\":1}]}\")",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Initialize_WhenRewardConfigIsAmbiguousOrInvalid_RejectsIt(\"\\\"bundle\\\":{\\\"schemaVersion\\\":2,\\\"resolverVersion\\\":\\\"v1\\\",\\\"entries\\\":[{\\\"entryId\\\":\\\"a\\\",\\\"kindId\\\":\\\"currency\\\",\\\"targetId\\\":\\\"currency.gold\\\",\\\"amount\\\":1}]}\")",
+          "state": "Passed",
+          "durationSeconds": 0.0005196,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Initialize_WhenRewardConfigIsAmbiguousOrInvalid_RejectsIt(\"\\\"bundle\\\":{\\\"schemaVersion\\\":1,\\\"resolverVersion\\\":\\\"v1\\\",\\\"entries\\\":[{\\\"entryId\\\":\\\"a\\\",\\\"kindId\\\":\\\"item\\\",\\\"targetId\\\":\\\"item.card\\\",\\\"amount\\\":1},{\\\"entryId\\\":\\\"a\\\",\\\"kindId\\\":\\\"item\\\",\\\"targetId\\\":\\\"item.card\\\",\\\"amount\\\":2}]}\")",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Initialize_WhenRewardConfigIsAmbiguousOrInvalid_RejectsIt(\"\\\"bundle\\\":{\\\"schemaVersion\\\":1,\\\"resolverVersion\\\":\\\"v1\\\",\\\"entries\\\":[{\\\"entryId\\\":\\\"a\\\",\\\"kindId\\\":\\\"item\\\",\\\"targetId\\\":\\\"item.card\\\",\\\"amount\\\":1},{\\\"entryId\\\":\\\"a\\\",\\\"kindId\\\":\\\"item\\\",\\\"targetId\\\":\\\"item.card\\\",\\\"amount\\\":2}]}\")",
+          "state": "Passed",
+          "durationSeconds": 0.000138,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Initialize_WhenScheduleSchemaIsUnknown_RejectsIt",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Initialize_WhenScheduleSchemaIsUnknown_RejectsIt",
+          "state": "Passed",
+          "durationSeconds": 0.0001918,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "IntentRecovery_RejectsInvalidOrChangedPayloadBeforeResolverOrGrant(False)",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.IntentRecovery_RejectsInvalidOrChangedPayloadBeforeResolverOrGrant(False)",
+          "state": "Passed",
+          "durationSeconds": 0.0009569,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "IntentRecovery_RejectsInvalidOrChangedPayloadBeforeResolverOrGrant(True)",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.IntentRecovery_RejectsInvalidOrChangedPayloadBeforeResolverOrGrant(True)",
+          "state": "Passed",
+          "durationSeconds": 0.0002613,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Presenter_WhenBundleSucceeds_SupportsLegacyFeedbackAndRebindsWithoutDuplicateListeners",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Presenter_WhenBundleSucceeds_SupportsLegacyFeedbackAndRebindsWithoutDuplicateListeners",
+          "state": "Passed",
+          "durationSeconds": 0.0013805,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Presenter_WhenLegacyClaimSucceeds_PlaysLegacyFeedback",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Presenter_WhenLegacyClaimSucceeds_PlaysLegacyFeedback",
+          "state": "Passed",
+          "durationSeconds": 0.0003342,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Presenter_WhenPendingThenRetried_PublishesReasonAndPlaysBundleFeedbackOnce",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.Presenter_WhenPendingThenRetried_PublishesReasonAndPlaysBundleFeedbackOnce",
+          "state": "Passed",
+          "durationSeconds": 0.0007309,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "RequiredResolverMissingOrUnavailableKeepsIntentWithoutGrant",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.RequiredResolverMissingOrUnavailableKeepsIntentWithoutGrant",
+          "state": "Passed",
+          "durationSeconds": 0.0007354,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "ResolvedRecovery_UsesJournalWhenDuplicatePendingPayloadIsInvalid",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.ResolvedRecovery_UsesJournalWhenDuplicatePendingPayloadIsInvalid",
+          "state": "Passed",
+          "durationSeconds": 0.000924,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "ResolverRunsAfterIntentAndReplaysOnlyUntilResolvedSaveCommits(False)",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.ResolverRunsAfterIntentAndReplaysOnlyUntilResolvedSaveCommits(False)",
+          "state": "Passed",
+          "durationSeconds": 0.0015779,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "ResolverRunsAfterIntentAndReplaysOnlyUntilResolvedSaveCommits(True)",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.ResolverRunsAfterIntentAndReplaysOnlyUntilResolvedSaveCommits(True)",
+          "state": "Passed",
+          "durationSeconds": 0.0004847,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "StopSchedule_AfterFinalClaim_ShowsCompletedAndAllRowsClaimedAfterRecreation",
+          "fullName": "Dreamy.DailyReward.Tests.DailyRewardModelTests.StopSchedule_AfterFinalClaim_ShowsCompletedAndAllRowsClaimedAfterRecreation",
+          "state": "Passed",
+          "durationSeconds": 0.0013278,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "AdvanceNext_WhenAlreadyAtMaxLevel_DoesNotProcessTheGrant",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.AdvanceNext_WhenAlreadyAtMaxLevel_DoesNotProcessTheGrant",
+          "state": "Passed",
+          "durationSeconds": 0.0051621,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "AdvanceNext_WhenCalledForExperienceCatalog_ReturnsWrongMode",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.AdvanceNext_WhenCalledForExperienceCatalog_ReturnsWrongMode",
+          "state": "Passed",
+          "durationSeconds": 0.0003412,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "AdvanceNext_WhenGrantIsRetried_DoesNotAdvanceOrRewardTwice",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.AdvanceNext_WhenGrantIsRetried_DoesNotAdvanceOrRewardTwice",
+          "state": "Passed",
+          "durationSeconds": 0.0002942,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "AdvanceNext_WhenSequential_AdvancesAndGrantsTheNextLevelReward",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.AdvanceNext_WhenSequential_AdvancesAndGrantsTheNextLevelReward",
+          "state": "Passed",
+          "durationSeconds": 0.000274,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Config_WhenExperienceThresholdsDoNotIncrease_Throws",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.Config_WhenExperienceThresholdsDoNotIncrease_Throws",
+          "state": "Passed",
+          "durationSeconds": 0.0009933,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WhenCrossingMultipleLevels_GrantsEachMilestoneOnce",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WhenCrossingMultipleLevels_GrantsEachMilestoneOnce",
+          "state": "Passed",
+          "durationSeconds": 0.0005505,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WhenLongAdditionWouldOverflow_LeavesProgressAndSaveUntouched",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WhenLongAdditionWouldOverflow_LeavesProgressAndSaveUntouched",
+          "state": "Passed",
+          "durationSeconds": 0.0041634,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WhenRewardFails_DoesNotPersistExperienceOrProcessTheGrant",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WhenRewardFails_DoesNotPersistExperienceOrProcessTheGrant",
+          "state": "Passed",
+          "durationSeconds": 0.000271,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(0L,1)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(0L,1)",
+          "state": "Passed",
+          "durationSeconds": 0.0009817,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(99L,1)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(99L,1)",
+          "state": "Passed",
+          "durationSeconds": 0.0006651,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(100L,2)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(100L,2)",
+          "state": "Passed",
+          "durationSeconds": 0.0006244,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(101L,2)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(101L,2)",
+          "state": "Passed",
+          "durationSeconds": 0.0006118,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(219L,2)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(219L,2)",
+          "state": "Passed",
+          "durationSeconds": 0.0006196,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(220L,3)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(220L,3)",
+          "state": "Passed",
+          "durationSeconds": 0.0005947,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(221L,3)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(221L,3)",
+          "state": "Passed",
+          "durationSeconds": 0.0006052,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(360L,4)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(360L,4)",
+          "state": "Passed",
+          "durationSeconds": 0.0006157,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(7920L,25)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(7920L,25)",
+          "state": "Passed",
+          "durationSeconds": 0.0006205,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(106919L,99)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(106919L,99)",
+          "state": "Passed",
+          "durationSeconds": 0.0006008,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(106920L,100)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(106920L,100)",
+          "state": "Passed",
+          "durationSeconds": 0.0005973,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(106921L,100)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(106921L,100)",
+          "state": "Passed",
+          "durationSeconds": 0.0006049,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(2147483647L,100)",
+          "fullName": "Dreamy.Progression.Tests.ProgressionModelTests.GrantExperience_WithIncreasingThresholds_ResolvesBoundariesWithoutMilestones(2147483647L,100)",
+          "state": "Passed",
+          "durationSeconds": 0.000614,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        }
+      ]
+    }
+  },
+  "hint": null
+}

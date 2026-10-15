@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "message": "Code executed successfully.",
+  "data": {
+    "result": {
+      "success": true,
+      "cycles": 100,
+      "rows": 1,
+      "pendingLabel": "Pending: DestinationUnavailable - claim to retry",
+      "completedLabel": "All rewards claimed",
+      "currency": 100,
+      "cards": 1,
+      "panelPath": "Assets/Samples/Dreamy Daily Reward/0.1.0/Daily Reward Feature/Prefabs/DailyRewardPanel.prefab",
+      "scope": "Real prefab, button invocation, presenter-host bind/dispose and enable/disable; no Addressables or Home route."
+    },
+    "compiler": "codedom"
+  }
+}

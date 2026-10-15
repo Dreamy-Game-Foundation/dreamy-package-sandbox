@@ -1,0 +1,26 @@
+{
+  "com.dreamy.feature": {
+    "version": "0.2.0",
+    "sha": "fec5ceeb850964c4a76d5b763cef3c1db406fec1"
+  },
+  "com.dreamy.feature.economy": {
+    "version": "0.3.0",
+    "sha": "6deca354dcbc1d5bb8b361129dae0c55aca5fe01"
+  },
+  "com.dreamy.feature.daily-reward": {
+    "version": "0.2.0",
+    "sha": "7785c1843baf7764c8a8a938305db4d95eada53a"
+  },
+  "com.dreamy.feature.missions": {
+    "version": "0.2.0",
+    "sha": "1e1b4b57b738a83d7325ee229a80852c397c739e"
+  },
+  "com.dreamy.feature.progression": {
+    "version": "0.1.2",
+    "sha": "0c640d1e6b784734280c083c2e941b2ab4045259"
+  },
+  "com.dreamy.feature.shop": {
+    "version": "0.1.3",
+    "sha": "0d9e7d7b0bf2fc02a2ab1e6a95ed7fd04bce26f3"
+  }
+}

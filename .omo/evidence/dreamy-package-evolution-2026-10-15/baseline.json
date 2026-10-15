@@ -1,0 +1,80 @@
+{
+  "repositories": {
+    ".": {
+      "sha": "06693e03e9c7b2a9a9805f51c931ea5b71cbf549",
+      "status": "?? docs/plans/REWARD_EVOLUTION_ARCHITECTURE_AND_RESUME_2026-10-15.md\n"
+    },
+    "LocalPackages/com.dreamy.assets": {
+      "sha": "68b5a7457ed79dda01b0e0865c445db12ffba0b0",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.audio": {
+      "sha": "69128a81faeb781bfdf9a4b93720a8381fc40fc2",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.core": {
+      "sha": "ba844659fbc65655f21b082f89115295167f2405",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.dataconfig": {
+      "sha": "d261ae8bfd63ce5db35264e6eb2f8f6cb60cacfc",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.datasave": {
+      "sha": "a88e22b0da2034c150937e3efd23454a3528303a",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.editor-tools": {
+      "sha": "a230ad458aeebe657ba5f22a136aa199cf9cdc67",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.feature": {
+      "sha": "3560c8a20e4feaedc71539833c004f9dcbcdd2b7",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.feature.daily-reward": {
+      "sha": "3727c781ca567cd5eb1fad579ae3df2bcfa81512",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.feature.economy": {
+      "sha": "1049959c1b1b21bcd2985b411eec7f4476f16a8f",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.feature.lucky-wheel": {
+      "sha": "5f97a5e8064f5b5ab47d78bf44ff52038b217835",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.feature.missions": {
+      "sha": "859098e69dd8b77ae8a3934f8f7a19b995db2331",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.feature.progression": {
+      "sha": "069ca80a49a407f88c8fd631698a4350de225038",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.feature.settings": {
+      "sha": "81e0f8cc36a80e681ca675dc86f2037fa0dc3904",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.feature.shop": {
+      "sha": "c66e718663094021464b1ed54cc143a506f7d688",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.feature.tutorial": {
+      "sha": "0c20c61f69179fff357de10eaaef97725c0281d8",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.feedback": {
+      "sha": "2d22a64f83d409bae291f12aad3e0cb8c1a970df",
+      "status": ""
+    },
+    "LocalPackages/com.dreamy.ui": {
+      "sha": "91bfb340955d0fc819b8f7475e6407358f5cbf53",
+      "status": ""
+    }
+  },
+  "hashes": {
+    "Packages/manifest.json": "58b6a31aed19adb2524edfd17305724a25e65a10c492d6b4f4132668bf43b43c",
+    "Packages/packages-lock.json": "ca714ea3e5ec25254cdf1a6b02aeb4a1d3c2cc712ceb5ca43a27f38824de45cd"
+  }
+}

@@ -1,5 +1,6 @@
 {
   "testables": [
+    "com.dreamy.feature",
     "com.dreamy.audio",
     "com.dreamy.ui",
     "com.dreamy.feature.daily-reward",

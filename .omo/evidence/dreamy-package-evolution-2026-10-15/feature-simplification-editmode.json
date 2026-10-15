@@ -1,0 +1,563 @@
+{
+  "success": true,
+  "message": "Test job status retrieved.",
+  "error": null,
+  "data": {
+    "job_id": "fa8ddb5deb2a4d2b820e65c706b0483d",
+    "status": "succeeded",
+    "mode": "EditMode",
+    "started_unix_ms": 1792032402689,
+    "finished_unix_ms": 1792032410701,
+    "last_update_unix_ms": 1792032410701,
+    "progress": {
+      "completed": 58,
+      "total": 58,
+      "current_test_full_name": null,
+      "current_test_started_unix_ms": 1792032410482,
+      "last_finished_test_full_name": "Dreamy.Missions.Tests.MissionPresenterTests.ShowDisposeAndReopen_KeepOneWriterAndReleaseAllListeners",
+      "last_finished_unix_ms": 1792032410483,
+      "stuck_suspected": false,
+      "editor_is_focused": false,
+      "blocked_reason": null,
+      "failures_so_far": [],
+      "failures_capped": false
+    },
+    "error": null,
+    "result": {
+      "mode": "EditMode",
+      "summary": {
+        "total": 58,
+        "passed": 58,
+        "failed": 0,
+        "skipped": 0,
+        "durationSeconds": 1.9894802,
+        "resultState": "Passed"
+      },
+      "results": [
+        {
+          "name": "FailedRefreshOnRepeatedShow_AlsoReleasesExistingBinding",
+          "fullName": "Dreamy.Feature.Tests.FeaturePresenterTests.FailedRefreshOnRepeatedShow_AlsoReleasesExistingBinding",
+          "state": "Passed",
+          "durationSeconds": 0.0088716,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "FailedShow_ReleasesPartialBinding_AndCanRetry(True)",
+          "fullName": "Dreamy.Feature.Tests.FeaturePresenterTests.FailedShow_ReleasesPartialBinding_AndCanRetry(True)",
+          "state": "Passed",
+          "durationSeconds": 0.0006717,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "FailedShow_ReleasesPartialBinding_AndCanRetry(False)",
+          "fullName": "Dreamy.Feature.Tests.FeaturePresenterTests.FailedShow_ReleasesPartialBinding_AndCanRetry(False)",
+          "state": "Passed",
+          "durationSeconds": 0.0001269,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "RepeatedShowAndDispose_KeepOneSubscription_AndAllowReopen",
+          "fullName": "Dreamy.Feature.Tests.FeaturePresenterTests.RepeatedShowAndDispose_KeepOneSubscription_AndAllowReopen",
+          "state": "Passed",
+          "durationSeconds": 0.0003458,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Catalog_LoadsWithDataConfigCamelCaseSettings",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.Catalog_LoadsWithDataConfigCamelCaseSettings",
+          "state": "Passed",
+          "durationSeconds": 0.0134626,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Catalog_MissingRequiredMember_IsRejected(\"{\\\"missions\\\":[]}\")",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.Catalog_MissingRequiredMember_IsRejected(\"{\\\"missions\\\":[]}\")",
+          "state": "Passed",
+          "durationSeconds": 0.0015749,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Catalog_MissingRequiredMember_IsRejected(\"{\\\"catalogId\\\":\\\"test\\\"}\")",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.Catalog_MissingRequiredMember_IsRejected(\"{\\\"catalogId\\\":\\\"test\\\"}\")",
+          "state": "Passed",
+          "durationSeconds": 0.000091,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Catalog_UsesDataConfigSettings_AndRoundTrips",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.Catalog_UsesDataConfigSettings_AndRoundTrips",
+          "state": "Passed",
+          "durationSeconds": 0.0058065,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "CatalogChange_ResetsProgressIntentionally",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.CatalogChange_ResetsProgressIntentionally",
+          "state": "Passed",
+          "durationSeconds": 0.0185107,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Claim_RequiresCompletion_AndPersistsClaimedState",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.Claim_RequiresCompletion_AndPersistsClaimedState",
+          "state": "Passed",
+          "durationSeconds": 0.0019669,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "DuplicateEvent_RemainsRejectedAfterReload",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.DuplicateEvent_RemainsRejectedAfterReload",
+          "state": "Passed",
+          "durationSeconds": 0.0007322,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "HistoryLimit_EvictsOldEventsWithExplicitBoundedSemantics",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.HistoryLimit_EvictsOldEventsWithExplicitBoundedSemantics",
+          "state": "Passed",
+          "durationSeconds": 0.0008441,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidAmount_DoesNotConsumeEvent(0)",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.InvalidAmount_DoesNotConsumeEvent(0)",
+          "state": "Passed",
+          "durationSeconds": 0.0007962,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidAmount_DoesNotConsumeEvent(-1)",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.InvalidAmount_DoesNotConsumeEvent(-1)",
+          "state": "Passed",
+          "durationSeconds": 0.0003393,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidCatalog_IsRejected(\"\\\"target\\\":3\",\"\\\"target\\\":0\")",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.InvalidCatalog_IsRejected(\"\\\"target\\\":3\",\"\\\"target\\\":0\")",
+          "state": "Passed",
+          "durationSeconds": 0.0005012,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidCatalog_IsRejected(\"\\\"id\\\":\\\"wins-long\\\"\",\"\\\"id\\\":\\\"wins\\\"\")",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.InvalidCatalog_IsRejected(\"\\\"id\\\":\\\"wins-long\\\"\",\"\\\"id\\\":\\\"wins\\\"\")",
+          "state": "Passed",
+          "durationSeconds": 0.0000858,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidCatalog_IsRejected(\"\\\"eventKey\\\":\\\"win\\\"\",\"\\\"eventKey\\\":\\\"\\\"\")",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.InvalidCatalog_IsRejected(\"\\\"eventKey\\\":\\\"win\\\"\",\"\\\"eventKey\\\":\\\"\\\"\")",
+          "state": "Passed",
+          "durationSeconds": 0.0000497,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidCatalog_IsRejected(\"\\\"rewardAmount\\\":10\",\"\\\"rewardAmount\\\":-1\")",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.InvalidCatalog_IsRejected(\"\\\"rewardAmount\\\":10\",\"\\\"rewardAmount\\\":-1\")",
+          "state": "Passed",
+          "durationSeconds": 0.0000573,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Progress_UpdatesAllMatchingMissions_AndCapsWithoutOverflow",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.Progress_UpdatesAllMatchingMissions_AndCapsWithoutOverflow",
+          "state": "Passed",
+          "durationSeconds": 0.0018894,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SaveFailureAfterGrant_RetryUsesSameTransaction_AndGrantsOnce",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.SaveFailureAfterGrant_RetryUsesSameTransaction_AndGrantsOnce",
+          "state": "Passed",
+          "durationSeconds": 0.0012443,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SaveFailureDuringProgress_DoesNotMutateMemoryOrConsumeEvent",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.SaveFailureDuringProgress_DoesNotMutateMemoryOrConsumeEvent",
+          "state": "Passed",
+          "durationSeconds": 0.000664,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "UnknownKey_DoesNotConsumeEventId",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.UnknownKey_DoesNotConsumeEventId",
+          "state": "Passed",
+          "durationSeconds": 0.0004309,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "WalletFailure_LeavesRewardClaimable",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.WalletFailure_LeavesRewardClaimable",
+          "state": "Passed",
+          "durationSeconds": 0.000565,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "WalletReentry_IsRejected",
+          "fullName": "Dreamy.Missions.Tests.MissionModelTests.WalletReentry_IsRejected",
+          "state": "Passed",
+          "durationSeconds": 0.0005811,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "BundleConfig_RoundTrips_RejectsLegacyAmbiguityAndWalletOverload",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.BundleConfig_RoundTrips_RejectsLegacyAmbiguityAndWalletOverload",
+          "state": "Passed",
+          "durationSeconds": 0.0195009,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "ConflictRelaxation_NeverDuplicatesIds_AndStrictRejectsInsufficiency",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.ConflictRelaxation_NeverDuplicatesIds_AndStrictRejectsInsufficiency",
+          "state": "Passed",
+          "durationSeconds": 0.0042953,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "DistinctValues_AreSeparateFromBusinessEventReplayAndPersisted",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.DistinctValues_AreSeparateFromBusinessEventReplayAndPersisted",
+          "state": "Passed",
+          "durationSeconds": 0.0014774,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "GatewayReentry_IsBusyThroughoutValidationDeliveryAndFinalEvent",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.GatewayReentry_IsBusyThroughoutValidationDeliveryAndFinalEvent",
+          "state": "Passed",
+          "durationSeconds": 0.0117072,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "LegacySaveAndClaimIdentity_ArePreserved",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.LegacySaveAndClaimIdentity_ArePreserved",
+          "state": "Passed",
+          "durationSeconds": 0.0008955,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "OldPendingRecovery_DoesNotMarkCurrentUnclaimedMission",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.OldPendingRecovery_DoesNotMarkCurrentUnclaimedMission",
+          "state": "Passed",
+          "durationSeconds": 0.0025402,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "OwnerAndStateChangedCallbacks_AreBusy_AndProgressSaveFailureDoesNotConsumeDistinctValue",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.OwnerAndStateChangedCallbacks_AreBusy_AndProgressSaveFailureDoesNotConsumeDistinctValue",
+          "state": "Passed",
+          "durationSeconds": 0.0012756,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "PendingOldWindow_DoesNotBlockSameMissionNextWindow_AndFinalizesOnlyOriginalSnapshot",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.PendingOldWindow_DoesNotBlockSameMissionNextWindow_AndFinalizesOnlyOriginalSnapshot",
+          "state": "Passed",
+          "durationSeconds": 0.0070226,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "PendingRevisionChange_RetainsOriginalPayloadAndRemovedMissionSnapshot",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.PendingRevisionChange_RetainsOriginalPayloadAndRemovedMissionSnapshot",
+          "state": "Passed",
+          "durationSeconds": 0.0024851,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "PeriodicEvents_RequireOriginalWindow_AndAreNotBoundedByLegacyHistoryLimit",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.PeriodicEvents_RequireOriginalWindow_AndAreNotBoundedByLegacyHistoryLimit",
+          "state": "Passed",
+          "durationSeconds": 0.0014143,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "PermanentRevision_AddsButRejectsChangedExistingReward",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.PermanentRevision_AddsButRejectsChangedExistingReward",
+          "state": "Passed",
+          "durationSeconds": 0.0020477,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Recovery_AttemptsCurrentPendingClaimEvenWhenOlderJournalIsUnavailable",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.Recovery_AttemptsCurrentPendingClaimEvenWhenOlderJournalIsUnavailable",
+          "state": "Passed",
+          "durationSeconds": 0.0036775,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Reroll_ExcludesFullSelection_PersistsCountAndResetsAtNextWindow",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.Reroll_ExcludesFullSelection_PersistsCountAndResetsAtNextWindow",
+          "state": "Passed",
+          "durationSeconds": 0.0018138,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Reroll_NoCandidateAndFailedSave_DoNotConsumeCount",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.Reroll_NoCandidateAndFailedSave_DoNotConsumeCount",
+          "state": "Passed",
+          "durationSeconds": 0.0011784,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Reroll_RejectsCompletedClaimedInactiveAndUsesExplicitLimit",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.Reroll_RejectsCompletedClaimedInactiveAndUsesExplicitLimit",
+          "state": "Passed",
+          "durationSeconds": 0.0031206,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "RevisionIsDeferred_AndOldDefinitionCanClaimUntilBoundary",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.RevisionIsDeferred_AndOldDefinitionCanClaimUntilBoundary",
+          "state": "Passed",
+          "durationSeconds": 0.002629,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "RollbackAndForward_KeepHighWaterAndOpenOnlyCurrentWindow",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.RollbackAndForward_KeepHighWaterAndOpenOnlyCurrentWindow",
+          "state": "Passed",
+          "durationSeconds": 0.0015728,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "RolloverSaveFailure_DoesNotPublishNewWindow",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.RolloverSaveFailure_DoesNotPublishNewWindow",
+          "state": "Passed",
+          "durationSeconds": 0.001119,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Selection_IsPersistedAcrossRestart_WithoutDrawingAgain(3,6)",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.Selection_IsPersistedAcrossRestart_WithoutDrawingAgain(3,6)",
+          "state": "Passed",
+          "durationSeconds": 0.0020051,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Selection_IsPersistedAcrossRestart_WithoutDrawingAgain(5,10)",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.Selection_IsPersistedAcrossRestart_WithoutDrawingAgain(5,10)",
+          "state": "Passed",
+          "durationSeconds": 0.000923,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Selection_UsesExplicitPool_AndDoesNotPublishFailedSave",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.Selection_UsesExplicitPool_AndDoesNotPublishFailedSave",
+          "state": "Passed",
+          "durationSeconds": 0.0017517,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "StrictClaim_EachJournalSaveFailureRecoversWithoutDuplicateBundleDelivery(1)",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.StrictClaim_EachJournalSaveFailureRecoversWithoutDuplicateBundleDelivery(1)",
+          "state": "Passed",
+          "durationSeconds": 0.0041857,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "StrictClaim_EachJournalSaveFailureRecoversWithoutDuplicateBundleDelivery(2)",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.StrictClaim_EachJournalSaveFailureRecoversWithoutDuplicateBundleDelivery(2)",
+          "state": "Passed",
+          "durationSeconds": 0.0036772,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "StrictClaim_EachJournalSaveFailureRecoversWithoutDuplicateBundleDelivery(3)",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.StrictClaim_EachJournalSaveFailureRecoversWithoutDuplicateBundleDelivery(3)",
+          "state": "Passed",
+          "durationSeconds": 0.0036899,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "StrictClaim_EachJournalSaveFailureRecoversWithoutDuplicateBundleDelivery(4)",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.StrictClaim_EachJournalSaveFailureRecoversWithoutDuplicateBundleDelivery(4)",
+          "state": "Passed",
+          "durationSeconds": 0.0036655,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "StrictClaim_EachJournalSaveFailureRecoversWithoutDuplicateBundleDelivery(5)",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.StrictClaim_EachJournalSaveFailureRecoversWithoutDuplicateBundleDelivery(5)",
+          "state": "Passed",
+          "durationSeconds": 0.0035286,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "WindowPolicyAndPeriodicIdentityChanges_RequireExplicitMigration",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.WindowPolicyAndPeriodicIdentityChanges_RequireExplicitMigration",
+          "state": "Passed",
+          "durationSeconds": 0.0013308,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Windows_AreHalfOpenAtConfiguredBoundaries(Daily,420,0,Monday,\"2026-10-11T17:00:00Z\",1)",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.Windows_AreHalfOpenAtConfiguredBoundaries(Daily,420,0,Monday,\"2026-10-11T17:00:00Z\",1)",
+          "state": "Passed",
+          "durationSeconds": 0.0006765,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Windows_AreHalfOpenAtConfiguredBoundaries(Weekly,420,0,Monday,\"2026-10-11T17:00:00Z\",7)",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.Windows_AreHalfOpenAtConfiguredBoundaries(Weekly,420,0,Monday,\"2026-10-11T17:00:00Z\",7)",
+          "state": "Passed",
+          "durationSeconds": 0.0001479,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Windows_AreHalfOpenAtConfiguredBoundaries(Weekly,0,240,Sunday,\"2027-01-03T04:00:00Z\",7)",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.Windows_AreHalfOpenAtConfiguredBoundaries(Weekly,0,240,Sunday,\"2027-01-03T04:00:00Z\",7)",
+          "state": "Passed",
+          "durationSeconds": 0.0000725,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Windows_AreHalfOpenAtConfiguredBoundaries(Daily,0,0,Monday,\"2028-02-29T00:00:00Z\",1)",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.Windows_AreHalfOpenAtConfiguredBoundaries(Daily,0,0,Monday,\"2028-02-29T00:00:00Z\",1)",
+          "state": "Passed",
+          "durationSeconds": 0.0000607,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "Windows_AreHalfOpenAtConfiguredBoundaries(Daily,-300,90,Friday,\"2027-01-01T06:30:00Z\",1)",
+          "fullName": "Dreamy.Missions.Tests.MissionPeriodicTests.Windows_AreHalfOpenAtConfiguredBoundaries(Daily,-300,90,Friday,\"2027-01-01T06:30:00Z\",1)",
+          "state": "Passed",
+          "durationSeconds": 0.0000542,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "RenderFailureDuringShow_UnsubscribesServiceAndViewBeforeRetry",
+          "fullName": "Dreamy.Missions.Tests.MissionPresenterTests.RenderFailureDuringShow_UnsubscribesServiceAndViewBeforeRetry",
+          "state": "Passed",
+          "durationSeconds": 0.0010965,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "ShowDisposeAndReopen_KeepOneWriterAndReleaseAllListeners",
+          "fullName": "Dreamy.Missions.Tests.MissionPresenterTests.ShowDisposeAndReopen_KeepOneWriterAndReleaseAllListeners",
+          "state": "Passed",
+          "durationSeconds": 0.0005044,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        }
+      ]
+    }
+  },
+  "hint": null
+}

@@ -4,12 +4,209 @@
   "cycleMode": "Repeat",
   "resetProgressAfterMissedDay": true,
   "rewards": [
-    { "id": "day-1", "day": 1, "resourceId": "currency.coin", "amount": 100, "isMilestone": false },
-    { "id": "day-2", "day": 2, "resourceId": "currency.coin", "amount": 150, "isMilestone": false },
-    { "id": "day-3", "day": 3, "resourceId": "currency.coin", "amount": 200, "isMilestone": false },
-    { "id": "day-4", "day": 4, "resourceId": "currency.coin", "amount": 250, "isMilestone": false },
-    { "id": "day-5", "day": 5, "resourceId": "currency.coin", "amount": 300, "isMilestone": false },
-    { "id": "day-6", "day": 6, "resourceId": "currency.coin", "amount": 400, "isMilestone": false },
-    { "id": "day-7", "day": 7, "resourceId": "currency.gem", "amount": 10, "isMilestone": true }
-  ]
+    {
+      "id": "day-1",
+      "day": 1,
+      "isMilestone": false,
+      "bundle": {
+        "schemaVersion": 1,
+        "resolverVersion": "demo-v1",
+        "entries": [
+          {
+            "entryId": "coins",
+            "kindId": "currency",
+            "targetId": "currency.coin",
+            "amount": 100
+          },
+          {
+            "entryId": "gems",
+            "kindId": "currency",
+            "targetId": "currency.gem",
+            "amount": 1
+          },
+          {
+            "entryId": "card",
+            "kindId": "item",
+            "targetId": "item.demo-card",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "day-2",
+      "day": 2,
+      "isMilestone": false,
+      "bundle": {
+        "schemaVersion": 1,
+        "resolverVersion": "demo-v1",
+        "entries": [
+          {
+            "entryId": "coins",
+            "kindId": "currency",
+            "targetId": "currency.coin",
+            "amount": 150
+          },
+          {
+            "entryId": "gems",
+            "kindId": "currency",
+            "targetId": "currency.gem",
+            "amount": 1
+          },
+          {
+            "entryId": "card",
+            "kindId": "item",
+            "targetId": "item.demo-card",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "day-3",
+      "day": 3,
+      "isMilestone": false,
+      "bundle": {
+        "schemaVersion": 1,
+        "resolverVersion": "demo-v1",
+        "entries": [
+          {
+            "entryId": "coins",
+            "kindId": "currency",
+            "targetId": "currency.coin",
+            "amount": 200
+          },
+          {
+            "entryId": "gems",
+            "kindId": "currency",
+            "targetId": "currency.gem",
+            "amount": 2
+          },
+          {
+            "entryId": "card",
+            "kindId": "item",
+            "targetId": "item.demo-card",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "day-4",
+      "day": 4,
+      "isMilestone": false,
+      "bundle": {
+        "schemaVersion": 1,
+        "resolverVersion": "demo-v1",
+        "entries": [
+          {
+            "entryId": "coins",
+            "kindId": "currency",
+            "targetId": "currency.coin",
+            "amount": 250
+          },
+          {
+            "entryId": "gems",
+            "kindId": "currency",
+            "targetId": "currency.gem",
+            "amount": 2
+          },
+          {
+            "entryId": "card",
+            "kindId": "item",
+            "targetId": "item.demo-card",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "day-5",
+      "day": 5,
+      "isMilestone": false,
+      "bundle": {
+        "schemaVersion": 1,
+        "resolverVersion": "demo-v1",
+        "entries": [
+          {
+            "entryId": "coins",
+            "kindId": "currency",
+            "targetId": "currency.coin",
+            "amount": 300
+          },
+          {
+            "entryId": "gems",
+            "kindId": "currency",
+            "targetId": "currency.gem",
+            "amount": 3
+          },
+          {
+            "entryId": "card",
+            "kindId": "item",
+            "targetId": "item.demo-card",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "day-6",
+      "day": 6,
+      "isMilestone": false,
+      "bundle": {
+        "schemaVersion": 1,
+        "resolverVersion": "demo-v1",
+        "entries": [
+          {
+            "entryId": "coins",
+            "kindId": "currency",
+            "targetId": "currency.coin",
+            "amount": 400
+          },
+          {
+            "entryId": "gems",
+            "kindId": "currency",
+            "targetId": "currency.gem",
+            "amount": 3
+          },
+          {
+            "entryId": "card",
+            "kindId": "item",
+            "targetId": "item.demo-card",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "day-7",
+      "day": 7,
+      "isMilestone": true,
+      "bundle": {
+        "schemaVersion": 1,
+        "resolverVersion": "demo-v1",
+        "entries": [
+          {
+            "entryId": "coins",
+            "kindId": "currency",
+            "targetId": "currency.coin",
+            "amount": 500
+          },
+          {
+            "entryId": "gems",
+            "kindId": "currency",
+            "targetId": "currency.gem",
+            "amount": 10
+          },
+          {
+            "entryId": "card",
+            "kindId": "item",
+            "targetId": "item.demo-card",
+            "amount": 3
+          }
+        ]
+      }
+    }
+  ],
+  "revision": "2"
 }

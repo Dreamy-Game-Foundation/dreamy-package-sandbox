@@ -4,6 +4,27 @@
 `LocalPackages/`. Unity Package Manager tham chiếu chúng bằng đường dẫn local
 trong `Packages/manifest.json`, nên cần khởi tạo submodule trước khi mở project.
 
+## Dùng Feature, currency và reward
+
+Đọc [hướng dẫn tích hợp và đánh giá mức độ sẵn sàng](LocalPackages/com.dreamy.feature.economy/Documentation~/usage-and-readiness.md)
+để cài wallet ở composition root, claim Daily/Missions, cấp currency trực tiếp,
+exchange và viết destination cho inventory của game.
+
+Contract hiện dùng lại được cho tài nguyên số nguyên và feature reward trong
+scope đã kiểm chứng. Chưa thể kết luận sẵn sàng cho mọi loại game: BigNumber,
+server authority, cloud save nhiều thiết bị và IAP thật còn cần adapter/contract
+và kiểm chứng riêng. Capability mới trên migration branch chưa tự trở thành release.
+
+Trong sandbox, `GameInstaller.InstallOtherServices` tạo một DatasaveResourceWallet
+và inject cùng instance cho các feature. Daily/Missions dùng gateway chứa wallet
+đó và DemoItemDestination; card demo không phải production inventory. Lucky
+Wheel/Progression và Shop IAP vẫn còn đường wallet legacy.
+
+Gọi service Claim cho reward của feature; không grant thêm sau Claim. Gameplay
+cấp currency trực tiếp qua owner khi không có claim transition khác; feature mới
+cần recovery bundle phải persist journal. Mua bằng tiền game dùng TryExchange
+trong cùng wallet owner. Ví dụ và giới hạn từng đường nằm trong hướng dẫn trên.
+
 ## Clone project kèm submodule
 
 Khi clone project lần đầu, dùng:
@@ -103,7 +124,7 @@ Các package dùng author **Dreamy Game Studio**. Mở README của từng packa
 
 Package lucky-wheel đã được checkout và khai báo trong Unity manifest; sample Lucky Wheel Feature được dùng trong Foundation demo.
 
-## Foundation feature demos
+## Demo các tính năng Foundation
 
 Chạy `Assets/_Project/Scenes/BootstrapScene.unity`, hoàn thành hoặc Skip tutorial tự động, rồi mở demo từ Foundation panel:
 
@@ -128,11 +149,32 @@ Trong sandbox, ch?y `Assets/_Project/Scenes/BootstrapScene.unity`, r?i ch?n **Fe
 
 D?ng `Dreamy/Sandbox/Build Feedback Samples and Integration` ?? n?i l?i asset demo ???c ch? ??nh. Xem [README Feedback](LocalPackages/com.dreamy.feedback/README.md), [plan](docs/plans/DREAMY_FEEDBACK_PACKAGE_PLAN.md) v? [validation](LocalPackages/com.dreamy.feedback/VALIDATION.md). Feedback 0.2.0 hi?n l? local, ch?a commit/push/tag.
 
-## Sample release 0.1.1
+## Sample phiên bản 0.1.1
 
-Package revisions: Core **1.2.0**, Economy **0.2.1**, Shop **0.1.2**, Feedback **0.4.0**.
-Portable sample sources are in each package's `Samples~` directory. Existing
-`Assets/Samples` version folders represent earlier imports and retain their paths
-and GUIDs; fresh Package Manager imports use the released package version.
-Core Demo now includes host-injected pooling. Shop Feature requires Feedback for
-its reward-presentation integration; the Shop runtime package keeps Feedback optional.
+Các package ở mốc này: Core **1.2.0**, Economy **0.2.1**, Shop **0.1.2**, Feedback **0.4.0**.
+Source sample nằm trong Samples~ của từng package. Các thư mục version dưới
+Assets/Samples là bản import trước đây, giữ nguyên đường dẫn/GUID; import mới
+qua Package Manager dùng version package đã phát hành. Core Demo nhận pool từ
+host. Sample Shop Feature cần Feedback cho phần hiển thị thưởng; Shop runtime
+vẫn giữ Feedback là tuỳ chọn.
+
+## Phiên bản source 0.2.0 — ngày 15/10/2026
+
+| Package | Phiên bản mới |
+| --- | --- |
+| Feature | 0.2.0 |
+| Economy | 0.3.0 |
+| Daily Reward | 0.2.0 |
+| Missions | 0.2.0 |
+| Progression | 0.1.2 |
+| Shop | 0.1.3 |
+
+README các package và sample trong đợt này dùng tiếng Việt. Thư mục sample đã
+import giữ nguyên path/version lịch sử và GUID; import mới dùng version package.
+Feature runtime không còn dependency DataConfig. Daily/Missions tham chiếu rõ
+Feature/Economy mới; save owner và strict receipt giữ nguyên trách nhiệm đã mô tả.
+
+Đây là phát hành source cho phạm vi sandbox offline casual/puzzle đã kiểm chứng,
+không chứng nhận mọi consumer, player/device, production inventory hoặc IAP SDK.
+Chi tiết thay đổi/giới hạn nằm trong RELEASE_NOTES.md của từng package và evidence
+ngày 15/10; các gate PB/Template/rollout chưa chạy vẫn được giữ rõ trong plan.

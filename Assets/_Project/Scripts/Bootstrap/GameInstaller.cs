@@ -139,7 +139,7 @@ namespace Dreamy.Template
             });
             ServiceLocator.TryGet<IRewardClock>(out var rewardClock);
             DailyRewardFeatureInstaller.Install(presenterFactory, config.GetTable<DailyRewardScheduleConfig>(),
-                datasave, rewardGateway, rewardClock ?? new SystemRewardClock());
+                datasave, rewardGateway, rewardClock ?? new SystemRewardClock(), feedbackHost: feedbackInstance);
             MissionFeatureInstaller.Install(presenterFactory, config.GetTable<MissionCatalogConfig>(), datasave, rewardGateway);
             ServiceLocator.TryGet<ILuckyWheelClock>(out var wheelClock);
             ServiceLocator.TryGet<ILuckyWheelRandom>(out var wheelRandom);

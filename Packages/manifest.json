@@ -31,10 +31,12 @@
     "com.dreamy.feature.settings": "file:../LocalPackages/com.dreamy.feature.settings",
     "com.dreamy.feature.shop": "file:../LocalPackages/com.dreamy.feature.shop",
     "com.dreamy.feature.tutorial": "file:../LocalPackages/com.dreamy.feature.tutorial",
+    "com.dreamy.feedback": "file:../LocalPackages/com.dreamy.feedback",
     "com.dreamy.ui": "file:../LocalPackages/com.dreamy.ui",
     "com.unity.addressables": "2.9.1",
     "com.unity.ai.navigation": "2.0.13",
     "com.unity.collab-proxy": "2.12.4",
+    "com.unity.device-simulator.devices": "1.0.1",
     "com.unity.feature.2d": "2.0.2",
     "com.unity.ide.rider": "3.0.40",
     "com.unity.ide.visualstudio": "2.0.27",
@@ -79,7 +81,6 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",
-    "com.dreamy.feedback": "file:../LocalPackages/com.dreamy.feedback"
+    "com.unity.modules.xr": "1.0.0"
   }
 }

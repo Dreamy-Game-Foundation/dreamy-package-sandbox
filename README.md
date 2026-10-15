@@ -178,3 +178,18 @@ Feature/Economy mới; save owner và strict receipt giữ nguyên trách nhiệ
 không chứng nhận mọi consumer, player/device, production inventory hoặc IAP SDK.
 Chi tiết thay đổi/giới hạn nằm trong RELEASE_NOTES.md của từng package và evidence
 ngày 15/10; các gate PB/Template/rollout chưa chạy vẫn được giữ rõ trong plan.
+
+## Đồng bộ thứ tự version package — 15/10/2026
+
+Các package dưới đây tiếp nối tag SemVer cao nhất đã phát hành bằng một bản patch. Các tag lịch sử được giữ nguyên.
+
+| Package | Version trước | Tag mới |
+| --- | --- | --- |
+| `com.dreamy.assets` | 0.1.1 | `v1.0.1` |
+| `com.dreamy.audio` | 0.1.0 | `v1.0.3` |
+| `com.dreamy.dataconfig` | 0.2.1 | `v1.0.1` |
+| `com.dreamy.datasave` | 0.2.0 | `v1.0.1` |
+| `com.dreamy.editor-tools` | 0.2.2 | `v1.0.1` |
+| `com.dreamy.ui` | 0.2.0 | `v1.0.5` |
+
+Các package còn lại giữ nguyên version và tag. Dependency trong các package đó tiếp tục là version tối thiểu đã công bố; sandbox chọn package local qua `Packages/manifest.json`. UI sử dụng Assets 1.0.1. Các thư mục đã import trong `Assets/Samples` giữ nguyên version lịch sử và GUID; import Audio mới sử dụng thư mục 1.0.3.

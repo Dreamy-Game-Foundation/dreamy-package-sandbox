@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+- Correct package release ordering above historical v1.x tags: Assets 1.0.1, Audio 1.0.3, DataConfig 1.0.1, Datasave 1.0.1, Editor Tools 1.0.1, and UI 1.0.5.
+- Synchronize package metadata, release notes, Audio sample import documentation, and the UI Assets dependency/lock entry.
+- Preserve existing tags, unchanged package versions/minimum dependencies, and imported sample snapshots.
+
 ## [0.1.1] - 2026-10-12
 
 - Synchronize portable Economy resource-holder and Shop feedback prefabs with sandbox authoring.

@@ -2,6 +2,7 @@
   "name": "Dreamy.Template.Editor",
   "references": [
     "Dreamy.Template.Runtime",
+    "Unity.Addressables.Editor",
     "Dreamy.UI.Runtime",
     "Dreamy.Missions.Runtime",
     "Dreamy.Datasave.Runtime",

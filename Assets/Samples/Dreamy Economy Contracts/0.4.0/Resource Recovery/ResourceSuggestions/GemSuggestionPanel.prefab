@@ -8,6 +8,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 351145703330120414, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 808115267482897747, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808115267482897747, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808115267482897747, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808115267482897747, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808115267482897747, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808115267482897747, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808115267482897747, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 808115267482897747, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2387867948318169181, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
       propertyPath: m_text
       value: GEMS
@@ -24,9 +60,53 @@ PrefabInstance:
       propertyPath: m_fontColor.r
       value: 0.5529412
       objectReference: {fileID: 0}
+    - target: {fileID: 2387867948318169181, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290462605
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387867948318169181, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248469013058375533, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     - target: {fileID: 5634892357137846273, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
       propertyPath: m_Name
       value: GemSuggestionPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362164392617990427, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362164392617990427, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362164392617990427, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362164392617990427, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362164392617990427, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362164392617990427, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362164392617990427, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362164392617990427, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7285641636578767883, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
       propertyPath: m_Pivot.x
@@ -114,12 +194,132 @@ PrefabInstance:
 
         gems to continue'
       objectReference: {fileID: 0}
+    - target: {fileID: 8213247792142614382, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279768598
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213247792142614382, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751570135965926194, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751570135965926194, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751570135965926194, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751570135965926194, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751570135965926194, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751570135965926194, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751570135965926194, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751570135965926194, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8809573322141077816, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     - target: {fileID: 9012283003856375189, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
       propertyPath: resourceId
       value: currency.gem
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9012283003856375189, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5634892357137846273, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7301879701627761717}
   m_SourcePrefab: {fileID: 100100000, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+--- !u!225 &351089840339295479 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 567004444117764866, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+  m_PrefabInstance: {fileID: 216513425299806197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &894892368571730456 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1110838856710888941, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+  m_PrefabInstance: {fileID: 216513425299806197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562540849161226228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128efe0eeaf344c8bf9cb209502f5d57, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.UI.Runtime::Dreamy.UI.UITweenPlayer
+--- !u!114 &4176153927609243800 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4248469013058375533, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+  m_PrefabInstance: {fileID: 216513425299806197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &5562540849161226228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5634892357137846273, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+  m_PrefabInstance: {fileID: 216513425299806197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7301879701627761717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562540849161226228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f4bff7b1a3887bd8528f6e5ae892da, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Economy.Recovery.Unity::Dreamy.Economy.UI.GemSuggestionPanel
+  canvasGroup: {fileID: 351089840339295479}
+  tweenPlayer: {fileID: 894892368571730456}
+  resourceId: currency.gem
+  acquireButton: {fileID: 8135639711028582217}
+  laterButton: {fileID: 5600930689567822744}
+  balanceText: {fileID: 4176153927609243800}
+--- !u!114 &5600930689567822744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5673327277524321389, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+  m_PrefabInstance: {fileID: 216513425299806197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &8135639711028582217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8351552664331518140, guid: 7c1eaa6b30706c2fda8d56c036ed4fe6, type: 3}
+  m_PrefabInstance: {fileID: 216513425299806197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button

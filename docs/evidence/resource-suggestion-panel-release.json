@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-16",
+  "sandbox_version": "0.2.1",
+  "package": {
+    "name": "com.dreamy.feature.economy",
+    "version": "0.6.0",
+    "tag": "v0.6.0",
+    "commit": "f5b28684292d98b7751debf1011c55846abf0707"
+  },
+  "validation": {
+    "managed_tests": 90,
+    "editmode_recovery_tests": 17,
+    "playmode_addressable_popup_tests": 5,
+    "unity_console_errors": 0,
+    "prefab_migration": "Unity MCP; preserved GUIDs, layout, SafeArea and bindings"
+  },
+  "integration": "GameInstaller composes typed address routes without suggestion prefab references or a NotEnoughResourcesPanel fallback. Unmapped shortages return PresentationUnavailable.",
+  "publication": "Local commits and annotated tags only; no push."
+}

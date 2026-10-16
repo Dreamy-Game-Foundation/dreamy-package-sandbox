@@ -168,10 +168,6 @@ MonoBehaviour:
   storeListingUrl: 
   feedbackPrefab: {fileID: 5536796177033714545, guid: a7f671062f0d0f3059523477459320fd, type: 3}
   feedbackCamera: {fileID: 0}
-  notEnoughResourcesPrefab: {fileID: 3938810556226195340, guid: c6116119d6ed7ee57bb8373dbf9d8934, type: 3}
-  resourceSuggestionPrefabs:
-  - {fileID: 6533479404043606647, guid: b7e0764be18d1f8ce9ef42d319948843, type: 3}
-  - {fileID: 2468372794214089325, guid: 2aaaeb2eea9201d8794f96cf461bc2c9, type: 3}
   insufficientResourcePresentations: []
 --- !u!4 &793437582
 Transform:

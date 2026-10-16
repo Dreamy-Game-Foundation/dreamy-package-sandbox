@@ -1,0 +1,5 @@
+HOST CUSTOMIZATION retained: /run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Assets/Samples/Dreamy Connectivity/0.1.0/Connectivity Feature/Prefabs/ConnectionRetryPanel.prefab
+PASS UI dependencies exist only inside Samples~
+PASS package boundaries, sample declarations and asset metadata (imported customizations reported above)
+PASS C# compile UNITY_ANDROID (native linking/device behavior not tested)
+PASS C# compile UNITY_IOS (native linking/device behavior not tested)

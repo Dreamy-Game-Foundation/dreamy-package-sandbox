@@ -1,0 +1,63 @@
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.06
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.83
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.79
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.73
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.82
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.12
+PASS Shop billing adapter forwards request and cancellation token
+PASS Shop billing adapter preserves backend transaction ID
+PASS Shop cancelled billing never calls backend or creates a transaction
+PASS Shop billing adapter requires a real host callback
+PASS Shop factory binds one presenter per opening
+PASS Shop completed purchase renders and unlocks buttons
+PASS Shop closed view has no purchase subscription
+PASS Shop cached reopen creates one fresh presenter
+PASS Shop close intent unbinds before closing view
+PASS Shop pending purchase blocks repeated clicks
+PASS Shop late purchase completion never updates a disposed view
+PASS Shop old purchase cannot update a reopened presenter generation
+PASS Shop reopened presenter can purchase again
+PASS Shop feedback wait holds purchase lock and blocks repeated clicks
+PASS Shop feedback completion renders result and releases purchase lock
+PASS Shop old feedback completion cannot update a reopened presenter
+PASS Shop failed purchase skips feedback and releases purchase lock
+PASS Shop model Purchase_DelegatesSingleAtomicExchange
+PASS Shop model Purchase_UnknownOffer_DoesNotExchange
+PASS Shop model PurchaseAsync_IapOffer_GrantsEachRewardUsingTheStoreTransaction
+PASS Shop model PurchaseAsync_MissingIapGateway_DoesNotGrantRewards
+PASS Shop model PurchaseOnce_RejectsRepurchaseAndReadsOwnershipOnNewModel
+PASS Shop model Consumable_AllowsRepeatedPurchases
+PASS Shop model PendingPurchase_BlocksDuplicateAndAllowsRetryAfterCancellation
+PASS Shop model PurchaseOnce_RequiresOwnershipReward
+PASS 88 managed NUnit tests
+PASS managed transaction, migration, recovery and navigation checks. Unity asset/device gates are separate.

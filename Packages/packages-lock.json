@@ -52,6 +52,16 @@
         "com.unity.modules.particlesystem": "1.0.0"
       }
     },
+    "com.dreamy.connectivity": {
+      "version": "file:../LocalPackages/com.dreamy.connectivity",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.cysharp.unitask": "2.5.10",
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.androidjni": "1.0.0"
+      }
+    },
     "com.dreamy.core": {
       "version": "file:../LocalPackages/com.dreamy.core",
       "depth": 0,
@@ -110,8 +120,11 @@
       "source": "local",
       "dependencies": {
         "com.dreamy.core": "1.1.2",
-        "com.dreamy.ui": "0.2.0",
-        "com.dreamy.datasave": "0.2.0"
+        "com.dreamy.ui": "1.0.5",
+        "com.dreamy.datasave": "0.2.0",
+        "com.cysharp.unitask": "2.5.10",
+        "com.unity.ugui": "2.0.0",
+        "com.dreamy.feature": "0.2.0"
       }
     },
     "com.dreamy.feature.lucky-wheel": {
@@ -151,7 +164,7 @@
         "com.dreamy.core": "1.1.2",
         "com.dreamy.dataconfig": "0.2.0",
         "com.dreamy.datasave": "0.2.0",
-        "com.dreamy.feature.economy": "0.3.0",
+        "com.dreamy.feature.economy": "0.5.0",
         "com.unity.nuget.newtonsoft-json": "3.2.1",
         "com.dreamy.ui": "0.2.0",
         "com.cysharp.unitask": "2.5.10"
@@ -176,10 +189,11 @@
       "dependencies": {
         "com.dreamy.core": "1.1.2",
         "com.dreamy.dataconfig": "0.2.0",
-        "com.dreamy.feature.economy": "0.3.0",
+        "com.dreamy.feature.economy": "0.5.0",
         "com.dreamy.feature": "0.2.0",
-        "com.dreamy.ui": "0.2.0",
-        "com.cysharp.unitask": "2.5.10"
+        "com.dreamy.ui": "1.0.5",
+        "com.cysharp.unitask": "2.5.10",
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
       }
     },
     "com.dreamy.feature.tutorial": {

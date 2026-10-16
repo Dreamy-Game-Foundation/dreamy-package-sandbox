@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-16",
+  "unity": "6000.4.12f1",
+  "managed_test_cases": 64,
+  "shop_presenter_regressions": "passed",
+  "unity_editmode": {
+    "assemblies": [
+      "Dreamy.Shop.Runtime.Tests",
+      "Dreamy.Shop.Recovery.Tests"
+    ],
+    "passed": 15,
+    "failed": 0
+  },
+  "prefab": {
+    "asset": "Assets/Samples/Dreamy Economy Contracts/0.4.0/Resource Recovery/NotEnoughResourcesPanel.prefab",
+    "type": "Variant",
+    "base": "Packages/com.dreamy.feature/Runtime/Prefabs/BaseFeaturePanel.prefab",
+    "guid_preserved": true,
+    "script_local_id_preserved": true,
+    "missing_required_references": 0,
+    "safe_area_count": 1,
+    "root_canvas": false
+  },
+  "actual_shop_playmode": {
+    "offer": "gem-to-coin-exchange",
+    "required": 15,
+    "available": 1,
+    "missing": 14,
+    "popup_layer": "Popup",
+    "cancel_balance_unchanged": true,
+    "acquisition_top_panel": "ShopPanel",
+    "acquisition_shop_instances": 1,
+    "acquisition_enabled_purchase_buttons": 17,
+    "navigation_does_not_grant": true
+  },
+  "standalone_sample_playmode": {
+    "shared_panel_manager": true,
+    "cached_instance_reused": true,
+    "normal_back_hides_popup": true,
+    "console_errors": 0
+  },
+  "preserved_existing_consumer_edits": [
+    "DeficitRow.prefab",
+    "ShopPanel.prefab",
+    "Connectivity"
+  ],
+  "scene_restored": "Assets/Samples/Dreamy Connectivity/0.1.0/Connectivity Diagnostics/Scenes/ConnectivityDiagnostics.unity"
+}

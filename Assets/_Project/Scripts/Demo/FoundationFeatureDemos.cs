@@ -66,7 +66,11 @@ namespace Dreamy.Template.Demo
             var service = ServiceLocator.Get<IMissionService>();
             panel.GetComponent<MissionDemoControls>().Configure(service);
         });
-        private void OpenProgression() => Open(progressionPrefab, panel => panel.Configure(ServiceLocator.Get<IProgressionService>()));
+        private void OpenProgression() => Open(progressionPrefab, panel =>
+        {
+            panel.Configure(ServiceLocator.Get<IProgressionService>());
+            panel.GetComponent<FoundationProgressionPanelControls>().Configure(ServiceLocator.Get<FoundationProgressionRewards>());
+        });
         private void OpenLuckyWheel() => Open(luckyWheelPrefab, panel => { });
         private void OpenFeedback()
         {

@@ -11,7 +11,8 @@
     "Dreamy.Feature.Missions.Integration.Runtime",
     "Dreamy.Feature.LuckyWheel.Integration.Runtime",
     "Unity.TextMeshPro",
-    "UnityEngine.UI"
+    "UnityEngine.UI",
+    "Dreamy.Economy.Recovery.Unity"
   ],
   "includePlatforms": [
     "Editor"

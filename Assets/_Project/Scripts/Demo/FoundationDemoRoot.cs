@@ -1,4 +1,6 @@
 using System;
+using System.Threading;
+using Dreamy.Connectivity;
 using Cysharp.Threading.Tasks;
 using Dreamy.Core;
 using Dreamy.DataConfig;
@@ -28,11 +30,12 @@ namespace Dreamy.Template.Demo
         public ShopPanel CurrentShop => shopPanel;
         public bool IsTransitioning => isTransitioning;
         public bool HasFeatureDemo => (GetComponent<FoundationFeatureDemos>()?.IsBusy ?? false)
-            || dailyRewardOpening || (dailyRewardPanel != null && dailyRewardPanel.gameObject.activeInHierarchy)
+            || onlineRewardSession != null || dailyRewardOpening || (dailyRewardPanel != null && dailyRewardPanel.gameObject.activeInHierarchy)
             || IsOpen<SettingsPanel>() || IsOpen<RateUsPanel>();
         private static bool IsOpen<T>() where T : UIPanel => PanelManager.HasInstance
             && PanelManager.Instance.TryGet<T>(out var view) && view.gameObject.activeInHierarchy;
         private bool dailyRewardOpening;
+        private CancellationTokenSource onlineRewardSession;
         public void OpenShopForTutorial() => OpenShop();
         public event Action<FoundationDemoPanel> DemoPanelReady;
         public event Action ScoreAdded;
@@ -132,6 +135,7 @@ namespace Dreamy.Template.Demo
 
         private void BindPanel(FoundationDemoPanel target)
         {
+            target.OnlineRewardRequested += ClaimOnlineReward;
             target.AddScoreRequested += AddScore;
             target.DamageRequested += Damage;
             target.HealRequested += Heal;
@@ -147,6 +151,8 @@ namespace Dreamy.Template.Demo
         private void UnbindPanel(FoundationDemoPanel target)
         {
             if (ReferenceEquals(target, null)) return;
+            onlineRewardSession?.Cancel();
+            target.OnlineRewardRequested -= ClaimOnlineReward;
             target.AddScoreRequested -= AddScore;
             target.DamageRequested -= Damage;
             target.HealRequested -= Heal;
@@ -157,6 +163,56 @@ namespace Dreamy.Template.Demo
             target.OpenSettingsRequested -= OpenSettings;
             target.OpenRateUsRequested -= OpenRateUs;
             target.Destroyed -= OnPanelDestroyed;
+        }
+
+        private void ClaimOnlineReward()
+        {
+            if (isTransitioning || isShuttingDown || HasFeatureDemo || panel == null) return;
+            ClaimOnlineRewardAsync(panel).Forget();
+        }
+
+        private async UniTaskVoid ClaimOnlineRewardAsync(FoundationDemoPanel target)
+        {
+            var connectivity = FindFirstObjectByType<ConnectivityRoot>();
+            if (connectivity == null || connectivity.Feature == null)
+            {
+                target.SetStatus("Online Reward unavailable: ConnectivityRoot is not ready.");
+                return;
+            }
+
+            using var session = CancellationTokenSource.CreateLinkedTokenSource(
+                this.GetCancellationTokenOnDestroy(), target.GetCancellationTokenOnDestroy());
+            onlineRewardSession = session;
+            target.SetOnlineRewardBusy(true);
+            target.SetStatus("Online Reward: checking connection...");
+            try
+            {
+                // Demo reward: only dispatch after the shared connectivity preflight succeeds.
+                // Never automatically repeat a dispatched reward mutation.
+                var result = await connectivity.ExecuteWhenConnectedAsync("foundation.online-reward",
+                    token =>
+                    {
+                        token.ThrowIfCancellationRequested();
+                        score += 10;
+                        RefreshPanel();
+                        return UniTask.FromResult(ConnectedOperationResult.Success());
+                    }, new ConnectivityRetryPolicy(), session.Token);
+                if (target != null && !isShuttingDown)
+                    target.SetStatus(result.Status == ConnectivityActionStatus.Succeeded
+                        ? "Online Reward received: +10 Score (demo)"
+                        : $"Online Reward: {result.Status}. No reward granted.");
+            }
+            catch (OperationCanceledException) { }
+            catch (Exception exception)
+            {
+                if (target != null) target.SetStatus("Online Reward failed. See Console.");
+                Debug.LogException(exception, this);
+            }
+            finally
+            {
+                onlineRewardSession = null;
+                if (target != null) target.SetOnlineRewardBusy(false);
+            }
         }
 
         private void AddScore()

@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-15",
+  "unity": "6000.4.12f1",
+  "economy_source_version": "0.4.0",
+  "shop_source_version": "0.2.0",
+  "published": false,
+  "managed_test_cases": 63,
+  "shop_presenter_regressions": "passed",
+  "unity_editmode": {
+    "total": 127,
+    "passed": 127,
+    "failed": 0,
+    "skipped": 0,
+    "duration_seconds": 5.4312707
+  },
+  "playmode_demo": "single/multi deficit, zero balance, Coin tab, return without purchase, live grant, manual confirmation passed",
+  "upm_sample_import": "Resource Recovery fresh import in existing sandbox passed; prefab missing scripts=0, row references and safe area verified",
+  "player_managed_compile": {
+    "target": "StandaloneLinux64",
+    "assembly_count": 95,
+    "editor_assemblies": 0,
+    "full_native_build": false
+  },
+  "unverified": [
+    "independent clean consumer project",
+    "mobile full build/device",
+    "real billing/backend"
+  ],
+  "settings_harness": "blocked by pre-existing SettingsPlatformGateway.cs source/import mismatch"
+}

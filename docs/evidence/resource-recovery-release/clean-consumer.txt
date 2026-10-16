@@ -1,0 +1,2 @@
+Clean UI consumer fixture: /tmp/dreamy-resource-consumer-6izfjan0
+PASS clean UI consumer compile, imported source samples and prefab bindings

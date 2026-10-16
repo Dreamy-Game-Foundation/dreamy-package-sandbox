@@ -1,0 +1,16 @@
+{
+  "name": "Dreamy.Connectivity.UI",
+  "rootNamespace": "Dreamy.Connectivity",
+  "references": [
+    "Dreamy.Connectivity.Runtime",
+    "Dreamy.Connectivity.Unity",
+    "Dreamy.UI.Runtime",
+    "Dreamy.UI.Presentation",
+    "UniTask",
+    "Unity.TextMeshPro",
+    "UnityEngine.UI",
+    "Dreamy.Core.Runtime"
+  ],
+  "includePlatforms": [],
+  "noEngineReferences": false
+}

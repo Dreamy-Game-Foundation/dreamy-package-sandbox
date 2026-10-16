@@ -30,6 +30,7 @@ namespace Dreamy.Template.Demo
         [SerializeField] private Button openTutorialButton;
         [SerializeField] private Button openEconomyButton;
         [SerializeField] private Button openFeedbackButton;
+        [SerializeField] private Button onlineRewardButton;
 
         public override bool CanBack => true;
         public Button TutorialAddScoreButton => addScoreButton;
@@ -50,10 +51,12 @@ namespace Dreamy.Template.Demo
         public event Action OpenTutorialRequested;
         public event Action OpenEconomyRequested;
         public event Action OpenFeedbackRequested;
+        public event Action OnlineRewardRequested;
         public event Action Destroyed;
 
         private void OnEnable()
         {
+            if (onlineRewardButton != null) onlineRewardButton.onClick.AddListener(OnOnlineReward);
             if (openFeedbackButton != null) openFeedbackButton.onClick.AddListener(OnOpenFeedback);
             if (openMissionsButton != null) openMissionsButton.onClick.AddListener(OnOpenMissions);
             if (openProgressionButton != null) openProgressionButton.onClick.AddListener(OnOpenProgression);
@@ -73,6 +76,7 @@ namespace Dreamy.Template.Demo
 
         protected override void OnDisable()
         {
+            if (onlineRewardButton != null) onlineRewardButton.onClick.RemoveListener(OnOnlineReward);
             if (openFeedbackButton != null) openFeedbackButton.onClick.RemoveListener(OnOpenFeedback);
             if (openMissionsButton != null) openMissionsButton.onClick.RemoveListener(OnOpenMissions);
             if (openProgressionButton != null) openProgressionButton.onClick.RemoveListener(OnOpenProgression);
@@ -90,6 +94,13 @@ namespace Dreamy.Template.Demo
             if (openRateUsButton != null) openRateUsButton.onClick.RemoveListener(OnOpenRateUs);
             base.OnDisable();
         }
+
+        public void SetOnlineRewardBusy(bool busy)
+        {
+            if (onlineRewardButton != null) onlineRewardButton.interactable = !busy;
+        }
+
+        private void OnOnlineReward() => OnlineRewardRequested?.Invoke();
 
         public void SetStatus(string value) => statusText.text = value;
         public void SetScore(int value) => scoreText.text = $"Score: {value}";

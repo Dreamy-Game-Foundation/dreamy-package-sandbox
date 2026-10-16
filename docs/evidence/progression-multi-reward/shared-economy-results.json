@@ -1,0 +1,100 @@
+{
+  "tests": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":[{\"assembly\":\"Dreamy.Economy.Runtime.Tests\",\"passed\":67,\"failed\":0,\"failures\":[]},{\"assembly\":\"Dreamy.Progression.Runtime.Tests\",\"passed\":60,\"failed\":0,\"failures\":[]}],\"compiler\":\"codedom\"}}"
+      }
+    ],
+    "structuredContent": {
+      "success": true,
+      "message": "Code executed successfully.",
+      "data": {
+        "result": [
+          {
+            "assembly": "Dreamy.Economy.Runtime.Tests",
+            "passed": 67,
+            "failed": 0,
+            "failures": []
+          },
+          {
+            "assembly": "Dreamy.Progression.Runtime.Tests",
+            "passed": 60,
+            "failed": 0,
+            "failures": []
+          }
+        ],
+        "compiler": "codedom"
+      }
+    },
+    "isError": false
+  },
+  "foundation_migration_smoke": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"status\":\"passed\",\"xp\":900,\"coins\":750,\"cards\":16,\"chests\":7,\"cosmetic\":1,\"inventoryImports\":1,\"saveVersion\":4,\"files\":[\"economy.json\",\"economy.json.bak\",\"foundation-progression-multi-reward-v2.json\",\"foundation-progression-multi-reward-v2.json.bak\",\"foundation-progression-v2-card.json\"],\"folder\":\"/tmp/foundation-unified-migration-44032b0d27994ad291499d0c97df44a8\"},\"compiler\":\"codedom\"}}"
+      }
+    ],
+    "structuredContent": {
+      "success": true,
+      "message": "Code executed successfully.",
+      "data": {
+        "result": {
+          "status": "passed",
+          "xp": 900,
+          "coins": 750,
+          "cards": 16,
+          "chests": 7,
+          "cosmetic": 1,
+          "inventoryImports": 1,
+          "saveVersion": 4,
+          "files": [
+            "economy.json",
+            "economy.json.bak",
+            "foundation-progression-multi-reward-v2.json",
+            "foundation-progression-multi-reward-v2.json.bak",
+            "foundation-progression-v2-card.json"
+          ],
+          "folder": "/tmp/foundation-unified-migration-44032b0d27994ad291499d0c97df44a8"
+        },
+        "compiler": "codedom"
+      }
+    },
+    "isError": false
+  },
+  "sandbox_migration": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"bootstrap\":\"Ready\",\"scene\":\"Assets/_Project/Scenes/MainScene.unity\",\"xp\":3100,\"coin\":2400,\"gem\":111,\"card\":44,\"chest\":22,\"cosmetic\":1,\"dailyItem\":1,\"saveVersion\":4,\"importMarkers\":[\"foundation-daily-items-v1\",\"foundation-inventory-v2/card\",\"foundation-inventory-v2/chest\",\"foundation-inventory-v2/cosmetic\"]},\"compiler\":\"codedom\"}}"
+      }
+    ],
+    "structuredContent": {
+      "success": true,
+      "message": "Code executed successfully.",
+      "data": {
+        "result": {
+          "bootstrap": "Ready",
+          "scene": "Assets/_Project/Scenes/MainScene.unity",
+          "xp": 3100,
+          "coin": 2400,
+          "gem": 111,
+          "card": 44,
+          "chest": 22,
+          "cosmetic": 1,
+          "dailyItem": 1,
+          "saveVersion": 4,
+          "importMarkers": [
+            "foundation-daily-items-v1",
+            "foundation-inventory-v2/card",
+            "foundation-inventory-v2/chest",
+            "foundation-inventory-v2/cosmetic"
+          ]
+        },
+        "compiler": "codedom"
+      }
+    },
+    "isError": false
+  }
+}

@@ -1,4 +1,6 @@
 using System;
+using System.Threading;
+using Dreamy.Economy;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Dreamy.Core;
@@ -118,6 +120,26 @@ namespace Dreamy.Template.Demo
             }
 
             spawnedItems.Clear();
+        }
+
+        public async UniTask<bool> FocusResourceAsync(ResourceId resource, CancellationToken token)
+        {
+            token.ThrowIfCancellationRequested();
+            Transform holder = resource == new ResourceId("currency.gem") ? gemOfferHolder
+                : resource == new ResourceId("currency.coin") ? goldOfferHolder : null;
+            if (holder == null || holder.childCount == 0) return false;
+            await UniTask.Yield(PlayerLoopTiming.LastPostLateUpdate, token);
+            token.ThrowIfCancellationRequested();
+            Canvas.ForceUpdateCanvases();
+            var scroll = holder.GetComponentInParent<ScrollRect>();
+            if (scroll != null && scroll.content != null && scroll.viewport != null)
+            {
+                var bounds = RectTransformUtility.CalculateRelativeRectTransformBounds(scroll.content, holder);
+                float height = scroll.content.rect.height - scroll.viewport.rect.height;
+                if (height > 0) scroll.verticalNormalizedPosition = 1f - Mathf.Clamp01(-bounds.center.y / height);
+            }
+            holder.GetComponentInChildren<Selectable>()?.Select();
+            return true;
         }
 
         private void OnClose() => Hide().Forget();

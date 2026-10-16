@@ -1,0 +1,69 @@
+{
+  "progression_editor": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"passed\":60,\"failed\":0,\"failures\":[],\"mode\":\"Direct NUnit invocation inside Unity Editor; includes disk fixture\"},\"compiler\":\"codedom\"}}"
+      }
+    ],
+    "structuredContent": {
+      "success": true,
+      "message": "Code executed successfully.",
+      "data": {
+        "result": {
+          "passed": 60,
+          "failed": 0,
+          "failures": [],
+          "mode": "Direct NUnit invocation inside Unity Editor; includes disk fixture"
+        },
+        "compiler": "codedom"
+      }
+    },
+    "isError": false
+  },
+  "economy_editor": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"passed\":30,\"failed\":0,\"failures\":[],\"mode\":\"Direct NUnit invocation inside Unity Editor\"},\"compiler\":\"codedom\"}}"
+      }
+    ],
+    "structuredContent": {
+      "success": true,
+      "message": "Code executed successfully.",
+      "data": {
+        "result": {
+          "passed": 30,
+          "failed": 0,
+          "failures": [],
+          "mode": "Direct NUnit invocation inside Unity Editor"
+        },
+        "compiler": "codedom"
+      }
+    },
+    "isError": false
+  },
+  "sample_smoke": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"status\":\"passed\",\"sample\":\"Unity imported sample: multi-level, Card failure, ack failure, completion failure, all-owner reload, disk recovery\",\"finalXP\":500,\"finalCoins\":400,\"directory\":\"/tmp/dreamy-progression-sample-validation\"},\"compiler\":\"codedom\"}}"
+      }
+    ],
+    "structuredContent": {
+      "success": true,
+      "message": "Code executed successfully.",
+      "data": {
+        "result": {
+          "status": "passed",
+          "sample": "Unity imported sample: multi-level, Card failure, ack failure, completion failure, all-owner reload, disk recovery",
+          "finalXP": 500,
+          "finalCoins": 400,
+          "directory": "/tmp/dreamy-progression-sample-validation"
+        },
+        "compiler": "codedom"
+      }
+    },
+    "isError": false
+  }
+}

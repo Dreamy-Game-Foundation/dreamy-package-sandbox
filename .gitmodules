@@ -49,3 +49,6 @@
 [submodule "LocalPackages/com.dreamy.feedback"]
 	path = LocalPackages/com.dreamy.feedback
 	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.feedback.git
+[submodule "LocalPackages/com.dreamy.connectivity"]
+	path = LocalPackages/com.dreamy.connectivity
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.connectivity.git

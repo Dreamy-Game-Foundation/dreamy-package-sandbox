@@ -1,0 +1,26 @@
+[
+  {
+    "package": "com.dreamy.feature.economy",
+    "version": "0.5.0",
+    "tag": "v0.5.0",
+    "commit": "f9821c1f35d64a2f9b2b062c7eccae8a61d6a55c"
+  },
+  {
+    "package": "com.dreamy.feature.shop",
+    "version": "0.2.0",
+    "tag": "v0.2.0",
+    "commit": "28fb105c839505ebc31a2c195a1f4fbe9b635f85"
+  },
+  {
+    "package": "com.dreamy.feature.progression",
+    "version": "0.2.1",
+    "tag": "v0.2.1",
+    "commit": "c49961d8a94af999635ff40be74a047a8c39a5ad"
+  },
+  {
+    "package": "com.dreamy.connectivity",
+    "version": "0.1.0",
+    "tag": "v0.1.0",
+    "commit": "225519bd2da680ebf8929435330645c9943e6dd9"
+  }
+]

@@ -10,7 +10,8 @@
     "com.dreamy.feature.progression",
     "com.dreamy.feature.shop",
     "com.dreamy.feature.tutorial",
-    "com.dreamy.feedback"
+    "com.dreamy.feedback",
+    "com.dreamy.connectivity"
   ],
   "dependencies": {
     "com.coplaydev.unity-mcp": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#main",
@@ -81,6 +82,7 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
+    "com.unity.modules.xr": "1.0.0",
+    "com.dreamy.connectivity": "file:../LocalPackages/com.dreamy.connectivity"
   }
 }

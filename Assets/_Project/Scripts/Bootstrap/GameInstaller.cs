@@ -1,4 +1,6 @@
 using System;
+using Dreamy.Economy.UI;
+using Dreamy.Shop.UI;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
@@ -45,6 +47,19 @@ namespace Dreamy.Template
         [SerializeField] private FeedbackHost feedbackPrefab;
         [SerializeField, Tooltip("Camera used by Feedback camera shake and world-to-UI text. Falls back to MainCamera.")]
         private Camera feedbackCamera;
+        [SerializeField] private NotEnoughResourcesPanel notEnoughResourcesPrefab;
+        [SerializeField, Tooltip("One authored suggestion prefab per resource. Each must have a unique ResourceId.")]
+        private ResourceSuggestionPanel[] resourceSuggestionPrefabs = Array.Empty<ResourceSuggestionPanel>();
+        [SerializeField, Tooltip("Optional game presentations by resource ID. Components must implement IInsufficientResourcesPresentation.")]
+        private InsufficientResourcePresentationBinding[] insufficientResourcePresentations = Array.Empty<InsufficientResourcePresentationBinding>();
+        private IInsufficientResourcesPresentation shopResourceRecovery;
+
+        [Serializable]
+        private sealed class InsufficientResourcePresentationBinding
+        {
+            public string resourceId;
+            public MonoBehaviour presentation;
+        }
         private IShopPurchaseGateway demoShopPurchaseGateway;
         private FeedbackHost feedbackInstance;
         private IDisposable feedbackRegistration;
@@ -53,6 +68,7 @@ namespace Dreamy.Template
         private IDatasaveService datasave;
         private IPoolService poolService;
         private IResourceWallet resourceWallet;
+        public ResourceAcquisitionCoordinator ResourceAcquisition { get; private set; }
         private PanelPresenterFactory presenterFactory;
         private readonly List<PresenterViewHost> viewHosts = new();
         private bool ownsSettingsService;
@@ -107,9 +123,46 @@ namespace Dreamy.Template
             presenterFactory = new PanelPresenterFactory();
             InstallShopPurchaseGateway();
             ServiceLocator.TryGet<IShopPurchaseGateway>(out var purchases);
-            ShopFeatureInstaller.Install(presenterFactory,
-                ServiceLocator.Get<IDataConfigService>().GetTable<ShopCatalogConfig>(), resourceWallet,
-                purchases, (IResourceBalanceProvider)resourceWallet, feedbackInstance);
+            var shopCatalog = ServiceLocator.Get<IDataConfigService>().GetTable<ShopCatalogConfig>();
+            var destinations = new ShopResourceDestinationMap(new Dictionary<ResourceId, string>
+            {
+                [new ResourceId("currency.coin")] = "currency",
+                [new ResourceId("currency.gem")] = "currency"
+            });
+            var navigator = new ShopPanelResourceNavigator(async token =>
+            {
+                token.ThrowIfCancellationRequested();
+                if (!PanelManager.Instance.TryGet<ShopPanel>(out var panel)) return null;
+                await panel.Show();
+                token.ThrowIfCancellationRequested();
+                return panel;
+            });
+            var shopAcquisition = new ResourceAcquisitionCoordinator(new ShopResourceAcquisitionGateway(
+                shopCatalog, destinations, navigator, (IResourceBalanceProvider)resourceWallet));
+            var defaultRecovery = new ResourceRecoveryPanelPresentation(
+                (IResourceBalanceSource)resourceWallet, shopAcquisition, notEnoughResourcesPrefab);
+            var recoveryRoutes = new Dictionary<ResourceId, IInsufficientResourcesPresentation>();
+            foreach (var prefab in resourceSuggestionPrefabs)
+            {
+                if (prefab == null) throw new InvalidOperationException("Missing resource suggestion prefab.");
+                if (recoveryRoutes.ContainsKey(prefab.ResourceId))
+                    throw new InvalidOperationException($"Duplicate resource suggestion: {prefab.ResourceId}.");
+                recoveryRoutes.Add(prefab.ResourceId, new ResourceSuggestionPanelPresentation(
+                    prefab, (IResourceBalanceSource)resourceWallet, shopAcquisition));
+            }
+            foreach (var binding in insufficientResourcePresentations)
+            {
+                if (binding == null || !ResourceId.TryParse(binding.resourceId, out var id)
+                    || binding.presentation == null || binding.presentation is not IInsufficientResourcesPresentation presentation)
+                    throw new InvalidOperationException("Each insufficient resource route needs a valid resource ID and a component implementing IInsufficientResourcesPresentation.");
+                if (recoveryRoutes.ContainsKey(id))
+                    throw new InvalidOperationException($"Duplicate insufficient resource presentation: {id}.");
+                recoveryRoutes.Add(id, presentation);
+            }
+            shopResourceRecovery = new ResourceRecoveryPresentationRouter(
+                (IResourceBalanceProvider)resourceWallet, recoveryRoutes, defaultRecovery);
+            ShopFeatureInstaller.Install(presenterFactory, shopCatalog, resourceWallet,
+                purchases, (IResourceBalanceProvider)resourceWallet, feedbackInstance, RecoverShopResourcesAsync);
 
             ownsSettingsService = !ServiceLocator.TryGet<ISettingsService>(out var settings);
             if (ownsSettingsService)
@@ -135,7 +188,7 @@ namespace Dreamy.Template
             var rewardGateway = new RewardDeliveryGateway(new IRewardDestination[]
             {
                 (IRewardDestination)resourceWallet,
-                new DemoItemDestination(datasave)
+                ((DatasaveResourceWallet)resourceWallet).CreateRewardDestination("item")
             });
             ServiceLocator.TryGet<IRewardClock>(out var rewardClock);
             DailyRewardFeatureInstaller.Install(presenterFactory, config.GetTable<DailyRewardScheduleConfig>(),
@@ -145,7 +198,12 @@ namespace Dreamy.Template
             ServiceLocator.TryGet<ILuckyWheelRandom>(out var wheelRandom);
             LuckyWheelFeatureInstaller.Install(presenterFactory, config.GetTable<LuckyWheelConfig>(), datasave,
                 resourceWallet, wheelClock ?? new SystemLuckyWheelClock(), wheelRandom ?? new SystemLuckyWheelRandom());
-            ProgressionFeatureInstaller.Install(presenterFactory, config.GetTable<ProgressionCatalogConfig>(), datasave, resourceWallet);
+            var progressionDemo = new FoundationProgressionRewards(
+                config.GetTable<ProgressionCatalogConfig>(), datasave, (DatasaveResourceWallet)resourceWallet);
+            ServiceLocator.Register<FoundationProgressionRewards>(progressionDemo);
+            ServiceLocator.Register<IProgressionService>(progressionDemo.Model);
+            ServiceLocator.Register<IProgressionRewardService>(progressionDemo.Model);
+            ProgressionFeatureInstaller.Install(presenterFactory, progressionDemo.Model);
             TutorialFeatureInstaller.Install(presenterFactory, config.GetTable<TutorialCatalogConfig>(), datasave,
                 view => view.GetComponent<TutorialTargetRegistry>(), "foundation-tutorials");
             AttachPanelPresenters();
@@ -245,13 +303,30 @@ namespace Dreamy.Template
             poolService = null;
         }
 
+        private async UniTask RecoverShopResourcesAsync(ShopPurchaseResult result, CancellationToken token)
+        {
+            if (result.Offer == null || result.Status != ShopPurchaseStatus.InsufficientResources) return;
+            await shopResourceRecovery.ShowAsync(new[] { result.Offer.Cost }, "shop:" + result.Offer.Id, token);
+        }
+
         private void InstallOtherServices()
         {
             resourceWallet = new DatasaveResourceWallet(
                 datasave,
-                initialBalances: new[] { new ResourceAmount(new ResourceId("currency.coin"), 100) });
+                initialBalances: new[] { new ResourceAmount(new ResourceId("currency.coin"), 100) },
+                rewardDefinitions: FoundationProgressionRewards.RewardDefinitions);
+            FoundationProgressionRewards.ImportLegacyInventories(datasave, (DatasaveResourceWallet)resourceWallet);
             ServiceLocator.Register<IResourceWallet>(resourceWallet);
             ServiceLocator.Register<IResourceBalanceProvider>((IResourceBalanceProvider)resourceWallet);
+            ResourceAcquisition = new ResourceAcquisitionCoordinator(new Demo.CustomShopResourceAcquisitionGateway(async token =>
+            {
+                using var lifetime = CancellationTokenSource.CreateLinkedTokenSource(token, this.GetCancellationTokenOnDestroy());
+                var panel = await PanelManager.Instance.Create<Demo.UIShopPanel>(Address.ShopPanel);
+                lifetime.Token.ThrowIfCancellationRequested();
+                await panel.Show();
+                lifetime.Token.ThrowIfCancellationRequested();
+                return panel;
+            }, this.GetCancellationTokenOnDestroy()));
             InstallEntitlementEffects((IResourceBalanceSource)resourceWallet);
         }
 
@@ -362,6 +437,7 @@ namespace Dreamy.Template
             foreach (EntitlementEffectBinding binding in entitlementBindings) binding.Dispose();
             entitlementBindings.Clear();
             ReleaseFeedbackAndPool();
+            ResourceAcquisition = null;
             ServiceLocator.Unregister<IResourceWallet>();
             ServiceLocator.Unregister<IResourceBalanceProvider>();
             ServiceLocator.Unregister<IAudioService>();
@@ -371,6 +447,8 @@ namespace Dreamy.Template
             ServiceLocator.Unregister<IMissionService>();
             ServiceLocator.Unregister<ILuckyWheelService>();
             ServiceLocator.Unregister<IProgressionService>();
+            ServiceLocator.Unregister<IProgressionRewardService>();
+            ServiceLocator.Unregister<FoundationProgressionRewards>();
             ServiceLocator.Unregister<ITutorialService>();
         }
     }

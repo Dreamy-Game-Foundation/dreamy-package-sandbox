@@ -38,7 +38,13 @@
     "Dreamy.Feedback.Runtime",
     "Dreamy.Feedback.Contracts",
     "Dreamy.Feedback.Integration.Core",
-    "Dreamy.Feedback.Sample.Runtime"
+    "Dreamy.Feedback.Sample.Runtime",
+    "Dreamy.Economy.UI.Integration",
+    "Dreamy.Economy.Recovery.Unity",
+    "Dreamy.Shop.UI.Integration",
+    "Dreamy.Connectivity.Runtime",
+    "Dreamy.Connectivity.Feature",
+    "Dreamy.Connectivity.UI"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

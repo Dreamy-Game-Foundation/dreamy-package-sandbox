@@ -107,7 +107,7 @@
         "com.dreamy.dataconfig": "0.2.0",
         "com.dreamy.datasave": "0.2.0",
         "com.dreamy.audio": "0.1.0",
-        "com.dreamy.feature.economy": "0.3.1",
+        "com.dreamy.feature.economy": "0.7.0",
         "com.dreamy.feature": "0.2.0",
         "com.dreamy.ui": "0.2.0",
         "com.cysharp.unitask": "2.5.10",
@@ -152,8 +152,9 @@
         "com.dreamy.feature": "0.2.0",
         "com.dreamy.dataconfig": "0.2.0",
         "com.dreamy.datasave": "0.2.0",
-        "com.dreamy.feature.economy": "0.3.0",
-        "com.unity.nuget.newtonsoft-json": "3.2.1"
+        "com.dreamy.feature.economy": "0.7.0",
+        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.cysharp.unitask": "2.5.10"
       }
     },
     "com.dreamy.feature.progression": {

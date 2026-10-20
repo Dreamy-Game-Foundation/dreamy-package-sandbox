@@ -1,0 +1,40 @@
+{
+  "doubleClick": {
+    "beforeClaim": 200,
+    "afterDoubleClick": 300,
+    "afterNotice": 300
+  },
+  "silent": {
+    "before": 300,
+    "afterSilent": 400,
+    "panelVisible": false
+  },
+  "fault": {
+    "afterFailedFinalSave": 500,
+    "reason": [
+      "PersistenceFailed",
+      "Next final claim commit will fail; reload and resume without a duplicate grant."
+    ]
+  },
+  "recovery": {
+    "afterRecovery": 500,
+    "activePanel": true,
+    "hierarchy": [
+      "Layer Screen",
+      "Layer Popup",
+      "Layer Overlay",
+      "Background",
+      "Demo Safe Area"
+    ],
+    "panelParent": "Layer Popup",
+    "status": [
+      "Rewards",
+      "CONTINUE",
+      "Coins",
+      "100",
+      "Hammer booster",
+      "1",
+      "Rewards received. You can continue."
+    ]
+  }
+}

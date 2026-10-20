@@ -1,0 +1,52 @@
+{
+  "editMode": {
+    "jobId": "096a3f86aa0a478ba3d761cd8ee15cfc",
+    "mode": "EditMode",
+    "total": 177,
+    "passed": 177,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 0.7590137,
+    "resultState": "Passed"
+  },
+  "playMode": {
+    "jobId": "35a95375322e406789e99a41fbbe009d",
+    "mode": "PlayMode",
+    "total": 105,
+    "passed": 105,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 1.779327,
+    "resultState": "Passed",
+    "capture": "Completed MCP result observed before subsequent domain reloads."
+  },
+  "linuxBuild": {
+    "jobId": "build-9295e805fb",
+    "result": "succeeded",
+    "platform": "StandaloneLinux64",
+    "outputPath": "/tmp/dreamy-reward-player/RewardDemo.x86_64",
+    "startedAt": "2026-10-20T08:43:15.01752Z",
+    "completedAt": "2026-10-20T08:45:06.473159Z",
+    "durationSeconds": 111.455639,
+    "totalSizeMB": 187.51,
+    "errors": 0,
+    "warnings": 30,
+    "capture": "Completed manage_build MCP result; job cache was cleared by later script domain reload."
+  },
+  "realPanelLifecycle": {
+    "cycles": 100,
+    "rows": 2,
+    "listenersAfterClose": 0
+  },
+  "baselineConsole": {
+    "errors": 0,
+    "warnings": 4,
+    "warningCategory": "pre-existing missing hidden package folders/meta"
+  },
+  "finalState": {
+    "scene": "Assets/_Project/Scenes/MainScene.unity",
+    "sceneDirty": false,
+    "playFromBootstrapRestored": true,
+    "temporaryGameViewSizesRemoved": 5
+  }
+}

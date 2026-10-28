@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-28",
+  "unity": "6000.4.12f1",
+  "shopVersion": "0.3.0",
+  "economyRequirement": "0.8.0",
+  "before": {
+    "jobId": "acf4a063b87647fdb98ac8642c8e05d0",
+    "test": "ShopPrefabCommitsWalletThenUpdatesHolderAfterRealIconFly",
+    "result": "Failed: expected 100 while icons flying, actual 1.1K"
+  },
+  "compile": "Passed via Unity MCP refresh/compile and executed test assemblies",
+  "playMode": {
+    "jobId": "775e029ab1ec4305ac20169bb141fc52",
+    "passed": 3,
+    "failed": 0,
+    "tests": [
+      "ShopPrefabCommitsWalletThenUpdatesHolderAfterRealIconFly",
+      "ShopHideHookStopsFlightAndReleasesWhileGameObjectRemainsActive",
+      "ShopPresenterDisposeStopsFlightAndReleasesRewardHolder"
+    ]
+  },
+  "editMode": {
+    "jobId": "1dad5e274e6c45f294d30db33559f210",
+    "assemblies": [
+      "Dreamy.Shop.Runtime.Tests",
+      "Dreamy.Shop.Recovery.Tests"
+    ],
+    "passed": 21,
+    "failed": 0
+  },
+  "consoleErrors": 0,
+  "static": [
+    "git diff --check passed",
+    "source/imported ShopPanel identical",
+    "ShopPanel serialized fields unchanged",
+    "Shop Runtime and Economy UI Runtime have no Editor assembly references"
+  ],
+  "notRun": [
+    "Player/mobile builds",
+    "Device validation",
+    "Full-project game smoke",
+    "Daily/Missions presentation migration"
+  ],
+  "sha256": {
+    "LocalPackages/com.dreamy.feature.shop/Runtime/Presentation/ShopPresenter.cs": "4e61f815a673f2c9177b7c4d156ddd54764e60756d198a2aac572fa271268f8a",
+    "LocalPackages/com.dreamy.feature.shop/Runtime/Contracts/IShopPurchasePresentation.cs": "414b270071885a7a2a69e2cd37ee8060e1c0e36959345b128f835137d894d467",
+    "LocalPackages/com.dreamy.feature.shop/Samples~/Shop Feature/ShopPanel.cs": "bcaa7d44db07d80de87aed423c2da4e28e2af94679cfbb7fd26796df75157ff5",
+    "LocalPackages/com.dreamy.feature.shop/Tests/Runtime/ShopPurchasePresentationTests.cs": "384e25cd1972da1cf1c826d232bfa1d0f73eba38aabdfd261ac09819e50ab483",
+    "LocalPackages/com.dreamy.feature.shop/package.json": "912b98944588f6169dfd6f7c054b9797c51aa36a9e3497d008416d7164ad8f8f",
+    "Assets/Samples/Dreamy Shop/0.1.1/Shop Feature/ShopPanel.cs": "bcaa7d44db07d80de87aed423c2da4e28e2af94679cfbb7fd26796df75157ff5",
+    "Assets/_Project/Tests/FoundationFeedbackTests.cs": "dea952d3e9c33d482521ecb98d98988d07f1f55e1cc4569b3e7895474a0bfbbb"
+  }
+}

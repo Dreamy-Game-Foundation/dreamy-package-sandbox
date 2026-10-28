@@ -98,7 +98,11 @@ namespace Dreamy.Template.Tests
             }
         }
 
-        [UnityTest] public IEnumerator ShopPrefabCommitsWalletThenUpdatesHolderAfterRealIconFly()
+        [UnityTest] public IEnumerator ShopPrefabCommitsWalletThenUpdatesHolderAfterRealIconFly() => ShopPresentationFixture(0);
+        [UnityTest] public IEnumerator ShopHideHookStopsFlightAndReleasesWhileGameObjectRemainsActive() => ShopPresentationFixture(1);
+        [UnityTest] public IEnumerator ShopPresenterDisposeStopsFlightAndReleasesRewardHolder() => ShopPresentationFixture(2);
+
+        private IEnumerator ShopPresentationFixture(int cleanup)
         {
 #if UNITY_EDITOR
             var canvas = new GameObject("ShopFeedbackCanvas", typeof(Canvas));
@@ -123,6 +127,14 @@ namespace Dreamy.Template.Tests
                 var text = (TMPro.TMP_Text)typeof(Dreamy.Economy.UI.ResourceUIHolder).GetField("amountText", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(coinHolder);
                 var gemHolder = viewRoot.GetComponentsInChildren<Dreamy.Economy.UI.ResourceUIHolder>().Single(h => h.ResourceId.Value == "currency.gem");
                 var gemText = (TMPro.TMP_Text)typeof(Dreamy.Economy.UI.ResourceUIHolder).GetField("amountText", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(gemHolder);
+                // A separate Home holder tracks the same wallet and must keep auto refreshing.
+                var homeRoot = new GameObject("IndependentHomeHolder", typeof(RectTransform), typeof(TMPro.TextMeshProUGUI));
+                homeRoot.transform.SetParent(canvas.transform, false);
+                var homeText = homeRoot.GetComponent<TMPro.TMP_Text>();
+                var homeHolder = homeRoot.AddComponent<Dreamy.Economy.UI.ResourceUIHolder>();
+                Set(homeHolder, "amountText", homeText);
+                homeHolder.SetResource("currency.coin");
+                homeHolder.Bind(wallet);
                 panel.BindFeedbackHost(rig.GetComponent<FeedbackHost>());
                 presenter = new Dreamy.Shop.ShopPresenter(new Dreamy.Shop.ShopModel(catalog, wallet), panel, panel.PresentPurchaseAsync);
                 presenter.Show(); Canvas.ForceUpdateCanvases();
@@ -130,12 +142,26 @@ namespace Dreamy.Template.Tests
                 Assert.That(wallet.GetBalance(new ResourceId("currency.coin")), Is.EqualTo(1100));
                 Assert.That(text.text, Is.EqualTo("100"), "Reward HUD waits for IconFly completion.");
                 Assert.That(gemText.text, Is.EqualTo("85"), "Cost HUD updates while IconFly is still running.");
+                Assert.That(homeText.text, Is.EqualTo("1.1K"), "Shop hold must not freeze Home.");
                 var player = viewRoot.GetComponent<FeedbackPlayer>();
                 Assert.That(player.LastHandle.IsRunning, Is.True, "The wired prefab must play an actual IconFly.");
+                if (cleanup == 1)
+                {
+                    // Exercise the pre-hide hook without disabling the holder/GameObject.
+                    var hiding = (Action)typeof(UIPanel).GetField("OnPreHide", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(panel);
+                    hiding.Invoke();
+                    Assert.That(viewRoot.activeInHierarchy, Is.True);
+                    Assert.That(text.text, Is.EqualTo("1.1K"), "Close releases immediately, before async completion.");
+                }
+                else if (cleanup == 2)
+                {
+                    presenter.Dispose();
+                    Assert.That(text.text, Is.EqualTo("1.1K"));
+                }
                 float deadline = Time.realtimeSinceStartup + 8;
                 while (player.LastHandle.IsRunning && Time.realtimeSinceStartup < deadline) yield return null;
                 yield return null;
-                Assert.That(player.LastHandle.Status, Is.EqualTo(FeedbackStatus.Completed));
+                Assert.That(player.LastHandle.Status, Is.EqualTo(cleanup == 0 ? FeedbackStatus.Completed : FeedbackStatus.Stopped));
                 Assert.That(text.text, Is.EqualTo("1.1K"));
                 Assert.That(wallet.GetBalance(new ResourceId("currency.gem")), Is.EqualTo(85));
             }

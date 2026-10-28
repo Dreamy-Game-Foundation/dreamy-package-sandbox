@@ -168,7 +168,6 @@ MonoBehaviour:
   storeListingUrl: 
   feedbackPrefab: {fileID: 5536796177033714545, guid: a7f671062f0d0f3059523477459320fd, type: 3}
   feedbackCamera: {fileID: 0}
-  insufficientResourcePresentations: []
 --- !u!4 &793437582
 Transform:
   m_ObjectHideFlags: 0

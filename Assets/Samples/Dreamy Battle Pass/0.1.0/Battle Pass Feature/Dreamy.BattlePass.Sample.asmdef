@@ -1,0 +1,26 @@
+{
+  "name": "Dreamy.BattlePass.Sample",
+  "references": [
+    "Dreamy.BattlePass.Runtime",
+    "Dreamy.BattlePass.RewardPresentation",
+    "Dreamy.Core.Runtime",
+    "Dreamy.DataConfig.Runtime",
+    "Dreamy.Datasave.Runtime",
+    "Dreamy.Feature.Runtime",
+    "Dreamy.Economy.Runtime",
+    "Dreamy.Economy.UI.Runtime",
+    "Dreamy.Economy.UI.Integration",
+    "Dreamy.UI.Runtime",
+    "Dreamy.UI.Presentation",
+    "Dreamy.Shop.Runtime",
+    "UniTask",
+    "Unity.TextMeshPro",
+    "UnityEngine.UI"
+  ],
+  "includePlatforms": [],
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "Newtonsoft.Json.dll"
+  ],
+  "autoReferenced": true
+}

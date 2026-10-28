@@ -1,0 +1,20 @@
+{
+  "catalogId": "battle-pass-demo-shop-v1",
+  "offers": [
+    {
+      "id": "battle-pass-premium",
+      "titleKey": "battlepass.premium",
+      "purchaseKind": "VirtualCurrency",
+      "purchaseOnce": true,
+      "ownershipResourceId": "entitlement.battlepass.puzzle-demo-2026-01.premium",
+      "costResourceId": "currency.gem",
+      "costAmount": 200,
+      "rewards": [
+        {
+          "resourceId": "entitlement.battlepass.puzzle-demo-2026-01.premium",
+          "amount": 1
+        }
+      ]
+    }
+  ]
+}

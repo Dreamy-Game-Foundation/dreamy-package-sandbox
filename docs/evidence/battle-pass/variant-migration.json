@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-20",
+  "unity": "6000.4.12f1",
+  "authoring": "Unity MCP, sandbox instance 5f78127b991a2b92",
+  "variants": 7,
+  "panels": 3,
+  "items": 4,
+  "guidsPreserved": 7,
+  "requiredBindings": "pass",
+  "missingScripts": 0,
+  "inheritedPanelSafeAreaCount": 1,
+  "lifecycle": {
+    "cycles": 100,
+    "rows": 10,
+    "viewListenersOpen": 1,
+    "viewListenersClosed": 0,
+    "serviceListenersBaseline": 1,
+    "inheritedTweenCount": 61
+  },
+  "backPath": "PanelManager.TryCloseCurrentPanel invoked; Premium popup hides, pass restores; Reward panel closes via same path",
+  "claim": {
+    "previewCoins": 150,
+    "doubleClaimCoins": 300,
+    "rewardAmount": 150,
+    "slotStatus": "AlreadyApplied",
+    "invisibleCanvasGroupsAfterShow": 0
+  },
+  "consumer": "/tmp/dreamy-battlepass-consumer-17v2tejw",
+  "consumerExitCode": 0,
+  "consumerPassed": true,
+  "consoleErrors": 0,
+  "nativePlayerBuildAfterMigration": "not rerun; prior Linux build evidence applies to pre-migration assets"
+}

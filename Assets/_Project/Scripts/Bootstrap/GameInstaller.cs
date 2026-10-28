@@ -47,16 +47,8 @@ namespace Dreamy.Template
         [SerializeField] private FeedbackHost feedbackPrefab;
         [SerializeField, Tooltip("Camera used by Feedback camera shake and world-to-UI text. Falls back to MainCamera.")]
         private Camera feedbackCamera;
-        [SerializeField, Tooltip("Optional game presentations by resource ID. Components must implement IInsufficientResourcesPresentation.")]
-        private InsufficientResourcePresentationBinding[] insufficientResourcePresentations = Array.Empty<InsufficientResourcePresentationBinding>();
         private IInsufficientResourcesPresentation shopResourceRecovery;
 
-        [Serializable]
-        private sealed class InsufficientResourcePresentationBinding
-        {
-            public string resourceId;
-            public MonoBehaviour presentation;
-        }
         private IShopPurchaseGateway demoShopPurchaseGateway;
         private FeedbackHost feedbackInstance;
         private IDisposable feedbackRegistration;
@@ -143,15 +135,6 @@ namespace Dreamy.Template
             recoveryRoutes.Add(new ResourceId("currency.gem"), ResourceSuggestionInstaller.Install<GemSuggestionPanel>(
                 presenterFactory, new ResourceId("currency.gem"), Address.GemSuggestionPanel,
                 (IResourceBalanceSource)resourceWallet, shopAcquisition));
-            foreach (var binding in insufficientResourcePresentations)
-            {
-                if (binding == null || !ResourceId.TryParse(binding.resourceId, out var id)
-                    || binding.presentation == null || binding.presentation is not IInsufficientResourcesPresentation presentation)
-                    throw new InvalidOperationException("Each insufficient resource route needs a valid resource ID and a component implementing IInsufficientResourcesPresentation.");
-                if (recoveryRoutes.ContainsKey(id))
-                    throw new InvalidOperationException($"Duplicate insufficient resource presentation: {id}.");
-                recoveryRoutes.Add(id, presentation);
-            }
             shopResourceRecovery = new ResourceRecoveryPresentationRouter(
                 (IResourceBalanceProvider)resourceWallet, recoveryRoutes);
             ShopFeatureInstaller.Install(presenterFactory, shopCatalog, resourceWallet,

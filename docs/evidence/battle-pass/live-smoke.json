@@ -1,0 +1,54 @@
+{
+  "scope": "DreamyBattlePassDemo only",
+  "steps": [
+    {
+      "action": "Enroll + Complete Run + duplicate replay",
+      "xp": 20,
+      "coins": 0,
+      "tierRows": 10
+    },
+    {
+      "action": "Open Confirm",
+      "coins": 0,
+      "panelVisible": true
+    },
+    {
+      "action": "Claim button twice",
+      "coins": 50,
+      "slotStatus": "AlreadyApplied"
+    },
+    {
+      "action": "Shop premium button twice",
+      "gemsBefore": 500,
+      "gemsAfter": 300,
+      "premium": true
+    },
+    {
+      "action": "Disable confirmation; claim first premium slot",
+      "gems": 305,
+      "rewardPanelVisible": false
+    },
+    {
+      "action": "Complete another run; Claim All",
+      "xp": 40,
+      "coins": 150,
+      "hammers": 1,
+      "pending": false
+    },
+    {
+      "action": "Reload every durable owner",
+      "xp": 40,
+      "coins": 150,
+      "gems": 305,
+      "hammers": 1,
+      "premium": true
+    }
+  ],
+  "screenshots": {
+    "panel.png": "1170x2532 final progress bar,40XP",
+    "panel-landscape.png": "1920x1080,40XP",
+    "panel-800x600.png": "800x600,40XP",
+    "confirm.png": "1170x2532 final Confirm, tier3 preview after a new run, coins unchanged150"
+  },
+  "safeArea": "SafeArea components; no physical notched-device test"
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "prefab": "BattlePassPanel",
+    "guid": "60c9719fef80e0aa28d5fb3ea1cb27f7",
+    "source": "Packages/com.dreamy.feature/Runtime/Prefabs/BaseFeaturePanel.prefab",
+    "variant": true
+  },
+  {
+    "prefab": "BattlePassPremiumPopup",
+    "guid": "791cbcf7696026e5b91202639e925ec1",
+    "source": "Packages/com.dreamy.feature/Runtime/Prefabs/BaseFeaturePanel.prefab",
+    "variant": true
+  },
+  {
+    "prefab": "RewardPanel",
+    "guid": "eb3c53b44551b769eaad2418bb7121b6",
+    "source": "Packages/com.dreamy.feature/Runtime/Prefabs/BaseFeaturePanel.prefab",
+    "variant": true
+  },
+  {
+    "prefab": "BattlePassRewardItem",
+    "guid": "fb1dbda1f7afeae2ba6497fe8e7e3c7c",
+    "source": "Packages/com.dreamy.feature/Runtime/Prefabs/BaseFeatureItem.prefab",
+    "variant": true
+  },
+  {
+    "prefab": "BattlePassTierItem",
+    "guid": "bfad0dd3814ee69e6be2cfa08f8cc948",
+    "source": "Packages/com.dreamy.feature/Runtime/Prefabs/BaseFeatureItem.prefab",
+    "variant": true
+  },
+  {
+    "prefab": "RewardItem",
+    "guid": "51904683c3920bc6fb313ae57703ebac",
+    "source": "Packages/com.dreamy.feature/Runtime/Prefabs/BaseFeatureItem.prefab",
+    "variant": true
+  },
+  {
+    "prefab": "BattlePassEntry",
+    "guid": "709bee1750d4dbfb189129f0812c43ff",
+    "source": "Packages/com.dreamy.feature/Runtime/Prefabs/BaseFeatureItem.prefab",
+    "variant": true
+  }
+]

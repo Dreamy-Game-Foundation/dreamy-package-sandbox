@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "seasons": [
+    {
+      "SeasonId": "puzzle-demo",
+      "OccurrenceId": "puzzle-demo-2026-01",
+      "Revision": "1",
+      "Title": "PUZZLE EXPEDITION",
+      "PremiumEntitlementId": "entitlement.battlepass.puzzle-demo-2026-01.premium",
+      "DurationDays": 14,
+      "GraceHours": 48,
+      "Tiers": [
+        {
+          "Id": "TIER 1",
+          "RequiredXp": 20,
+          "Free": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.coin",
+                "Amount": 50
+              }
+            ]
+          },
+          "Premium": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.gem",
+                "Amount": 5
+              }
+            ]
+          }
+        },
+        {
+          "Id": "TIER 2",
+          "RequiredXp": 40,
+          "Free": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.coin",
+                "Amount": 100
+              }
+            ]
+          },
+          "Premium": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "item",
+                "TargetId": "item.booster.hammer",
+                "Amount": 1
+              }
+            ]
+          }
+        },
+        {
+          "Id": "TIER 3",
+          "RequiredXp": 60,
+          "Free": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.coin",
+                "Amount": 150
+              }
+            ]
+          },
+          "Premium": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.gem",
+                "Amount": 15
+              }
+            ]
+          }
+        },
+        {
+          "Id": "TIER 4",
+          "RequiredXp": 80,
+          "Free": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.coin",
+                "Amount": 200
+              }
+            ]
+          },
+          "Premium": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "item",
+                "TargetId": "item.booster.hammer",
+                "Amount": 1
+              }
+            ]
+          }
+        },
+        {
+          "Id": "TIER 5",
+          "RequiredXp": 100,
+          "Free": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.coin",
+                "Amount": 250
+              }
+            ]
+          },
+          "Premium": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.gem",
+                "Amount": 25
+              }
+            ]
+          }
+        },
+        {
+          "Id": "TIER 6",
+          "RequiredXp": 120,
+          "Free": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.coin",
+                "Amount": 300
+              }
+            ]
+          },
+          "Premium": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "item",
+                "TargetId": "item.booster.hammer",
+                "Amount": 1
+              }
+            ]
+          }
+        },
+        {
+          "Id": "TIER 7",
+          "RequiredXp": 140,
+          "Free": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.coin",
+                "Amount": 350
+              }
+            ]
+          },
+          "Premium": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.gem",
+                "Amount": 35
+              }
+            ]
+          }
+        },
+        {
+          "Id": "TIER 8",
+          "RequiredXp": 160,
+          "Free": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.coin",
+                "Amount": 400
+              }
+            ]
+          },
+          "Premium": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "item",
+                "TargetId": "item.booster.hammer",
+                "Amount": 1
+              }
+            ]
+          }
+        },
+        {
+          "Id": "TIER 9",
+          "RequiredXp": 180,
+          "Free": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.coin",
+                "Amount": 450
+              }
+            ]
+          },
+          "Premium": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.gem",
+                "Amount": 45
+              }
+            ]
+          }
+        },
+        {
+          "Id": "TIER 10",
+          "RequiredXp": 200,
+          "Free": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "currency",
+                "TargetId": "currency.coin",
+                "Amount": 500
+              }
+            ]
+          },
+          "Premium": {
+            "Entries": [
+              {
+                "Id": "reward",
+                "KindId": "item",
+                "TargetId": "item.booster.hammer",
+                "Amount": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -98,6 +98,20 @@
       "source": "local",
       "dependencies": {}
     },
+    "com.dreamy.feature.battle-pass": {
+      "version": "file:../LocalPackages/com.dreamy.feature.battle-pass",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.dreamy.core": "1.1.2",
+        "com.dreamy.feature": "0.2.0",
+        "com.dreamy.dataconfig": "0.2.0",
+        "com.dreamy.datasave": "0.2.0",
+        "com.dreamy.feature.economy": "0.7.0",
+        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.cysharp.unitask": "2.5.10"
+      }
+    },
     "com.dreamy.feature.daily-reward": {
       "version": "file:../LocalPackages/com.dreamy.feature.daily-reward",
       "depth": 0,

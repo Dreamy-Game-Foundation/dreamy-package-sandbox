@@ -41,6 +41,24 @@ Trạng thái: quy tắc thiết kế cho các phase trong [`plan`](../plans/DRE
 7. Sample wallet trong memory, store gateway giả, consent/rate-us giả phải được đánh dấu demo và không xuất hiện trong đường production. Consumer thay bằng adapter có persistence và giao dịch xác nhận.
 8. Sample UI phải xét portrait/landscape theo game, safe area, nhiều aspect ratio, TMP/font, touch target, back/close và trạng thái loading/error/empty; chỉ yêu cầu các state thuộc contract của feature. Chụp bằng chứng ở Game view sau import.
 
+### 4.1. Kế thừa BaseFeaturePanel khi tạo UI feature
+
+1. **Panel/popup feature chuẩn phải được tạo dưới dạng Prefab Variant của** `Packages/com.dreamy.feature/Runtime/Prefabs/BaseFeaturePanel.prefab` (source local: `LocalPackages/com.dreamy.feature/Runtime/Prefabs/BaseFeaturePanel.prefab`). Áp dụng cho sample và UI production dùng nền Dreamy, bao gồm Battle Pass, Premium popup và RewardPanel. Không dựng lại một root tương đương chỉ để có CanvasGroup, Backdrop, tween và SafeArea riêng.
+2. Đây là **kế thừa prefab**, không phải một class C# `FeaturePanelBase`. Script concrete view vẫn kế thừa `UIPanel`, implement view contract; presenter dùng `FeaturePresenter` và adapter `IPanelPresenter` theo assembly boundary hiện có. Không đưa UnityEngine/UI vào `Dreamy.Feature.Runtime` để tạo base MonoBehaviour cho đủ tên.
+3. Giữ GUID và liên kết source của base. Thêm concrete panel component và nội dung feature dưới container phù hợp sau khi inspect hierarchy thực tế; bind `canvasGroup`/`tweenPlayer` và các field view bằng Editor API. Tái sử dụng SafeArea/Backdrop/transition kế thừa, tránh hai owner SafeArea trên cùng content hoặc hai tween điều khiển cùng target. Override art/layout/transition có chủ đích ở variant; không unpack hoặc copy hierarchy để giả làm kế thừa.
+4. Base chỉ sở hữu cấu trúc hiển thị và cấu hình UI chung. Wallet, claim, save, pricing, service resolution và feature state tiếp tục ở model/presenter/composition root; không thêm logic Battle Pass/reward vào base prefab hoặc Core. Khi nhiều feature dùng RewardPanel, host sở hữu và inject panel dùng chung; không mặc định tạo thêm một panel thưởng production cho mỗi feature.
+5. **Ngoại lệ có lý do cụ thể:** HUD entry, badge, inline widget, list item và overlay chuyên dụng không có cấu trúc panel chuẩn không buộc kế thừa BaseFeaturePanel. Nếu host đã có base panel riêng hoặc cần asset độc lập với package base, ghi base thay thế/lý do trong README hoặc plan, cùng owner SafeArea/transition và dependency thực tế. Không mặc định dùng ngoại lệ cho toàn bộ sample.
+6. Sample builder cho panel và item phải instantiate prefab base và lưu thành variant bằng Unity Editor/PrefabUtility. Nếu base không tồn tại hoặc thiếu dependency/component cần thiết, báo lỗi rõ; không âm thầm chuyển sang dựng panel mới. Khi regenerate variant đã có, giữ `.meta` GUID, source link và các override art được bảo vệ theo contract của builder.
+7. **Gate trước khi bàn giao:** kiểm tra `PrefabUtility.GetPrefabAssetType(...) == PrefabAssetType.Variant`, kiểm tra source prefab chain dẫn về đúng BaseFeaturePanel/BaseFeatureItem theo loại asset (hoặc base thay thế đã document), không Missing Script/Prefab, required serialized references đầy đủ; inspect SafeArea/Backdrop/tween và chạy Show/Hide/Back/reopen. Kiểm source `Samples~` lẫn sample import mới/consumer. C# kế thừa `UIPanel` hoặc test claim pass chưa đủ chứng minh prefab tuân thủ rule này.
+8. Khi phát hiện asset cũ chưa tuân thủ, ghi thành migration task cụ thể; chuyển qua Unity Editor/MCP, bảo toàn GUID, references, prefab overrides và source sample. Evidence behavior/build trước migration vẫn thuộc asset cũ; sau migration phải chạy lại prefab inspection và UI/consumer checks liên quan trước khi nhận là đã đạt gate kế thừa.
+
+### 4.2. Kế thừa BaseFeatureItem cho item view
+
+1. **Item view feature chuẩn phải là Prefab Variant từ** `Packages/com.dreamy.feature/Runtime/Prefabs/BaseFeatureItem.prefab` (source local tương ứng trong `LocalPackages`). Áp dụng cho tier/row, reward slot, reward display item và feature card. Item view không kế thừa panel base.
+2. Tái sử dụng Image, Button, LayoutElement, CanvasGroup, tween và container Icon/Content kế thừa; thêm script view và layout riêng trên variant. Không dựng root tương đương rồi copy hierarchy. Item chỉ hiển thị có thể disable root Button/raycast kế thừa để child button tiếp tục nhận input; thay đổi này phải là override có chủ đích.
+3. HUD/inline widget có cấu trúc khác hoặc host có base item riêng chỉ dùng ngoại lệ khi ghi rõ lý do và base thay thế trong README/plan. Khi HUD entry dùng hình thái feature card, ưu tiên variant từ BaseFeatureItem như sample BattlePassEntry.
+4. Builder, gate source chain/GUID/bindings và migration qua Unity Editor/MCP ở mục4.1 áp dụng tương tự cho item. Kiểm tra cả nested item prefab bên trong tier, item được instantiate lúc runtime và asset trong Samples~ sau export/import mới.
+
 ## 5. Coding convention và Unity serialization
 
 1. Theo style gần file đang sửa: C# PascalCase cho type/method/property, camelCase cho field private, `I` cho interface; một public type chính một file; namespace theo package/feature. Không đổi hàng loạt style khi sửa một bug.
@@ -62,6 +80,7 @@ Trạng thái: quy tắc thiết kế cho các phase trong [`plan`](../plans/DRE
 
 - **Source:** manifest, dependency, asmdef Runtime/Editor, sample declaration, `.meta`, README và changelog thống nhất; commit/tag/lock khớp.
 - **Compile:** Unity Editor compile sạch ở package sandbox và ít nhất một template consumer mới; player build đúng platform mục tiêu.
+- **Prefab inheritance:** panel/popup chuẩn là variant từ BaseFeaturePanel, item view chuẩn là variant từ BaseFeatureItem; base thay thế phải có lý do đã document; kiểm source chain, required bindings, SafeArea và transition theo mục 4.1.
 - **Behavior:** targeted domain tests cho boundary có rủi ro; import sample mới, mở prefab, Play Mode đi qua user flow thật, kiểm save/restart/scene unload/duplicate action; Console không có error.
 - **Release:** có migration nếu public/serialized contract đổi, CI/fixture consumer, artifact log và owner phê duyệt trạng thái maturity. Nếu gate chưa chạy, ghi `chưa xác minh`, không ghi `pass`.
 

@@ -1,0 +1,23 @@
+{
+  "name": "com.dreamy.feature.battle-pass",
+  "version": "0.1.0",
+  "displayName": "Dreamy Battle Pass",
+  "description": "Offline seasonal progression with Free/Premium tracks and recoverable Economy claims.",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.dreamy.core": "1.1.2",
+    "com.dreamy.feature": "0.2.0",
+    "com.dreamy.dataconfig": "0.2.0",
+    "com.dreamy.datasave": "0.2.0",
+    "com.dreamy.feature.economy": "0.7.0",
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.cysharp.unitask": "2.5.10"
+  },
+  "samples": [
+    {
+      "displayName": "Battle Pass Feature",
+      "description": "Persistent offline demo, MVP panel, premium popup and installer. Requires Dreamy UI, TMP Essentials and Shop for virtual premium.",
+      "path": "Samples~/Battle Pass Feature"
+    }
+  ]
+}

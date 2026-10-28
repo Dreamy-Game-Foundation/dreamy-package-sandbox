@@ -1,8 +1,8 @@
 # Dreamy Battle Pass — kế hoạch package cho game offline casual/puzzle
 
-Ngày lập: **2026-10-20**. Trạng thái: **Design / chưa triển khai**. Package đề xuất: `com.dreamy.feature.battle-pass`, namespace domain `Dreamy.BattlePass`, phiên bản đầu dự kiến `0.1.0`.
+Ngày lập: **2026-10-20**. Trạng thái: **0.1.0 candidate đã triển khai; xem checkpoint mục 13**. Package đề xuất: `com.dreamy.feature.battle-pass`, namespace domain `Dreamy.BattlePass`, phiên bản đầu dự kiến `0.1.0`.
 
-Tài liệu này là backlog triển khai theo phase, có output và gate để review. Các checkbox triển khai đều chưa hoàn thành. Việc viết plan không chứng nhận package, sample hay build đã chạy.
+Tài liệu này là backlog triển khai theo phase, có output và gate để review. Các checkbox mục8 giữ nguyên làm backlog thiết kế ban đầu; mục13 ghi trạng thái triển khai và evidence thực tế của candidate. Không suy ra mọi gate release đã hoàn thành.
 
 ## 1. Mục tiêu và phạm vi
 
@@ -618,3 +618,34 @@ Evidence triển khai dự kiến đặt tại `docs/evidence/battle-pass/`: sou
 ## 12. Validation của bước lập kế hoạch
 
 Phạm vi hiện tại chỉ thêm tài liệu này, chưa tạo package, sửa runtime/manifest/scene/prefab hay publish. Kiểm tra tối thiểu cho tài liệu: whitespace và local Markdown links tới source đã tồn tại. Unity tests/player build là các gate triển khai nêu trên, chưa chạy trong bước viết plan.
+
+
+## 13. Checkpoint triển khai 2026-10-20
+
+Reward Presentation đã được checkpoint ở sandbox `e774311` (Economy `1373c1d`, Daily `140f24e`, Missions `6e68566`). Battle Pass candidate hiện nằm tại [package README](../../LocalPackages/com.dreamy.feature.battle-pass/README.md); [evidence](../evidence/battle-pass/README.md) ghi đúng source/checks đã chạy. Các checkbox design ở mục8 được giữ làm release backlog; bảng này phân biệt phần đã code với gate còn lại, không tự đánh dấu toàn bộ package hoàn thiện.
+
+| Phase | Kết quả hiện có | Gate/phần còn lại |
+| --- | --- | --- |
+| P0–P1 | Manifest/lock đã đọc; local package0.1.0, Runtime engine-independent, contracts, ConfigBase validator,10-tier JSON, optional Reward Presentation assembly | Toolkit/OMG/compatibility registry vẫn không tìm thấy; chưa có remote/tag để pin |
+| P2 | Save schema1, detached commits, frozen enrollment snapshot, two time policies, durable UTC high-water, XP cap/receipts, retained archives | Chưa benchmark retention dài hạn; chưa có schema cũ để migrate |
+| P3–P4 | Economy coordinator/journals, Complete là claimed truth, RequiresReload, one pending owner; durable frozen batch/cursor, recovery qua deadline/config removal | Batch API hiện trả kết quả tổng/slot đang dừng; chưa có history UI per-slot cho batch |
+| P5 | Economy premium reader, entitlement unique mỗi occurrence, sample Shop purchaseOnce200gem, gate occurrence/time/pending | Production shortage navigator và IAP/restore SDK không triển khai |
+| P6–P7 | FeaturePresenter + IPanelPresenter adapter; panel/tier/reward/premium/entry/shared reward panel, SafeArea, prefabs/scene do Editor tạo;100cycles và portrait/landscape/compact | Art/localization/feedback theo game; không chứng nhận thiết bị notch thật |
+| P8 | Completion outbox mẫu có persist run/token/ack và replay; HUD/scene teardown | Chưa có sample thứ hai fan-out thực thi cả Missions/Progression; optional resource-acquisition/highlight chưa code |
+| P9 | Explicit installer + RegisterConfig trước initialize, independent persistent sample, Samples~ đúng bytes/GUID, README +6docs, isolated consumer compile/import | Host game cần merge vào composition root/wallet hiện hữu; standalone sample không sửa GameInstaller đang có thay đổi của bạn |
+| P10 |69/69targeted tests (BattlePass23), file-backed failure/restart, real UI, Linux dev build0errors | Android/iOS/IL2CPP/device và save latency/size benchmark chưa chạy |
+| P11 | Changelog candidate, dependency/asmdef/source hash audit và evidence | Chưa tạo repo/submodule remote, commit/tag Battle Pass hoặc publish; chưa có license/release approval của owner |
+
+Các điều chỉnh so với layout dự kiến: concrete UI nằm trong primary sample; Confirm/Notice dùng chung Economy Reward Presentation; không tạo framework/summary domain thứ hai. New package được track local trong sandbox cho tới khi có repository URL thật. Runtime không dependency Shop/Missions/Progression; sample Shop dependency được ghi rõ khi import.
+
+
+### 13.1. Correction: gate kế thừa prefab base
+
+Review sau checkpoint phát hiện primary sample đang tạo panel bằng GameObject mới, chưa tạo variant từ `BaseFeaturePanel.prefab`. Evidence69tests/100cycles/build xác nhận behavior của asset hiện tại, **không xác nhận tuân thủ prefab inheritance**. Áp dụng [rule4.1](../rules/DREAMY_PACKAGE_DESIGN_RULES.md#41-kế-thừa-basefeaturepanel-khi-tạo-ui-feature):
+
+- [x] Chuyển BattlePassPanel, BattlePassPremiumPopup và RewardPanel trong primary sample sang Prefab Variant từ BaseFeaturePanel qua Unity Editor/MCP; sửa builder để regenerate đúng variant và giữ GUID/bindings.
+- [x] Tái sử dụng Backdrop/SafeArea/tween kế thừa; kiểm owner và serialized canvasGroup/tweenPlayer, tránh cấu trúc/tween trùng.
+- [x] BattlePassRewardItem, BattlePassTierItem, RewardItem và BattlePassEntry là variant từ BaseFeatureItem; item hiển thị thuần disable root Button/raycast, không kế thừa panel base.
+- [x] Export về Samples~;7variant/source-chain/bindings/GUID pass,100cycles với tween kế thừa, manager Back khôi phục panel, Confirm/double Claim đúng một lần, consumer mới import/compile pass. Evidence: prefab-variants.json, variant-migration.json và ảnh variant-panel/variant-confirm.
+
+Cập nhật tiếp theo đã chuyển đủ7prefab qua Unity MCP, giữ nguyên7GUID và xác minh đúng source base/bindings; xem prefab-variants.json trong evidence. Consumer import/compile sau migration đã pass. Lifecycle/Back được ghi ở checkpoint migration sau khi kiểm tra thực tế; build Linux cũ vẫn là evidence trước migration.

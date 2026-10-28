@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-20",
+  "unity": "6000.4.12f1",
+  "checkpoint": "e774311",
+  "candidate": "com.dreamy.feature.battle-pass@0.1.0",
+  "editMode": {
+    "job": "d17a9f7c9b4540b8b68c71e7b34a6bbb",
+    "total": 69,
+    "passed": 69,
+    "failed": 0,
+    "skipped": 0,
+    "battlePassCases": 23,
+    "assemblies": [
+      "Dreamy.BattlePass.Editor.Tests",
+      "Dreamy.Economy.Recovery.Editor.Tests",
+      "Dreamy.DailyReward.RewardPresentation.Tests",
+      "Dreamy.Missions.RewardPresentation.Tests",
+      "Dreamy.Shop.Runtime.Tests"
+    ]
+  },
+  "lifecycle": {
+    "cycles": 100,
+    "rows": 10,
+    "claimViewListenersOpen": 1,
+    "claimViewListenersClosed": 0,
+    "serviceListenersClosedBaseline": 1
+  },
+  "consumer": "clean-consumer.json",
+  "notRun": [
+    "Android/IL2CPP build",
+    "iOS build",
+    "physical device runtime",
+    "native Linux player runtime smoke",
+    "multi-season save-size/latency benchmark",
+    "full Missions/Progression gameplay fan-out consumer"
+  ],
+  "editorFinal": {
+    "consoleErrors": 0,
+    "qaCustomGameViewSizesRemaining": 0,
+    "restoredScene": "Assets/Samples/Dreamy Economy Contracts/0.7.0/Reward Presentation/Scenes/RewardPresentationDemo.unity",
+    "playing": false
+  },
+  "prefabMigration": "variant-migration.json",
+  "playerBuildScope": "Prior Linux build before prefab inheritance migration; latest prefab candidate validated by isolated consumer import/compile and live UI, player build not repeated."
+}

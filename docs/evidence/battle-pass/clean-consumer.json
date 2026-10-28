@@ -1,0 +1,8 @@
+{
+  "fixture": "/tmp/dreamy-battlepass-consumer-17v2tejw",
+  "exitCode": 0,
+  "passed": true,
+  "log": "/tmp/dreamy-battlepass-consumer-17v2tejw/validation.log",
+  "playerBuildRequested": false,
+  "playerBuildPassed": false
+}

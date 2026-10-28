@@ -1,0 +1,11 @@
+# Save, claims and recovery
+
+Schema1 is a BattlePassSaveData document: active occurrence, durable UTC high-water and retained season snapshots. Each season stores enrollment/end/deadline, capped XP, event fingerprints, per-slot RewardJournal and optional frozen batch. A completed journal is the only claimed truth; there is no second mutable claimed flag.
+
+A slot request identity encodes save/profile scope, feature, season, occurrence and track+stable tier slot. Its fingerprint includes revision and concrete bundle. Claim: Begin(intent save) → Resolve(validate routes/save bundle) → Deliver(destination effect+receipt; save acknowledgements) → Complete(save Completed). Feature candidates are detached; save precedes publication. Every route is validated before the first destination effect. Original resolved payload is retained for retries.
+
+Any uncertain feature persistence sets RequiresReload and blocks all mutations. Reconstruct every affected owner from durable state, then RecoverPending. Do not clear the flag by reopening UI or reusing a cached save object. Pending journals remain recoverable after the normal claim deadline and before any rollover. Destination persistence/retry uses Economy's own durable receipts; copying or deleting receipts is unsupported.
+
+Claim All first saves the exact ordered eligible slot list, occurrence snapshot, admission time and cursor. The order is tier ascending, Free then Premium. Completing each slot advances its cursor in the same feature save as Completed. Restart resumes this manifest even after the deadline. Premium/XP changes after admission never add slots. Manual Claim cannot interleave with an active batch. One incomplete journal and one batch maximum across the profile.
+
+Validate schema, snapshots, XP bounds, journal request/fingerprint/resolved payload and batch cursor on construction. Unknown or corrupt domain state throws and preserves the file. Do not replace it with a new profile. Datasave controls low-level envelope/backup handling; this package adds no destructive repair or speculative migration. Retain closed occurrences, progress receipts, destination receipts and completed journals indefinitely in v1. Pruning requires a future replay/retention protocol and migration.

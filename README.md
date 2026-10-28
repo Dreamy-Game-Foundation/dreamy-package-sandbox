@@ -106,6 +106,7 @@ Các package dùng author **Dreamy Game Studio**. Mở README của từng packa
 | `com.dreamy.datasave` | [README](LocalPackages/com.dreamy.datasave/README.md) |
 | `com.dreamy.editor-tools` | [README](LocalPackages/com.dreamy.editor-tools/README.md) |
 | `com.dreamy.feature` | [README](LocalPackages/com.dreamy.feature/README.md) |
+| `com.dreamy.feature.battle-pass` | [README](LocalPackages/com.dreamy.feature.battle-pass/README.md) — local `0.1.0` candidate |
 | `com.dreamy.feature.daily-reward` | [README](LocalPackages/com.dreamy.feature.daily-reward/README.md) |
 | `com.dreamy.feature.economy` | [README](LocalPackages/com.dreamy.feature.economy/README.md) |
 | `com.dreamy.feature.missions` | [README](LocalPackages/com.dreamy.feature.missions/README.md) |

@@ -1,0 +1,13 @@
+{
+  "name": "Dreamy.BattlePass.RewardPresentation",
+  "rootNamespace": "Dreamy.BattlePass",
+  "references": [
+    "Dreamy.BattlePass.Runtime",
+    "Dreamy.Economy.Runtime",
+    "Dreamy.Economy.UI.Integration",
+    "UniTask"
+  ],
+  "includePlatforms": [],
+  "autoReferenced": true,
+  "noEngineReferences": true
+}

@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-28",
+  "unity": "6000.4.12f1",
+  "packageVersion": "0.8.0",
+  "transport": "Unity MCP; dreamy-package-sandbox@5f78127b991a2b92",
+  "compile": {
+    "status": "passed",
+    "evidence": "refresh_unity compile=request; no compiler errors; execute_code resolved DeferRefresh; PlayMode and EditMode tests compiled/executed"
+  },
+  "playMode": {
+    "jobId": "b7ae379851434e9292a196d83dbe5aed",
+    "assemblies": [
+      "Dreamy.Economy.UI.PlayMode.Tests"
+    ],
+    "total": 19,
+    "passed": 19,
+    "failed": 0,
+    "skipped": 0
+  },
+  "editMode": {
+    "jobId": "7f0b7510896e4cb99c5d5377b7f31c4b",
+    "assemblies": [
+      "Dreamy.Economy.Runtime.Tests",
+      "Dreamy.Economy.Recovery.Editor.Tests"
+    ],
+    "total": 101,
+    "passed": 101,
+    "failed": 0,
+    "skipped": 0
+  },
+  "static": {
+    "serializedFields": "unchanged",
+    "runtimeEditorDependencies": "none added",
+    "json": "valid",
+    "gitDiffCheck": "passed"
+  },
+  "finalConsoleErrors": 0,
+  "notRun": [
+    "Player/mobile build",
+    "Device validation",
+    "Consumer Daily/Missions/Shop end-to-end icon presentation"
+  ],
+  "harnessNotes": [
+    "First PlayMode attempt made no test progress with Play from Bootstrap enabled; cancelled Unity runner and reset orphaned MCP state by domain reload. Retry with bootstrap disabled passed. Bootstrap preference restored after tests.",
+    "Before tests, game PlayMode logged NullReferenceException in Assets/_Project/Scripts/Demo/FoundationTutorialAdapter.cs:87. Outside changed Economy holder; no errors in final Console."
+  ],
+  "sha256": {
+    "Runtime.UI/ResourceUIHolder.cs": "4d192e1a3a0eb1abac52bcff95a127a861631c3f7fa7c5c575bf8cf8f0f054a9",
+    "Runtime.UI/Dreamy.Economy.UI.Runtime.asmdef": "37a88ece81b92b455373d65e349336c08217d6cb135ac67b17e33ec60f9c0d27",
+    "Tests/PlayMode/ResourceUIHolderTests.cs": "f09e5b3bb0937fe0c584085a0e319e13c118d642801a268b9bd3d6207ba4b9a7",
+    "Tests/PlayMode/Dreamy.Economy.UI.PlayMode.Tests.asmdef": "e4a6e48af3036279f8accefb3fd0d19c3fd535babee20ebdce072a6c90aabf78",
+    "README.md": "005fa0adf75d27bde792d71918924623644f9114ce35cb3937e9f9e2a0352942",
+    "CHANGELOG.md": "1d40865b35568de7d0c4788e16c16a8db4002720e044fe5193b13c2414d11474",
+    "package.json": "572f214420f4ea3c48d664c0b52857efc2d823c77af2a7dc2a4d458d1e4e860f"
+  }
+}

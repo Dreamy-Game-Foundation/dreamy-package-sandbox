@@ -25,7 +25,7 @@ namespace Dreamy.BattlePass.Sample.Editor
             }
         }
         private static readonly Color Navy=new(0.025f,0.04f,0.08f),Card=new(0.07f,0.10f,0.17f),Gold=new(1,0.76f,0.29f);
-        [MenuItem("Dreamy/Battle Pass/Samples/Build Demo")]
+        // Explicit rebuild entry point for batchmode; omitted from the everyday Editor menu.
         public static void Build()
         {
             if(SceneManager.GetSceneByPath(Root+"/Scenes/BattlePassDemo.unity").isLoaded)throw new InvalidOperationException("Close Battle Pass demo scene before regenerating.");

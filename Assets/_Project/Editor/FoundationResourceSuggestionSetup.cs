@@ -8,7 +8,7 @@ namespace Dreamy.Template.Editor
 {
     public static class FoundationResourceSuggestionSetup
     {
-        [MenuItem("Tools/Dreamy/Sandbox/Validate Resource Suggestion Panels")]
+        [MenuItem("Tools/Dreamy/Validation/Resource Suggestion Panels")]
         public static void Validate()
         {
             Check<CoinSuggestionPanel>("Assets/_Project/Prefabs/UI/ResourceSuggestions/CoinSuggestionPanel.prefab", Address.CoinSuggestionPanel);

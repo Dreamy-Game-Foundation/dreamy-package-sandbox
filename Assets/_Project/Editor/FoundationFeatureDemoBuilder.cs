@@ -24,7 +24,7 @@ namespace Dreamy.Template.Editor
         public const string WheelPath = "Assets/Samples/Dreamy Lucky Wheel/0.1.0/Lucky Wheel Feature/Prefabs/LuckyWheelPanel.prefab";
         private static TMP_FontAsset font;
 
-        [MenuItem("Tools/Dreamy/Sandbox/Build Foundation Feature Demos")]
+        // Explicit rebuild entry point for batchmode; omitted from the everyday Editor menu.
         public static void Build()
         {
             if (EditorApplication.isPlayingOrWillChangePlaymode) throw new InvalidOperationException("Exit Play Mode first.");

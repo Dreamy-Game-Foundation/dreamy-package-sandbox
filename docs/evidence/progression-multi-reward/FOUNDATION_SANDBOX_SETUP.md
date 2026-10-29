@@ -43,7 +43,8 @@ Game-specific installers, fault injection and panel controls are in Assets/_Proj
 - The smoke did not mutate the bootstrap shared wallet. Live test panel was left at XP 0.
 
 Editor Play start scene is BootstrapScene. To rebuild controls on a clean original prefab,
-use Tools/Dreamy/Sandbox/Install Progression Reward Controls; it refuses duplicate installation.
+invoke `Dreamy.Template.Editor.FoundationProgressionRewardUIBuilder.Build` via Unity batchmode
+`-executeMethod`; it refuses duplicate installation. This one-time setup has no Editor menu item.
 The pre-existing broad Foundation demo builder recreates the original basic Progression prefab;
 if that builder is run, reinstall these reward controls afterwards.
 

@@ -52,5 +52,5 @@ The standalone recovery demo owns its own factory and uses the same addresses. I
 sample alone does not register Addressables entries; configure these keys for a standalone consumer.
 
 For authored changes, edit the prefab variants through Unity MCP and preserve their base layout,
-SafeArea, serialized bindings and GUIDs. `Tools/Dreamy/Sandbox/Validate Resource Suggestion Panels`
+SafeArea, serialized bindings and GUIDs. `Tools/Dreamy/Validation/Resource Suggestion Panels`
 only validates typed project prefabs and addresses; it does not generate or attach prefabs.

@@ -10,7 +10,7 @@ namespace Dreamy.Template.Editor
 {
     public static class FoundationProgressionRewardUIBuilder
     {
-        [MenuItem("Tools/Dreamy/Sandbox/Install Progression Reward Controls")]
+        // Explicit rebuild entry point for batchmode; omitted from the everyday Editor menu.
         public static void Build()
         {
             if (EditorApplication.isPlayingOrWillChangePlaymode) throw new InvalidOperationException("Exit PlayMode first.");

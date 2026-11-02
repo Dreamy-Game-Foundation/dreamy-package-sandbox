@@ -253,7 +253,7 @@ trước khi đổi schema hoặc wire consumer.
 
 ## 6. Evidence và trạng thái kết thúc bước thiết kế
 
-Mỗi run tiếp theo ghi vào `.omo/evidence/dreamy-package-evolution-2026-10-15/`:
+Mỗi run tiếp theo ghi vào `docs/evidence/dreamy-package-evolution-2026-10-15/`:
 source SHA từng repo, manifest/lock hash, Editor/platform, discovery và outcomes,
 failure log, fixture identity, các gate chưa chạy. Không cộng test counts từ
 nhiều lần run thành một final-suite result.
@@ -268,7 +268,7 @@ Chưa chạy lại Unity tests/build, chưa sửa runtime và chưa hoàn thành
 
 Mục 1 và mục 6 phía trên mô tả thời điểm thiết kế, không phải trạng thái execution
 cuối. Đã tìm đúng MCP và compile/import checkpoint. Evidence mới nằm tại
-`.omo/evidence/dreamy-package-evolution-2026-10-15/README.md` và raw JSON cùng thư mục.
+`docs/evidence/dreamy-package-evolution-2026-10-15/README.md` và raw JSON cùng thư mục.
 
 - Baseline EditMode: Economy 41, Missions 52, Shop 8 đều pass, không fail/skip.
 - Baseline PlayMode: Daily 38, Progression 21 đều pass.

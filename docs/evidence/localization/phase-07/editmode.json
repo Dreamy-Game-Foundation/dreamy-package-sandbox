@@ -1,0 +1,308 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "8b3ff637650244838155c6333f106035",
+      "status": "succeeded",
+      "mode": "EditMode",
+      "started_unix_ms": 1793594090718,
+      "finished_unix_ms": 1793594101343,
+      "last_update_unix_ms": 1793594101343,
+      "progress": {
+        "completed": 29,
+        "total": 29,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1793594101066,
+        "last_finished_test_full_name": "Dreamy.Template.Tests.Localization.LocalizationImportTests.StalePlanIsRejectedBeforeMutation",
+        "last_finished_unix_ms": 1793594101129,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "run_in_background": null,
+        "focus_nudge_attempts": null,
+        "focus_nudge_limit": null,
+        "focus_nudge_status": null,
+        "blocked_reason": null,
+        "failures_so_far": [],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": {
+        "mode": "EditMode",
+        "summary": {
+          "total": 29,
+          "passed": 29,
+          "failed": 0,
+          "skipped": 0,
+          "durationSeconds": 2.6249685,
+          "resultState": "Passed"
+        },
+        "results": [
+          {
+            "name": "Parse_QuotedFields_PreservesCommasQuotesAndNewlines",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvParserTests.Parse_QuotedFields_PreservesCommasQuotesAndNewlines",
+            "state": "Passed",
+            "durationSeconds": 0.0124577,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Parse_UnterminatedQuote_ThrowsWithLocation",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvParserTests.Parse_UnterminatedQuote_ThrowsWithLocation",
+            "state": "Passed",
+            "durationSeconds": 0.0047691,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Parse_Utf8Bom_DoesNotBecomePartOfFirstHeader",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvParserTests.Parse_Utf8Bom_DoesNotBecomePartOfFirstHeader",
+            "state": "Passed",
+            "durationSeconds": 0.0001362,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "WriteThenParse_PreservesSemanticValues",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvParserTests.WriteThenParse_PreservesSemanticValues",
+            "state": "Passed",
+            "durationSeconds": 0.0022208,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Validate_DuplicateKey_ReturnsCriticalIssue",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvValidatorTests.Validate_DuplicateKey_ReturnsCriticalIssue",
+            "state": "Passed",
+            "durationSeconds": 0.0019797,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Validate_IgnoreRow_AllowsEmptyTranslations",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvValidatorTests.Validate_IgnoreRow_AllowsEmptyTranslations",
+            "state": "Passed",
+            "durationSeconds": 0.0002823,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Validate_MissingTranslation_ReturnsError",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvValidatorTests.Validate_MissingTranslation_ReturnsError",
+            "state": "Passed",
+            "durationSeconds": 0.0001773,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Validate_SmartPlaceholderMismatch_ReturnsError",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvValidatorTests.Validate_SmartPlaceholderMismatch_ReturnsError",
+            "state": "Passed",
+            "durationSeconds": 0.0006284,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "InvalidJsonIsRejected(\"{}\")",
+            "fullName": "Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(\"{}\")",
+            "state": "Passed",
+            "durationSeconds": 0.0022521,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "InvalidJsonIsRejected(\"[]\")",
+            "fullName": "Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(\"[]\")",
+            "state": "Passed",
+            "durationSeconds": 0.0008142,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "InvalidJsonIsRejected(\"{\\\"title\\\":null}\")",
+            "fullName": "Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(\"{\\\"title\\\":null}\")",
+            "state": "Passed",
+            "durationSeconds": 0.0002576,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "InvalidJsonIsRejected(\"{\\\"title\\\":5}\")",
+            "fullName": "Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(\"{\\\"title\\\":5}\")",
+            "state": "Passed",
+            "durationSeconds": 0.0001441,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "InvalidJsonIsRejected(\"{\\\"title\\\":\\\"\\\"}\")",
+            "fullName": "Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(\"{\\\"title\\\":\\\"\\\"}\")",
+            "state": "Passed",
+            "durationSeconds": 0.0001173,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "InvalidJsonIsRejected(\"{\\\"title\\\":\\\"A\\\",\\\"title\\\":\\\"B\\\"}\")",
+            "fullName": "Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(\"{\\\"title\\\":\\\"A\\\",\\\"title\\\":\\\"B\\\"}\")",
+            "state": "Passed",
+            "durationSeconds": 0.0035416,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "InvalidJsonIsRejected(\"{\\\"title\\\":\\\"A\\\"} {}\")",
+            "fullName": "Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(\"{\\\"title\\\":\\\"A\\\"} {}\")",
+            "state": "Passed",
+            "durationSeconds": 0.0002509,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "KeyCoverageIsOrdinalAndExact",
+            "fullName": "Dreamy.Localization.Tests.LocalizationJsonTests.KeyCoverageIsOrdinalAndExact",
+            "state": "Passed",
+            "durationSeconds": 0.0008035,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "MissingNumericPlaceholderIsRejected",
+            "fullName": "Dreamy.Localization.Tests.LocalizationJsonTests.MissingNumericPlaceholderIsRejected",
+            "state": "Passed",
+            "durationSeconds": 0.0004486,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "NestedPluralAndEscapedBracesAreValid",
+            "fullName": "Dreamy.Localization.Tests.LocalizationJsonTests.NestedPluralAndEscapedBracesAreValid",
+            "state": "Passed",
+            "durationSeconds": 0.0007157,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "UnicodeAndMultilineArePreserved",
+            "fullName": "Dreamy.Localization.Tests.LocalizationJsonTests.UnicodeAndMultilineArePreserved",
+            "state": "Passed",
+            "durationSeconds": 0.0001517,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Equality_SameTableAndEntry_AreEqual",
+            "fullName": "Dreamy.Localization.Tests.LocalizationKeyTests.Equality_SameTableAndEntry_AreEqual",
+            "state": "Passed",
+            "durationSeconds": 0.004338,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "IsValid_MissingEntry_IsFalse",
+            "fullName": "Dreamy.Localization.Tests.LocalizationKeyTests.IsValid_MissingEntry_IsFalse",
+            "state": "Passed",
+            "durationSeconds": 0.0003661,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "LocaleMatcher_CultureVariant_FallsBackToLanguageCode",
+            "fullName": "Dreamy.Localization.Tests.LocalizationKeyTests.LocaleMatcher_CultureVariant_FallsBackToLanguageCode",
+            "state": "Passed",
+            "durationSeconds": 0.0012272,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "LocaleMatcher_ExactMatch_IsCaseInsensitive",
+            "fullName": "Dreamy.Localization.Tests.LocalizationKeyTests.LocaleMatcher_ExactMatch_IsCaseInsensitive",
+            "state": "Passed",
+            "durationSeconds": 0.0002403,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Registry_RegisterAndRead_ReturnsTypedValue",
+            "fullName": "Dreamy.Localization.Tests.LocalizationVariableTests.Registry_RegisterAndRead_ReturnsTypedValue",
+            "state": "Passed",
+            "durationSeconds": 0.0017738,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Registry_VariableChange_ReportsOnlyChangedName",
+            "fullName": "Dreamy.Localization.Tests.LocalizationVariableTests.Registry_VariableChange_ReportsOnlyChangedName",
+            "state": "Passed",
+            "durationSeconds": 0.0006838,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "TypedValue_WhenChanged_RaisesOneNotification",
+            "fullName": "Dreamy.Localization.Tests.LocalizationVariableTests.TypedValue_WhenChanged_RaisesOneNotification",
+            "state": "Passed",
+            "durationSeconds": 0.0002887,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "PreviewIsReadOnlyAndReportsCoverage",
+            "fullName": "Dreamy.Template.Tests.Localization.LocalizationImportTests.PreviewIsReadOnlyAndReportsCoverage",
+            "state": "Passed",
+            "durationSeconds": 0.232292,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ReimportPreservesTableGuidsEntryIdsAndContent",
+            "fullName": "Dreamy.Template.Tests.Localization.LocalizationImportTests.ReimportPreservesTableGuidsEntryIdsAndContent",
+            "state": "Passed",
+            "durationSeconds": 0.6368951,
+            "message": null,
+            "stackTrace": null,
+            "output": "A meta data file (.meta) exists but its folder 'Packages/com.dreamy.core/Documentation~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.\nA meta data file (.meta) exists but its folder 'Packages/com.dreamy.core/Samples~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.\nA meta data file (.meta) exists but its folder 'Packages/com.dreamy.feedback/Documentation~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.\nA meta data file (.meta) exists but its folder 'Packages/com.dreamy.feedback/Samples~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.\nA meta data file (.meta) exists but its folder 'Packages/com.dreamy.core/Documentation~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.\nA meta data file (.meta) exists but its folder 'Packages/com.dreamy.core/Samples~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.\nA meta data file (.meta) exists but its folder 'Packages/com.dreamy.feedback/Documentation~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.\nA meta data file (.meta) exists but its folder 'Packages/com.dreamy.feedback/Samples~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.\n"
+          },
+          {
+            "name": "StalePlanIsRejectedBeforeMutation",
+            "fullName": "Dreamy.Template.Tests.Localization.LocalizationImportTests.StalePlanIsRejectedBeforeMutation",
+            "state": "Passed",
+            "durationSeconds": 0.0633078,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          }
+        ]
+      }
+    },
+    "hint": null
+  }
+}

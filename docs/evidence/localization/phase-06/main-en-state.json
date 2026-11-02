@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "message": "Code executed successfully.",
+  "data": {
+    "result": {
+      "bootstrap": "Ready",
+      "locale": "en",
+      "texts": [
+        "Language",
+        "Open Settings",
+        "Settings",
+        "Dreamy Foundation Demo",
+        "Close",
+        "Haptics",
+        "Sound effects",
+        "Music"
+      ]
+    },
+    "compiler": "codedom"
+  }
+}

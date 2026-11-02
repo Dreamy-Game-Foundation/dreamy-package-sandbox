@@ -13,7 +13,19 @@
     "Dreamy.Feature.LuckyWheel.Integration.Runtime",
     "Unity.TextMeshPro",
     "UnityEngine.UI",
-    "Dreamy.Economy.Recovery.Unity"
+    "Dreamy.Economy.Recovery.Unity",
+    "Dreamy.Localization.Runtime",
+    "Dreamy.Localization.Runtime.UI",
+    "Dreamy.Localization.Editor",
+    "Unity.Localization",
+    "Unity.Localization.Editor",
+    "Dreamy.Feature.Settings.Integration.Runtime",
+    "Dreamy.Settings.Runtime",
+    "Unity.InputSystem",
+    "Dreamy.Audio.Runtime",
+    "Dreamy.Core.Runtime",
+    "UnityEditor.TestRunner",
+    "UnityEngine.TestRunner"
   ],
   "includePlatforms": [
     "Editor"

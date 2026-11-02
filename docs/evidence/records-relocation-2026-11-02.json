@@ -1,0 +1,1319 @@
+{
+  "date": "2026-11-02",
+  "status": "complete",
+  "description": "Moved historical plans, evidence and tools into standard project directories. Raw results were not rerun. Hashes below describe content before relocation; Markdown navigation was updated afterwards.",
+  "files": [
+    {
+      "category": "plans",
+      "relative_path": "dreamy-core-pooling.md",
+      "destination": "docs/plans/dreamy-core-pooling.md",
+      "original_sha256": "1c7b41fc792e7d59cf317dbd7066913d1a616d01c2bd4de4dbe22818cae1efed",
+      "navigation_updated": false
+    },
+    {
+      "category": "plans",
+      "relative_path": "dreamy-feedback-authoring-simplification.md",
+      "destination": "docs/plans/dreamy-feedback-authoring-simplification.md",
+      "original_sha256": "d1ef263b69f7c1cf8dde397bd7ac3b14281df7d9d60876817157a70ba01e46fd",
+      "navigation_updated": true
+    },
+    {
+      "category": "plans",
+      "relative_path": "dreamy-feedback-completion.md",
+      "destination": "docs/plans/dreamy-feedback-completion.md",
+      "original_sha256": "e12a458e00d5e546993079b290174c91664ae308d5cb2453c52c76013bf4ee98",
+      "navigation_updated": true
+    },
+    {
+      "category": "plans",
+      "relative_path": "dreamy-package-evolution-2026-10-14.md",
+      "destination": "docs/plans/dreamy-package-evolution-2026-10-14.md",
+      "original_sha256": "c5a21e757e2ea4c32fdd5826f7c63ef9d6505ffefa11ed8e2753eb6d63b25b7d",
+      "navigation_updated": true
+    },
+    {
+      "category": "plans",
+      "relative_path": "foundation-feature-demos.md",
+      "destination": "docs/plans/foundation-feature-demos.md",
+      "original_sha256": "7d1fa4d478b7461028aa76bd93c30a06f95eee87ed4dd4bfa4f7363759450985",
+      "navigation_updated": true
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/A/contract-mcp-smoke.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/A/contract-mcp-smoke.json",
+      "original_sha256": "ced419559ee58d8f7a3d7b11dafd64419758457ca4368364515a1067dca02f16",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/A/economy-tests.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/A/economy-tests.json",
+      "original_sha256": "51ab6381bec5087c94ab0384c038b37dff39567dd1daae41d356f7ba0a5dd432",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/A/wallet-sample-mcp.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/A/wallet-sample-mcp.json",
+      "original_sha256": "e079f505a667923f73201a55fab16f8150cd937cf0cf97266b2e288b52a6b2a4",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/B/daily-bundle-portrait.png",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/B/daily-bundle-portrait.png",
+      "original_sha256": "a797a6134a18d132645ba2eef5b87581a1f26000cc2a803f4ee5a3dac3eea4b6",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/B/daily-unity-tests.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/B/daily-unity-tests.json",
+      "original_sha256": "f4fed7f719822d8cb72ca446be070d61f72864d844f21c3a21e1139aa8bf1139",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/B/sample-runtime.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/B/sample-runtime.json",
+      "original_sha256": "eb79176600bc5a3120ca4dcf128920e98d0e413edbcc17b36d6902a454304faa",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/C/missions-unity-tests.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/C/missions-unity-tests.json",
+      "original_sha256": "d3fdf6e06f7a46bf9617722ac92ea8cf082c7d440e10b6f061fe03ee26a834e4",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/C/periodic-missions-portrait-fixed.png",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/C/periodic-missions-portrait-fixed.png",
+      "original_sha256": "f9f3c33f09ced6911909660fa2e49038468b57d25bd2846e55e3302ff4828f6a",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/C/periodic-missions-portrait.png",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/C/periodic-missions-portrait.png",
+      "original_sha256": "f64c009584c61331665d42d14578fa4e6ccbe82ca1d2c25917bd0da32f774bdd",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/C/sample-runtime.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/C/sample-runtime.json",
+      "original_sha256": "e674be6da3d4cb8b31c2b3b2596b5e106c93fe0c68c2cdd7193fc2495289d27e",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/C/standalone-periodic-landscape.png",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/C/standalone-periodic-landscape.png",
+      "original_sha256": "b6e1bada1931144f4e9a566c8b06ac8911cacc1e2871b8fec7b37b4f80133784",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/C/standalone-periodic-portrait-valid.png",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/C/standalone-periodic-portrait-valid.png",
+      "original_sha256": "69060e3ef892ac7fd14b7caf0f8561a9acfd46e705a0d33de5f3800a4d032df3",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/C/standalone-periodic-portrait.png",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/C/standalone-periodic-portrait.png",
+      "original_sha256": "242cdd6c4d8ecf561715e3fe2535127f5d5388c1b8d8f2a391ccd316cd3d7e5b",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/C/standalone-weekly-landscape-bottom.png",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/C/standalone-weekly-landscape-bottom.png",
+      "original_sha256": "2e96e0c36e7c0a33ae8766a701f59dcbb18211a9bdeb9f622eb39350aaba9ad7",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/D/conditional-gaps.md",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/D/conditional-gaps.md",
+      "original_sha256": "73474ed12f5a9b99606377f58faf677291f71d4c7ac869823555984f2c017951",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/D/xp-playmode-tests.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/D/xp-playmode-tests.json",
+      "original_sha256": "df73fdaeed60fe962d02b2965924b3eb71040fed7df79bc3185098fdfdb40539",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/E/baseline-1792006778096.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/E/baseline-1792006778096.json",
+      "original_sha256": "6906799b40f8bad402dd5364b022d4d25b26c6b974473407f77e3faec39c9dec",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/E/benchmark-fixture-handoff.md",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/E/benchmark-fixture-handoff.md",
+      "original_sha256": "f42ca4712403df53e467b7286014450227b853209f0e82f9f3c0cecdc562d56e",
+      "navigation_updated": true
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/F/template-checkpoint.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/F/template-checkpoint.json",
+      "original_sha256": "8dd2778b38fd239848db3c9c71d2cc4275e17d12b7e8b870b85e702ae3182714",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/execution-state.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/execution-state.json",
+      "original_sha256": "0f070d39a225f1278357f00293e0cd79aaccfc5c8c368bad7bbd8aa8487794c6",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/preparation-mcp.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/preparation-mcp.json",
+      "original_sha256": "21aaca328cfe9bf39434bd7b16648f2671a62b9d79f5f64050f7b5ce416cc36e",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/sync-baseline.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/sync-baseline.json",
+      "original_sha256": "2b10bc5a3059aeb3620c329ed5ae832d92312681274dbdae2e1267c08104f993",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-14/validation.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-14/validation.json",
+      "original_sha256": "a8287815a25abd768eddf2b5366b501cb2c0b473328b4c08a28670be7a1a26c4",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/README.md",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/README.md",
+      "original_sha256": "12fb467cef7095e24ca8e264b0e7c8255954635719efdab2c52f8f7738b45f33",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/baseline-editmode.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/baseline-editmode.json",
+      "original_sha256": "7d9fd2b5d7e12b286f71cd523231dcf0920aaa929077aacfb49af47db0d3a649",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/baseline-playmode.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/baseline-playmode.json",
+      "original_sha256": "e187308589a8dfecb90afcf22b6df0d98868ff16655efe05f8874868a4574a36",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/baseline.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/baseline.json",
+      "original_sha256": "eccd969a1856c504914a457eaf1e6b4441a025849db8fd5652adb50babbee5ef",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/daily-regressions-before.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/daily-regressions-before.json",
+      "original_sha256": "dee324110ec09fb5bda13dc37893bbff9bb8e136b3cf9eeb7774d0d618fc9852",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/daily-sample-smoke.cs.txt",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/daily-sample-smoke.cs.txt",
+      "original_sha256": "dfbfbe0314aa93fb05c78a3a51ef77fa595e23e1ca02bcb24f03a935944e4984",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/daily-sample-smoke.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/daily-sample-smoke.json",
+      "original_sha256": "bd668b694f76d0baf92c43aba9e9839c91e670e42ec51defccf5615e1f2e316c",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/feature-simplification-editmode.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/feature-simplification-editmode.json",
+      "original_sha256": "46f88eb24df737ecab5c8c90ba8abb0bd2fb0e6702cf3f548df0e6dda0650b6b",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/feature-simplification-inputs.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/feature-simplification-inputs.json",
+      "original_sha256": "79a365f3eb4a1da1d31ad4970d21c1beec2433cd61d186447e141b5aa265339b",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/feature-simplification-playmode.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/feature-simplification-playmode.json",
+      "original_sha256": "7c5c1870b312ed40ca404734fdc831afdaa15f3c2660e17c14818b7bea98cc84",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/feature-simplification.md",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/feature-simplification.md",
+      "original_sha256": "5b2e7ed7944b9fa1bc0cc5b02276a8315d9ad48a43acf2dfd1ea773e6fa2c65c",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/final-playmode.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/final-playmode.json",
+      "original_sha256": "9be326af611e5d57c4a1f76535fd1ed35d3c341fa1630d725a6a8411cf688a19",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/release-editmode.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/release-editmode.json",
+      "original_sha256": "2cc2c29480ee6658a1f32dd41a2514a784309e6dd6d9c481fbbc8350217b01f9",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/release-inputs.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/release-inputs.json",
+      "original_sha256": "e97a50a6f15b42d100da3e5991453977ae24168c7cbac0d88a66de84beafe5d8",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/release-package-commits.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/release-package-commits.json",
+      "original_sha256": "d3a5c30f4aecf758c07c8d7830de828a0b36827a5044888128db60bb6614539a",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/release-playmode.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/release-playmode.json",
+      "original_sha256": "9e6dec779e8a9eeda2b3724fc93234bd725ee57fcffb1ffa1c6306990cf2ffe9",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "dreamy-package-evolution-2026-10-15/verified-input-hashes.json",
+      "destination": "docs/evidence/dreamy-package-evolution-2026-10-15/verified-input-hashes.json",
+      "original_sha256": "b9e8e586ce94ecb9110e7f800c8b47a5bbeca54345793790b4b5c6ce6b440c9b",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "economy-device-layout.png",
+      "destination": "docs/evidence/economy-device-layout.png",
+      "original_sha256": "da5b579b83880db57d655b1558834cc57d6bc4e18fbe0fe39e4a4214e184ded4",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/asmdef-final.json",
+      "destination": "docs/evidence/feedback/asmdef-final.json",
+      "original_sha256": "d498fdd4c4408d7d16c5420f25595f7a005af3c6f6a72af9349d798cd2539ca5",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/basic-landscape.png",
+      "destination": "docs/evidence/feedback/basic-landscape.png",
+      "original_sha256": "aa638582bccf081b62ac59770e18e6e341d5de37222f149e07d1dca0598e89c8",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/basic-portrait.png",
+      "destination": "docs/evidence/feedback/basic-portrait.png",
+      "original_sha256": "d828ee88dbb0e11b5663a91077f6d4f9786c88a8d94b3c6e3ea9bf84ebfd04b9",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/close-fix-playmode.json",
+      "destination": "docs/evidence/feedback/close-fix-playmode.json",
+      "original_sha256": "92aba3e434a6d151112b109376b2416e3d4c64a48334f7ef8ac2c414d5c6dcaf",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/close-raycast-after.json",
+      "destination": "docs/evidence/feedback/close-raycast-after.json",
+      "original_sha256": "7ab69e24c5a7e84357d1546ed1f15c078480a1b146798943b9a2d8fff07dcf19",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/close-raycast-before.json",
+      "destination": "docs/evidence/feedback/close-raycast-before.json",
+      "original_sha256": "2071f7bc8e07e0d2bddfdc6f2ae8b78f25687627416c5490e16f9ae6ad0ada95",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/consumer/ConsumerValidation.cs",
+      "destination": "docs/evidence/feedback/consumer/ConsumerValidation.cs",
+      "original_sha256": "df62d1bdda38213fc6d5de97d28e7e2ee82d1cf3c4f0ef4bf37fd428be2e83d5",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/consumer/FeedbackPlayerSmoke.cs",
+      "destination": "docs/evidence/feedback/consumer/FeedbackPlayerSmoke.cs",
+      "original_sha256": "55f1d4a97e90ebb244d52d1b53e062397b3b588a1b3da3a8a0fc432890423515",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/consumer/manifest.json",
+      "destination": "docs/evidence/feedback/consumer/manifest.json",
+      "original_sha256": "6872aeec3c3ec5cca7bb167e8ad636b806c6ff4d7f4005724d595096ccbfcddd",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/consumer/packages-lock.json",
+      "destination": "docs/evidence/feedback/consumer/packages-lock.json",
+      "original_sha256": "922fc626689af975ca1eab300803a67edf7e3a888d9eb5f195ef8d2027571c54",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/editmode-mcp.json",
+      "destination": "docs/evidence/feedback/editmode-mcp.json",
+      "original_sha256": "28b9be75974ab786df1faa5205ee5674dc32e913d07ae22819a86f4b54c7837a",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/feedback-before.xml",
+      "destination": "docs/evidence/feedback/feedback-before.xml",
+      "original_sha256": "72015312f683d799fedea829201b150d2f5a32168c297362c04262ec3cc55ab3",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/feedback-consumer-basic-tests.xml",
+      "destination": "docs/evidence/feedback/feedback-consumer-basic-tests.xml",
+      "original_sha256": "c7104a2e27a4d27121c3a3cf95ff27c52f415993fcb7dc827d0768ca61dde03b",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/feedback-consumer-final-tests.xml",
+      "destination": "docs/evidence/feedback/feedback-consumer-final-tests.xml",
+      "original_sha256": "e2e5a53e04a5ed4ce6c620cc6a8c325050f6641cab3fcffb76a2f73d9bff8672",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/feedback-consumer-integration-tests.xml",
+      "destination": "docs/evidence/feedback/feedback-consumer-integration-tests.xml",
+      "original_sha256": "3e3e20ab148f8942456f675c337d3215d1f65433fefe8316a5cf7eeff4d6aa67",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/final-playmode-mcp.json",
+      "destination": "docs/evidence/feedback/final-playmode-mcp.json",
+      "original_sha256": "82da5fe8da473a06d8a1969ec92f2631331312de59c40f78345072d3c6e4b0ef",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/foundation-feedback-portrait.png",
+      "destination": "docs/evidence/feedback/foundation-feedback-portrait.png",
+      "original_sha256": "8671b8946c97f3366d2f4100358f81995928dcc8c24060498f4fe7cd91ea4872",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/foundation-mcp.json",
+      "destination": "docs/evidence/feedback/foundation-mcp.json",
+      "original_sha256": "6586238afc1abf7feadd2d8ccfaee8ccda73f7cf2a6ee387b6898cab6a116c7e",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/package-check-final.json",
+      "destination": "docs/evidence/feedback/package-check-final.json",
+      "original_sha256": "508a7a681a06c140e197999edf74433a7554009843cc90fa1f78a742fde6f0a5",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/player-validation.json",
+      "destination": "docs/evidence/feedback/player-validation.json",
+      "original_sha256": "6ec0b50043056684fd3de019043be3bd2bf74accbe3cc1aee04a40044991be4f",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/playmode-mcp.json",
+      "destination": "docs/evidence/feedback/playmode-mcp.json",
+      "original_sha256": "a1f59b81524c171c423fff7d4efabf0969c4ce7b05068f14a480ed6c79d792e7",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback/static-final.json",
+      "destination": "docs/evidence/feedback/static-final.json",
+      "original_sha256": "76f737801e387606b2ad0771e39f57cffcc3a47be53c9c330437bea605e6faa4",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-authoring/editmode.xml",
+      "destination": "docs/evidence/feedback-authoring/editmode.xml",
+      "original_sha256": "c473c14224f082a05e40ed8dc261e248ec68bb2254fd19defbbd2f0019061283",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-authoring/playmode.xml",
+      "destination": "docs/evidence/feedback-authoring/playmode.xml",
+      "original_sha256": "a49702f45e1ea94620be8b120602f32e73afc558d55c4daef723bc2ccd03c5cc",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-authoring/summary.json",
+      "destination": "docs/evidence/feedback-authoring/summary.json",
+      "original_sha256": "c7047ec4204143d8f3948708b8673cff33b3e152602d4c5dc109b98b092fe97f",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/FeedbackDemo-before-restoration.unity",
+      "destination": "docs/evidence/feedback-completion/FeedbackDemo-before-restoration.unity",
+      "original_sha256": "5bf58d8816de999b4fb2e6c869ff868fcc320ed2c3af7ad35f0c1181e77e3072",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/FeedbackDemo-before-restoration.unity.meta",
+      "destination": "docs/evidence/feedback-completion/FeedbackDemo-before-restoration.unity.meta",
+      "original_sha256": "aafc169a820466721aea5954f55dece68abaff6195f7e4bc8c0303173979d211",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/FeedbackDemo-configured-unsaved-backup.unity",
+      "destination": "docs/evidence/feedback-completion/FeedbackDemo-configured-unsaved-backup.unity",
+      "original_sha256": "532e03839c070821b77dca6f4403e65beb47445cf464a7b45083e5058ec2f338",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/FeedbackDemo-configured-unsaved-backup.unity.meta",
+      "destination": "docs/evidence/feedback-completion/FeedbackDemo-configured-unsaved-backup.unity.meta",
+      "original_sha256": "aafc169a820466721aea5954f55dece68abaff6195f7e4bc8c0303173979d211",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/FeedbackDemo-original-disk.unity",
+      "destination": "docs/evidence/feedback-completion/FeedbackDemo-original-disk.unity",
+      "original_sha256": "5e2d63158abba49b14f0dd6e8af78a80ff6e77323ffcb99ca2f65056fd712f0d",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/FeedbackDemo-test-runner-autosaved.unity",
+      "destination": "docs/evidence/feedback-completion/FeedbackDemo-test-runner-autosaved.unity",
+      "original_sha256": "532e03839c070821b77dca6f4403e65beb47445cf464a7b45083e5058ec2f338",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/FeedbackDemo-unsaved-backup.unity",
+      "destination": "docs/evidence/feedback-completion/FeedbackDemo-unsaved-backup.unity",
+      "original_sha256": "dedabd35264e74cbf69960a1d383fc6cfb1993976c57e004f9e4339b66a940db",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/FeedbackDemo-unsaved-backup.unity.meta",
+      "destination": "docs/evidence/feedback-completion/FeedbackDemo-unsaved-backup.unity.meta",
+      "original_sha256": "aafc169a820466721aea5954f55dece68abaff6195f7e4bc8c0303173979d211",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/asmdef-final.json",
+      "destination": "docs/evidence/feedback-completion/asmdef-final.json",
+      "original_sha256": "a9765d6ab387c8a2e7ee1514fc6793769dd2829ca2d5717bf0c9ae4bd76e0241",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/base-editmode-final.xml",
+      "destination": "docs/evidence/feedback-completion/base-editmode-final.xml",
+      "original_sha256": "d41c451a8af1749d625eda86feb6fa3ab21209ff32e70632dad4b8818a4a2b00",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/base-playmode-complete.xml",
+      "destination": "docs/evidence/feedback-completion/base-playmode-complete.xml",
+      "original_sha256": "8be52853e65c91bf4d7e1e8db912ad6e3f055e64062fbdbedc1347587ac8aa0f",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/base-playmode-final.xml",
+      "destination": "docs/evidence/feedback-completion/base-playmode-final.xml",
+      "original_sha256": "2a8f1e65360c5ecd10b72a090b7959fb5148f58ac554d0971d5f30bcd11d0a3d",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/base-playmode-release.xml",
+      "destination": "docs/evidence/feedback-completion/base-playmode-release.xml",
+      "original_sha256": "a39218986ad0045c5d0b2506b90eba27c537b995ed149d866033000c657a0571",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/base-playmode.xml",
+      "destination": "docs/evidence/feedback-completion/base-playmode.xml",
+      "original_sha256": "81d4951203e23a8858b46b0522a74fe3a0dab643dd42b9d29d48b476ae86c45a",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/baseline.json",
+      "destination": "docs/evidence/feedback-completion/baseline.json",
+      "original_sha256": "972606b111c3e70340243687f0275233f807f00f7d47c75f1cb3e8df7b413da1",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/dotween-playmode-complete.xml",
+      "destination": "docs/evidence/feedback-completion/dotween-playmode-complete.xml",
+      "original_sha256": "9180c8c868bac3801efb2d0b27f74e1f2180482f4a385532c4d8e7704d3deaa0",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/dotween-playmode.xml",
+      "destination": "docs/evidence/feedback-completion/dotween-playmode.xml",
+      "original_sha256": "e01b07a4a4886cd598b2ad1ba48b15bd8a4a174b5353ba9859a6942687b55bd5",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/editor-restoration.json",
+      "destination": "docs/evidence/feedback-completion/editor-restoration.json",
+      "original_sha256": "f1419849c6d0e3761b202af020147b7c7345cba837b10d470e72b1fae4f98aba",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/landscape.png",
+      "destination": "docs/evidence/feedback-completion/landscape.png",
+      "original_sha256": "663ce8e6e3d7460a5db55dae0f5e88b9cdae3278abba5f8cc8aab846c8ad7bc1",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/package-check-final.json",
+      "destination": "docs/evidence/feedback-completion/package-check-final.json",
+      "original_sha256": "0f04c314126fb987c2ea4e39ead609d391ee92c0ae9aa440b624b39db83a7fca",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/player-exit-batch-complete.json",
+      "destination": "docs/evidence/feedback-completion/player-exit-batch-complete.json",
+      "original_sha256": "754ab5a8b905731f5275d095c95acc4ebc986a753856f6a723e889490d83c865",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/player-exit-complete.json",
+      "destination": "docs/evidence/feedback-completion/player-exit-complete.json",
+      "original_sha256": "ef5bdbf4908c7f24887be9e14996d3f30a9646fde4734686c040e87ced2b00b3",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/player-exit.json",
+      "destination": "docs/evidence/feedback-completion/player-exit.json",
+      "original_sha256": "f33cd6ffc6b563da42b5cd52349f5923db75b7edf8195bc70539200af00050f4",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/portrait.png",
+      "destination": "docs/evidence/feedback-completion/portrait.png",
+      "original_sha256": "a11ac9d5d2d45edb554e7c1b56695f14de74afcff233cd12c1412842b3db5ff2",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/sandbox-editmode-mcp.json",
+      "destination": "docs/evidence/feedback-completion/sandbox-editmode-mcp.json",
+      "original_sha256": "58064d4cf19d828c249119540283c2bf7a72205c7a69bc805df29c4123f4a252",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/sandbox-gameview.png",
+      "destination": "docs/evidence/feedback-completion/sandbox-gameview.png",
+      "original_sha256": "7d89b9b4377b03308b1f5a5aa7cb8439ba70c8053422a1054c14f093e34661c6",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/sandbox-runtime-final.json",
+      "destination": "docs/evidence/feedback-completion/sandbox-runtime-final.json",
+      "original_sha256": "9159fc23a55790232ac75647c885237777451cbd96b961e546c4746286eda928",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/sandbox-runtime.json",
+      "destination": "docs/evidence/feedback-completion/sandbox-runtime.json",
+      "original_sha256": "b9f40c447894ac46ea7a9a0358a1371d327fe7336b5ffa1158b26b3d44882e00",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/source-sha256.json",
+      "destination": "docs/evidence/feedback-completion/source-sha256.json",
+      "original_sha256": "ed203a5478291fe1e2feff3a69179ea28761fa952873bcc70c2f52bca9678824",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/summary.json",
+      "destination": "docs/evidence/feedback-completion/summary.json",
+      "original_sha256": "bef75b6f826062f95c9e988b7b1181c02ac4501c69baba4d86c8b8df362c5dda",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-completion/text-visual-check.xml",
+      "destination": "docs/evidence/feedback-completion/text-visual-check.xml",
+      "original_sha256": "54fbd108f1c1e966981ae6637f72863b2cd137ad8409cabddc9c03201d0e5246",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-dotween-sample/base-playmode.xml",
+      "destination": "docs/evidence/feedback-dotween-sample/base-playmode.xml",
+      "original_sha256": "b1ed6d4c6c78df18158715647eed70d3688799a28522863c486670fbd668f723",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-dotween-sample/dotween-sample-playmode.xml",
+      "destination": "docs/evidence/feedback-dotween-sample/dotween-sample-playmode.xml",
+      "original_sha256": "dbfe3a8a416bd386ec5df93fc201edae5121c7b1a770e0ace782bde5e916ff73",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-dotween-sample/summary.json",
+      "destination": "docs/evidence/feedback-dotween-sample/summary.json",
+      "original_sha256": "2f3b295e931b5c3227dc4682161db86ac85ae42fe1df6bccb823571505b183cd",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/basic-landscape.png",
+      "destination": "docs/evidence/feedback-modular/basic-landscape.png",
+      "original_sha256": "01a37af2bd2ee5d1e4d2572f9cbf8055e632679db0cd8477f14180d6c261a382",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/basic-portrait.png",
+      "destination": "docs/evidence/feedback-modular/basic-portrait.png",
+      "original_sha256": "4e4da87d78b98059777a832d5ce3b42a9fd2a5bc59c3d5eeecdf5beae13d9863",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/consumer-FeedbackConsumerValidation.cs",
+      "destination": "docs/evidence/feedback-modular/consumer-FeedbackConsumerValidation.cs",
+      "original_sha256": "604bb6f2aeb3b0532c487b12e36b4890fb178db305ab311b2a3f3610818e47c4",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/consumer-FeedbackPlayerSmoke.cs",
+      "destination": "docs/evidence/feedback-modular/consumer-FeedbackPlayerSmoke.cs",
+      "original_sha256": "99493fc3e2d9679f74d58e5500554050f81a4bf617c193f1e83b3bc5b3eb6d61",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/consumer-manifest.json",
+      "destination": "docs/evidence/feedback-modular/consumer-manifest.json",
+      "original_sha256": "e975edacc5f12cdfb94a533856de45be0412eaee255f902cc35069087596a98d",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/dotween-consumer-manifest.json",
+      "destination": "docs/evidence/feedback-modular/dotween-consumer-manifest.json",
+      "original_sha256": "61b0b9a909133e86e0c6009202dd88d1cdb9306829a1a196233934cbfd067ebb",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/feedback-consumer-build.log",
+      "destination": "docs/evidence/feedback-modular/feedback-consumer-build.log",
+      "original_sha256": "6782072cd076a35319efb6a7f41832dec97446ee92c007cab897a7d16b4a3e10",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/feedback-consumer-import.log",
+      "destination": "docs/evidence/feedback-modular/feedback-consumer-import.log",
+      "original_sha256": "7eb3001a3e52183dd4262d36718e45b032edb0c72ea44c052f6b10e08cc63c45",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/feedback-consumer-playmode.xml",
+      "destination": "docs/evidence/feedback-modular/feedback-consumer-playmode.xml",
+      "original_sha256": "3c9ee482446e29307f87d8a00404be4377941bf38f1bf052d545201eee920225",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/feedback-dotween-consumer-playmode.xml",
+      "destination": "docs/evidence/feedback-modular/feedback-dotween-consumer-playmode.xml",
+      "original_sha256": "06f0b6d684c2f368d05481975a2bd8dbbdfb787da7ecff870d65727e8f14669a",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/feedback-player-smoke.log",
+      "destination": "docs/evidence/feedback-modular/feedback-player-smoke.log",
+      "original_sha256": "bc4b6a3b7b4d3cb165e0d9b8255f37afdbe738ac36d037af5116d49d28d9c1ce",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/final-29-playmode-mcp.json",
+      "destination": "docs/evidence/feedback-modular/final-29-playmode-mcp.json",
+      "original_sha256": "3d5de39da81104814c2aa8450ca874b33d2475601ea1e09e94be114255e0d920",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/final-editmode-mcp.json",
+      "destination": "docs/evidence/feedback-modular/final-editmode-mcp.json",
+      "original_sha256": "e24664ff6f54d3a536171ce6f1e37e4c53792cb563c552967db587665af29dfa",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/final-playmode-mcp.json",
+      "destination": "docs/evidence/feedback-modular/final-playmode-mcp.json",
+      "original_sha256": "afbebcc7fd608995440279da666b10abff87a8402c6aff45b30d20b8e77b3cc7",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/guids-before.txt",
+      "destination": "docs/evidence/feedback-modular/guids-before.txt",
+      "original_sha256": "a84b815c593357f05a041500a7f3fd46294d79bd210e9cb4b54b372ebac45d3d",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/initial-editor-capture.png",
+      "destination": "docs/evidence/feedback-modular/initial-editor-capture.png",
+      "original_sha256": "c137d6c43ff0d9a4409d77aa87be9a4d2752ba5413b8e0ef7a308ea0d9193f20",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/starter-landscape.png",
+      "destination": "docs/evidence/feedback-modular/starter-landscape.png",
+      "original_sha256": "663ce8e6e3d7460a5db55dae0f5e88b9cdae3278abba5f8cc8aab846c8ad7bc1",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/starter-portrait.png",
+      "destination": "docs/evidence/feedback-modular/starter-portrait.png",
+      "original_sha256": "a11ac9d5d2d45edb554e7c1b56695f14de74afcff233cd12c1412842b3db5ff2",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-modular/validation-summary.json",
+      "destination": "docs/evidence/feedback-modular/validation-summary.json",
+      "original_sha256": "fff1289173b6198b28ac3d29b989472ee790a8652d607a427c6635d8b922c172",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/asmdef-final.json",
+      "destination": "docs/evidence/feedback-simplification/asmdef-final.json",
+      "original_sha256": "180c12441d279a9f3b08ea65a8664605f80c94ec42b57c28db76fe74b2bee100",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/asmdef.json",
+      "destination": "docs/evidence/feedback-simplification/asmdef.json",
+      "original_sha256": "729747a29bf8fd5c394fbc5947e6f2ba580bb15579564c6d58a818129f259139",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/base-playmode-final.xml",
+      "destination": "docs/evidence/feedback-simplification/base-playmode-final.xml",
+      "original_sha256": "52d68d31bb8f2fb407f777b90289cfdca93a46b9c94c62e041f3f5af9c571abf",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/base-playmode.xml",
+      "destination": "docs/evidence/feedback-simplification/base-playmode.xml",
+      "original_sha256": "5f681516c0ddf87a2afc6f6d72df8ef754db2089704bb32bb89f2bc1dc5a9ddf",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/base-release-playmode.xml",
+      "destination": "docs/evidence/feedback-simplification/base-release-playmode.xml",
+      "original_sha256": "684f32a25a555a9b0778da233ac872f4b277ad32cdc032c6c11ac9e970863b58",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/base-source-playmode.xml",
+      "destination": "docs/evidence/feedback-simplification/base-source-playmode.xml",
+      "original_sha256": "df684e3a81624e1bda82af3560c4d774ed97e56167a9fc08498bd9552d904a48",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/combo-empty-migration.asset",
+      "destination": "docs/evidence/feedback-simplification/combo-empty-migration.asset",
+      "original_sha256": "5bd540cbd3a3d09bd0a63fecbf66d5134908c045754e8f773db0df3d44c3d25f",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/dotween-playmode-final.xml",
+      "destination": "docs/evidence/feedback-simplification/dotween-playmode-final.xml",
+      "original_sha256": "69cad86ddb32f53eda2f294e9d95683ecc77bd2ae96de4c117e668635c51ec8a",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/dotween-playmode.xml",
+      "destination": "docs/evidence/feedback-simplification/dotween-playmode.xml",
+      "original_sha256": "d04c50ab7b7661404de207ae5e4389ad195ee91e27f8d9ca7e587128983deac4",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/dotween-release-playmode.xml",
+      "destination": "docs/evidence/feedback-simplification/dotween-release-playmode.xml",
+      "original_sha256": "4d8e5b915aafbe9b565ade2646061e02d66baab74b91713f6893c0adafe8974f",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/dotween-source-playmode.xml",
+      "destination": "docs/evidence/feedback-simplification/dotween-source-playmode.xml",
+      "original_sha256": "3ac5fd9d220c1b731c0d67a120bbe8b84445daff7af513b53850d48e831d92dd",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/editmode-final.xml",
+      "destination": "docs/evidence/feedback-simplification/editmode-final.xml",
+      "original_sha256": "84be7baa0ec8d995a6977a0d0bd5671d14e131e8b661828ce561c95533542771",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/editmode.xml",
+      "destination": "docs/evidence/feedback-simplification/editmode.xml",
+      "original_sha256": "666c6386b1966fbbaf8ce23acd4cba4d6f9cc574a0e20fd9630ba8b1d3453cb1",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/editor-validation.json",
+      "destination": "docs/evidence/feedback-simplification/editor-validation.json",
+      "original_sha256": "c49276c259b95561e40ba95422d767aa0cfd12ecb790711b448b615b5f1aa53e",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/landscape.png",
+      "destination": "docs/evidence/feedback-simplification/landscape.png",
+      "original_sha256": "663ce8e6e3d7460a5db55dae0f5e88b9cdae3278abba5f8cc8aab846c8ad7bc1",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/package-check-final.json",
+      "destination": "docs/evidence/feedback-simplification/package-check-final.json",
+      "original_sha256": "2762da622357c7514add1d36842f5dd8470d12889dada11540d4326a540edaf4",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/package-check.json",
+      "destination": "docs/evidence/feedback-simplification/package-check.json",
+      "original_sha256": "74a9996b62d33b8ad8a6d394e6210015d0a91b8e6aa3e849a8e213827ae87b42",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/player-exit.json",
+      "destination": "docs/evidence/feedback-simplification/player-exit.json",
+      "original_sha256": "fe970d5fef45f1a506200b2ffabe3ae5bb127140b0a7d7f435776c62ef70b124",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/portable-demo.unity",
+      "destination": "docs/evidence/feedback-simplification/portable-demo.unity",
+      "original_sha256": "a995631a7b4a9b146a4603c2b0369c975f9e7f26f844a144271babf891e3c7f7",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/portrait.png",
+      "destination": "docs/evidence/feedback-simplification/portrait.png",
+      "original_sha256": "a11ac9d5d2d45edb554e7c1b56695f14de74afcff233cd12c1412842b3db5ff2",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/source-sha256.json",
+      "destination": "docs/evidence/feedback-simplification/source-sha256.json",
+      "original_sha256": "b8e58710d9dc35498a7a5d919f641335d3482c0a2e9ec257ac38cb080ee43afc",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/static-checks.json",
+      "destination": "docs/evidence/feedback-simplification/static-checks.json",
+      "original_sha256": "957f1e18f894378722e939ba80ad0cd616945dba7e9486a536792bab699b4f30",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/summary.json",
+      "destination": "docs/evidence/feedback-simplification/summary.json",
+      "original_sha256": "d2968397d70a035f5228ffacc7c3efb6cb1fe5280295c8743ec73904174a0f04",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/user-scene-backup.unity",
+      "destination": "docs/evidence/feedback-simplification/user-scene-backup.unity",
+      "original_sha256": "7d18818c4c8d2fa1fcb48b00a40d7b9aea86197a2c62ced7754d26cdb35982ff",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/user-scene-backup.unity.meta",
+      "destination": "docs/evidence/feedback-simplification/user-scene-backup.unity.meta",
+      "original_sha256": "aafc169a820466721aea5954f55dece68abaff6195f7e4bc8c0303173979d211",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/user-scene-final-backup.unity",
+      "destination": "docs/evidence/feedback-simplification/user-scene-final-backup.unity",
+      "original_sha256": "385ee156a40e8eb09a06abfcd62b7d97af4f963be75d7572ce8ac9ba1b65df5e",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-simplification/user-scene-final-backup.unity.meta",
+      "destination": "docs/evidence/feedback-simplification/user-scene-final-backup.unity.meta",
+      "original_sha256": "aafc169a820466721aea5954f55dece68abaff6195f7e4bc8c0303173979d211",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-starter/editmode-mcp.json",
+      "destination": "docs/evidence/feedback-starter/editmode-mcp.json",
+      "original_sha256": "0c0b73ef5f1ce3cb807506987cc57e947ddb1d447c410efa457c0059677582b3",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-starter/feedback-starter-consumer-build.log",
+      "destination": "docs/evidence/feedback-starter/feedback-starter-consumer-build.log",
+      "original_sha256": "4426c695da0fb1ed439893377b2add97afcf5497149c5f7e522e015d3d681f9a",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-starter/feedback-starter-consumer-playmode.xml",
+      "destination": "docs/evidence/feedback-starter/feedback-starter-consumer-playmode.xml",
+      "original_sha256": "a73d05e7355a144c98ab1fe8f6dc22d28a213d65e3d59df3dc33710d6be3046b",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-starter/feedback-starter-consumer-tests.log",
+      "destination": "docs/evidence/feedback-starter/feedback-starter-consumer-tests.log",
+      "original_sha256": "2646af530ea3b4c492acfd04a593a1dcd814511ec50835f4730a4b20856a96a1",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-starter/player-smoke.log",
+      "destination": "docs/evidence/feedback-starter/player-smoke.log",
+      "original_sha256": "726767da633e620c564a5d17ca46280d49f9f527d7a32b14c11983165511a19d",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-starter/sandbox-playmode-mcp.json",
+      "destination": "docs/evidence/feedback-starter/sandbox-playmode-mcp.json",
+      "original_sha256": "45162fb225c67dedecde3211ac67f6b06885fde526b81bf921c2881b51e916cb",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-starter/starter-landscape.png",
+      "destination": "docs/evidence/feedback-starter/starter-landscape.png",
+      "original_sha256": "663ce8e6e3d7460a5db55dae0f5e88b9cdae3278abba5f8cc8aab846c8ad7bc1",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-starter/starter-portrait.png",
+      "destination": "docs/evidence/feedback-starter/starter-portrait.png",
+      "original_sha256": "a11ac9d5d2d45edb554e7c1b56695f14de74afcff233cd12c1412842b3db5ff2",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-starter/summary.json",
+      "destination": "docs/evidence/feedback-starter/summary.json",
+      "original_sha256": "9fc0b3bb87be40b59617a5109d80fe3f877f8e79f3ece24211f63ff70cd8ecbb",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-ui-camera/bootstrap-playmode.xml",
+      "destination": "docs/evidence/feedback-ui-camera/bootstrap-playmode.xml",
+      "original_sha256": "6475a135176e54ee93e3a6048d49f0b02661e92a4ac9fcb87ac53c4cb722517a",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-ui-camera/final-playmode.xml",
+      "destination": "docs/evidence/feedback-ui-camera/final-playmode.xml",
+      "original_sha256": "0bcb67b1d43b491bd8ec15bb67ec17fb15d11464b7aeac37c970b26b750175b4",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-ui-camera/package-playmode.xml",
+      "destination": "docs/evidence/feedback-ui-camera/package-playmode.xml",
+      "original_sha256": "71bcb614f20e09354ac85f10840c009cba7fe10584dbe85bf521137dc3bbd051",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "feedback-ui-camera/summary.json",
+      "destination": "docs/evidence/feedback-ui-camera/summary.json",
+      "original_sha256": "b4e4eba33a8a0bac3b70f7a8e4c82c752718cd827761d09e162adcd463e80b5c",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "foundation-device-layout.png",
+      "destination": "docs/evidence/foundation-device-layout.png",
+      "original_sha256": "687a3fab3240d37e24cd144f238fd830d7bd612d15b254b8eeca4eddb191deba",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "foundation-feature-demos.md",
+      "destination": "docs/evidence/foundation-feature-demos.md",
+      "original_sha256": "0a78d37babc3adb13926d69fa041e6067ea5a0d9de23da05c193554fd18234ea",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "foundation-narrow-layout.png",
+      "destination": "docs/evidence/foundation-narrow-layout.png",
+      "original_sha256": "022f027c9044d0856c59563434de9a496f80e2aa01b08522bdca3c9f0bf0bd18",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "lucky-wheel/final-ready-clean.png",
+      "destination": "docs/evidence/lucky-wheel/final-ready-clean.png",
+      "original_sha256": "71e77945e7a0b8028e80adfc3dcc3bdbf78f787ad762e01cc130397ad3082758",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "lucky-wheel/final-ready-settled.png",
+      "destination": "docs/evidence/lucky-wheel/final-ready-settled.png",
+      "original_sha256": "365be1df6088fcc9c18f2429b4bb85f87a3649f35a36f10696fdc355177fa828",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "lucky-wheel/final-ready.png",
+      "destination": "docs/evidence/lucky-wheel/final-ready.png",
+      "original_sha256": "fc9bf127357417d1317c852340606f68d0eb11b902033483887020f0f0246a67",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "lucky-wheel/final-spinning-stable.png",
+      "destination": "docs/evidence/lucky-wheel/final-spinning-stable.png",
+      "original_sha256": "c9526711dd422101c8dbc8e1aa1c5b0a41014ca32c56430a1897899d4749b2c0",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "lucky-wheel/final-spinning.png",
+      "destination": "docs/evidence/lucky-wheel/final-spinning.png",
+      "original_sha256": "86eb4d6ea844e8acb8faac6149d69e799a91118ab1a700da7e475ea92073619a",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "lucky-wheel/final-won.png",
+      "destination": "docs/evidence/lucky-wheel/final-won.png",
+      "original_sha256": "b2398be604c689beb55d0ef0bab5bc7fc5c88369ffe84d923cfe85e849835928",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "lucky-wheel/lucky-wheel-mid-spin.png",
+      "destination": "docs/evidence/lucky-wheel/lucky-wheel-mid-spin.png",
+      "original_sha256": "b4b0f945741c85c22982f73f79de9f2a46c022827413213b846ee6f6d394f1ce",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "lucky-wheel/lucky-wheel-rest.png",
+      "destination": "docs/evidence/lucky-wheel/lucky-wheel-rest.png",
+      "original_sha256": "fc9bf127357417d1317c852340606f68d0eb11b902033483887020f0f0246a67",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "lucky-wheel/lucky-wheel-spinning.png",
+      "destination": "docs/evidence/lucky-wheel/lucky-wheel-spinning.png",
+      "original_sha256": "b4b0f945741c85c22982f73f79de9f2a46c022827413213b846ee6f6d394f1ce",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "lucky-wheel-gate-review.md",
+      "destination": "docs/evidence/lucky-wheel-gate-review.md",
+      "original_sha256": "32940ca7bff023e4a183c4811f3cda6ec373d1b10750e90aa655083d636e0289",
+      "navigation_updated": true
+    },
+    {
+      "category": "evidence",
+      "relative_path": "missions-device-layout.png",
+      "destination": "docs/evidence/missions-device-layout.png",
+      "original_sha256": "0e1644477237da42ea0c13743d723f231456f253e971d22c432ab71c9e347c46",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "progression-device-layout.png",
+      "destination": "docs/evidence/progression-device-layout.png",
+      "original_sha256": "8f4331055d49f01c1338f721b33df34f8b91f705de1b3a1f75029e3d4d9878de",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "samples-release/playmode.xml",
+      "destination": "docs/evidence/samples-release/playmode.xml",
+      "original_sha256": "5b6759411fcaff19debaa63e44f77f45553d841a364c5ec6a49196db9f1ffca4",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "samples-release/portable-playmode.xml",
+      "destination": "docs/evidence/samples-release/portable-playmode.xml",
+      "original_sha256": "007ddce226f397a677446df31fdf7afae964d7f3c8ab3e0d77e1f66eb33e12ff",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "samples-release/summary.json",
+      "destination": "docs/evidence/samples-release/summary.json",
+      "original_sha256": "3c9ff6386634d09d54d248152b47bc45c5adaba126b646b3a6989b3ede9dcd6a",
+      "navigation_updated": false
+    },
+    {
+      "category": "evidence",
+      "relative_path": "wheel-final.png",
+      "destination": "docs/evidence/wheel-final.png",
+      "original_sha256": "5d77b088b98bd5abd6af5270b0239e535a4488a11740870a40d2686a88ab6d86",
+      "navigation_updated": false
+    },
+    {
+      "category": "tools",
+      "relative_path": "unity-test-watch.mjs",
+      "destination": "tools/unity-test-watch.mjs",
+      "original_sha256": "db043617f063ea6020dd910877a6981658cf25b21ae0daebe686bd4ad29c4cb3",
+      "navigation_updated": false
+    }
+  ],
+  "updated_files": [
+    "CHANGELOG.md",
+    "docs/RELEASE_2026-10-15.md",
+    "docs/PACKAGE_EVOLUTION_NEXT_STEPS_2026-10-14.md",
+    "docs/evidence/lucky-wheel-gate-review.md",
+    "docs/plans/DREAMY_FEEDBACK_MODULAR_REFACTOR_PLAN.md",
+    "docs/plans/REWARD_EVOLUTION_ARCHITECTURE_AND_RESUME_2026-10-15.md",
+    "docs/plans/dreamy-feedback-completion.md",
+    "docs/plans/DREAMY_FEEDBACK_PACKAGE_PLAN.md",
+    "docs/plans/dreamy-feedback-authoring-simplification.md",
+    "docs/plans/foundation-feature-demos.md",
+    "docs/plans/dreamy-package-evolution-2026-10-14.md",
+    "docs/evidence/dreamy-package-evolution-2026-10-14/E/benchmark-fixture-handoff.md",
+    "Assets/_Project/Editor/RewardEvolutionBenchmark.cs",
+    "Assets/Samples/Dreamy Feedback/0.3.0/Basic Feedback/Tests/FeedbackSampleTests.cs",
+    "LocalPackages/com.dreamy.feedback/Samples~/BasicFeedbackSample/Tests/FeedbackSampleTests.cs",
+    "LocalPackages/com.dreamy.feedback/VALIDATION.md",
+    "LocalPackages/com.dreamy.audio/AUDIO_PACKAGE_PLAN.md",
+    "LocalPackages/com.dreamy.localization/LOCALIZATION_PACKAGE_PLAN.md"
+  ],
+  "verification": {
+    "all_files_verified_identical_immediately_after_move": true,
+    "unity_tests_rerun": false
+  }
+}

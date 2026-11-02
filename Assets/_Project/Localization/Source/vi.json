@@ -1,0 +1,20 @@
+{
+  "settings.title": "Cài đặt",
+  "settings.music": "Nhạc nền",
+  "settings.sfx": "Hiệu ứng âm thanh",
+  "settings.haptics": "Rung",
+  "settings.privacy": "Quyền riêng tư & GDPR",
+  "settings.restore": "Khôi phục giao dịch",
+  "settings.rate": "Đánh giá",
+  "settings.close": "Đóng",
+  "settings.language": "Ngôn ngữ",
+  "settings.language_unavailable": "Ngôn ngữ chưa khả dụng",
+  "settings.language_failed": "Không đổi được ngôn ngữ. Hãy thử lại.",
+  "demo.title": "Kiểm thử ngôn ngữ",
+  "demo.greeting": "Chào mừng! Đổi ngôn ngữ trong Cài đặt.",
+  "demo.reward": "Bạn nhận được {amount} xu",
+  "demo.open_settings": "Mở Cài đặt",
+  "demo.increment": "Thêm một xu",
+  "demo.reset": "Xóa ngôn ngữ đã lưu (test)",
+  "main.title": "Bản thử nghiệm Dreamy Foundation"
+}

@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "message": "Code executed successfully.",
+  "data": {
+    "result": {
+      "texts": [
+        "Xóa ngôn ngữ đã lưu (test)",
+        "Tiếng Việt",
+        "Nhạc nền",
+        "Đóng",
+        "vi",
+        "Thêm một xu",
+        "Bạn nhận được 42 xu",
+        "Ngôn ngữ",
+        "Kiểm thử ngôn ngữ",
+        "Mở Cài đặt",
+        "Hiệu ứng âm thanh",
+        "Chào mừng! Đổi ngôn ngữ trong Cài đặt.",
+        "Rung",
+        "Cài đặt"
+      ],
+      "options": [
+        "English",
+        "Tiếng Việt"
+      ],
+      "selected": 1
+    },
+    "compiler": "codedom"
+  }
+}

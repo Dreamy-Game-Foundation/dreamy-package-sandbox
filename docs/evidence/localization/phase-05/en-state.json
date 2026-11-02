@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "message": "Code executed successfully.",
+  "data": {
+    "result": {
+      "locale": "en",
+      "texts": [
+        "Reset saved language (test)",
+        "English",
+        "Music",
+        "Close",
+        "en",
+        "Add one coin",
+        "You received 42 coins",
+        "Language",
+        "Localization test",
+        "Open Settings",
+        "Sound effects",
+        "Welcome! Change the language in Settings.",
+        "Haptics",
+        "Settings"
+      ]
+    },
+    "compiler": "codedom"
+  }
+}

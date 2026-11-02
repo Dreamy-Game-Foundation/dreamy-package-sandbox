@@ -236,6 +236,19 @@
         "com.unity.modules.imageconversion": "1.0.0"
       }
     },
+    "com.dreamy.localization": {
+      "version": "file:../LocalPackages/com.dreamy.localization",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.localization": "1.5.5",
+        "com.unity.textmeshpro": "5.0.0",
+        "com.unity.ugui": "2.0.0",
+        "com.unity.modules.audio": "1.0.0",
+        "com.cysharp.unitask": "2.5.10",
+        "com.unity.nuget.newtonsoft-json": "3.2.2"
+      }
+    },
     "com.dreamy.ui": {
       "version": "file:../LocalPackages/com.dreamy.ui",
       "depth": 0,
@@ -466,6 +479,16 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.localization": {
+      "version": "1.5.8",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.addressables": "1.25.0",
+        "com.unity.nuget.newtonsoft-json": "3.0.2"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.mathematics": {
       "version": "1.3.3",
       "depth": 2,
@@ -578,6 +601,14 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "com.unity.textmeshpro": {
+      "version": "5.0.0",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.ugui": "2.0.0"
+      }
     },
     "com.unity.timeline": {
       "version": "1.8.12",

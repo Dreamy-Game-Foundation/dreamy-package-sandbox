@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: DreamyGame Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: DreamyGame
+  m_TableCollectionNameGuidString: db428fc826f5c1106ba486c7dc98b135
+  m_Entries:
+  - m_Id: 1090449408
+    m_Key: settings.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1111420928
+    m_Key: settings.music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615232
+    m_Key: settings.sfx
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615233
+    m_Key: settings.haptics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615234
+    m_Key: settings.privacy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615235
+    m_Key: settings.restore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615236
+    m_Key: settings.rate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615237
+    m_Key: settings.close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615238
+    m_Key: settings.language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615239
+    m_Key: settings.language_unavailable
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615240
+    m_Key: settings.language_failed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615241
+    m_Key: demo.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615242
+    m_Key: demo.greeting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615243
+    m_Key: demo.reward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809536
+    m_Key: demo.open_settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809537
+    m_Key: demo.increment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809538
+    m_Key: demo.reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3333645332480
+    m_Key: main.title
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2503060853407350989
+  references:
+    version: 2
+    RefIds:
+    - rid: 2503060853407350989
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1793593292330

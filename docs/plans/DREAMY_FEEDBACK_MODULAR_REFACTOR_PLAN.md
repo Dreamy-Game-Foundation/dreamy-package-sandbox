@@ -164,7 +164,7 @@ Không xây graph editor dạng canvas, asset streaming/Addressables framework, 
 5. **Clean consumers:** base + Basic không DOTween; base + adapter + DOTween; Economy với dependency đã document. Test core/contracts assembly không bắt buộc Core/TMP/UniTask; runtime hiện tại vẫn có dependency đúng khai báo.
 6. **Player:** desktop development build/smoke từ consumer mới; TMP/asset references và adapter link validation. Android/iOS/haptic thật chỉ đánh dấu pass khi có build/device evidence; Editor không chứng minh rung vật lý.
 
-Evidence mới đặt ở `.omo/evidence/feedback-modular/`, kèm environment/revision và gate thực sự chạy. Nếu Unity/MCP/batchmode unavailable, chỉ báo static result và chính xác gate còn thiếu.
+Evidence mới đặt ở `docs/evidence/feedback-modular/`, kèm environment/revision và gate thực sự chạy. Nếu Unity/MCP/batchmode unavailable, chỉ báo static result và chính xác gate còn thiếu.
 
 ## 10. Definition of done cho implementation
 
@@ -182,7 +182,7 @@ Evidence mới đặt ở `.omo/evidence/feedback-modular/`, kèm environment/re
 - Basic có 5 trajectory casual/puzzle, composite reward/hit/click, Stop/Complete; board world-space giúp thấy camera shake. Economy và Foundation dùng facade/context mới.
 - Sandbox: 29/29 PlayMode, 4/4 EditMode; kiểm lại Basic 2/2 sau thay material/shader portable.
 - Consumer sạch không Core/DOTween/URP: 22/22 PlayMode, Linux build và error-sensitive player smoke thành công.
-- Evidence mới tại `.omo/evidence/feedback-modular`; kết quả consumer DOTween và giới hạn thiết bị được ghi trong VALIDATION.
+- Evidence mới tại `docs/evidence/feedback-modular`; kết quả consumer DOTween và giới hạn thiết bị được ghi trong VALIDATION.
 
 ## 12. Điều chỉnh sample theo phản hồi tiếp theo
 

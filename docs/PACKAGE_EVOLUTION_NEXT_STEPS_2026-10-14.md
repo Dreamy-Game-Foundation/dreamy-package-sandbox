@@ -10,7 +10,7 @@ Tac vu battle bridge bi huy khi dang viet source/tests. Khong coi source do la
 implementation da hoan tat, compile thanh cong hay du 10 objective da chay that.
 
 File nay la diem tiep tuc moi nhat. Ke hoach goc van o
-`.omo/plans/dreamy-package-evolution-2026-10-14.md`; cac checkbox va
+`docs/plans/dreamy-package-evolution-2026-10-14.md`; cac checkbox va
 `execution-state.json` la snapshot cu, khong phai chung nhan trang thai cuoi.
 Nhung ghi chu cu "chua duoc phep commit/push" da duoc thay the bang yeu cau
 commit/push nhanh rieng ngay 2026-10-14. Khong co yeu cau merge, tao tag hay release.
@@ -64,7 +64,7 @@ khong tu no chung minh push thanh cong.
 
 ## Da co source va bang chung gi
 
-Bang chung nam tai `.omo/evidence/dreamy-package-evolution-2026-10-14/`.
+Bang chung nam tai `docs/evidence/dreamy-package-evolution-2026-10-14/`.
 Ket qua duoi day chi ap dung cho source tai thoi diem run. Cac thay doi sau run,
 dac biet Daily resolver va consumer migrations/battle, can chay lai tests.
 

@@ -1,0 +1,182 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "c4d19124093a438abe823cd7bfe5baa7",
+      "status": "succeeded",
+      "mode": "EditMode",
+      "started_unix_ms": 1793592720667,
+      "finished_unix_ms": 1793592728692,
+      "last_update_unix_ms": 1793592728692,
+      "progress": {
+        "completed": 15,
+        "total": 15,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1793592728441,
+        "last_finished_test_full_name": "Dreamy.Localization.Tests.LocalizationVariableTests.TypedValue_WhenChanged_RaisesOneNotification",
+        "last_finished_unix_ms": 1793592728442,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "run_in_background": null,
+        "focus_nudge_attempts": null,
+        "focus_nudge_limit": null,
+        "focus_nudge_status": null,
+        "blocked_reason": null,
+        "failures_so_far": [],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": {
+        "mode": "EditMode",
+        "summary": {
+          "total": 15,
+          "passed": 15,
+          "failed": 0,
+          "skipped": 0,
+          "durationSeconds": 0.9042131,
+          "resultState": "Passed"
+        },
+        "results": [
+          {
+            "name": "Parse_QuotedFields_PreservesCommasQuotesAndNewlines",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvParserTests.Parse_QuotedFields_PreservesCommasQuotesAndNewlines",
+            "state": "Passed",
+            "durationSeconds": 0.0118703,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Parse_UnterminatedQuote_ThrowsWithLocation",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvParserTests.Parse_UnterminatedQuote_ThrowsWithLocation",
+            "state": "Passed",
+            "durationSeconds": 0.0028061,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Parse_Utf8Bom_DoesNotBecomePartOfFirstHeader",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvParserTests.Parse_Utf8Bom_DoesNotBecomePartOfFirstHeader",
+            "state": "Passed",
+            "durationSeconds": 0.0001799,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "WriteThenParse_PreservesSemanticValues",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvParserTests.WriteThenParse_PreservesSemanticValues",
+            "state": "Passed",
+            "durationSeconds": 0.0036937,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Validate_DuplicateKey_ReturnsCriticalIssue",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvValidatorTests.Validate_DuplicateKey_ReturnsCriticalIssue",
+            "state": "Passed",
+            "durationSeconds": 0.0056115,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Validate_IgnoreRow_AllowsEmptyTranslations",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvValidatorTests.Validate_IgnoreRow_AllowsEmptyTranslations",
+            "state": "Passed",
+            "durationSeconds": 0.0004985,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Validate_MissingTranslation_ReturnsError",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvValidatorTests.Validate_MissingTranslation_ReturnsError",
+            "state": "Passed",
+            "durationSeconds": 0.0003472,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Validate_SmartPlaceholderMismatch_ReturnsError",
+            "fullName": "Dreamy.Localization.Tests.LocalizationCsvValidatorTests.Validate_SmartPlaceholderMismatch_ReturnsError",
+            "state": "Passed",
+            "durationSeconds": 0.0013979,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Equality_SameTableAndEntry_AreEqual",
+            "fullName": "Dreamy.Localization.Tests.LocalizationKeyTests.Equality_SameTableAndEntry_AreEqual",
+            "state": "Passed",
+            "durationSeconds": 0.0059502,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "IsValid_MissingEntry_IsFalse",
+            "fullName": "Dreamy.Localization.Tests.LocalizationKeyTests.IsValid_MissingEntry_IsFalse",
+            "state": "Passed",
+            "durationSeconds": 0.0004637,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "LocaleMatcher_CultureVariant_FallsBackToLanguageCode",
+            "fullName": "Dreamy.Localization.Tests.LocalizationKeyTests.LocaleMatcher_CultureVariant_FallsBackToLanguageCode",
+            "state": "Passed",
+            "durationSeconds": 0.0013168,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "LocaleMatcher_ExactMatch_IsCaseInsensitive",
+            "fullName": "Dreamy.Localization.Tests.LocalizationKeyTests.LocaleMatcher_ExactMatch_IsCaseInsensitive",
+            "state": "Passed",
+            "durationSeconds": 0.0002822,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Registry_RegisterAndRead_ReturnsTypedValue",
+            "fullName": "Dreamy.Localization.Tests.LocalizationVariableTests.Registry_RegisterAndRead_ReturnsTypedValue",
+            "state": "Passed",
+            "durationSeconds": 0.0028657,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "Registry_VariableChange_ReportsOnlyChangedName",
+            "fullName": "Dreamy.Localization.Tests.LocalizationVariableTests.Registry_VariableChange_ReportsOnlyChangedName",
+            "state": "Passed",
+            "durationSeconds": 0.0008982,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "TypedValue_WhenChanged_RaisesOneNotification",
+            "fullName": "Dreamy.Localization.Tests.LocalizationVariableTests.TypedValue_WhenChanged_RaisesOneNotification",
+            "state": "Passed",
+            "durationSeconds": 0.0004124,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          }
+        ]
+      }
+    },
+    "hint": null
+  }
+}

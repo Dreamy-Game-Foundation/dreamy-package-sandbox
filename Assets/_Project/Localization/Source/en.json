@@ -1,0 +1,20 @@
+{
+  "settings.title": "Settings",
+  "settings.music": "Music",
+  "settings.sfx": "Sound effects",
+  "settings.haptics": "Haptics",
+  "settings.privacy": "Privacy & GDPR",
+  "settings.restore": "Restore purchases",
+  "settings.rate": "Rate us",
+  "settings.close": "Close",
+  "settings.language": "Language",
+  "settings.language_unavailable": "Language unavailable",
+  "settings.language_failed": "Could not change language. Try again.",
+  "demo.title": "Localization test",
+  "demo.greeting": "Welcome! Change the language in Settings.",
+  "demo.reward": "You received {amount} coins",
+  "demo.open_settings": "Open Settings",
+  "demo.increment": "Add one coin",
+  "demo.reset": "Reset saved language (test)",
+  "main.title": "Dreamy Foundation Demo"
+}

@@ -2,6 +2,7 @@
   "testables": [
     "com.dreamy.feature",
     "com.dreamy.audio",
+    "com.dreamy.localization",
     "com.dreamy.ui",
     "com.dreamy.feature.daily-reward",
     "com.dreamy.feature.economy",
@@ -34,6 +35,7 @@
     "com.dreamy.feature.shop": "file:../LocalPackages/com.dreamy.feature.shop",
     "com.dreamy.feature.tutorial": "file:../LocalPackages/com.dreamy.feature.tutorial",
     "com.dreamy.feedback": "file:../LocalPackages/com.dreamy.feedback",
+    "com.dreamy.localization": "file:../LocalPackages/com.dreamy.localization",
     "com.dreamy.ui": "file:../LocalPackages/com.dreamy.ui",
     "com.unity.addressables": "2.9.1",
     "com.unity.ai.navigation": "2.0.13",

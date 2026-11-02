@@ -1,0 +1,92 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "ea04cbe1efb24b33973c7f51158aa779",
+      "status": "failed",
+      "mode": "PlayMode",
+      "started_unix_ms": 1793593743253,
+      "finished_unix_ms": 1793593755733,
+      "last_update_unix_ms": 1793593755733,
+      "progress": {
+        "completed": 14,
+        "total": 7,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1793593755318,
+        "last_finished_test_full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.SameLocaleDoesNotEmitAndUnsupportedLocaleDoesNotChange",
+        "last_finished_unix_ms": 1793593755698,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "run_in_background": null,
+        "focus_nudge_attempts": null,
+        "focus_nudge_limit": null,
+        "focus_nudge_status": null,
+        "blocked_reason": null,
+        "failures_so_far": [
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.ArgumentsUpdateAfterLocaleChange",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 15\nBạn nhận được {amount} xu\n---------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.ArgumentsUpdateAfterLocaleChange",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 15\nBạn nhận được {amount} xu\n---------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.CancelledRequestDoesNotCommit",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 14\nYou received {amount} coins\n--------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.CancelledRequestDoesNotCommit",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 14\nYou received {amount} coins\n--------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.ConcurrentInitializationAndDisposeAreSafe",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 14\nYou received {amount} coins\n--------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.ConcurrentInitializationAndDisposeAreSafe",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 14\nYou received {amount} coins\n--------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.DropdownChangesPanelAndSceneAndReopens",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 14\nYou received {amount} coins\n--------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.DropdownChangesPanelAndSceneAndReopens",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 14\nYou received {amount} coins\n--------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.ExternalLocaleChangeUpdatesOpenSelectorWithoutLoop",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 14\nYou received {amount} coins\n--------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.ExternalLocaleChangeUpdatesOpenSelectorWithoutLoop",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 14\nYou received {amount} coins\n--------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.ReloadRestoresPreference",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 14\nYou received {amount} coins\n--------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.ReloadRestoresPreference",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 14\nYou received {amount} coins\n--------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.SameLocaleDoesNotEmitAndUnsupportedLocaleDoesNotChange",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 14\nYou received {amount} coins\n--------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          },
+          {
+            "full_name": "Dreamy.Template.Tests.Localization.LocalizationSceneTests.SameLocaleDoesNotEmitAndUnsupportedLocaleDoesNotChange",
+            "message": "SetUp : Unhandled log message: '[Exception] FormattingException: Error parsing format string: Could not evaluate the selector \"amount\" at 14\nYou received {amount} coins\n--------------^'. Use UnityEngine.TestTools.LogAssert.Expect"
+          }
+        ],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": null
+    },
+    "hint": null
+  }
+}

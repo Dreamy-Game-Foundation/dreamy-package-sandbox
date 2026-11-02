@@ -32,12 +32,12 @@ namespace Dreamy.Template.Editor
                 throw new InvalidOperationException("Run the benchmark in Edit Mode.");
             if (string.IsNullOrWhiteSpace(sourceIdentity))
                 throw new ArgumentException("Supply package SHAs plus dirty-source identity.", nameof(sourceIdentity));
-            string root = Path.GetFullPath(Path.Combine(Application.dataPath, "..", ".omo"));
+            string root = Path.GetFullPath(Path.Combine(Application.dataPath, "..", "docs", "evidence"));
             string path = Path.GetFullPath(Path.IsPathRooted(outputPath) ? outputPath :
                 Path.Combine(Application.dataPath, "..", outputPath));
             if (!path.StartsWith(root + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase) ||
                 !path.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
-                throw new ArgumentException("The output must be a JSON file inside this project's .omo directory.");
+                throw new ArgumentException("The output must be a JSON file inside this project's docs/evidence directory.");
             if (File.Exists(path))
                 throw new ArgumentException("Use a fresh output path so the monitor cannot read a stale result.");
             Directory.CreateDirectory(Path.GetDirectoryName(path));

@@ -1,6 +1,6 @@
 # Plan thêm và hoàn thiện Dreamy Feedback
 
-Ngày: 2026-10-07. Trạng thái: đã thực hiện package, hai sample và Foundation integration. Feedback đã được commit/push tại `1d029ba`; integration sandbox được xuất bản trên nhánh `feat/feedback-integration`. Kết quả validation được ghi tại `LocalPackages/com.dreamy.feedback/VALIDATION.md` và `.omo/evidence/feedback/`. Chưa tạo tag hoặc kiểm tra thiết bị mobile. Các nhận xét khảo sát bên dưới mô tả baseline trước implementation.
+Ngày: 2026-10-07. Trạng thái: đã thực hiện package, hai sample và Foundation integration. Feedback đã được commit/push tại `1d029ba`; integration sandbox được xuất bản trên nhánh `feat/feedback-integration`. Kết quả validation được ghi tại `LocalPackages/com.dreamy.feedback/VALIDATION.md` và `docs/evidence/feedback/`. Chưa tạo tag hoặc kiểm tra thiết bị mobile. Các nhận xét khảo sát bên dưới mô tả baseline trước implementation.
 
 ## 1. Mục tiêu và phạm vi
 
@@ -174,4 +174,4 @@ Không khởi chạy batchmode đồng thời với Editor đang mở cùng proj
 - Phase A–D đã thực hiện: submodule/UPM, Runtime/Editor, hai sample đầy đủ và Foundation dùng chung wallet/audio/feedback.
 - Phase E: static checks pass; 4/4 EditMode, 14/14 PlayMode sandbox, 13/13 PlayMode consumer integration; Windows player build và smoke pass, không log error/exception.
 - Import TMP Essential Resources một lần trước khi chạy sample. Sample dùng font ASCII tĩnh; không đóng gói thêm resource TMP Settings trùng với project. Input dùng Old/Both hoặc thay module khi dùng Input System-only.
-- Kết quả, fixture và giới hạn nằm ở `LocalPackages/com.dreamy.feedback/VALIDATION.md` và `.omo/evidence/feedback/`. Mobile build/device và phát hành Git là các gate còn lại; implementation local đã hoàn tất.
+- Kết quả, fixture và giới hạn nằm ở `LocalPackages/com.dreamy.feedback/VALIDATION.md` và `docs/evidence/feedback/`. Mobile build/device và phát hành Git là các gate còn lại; implementation local đã hoàn tất.

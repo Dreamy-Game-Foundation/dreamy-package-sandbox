@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Dreamy.Audio;
+using Dreamy.Localization;
+using Dreamy.Template.Localization;
 using Dreamy.Core;
 using Dreamy.Core.Pooling;
 using Dreamy.DataConfig;
@@ -43,6 +45,9 @@ namespace Dreamy.Template
         [SerializeField] private bool prettySaveInEditor = true;
         [SerializeField] private string saveDirectory = "DreamySaves";
         [SerializeField] private DreamyAudioProfile audioProfile;
+        [SerializeField] private DreamyLocalizationProfile localizationProfile;
+        private LocalizationService ownedLocalization;
+        private LocalizationSettingsLanguageGateway ownedLanguageGateway;
         [SerializeField] private string storeListingUrl;
         [SerializeField] private FeedbackHost feedbackPrefab;
         [SerializeField, Tooltip("Camera used by Feedback camera shake and world-to-UI text. Falls back to MainCamera.")]
@@ -94,6 +99,7 @@ namespace Dreamy.Template
 
                 // 3. Install DataConfig Service (called last due to async loading)
                 await InstallDataConfigServiceAsync(cancellationToken);
+                await InstallLocalizationAsync(cancellationToken);
                 InstallPanelPresenters();
 
                 State = BootstrapState.Ready;
@@ -102,8 +108,42 @@ namespace Dreamy.Template
             {
                 InitializationException = exception;
                 State = BootstrapState.Failed;
+                ReleaseLocalization();
                 ReleaseFeedbackAndPool();
                 Debug.LogException(exception, this);
+            }
+        }
+
+        private async UniTask InstallLocalizationAsync(CancellationToken token)
+        {
+            if (localizationProfile == null) return;
+            if (!ServiceLocator.TryGet<ILocalizationService>(out var localization))
+            {
+                ownedLocalization = new LocalizationService(localizationProfile);
+                localization = ownedLocalization;
+                ServiceLocator.Register<ILocalizationService>(localization);
+            }
+            await localization.InitializeAsync(token);
+            if (!ServiceLocator.TryGet<ISettingsLanguageGateway>(out _))
+            {
+                ownedLanguageGateway = new LocalizationSettingsLanguageGateway(localization);
+                ServiceLocator.Register<ISettingsLanguageGateway>(ownedLanguageGateway);
+            }
+        }
+
+        private void ReleaseLocalization()
+        {
+            if (ownedLanguageGateway != null)
+            {
+                if (ServiceLocator.TryGet<ISettingsLanguageGateway>(out var gateway) && ReferenceEquals(gateway, ownedLanguageGateway))
+                    ServiceLocator.Unregister<ISettingsLanguageGateway>();
+                ownedLanguageGateway.Dispose(); ownedLanguageGateway = null;
+            }
+            if (ownedLocalization != null)
+            {
+                if (ServiceLocator.TryGet<ILocalizationService>(out var service) && ReferenceEquals(service, ownedLocalization))
+                    ServiceLocator.Unregister<ILocalizationService>();
+                ownedLocalization.Dispose(); ownedLocalization = null;
             }
         }
 
@@ -157,7 +197,8 @@ namespace Dreamy.Template
                 }
                 SettingsFeatureInstaller.Install(presenterFactory, ServiceLocator.Get<IAudioService>(), OpenRateUs,
                     platform ?? new SettingsPlatformGateway(storeListingUrl), haptics,
-                    review ?? new PlayerPrefsSettingsReviewGateway(resourceWallet));
+                    review ?? new PlayerPrefsSettingsReviewGateway(resourceWallet),
+                    ServiceLocator.TryGet<ISettingsLanguageGateway>(out var language) ? language : null);
             }
             else SettingsFeatureInstaller.Install(presenterFactory, settings, OpenRateUs);
             var config = ServiceLocator.Get<IDataConfigService>();
@@ -403,6 +444,7 @@ namespace Dreamy.Template
 
         private void OnDestroy()
         {
+            ReleaseLocalization();
             SceneManager.sceneLoaded -= OnSceneLoaded;
             if (PanelManager.HasInstance && ReferenceEquals(PanelManager.Instance.PresenterFactory, presenterFactory))
                 PanelManager.Instance.PresenterFactory = null;

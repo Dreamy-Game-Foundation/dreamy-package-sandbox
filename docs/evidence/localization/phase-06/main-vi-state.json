@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "message": "Code executed successfully.",
+  "data": {
+    "result": {
+      "bootstrap": "Ready",
+      "locale": "vi",
+      "texts": [
+        "Ngôn ngữ",
+        "Mở Cài đặt",
+        "Cài đặt",
+        "Bản thử nghiệm Dreamy Foundation",
+        "Đóng",
+        "Rung",
+        "Hiệu ứng âm thanh",
+        "Nhạc nền"
+      ]
+    },
+    "compiler": "codedom"
+  }
+}

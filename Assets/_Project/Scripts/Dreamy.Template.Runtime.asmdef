@@ -44,7 +44,10 @@
     "Dreamy.Shop.UI.Integration",
     "Dreamy.Connectivity.Runtime",
     "Dreamy.Connectivity.Feature",
-    "Dreamy.Connectivity.UI"
+    "Dreamy.Connectivity.UI",
+    "Dreamy.Localization.Runtime",
+    "Dreamy.Localization.Runtime.UI",
+    "Unity.Localization"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

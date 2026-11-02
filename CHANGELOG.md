@@ -21,4 +21,4 @@
 - Integrate owned LeanPool lifecycle, save initialization, confirmed purchase presentation, Canvas UI bursts and camera rebinding in the sandbox.
 - Preserve imported sample version folders as existing Unity import snapshots; fresh imports use the updated package versions. Basic Feedback remains independent of optional DOTween/URP attachments present in the sandbox.
 
-Validation results are recorded in `.omo/evidence/samples-release/summary.json`.
+Validation results are recorded in `docs/evidence/samples-release/summary.json`.

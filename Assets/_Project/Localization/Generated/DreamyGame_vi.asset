@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DreamyGame_vi
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: vi
+  m_SharedData: {fileID: 11400000, guid: db428fc826f5c1106ba486c7dc98b135, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 2503060853407350992
+  m_TableData:
+  - m_Id: 1090449408
+    m_Localized: "C\xE0i \u0111\u1EB7t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1111420928
+    m_Localized: "Nh\u1EA1c n\u1EC1n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615232
+    m_Localized: "Hi\u1EC7u \u1EE9ng \xE2m thanh"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615233
+    m_Localized: Rung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615234
+    m_Localized: "Quy\u1EC1n ri\xEAng t\u01B0 & GDPR"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615235
+    m_Localized: "Kh\xF4i ph\u1EE5c giao d\u1ECBch"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615236
+    m_Localized: "\u0110\xE1nh gi\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615237
+    m_Localized: "\u0110\xF3ng"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615238
+    m_Localized: "Ng\xF4n ng\u1EEF"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615239
+    m_Localized: "Ng\xF4n ng\u1EEF ch\u01B0a kh\u1EA3 d\u1EE5ng"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615240
+    m_Localized: "Kh\xF4ng \u0111\u1ED5i \u0111\u01B0\u1EE3c ng\xF4n ng\u1EEF. H\xE3y
+      th\u1EED l\u1EA1i."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615241
+    m_Localized: "Ki\u1EC3m th\u1EED ng\xF4n ng\u1EEF"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615242
+    m_Localized: "Ch\xE0o m\u1EEBng! \u0110\u1ED5i ng\xF4n ng\u1EEF trong C\xE0i
+      \u0111\u1EB7t."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615243
+    m_Localized: "B\u1EA1n nh\u1EADn \u0111\u01B0\u1EE3c {amount} xu"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350992
+  - m_Id: 1119809536
+    m_Localized: "M\u1EDF C\xE0i \u0111\u1EB7t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809537
+    m_Localized: "Th\xEAm m\u1ED9t xu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809538
+    m_Localized: "X\xF3a ng\xF4n ng\u1EEF \u0111\xE3 l\u01B0u (test)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3333645332480
+    m_Localized: "B\u1EA3n th\u1EED nghi\u1EC7m Dreamy Foundation"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 2503060853407350992
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1115615243

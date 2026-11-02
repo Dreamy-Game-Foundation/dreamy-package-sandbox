@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "message": "Code executed successfully.",
+  "data": {
+    "result": {
+      "ready": true,
+      "texts": [
+        "Xóa ngôn ngữ đã lưu (test)",
+        "Chào mừng! Đổi ngôn ngữ trong Cài đặt.",
+        "Kiểm thử ngôn ngữ",
+        "Thêm một xu",
+        "vi",
+        "Mở Cài đặt",
+        "Bạn nhận được 42 xu"
+      ],
+      "sources": [
+        "ListFormatter",
+        "PersistentVariablesSource",
+        "DictionarySource",
+        "ValueTupleSource",
+        "XmlSource",
+        "ReflectionSource",
+        "DefaultSource"
+      ]
+    },
+    "compiler": "codedom"
+  }
+}

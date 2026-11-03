@@ -1,0 +1,20 @@
+{
+  "settings.title": "การตั้งค่า",
+  "settings.music": "เพลง",
+  "settings.sfx": "เอฟเฟกต์เสียง",
+  "settings.haptics": "การสั่น",
+  "settings.privacy": "ความเป็นส่วนตัวและ GDPR",
+  "settings.restore": "กู้คืนการซื้อ",
+  "settings.rate": "ให้คะแนนเรา",
+  "settings.close": "ปิด",
+  "settings.language": "ภาษา",
+  "settings.language_unavailable": "ยังไม่รองรับภาษานี้",
+  "settings.language_failed": "เปลี่ยนภาษาไม่สำเร็จ โปรดลองอีกครั้ง",
+  "demo.title": "ทดสอบการแปลภาษา",
+  "demo.greeting": "ยินดีต้อนรับ! เปลี่ยนภาษาได้ในการตั้งค่า",
+  "demo.reward": "คุณได้รับ {amount} เหรียญ",
+  "demo.open_settings": "เปิดการตั้งค่า",
+  "demo.increment": "เพิ่มหนึ่งเหรียญ",
+  "demo.reset": "ล้างภาษาที่บันทึกไว้ (ทดสอบ)",
+  "main.title": "ตัวอย่าง Dreamy Foundation"
+}

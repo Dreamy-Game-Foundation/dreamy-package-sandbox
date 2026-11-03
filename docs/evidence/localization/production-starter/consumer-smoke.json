@@ -1,0 +1,6 @@
+{
+    "passed": true,
+    "version": "0.2.0",
+    "locales": 12,
+    "detail": "Fresh consumer: import 12x18; sample bootstrap/label applied en -> fr -> ja; no Settings package installed."
+}

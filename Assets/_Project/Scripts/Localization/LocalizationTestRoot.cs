@@ -3,6 +3,7 @@ using Cysharp.Threading.Tasks;
 using Dreamy.Audio;
 using Dreamy.Feature.Settings.Integration;
 using Dreamy.Localization;
+using Dreamy.Localization.SettingsIntegration;
 using Dreamy.Localization.UI;
 using Dreamy.Settings;
 using TMPro;

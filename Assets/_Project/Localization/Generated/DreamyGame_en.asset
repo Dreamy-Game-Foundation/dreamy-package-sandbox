@@ -92,6 +92,140 @@ MonoBehaviour:
     m_Localized: Dreamy Foundation Demo
     m_Metadata:
       m_Items: []
+  - m_Id: 478936160989184
+    m_Localized: Toggle panel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515136
+    m_Localized: Add score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515137
+    m_Localized: Damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515138
+    m_Localized: Heal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515139
+    m_Localized: Save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515140
+    m_Localized: Load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515141
+    m_Localized: Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515142
+    m_Localized: Daily reward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515143
+    m_Localized: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515144
+    m_Localized: Rate us
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515145
+    m_Localized: Missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515146
+    m_Localized: Progression
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515147
+    m_Localized: Lucky wheel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515148
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515149
+    m_Localized: Economy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515150
+    m_Localized: Feedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515151
+    m_Localized: Online reward (+10 score)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515152
+    m_Localized: "Waiting for initialization\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515153
+    m_Localized: 'Score: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350991
+  - m_Id: 478936215515154
+    m_Localized: 'Health: {value:0}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350991
+  - m_Id: 478936215515155
+    m_Localized: 'Ready | Launches: {launch} | Starting coins: {coins}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350991
+  - m_Id: 478936215515156
+    m_Localized: 'Score updated: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350991
+  - m_Id: 478936215515157
+    m_Localized: 'Saved | Coins: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350991
+  - m_Id: 478936215515158
+    m_Localized: 'Config loaded | Coins: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350991
+  - m_Id: 478936215515159
+    m_Localized: 'Online reward unavailable: connection service not ready.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515160
+    m_Localized: "Online reward: checking connection\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515161
+    m_Localized: 'Online reward received: +10 score (demo)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515162
+    m_Localized: Online reward failed. See Console.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515163
+    m_Localized: Online reward cancelled. No reward granted.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515164
+    m_Localized: Connection retries exhausted. No reward granted.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515165
+    m_Localized: Reward outcome unknown. Check before retrying.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515166
+    m_Localized: Another operation is running. Try again later.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
@@ -101,3 +235,9 @@ MonoBehaviour:
         m_Entries: 
         m_SharedEntries:
         - id: 1115615243
+        - id: 478936215515153
+        - id: 478936215515154
+        - id: 478936215515155
+        - id: 478936215515156
+        - id: 478936215515157
+        - id: 478936215515158

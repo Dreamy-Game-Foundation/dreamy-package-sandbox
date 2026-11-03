@@ -1,5 +1,7 @@
 using System;
 using Dreamy.UI;
+using Dreamy.Localization;
+using Dreamy.Localization.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -102,9 +104,23 @@ namespace Dreamy.Template.Demo
 
         private void OnOnlineReward() => OnlineRewardRequested?.Invoke();
 
-        public void SetStatus(string value) => statusText.text = value;
-        public void SetScore(int value) => scoreText.text = $"Score: {value}";
-        public void SetHealth(float value) => healthText.text = $"Health: {value:0}";
+        public void SetStatus(string value)
+        {
+            // Raw diagnostic callers must detach the previous localized status first.
+            if (statusText.TryGetComponent<LocalizedTmpText>(out var binding)) binding.ClearReference();
+            statusText.text = value;
+        }
+        public void SetLocalizedStatus(string key, string fallback, params object[] arguments) =>
+            SetLocalizedText(statusText, key, fallback, arguments);
+        public void SetScore(int value) => SetLocalizedText(scoreText, "main.score", $"Score: {value}", new { value });
+        public void SetHealth(float value) => SetLocalizedText(healthText, "main.health", $"Health: {value:0}", new { value });
+
+        private static void SetLocalizedText(TMP_Text text, string key, string fallback, params object[] arguments)
+        {
+            if (text.TryGetComponent<LocalizedTmpText>(out var binding))
+                binding.Configure(new LocalizationKey("DreamyGame", key), fallback, arguments);
+            else text.text = fallback;
+        }
 
         private void OnAddScore() => AddScoreRequested?.Invoke();
         private void OnDamage() => DamageRequested?.Invoke();

@@ -4,7 +4,7 @@ Ngày: 2026-11-02. **Pilot đã triển khai và kiểm chứng; các gate relea
 
 ## Mục tiêu nghiệm thu
 
-Mở `LocalizationSettingsTest.unity`, Play, mở Settings và đổi English/Tiếng Việt: UI trong panel và bên ngoài đổi ngay, không reload scene. Đóng/mở panel và khởi động lại giữ locale đã áp dụng thành công.
+Chạy menu **Dreamy → Localization → Play Settings Test**, mở Settings và chọn trong 12 ngôn ngữ: UI trong view và bên ngoài đổi ngay, không reload scene. Scene độc lập với PanelManager. Đóng/mở view và khởi động lại giữ locale đã áp dụng thành công.
 
 ## Tài liệu
 
@@ -37,7 +37,7 @@ Tests chạy theo từng phase; Phase 7 tổng hợp regression và bàn giao, k
 
 ## Quyết định đã chốt
 
-- Mỗi locale một JSON; các file dùng chung key, source locale là en, sample có en/vi.
+- Mỗi locale một JSON; các file dùng chung key, source/fallback là en. Fixture hiện có en/vi/de/es/fr/id/ja/ko/pt-BR/ru/th/zh-Hans.
 - JSON → Editor validate/import → Unity Localization Tables → runtime binding.
 - Settings gọi gateway; localization sở hữu locale/preference. Panel không trực tiếp ghi save.
 - Giữ Unity Localization làm engine và giữ serialized references/GUID hiện có.

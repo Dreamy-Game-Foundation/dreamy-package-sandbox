@@ -6,6 +6,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Dreamy.Audio;
 using Dreamy.Localization;
+using Dreamy.Localization.SettingsIntegration;
 using Dreamy.Template.Localization;
 using Dreamy.Core;
 using Dreamy.Core.Pooling;

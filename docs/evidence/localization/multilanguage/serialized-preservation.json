@@ -1,0 +1,31 @@
+{
+  "Assets/Samples/Dreamy Settings/0.2.0/Settings Feature/Prefabs/SettingsPanel.prefab": {
+    "allFileIdsPreserved": true,
+    "objectCount": 161
+  },
+  "Assets/_Project/Localization/Generated/StandaloneSettingsView.prefab": {
+    "allFileIdsPreserved": true,
+    "objectCount": 159
+  },
+  "Assets/Samples/Dreamy Settings/0.2.0/Settings Feature/Prefabs/SettingsPanel.prefab.meta": {
+    "unchanged": true
+  },
+  "Assets/_Project/Localization/Generated/StandaloneSettingsView.prefab.meta": {
+    "unchanged": true
+  },
+  "Assets/_Project/Localization/Generated/LocalizationFont.asset.meta": {
+    "unchanged": true
+  },
+  "Assets/_Project/Localization/Generated/DreamyGame Shared Data.asset.meta": {
+    "unchanged": true
+  },
+  "Assets/_Project/Scenes/LocalizationSettingsTest.unity.meta": {
+    "unchanged": true
+  },
+  "Assets/_Project/Localization/Generated/DreamyGame Shared Data.asset": {
+    "byteIdentical": true
+  },
+  "Assets/_Project/Scenes/LocalizationSettingsTest.unity": {
+    "byteIdentical": true
+  }
+}

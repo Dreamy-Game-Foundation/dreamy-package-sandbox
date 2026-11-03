@@ -66,7 +66,9 @@ namespace Dreamy.Template.Editor
             try
             {
                 var installer = scene.GetRootGameObjects().SelectMany(g=>g.GetComponentsInChildren<GameInstaller>(true)).Single();
-                Assign(installer,"localizationProfile",AssetDatabase.LoadAssetAtPath<DreamyLocalizationProfile>(Base + "/Profiles/Runtime.asset"));
+                var profile=AssetDatabase.LoadAssetAtPath<DreamyLocalizationProfile>(ProductionBase + "/Profiles/Runtime.asset")
+                    ?? AssetDatabase.LoadAssetAtPath<DreamyLocalizationProfile>(Base + "/Profiles/Runtime.asset");
+                Assign(installer,"localizationProfile",profile);
                 EditorSceneManager.MarkSceneDirty(scene); EditorSceneManager.SaveScene(scene);
             }
             finally { if (opened) EditorSceneManager.CloseScene(scene,true); }
@@ -78,18 +80,36 @@ namespace Dreamy.Template.Editor
             var root=PrefabUtility.LoadPrefabContents(path);
             try
             {
-                var font=AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(Base+"/Generated/LocalizationFont.asset");
+                var font=CreateFont();
+                var keys=new Dictionary<string,string>
+                {
+                    ["Title"]="main.title", ["StatusText"]="main.waiting", ["ScoreText"]="main.score", ["HealthText"]="main.health",
+                    ["ToggleButton"]="main.toggle", ["AddScoreButton"]="main.add_score", ["DamageButton"]="main.damage",
+                    ["HealButton"]="main.heal", ["SaveButton"]="main.save", ["LoadButton"]="main.load", ["ShopButton"]="main.shop",
+                    ["DailyRewardButton"]="main.daily_reward", ["SoundButton"]="main.sound", ["SettingsButton"]="demo.open_settings",
+                    ["RateUsButton"]="main.rate", ["MissionsButton"]="main.missions", ["ProgressionButton"]="main.progression",
+                    ["LuckyWheelButton"]="main.lucky_wheel", ["TutorialButton"]="main.tutorial", ["EconomyButton"]="main.economy",
+                    ["FeedbackButton"]="main.feedback", ["OnlineRewardButton"]="main.online_reward"
+                };
                 foreach(var text in root.GetComponentsInChildren<TMP_Text>(true))
                 {
-                    string key=text.text=="Dreamy Foundation Demo"?"main.title":text.text=="Open Settings"?"demo.open_settings":null;
-                    if(key==null) continue;
-                    text.font=font; Bind(text,key);
+                    if(!keys.TryGetValue(text.name,out var key) && !keys.TryGetValue(text.transform.parent.name,out key))
+                        throw new InvalidOperationException("Unmapped Foundation label: "+text.name);
+                    text.font=font; text.enableAutoSizing=true;text.fontSizeMin=18;text.fontSizeMax=Mathf.Max(18,text.fontSize);
+                    Bind(text,key);
+                    // Arguments are runtime state, not serialized prefab data. The presenter configures these
+                    // bindings atomically with their values before starting a Smart String lookup.
+                    if(key=="main.score" || key=="main.health")text.GetComponent<LocalizedTmpText>().ClearReference();
                 }
                 PrefabUtility.SaveAsPrefabAsset(root,path);
             }
             finally {PrefabUtility.UnloadPrefabContents(root);}
         }
         public const string Base = "Assets/_Project/Localization";
+        public const string ProductionBase = Base + "/Production";
+        public static string SourceDirectory => Directory.Exists(ProductionBase+"/Source") ? ProductionBase+"/Source" : Base+"/Source";
+        public static string ImportProfilePath => AssetDatabase.LoadAssetAtPath<LocalizationJsonImportProfile>(ProductionBase+"/Profiles/JsonImport.asset") != null
+            ? ProductionBase+"/Profiles/JsonImport.asset" : Base+"/Profiles/JsonImport.asset";
         public const string Table = "DreamyGame";
         public const string ScenePath = "Assets/_Project/Scenes/LocalizationSettingsTest.unity";
         public const string SettingsPath = "Assets/Samples/Dreamy Settings/0.2.0/Settings Feature/Prefabs/SettingsPanel.prefab";
@@ -102,7 +122,7 @@ namespace Dreamy.Template.Editor
                     throw new InvalidOperationException("Save dirty scenes before generating the localization scene.");
             Directory.CreateDirectory(Base + "/Generated"); Directory.CreateDirectory(Base + "/Profiles");
             AssetDatabase.Refresh();
-            var import = AssetDatabase.LoadAssetAtPath<LocalizationJsonImportProfile>(Base + "/Profiles/JsonImport.asset");
+            var import = AssetDatabase.LoadAssetAtPath<LocalizationJsonImportProfile>(ImportProfilePath);
             if (import == null)
             {
                 import = ScriptableObject.CreateInstance<LocalizationJsonImportProfile>();
@@ -110,11 +130,12 @@ namespace Dreamy.Template.Editor
             }
             import.SourceLocale = "en"; import.FallbackLocale = "en"; import.Table = Table;
             import.OutputDirectory = Base + "/Generated";
-            import.LocaleFiles = new List<TextAsset> { AssetDatabase.LoadAssetAtPath<TextAsset>(Base + "/Source/en.json"), AssetDatabase.LoadAssetAtPath<TextAsset>(Base + "/Source/vi.json") };
-            import.SmartKeys = new List<string> { "demo.reward" };
+            import.LocaleFiles = FindLocaleFiles();
+            import.SmartKeys = FoundationSmartKeys();
             EditorUtility.SetDirty(import); AssetDatabase.SaveAssetIfDirty(import);
             LocalizationJsonImporter.Apply(LocalizationJsonImporter.Preview(import));
-            var profile = AssetDatabase.LoadAssetAtPath<DreamyLocalizationProfile>(Base + "/Profiles/Runtime.asset");
+            var profile = AssetDatabase.LoadAssetAtPath<DreamyLocalizationProfile>(ProductionBase+"/Profiles/Runtime.asset")
+                ?? AssetDatabase.LoadAssetAtPath<DreamyLocalizationProfile>(Base + "/Profiles/Runtime.asset");
             if (profile == null) { profile = ScriptableObject.CreateInstance<DreamyLocalizationProfile>(); AssetDatabase.CreateAsset(profile, Base + "/Profiles/Runtime.asset"); }
             var data = new SerializedObject(profile);
             data.FindProperty("useDefaultSmartFormatterAtRuntime").boolValue = true;
@@ -126,6 +147,7 @@ namespace Dreamy.Template.Editor
             tables.GetArrayElementAtIndex(0).FindPropertyRelative("policy").enumValueIndex = 1;
             data.ApplyModifiedPropertiesWithoutUndo(); AssetDatabase.SaveAssetIfDirty(profile);
             var font = CreateFont();
+            ConfigureSettingsPrefab(font);
             CreateStandaloneSettingsPrefab();
             var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             var camera = new GameObject("Main Camera", typeof(Camera), typeof(AudioListener)); camera.tag = "MainCamera";
@@ -167,6 +189,12 @@ namespace Dreamy.Template.Editor
         public const string StandaloneSettingsPath = Base + "/Generated/StandaloneSettingsView.prefab";
         private static void CreateStandaloneSettingsPrefab()
         {
+            // Update an existing view in place: cloning over it can remap duplicate child names/fileIDs.
+            if (AssetDatabase.LoadAssetAtPath<GameObject>(StandaloneSettingsPath) != null)
+            {
+                ConfigureSettingsPrefab(AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(Base + "/Generated/LocalizationFont.asset"), StandaloneSettingsPath);
+                return;
+            }
             var contents = PrefabUtility.LoadPrefabContents(SettingsPath);
             try
             {
@@ -175,7 +203,7 @@ namespace Dreamy.Template.Editor
                 var source = new SerializedObject(panel);
                 var view = contents.AddComponent<StandaloneSettingsView>();
                 var target = new SerializedObject(view);
-                foreach (var field in new[] { "musicToggle", "sfxToggle", "hapticsToggle", "gdprButton", "restorePurchasesButton", "openRateUsButton", "closeButton", "languageDropdown", "languageError" })
+                foreach (var field in new[] { "musicToggle", "sfxToggle", "hapticsToggle", "gdprButton", "restorePurchasesButton", "openRateUsButton", "closeButton", "languageDropdown", "languageError", "languageLabel", "languageIcons" })
                     target.FindProperty(field).objectReferenceValue = source.FindProperty(field).objectReferenceValue;
                 target.ApplyModifiedPropertiesWithoutUndo();
                 UnityEngine.Object.DestroyImmediate(panel);
@@ -213,10 +241,30 @@ namespace Dreamy.Template.Editor
             EditorSceneManager.SaveScene(scene);
         }
 
+        private static List<TextAsset> FindLocaleFiles() => Directory.GetFiles(SourceDirectory, "*.json")
+            .OrderBy(path => path, StringComparer.Ordinal)
+            .Select(path => AssetDatabase.LoadAssetAtPath<TextAsset>(path.Replace('\\', '/'))).ToList();
+
+        [MenuItem("Dreamy/Localization/Refresh Languages And Dropdown")]
+        public static void RefreshLanguagesAndDropdown()
+        {
+            if (Application.isPlaying) throw new InvalidOperationException("Exit Play Mode first.");
+            var profile = AssetDatabase.LoadAssetAtPath<LocalizationJsonImportProfile>(ImportProfilePath);
+            if (profile == null) throw new InvalidOperationException("Build the localization test scene first.");
+            profile.LocaleFiles = FindLocaleFiles();
+            profile.SmartKeys = FoundationSmartKeys();
+            EditorUtility.SetDirty(profile); AssetDatabase.SaveAssetIfDirty(profile);
+            LocalizationJsonImporter.Apply(LocalizationJsonImporter.Preview(profile));
+            ConfigureSettingsPrefab(CreateFont());
+            CreateStandaloneSettingsPrefab();
+            Debug.Log("Localization languages and both Settings dropdowns refreshed without rebuilding the scene.");
+        }
+
         private static TMP_FontAsset CreateFont()
         {
+            var production = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(ProductionBase + "/Fonts/TMP/LocalizationFont.asset");
             var path = Base + "/Generated/LocalizationFont.asset";
-            var font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(path);
+            var font = production ?? AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(path);
             if (font == null)
             {
                 font = TMP_FontAsset.CreateFontAsset(AssetDatabase.LoadAssetAtPath<Font>("Assets/TextMesh Pro/Fonts/LiberationSans.ttf"));
@@ -224,16 +272,48 @@ namespace Dreamy.Template.Editor
                 AssetDatabase.AddObjectToAsset(font.material,font);
                 foreach (var atlas in font.atlasTextures) AssetDatabase.AddObjectToAsset(atlas,font);
             }
-            var chars = "EnglishTiếng ViệtCài đặtNgôn ngữÂĂĐÊÔƠƯâăđêôơư" + File.ReadAllText(Base + "/Source/vi.json");
-            if (!font.TryAddCharacters(chars,out string missing)) throw new InvalidOperationException("Missing font glyphs: " + missing);
+            var cjk = production != null ? production.fallbackFontAssetTable[0] : CreateFallbackFont("LocalizationCJK", Base + "/Fonts/LocalizationCJKTest.otf");
+            var thai = production != null ? production.fallbackFontAssetTable[1] : CreateFallbackFont("LocalizationThai", Base + "/Fonts/NotoSansThai-Regular.ttf");
+            font.fallbackFontAssetTable = new List<TMP_FontAsset> { cjk, thai };
+            var chars = string.Concat(FindLocaleFiles().Select(file => file.text + System.Globalization.CultureInfo
+                .GetCultureInfo(Path.GetFileNameWithoutExtension(AssetDatabase.GetAssetPath(file))).NativeName));
+            chars = new string(chars.Where(c => !char.IsControl(c)).Distinct().ToArray());
+            var fonts = new[] { font, cjk, thai };
+            foreach (var asset in fonts)
+            {
+                var pending = new string(chars.Where(c => !fonts.Any(f => f.HasCharacter(c))).ToArray());
+                if (!string.IsNullOrEmpty(pending)) asset.TryAddCharacters(pending, true);
+            }
+            // TMP 5 can return the entire input as "missing" when all glyphs already exist.
+            // Verify the actual character tables so repeating this command stays idempotent.
+            var missing = new string(chars.Where(c => !fonts.Any(f => f.HasCharacter(c))).ToArray());
+            if (!string.IsNullOrEmpty(missing)) throw new InvalidOperationException("Missing font glyphs: " + missing);
+            foreach (var asset in new[] { cjk, thai })
+            { EditorUtility.SetDirty(asset); AssetDatabase.SaveAssetIfDirty(asset); }
             EditorUtility.SetDirty(font); AssetDatabase.SaveAssetIfDirty(font); return font;
         }
-        public static void ConfigureSettingsPrefab(TMP_FontAsset font)
+        private static List<string> FoundationSmartKeys() => new() { "demo.reward", "main.score", "main.health", "main.ready", "main.score_changed", "main.saved", "main.loaded" };
+        private static TMP_FontAsset CreateFallbackFont(string name, string sourcePath)
         {
-            var root = PrefabUtility.LoadPrefabContents(SettingsPath);
+            var path = Base + "/Generated/" + name + ".asset";
+            var font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(path);
+            if (font != null) return font;
+            var source = AssetDatabase.LoadAssetAtPath<Font>(sourcePath);
+            if (source == null) throw new InvalidOperationException("Font source missing: " + sourcePath);
+            font = TMP_FontAsset.CreateFontAsset(source);
+            font.name = name; AssetDatabase.CreateAsset(font, path);
+            AssetDatabase.AddObjectToAsset(font.material, font);
+            foreach (var atlas in font.atlasTextures) AssetDatabase.AddObjectToAsset(atlas, font);
+            return font;
+        }
+        public static void ConfigureSettingsPrefab(TMP_FontAsset font) => ConfigureSettingsPrefab(font, SettingsPath);
+        private static void ConfigureSettingsPrefab(TMP_FontAsset font, string path)
+        {
+            var root = PrefabUtility.LoadPrefabContents(path);
             try
             {
-                var panel = root.GetComponent<SettingsPanel>();
+                UnityEngine.Object panel = root.GetComponent<SettingsPanel>();
+                if (panel == null) panel = root.GetComponent<StandaloneSettingsView>();
                 var card = root.GetComponentsInChildren<RectTransform>(true).First(t=>t.name=="Card");
                 card.sizeDelta = new Vector2(700,1080);
                 card.GetComponent<Image>().color = new Color(.10f,.11f,.18f,1f);
@@ -242,6 +322,7 @@ namespace Dreamy.Template.Editor
                 foreach (var text in root.GetComponentsInChildren<TMP_Text>(true))
                 {
                     text.font=font;
+                    text.enableAutoSizing=true; text.fontSizeMin=22; text.fontSizeMax=Mathf.Max(22,text.fontSize);
                     if (labels.TryGetValue(text.text,out var key)) Bind(text,key);
                 }
                 card.Find("Close Button").GetComponent<RectTransform>().anchoredPosition = new Vector2(0,-440);
@@ -253,15 +334,43 @@ namespace Dreamy.Template.Editor
                     var rect = (RectTransform)go.transform; rect.anchorMin=rect.anchorMax=new Vector2(.5f,.5f);
                     rect.anchoredPosition=new Vector2(0,-310); rect.sizeDelta=new Vector2(420,70);
                 }
-                foreach (var text in dropdown.GetComponentsInChildren<TMP_Text>(true)) { text.font=font; text.color=Color.black; text.fontSize=30; }
+                ConfigureLanguageDropdown(dropdown, font);
                 if (card.Find("Language Label") == null) Text("Language Label",card,new Vector2(0,-225),new Vector2(420,60),font,"settings.language",32);
                 var error=card.Find("Language Error")?.GetComponent<TMP_Text>();
                 if (error == null) error=Text("Language Error",card,new Vector2(0,-375),new Vector2(600,60),font,"settings.language_failed",24);
                 error.color=new Color(1,.45f,.4f); error.gameObject.SetActive(false);
                 Assign(panel,"languageDropdown",dropdown); Assign(panel,"languageError",error);
-                PrefabUtility.SaveAsPrefabAsset(root,SettingsPath);
+                Assign(panel,"languageLabel",card.Find("Language Label").GetComponent<TMP_Text>());
+                var icons=AssetDatabase.LoadAssetAtPath<SettingsLanguageIcons>(Base+"/Profiles/LanguageIcons.asset");
+                if(icons!=null)
+                {
+                    Assign(panel,"languageIcons",icons);
+                    Dreamy.Localization.SettingsIntegration.Editor.SettingsLocalizationSetup.ConfigureDropdownIcons(dropdown);
+                }
+                PrefabUtility.SaveAsPrefabAsset(root,path);
             }
             finally { PrefabUtility.UnloadPrefabContents(root); }
+        }
+        private static void ConfigureLanguageDropdown(TMP_Dropdown dropdown, TMP_FontAsset font)
+        {
+            // TMP positions cloned options using the item rect's height, not the text's preferred height.
+            // The default 20px item overlaps a 30px label. Reserve 64px for every row and scroll the rest.
+            var template = dropdown.template;
+            template.sizeDelta = new Vector2(template.sizeDelta.x, 328);
+            var content = (RectTransform)template.Find("Viewport/Content");
+            content.sizeDelta = new Vector2(content.sizeDelta.x, 72);
+            var item = (RectTransform)content.Find("Item");
+            item.sizeDelta = new Vector2(item.sizeDelta.x, 64);
+            var label = dropdown.itemText.rectTransform;
+            label.offsetMin = new Vector2(40, 6); label.offsetMax = new Vector2(-16, -6);
+            var scroll = template.GetComponent<ScrollRect>();
+            scroll.horizontal = false; scroll.vertical = true; scroll.movementType = ScrollRect.MovementType.Clamped;
+            foreach (var text in dropdown.GetComponentsInChildren<TMP_Text>(true))
+            {
+                text.font=font; text.color=Color.black; text.fontSize=30;
+                text.enableAutoSizing=true; text.fontSizeMin=24; text.fontSizeMax=30;
+                text.textWrappingMode=TextWrappingModes.NoWrap; text.overflowMode=TextOverflowModes.Ellipsis;
+            }
         }
         public static void Assign(UnityEngine.Object target,string field,UnityEngine.Object value)
         { var so=new SerializedObject(target); so.FindProperty(field).objectReferenceValue=value; so.ApplyModifiedPropertiesWithoutUndo(); }

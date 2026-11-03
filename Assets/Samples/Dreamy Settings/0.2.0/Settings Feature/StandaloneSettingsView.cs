@@ -19,26 +19,40 @@ namespace Dreamy.Feature.Settings.Integration
         [SerializeField] private Button closeButton;
         [SerializeField] private TMP_Dropdown languageDropdown;
         [SerializeField] private TMP_Text languageError;
+        [SerializeField] private TMP_Text languageLabel;
+        [SerializeField] private SettingsLanguageIcons languageIcons;
         private readonly List<string> languageCodes = new();
         public event Action<string> LanguageRequested;
         public void RenderLanguage(SettingsLanguageState state)
         {
-            if (languageDropdown == null) return;
-            languageDropdown.gameObject.SetActive(state.IsAvailable);
+            SetLanguageVisible(state.IsAvailable);
+            if (languageDropdown == null || !state.IsAvailable) return;
             if (languageError != null) languageError.gameObject.SetActive(!string.IsNullOrEmpty(state.ErrorKey));
-            if (!state.IsAvailable) return;
             languageCodes.Clear();
-            var labels = new List<string>();
+            var labels = new List<TMP_Dropdown.OptionData>();
             int selected = 0;
             foreach (var option in state.Options)
             {
                 if (option.Code == state.CurrentCode) selected = languageCodes.Count;
-                languageCodes.Add(option.Code); labels.Add(option.DisplayName);
+                languageCodes.Add(option.Code);
+                labels.Add(new TMP_Dropdown.OptionData(option.DisplayName, languageIcons == null ? null : languageIcons.Find(option.Code), Color.white));
             }
             languageDropdown.ClearOptions(); languageDropdown.AddOptions(labels);
             languageDropdown.SetValueWithoutNotify(selected);
             languageDropdown.RefreshShownValue();
             languageDropdown.interactable = !state.IsBusy;
+        }
+        private void SetLanguageVisible(bool available)
+        {
+            if (languageLabel != null) languageLabel.gameObject.SetActive(available);
+            if (languageError != null) languageError.gameObject.SetActive(false);
+            if (languageDropdown == null) return;
+            languageDropdown.gameObject.SetActive(available);
+            if (available) return;
+            languageCodes.Clear();
+            if (languageDropdown.IsExpanded) languageDropdown.Hide();
+            languageDropdown.ClearOptions();
+            languageDropdown.interactable = false;
         }
         private void RequestLanguage(int index)
         { if (index >= 0 && index < languageCodes.Count) LanguageRequested?.Invoke(languageCodes[index]); }
@@ -56,6 +70,7 @@ namespace Dreamy.Feature.Settings.Integration
 
         private void OnEnable()
         {
+            SetLanguageVisible(false);
             if (languageDropdown != null) languageDropdown.onValueChanged.AddListener(RequestLanguage);
             musicToggle.onValueChanged.AddListener(RequestMusicToggle);
             sfxToggle.onValueChanged.AddListener(RequestSfxToggle);

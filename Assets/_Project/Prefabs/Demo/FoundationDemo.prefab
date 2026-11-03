@@ -51,8 +51,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a4d18c282f548ba86fa7e4687378138, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   togglePanelButton: {fileID: 6335627652823668855}
   featureShopPrefab: {fileID: 8165051096297724194, guid: d6e00e3d3e7b2714581cc90c53ce61c2, type: 3}
   dailyRewardPrefab: {fileID: 894007173020597777, guid: 618a53c7404df3345904c4882b8fdaad, type: 3}
@@ -91,8 +91,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 379b7857ec555c054b172ade75ed9536, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Dreamy.Template.Runtime::Dreamy.Template.Demo.FoundationTutorialAdapter
   demoRoot: {fileID: 11400000}
   overlayPrefab: {fileID: 221460424617847799, guid: 60d34a9fda7f832b6a3da65e17bea3ec, type: 3}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56d4b3af1dd4c89468a6ba946cd2c158, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Dreamy.Template.Runtime::Dreamy.Template.Demo.FoundationFeatureDemos
   demoRoot: {fileID: 11400000}
   missionPrefab: {fileID: 24468657951241232, guid: 10e02867bfe8cc84994a1e1bd218bb05, type: 3}
@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 8412778485614442982}
   - component: {fileID: 1998357242758575751}
   - component: {fileID: 7010669712579486963}
+  - component: {fileID: 1780458698408902514}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -185,8 +186,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -199,8 +200,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -279,8 +280,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: -1
@@ -289,6 +290,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1780458698408902514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480009875226559304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.toggle
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Toggle panel
+  fallbackCaptured: 1
+  target: {fileID: 1998357242758575751}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &820925814626328125
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,8 +376,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0.12, g: 0.38, b: 0.72, a: 1}
   m_RaycastTarget: 1
@@ -378,8 +406,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: -1
@@ -398,8 +426,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Navigation:
     m_Mode: 3
     m_WrapAround: 0
@@ -442,8 +470,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a20ba6cf1c8b4c88a7dc40411527d24c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   originScale: {x: 1, y: 1, z: 1}
   pressScaleMultiplier: 0.9
   releaseScaleMultiplier: 1.15

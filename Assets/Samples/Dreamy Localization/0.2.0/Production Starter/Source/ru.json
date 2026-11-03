@@ -1,0 +1,20 @@
+{
+  "settings.title": "Настройки",
+  "settings.music": "Музыка",
+  "settings.sfx": "Звуковые эффекты",
+  "settings.haptics": "Вибрация",
+  "settings.privacy": "Конфиденциальность и GDPR",
+  "settings.restore": "Восстановить покупки",
+  "settings.rate": "Оценить нас",
+  "settings.close": "Закрыть",
+  "settings.language": "Язык",
+  "settings.language_unavailable": "Язык недоступен",
+  "settings.language_failed": "Не удалось сменить язык. Повторите попытку.",
+  "demo.title": "Проверка локализации",
+  "demo.greeting": "Добро пожаловать! Измените язык в настройках.",
+  "demo.reward": "Вы получили {amount} монет",
+  "demo.open_settings": "Открыть настройки",
+  "demo.increment": "Добавить монету",
+  "demo.reset": "Сбросить сохранённый язык (тест)",
+  "main.title": "Демо Dreamy Foundation"
+}

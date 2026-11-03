@@ -1,0 +1,20 @@
+{
+  "settings.title": "設定",
+  "settings.music": "音楽",
+  "settings.sfx": "効果音",
+  "settings.haptics": "振動",
+  "settings.privacy": "プライバシーとGDPR",
+  "settings.restore": "購入を復元",
+  "settings.rate": "評価する",
+  "settings.close": "閉じる",
+  "settings.language": "言語",
+  "settings.language_unavailable": "この言語は利用できません",
+  "settings.language_failed": "言語を変更できませんでした。もう一度お試しください。",
+  "demo.title": "ローカライズテスト",
+  "demo.greeting": "ようこそ！設定から言語を変更できます。",
+  "demo.reward": "{amount}コインを獲得しました",
+  "demo.open_settings": "設定を開く",
+  "demo.increment": "コインを1枚追加",
+  "demo.reset": "保存した言語をリセット（テスト）",
+  "main.title": "Dreamy Foundation デモ"
+}

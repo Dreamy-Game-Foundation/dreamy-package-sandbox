@@ -1,0 +1,243 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DreamyGame_fr
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: db428fc826f5c1106ba486c7dc98b135, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 2503060853407351270
+  m_TableData:
+  - m_Id: 1090449408
+    m_Localized: "Param\xE8tres"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1111420928
+    m_Localized: Musique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615232
+    m_Localized: Effets sonores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615233
+    m_Localized: Vibrations
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615234
+    m_Localized: "Confidentialit\xE9 et RGPD"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615235
+    m_Localized: Restaurer les achats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615236
+    m_Localized: "Nous \xE9valuer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615237
+    m_Localized: Fermer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615238
+    m_Localized: Langue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615239
+    m_Localized: Langue indisponible
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615240
+    m_Localized: "Impossible de changer de langue. R\xE9essayez."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615241
+    m_Localized: Test de traduction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615242
+    m_Localized: "Bienvenue ! Changez la langue dans les param\xE8tres."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615243
+    m_Localized: "Vous avez re\xE7u {amount} pi\xE8ces"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351270
+  - m_Id: 1119809536
+    m_Localized: "Ouvrir les param\xE8tres"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809537
+    m_Localized: "Ajouter une pi\xE8ce"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809538
+    m_Localized: "Effacer la langue enregistr\xE9e (test)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3333645332480
+    m_Localized: "D\xE9mo Dreamy Foundation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936160989184
+    m_Localized: Afficher/masquer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515136
+    m_Localized: Ajouter des points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515137
+    m_Localized: "D\xE9g\xE2ts"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515138
+    m_Localized: Soigner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515139
+    m_Localized: Sauvegarder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515140
+    m_Localized: Charger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515141
+    m_Localized: Boutique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515142
+    m_Localized: "R\xE9compense du jour"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515143
+    m_Localized: Son
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515144
+    m_Localized: "Nous \xE9valuer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515145
+    m_Localized: Missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515146
+    m_Localized: Progression
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515147
+    m_Localized: Roue de la chance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515148
+    m_Localized: Tutoriel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515149
+    m_Localized: "\xC9conomie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515150
+    m_Localized: Effets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515151
+    m_Localized: "R\xE9compense en ligne (+10 points)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515152
+    m_Localized: "Initialisation en attente\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515153
+    m_Localized: 'Points : {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351270
+  - m_Id: 478936215515154
+    m_Localized: "Sant\xE9 : {value:0}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351270
+  - m_Id: 478936215515155
+    m_Localized: "Pr\xEAt | Lancements : {launch} | Pi\xE8ces initiales : {coins}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351270
+  - m_Id: 478936215515156
+    m_Localized: "Points mis \xE0 jour : {value}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351270
+  - m_Id: 478936215515157
+    m_Localized: "Sauvegard\xE9 | Pi\xE8ces : {value}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351270
+  - m_Id: 478936215515158
+    m_Localized: "Configuration charg\xE9e | Pi\xE8ces : {value}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351270
+  - m_Id: 478936215515159
+    m_Localized: "R\xE9compense indisponible : connexion non pr\xEAte."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515160
+    m_Localized: "R\xE9compense en ligne : v\xE9rification de la connexion\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515161
+    m_Localized: "R\xE9compense re\xE7ue : +10 points (d\xE9mo)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515162
+    m_Localized: "\xC9chec de la r\xE9compense. Consultez la console."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515163
+    m_Localized: "R\xE9compense annul\xE9e. Aucune r\xE9compense attribu\xE9e."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515164
+    m_Localized: "Tentatives de connexion \xE9puis\xE9es. Aucune r\xE9compense attribu\xE9e."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515165
+    m_Localized: "R\xE9sultat inconnu. V\xE9rifiez avant de r\xE9essayer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515166
+    m_Localized: "Une autre op\xE9ration est en cours. R\xE9essayez plus tard."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 2503060853407351270
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1115615243
+        - id: 478936215515153
+        - id: 478936215515154
+        - id: 478936215515155
+        - id: 478936215515156
+        - id: 478936215515157
+        - id: 478936215515158

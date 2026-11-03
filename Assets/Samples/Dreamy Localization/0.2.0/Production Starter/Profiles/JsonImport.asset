@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c171a078e54abee6198822c3a14dcae2, type: 3}
+  m_Name: JsonImport
+  m_EditorClassIdentifier: Dreamy.Localization.Editor::Dreamy.Localization.Editor.Json.LocalizationJsonImportProfile
+  SourceLocale: en
+  FallbackLocale: en
+  Table: Game
+  OutputDirectory: Assets/Localization/Generated
+  LocaleFiles:
+  - {fileID: 4900000, guid: 3d0a58cf6251e4aaf98a88a270a19c07, type: 3}
+  - {fileID: 4900000, guid: 5ffab91a5c976ab7ebce3041b15d22c2, type: 3}
+  - {fileID: 4900000, guid: d633ab05ee00a981f9977f3173cf7492, type: 3}
+  - {fileID: 4900000, guid: 92387e8abab72b063abc728c410379ed, type: 3}
+  - {fileID: 4900000, guid: 42e1dfa43fb5169bfa3ebef461d6b982, type: 3}
+  - {fileID: 4900000, guid: f1a553a896638393aba58d92a4178dad, type: 3}
+  - {fileID: 4900000, guid: cad2d1af8f7ce6205804889efde23c0f, type: 3}
+  - {fileID: 4900000, guid: 62d00a3eda7458790b1b2ac3d25def5d, type: 3}
+  - {fileID: 4900000, guid: 98b34d631daa1db8aa5a7d2a0eb53a18, type: 3}
+  - {fileID: 4900000, guid: e203c361a179db0129e9c5f0288bbb49, type: 3}
+  - {fileID: 4900000, guid: b7751f36859180f95aea94476c77f7d3, type: 3}
+  - {fileID: 4900000, guid: d95bcd4d784b1cb0c9902c235c985c4f, type: 3}
+  SmartKeys:
+  - demo.reward

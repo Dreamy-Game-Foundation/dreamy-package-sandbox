@@ -165,7 +165,7 @@ MonoBehaviour:
   prettySaveInEditor: 1
   saveDirectory: DreamySaves
   audioProfile: {fileID: 11400000, guid: c4e3953452108ec49a054a2887fda1ed, type: 2}
-  localizationProfile: {fileID: 11400000, guid: 7b774729b3e9fa176968981c49681770, type: 2}
+  localizationProfile: {fileID: 11400000, guid: 4c1d9245cc93daa5a83ea05d2383a89d, type: 2}
   storeListingUrl: 
   feedbackPrefab: {fileID: 5536796177033714545, guid: a7f671062f0d0f3059523477459320fd, type: 3}
   feedbackCamera: {fileID: 0}

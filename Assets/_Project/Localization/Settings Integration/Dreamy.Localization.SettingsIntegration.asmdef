@@ -1,0 +1,9 @@
+{
+  "name": "Dreamy.Localization.SettingsIntegration",
+  "references": [
+    "Dreamy.Localization.Runtime",
+    "Dreamy.Settings.Runtime",
+    "UniTask"
+  ],
+  "autoReferenced": true
+}

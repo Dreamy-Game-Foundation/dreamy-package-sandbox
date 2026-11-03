@@ -29,8 +29,8 @@ en.json + vi.json → Editor validator/importer → generated String Tables/Loca
 
 ## Dữ liệu và file layout dự kiến
 
-Assets/_Project/Localization/Source/en.json
-Assets/_Project/Localization/Source/vi.json
+Assets/_Project/Localization/Production/Source/en.json
+Assets/_Project/Localization/Production/Source/vi.json
 Assets/_Project/Localization/Generated/ (Unity settings, Locales, shared data, String Tables)
 Assets/_Project/Localization/Profiles/LocalizationTestProfile.asset
 Assets/_Project/Scenes/LocalizationSettingsTest.unity

@@ -1,0 +1,20 @@
+{
+  "settings.title": "Pengaturan",
+  "settings.music": "Musik",
+  "settings.sfx": "Efek suara",
+  "settings.haptics": "Getaran",
+  "settings.privacy": "Privasi & GDPR",
+  "settings.restore": "Pulihkan pembelian",
+  "settings.rate": "Beri penilaian",
+  "settings.close": "Tutup",
+  "settings.language": "Bahasa",
+  "settings.language_unavailable": "Bahasa tidak tersedia",
+  "settings.language_failed": "Gagal mengubah bahasa. Coba lagi.",
+  "demo.title": "Uji pelokalan",
+  "demo.greeting": "Selamat datang! Ubah bahasa di Pengaturan.",
+  "demo.reward": "Kamu menerima {amount} koin",
+  "demo.open_settings": "Buka Pengaturan",
+  "demo.increment": "Tambah satu koin",
+  "demo.reset": "Hapus bahasa tersimpan (uji)",
+  "main.title": "Demo Dreamy Foundation"
+}

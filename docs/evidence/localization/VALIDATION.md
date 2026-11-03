@@ -1,6 +1,10 @@
 # Latest extension status
 
-Component API and manager-free test scene: 41/41 EditMode and 13/13 PlayMode passed. See [fresh extension evidence](component-api/VALIDATION.md). The pilot section below records the earlier implementation baseline; the current native XML includes its cases plus the new regressions.
+Sandbox production setup, full Foundation labels/dynamic text and Country Flags: **41/41 EditMode + 17/17 PlayMode passed**, main game Ready with persisted canvas scaling, native-name/flag dropdown and 12×50 keys. See [latest sandbox evidence](sandbox-flags/VALIDATION.md).
+
+Production Starter and optional Settings integration: Localization source 0.2.0 / Settings source 0.3.0; fresh 41/41 EditMode, 15/15 PlayMode and an independent consumer without Settings passed. See [current packaging/integration evidence](production-starter/VALIDATION.md). No tag/publish or player/device certification is implied.
+
+12 locales and dropdown layout: **41/41 EditMode and 15/15 PlayMode passed** on 2026-11-03. See [latest evidence](multilanguage/VALIDATION.md). Component API and manager-free test scene previously passed 41/13; see [component evidence](component-api/VALIDATION.md). The pilot section below records historical baselines; use the dated extension receipts for current coverage.
 
 # Localization pilot validation — 2026-11-02
 

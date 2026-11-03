@@ -1,0 +1,243 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DreamyGame_id
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: id
+  m_SharedData: {fileID: 11400000, guid: db428fc826f5c1106ba486c7dc98b135, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 2503060853407351271
+  m_TableData:
+  - m_Id: 1090449408
+    m_Localized: Pengaturan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1111420928
+    m_Localized: Musik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615232
+    m_Localized: Efek suara
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615233
+    m_Localized: Getaran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615234
+    m_Localized: Privasi & GDPR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615235
+    m_Localized: Pulihkan pembelian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615236
+    m_Localized: Beri penilaian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615237
+    m_Localized: Tutup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615238
+    m_Localized: Bahasa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615239
+    m_Localized: Bahasa tidak tersedia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615240
+    m_Localized: Gagal mengubah bahasa. Coba lagi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615241
+    m_Localized: Uji pelokalan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615242
+    m_Localized: Selamat datang! Ubah bahasa di Pengaturan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615243
+    m_Localized: Kamu menerima {amount} koin
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351271
+  - m_Id: 1119809536
+    m_Localized: Buka Pengaturan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809537
+    m_Localized: Tambah satu koin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809538
+    m_Localized: Hapus bahasa tersimpan (uji)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3333645332480
+    m_Localized: Demo Dreamy Foundation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936160989184
+    m_Localized: Tampilkan/sembunyikan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515136
+    m_Localized: Tambah poin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515137
+    m_Localized: Lukai
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515138
+    m_Localized: Pulihkan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515139
+    m_Localized: Simpan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515140
+    m_Localized: Muat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515141
+    m_Localized: Toko
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515142
+    m_Localized: Hadiah harian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515143
+    m_Localized: Suara
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515144
+    m_Localized: Beri penilaian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515145
+    m_Localized: Misi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515146
+    m_Localized: Progres
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515147
+    m_Localized: Roda keberuntungan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515148
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515149
+    m_Localized: Ekonomi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515150
+    m_Localized: Efek
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515151
+    m_Localized: Hadiah daring (+10 poin)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515152
+    m_Localized: "Menunggu inisialisasi\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515153
+    m_Localized: 'Poin: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351271
+  - m_Id: 478936215515154
+    m_Localized: 'Kesehatan: {value:0}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351271
+  - m_Id: 478936215515155
+    m_Localized: 'Siap | Peluncuran: {launch} | Koin awal: {coins}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351271
+  - m_Id: 478936215515156
+    m_Localized: 'Poin diperbarui: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351271
+  - m_Id: 478936215515157
+    m_Localized: 'Tersimpan | Koin: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351271
+  - m_Id: 478936215515158
+    m_Localized: 'Konfigurasi dimuat | Koin: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351271
+  - m_Id: 478936215515159
+    m_Localized: 'Hadiah tidak tersedia: layanan koneksi belum siap.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515160
+    m_Localized: "Hadiah daring: memeriksa koneksi\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515161
+    m_Localized: 'Hadiah diterima: +10 poin (demo)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515162
+    m_Localized: Hadiah gagal. Lihat konsol.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515163
+    m_Localized: Hadiah dibatalkan. Tidak ada hadiah diberikan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515164
+    m_Localized: Percobaan koneksi habis. Tidak ada hadiah diberikan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515165
+    m_Localized: Hasil hadiah belum diketahui. Periksa sebelum mencoba lagi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515166
+    m_Localized: Operasi lain sedang berjalan. Coba lagi nanti.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 2503060853407351271
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1115615243
+        - id: 478936215515153
+        - id: 478936215515154
+        - id: 478936215515155
+        - id: 478936215515156
+        - id: 478936215515157
+        - id: 478936215515158

@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "com.cysharp.unitask": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.cysharp.unitask@360e370345b9",
+    "com.dreamy.localization": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.localization",
+    "com.unity.nuget.newtonsoft-json": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.unity.nuget.newtonsoft-json@4dfd81071c64",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.ugui": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.unity.ugui@80c574892b7a",
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.ui": "1.0.0",
+    "com.unity.textmeshpro": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.unity.textmeshpro@53f43edfd2e0",
+    "com.unity.localization": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.unity.localization@d45547f9f157",
+    "com.unity.addressables": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.unity.addressables@8460f1c9c927",
+    "com.unity.test-framework": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.unity.test-framework@645e1dc04325",
+    "com.unity.modules.jsonserialize": "1.0.0",
+    "com.unity.ext.nunit": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.unity.ext.nunit@ec2d0043d6fc",
+    "com.unity.profiling.core": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.unity.profiling.core@8a49f7027d06",
+    "com.unity.modules.unitywebrequestassetbundle": "1.0.0",
+    "com.unity.modules.unitywebrequest": "1.0.0",
+    "com.unity.modules.assetbundle": "1.0.0",
+    "com.unity.modules.imageconversion": "1.0.0",
+    "com.unity.scriptablebuildpipeline": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.unity.scriptablebuildpipeline@36e3b5898ee2"
+  }
+}

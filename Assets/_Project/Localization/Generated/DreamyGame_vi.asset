@@ -94,6 +94,146 @@ MonoBehaviour:
     m_Localized: "B\u1EA3n th\u1EED nghi\u1EC7m Dreamy Foundation"
     m_Metadata:
       m_Items: []
+  - m_Id: 478936160989184
+    m_Localized: "B\u1EADt/t\u1EAFt b\u1EA3ng"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515136
+    m_Localized: "Th\xEAm \u0111i\u1EC3m"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515137
+    m_Localized: "G\xE2y s\xE1t th\u01B0\u01A1ng"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515138
+    m_Localized: "H\u1ED3i m\xE1u"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515139
+    m_Localized: "L\u01B0u"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515140
+    m_Localized: "T\u1EA3i"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515141
+    m_Localized: "C\u1EEDa h\xE0ng"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515142
+    m_Localized: "Qu\xE0 h\u1EB1ng ng\xE0y"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515143
+    m_Localized: "\xC2m thanh"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515144
+    m_Localized: "\u0110\xE1nh gi\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515145
+    m_Localized: "Nhi\u1EC7m v\u1EE5"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515146
+    m_Localized: "Ti\u1EBFn tr\xECnh"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515147
+    m_Localized: "V\xF2ng quay"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515148
+    m_Localized: "H\u01B0\u1EDBng d\u1EABn"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515149
+    m_Localized: "Kinh t\u1EBF"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515150
+    m_Localized: "Hi\u1EC7u \u1EE9ng"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515151
+    m_Localized: "Qu\xE0 tr\u1EF1c tuy\u1EBFn (+10 \u0111i\u1EC3m)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515152
+    m_Localized: "\u0110ang ch\u1EDD kh\u1EDFi t\u1EA1o\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515153
+    m_Localized: "\u0110i\u1EC3m: {value}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350992
+  - m_Id: 478936215515154
+    m_Localized: "M\xE1u: {value:0}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350992
+  - m_Id: 478936215515155
+    m_Localized: "S\u1EB5n s\xE0ng | S\u1ED1 l\u1EA7n m\u1EDF: {launch} | Xu ban
+      \u0111\u1EA7u: {coins}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350992
+  - m_Id: 478936215515156
+    m_Localized: "\u0110i\u1EC3m \u0111\xE3 c\u1EADp nh\u1EADt: {value}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350992
+  - m_Id: 478936215515157
+    m_Localized: "\u0110\xE3 l\u01B0u | Xu: {value}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350992
+  - m_Id: 478936215515158
+    m_Localized: "\u0110\xE3 t\u1EA3i c\u1EA5u h\xECnh | Xu: {value}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407350992
+  - m_Id: 478936215515159
+    m_Localized: "Ch\u01B0a th\u1EC3 nh\u1EADn qu\xE0: d\u1ECBch v\u1EE5 k\u1EBFt
+      n\u1ED1i ch\u01B0a s\u1EB5n s\xE0ng."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515160
+    m_Localized: "Qu\xE0 tr\u1EF1c tuy\u1EBFn: \u0111ang ki\u1EC3m tra k\u1EBFt n\u1ED1i\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515161
+    m_Localized: "\u0110\xE3 nh\u1EADn qu\xE0 tr\u1EF1c tuy\u1EBFn: +10 \u0111i\u1EC3m
+      (demo)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515162
+    m_Localized: "Nh\u1EADn qu\xE0 th\u1EA5t b\u1EA1i. Xem Console."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515163
+    m_Localized: "\u0110\xE3 h\u1EE7y nh\u1EADn qu\xE0. Ch\u01B0a c\u1EA5p ph\u1EA7n
+      th\u01B0\u1EDFng."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515164
+    m_Localized: "\u0110\xE3 h\u1EBFt l\u01B0\u1EE3t th\u1EED k\u1EBFt n\u1ED1i.
+      Ch\u01B0a c\u1EA5p ph\u1EA7n th\u01B0\u1EDFng."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515165
+    m_Localized: "Ch\u01B0a r\xF5 k\u1EBFt qu\u1EA3 nh\u1EADn qu\xE0. Ki\u1EC3m tra
+      tr\u01B0\u1EDBc khi th\u1EED l\u1EA1i."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515166
+    m_Localized: "\u0110ang c\xF3 thao t\xE1c kh\xE1c. H\xE3y th\u1EED l\u1EA1i sau."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
@@ -103,3 +243,9 @@ MonoBehaviour:
         m_Entries: 
         m_SharedEntries:
         - id: 1115615243
+        - id: 478936215515153
+        - id: 478936215515154
+        - id: 478936215515155
+        - id: 478936215515156
+        - id: 478936215515157
+        - id: 478936215515158

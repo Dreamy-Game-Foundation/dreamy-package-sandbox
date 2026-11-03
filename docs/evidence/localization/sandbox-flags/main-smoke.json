@@ -1,0 +1,48 @@
+{
+  "state": "Ready",
+  "locale": "vi",
+  "locales": 12,
+  "selectedFlag": "vn",
+  "allFlags": [
+    "de",
+    "us",
+    "es",
+    "fr",
+    "id",
+    "jp",
+    "kr",
+    "br",
+    "ru",
+    "th",
+    "vn",
+    "cn"
+  ],
+  "foundation": [
+    "Bản thử nghiệm Dreamy Foundation",
+    "Điểm đã cập nhật: 10",
+    "Điểm: 10",
+    "Máu: 100",
+    "Thêm điểm",
+    "Gây sát thương",
+    "Hồi máu",
+    "Lưu",
+    "Tải",
+    "Cửa hàng",
+    "Quà hằng ngày",
+    "Âm thanh",
+    "Mở Cài đặt",
+    "Đánh giá",
+    "Nhiệm vụ",
+    "Tiến trình",
+    "Vòng quay",
+    "Hướng dẫn",
+    "Kinh tế",
+    "Hiệu ứng",
+    "Quà trực tuyến (+10 điểm)"
+  ],
+  "scale": "ScaleWithScreenSize",
+  "screen": [
+    452,
+    839
+  ]
+}

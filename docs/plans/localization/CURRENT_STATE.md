@@ -56,7 +56,7 @@ Nguồn: `Runtime.UI/*.cs`.
 
 - Có 15 EditMode [Test] trong parser/validator/key/matcher/variables.
 - Tests/PlayMode chỉ có asmdef, chưa có test C#.
-- Basic Localization sample chỉ có README giữ chỗ; chưa có scene/profile/table/prefab demo.
+- Sample giữ chỗ Basic Localization đã bị xóa; các sample hiện tại là Production Starter, Settings Integration và Country Flags.
 - Roadmap gốc khai báo phase 0–3 đang làm, phase 4–8 pending. Đây là mục tiêu tài liệu, không phải chức năng đã hoàn tất.
 
 ## Đối chiếu các package

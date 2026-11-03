@@ -59,6 +59,12 @@ Trạng thái: quy tắc thiết kế cho các phase trong [`plan`](../plans/DRE
 3. HUD/inline widget có cấu trúc khác hoặc host có base item riêng chỉ dùng ngoại lệ khi ghi rõ lý do và base thay thế trong README/plan. Khi HUD entry dùng hình thái feature card, ưu tiên variant từ BaseFeatureItem như sample BattlePassEntry.
 4. Builder, gate source chain/GUID/bindings và migration qua Unity Editor/MCP ở mục4.1 áp dụng tương tự cho item. Kiểm tra cả nested item prefab bên trong tier, item được instantiate lúc runtime và asset trong Samples~ sau export/import mới.
 
+### 4.3. Canvas chuẩn cho main scene
+
+1. **Root Canvas hiển thị UI trong main scene phải có `CanvasScaler` với cấu hình:** `UI Scale Mode = Scale With Screen Size`, `Reference Resolution = 1080 × 1920`, `Screen Match Mode = Match Width Or Height`, `Match (Width ↔ Height) = 0.5`.
+2. Khi tạo hoặc cập nhật UI, scene setup hay scene builder cho main scene, dùng cấu hình này làm chuẩn chung để panel, popup và HUD có tỷ lệ nhất quán. UI con dùng tỷ lệ từ root Canvas; không thêm scaler riêng làm lệch chuẩn.
+3. Trước khi bàn giao thay đổi UI, kiểm tra cấu hình CanvasScaler trong main scene và kiểm layout ở tỷ lệ tham chiếu cùng các aspect ratio mục tiêu; anchors, safe area và nội dung phải thích ứng với kích thước màn hình.
+
 ## 5. Coding convention và Unity serialization
 
 1. Theo style gần file đang sửa: C# PascalCase cho type/method/property, camelCase cho field private, `I` cho interface; một public type chính một file; namespace theo package/feature. Không đổi hàng loạt style khi sửa một bug.

@@ -510,6 +510,7 @@ GameObject:
   - component: {fileID: 6683070833048649892}
   - component: {fileID: 3280800910922117184}
   - component: {fileID: 7970680414803300428}
+  - component: {fileID: 2306186080934339656}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -566,8 +567,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Damage
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -656,6 +657,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2306186080934339656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413751026472371782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.damage
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Damage
+  fallbackCaptured: 1
+  target: {fileID: 3280800910922117184}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &419255661360987687
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,6 +696,7 @@ GameObject:
   - component: {fileID: 5329132906654163515}
   - component: {fileID: 8300476406477739977}
   - component: {fileID: 3789492649863328111}
+  - component: {fileID: 4029200389078866806}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -726,8 +755,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -816,6 +845,35 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &4029200389078866806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419255661360987687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.shop
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: 'Shop
+
+'
+  fallbackCaptured: 1
+  target: {fileID: 8300476406477739977}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &591326344291229332
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,8 +945,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Dreamy Foundation Demo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 57dff213f1e85964193e82bd8c643825, type: 2}
-  m_sharedMaterial: {fileID: 2211136875873543020, guid: 57dff213f1e85964193e82bd8c643825, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1037,7 +1095,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  fallback:
+  fallback: Dreamy Foundation Demo
+  fallbackCaptured: 1
   target: {fileID: 6115205594840780014}
   references:
     version: 2
@@ -1268,6 +1327,7 @@ GameObject:
   - component: {fileID: 3314359451930786367}
   - component: {fileID: 8281734041270321543}
   - component: {fileID: 4380780908290582434}
+  - component: {fileID: 1988287584997843538}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -1324,8 +1384,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Missions
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1414,6 +1474,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
+--- !u!114 &1988287584997843538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669115611009646652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.missions
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Missions
+  fallbackCaptured: 1
+  target: {fileID: 8281734041270321543}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &671882249702080212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,6 +1878,7 @@ GameObject:
   - component: {fileID: 702226053061014732}
   - component: {fileID: 1581781769579629233}
   - component: {fileID: 8668414054885290230}
+  - component: {fileID: 5301757791885902539}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -1847,8 +1935,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Daily Reward
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1937,6 +2025,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &5301757791885902539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795309166643716461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.daily_reward
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Daily Reward
+  fallbackCaptured: 1
+  target: {fileID: 1581781769579629233}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &914197600197107670
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,6 +2927,7 @@ GameObject:
   - component: {fileID: 3275849608737786868}
   - component: {fileID: 1844817001746795413}
   - component: {fileID: 7848818234104617051}
+  - component: {fileID: 5843599161243587663}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -2868,8 +2984,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Progression
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2958,6 +3074,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
+--- !u!114 &5843599161243587663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410914733003197413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.progression
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Progression
+  fallbackCaptured: 1
+  target: {fileID: 1844817001746795413}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1448086884726375974
 GameObject:
   m_ObjectHideFlags: 0
@@ -3438,6 +3581,7 @@ GameObject:
   - component: {fileID: 271456389584153170}
   - component: {fileID: 4547893322379707026}
   - component: {fileID: 2663201251986052955}
+  - component: {fileID: 5911876516614374271}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -3494,8 +3638,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Lucky Wheel
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3584,6 +3728,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
+--- !u!114 &5911876516614374271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620241139355773087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.lucky_wheel
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Lucky Wheel
+  fallbackCaptured: 1
+  target: {fileID: 4547893322379707026}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &2588096922508651609
 GameObject:
   m_ObjectHideFlags: 0
@@ -3598,6 +3769,7 @@ GameObject:
   - component: {fileID: 544734381724957470}
   - component: {fileID: 4907916724015163540}
   - component: {fileID: 7034169571361614486}
+  - component: {fileID: 5775880094161272849}
   m_Layer: 0
   m_Name: ScoreText
   m_TagString: Untagged
@@ -3654,8 +3826,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3783,6 +3955,33 @@ MonoBehaviour:
   overrideDelayOut: 0
   delayOut: 0
   canvasGroup: {fileID: 4907916724015163540}
+--- !u!114 &5775880094161272849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2588096922508651609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName:
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key:
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: 'Score: 0'
+  fallbackCaptured: 1
+  target: {fileID: 1615264063839584018}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &2693564101728938096
 GameObject:
   m_ObjectHideFlags: 0
@@ -4136,6 +4335,7 @@ GameObject:
   - component: {fileID: 5583436163515063524}
   - component: {fileID: 1343217487653591959}
   - component: {fileID: 1779041116753053238}
+  - component: {fileID: 7473418447417841398}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -4192,8 +4392,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Heal
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4282,6 +4482,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &7473418447417841398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3077807120703235983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.heal
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Heal
+  fallbackCaptured: 1
+  target: {fileID: 1343217487653591959}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &3180909275039361315
 GameObject:
   m_ObjectHideFlags: 0
@@ -4294,6 +4521,7 @@ GameObject:
   - component: {fileID: 8781594763832999296}
   - component: {fileID: 5978495393989491536}
   - component: {fileID: 2357188886264941926}
+  - component: {fileID: 1835521479351067283}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -4350,8 +4578,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Feedback
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4440,6 +4668,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1835521479351067283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3180909275039361315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.feedback
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Feedback
+  fallbackCaptured: 1
+  target: {fileID: 5978495393989491536}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &3208387191140295147
 GameObject:
   m_ObjectHideFlags: 0
@@ -4452,6 +4707,7 @@ GameObject:
   - component: {fileID: 1410494833614661107}
   - component: {fileID: 6138524391919845787}
   - component: {fileID: 5350482703394603181}
+  - component: {fileID: 6380976408032441213}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -4508,8 +4764,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Load
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4598,6 +4854,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &6380976408032441213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208387191140295147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.load
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Load
+  fallbackCaptured: 1
+  target: {fileID: 6138524391919845787}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &3254431276626910032
 GameObject:
   m_ObjectHideFlags: 0
@@ -4610,6 +4893,7 @@ GameObject:
   - component: {fileID: 2663126651349680705}
   - component: {fileID: 6864398308949554142}
   - component: {fileID: 2296127236263518974}
+  - component: {fileID: 8507771525480093030}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -4666,8 +4950,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Economy
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4756,6 +5040,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
+--- !u!114 &8507771525480093030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254431276626910032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.economy
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Economy
+  fallbackCaptured: 1
+  target: {fileID: 6864398308949554142}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &3411343729240572310
 GameObject:
   m_ObjectHideFlags: 0
@@ -4768,6 +5079,7 @@ GameObject:
   - component: {fileID: 7057217304706994342}
   - component: {fileID: 2082699523236778076}
   - component: {fileID: 7735250473070069119}
+  - component: {fileID: 5554867059710259347}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -4824,8 +5136,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Add Score
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4914,6 +5226,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &5554867059710259347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3411343729240572310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.add_score
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Add Score
+  fallbackCaptured: 1
+  target: {fileID: 2082699523236778076}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &3625861122596294078
 GameObject:
   m_ObjectHideFlags: 0
@@ -5762,6 +6101,7 @@ GameObject:
   - component: {fileID: 1547308233760866624}
   - component: {fileID: 1695438306620517792}
   - component: {fileID: 7544879203599980414}
+  - component: {fileID: 1172638429867499771}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -5820,8 +6160,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5848,9 +6188,9 @@ MonoBehaviour:
   m_fontSize: 28
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -5910,6 +6250,35 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1172638429867499771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5406023506112310962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.toggle
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: 'Toggle
+
+'
+  fallbackCaptured: 1
+  target: {fileID: 1695438306620517792}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &5484996026294785880
 GameObject:
   m_ObjectHideFlags: 0
@@ -5922,6 +6291,7 @@ GameObject:
   - component: {fileID: 2139385527803812660}
   - component: {fileID: 1338974373452702906}
   - component: {fileID: 3289979718769633189}
+  - component: {fileID: 4745046769593224818}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -5978,8 +6348,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Save
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6068,6 +6438,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &4745046769593224818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5484996026294785880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.save
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Save
+  fallbackCaptured: 1
+  target: {fileID: 1338974373452702906}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &5637753738574914457
 GameObject:
   m_ObjectHideFlags: 0
@@ -6286,6 +6683,7 @@ GameObject:
   - component: {fileID: 4981846878858770111}
   - component: {fileID: 7179775840714374522}
   - component: {fileID: 1536332824571305099}
+  - component: {fileID: 3209463681042633718}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -6342,8 +6740,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Rate Us
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6432,6 +6830,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &3209463681042633718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5788322686637511527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.rate
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Rate Us
+  fallbackCaptured: 1
+  target: {fileID: 7179775840714374522}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &5840091760963007381
 GameObject:
   m_ObjectHideFlags: 0
@@ -6860,6 +7285,7 @@ GameObject:
   - component: {fileID: 5528742536767828124}
   - component: {fileID: 5544531521074317824}
   - component: {fileID: 6044371295229138651}
+  - component: {fileID: 349434093872865036}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -6916,8 +7342,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tutorial Demo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7006,6 +7432,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
+--- !u!114 &349434093872865036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6727349782378514504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.tutorial
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Tutorial Demo
+  fallbackCaptured: 1
+  target: {fileID: 5544531521074317824}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &6746603474466082373
 GameObject:
   m_ObjectHideFlags: 0
@@ -8387,6 +8840,7 @@ GameObject:
   - component: {fileID: 4624559591628440880}
   - component: {fileID: 3546020057187227761}
   - component: {fileID: 9146230636983251110}
+  - component: {fileID: 5570476497930129128}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -8443,8 +8897,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sound
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8533,6 +8987,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &5570476497930129128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8042520426285155053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.sound
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Sound
+  fallbackCaptured: 1
+  target: {fileID: 3546020057187227761}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &8270405809182596591
 GameObject:
   m_ObjectHideFlags: 0
@@ -8602,8 +9083,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Open Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 57dff213f1e85964193e82bd8c643825, type: 2}
-  m_sharedMaterial: {fileID: 2211136875873543020, guid: 57dff213f1e85964193e82bd8c643825, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8713,7 +9194,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  fallback:
+  fallback: Open Settings
+  fallbackCaptured: 1
   target: {fileID: 713221179565229987}
   references:
     version: 2
@@ -8732,6 +9214,7 @@ GameObject:
   - component: {fileID: 7089129069602874094}
   - component: {fileID: 8721198036819998484}
   - component: {fileID: 5399321363629336509}
+  - component: {fileID: 4621128709603868514}
   m_Layer: 0
   m_Name: HealthText
   m_TagString: Untagged
@@ -8788,8 +9271,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Health: 100'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8917,6 +9400,33 @@ MonoBehaviour:
   overrideDelayOut: 0
   delayOut: 0
   canvasGroup: {fileID: 8721198036819998484}
+--- !u!114 &4621128709603868514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435485896072398885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName:
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key:
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: 'Health: 100'
+  fallbackCaptured: 1
+  target: {fileID: 7372630194537094743}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &8458372871640620849
 GameObject:
   m_ObjectHideFlags: 0
@@ -8931,6 +9441,7 @@ GameObject:
   - component: {fileID: 7577253987158174522}
   - component: {fileID: 2639619177141479879}
   - component: {fileID: 5525602872729416379}
+  - component: {fileID: 20191437709487022}
   m_Layer: 0
   m_Name: StatusText
   m_TagString: Untagged
@@ -8987,8 +9498,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Waiting for verification...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9116,6 +9627,33 @@ MonoBehaviour:
   overrideDelayOut: 0
   delayOut: 0
   canvasGroup: {fileID: 2639619177141479879}
+--- !u!114 &20191437709487022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8458372871640620849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.waiting
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Waiting for verification...
+  fallbackCaptured: 1
+  target: {fileID: 8009436782338206471}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &8497544299517347510
 GameObject:
   m_ObjectHideFlags: 0
@@ -9413,6 +9951,7 @@ GameObject:
   - component: {fileID: 8156857002916700827}
   - component: {fileID: 2978083162919148457}
   - component: {fileID: 5430152657642676696}
+  - component: {fileID: 95200476423215805}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -9469,8 +10008,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Online Reward (+10 Score)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
+  m_sharedMaterial: {fileID: -1286852924339498822, guid: bc6ad9199e424e7e0ba3544d7dffd9e3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9559,6 +10098,33 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &95200476423215805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8654535837859385981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4eb7f6757ed7cd4ba151918f0791684, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Dreamy.Localization.Runtime.UI::Dreamy.Localization.UI.LocalizedTmpText
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: DreamyGame
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: main.online_reward
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  fallback: Online Reward (+10 Score)
+  fallbackCaptured: 1
+  target: {fileID: 2978083162919148457}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &8876221231274964235
 GameObject:
   m_ObjectHideFlags: 0

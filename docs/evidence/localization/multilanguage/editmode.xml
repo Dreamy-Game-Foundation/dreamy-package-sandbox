@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="41" result="Passed" total="41" passed="41" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:43Z" duration="4,3984964">
+  <test-suite type="TestSuite" id="1000" name="DreamyTemplateProject" fullname="DreamyTemplateProject" runstate="Runnable" testcasecount="394" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:43Z" duration="4.398496" total="41" passed="41" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1327" name="Dreamy.Localization.Tests.EditMode.dll" fullname="/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/ScriptAssemblies/Dreamy.Localization.Tests.EditMode.dll" runstate="Runnable" testcasecount="38" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:40Z" duration="1.093234" total="38" passed="38" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="643317" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1328" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="38" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:40Z" duration="1.000289" total="38" passed="38" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1329" name="Localization" fullname="Dreamy.Localization" runstate="Runnable" testcasecount="38" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:40Z" duration="0.899662" total="38" passed="38" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1330" name="Tests" fullname="Dreamy.Localization.Tests" runstate="Runnable" testcasecount="38" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:40Z" duration="0.798639" total="38" passed="38" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1282" name="LocalizationComponentSetupTests" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.163344" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1293" name="AssigningSameTargetDoesNotCaptureTranslatedText" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests.AssigningSameTargetDoesNotCaptureTranslatedText" methodname="AssigningSameTargetDoesNotCaptureTranslatedText" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" seed="1934655651" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.038476" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1287" name="AudioResetCapturesClipWithoutPlaying" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests.AudioResetCapturesClipWithoutPlaying" methodname="AudioResetCapturesClipWithoutPlaying" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" seed="2070310858" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.002057" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1294" name="ConfigureSupportsKeyFallbackAndArgumentsBeforeEnable" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests.ConfigureSupportsKeyFallbackAndArgumentsBeforeEnable" methodname="ConfigureSupportsKeyFallbackAndArgumentsBeforeEnable" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" seed="1552519275" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.003777" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1289" name="ExplicitEmptyFallbackIsNotRecaptured" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests.ExplicitEmptyFallbackIsNotRecaptured" methodname="ExplicitEmptyFallbackIsNotRecaptured" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" seed="1528911280" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.000830" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1290" name="ExplicitNullAssetFallbackIsNotRecaptured" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests.ExplicitNullAssetFallbackIsNotRecaptured" methodname="ExplicitNullAssetFallbackIsNotRecaptured" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" seed="1553334115" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.001429" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1285" name="ImageResetCapturesSpriteAndSupportsReferenceApi" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests.ImageResetCapturesSpriteAndSupportsReferenceApi" methodname="ImageResetCapturesSpriteAndSupportsReferenceApi" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" seed="394832097" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.000713" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1291" name="LegacySerializedFallbackWinsAndFieldNamesArePreserved" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests.LegacySerializedFallbackWinsAndFieldNamesArePreserved" methodname="LegacySerializedFallbackWinsAndFieldNamesArePreserved" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" seed="1734218995" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.002355" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1292" name="SetTargetCapturesNewTargetOnlyWhenRequested" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests.SetTargetCapturesNewTargetOnlyWhenRequested" methodname="SetTargetCapturesNewTargetOnlyWhenRequested" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" seed="500226281" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.000721" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1286" name="SpriteRendererResetCapturesSprite" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests.SpriteRendererResetCapturesSprite" methodname="SpriteRendererResetCapturesSprite" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" seed="665239287" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.000559" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1288" name="StringEventResetPreservesListenersAndExplicitFallback" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests.StringEventResetPreservesListenersAndExplicitFallback" methodname="StringEventResetPreservesListenersAndExplicitFallback" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" seed="1032259585" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.000650" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1283" name="TmpResetFindsTargetCapturesTextAndKeepsKey" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests.TmpResetFindsTargetCapturesTextAndKeepsKey" methodname="TmpResetFindsTargetCapturesTextAndKeepsKey" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" seed="1947494691" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.000817" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1284" name="UguiResetCapturesText" fullname="Dreamy.Localization.Tests.LocalizationComponentSetupTests.UguiResetCapturesText" methodname="UguiResetCapturesText" classname="Dreamy.Localization.Tests.LocalizationComponentSetupTests" runstate="Runnable" seed="1457800153" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.003991" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1295" name="LocalizationCsvParserTests" fullname="Dreamy.Localization.Tests.LocalizationCsvParserTests" classname="Dreamy.Localization.Tests.LocalizationCsvParserTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.041969" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1296" name="Parse_QuotedFields_PreservesCommasQuotesAndNewlines" fullname="Dreamy.Localization.Tests.LocalizationCsvParserTests.Parse_QuotedFields_PreservesCommasQuotesAndNewlines" methodname="Parse_QuotedFields_PreservesCommasQuotesAndNewlines" classname="Dreamy.Localization.Tests.LocalizationCsvParserTests" runstate="Runnable" seed="1632577826" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.003750" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1298" name="Parse_UnterminatedQuote_ThrowsWithLocation" fullname="Dreamy.Localization.Tests.LocalizationCsvParserTests.Parse_UnterminatedQuote_ThrowsWithLocation" methodname="Parse_UnterminatedQuote_ThrowsWithLocation" classname="Dreamy.Localization.Tests.LocalizationCsvParserTests" runstate="Runnable" seed="442538711" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.001075" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1297" name="Parse_Utf8Bom_DoesNotBecomePartOfFirstHeader" fullname="Dreamy.Localization.Tests.LocalizationCsvParserTests.Parse_Utf8Bom_DoesNotBecomePartOfFirstHeader" methodname="Parse_Utf8Bom_DoesNotBecomePartOfFirstHeader" classname="Dreamy.Localization.Tests.LocalizationCsvParserTests" runstate="Runnable" seed="174725258" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.000115" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1299" name="WriteThenParse_PreservesSemanticValues" fullname="Dreamy.Localization.Tests.LocalizationCsvParserTests.WriteThenParse_PreservesSemanticValues" methodname="WriteThenParse_PreservesSemanticValues" classname="Dreamy.Localization.Tests.LocalizationCsvParserTests" runstate="Runnable" seed="1377939636" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:39Z" duration="0.002382" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1300" name="LocalizationCsvValidatorTests" fullname="Dreamy.Localization.Tests.LocalizationCsvValidatorTests" classname="Dreamy.Localization.Tests.LocalizationCsvValidatorTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-03 04:32:39Z" end-time="2026-11-03 04:32:40Z" duration="0.099076" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1301" name="Validate_DuplicateKey_ReturnsCriticalIssue" fullname="Dreamy.Localization.Tests.LocalizationCsvValidatorTests.Validate_DuplicateKey_ReturnsCriticalIssue" methodname="Validate_DuplicateKey_ReturnsCriticalIssue" classname="Dreamy.Localization.Tests.LocalizationCsvValidatorTests" runstate="Runnable" seed="79442770" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.004353" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1304" name="Validate_IgnoreRow_AllowsEmptyTranslations" fullname="Dreamy.Localization.Tests.LocalizationCsvValidatorTests.Validate_IgnoreRow_AllowsEmptyTranslations" methodname="Validate_IgnoreRow_AllowsEmptyTranslations" classname="Dreamy.Localization.Tests.LocalizationCsvValidatorTests" runstate="Runnable" seed="946755062" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.000296" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1302" name="Validate_MissingTranslation_ReturnsError" fullname="Dreamy.Localization.Tests.LocalizationCsvValidatorTests.Validate_MissingTranslation_ReturnsError" methodname="Validate_MissingTranslation_ReturnsError" classname="Dreamy.Localization.Tests.LocalizationCsvValidatorTests" runstate="Runnable" seed="1577736509" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.000296" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1303" name="Validate_SmartPlaceholderMismatch_ReturnsError" fullname="Dreamy.Localization.Tests.LocalizationCsvValidatorTests.Validate_SmartPlaceholderMismatch_ReturnsError" methodname="Validate_SmartPlaceholderMismatch_ReturnsError" classname="Dreamy.Localization.Tests.LocalizationCsvValidatorTests" runstate="Runnable" seed="685434448" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.001259" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1305" name="LocalizationJsonTests" fullname="Dreamy.Localization.Tests.LocalizationJsonTests" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.213220" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1313" name="InvalidJsonIsRejected" fullname="Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.111296" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1306" name="InvalidJsonIsRejected(&quot;{}&quot;)" fullname="Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(&quot;{}&quot;)" methodname="InvalidJsonIsRejected" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" seed="718671718" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.004489" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1307" name="InvalidJsonIsRejected(&quot;[]&quot;)" fullname="Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(&quot;[]&quot;)" methodname="InvalidJsonIsRejected" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" seed="2040170471" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.000687" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1308" name="InvalidJsonIsRejected(&quot;{\&quot;title\&quot;:null}&quot;)" fullname="Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(&quot;{\&quot;title\&quot;:null}&quot;)" methodname="InvalidJsonIsRejected" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" seed="523153701" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.000996" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1309" name="InvalidJsonIsRejected(&quot;{\&quot;title\&quot;:5}&quot;)" fullname="Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(&quot;{\&quot;title\&quot;:5}&quot;)" methodname="InvalidJsonIsRejected" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" seed="1496668387" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.000144" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1310" name="InvalidJsonIsRejected(&quot;{\&quot;title\&quot;:\&quot;\&quot;}&quot;)" fullname="Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(&quot;{\&quot;title\&quot;:\&quot;\&quot;}&quot;)" methodname="InvalidJsonIsRejected" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" seed="1744853195" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.001670" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1311" name="InvalidJsonIsRejected(&quot;{\&quot;title\&quot;:\&quot;A\&quot;,\&quot;title\&quot;:\&quot;B\&quot;}&quot;)" fullname="Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(&quot;{\&quot;title\&quot;:\&quot;A\&quot;,\&quot;title\&quot;:\&quot;B\&quot;}&quot;)" methodname="InvalidJsonIsRejected" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" seed="1559578959" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.001961" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1312" name="InvalidJsonIsRejected(&quot;{\&quot;title\&quot;:\&quot;A\&quot;} {}&quot;)" fullname="Dreamy.Localization.Tests.LocalizationJsonTests.InvalidJsonIsRejected(&quot;{\&quot;title\&quot;:\&quot;A\&quot;} {}&quot;)" methodname="InvalidJsonIsRejected" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" seed="727713356" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.000124" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1315" name="KeyCoverageIsOrdinalAndExact" fullname="Dreamy.Localization.Tests.LocalizationJsonTests.KeyCoverageIsOrdinalAndExact" methodname="KeyCoverageIsOrdinalAndExact" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" seed="516779875" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.001840" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1316" name="MissingNumericPlaceholderIsRejected" fullname="Dreamy.Localization.Tests.LocalizationJsonTests.MissingNumericPlaceholderIsRejected" methodname="MissingNumericPlaceholderIsRejected" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" seed="1061458155" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.005947" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1317" name="NestedPluralAndEscapedBracesAreValid" fullname="Dreamy.Localization.Tests.LocalizationJsonTests.NestedPluralAndEscapedBracesAreValid" methodname="NestedPluralAndEscapedBracesAreValid" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" seed="1568508161" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.000516" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1314" name="UnicodeAndMultilineArePreserved" fullname="Dreamy.Localization.Tests.LocalizationJsonTests.UnicodeAndMultilineArePreserved" methodname="UnicodeAndMultilineArePreserved" classname="Dreamy.Localization.Tests.LocalizationJsonTests" runstate="Runnable" seed="308285842" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.000096" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1318" name="LocalizationKeyTests" fullname="Dreamy.Localization.Tests.LocalizationKeyTests" classname="Dreamy.Localization.Tests.LocalizationKeyTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.085030" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1319" name="Equality_SameTableAndEntry_AreEqual" fullname="Dreamy.Localization.Tests.LocalizationKeyTests.Equality_SameTableAndEntry_AreEqual" methodname="Equality_SameTableAndEntry_AreEqual" classname="Dreamy.Localization.Tests.LocalizationKeyTests" runstate="Runnable" seed="2082007518" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.003502" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1320" name="IsValid_MissingEntry_IsFalse" fullname="Dreamy.Localization.Tests.LocalizationKeyTests.IsValid_MissingEntry_IsFalse" methodname="IsValid_MissingEntry_IsFalse" classname="Dreamy.Localization.Tests.LocalizationKeyTests" runstate="Runnable" seed="634865690" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.000345" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1321" name="LocaleMatcher_CultureVariant_FallsBackToLanguageCode" fullname="Dreamy.Localization.Tests.LocalizationKeyTests.LocaleMatcher_CultureVariant_FallsBackToLanguageCode" methodname="LocaleMatcher_CultureVariant_FallsBackToLanguageCode" classname="Dreamy.Localization.Tests.LocalizationKeyTests" runstate="Runnable" seed="14586952" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.001421" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1322" name="LocaleMatcher_ExactMatch_IsCaseInsensitive" fullname="Dreamy.Localization.Tests.LocalizationKeyTests.LocaleMatcher_ExactMatch_IsCaseInsensitive" methodname="LocaleMatcher_ExactMatch_IsCaseInsensitive" classname="Dreamy.Localization.Tests.LocalizationKeyTests" runstate="Runnable" seed="1244099829" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.000287" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1323" name="LocalizationVariableTests" fullname="Dreamy.Localization.Tests.LocalizationVariableTests" classname="Dreamy.Localization.Tests.LocalizationVariableTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.095112" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1325" name="Registry_RegisterAndRead_ReturnsTypedValue" fullname="Dreamy.Localization.Tests.LocalizationVariableTests.Registry_RegisterAndRead_ReturnsTypedValue" methodname="Registry_RegisterAndRead_ReturnsTypedValue" classname="Dreamy.Localization.Tests.LocalizationVariableTests" runstate="Runnable" seed="1156501032" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.001341" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1326" name="Registry_VariableChange_ReportsOnlyChangedName" fullname="Dreamy.Localization.Tests.LocalizationVariableTests.Registry_VariableChange_ReportsOnlyChangedName" methodname="Registry_VariableChange_ReportsOnlyChangedName" classname="Dreamy.Localization.Tests.LocalizationVariableTests" runstate="Runnable" seed="992557984" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.000522" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1324" name="TypedValue_WhenChanged_RaisesOneNotification" fullname="Dreamy.Localization.Tests.LocalizationVariableTests.TypedValue_WhenChanged_RaisesOneNotification" methodname="TypedValue_WhenChanged_RaisesOneNotification" classname="Dreamy.Localization.Tests.LocalizationVariableTests" runstate="Runnable" seed="1015649088" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:40Z" duration="0.000229" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1452" name="Dreamy.Template.Localization.Editor.Tests.dll" fullname="/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/ScriptAssemblies/Dreamy.Template.Localization.Editor.Tests.dll" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:43Z" duration="3.208470" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="643317" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1453" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:43Z" duration="3.112771" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1454" name="Template" fullname="Dreamy.Template" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:43Z" duration="3.013190" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1455" name="Tests" fullname="Dreamy.Template.Tests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:43Z" duration="2.912993" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1456" name="Localization" fullname="Dreamy.Template.Tests.Localization" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:43Z" duration="2.813042" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1448" name="LocalizationImportTests" fullname="Dreamy.Template.Tests.Localization.LocalizationImportTests" classname="Dreamy.Template.Tests.Localization.LocalizationImportTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-03 04:32:40Z" end-time="2026-11-03 04:32:43Z" duration="2.713562" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1449" name="PreviewIsReadOnlyAndReportsCoverage" fullname="Dreamy.Template.Tests.Localization.LocalizationImportTests.PreviewIsReadOnlyAndReportsCoverage" methodname="PreviewIsReadOnlyAndReportsCoverage" classname="Dreamy.Template.Tests.Localization.LocalizationImportTests" runstate="Runnable" seed="812853914" result="Passed" start-time="2026-11-03 04:32:41Z" end-time="2026-11-03 04:32:41Z" duration="0.369041" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1451" name="ReimportPreservesTableGuidsEntryIdsAndContent" fullname="Dreamy.Template.Tests.Localization.LocalizationImportTests.ReimportPreservesTableGuidsEntryIdsAndContent" methodname="ReimportPreservesTableGuidsEntryIdsAndContent" classname="Dreamy.Template.Tests.Localization.LocalizationImportTests" runstate="Runnable" seed="848103204" result="Passed" start-time="2026-11-03 04:32:41Z" end-time="2026-11-03 04:32:43Z" duration="1.626687" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[A meta data file (.meta) exists but its folder 'Packages/com.dreamy.core/Documentation~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.
+A meta data file (.meta) exists but its folder 'Packages/com.dreamy.core/Samples~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.
+A meta data file (.meta) exists but its folder 'Packages/com.dreamy.feedback/Documentation~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.
+A meta data file (.meta) exists but its folder 'Packages/com.dreamy.feedback/Samples~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.
+The type Unity.Localization UnityEngine.Localization.SmartFormat.Extensions.ListFormatter is being serialized by [SerializeReference], but its parent type Unity.Localization UnityEngine.Localization.SmartFormat.Core.Extensions.FormatterBase is missing the [Serializable] attribute. To suppress this warning add [Serializable] to Unity.Localization UnityEngine.Localization.SmartFormat.Core.Extensions.FormatterBase or use [MakeSerializable].
+A meta data file (.meta) exists but its folder 'Packages/com.dreamy.core/Documentation~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.
+A meta data file (.meta) exists but its folder 'Packages/com.dreamy.core/Samples~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.
+A meta data file (.meta) exists but its folder 'Packages/com.dreamy.feedback/Documentation~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.
+A meta data file (.meta) exists but its folder 'Packages/com.dreamy.feedback/Samples~' can't be found, and has been created. Empty directories cannot be stored in version control, so it's assumed that the meta data file is for an empty directory in version control. When moving or deleting folders outside of Unity, please ensure that the corresponding .meta file is moved or deleted along with it.
+]]></output>
+                </test-case>
+                <test-case id="1450" name="StalePlanIsRejectedBeforeMutation" fullname="Dreamy.Template.Tests.Localization.LocalizationImportTests.StalePlanIsRejectedBeforeMutation" methodname="StalePlanIsRejectedBeforeMutation" classname="Dreamy.Template.Tests.Localization.LocalizationImportTests" runstate="Runnable" seed="1534932115" result="Passed" start-time="2026-11-03 04:32:43Z" end-time="2026-11-03 04:32:43Z" duration="0.616216" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[Saving results to: docs/evidence/localization/phase-07/playmode.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

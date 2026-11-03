@@ -1,0 +1,243 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DreamyGame_de
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: db428fc826f5c1106ba486c7dc98b135, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 2503060853407351268
+  m_TableData:
+  - m_Id: 1090449408
+    m_Localized: Einstellungen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1111420928
+    m_Localized: Musik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615232
+    m_Localized: Soundeffekte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615233
+    m_Localized: Vibration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615234
+    m_Localized: Datenschutz und DSGVO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615235
+    m_Localized: "K\xE4ufe wiederherstellen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615236
+    m_Localized: Bewerte uns
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615237
+    m_Localized: "Schlie\xDFen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615238
+    m_Localized: Sprache
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615239
+    m_Localized: "Sprache nicht verf\xFCgbar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615240
+    m_Localized: "Sprache konnte nicht ge\xE4ndert werden. Erneut versuchen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615241
+    m_Localized: Lokalisierungstest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615242
+    m_Localized: "Willkommen! \xC4ndere die Sprache in den Einstellungen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615243
+    m_Localized: "Du hast {amount} M\xFCnzen erhalten"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351268
+  - m_Id: 1119809536
+    m_Localized: "Einstellungen \xF6ffnen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809537
+    m_Localized: "Eine M\xFCnze hinzuf\xFCgen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809538
+    m_Localized: "Gespeicherte Sprache l\xF6schen (Test)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3333645332480
+    m_Localized: Dreamy Foundation Demo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936160989184
+    m_Localized: Panel umschalten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515136
+    m_Localized: "Punkte hinzuf\xFCgen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515137
+    m_Localized: Schaden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515138
+    m_Localized: Heilen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515139
+    m_Localized: Speichern
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515140
+    m_Localized: Laden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515141
+    m_Localized: Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515142
+    m_Localized: "T\xE4gliche Belohnung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515143
+    m_Localized: Ton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515144
+    m_Localized: Bewerte uns
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515145
+    m_Localized: Missionen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515146
+    m_Localized: Fortschritt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515147
+    m_Localized: "Gl\xFCcksrad"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515148
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515149
+    m_Localized: Wirtschaft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515150
+    m_Localized: Effekte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515151
+    m_Localized: Online-Belohnung (+10 Punkte)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515152
+    m_Localized: "Initialisierung l\xE4uft\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515153
+    m_Localized: 'Punkte: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351268
+  - m_Id: 478936215515154
+    m_Localized: 'Gesundheit: {value:0}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351268
+  - m_Id: 478936215515155
+    m_Localized: "Bereit | Starts: {launch} | Startm\xFCnzen: {coins}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351268
+  - m_Id: 478936215515156
+    m_Localized: 'Punkte aktualisiert: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351268
+  - m_Id: 478936215515157
+    m_Localized: "Gespeichert | M\xFCnzen: {value}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351268
+  - m_Id: 478936215515158
+    m_Localized: "Konfiguration geladen | M\xFCnzen: {value}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351268
+  - m_Id: 478936215515159
+    m_Localized: "Online-Belohnung nicht verf\xFCgbar: Verbindung noch nicht bereit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515160
+    m_Localized: "Online-Belohnung: Verbindung wird gepr\xFCft\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515161
+    m_Localized: 'Online-Belohnung erhalten: +10 Punkte (Demo)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515162
+    m_Localized: Online-Belohnung fehlgeschlagen. Siehe Konsole.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515163
+    m_Localized: Online-Belohnung abgebrochen. Keine Belohnung vergeben.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515164
+    m_Localized: Verbindungsversuche aufgebraucht. Keine Belohnung vergeben.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515165
+    m_Localized: "Ergebnis unbekannt. Vor erneutem Versuch pr\xFCfen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515166
+    m_Localized: "Ein anderer Vorgang l\xE4uft. Sp\xE4ter erneut versuchen."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 2503060853407351268
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1115615243
+        - id: 478936215515153
+        - id: 478936215515154
+        - id: 478936215515155
+        - id: 478936215515156
+        - id: 478936215515157
+        - id: 478936215515158

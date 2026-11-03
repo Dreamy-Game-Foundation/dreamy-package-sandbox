@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e414d34d931b210be11e22b39c8764, type: 3}
+  m_Name: LanguageIcons
+  m_EditorClassIdentifier: Dreamy.Feature.Settings.Integration.Runtime::Dreamy.Feature.Settings.Integration.SettingsLanguageIcons
+  icons:
+  - LocaleCode: en
+    Icon: {fileID: 21300000, guid: e7d0f1511373429b2b930dcd2af80e39, type: 3}
+  - LocaleCode: vi
+    Icon: {fileID: 21300000, guid: f3bc3ac7c298b364fb0f069c99d6b7f8, type: 3}
+  - LocaleCode: de
+    Icon: {fileID: 21300000, guid: 4452ec7383e0ed44facc2d65a2c6239d, type: 3}
+  - LocaleCode: es
+    Icon: {fileID: 21300000, guid: 3839eb8526cf22d8a99dedaf564d8481, type: 3}
+  - LocaleCode: fr
+    Icon: {fileID: 21300000, guid: 50ea639d7523f59979801a83997279ba, type: 3}
+  - LocaleCode: id
+    Icon: {fileID: 21300000, guid: 52bf94ca24d462c36abe24bbb28ee51e, type: 3}
+  - LocaleCode: ja
+    Icon: {fileID: 21300000, guid: aa78b16cb3e78d56f9c9499e749d9e43, type: 3}
+  - LocaleCode: ko
+    Icon: {fileID: 21300000, guid: 4c0b4661e337fff2d8bfa4a15e93878f, type: 3}
+  - LocaleCode: pt-BR
+    Icon: {fileID: 21300000, guid: ac2b089bbe187d6c2996ac8069947340, type: 3}
+  - LocaleCode: ru
+    Icon: {fileID: 21300000, guid: efdf6177f251773838c6463abe22f1d9, type: 3}
+  - LocaleCode: th
+    Icon: {fileID: 21300000, guid: 44d66e48d90a0ee8b9a3c0ca38aa6744, type: 3}
+  - LocaleCode: zh-Hans
+    Icon: {fileID: 21300000, guid: 5ba25b55bb80afd179367e717dd74b73, type: 3}

@@ -128,8 +128,9 @@ namespace Dreamy.Template.Demo
 
             TemplateConfig config = ServiceLocator.Get<IDataConfigService>()
                 .GetTable<TemplateConfig>();
-            created.SetStatus(
-                $"PASS | launch={saveData.LaunchCount} | config coins={config.StartingCoins}");
+            created.SetLocalizedStatus("main.ready",
+                $"Ready | launches={saveData.LaunchCount} | starting coins={config.StartingCoins}",
+                new { launch=saveData.LaunchCount, coins=config.StartingCoins });
             DemoPanelReady?.Invoke(created);
         }
 
@@ -176,7 +177,7 @@ namespace Dreamy.Template.Demo
             var connectivity = FindFirstObjectByType<ConnectivityRoot>();
             if (connectivity == null || connectivity.Feature == null)
             {
-                target.SetStatus("Online Reward unavailable: ConnectivityRoot is not ready.");
+                target.SetLocalizedStatus("main.online_unavailable", "Online Reward unavailable: connectivity is not ready.");
                 return;
             }
 
@@ -184,7 +185,7 @@ namespace Dreamy.Template.Demo
                 this.GetCancellationTokenOnDestroy(), target.GetCancellationTokenOnDestroy());
             onlineRewardSession = session;
             target.SetOnlineRewardBusy(true);
-            target.SetStatus("Online Reward: checking connection...");
+            target.SetLocalizedStatus("main.online_checking", "Online Reward: checking connection...");
             try
             {
                 // Demo reward: only dispatch after the shared connectivity preflight succeeds.
@@ -198,14 +199,22 @@ namespace Dreamy.Template.Demo
                         return UniTask.FromResult(ConnectedOperationResult.Success());
                     }, new ConnectivityRetryPolicy(), session.Token);
                 if (target != null && !isShuttingDown)
-                    target.SetStatus(result.Status == ConnectivityActionStatus.Succeeded
+                    target.SetLocalizedStatus(result.Status switch
+                    {
+                        ConnectivityActionStatus.Succeeded => "main.online_received",
+                        ConnectivityActionStatus.Cancelled => "main.online_cancelled",
+                        ConnectivityActionStatus.RetryExhausted => "main.online_retry_exhausted",
+                        ConnectivityActionStatus.OutcomeUnknown => "main.online_unknown",
+                        ConnectivityActionStatus.Busy => "main.online_busy",
+                        _ => "main.online_failed"
+                    }, result.Status == ConnectivityActionStatus.Succeeded
                         ? "Online Reward received: +10 Score (demo)"
-                        : $"Online Reward: {result.Status}. No reward granted.");
+                        : "Online Reward could not be granted.");
             }
             catch (OperationCanceledException) { }
             catch (Exception exception)
             {
-                if (target != null) target.SetStatus("Online Reward failed. See Console.");
+                if (target != null) target.SetLocalizedStatus("main.online_failed", "Online Reward failed. See Console.");
                 Debug.LogException(exception, this);
             }
             finally
@@ -219,7 +228,7 @@ namespace Dreamy.Template.Demo
         {
             score += 10;
             RefreshPanel();
-            panel?.SetStatus($"Score changed | score={score}");
+            panel?.SetLocalizedStatus("main.score_changed", $"Score changed | score={score}", new { value=score });
             ScoreAdded?.Invoke();
         }
 
@@ -240,7 +249,7 @@ namespace Dreamy.Template.Demo
             saveData.Coins = score;
             saveData.Score = Mathf.Max(saveData.Score, score);
             datasave.Save(saveData);
-            panel?.SetStatus($"Save PASS | coins={saveData.Coins}");
+            panel?.SetLocalizedStatus("main.saved", $"Saved | coins={saveData.Coins}", new { value=saveData.Coins });
         }
 
         private void Load()
@@ -249,8 +258,7 @@ namespace Dreamy.Template.Demo
                 .GetTable<TemplateConfig>();
             score = config.StartingCoins;
             RefreshPanel();
-            panel?.SetStatus(
-                $"Config Load PASS | coins={config.StartingCoins} ");
+            panel?.SetLocalizedStatus("main.loaded", $"Config loaded | coins={config.StartingCoins}", new { value=config.StartingCoins });
         }
 
         private void OpenShop()

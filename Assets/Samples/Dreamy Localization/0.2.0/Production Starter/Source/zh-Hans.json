@@ -1,0 +1,20 @@
+{
+  "settings.title": "设置",
+  "settings.music": "音乐",
+  "settings.sfx": "音效",
+  "settings.haptics": "振动",
+  "settings.privacy": "隐私与GDPR",
+  "settings.restore": "恢复购买",
+  "settings.rate": "为我们评分",
+  "settings.close": "关闭",
+  "settings.language": "语言",
+  "settings.language_unavailable": "该语言暂不可用",
+  "settings.language_failed": "无法切换语言，请重试。",
+  "demo.title": "本地化测试",
+  "demo.greeting": "欢迎！请在设置中切换语言。",
+  "demo.reward": "你获得了{amount}枚金币",
+  "demo.open_settings": "打开设置",
+  "demo.increment": "增加一枚金币",
+  "demo.reset": "重置已保存的语言（测试）",
+  "main.title": "Dreamy Foundation 演示"
+}

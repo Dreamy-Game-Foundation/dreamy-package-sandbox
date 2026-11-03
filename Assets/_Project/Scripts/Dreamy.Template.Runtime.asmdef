@@ -47,7 +47,8 @@
     "Dreamy.Connectivity.UI",
     "Dreamy.Localization.Runtime",
     "Dreamy.Localization.Runtime.UI",
-    "Unity.Localization"
+    "Unity.Localization",
+    "Dreamy.Localization.SettingsIntegration"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

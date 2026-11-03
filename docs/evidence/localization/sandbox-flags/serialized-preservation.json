@@ -1,0 +1,29 @@
+{
+  "Assets/_Project/Prefabs/Panel/FoundationDemoPanel.prefab": {
+    "existingIds": 400,
+    "addedObjects": 20,
+    "removedObjects": 0
+  },
+  "Assets/_Project/Prefabs/Demo/FoundationDemo.prefab": {
+    "existingIds": 19,
+    "addedObjects": 1,
+    "removedObjects": 0
+  },
+  "Assets/Samples/Dreamy Settings/0.2.0/Settings Feature/Prefabs/SettingsPanel.prefab": {
+    "existingIds": 161,
+    "addedObjects": 8,
+    "removedObjects": 0
+  },
+  "Assets/_Project/Localization/Generated/StandaloneSettingsView.prefab": {
+    "existingIds": 159,
+    "addedObjects": 8,
+    "removedObjects": 0
+  },
+  "canonicalSources": {
+    "originalMetaGuidPreserved": true
+  },
+  "sharedEntryIds": {
+    "retained": 18,
+    "new": 32
+  }
+}

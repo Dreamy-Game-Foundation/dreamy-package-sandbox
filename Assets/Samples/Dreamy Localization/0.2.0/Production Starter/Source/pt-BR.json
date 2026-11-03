@@ -1,0 +1,20 @@
+{
+  "settings.title": "Configurações",
+  "settings.music": "Música",
+  "settings.sfx": "Efeitos sonoros",
+  "settings.haptics": "Vibração",
+  "settings.privacy": "Privacidade e GDPR",
+  "settings.restore": "Restaurar compras",
+  "settings.rate": "Avalie-nos",
+  "settings.close": "Fechar",
+  "settings.language": "Idioma",
+  "settings.language_unavailable": "Idioma indisponível",
+  "settings.language_failed": "Não foi possível mudar o idioma. Tente novamente.",
+  "demo.title": "Teste de tradução",
+  "demo.greeting": "Boas-vindas! Mude o idioma nas configurações.",
+  "demo.reward": "Você recebeu {amount} moedas",
+  "demo.open_settings": "Abrir configurações",
+  "demo.increment": "Adicionar uma moeda",
+  "demo.reset": "Apagar idioma salvo (teste)",
+  "main.title": "Demonstração Dreamy Foundation"
+}

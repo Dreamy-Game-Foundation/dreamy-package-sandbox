@@ -1,0 +1,243 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: DreamyGame_es
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: db428fc826f5c1106ba486c7dc98b135, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 2503060853407351269
+  m_TableData:
+  - m_Id: 1090449408
+    m_Localized: Ajustes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1111420928
+    m_Localized: "M\xFAsica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615232
+    m_Localized: Efectos de sonido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615233
+    m_Localized: "Vibraci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615234
+    m_Localized: Privacidad y RGPD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615235
+    m_Localized: Restaurar compras
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615236
+    m_Localized: "Val\xF3ranos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615237
+    m_Localized: Cerrar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615238
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615239
+    m_Localized: Idioma no disponible
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615240
+    m_Localized: "No se pudo cambiar el idioma. Int\xE9ntalo de nuevo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615241
+    m_Localized: "Prueba de traducci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615242
+    m_Localized: "\xA1Bienvenido! Cambia el idioma en Ajustes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1115615243
+    m_Localized: Has recibido {amount} monedas
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351269
+  - m_Id: 1119809536
+    m_Localized: Abrir ajustes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809537
+    m_Localized: "A\xF1adir una moneda"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1119809538
+    m_Localized: Borrar idioma guardado (prueba)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3333645332480
+    m_Localized: Demo de Dreamy Foundation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936160989184
+    m_Localized: Mostrar/ocultar panel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515136
+    m_Localized: "A\xF1adir puntos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515137
+    m_Localized: "Da\xF1o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515138
+    m_Localized: Curar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515139
+    m_Localized: Guardar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515140
+    m_Localized: Cargar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515141
+    m_Localized: Tienda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515142
+    m_Localized: Recompensa diaria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515143
+    m_Localized: Sonido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515144
+    m_Localized: "Val\xF3ranos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515145
+    m_Localized: Misiones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515146
+    m_Localized: Progreso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515147
+    m_Localized: Ruleta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515148
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515149
+    m_Localized: "Econom\xEDa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515150
+    m_Localized: Efectos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515151
+    m_Localized: "Recompensa en l\xEDnea (+10 puntos)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515152
+    m_Localized: "Esperando inicializaci\xF3n\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515153
+    m_Localized: 'Puntos: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351269
+  - m_Id: 478936215515154
+    m_Localized: 'Salud: {value:0}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351269
+  - m_Id: 478936215515155
+    m_Localized: 'Listo | Inicios: {launch} | Monedas iniciales: {coins}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351269
+  - m_Id: 478936215515156
+    m_Localized: 'Puntos actualizados: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351269
+  - m_Id: 478936215515157
+    m_Localized: 'Guardado | Monedas: {value}'
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351269
+  - m_Id: 478936215515158
+    m_Localized: "Configuraci\xF3n cargada | Monedas: {value}"
+    m_Metadata:
+      m_Items:
+      - rid: 2503060853407351269
+  - m_Id: 478936215515159
+    m_Localized: "Recompensa no disponible: la conexi\xF3n a\xFAn no est\xE1 lista."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515160
+    m_Localized: "Recompensa en l\xEDnea: comprobando conexi\xF3n\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515161
+    m_Localized: 'Recompensa recibida: +10 puntos (demo)'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515162
+    m_Localized: Error al recibir la recompensa. Consulta la consola.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515163
+    m_Localized: Recompensa cancelada. No se ha otorgado ninguna.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515164
+    m_Localized: "Se agotaron los intentos de conexi\xF3n. No se otorg\xF3 recompensa."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515165
+    m_Localized: "Resultado desconocido. Compru\xE9balo antes de reintentar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515166
+    m_Localized: "Hay otra operaci\xF3n en curso. Int\xE9ntalo m\xE1s tarde."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 2503060853407351269
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1115615243
+        - id: 478936215515153
+        - id: 478936215515154
+        - id: 478936215515155
+        - id: 478936215515156
+        - id: 478936215515157
+        - id: 478936215515158

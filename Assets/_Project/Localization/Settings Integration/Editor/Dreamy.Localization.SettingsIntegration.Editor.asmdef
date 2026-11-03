@@ -1,0 +1,14 @@
+{
+  "name": "Dreamy.Localization.SettingsIntegration.Editor",
+  "references": [
+    "Dreamy.Localization.Runtime",
+    "Dreamy.Localization.Runtime.UI",
+    "Unity.TextMeshPro",
+    "Unity.Localization",
+    "Unity.ugui"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": true
+}

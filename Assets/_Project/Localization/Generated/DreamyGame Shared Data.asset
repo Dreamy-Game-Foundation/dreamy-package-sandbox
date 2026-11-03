@@ -87,6 +87,134 @@ MonoBehaviour:
     m_Key: main.title
     m_Metadata:
       m_Items: []
+  - m_Id: 478936160989184
+    m_Key: main.toggle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515136
+    m_Key: main.add_score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515137
+    m_Key: main.damage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515138
+    m_Key: main.heal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515139
+    m_Key: main.save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515140
+    m_Key: main.load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515141
+    m_Key: main.shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515142
+    m_Key: main.daily_reward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515143
+    m_Key: main.sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515144
+    m_Key: main.rate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515145
+    m_Key: main.missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515146
+    m_Key: main.progression
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515147
+    m_Key: main.lucky_wheel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515148
+    m_Key: main.tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515149
+    m_Key: main.economy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515150
+    m_Key: main.feedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515151
+    m_Key: main.online_reward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515152
+    m_Key: main.waiting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515153
+    m_Key: main.score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515154
+    m_Key: main.health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515155
+    m_Key: main.ready
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515156
+    m_Key: main.score_changed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515157
+    m_Key: main.saved
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515158
+    m_Key: main.loaded
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515159
+    m_Key: main.online_unavailable
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515160
+    m_Key: main.online_checking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515161
+    m_Key: main.online_received
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515162
+    m_Key: main.online_failed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515163
+    m_Key: main.online_cancelled
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515164
+    m_Key: main.online_retry_exhausted
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515165
+    m_Key: main.online_unknown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 478936215515166
+    m_Key: main.online_busy
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

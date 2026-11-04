@@ -1,0 +1,34 @@
+{
+  "before": {
+    "before": 9700,
+    "beforeConfirm": 9700,
+    "confirmation": true
+  },
+  "after": {
+    "after": 9825,
+    "status": "Saved: +125 currency.coin",
+    "holders": [],
+    "noAdsOwned": false
+  },
+  "finalUI": {
+    "options": 30,
+    "int64Controls": 10,
+    "coinAmount": 125,
+    "input": "125",
+    "min": 1,
+    "max": 1000000,
+    "balance": "9825",
+    "noAdsOwned": false
+  },
+  "restartBalance": 9825,
+  "scope": "Actual Add Coins button opened confirmation; Confirm granted 125 coins to the project's current wallet. No live No Ads entitlement was granted; isolated-save tests cover No Ads persistence/effect.",
+  "lifecycle": {
+    "disabledRegistryCount": 3,
+    "reenabledRegistryCount": 30
+  },
+  "sceneInstall": {
+    "runtimeHosts": 1,
+    "missingScripts": 0,
+    "idempotent": true
+  }
+}

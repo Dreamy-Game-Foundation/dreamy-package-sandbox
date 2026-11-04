@@ -1,0 +1,6 @@
+{
+  "name": "Dreamy.Template.Debugger.Editor",
+  "references": ["Dreamy.Template.Debugger", "Dreamy.Debugger.Engine"],
+  "includePlatforms": ["Editor"],
+  "defineConstraints": ["!DISABLE_DREAMY_DEBUGGER"]
+}

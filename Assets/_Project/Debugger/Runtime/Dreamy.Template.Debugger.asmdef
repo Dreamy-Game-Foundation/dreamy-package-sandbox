@@ -1,0 +1,14 @@
+{
+  "name": "Dreamy.Template.Debugger",
+  "rootNamespace": "Dreamy.Template.Debugging",
+  "references": [
+    "Dreamy.Template.Runtime",
+    "Dreamy.Core.Runtime",
+    "Dreamy.Economy.Runtime",
+    "Dreamy.Feature.Shop.Integration.Runtime",
+    "Dreamy.Debugger.Runtime",
+    "Dreamy.Debugger.Engine",
+    "Dreamy.Debugger.Sample"
+  ],
+  "defineConstraints": ["!DISABLE_DREAMY_DEBUGGER"]
+}

@@ -1,0 +1,15 @@
+{
+  "Assets/_Project/Debugger/Runtime/SandboxGameCheats.cs": "0badc0e2963197f2ca1ce42abce1fa0f56191e839550a7135b283f7c20a1675b",
+  "Assets/_Project/Debugger/Runtime/SandboxCheatHost.cs": "e2a71ee1dc8c60443387142cfe5a789542befd8f2f30a2aac2e7a7efd59c8de2",
+  "Assets/_Project/Debugger/Editor/SandboxDebuggerSetup.cs": "ee2324358b50f39194c22f5256c28a41622052dc3b21f148e218f76297171a75",
+  "Assets/_Project/Debugger/Tests/Editor/SandboxCheatTests.cs": "e3b82f3b406141003a9cf6296be46aedcec901a2dffcf49f16fb280ab0175bea",
+  "Assets/_Project/Debugger/Runtime/Dreamy.Template.Debugger.asmdef": "5fd9514db14f15951159a0a8c69061469e5f745cbe4c49c536988a0477160e35",
+  "Assets/_Project/Debugger/Editor/Dreamy.Template.Debugger.Editor.asmdef": "85d2adbd7f3fbff801116199e5b709d466fc7318ce23166b283b6c98db41cc82",
+  "Assets/_Project/Debugger/Tests/Editor/Dreamy.Template.Debugger.Tests.asmdef": "73a874438206c7cff5a6739403f058d661c83baefc03deac75ea7df4058cf369",
+  "LocalPackages/com.dreamy.debugger/Samples~/QuickStart/BoundCheatExamples.cs": "9e40bd23740c364742bc8bfb512d1497b5deaea9f900b10ec3256176fc2e4202",
+  "LocalPackages/com.dreamy.debugger/Runtime/Engine/OptionsPresentationBridge.cs": "f584c80b838b716eaa9fb316fcebad0eb8c93cca44d77b3d33c8ce9e4a897df6",
+  "LocalPackages/com.dreamy.debugger/Runtime/Imported/Presentation/Scripts/UI/Controls/Data/NumberControl.cs": "21bc7a6079098f02ee9302e158d52b055987ad24c62db6fecbaf01ebe74989e4",
+  "LocalPackages/com.dreamy.debugger/Runtime/Imported/Foundation/Scripts/UI/DebugNumberSpinner.cs": "dc1a6fb24d1aefafa8d81b40b7e3d2376faf44b81bf3fbcaa73f0c8ce184e0bc",
+  "LocalPackages/com.dreamy.debugger/Runtime/Imported/Foundation/Scripts/UI/DebugNumberButton.cs": "fd23a8482bc97f7bfbb4dea3aa2462276bc43c2735da275ff9689dc007cd7934",
+  "LocalPackages/com.dreamy.debugger/Tests/PlayMode/OverlayIntegrationTests.cs": "1e3669e861f38a11275b22ac37fdefa24e37d3901e285f632b9755bcd8da61ce"
+}

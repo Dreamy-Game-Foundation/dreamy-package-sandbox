@@ -1,0 +1,14 @@
+{
+  "name": "Dreamy.Template.Debugger.Tests",
+  "references": [
+    "Dreamy.Template.Debugger",
+    "Dreamy.Template.Runtime",
+    "Dreamy.Debugger.Runtime",
+    "Dreamy.Economy.Runtime",
+    "Dreamy.Datasave.Runtime",
+    "Dreamy.Feature.Shop.Integration.Runtime"
+  ],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "defineConstraints": ["!DISABLE_DREAMY_DEBUGGER"]
+}

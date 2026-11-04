@@ -1,0 +1,36 @@
+{
+  "scope": "Verified local source for sandbox cheat adapter; no installed global compatibility catalog or dreamy CLI was found.",
+  "unity": "m_EditorVersion: 6000.4.12f1",
+  "packages": {
+    "com.dreamy.debugger": {
+      "version": "0.2.0-preview.4",
+      "commit": "5e0a1f8e925300417c46b401436bdb1aae37177b"
+    },
+    "com.dreamy.feature.economy": {
+      "version": "0.8.0",
+      "commit": "acfa04f31b4b925c6029e8394debd54bc0b537a0"
+    },
+    "com.dreamy.feature.shop": {
+      "version": "0.3.0",
+      "commit": "c1631298d2660805b984f1cafc56abe7b3567c19"
+    },
+    "com.dreamy.datasave": {
+      "version": "1.0.1",
+      "commit": "8e8fcc82ff953c92986167c794e7c076b0d48236"
+    },
+    "com.dreamy.core": {
+      "version": "1.2.0",
+      "commit": "ba844659fbc65655f21b082f89115295167f2405"
+    }
+  },
+  "verifiedContracts": [
+    "CheatRegistry.Register/Read/Set/Execute; IDisposable lease",
+    "IResourceWallet.TryGrant(ResourceGrantRequest)",
+    "IResourceBalanceProvider.GetBalance(ResourceId)",
+    "DatasaveResourceWallet: persisted grant then BalanceChanged notification",
+    "EntitlementIds.RemoveAds = entitlement.remove-ads",
+    "EntitlementEffectBinding: applies once after ownership",
+    "GameInstaller.State == BootstrapState.Ready; ServiceLocator.TryGet<T>"
+  ],
+  "adsLimitation": "GameInstaller.ApplyNoAdsDemo logs a demo callback. No ads SDK package/provider found. No real store receipt is fabricated."
+}

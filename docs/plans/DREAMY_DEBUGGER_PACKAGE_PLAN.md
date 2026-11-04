@@ -321,3 +321,8 @@ Phần mềm ở các phase đã có implementation; các gate cần thiết b�
 ### Delivery checkpoint — 2026-11-04
 
 Submodule đã push commit `1f9a5e7`, tag `v0.2.0-preview.1`. Kiểm tra cuối khớp 263 fingerprint: 64 EditMode + 10 PlayMode + 13 relay tests đạt; Linux dev/release và Android dev IL2CPP ARM64 build thành công; Linux release có 0 asset debugger. Chưa nghiệm thu trên thiết bị/tài khoản đích thật.
+
+
+### Cheat entry correction — 2026-11-04
+
+Nguyên nhân không mở được ở sandbox: BootstrapScene chưa có DebuggerRuntime. Đã thêm prefab bootstrap vào startup scene qua Unity API, menu Cheat Panel và hướng dẫn/nút cài scene rõ trong Control Center. Preview.2 có 5 EditorIntegration tests đạt; smoke thực tế qua MainScene mở PIN và tab Options/11 option. Receipt ở `docs/evidence/debugger/cheat-entry-fix/`.

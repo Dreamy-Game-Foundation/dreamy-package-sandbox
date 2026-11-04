@@ -1,0 +1,6 @@
+{
+  "Editor/DebuggerWindow.cs": "b05a107a7870add0793bdff45147a4323eca7eb856a43a4ee2da05927daaa211",
+  "Editor/DebuggerAssetBuilder.cs": "3de039e757d39bcdf25e121685b3d3ec736796c04bb5eb803638195a4af59b11",
+  "Tests/EditorIntegration/PackageAcceptanceTests.cs": "631cf3845b6bd3248a87c88b33978bc7a633e74e559d4688aab75d54c67ddc2d",
+  "package.json": "377b12976d9441e074120737353cdec9263244b106ead972cb93d133695f5848"
+}

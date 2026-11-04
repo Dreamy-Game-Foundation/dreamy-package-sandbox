@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Dreamy.Debugger.Engine::Dreamy.Debugger.DebuggerConfiguration
   Mode: 1
   RequiredTaps: 5
+  TapGapSeconds: 0.4
+  SequenceTimeoutSeconds: 2.5
   Credential: 0000
   Passphrase: 0
   SessionSeconds: 300

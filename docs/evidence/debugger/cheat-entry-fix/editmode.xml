@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-04 06:46:02Z" end-time="2026-11-04 06:46:02Z" duration="0.1592994">
-  <test-suite type="TestSuite" id="1000" name="dreamy-debugger-consumer-final" fullname="dreamy-debugger-consumer-final" runstate="Runnable" testcasecount="65" result="Passed" start-time="2026-11-04 06:46:02Z" end-time="2026-11-04 06:46:02Z" duration="0.159299" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-04 06:49:01Z" end-time="2026-11-04 06:49:01Z" duration="0.1727054">
+  <test-suite type="TestSuite" id="1000" name="dreamy-debugger-consumer-final" fullname="dreamy-debugger-consumer-final" runstate="Runnable" testcasecount="65" result="Passed" start-time="2026-11-04 06:49:01Z" end-time="2026-11-04 06:49:01Z" duration="0.172705" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
     <properties>
       <property name="platform" value="EditMode" />
     </properties>
-    <test-suite type="Assembly" id="1086" name="Dreamy.Debugger.Tests.EditorIntegration.dll" fullname="/tmp/dreamy-debugger-consumer-final/Library/ScriptAssemblies/Dreamy.Debugger.Tests.EditorIntegration.dll" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-04 06:46:02Z" end-time="2026-11-04 06:46:02Z" duration="0.152883" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <test-suite type="Assembly" id="1086" name="Dreamy.Debugger.Tests.EditorIntegration.dll" fullname="/tmp/dreamy-debugger-consumer-final/Library/ScriptAssemblies/Dreamy.Debugger.Tests.EditorIntegration.dll" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-04 06:49:01Z" end-time="2026-11-04 06:49:01Z" duration="0.166786" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
       <properties>
-        <property name="_PID" value="1823359" />
+        <property name="_PID" value="1842233" />
         <property name="_APPDOMAIN" value="Unity Child Domain" />
         <property name="platform" value="EditMode" />
         <property name="EditorOnly" value="True" />
       </properties>
-      <test-suite type="TestSuite" id="1087" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-04 06:46:02Z" end-time="2026-11-04 06:46:02Z" duration="0.152567" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <test-suite type="TestSuite" id="1087" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-04 06:49:01Z" end-time="2026-11-04 06:49:01Z" duration="0.166489" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
         <properties />
-        <test-suite type="TestSuite" id="1088" name="Debugger" fullname="Dreamy.Debugger" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-04 06:46:02Z" end-time="2026-11-04 06:46:02Z" duration="0.152442" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <test-suite type="TestSuite" id="1088" name="Debugger" fullname="Dreamy.Debugger" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-04 06:49:01Z" end-time="2026-11-04 06:49:01Z" duration="0.166377" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
           <properties />
-          <test-suite type="TestSuite" id="1089" name="Tests" fullname="Dreamy.Debugger.Tests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-04 06:46:02Z" end-time="2026-11-04 06:46:02Z" duration="0.152325" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestSuite" id="1089" name="Tests" fullname="Dreamy.Debugger.Tests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-04 06:49:01Z" end-time="2026-11-04 06:49:01Z" duration="0.166268" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
             <properties />
-            <test-suite type="TestFixture" id="1080" name="PackageAcceptanceTests" fullname="Dreamy.Debugger.Tests.PackageAcceptanceTests" classname="Dreamy.Debugger.Tests.PackageAcceptanceTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-04 06:46:02Z" end-time="2026-11-04 06:46:02Z" duration="0.151617" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="TestFixture" id="1080" name="PackageAcceptanceTests" fullname="Dreamy.Debugger.Tests.PackageAcceptanceTests" classname="Dreamy.Debugger.Tests.PackageAcceptanceTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-04 06:49:01Z" end-time="2026-11-04 06:49:01Z" duration="0.165603" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties />
-              <test-case id="1082" name="AllPackagePrefabsHaveValidScripts" fullname="Dreamy.Debugger.Tests.PackageAcceptanceTests.AllPackagePrefabsHaveValidScripts" methodname="AllPackagePrefabsHaveValidScripts" classname="Dreamy.Debugger.Tests.PackageAcceptanceTests" runstate="Runnable" seed="371904572" result="Passed" start-time="2026-11-04 06:46:02Z" end-time="2026-11-04 06:46:02Z" duration="0.059097" asserts="0">
+              <test-case id="1082" name="AllPackagePrefabsHaveValidScripts" fullname="Dreamy.Debugger.Tests.PackageAcceptanceTests.AllPackagePrefabsHaveValidScripts" methodname="AllPackagePrefabsHaveValidScripts" classname="Dreamy.Debugger.Tests.PackageAcceptanceTests" runstate="Runnable" seed="1853621360" result="Passed" start-time="2026-11-04 06:49:01Z" end-time="2026-11-04 06:49:01Z" duration="0.055164" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1083" name="CatalogResolvesEveryTabKeyWithoutResources" fullname="Dreamy.Debugger.Tests.PackageAcceptanceTests.CatalogResolvesEveryTabKeyWithoutResources" methodname="CatalogResolvesEveryTabKeyWithoutResources" classname="Dreamy.Debugger.Tests.PackageAcceptanceTests" runstate="Runnable" seed="353905516" result="Passed" start-time="2026-11-04 06:46:02Z" end-time="2026-11-04 06:46:02Z" duration="0.005136" asserts="0">
+              <test-case id="1083" name="CatalogResolvesEveryTabKeyWithoutResources" fullname="Dreamy.Debugger.Tests.PackageAcceptanceTests.CatalogResolvesEveryTabKeyWithoutResources" methodname="CatalogResolvesEveryTabKeyWithoutResources" classname="Dreamy.Debugger.Tests.PackageAcceptanceTests" runstate="Runnable" seed="1458577883" result="Passed" start-time="2026-11-04 06:49:01Z" end-time="2026-11-04 06:49:01Z" duration="0.004778" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1084" name="ProjectSampleInstallKeepsCustomization" fullname="Dreamy.Debugger.Tests.PackageAcceptanceTests.ProjectSampleInstallKeepsCustomization" methodname="ProjectSampleInstallKeepsCustomization" classname="Dreamy.Debugger.Tests.PackageAcceptanceTests" runstate="Runnable" seed="1647396889" result="Passed" start-time="2026-11-04 06:46:02Z" end-time="2026-11-04 06:46:02Z" duration="0.031807" asserts="0">
+              <test-case id="1084" name="ProjectSampleInstallKeepsCustomization" fullname="Dreamy.Debugger.Tests.PackageAcceptanceTests.ProjectSampleInstallKeepsCustomization" methodname="ProjectSampleInstallKeepsCustomization" classname="Dreamy.Debugger.Tests.PackageAcceptanceTests" runstate="Runnable" seed="1497229456" result="Passed" start-time="2026-11-04 06:49:01Z" end-time="2026-11-04 06:49:01Z" duration="0.049497" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1085" name="PublicRuntimeHasNoSrTypeNames" fullname="Dreamy.Debugger.Tests.PackageAcceptanceTests.PublicRuntimeHasNoSrTypeNames" methodname="PublicRuntimeHasNoSrTypeNames" classname="Dreamy.Debugger.Tests.PackageAcceptanceTests" runstate="Runnable" seed="198661551" result="Passed" start-time="2026-11-04 06:46:02Z" end-time="2026-11-04 06:46:02Z" duration="0.001525" asserts="0">
+              <test-case id="1085" name="PublicRuntimeHasNoSrTypeNames" fullname="Dreamy.Debugger.Tests.PackageAcceptanceTests.PublicRuntimeHasNoSrTypeNames" methodname="PublicRuntimeHasNoSrTypeNames" classname="Dreamy.Debugger.Tests.PackageAcceptanceTests" runstate="Runnable" seed="675951522" result="Passed" start-time="2026-11-04 06:49:01Z" end-time="2026-11-04 06:49:01Z" duration="0.001510" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />
                 </properties>
               </test-case>
-              <test-case id="1081" name="SceneBootstrapInstallIsExplicitAndIdempotent" fullname="Dreamy.Debugger.Tests.PackageAcceptanceTests.SceneBootstrapInstallIsExplicitAndIdempotent" methodname="SceneBootstrapInstallIsExplicitAndIdempotent" classname="Dreamy.Debugger.Tests.PackageAcceptanceTests" runstate="Runnable" seed="2070612614" result="Passed" start-time="2026-11-04 06:46:02Z" end-time="2026-11-04 06:46:02Z" duration="0.044880" asserts="0">
+              <test-case id="1081" name="SceneBootstrapInstallIsExplicitAndIdempotent" fullname="Dreamy.Debugger.Tests.PackageAcceptanceTests.SceneBootstrapInstallIsExplicitAndIdempotent" methodname="SceneBootstrapInstallIsExplicitAndIdempotent" classname="Dreamy.Debugger.Tests.PackageAcceptanceTests" runstate="Runnable" seed="1428578824" result="Passed" start-time="2026-11-04 06:49:01Z" end-time="2026-11-04 06:49:01Z" duration="0.046272" asserts="0">
                 <properties>
                   <property name="retryIteration" value="0" />
                   <property name="repeatIteration" value="0" />

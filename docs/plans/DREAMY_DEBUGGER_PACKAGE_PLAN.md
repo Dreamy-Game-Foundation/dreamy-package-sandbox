@@ -326,3 +326,5 @@ Submodule đã push commit `1f9a5e7`, tag `v0.2.0-preview.1`. Kiểm tra cuối 
 ### Cheat entry correction — 2026-11-04
 
 Nguyên nhân không mở được ở sandbox: BootstrapScene chưa có DebuggerRuntime. Đã thêm prefab bootstrap vào startup scene qua Unity API, menu Cheat Panel và hướng dẫn/nút cài scene rõ trong Control Center. Preview.2 có 5 EditorIntegration tests đạt; smoke thực tế qua MainScene mở PIN và tab Options/11 option. Receipt ở `docs/evidence/debugger/cheat-entry-fix/`.
+
+Bổ sung preview.3: hủy hộp PIN đang mở khi đổi scene/mất focus/pause để tránh prompt bị kẹt. 8 UI PlayMode tests đạt, bao gồm đổi scene giữa lúc nhập PIN; 5 EditorIntegration tests đạt. Live MainScene xác nhận unlocked/Options/11 option.

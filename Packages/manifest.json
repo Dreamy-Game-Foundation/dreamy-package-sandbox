@@ -13,7 +13,8 @@
     "com.dreamy.feature.tutorial",
     "com.dreamy.feedback",
     "com.dreamy.connectivity",
-    "com.dreamy.feature.battle-pass"
+    "com.dreamy.feature.battle-pass",
+    "com.dreamy.debugger"
   ],
   "dependencies": {
     "com.coplaydev.unity-mcp": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#main",
@@ -87,6 +88,7 @@
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0",
     "com.dreamy.connectivity": "file:../LocalPackages/com.dreamy.connectivity",
-    "com.dreamy.feature.battle-pass": "file:../LocalPackages/com.dreamy.feature.battle-pass"
+    "com.dreamy.feature.battle-pass": "file:../LocalPackages/com.dreamy.feature.battle-pass",
+    "com.dreamy.debugger": "file:../LocalPackages/com.dreamy.debugger"
   }
 }

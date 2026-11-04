@@ -55,3 +55,6 @@
 [submodule "LocalPackages/com.dreamy.localization"]
 	path = LocalPackages/com.dreamy.localization
 	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.localization.git
+[submodule "LocalPackages/com.dreamy.debugger"]
+	path = LocalPackages/com.dreamy.debugger
+	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.debugger.git

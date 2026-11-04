@@ -91,11 +91,11 @@ Runtime không tham chiếu type trong sample. Sample không tự chạy khi ch�
 
 ### 4.1. Gesture và mở khóa
 
-- Preset QA đề xuất: **5 tap liên tiếp trong vùng góc nhỏ → PIN 8 số**. Cho phép cấu hình count 3–10, khoảng cách tối đa giữa hai tap và timeout toàn chuỗi; giá trị khởi đầu 0,4 giây/tap, 2,5 giây/chuỗi, phải thử trên thiết bị.
+- Preset QA đề xuất: **5 tap liên tiếp trong vùng góc nhỏ → PIN `0000`**. Cho phép cấu hình count 1–20, khoảng cách tối đa giữa hai tap và timeout toàn chuỗi; giá trị khởi đầu 0,4 giây/tap, 2,5 giây/chuỗi, phải thử trên thiết bị.
 - Tùy chọn nâng cao: giữ hai ngón rồi multi-tap; triển khai sau gesture đơn giản. Desktop có hotkey cấu hình được.
 - Reset chuỗi khi quá hạn, đổi scene/focus, bị cancel hoặc pointer lệch vùng vượt tolerance; chống đếm nhiều pointer và click tổng hợp từ touch thành hai tap.
 - Dùng unscaled time; không capture touch toàn màn hình. Vùng trigger nằm trong safe area, tránh nút game; ưu tiên host-forwarded input hoặc passive observer. Nếu dùng vùng raycast riêng phải kiểm che input; khi xung đột thì chuyển vị trí hoặc disable trigger.
-- PIN linh hoạt 6–12 số, preset 8; passphrase tùy chọn 8–64 ký tự với trường nhập riêng, không kéo dài keypad bốn chấm hiện tại. Không log credential, không lưu plain text trong PlayerPrefs.
+- PIN linh hoạt 4–32 số, preset `0000`; passphrase tùy chọn 8–64 ký tự với trường nhập riêng, không kéo dài keypad bốn chấm hiện tại. Không log credential, không lưu plain text trong PlayerPrefs.
 - Unlock state machine: Locked → CollectingGesture → CredentialPrompt → Unlocked → Relocked/Cooldown. Nhập sai 5 lần khóa tạm 30 giây, thời gian unscaled; hết phiên, app background hoặc hết TTL thì khóa lại theo preset.
 - Lưu verifier có salt cho credential local; không nhúng mật khẩu đội QA dùng chung dưới dạng rõ. Build client vẫn có thể bị reverse engineer: local unlock giảm mở nhầm, không dùng để cấp quyền server, IAP hoặc lệnh kinh tế thật.
 - Đóng prompt phải trả input focus, không đổi time scale; HUD visibility và unlock có policy riêng. Release mặc định không có trigger/privileged command; gesture không thay thế build gate.
@@ -190,7 +190,7 @@ Gmail API có `messages.send`, payload MIME/base64url; auth/quota do relay chị
 | Preset | Gesture/command | HUD | Reporting |
 | --- | --- | --- | --- |
 | Editor/Dev | Cho phép theo config | Tùy chọn | Local + fake transport mặc định |
-| QA | 5 tap + PIN dài; command allowlist | Off hoặc FPS Only theo config | Capture best effort, relay do host bật |
+| QA | 5 tap + PIN `0000` tùy chỉnh; command allowlist | Off hoặc FPS Only theo config | Capture best effort, relay do host bật |
 | Release Off | Strip trigger/command/debug UI | Off | Collector/outbox tắt |
 | Release Diagnostics | Không privileged command; access riêng do host cho phép | Off mặc định | Text-first, ảnh opt-in, throttle mạnh |
 
@@ -207,55 +207,57 @@ Thông số ban đầu để benchmark, không phải cam kết đã đạt:
 
 Mỗi phase lưu receipt mới cùng Unity version, platform/device, commit, config, log/test/ảnh cần thiết. Không dùng receipt trước migration để xác nhận asset sau migration.
 
+Cập nhật 2026-11-04: checkbox đánh dấu đầu việc phần mềm đã triển khai/kiểm tra trong phạm vi receipt; gate thiết bị/tài khoản thật vẫn giữ mở. Trạng thái chi tiết mới nhất ở checkpoint cuối file và `Documentation~/TRACKING.md`, bao gồm các mục kết hợp mới đạt một phần.
+
 ### Phase 0 — Baseline, phạm vi và thiết kế (đầu vào bắt buộc)
 
-- [ ] Snapshot inventory/hash nguồn SRDebugger/SRF, license/notice/icon/font; ghi quyền dùng nội bộ và phạm vi phân phối.
+- [x] Snapshot inventory/hash nguồn SRDebugger/SRF, license/notice/icon/font; ghi quyền dùng nội bộ và phạm vi phân phối.
 - [ ] Compile source hiện có; kiểm console, asmdef, Input System và baseline CPU/GC/RAM khi tắt/đóng/mở panel.
 - [ ] Chốt platform đầu tiên, máy yếu đại diện, pipeline, target FPS; ghi những platform chưa hỗ trợ.
-- [ ] Chốt folder, assembly graph, contracts và config schema; lập bảng rename + serialized migration, quyết định phần giữ/thay/loại.
+- [x] Chốt folder, assembly graph, contracts và config schema; lập bảng rename + serialized migration, quyết định phần giữ/thay/loại.
 - **Đầu ra:** baseline receipt, dependency map, inventory/migration map, performance test scene.
 - **Gate:** biết baseline có compile hay không; blocker phải được ghi và xử lý trước khi claim nâng cấp. Phần fork cần phạm vi license rõ trước khi phân phối.
 
 ### Phase 1 — Fork Dreamy và đóng gói độc lập
 
-- [ ] Tạo UPM layout/assemblies, thay brand/namespace/class theo inventory; giảm SRF xuống helper cần thiết hoặc thay owner.
-- [ ] Migrate settings/prefab/resource paths, bảo toàn reference; loại bootstrap/endpoint vendor khỏi bản ship.
-- [ ] Tách input backend tùy chọn; bootstrap explicit, một host sống qua scene, shutdown đối xứng.
-- [ ] Xây immutable config snapshot và extension contracts; runtime không tham chiếu sample/Dreamy package khác.
+- [x] Tạo UPM layout/assemblies, thay brand/namespace/class theo inventory; giảm SRF xuống helper cần thiết hoặc thay owner.
+- [x] Migrate settings/prefab/resource paths, bảo toàn reference; loại bootstrap/endpoint vendor khỏi bản ship.
+- [x] Tách input backend tùy chọn; bootstrap explicit, một host sống qua scene, shutdown đối xứng.
+- [x] Xây immutable config snapshot và extension contracts; runtime không tham chiếu sample/Dreamy package khác.
 - **Đầu ra:** package Dreamy compile, migration tool + dry-run/report, QuickStart tối thiểu.
 - **Gate:** consumer sạch không có StompyRobot/Core/UI/Graphy chạy được; consumer thiếu Input System vẫn compile qua backend hợp lệ; không Missing Script/reference; namespace/API/menu đúng Dreamy.
 
 ### Phase 2 — Access khó mở nhầm và debugger căn bản
 
-- [ ] Gesture 5 tap, timeout/gap/region config; PIN 6–12, passphrase 8–64; session TTL/cooldown/relock.
-- [ ] Console/filter/export, system info, command registry và command permission theo preset.
+- [x] Gesture 5 tap, timeout/gap/region config; PIN 4–32 mặc định `0000`, passphrase 8–64; session TTL/cooldown/relock.
+- [x] Console/filter/export, system info, command registry và command permission theo preset.
 - [ ] UI focus/safe area/mobile keyboard; kiểm `Keyboard.current == null`, multitouch, timeScale=0, app pause/resume.
 - **Đầu ra:** sample gesture/password, project command sample, config validation và UI Dreamy.
 - **Gate:** test timeout/reset/cooldown/credential boundaries; thao tác thật không che nút game; release không chạy command ngoài allowlist.
 
 ### Phase 3 — FPS HUD chọn lọc từ Graphy
 
-- [ ] Off/FPS Only/Compact/Detailed, corner/scale/color, toggle độc lập với panel.
-- [ ] Single sampler, fixed history, text/graph tick riêng; giải phóng collector khi hết consumer.
+- [x] Off/FPS Only/Compact/Detailed, corner/scale/color, toggle độc lập với panel.
+- [x] Single sampler, fixed history, text/graph tick riêng; giải phóng collector khi hết consumer.
 - [ ] Benchmark cùng scene khi HUD off/on và graph off/on; profile allocation/rebuild.
 - **Đầu ra:** HUD dùng độc lập và sample bật/tắt, attribution nếu lấy upstream code.
 - **Gate:** không block input; metric label đúng; bật/tắt nhiều lần không thêm collector; overhead đạt budget đã chốt hoặc hạ mặc định xuống FPS Only.
 
 ### Phase 4 — Report local và capture ưu tiên gameplay
 
-- [ ] Snapshot lỗi + context, dedupe/rate limit; local exporter/outbox schema và retention.
-- [ ] Thay screenshot sync bằng downscale + async readback + encoder đã kiểm; fallback text-only.
-- [ ] Low-memory/timeout/cancel/backpressure; report status và reason khi thiếu ảnh.
+- [x] Snapshot lỗi + context, dedupe/rate limit; local exporter/outbox schema và retention.
+- [x] Thay screenshot sync bằng downscale + async readback + encoder đã kiểm; fallback text-only.
+- [x] Low-memory/timeout/cancel/backpressure; report status và reason khi thiếu ảnh.
 - [ ] Optional QA checkpoint screenshot; metadata timestamp và stale age; dirty-session marker chỉ ghi “abnormal previous session”.
 - **Đầu ra:** report bundle local, capture benchmark, fault-injection scene.
 - **Gate:** log burst, GPU readback lỗi, thiếu RAM/disk full/cancel không chặn game; overlay/UI trong ảnh đúng thiết kế; native crash test không bị báo nhầm đã capture được.
 
 ### Phase 5 — Relay, Telegram và Gmail/email
 
-- [ ] Chốt HTTP schema/version, upload auth giới hạn và abuse control; secrets chỉ server.
-- [ ] Reference relay ngoài UPM, local fake server; idempotency, durable ack, fan-out/destination status.
-- [ ] Telegram summary + attachment; email summary + attachment/link, auth/quota backend.
-- [ ] Offline queue/restart/retry/cancel, cap payload/bandwidth; trạng thái gửi không mở modal trong gameplay.
+- [x] Chốt HTTP schema/version, upload auth giới hạn và abuse control; secrets chỉ server.
+- [x] Reference relay ngoài UPM, local fake server; idempotency, durable ack, fan-out/destination status.
+- [x] Telegram summary + attachment; email summary + attachment/link, auth/quota backend.
+- [x] Offline queue/restart/retry/cancel, cap payload/bandwidth; trạng thái gửi không mở modal trong gameplay.
 - **Đầu ra:** transport client, reference relay, config hướng dẫn deploy và vận hành token/quota.
 - **Gate:** fake endpoint test 429/5xx/timeout/mất ack/duplicate; sau đó integration test kênh test khi triển khai được cấp credential. Không gửi tin thật trong giai đoạn nghiên cứu này.
 
@@ -270,10 +272,10 @@ Mỗi phase lưu receipt mới cùng Unity version, platform/device, commit, con
 
 ### Phase 7 — Tái sử dụng, release và tài liệu
 
-- [ ] Import từng sample mới vào consumer sạch, sửa sample/theme/command mà không sửa Runtime; upgrade package giữ customization.
+- [x] Import từng sample mới vào consumer sạch, sửa sample/theme/command mà không sửa Runtime; upgrade package giữ customization.
 - [ ] Build release off/diagnostics, kiểm bootstrap/command không bị rò và asset size thực tế; IL2CPP/stripping platform mục tiêu.
 - [ ] Profile gameplay/menu/loading, screenshot/upload burst trên device yếu; regression scene/domain reload và lifecycle event.
-- [ ] README, migration, API/config reference, privacy policy hook, benchmark/support matrix, changelog và rollback version.
+- [x] README, migration, API/config reference, privacy policy hook, benchmark/support matrix, changelog và rollback version.
 - **Đầu ra:** bản nội bộ có version, artifact và hướng dẫn upgrade.
 - **Gate:** gates bắt buộc trên consumer/platform đã chọn đều đạt; phần chưa chạy ghi chưa xác minh. Chưa gọi package production-ready nếu chỉ compile trong sandbox.
 
@@ -292,3 +294,30 @@ Checkpoint hiện tại:
 - Hoàn tất: nghiên cứu code gesture/PIN/capture hiện có; tham khảo Graphy và tài liệu Unity/Telegram/Gmail; viết lại plan theo yêu cầu mới.
 - Chưa làm: sửa source, migrate asset, cài Graphy, tạo relay, cấu hình credential, gửi tin hoặc chạy benchmark/build.
 - Bước tiếp theo: phase 0. Các API, folder, thông số và budget ghi là dự kiến; cần kiểm lại với source/Unity/device tại lúc triển khai.
+
+## 9. Bổ sung triển khai theo yêu cầu mới
+
+- Mặc định chính thức: **5 tap + PIN `0000`**, cả số tap và PIN đều tùy chỉnh được, giữ số 0 đầu. Passphrase là phần mở rộng sau.
+- Cheat options chia category/container như package gốc: bool, số có range, enum, string, read-only, action và destructive action có xác nhận; ID ổn định, owner dispose, kiểm quyền khi thực thi. Logic riêng game ở sample.
+- Mỗi phase có kiểm thử tự động và nghiệm thu UI/device phù hợp; fake success/offline/429/5xx/reject/timeout/cancel trước khi dùng endpoint thật. Test fake không chứng minh gửi thật hoặc không lag.
+- Submodule: `LocalPackages/com.dreamy.debugger`, remote private `Dreamy-Game-Foundation/com.dreamy.debugger`. Tạo trước khi viết implementation.
+- Xem `LocalPackages/com.dreamy.debugger/Documentation~/ACCEPTANCE.md` và `TRACKING.md` để theo dõi gate thực tế; chưa nghiệm thu không ghi pass.
+
+### Checkpoint triển khai 2026-11-04
+
+Đã tạo submodule private và đăng ký UPM. Phần nền access/cheat/fake-report đã có code, sample Editor có thể thử tại **Window > Dreamy Debugger > Acceptance Playground**. Sandbox và consumer sạch đều đạt **44 EditMode + 3 PlayMode**. Runtime foundation không phụ thuộc UnityEngine/Core/UI/Graphy/Input System.
+
+Đây là nghiệm thu một lát cắt nền tảng, chưa hoàn tất toàn phase 0/1/2. UI/vendor migration, console, HUD, capture/outbox, relay và crash/platform gates vẫn chờ triển khai. Xem `docs/evidence/debugger/verification.md` và tracking trong submodule để tiếp tục đúng mốc.
+
+## 10. Checkpoint hoàn thiện phần mềm — 2026-11-04
+
+Đã triển khai bản `0.2.0-preview.1`: fork SR/SRF trong submodule, giữ GUID và migrate prefab/animation bằng Editor API; Control Center mới theo theme Dreamy; overlay SR được tái sử dụng với thương hiệu Dreamy; typed cheat category, PIN/passphrase và access guard; HUD chia mode dùng chung sampler; log queue có giới hạn; capture GPU bất đồng bộ/encode worker; outbox bền vững, retry/dead letter; relay Telegram/Gmail/SMTP và fake mode; Android OS exit evidence, native SDK provider contract; sample/config/variant riêng và release scene stripping.
+
+Bằng chứng và trạng thái nghiệm thu cuối cùng: `docs/evidence/debugger/phase-completion/verification.md`, `LocalPackages/com.dreamy.debugger/Documentation~/TRACKING.md` và `PLATFORM_SUPPORT.md`. Không dùng checkpoint phần nền cũ để kết luận trạng thái hiện tại.
+
+Phần mềm ở các phase đã có implementation; các gate cần thiết bị, native fault thật, iOS/Xcode và credential destination vẫn chưa được nghiệm thu. Chưa có thiết bị ADB hoặc credential kênh thật trong phiên này. Không bật recorder chụp liên tục trước crash khi chưa có benchmark thiết bị; luôn ưu tiên trải nghiệm.
+
+
+### Delivery checkpoint — 2026-11-04
+
+Submodule đã push commit `1f9a5e7`, tag `v0.2.0-preview.1`. Kiểm tra cuối khớp 263 fingerprint: 64 EditMode + 10 PlayMode + 13 relay tests đạt; Linux dev/release và Android dev IL2CPP ARM64 build thành công; Linux release có 0 asset debugger. Chưa nghiệm thu trên thiết bị/tài khoản đích thật.

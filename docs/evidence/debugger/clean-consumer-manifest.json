@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "com.dreamy.debugger": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.debugger",
+    "com.unity.test-framework": "1.6.0",
+    "com.unity.modules.imgui": "1.0.0"
+  },
+  "testables": [
+    "com.dreamy.debugger"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "31b69ee4bf3140ca9f762a49ab07de98",
+      "status": "succeeded",
+      "mode": "PlayMode",
+      "started_unix_ms": 1793766349480,
+      "finished_unix_ms": 1793766359264,
+      "last_update_unix_ms": 1793766359264,
+      "progress": {
+        "completed": 3,
+        "total": 3,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1793766359216,
+        "last_finished_test_full_name": "Dreamy.Debugger.Sample.Tests.HostLifecycleTests.UnscaledAccessWorksWhileGameIsPaused",
+        "last_finished_unix_ms": 1793766359245,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "run_in_background": null,
+        "focus_nudge_attempts": null,
+        "focus_nudge_limit": null,
+        "focus_nudge_status": null,
+        "blocked_reason": null,
+        "failures_so_far": [],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": {
+        "mode": "PlayMode",
+        "summary": {
+          "total": 3,
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0,
+          "durationSeconds": 0.1501988,
+          "resultState": "Passed"
+        },
+        "results": [
+          {
+            "name": "DestroyRevokesRetainedRegistryAndRemovesOptions",
+            "fullName": "Dreamy.Debugger.Sample.Tests.HostLifecycleTests.DestroyRevokesRetainedRegistryAndRemovesOptions",
+            "state": "Passed",
+            "durationSeconds": 0.0377424,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "DisableDisposesOptionsAndRevokesOldRegistry",
+            "fullName": "Dreamy.Debugger.Sample.Tests.HostLifecycleTests.DisableDisposesOptionsAndRevokesOldRegistry",
+            "state": "Passed",
+            "durationSeconds": 0.0198003,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "UnscaledAccessWorksWhileGameIsPaused",
+            "fullName": "Dreamy.Debugger.Sample.Tests.HostLifecycleTests.UnscaledAccessWorksWhileGameIsPaused",
+            "state": "Passed",
+            "durationSeconds": 0.0287356,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          }
+        ]
+      }
+    },
+    "hint": null
+  }
+}

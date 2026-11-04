@@ -1,0 +1,1 @@
+Native Editor control center compiled and opened. InternalEditorUtility.ReadScreenPixel returned an all-black image under this Linux desktop; the image was rejected, not counted as visual acceptance. Runtime/GameView screenshots use the separate ScreenCapture path.

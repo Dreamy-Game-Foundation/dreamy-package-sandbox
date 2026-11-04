@@ -1,0 +1,443 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "0e55a07469a44872858df7007e300372",
+      "status": "succeeded",
+      "mode": "EditMode",
+      "started_unix_ms": 1793766177168,
+      "finished_unix_ms": 1793766191400,
+      "last_update_unix_ms": 1793766191400,
+      "progress": {
+        "completed": 44,
+        "total": 44,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1793766190578,
+        "last_finished_test_full_name": "Dreamy.Debugger.Tests.ReportDispatcherTests.SuccessIsForwardedWithoutRetry",
+        "last_finished_unix_ms": 1793766190877,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "run_in_background": null,
+        "focus_nudge_attempts": null,
+        "focus_nudge_limit": null,
+        "focus_nudge_status": null,
+        "blocked_reason": null,
+        "failures_so_far": [],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": {
+        "mode": "EditMode",
+        "summary": {
+          "total": 44,
+          "passed": 44,
+          "failed": 0,
+          "skipped": 0,
+          "durationSeconds": 5.8727767,
+          "resultState": "Passed"
+        },
+        "results": [
+          {
+            "name": "EditableProjectCheatsExerciseGroupedValuesAndConfirmedReset",
+            "fullName": "Dreamy.Debugger.Sample.Tests.FakeReportTests.EditableProjectCheatsExerciseGroupedValuesAndConfirmedReset",
+            "state": "Passed",
+            "durationSeconds": 0.0152613,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "FakeScenariosHaveNoNetwork(Success,Accepted)",
+            "fullName": "Dreamy.Debugger.Sample.Tests.FakeReportTests.FakeScenariosHaveNoNetwork(Success,Accepted)",
+            "state": "Passed",
+            "durationSeconds": 0.3978617,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "FakeScenariosHaveNoNetwork(Offline,Retry)",
+            "fullName": "Dreamy.Debugger.Sample.Tests.FakeReportTests.FakeScenariosHaveNoNetwork(Offline,Retry)",
+            "state": "Passed",
+            "durationSeconds": 0.398226,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "FakeScenariosHaveNoNetwork(RateLimited,Retry)",
+            "fullName": "Dreamy.Debugger.Sample.Tests.FakeReportTests.FakeScenariosHaveNoNetwork(RateLimited,Retry)",
+            "state": "Passed",
+            "durationSeconds": 0.3978668,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "FakeScenariosHaveNoNetwork(ServerError,Retry)",
+            "fullName": "Dreamy.Debugger.Sample.Tests.FakeReportTests.FakeScenariosHaveNoNetwork(ServerError,Retry)",
+            "state": "Passed",
+            "durationSeconds": 0.3976831,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "FakeScenariosHaveNoNetwork(Reject,Rejected)",
+            "fullName": "Dreamy.Debugger.Sample.Tests.FakeReportTests.FakeScenariosHaveNoNetwork(Reject,Rejected)",
+            "state": "Passed",
+            "durationSeconds": 0.3978384,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "FakeScenariosHaveNoNetwork(Timeout,Retry)",
+            "fullName": "Dreamy.Debugger.Sample.Tests.FakeReportTests.FakeScenariosHaveNoNetwork(Timeout,Retry)",
+            "state": "Passed",
+            "durationSeconds": 0.3978158,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "FakeTransportRejectsRealReport",
+            "fullName": "Dreamy.Debugger.Sample.Tests.FakeReportTests.FakeTransportRejectsRealReport",
+            "state": "Passed",
+            "durationSeconds": 0.0040029,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "CooldownSurvivesRelockAndRequiresNewGestureAfterExpiry",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.CooldownSurvivesRelockAndRequiresNewGestureAfterExpiry",
+            "state": "Passed",
+            "durationSeconds": 0.0032627,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "CustomCountAndPinPreserveLeadingZeroes(1,\"0000\")",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.CustomCountAndPinPreserveLeadingZeroes(1,\"0000\")",
+            "state": "Passed",
+            "durationSeconds": 0.0004283,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "CustomCountAndPinPreserveLeadingZeroes(3,\"001234\")",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.CustomCountAndPinPreserveLeadingZeroes(3,\"001234\")",
+            "state": "Passed",
+            "durationSeconds": 0.0001411,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "CustomCountAndPinPreserveLeadingZeroes(8,\"00000000000000000000000000000001\")",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.CustomCountAndPinPreserveLeadingZeroes(8,\"00000000000000000000000000000001\")",
+            "state": "Passed",
+            "durationSeconds": 0.0000819,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "DefaultsRequireFiveTapsThen0000",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.DefaultsRequireFiveTapsThen0000",
+            "state": "Passed",
+            "durationSeconds": 0.000285,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "DifferentPointerAndTimeRollbackResetSequence",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.DifferentPointerAndTimeRollbackResetSequence",
+            "state": "Passed",
+            "durationSeconds": 0.0002001,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "GapResetsSequence",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.GapResetsSequence",
+            "state": "Passed",
+            "durationSeconds": 0.0001912,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "IncorrectPinDoesNotUnlockAndCanRetry",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.IncorrectPinDoesNotUnlockAndCanRetry",
+            "state": "Passed",
+            "durationSeconds": 0.0002043,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "OverallTimeoutResetsEvenIfEachGapIsValid",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.OverallTimeoutResetsEvenIfEachGapIsValid",
+            "state": "Passed",
+            "durationSeconds": 0.0001319,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RejectsInvalidPin(null)",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.RejectsInvalidPin(null)",
+            "state": "Passed",
+            "durationSeconds": 0.0005253,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RejectsInvalidPin(\"\")",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.RejectsInvalidPin(\"\")",
+            "state": "Passed",
+            "durationSeconds": 0.000141,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RejectsInvalidPin(\"123\")",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.RejectsInvalidPin(\"123\")",
+            "state": "Passed",
+            "durationSeconds": 0.0000837,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RejectsInvalidPin(\"12a4\")",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.RejectsInvalidPin(\"12a4\")",
+            "state": "Passed",
+            "durationSeconds": 0.0000759,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RejectsInvalidPin(\"１２３４\")",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.RejectsInvalidPin(\"１２３４\")",
+            "state": "Passed",
+            "durationSeconds": 0.0000737,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RejectsInvalidPin(\"000000000000000000000000000000000\")",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.RejectsInvalidPin(\"000000000000000000000000000000000\")",
+            "state": "Passed",
+            "durationSeconds": 0.0000722,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RejectsInvalidTapCount(0)",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.RejectsInvalidTapCount(0)",
+            "state": "Passed",
+            "durationSeconds": 0.0004751,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RejectsInvalidTapCount(21)",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.RejectsInvalidTapCount(21)",
+            "state": "Passed",
+            "durationSeconds": 0.0001314,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RejectsInvalidTimestamp",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.RejectsInvalidTimestamp",
+            "state": "Passed",
+            "durationSeconds": 0.0003903,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "RejectsNonFiniteTiming",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.RejectsNonFiniteTiming",
+            "state": "Passed",
+            "durationSeconds": 0.0002961,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "SessionExpiresAndFocusRelockClearsPartialGesture",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.SessionExpiresAndFocusRelockClearsPartialGesture",
+            "state": "Passed",
+            "durationSeconds": 0.0002484,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "SuccessfulUnlockResetsFailureCount",
+            "fullName": "Dreamy.Debugger.Tests.AccessTests.SuccessfulUnlockResetsFailureCount",
+            "state": "Passed",
+            "durationSeconds": 0.000196,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "BoundsAndNonFiniteValuesDoNotReachGameSetter",
+            "fullName": "Dreamy.Debugger.Tests.CheatOptionsTests.BoundsAndNonFiniteValuesDoNotReachGameSetter",
+            "state": "Passed",
+            "durationSeconds": 0.000844,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "DestructiveActionRequiresConfirmationAndDisposalRemovesIt",
+            "fullName": "Dreamy.Debugger.Tests.CheatOptionsTests.DestructiveActionRequiresConfirmationAndDisposalRemovesIt",
+            "state": "Passed",
+            "durationSeconds": 0.0004516,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "DuplicateContainerRegistrationIsAtomic",
+            "fullName": "Dreamy.Debugger.Tests.CheatOptionsTests.DuplicateContainerRegistrationIsAtomic",
+            "state": "Passed",
+            "durationSeconds": 0.0006321,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "HandlerFailurePropagatesWithoutSwallowingOrAutomaticRetry",
+            "fullName": "Dreamy.Debugger.Tests.CheatOptionsTests.HandlerFailurePropagatesWithoutSwallowingOrAutomaticRetry",
+            "state": "Passed",
+            "durationSeconds": 0.000279,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "OldDisposedLeaseCannotRemoveNewRegistration",
+            "fullName": "Dreamy.Debugger.Tests.CheatOptionsTests.OldDisposedLeaseCannotRemoveNewRegistration",
+            "state": "Passed",
+            "durationSeconds": 0.0002589,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "PermissionIsCheckedAtEveryReadWriteAndExecution",
+            "fullName": "Dreamy.Debugger.Tests.CheatOptionsTests.PermissionIsCheckedAtEveryReadWriteAndExecution",
+            "state": "Passed",
+            "durationSeconds": 0.0004419,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "SnapshotIsGroupedSortedAndCannotMutateRegistry",
+            "fullName": "Dreamy.Debugger.Tests.CheatOptionsTests.SnapshotIsGroupedSortedAndCannotMutateRegistry",
+            "state": "Passed",
+            "durationSeconds": 0.0013106,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "TypedOptionsSupportBoolNumberEnumStringAndReadOnly",
+            "fullName": "Dreamy.Debugger.Tests.CheatOptionsTests.TypedOptionsSupportBoolNumberEnumStringAndReadOnly",
+            "state": "Passed",
+            "durationSeconds": 0.0023572,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "UndefinedEnumAndUnsupportedValueTypesAreRejected",
+            "fullName": "Dreamy.Debugger.Tests.CheatOptionsTests.UndefinedEnumAndUnsupportedValueTypesAreRejected",
+            "state": "Passed",
+            "durationSeconds": 0.0005804,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "CancelDuringSendIsObservedAndGateIsReleased",
+            "fullName": "Dreamy.Debugger.Tests.ReportDispatcherTests.CancelDuringSendIsObservedAndGateIsReleased",
+            "state": "Passed",
+            "durationSeconds": 0.3986443,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "CancellationBeforeSendDoesNotCallTransport",
+            "fullName": "Dreamy.Debugger.Tests.ReportDispatcherTests.CancellationBeforeSendDoesNotCallTransport",
+            "state": "Passed",
+            "durationSeconds": 0.2989823,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ConcurrentSendIsBusyAndCompletedSendReleasesGate",
+            "fullName": "Dreamy.Debugger.Tests.ReportDispatcherTests.ConcurrentSendIsBusyAndCompletedSendReleasesGate",
+            "state": "Passed",
+            "durationSeconds": 0.3979857,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "FailureAndTimeoutAreRetryableAndReleaseGate",
+            "fullName": "Dreamy.Debugger.Tests.ReportDispatcherTests.FailureAndTimeoutAreRetryableAndReleaseGate",
+            "state": "Passed",
+            "durationSeconds": 0.2982488,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "ReportHasIdentityMarkerAndPayloadLimits",
+            "fullName": "Dreamy.Debugger.Tests.ReportDispatcherTests.ReportHasIdentityMarkerAndPayloadLimits",
+            "state": "Passed",
+            "durationSeconds": 0.0009656,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "SuccessIsForwardedWithoutRetry",
+            "fullName": "Dreamy.Debugger.Tests.ReportDispatcherTests.SuccessIsForwardedWithoutRetry",
+            "state": "Passed",
+            "durationSeconds": 0.2980337,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          }
+        ]
+      }
+    },
+    "hint": null
+  }
+}

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eed68ed01d73bd1499acbc3ce0574d85, type: 3}
+  m_Script: {fileID: 11500000, guid: 5177555cf5a84210a028ceaa96c719b7, type: 3}
   m_Name: SandboxDebuggerConfiguration
   m_EditorClassIdentifier: Dreamy.Debugger.Engine::Dreamy.Debugger.DebuggerConfiguration
   Mode: 1

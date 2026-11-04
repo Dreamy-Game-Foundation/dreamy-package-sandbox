@@ -1,0 +1,28 @@
+{
+  "guids": 379,
+  "files": 435,
+  "outsidePackage": [
+    "Assets/_Project/Debugger/SandboxDebuggerConfiguration.asset",
+    "Assets/_Project/Debugger/Prefabs/SandboxDebugger.prefab",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Production/DebuggerBootstrap.prefab",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Production/DebuggerConfiguration.asset",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Production/DebuggerDemo.unity",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/ProjectCheatHost.cs.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/BoundCheatExamples.cs.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/README.md.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/ProjectCheats.cs.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/FakeReportTransport.cs.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/Editor.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/Tests.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/Dreamy.Debugger.Sample.asmdef.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/Tests/FakeReportTests.cs.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/Tests/Dreamy.Debugger.Sample.Tests.asmdef.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/Tests/PlayMode.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/Editor/DebuggerAcceptanceWindow.cs.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/Editor/Dreamy.Debugger.Sample.Editor.asmdef.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/Tests/PlayMode/HostLifecycleTests.cs.meta",
+    "Assets/Samples/Dreamy Debugger/0.1.0-preview.1/Debugger Quick Start/Tests/PlayMode/Dreamy.Debugger.Sample.Tests.PlayMode.asmdef.meta"
+  ],
+  "applied": true,
+  "backup": "/tmp/dreamy-guid-isolation-backup.zip"
+}

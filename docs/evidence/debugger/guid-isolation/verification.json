@@ -1,0 +1,30 @@
+{
+  "guids": 379,
+  "files": 435,
+  "guidOnlyByteChanges": true,
+  "tests": {
+    "project-editmode.xml": {
+      "total": "6",
+      "passed": "6",
+      "failed": "0",
+      "skipped": "0",
+      "result": "Passed"
+    },
+    "package-EditMode.xml": {
+      "total": "65",
+      "passed": "65",
+      "failed": "0",
+      "skipped": "0",
+      "result": "Passed"
+    },
+    "package-PlayMode.xml": {
+      "total": "12",
+      "passed": "12",
+      "failed": "0",
+      "skipped": "0",
+      "result": "Passed"
+    }
+  },
+  "upstreamImport": "Not performed; user will import original SR.",
+  "backup": "/tmp/dreamy-guid-isolation-backup.zip"
+}

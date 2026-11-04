@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="6" result="Passed" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.0719766">
+  <test-suite type="TestSuite" id="1000" name="DreamyTemplateProject" fullname="DreamyTemplateProject" runstate="Runnable" testcasecount="465" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.071977" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1543" name="Dreamy.Template.Debugger.Tests.dll" fullname="/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/ScriptAssemblies/Dreamy.Template.Debugger.Tests.dll" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.062965" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="2108613" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1544" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.062612" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1545" name="Template" fullname="Dreamy.Template" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.062439" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1546" name="Debugging" fullname="Dreamy.Template.Debugging" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.062284" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestSuite" id="1547" name="Tests" fullname="Dreamy.Template.Debugging.Tests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.062102" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="TestFixture" id="1536" name="SandboxCheatTests" fullname="Dreamy.Template.Debugging.Tests.SandboxCheatTests" classname="Dreamy.Template.Debugging.Tests.SandboxCheatTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.061435" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1537" name="CoinAndGemGrantsPersistAndPublishBalanceChanges" fullname="Dreamy.Template.Debugging.Tests.SandboxCheatTests.CoinAndGemGrantsPersistAndPublishBalanceChanges" methodname="CoinAndGemGrantsPersistAndPublishBalanceChanges" classname="Dreamy.Template.Debugging.Tests.SandboxCheatTests" runstate="Runnable" seed="410317199" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.045407" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1541" name="DisposingGameRegistrationRemovesAllGameOptions" fullname="Dreamy.Template.Debugging.Tests.SandboxCheatTests.DisposingGameRegistrationRemovesAllGameOptions" methodname="DisposingGameRegistrationRemovesAllGameOptions" classname="Dreamy.Template.Debugging.Tests.SandboxCheatTests" runstate="Runnable" seed="1271853986" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.002621" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1539" name="InventoryGrantsUseSharedPersistentInventory" fullname="Dreamy.Template.Debugging.Tests.SandboxCheatTests.InventoryGrantsUseSharedPersistentInventory" methodname="InventoryGrantsUseSharedPersistentInventory" classname="Dreamy.Template.Debugging.Tests.SandboxCheatTests" runstate="Runnable" seed="546971767" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.001222" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1540" name="LockedUnconfirmedAndInvalidAmountsNeverGrant" fullname="Dreamy.Template.Debugging.Tests.SandboxCheatTests.LockedUnconfirmedAndInvalidAmountsNeverGrant" methodname="LockedUnconfirmedAndInvalidAmountsNeverGrant" classname="Dreamy.Template.Debugging.Tests.SandboxCheatTests" runstate="Runnable" seed="433972929" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.000572" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1538" name="NoAdsPersistsAndExistingEntitlementEffectRunsOnlyOnce" fullname="Dreamy.Template.Debugging.Tests.SandboxCheatTests.NoAdsPersistsAndExistingEntitlementEffectRunsOnlyOnce" methodname="NoAdsPersistsAndExistingEntitlementEffectRunsOnlyOnce" classname="Dreamy.Template.Debugging.Tests.SandboxCheatTests" runstate="Runnable" seed="553350184" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.001090" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1542" name="WalletRejectionIsVisibleWithoutClaimingSuccess" fullname="Dreamy.Template.Debugging.Tests.SandboxCheatTests.WalletRejectionIsVisibleWithoutClaimingSuccess" methodname="WalletRejectionIsVisibleWithoutClaimingSuccess" classname="Dreamy.Template.Debugging.Tests.SandboxCheatTests" runstate="Runnable" seed="1545401576" result="Passed" start-time="2026-11-04 07:32:22Z" end-time="2026-11-04 07:32:22Z" duration="0.000603" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [TestRunnerNoThrottle] Restored Interaction Mode after test run.
+Saving results to: /home/tutrinh/.config/unity3d/DefaultCompany/DreamyTemplateProject/TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,22 @@
+{
+  "theme": {
+    "brand": "9E1008",
+    "accent": "E95345",
+    "selected": "572A2A",
+    "fps_series": "60C8AA",
+    "memory_series": "C878D8"
+  },
+  "checks": {
+    "consumer_EditMode": "6/6 Passed; fresh XML attached",
+    "prefabs": "28 prefabs, no missing scripts",
+    "editor_asset_header": "9E1008 confirmed via Unity API",
+    "scene_dirty": false
+  },
+  "baseline_console": "Existing OptionsPresentationBridge.Refresh exception from SandboxCheatHost.OnDisable observed before applying this theme; outside color change. No clean-console claim.",
+  "fingerprints": {
+    "Runtime/Imported/Foundation/Scripts/UI/DebuggerPalette.cs": "3ed2e88227217941686c2d7ff1ea731f4676298e8ad524f6ad9de4728646e374",
+    "Runtime/Engine/HudHistoryGraphic.cs": "95c2a1c11796ab262afe8021447aa33eebc4630f72521f044901d8d19cc61f6d",
+    "Editor/DebuggerRedesignAssets.cs": "588053cf372a6855d2f0c7b4cbca20ffe5f6b922c60f8914d3988db91493806c",
+    "Runtime/Imported/Presentation/UI/Styles/Default.asset": "909a8b1c97d226ebdb2a12d8d65bc07560373e4f3e8527a32434a0a9c5ad9cad"
+  }
+}

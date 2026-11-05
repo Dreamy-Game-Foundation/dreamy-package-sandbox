@@ -1,0 +1,154 @@
+{
+  "date": "2026-11-05",
+  "unity": "6000.4.12f1",
+  "version": "0.2.0-preview.6",
+  "status": "Internal candidate verified; not tagged/published; production gates open",
+  "package_head": "0e66ce113c9af77a2cbac5922b8e8e63cf5d9726",
+  "dirty_worktree": true,
+  "artifact": {
+    "name": "com.dreamy.debugger",
+    "version": "0.2.0-preview.6",
+    "entries": 804,
+    "sha256": "a5048a904b00e31d8d6c07dc243042ee7b838746d5a973de3b06b79946df5120",
+    "bytes": 2385353,
+    "result": "passed",
+    "path": "/tmp/dreamy-preview6-artifact/com.dreamy.debugger-0.2.0-preview.6-final.tgz",
+    "source_drift": []
+  },
+  "results": {
+    "EditMode": {
+      "id": "2",
+      "testcasecount": "77",
+      "result": "Passed",
+      "total": "77",
+      "passed": "77",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-05 04:39:09Z",
+      "end-time": "2026-11-05 04:39:11Z",
+      "duration": "2.0420582"
+    },
+    "PlayMode": {
+      "id": "2",
+      "testcasecount": "25",
+      "result": "Passed",
+      "total": "25",
+      "passed": "25",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-05 04:39:18Z",
+      "end-time": "2026-11-05 04:39:21Z",
+      "duration": "2.3865405"
+    }
+  },
+  "source_consumer_results": {
+    "EditMode": {
+      "id": "2",
+      "testcasecount": "77",
+      "result": "Passed",
+      "total": "77",
+      "passed": "77",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-05 04:35:49Z",
+      "end-time": "2026-11-05 04:35:51Z",
+      "duration": "2.0243559"
+    },
+    "PlayMode": {
+      "id": "2",
+      "testcasecount": "25",
+      "result": "Passed",
+      "total": "25",
+      "passed": "25",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-05 04:35:59Z",
+      "end-time": "2026-11-05 04:36:01Z",
+      "duration": "2.3381201"
+    }
+  },
+  "relay_tests": {
+    "total": 20,
+    "passed": 20,
+    "external_delivery": false
+  },
+  "consumer_dependencies": [
+    "com.dreamy.debugger",
+    "com.unity.test-framework"
+  ],
+  "builds": {
+    "linux-dev": {
+      "result": "Succeeded",
+      "target": "StandaloneLinux64",
+      "development": true,
+      "totalBytes": 164692695,
+      "durationSeconds": 8.386621
+    },
+    "linux-release": {
+      "result": "Succeeded",
+      "target": "StandaloneLinux64",
+      "development": false,
+      "totalBytes": 91661659,
+      "durationSeconds": 3.884676
+    },
+    "android-dev": {
+      "result": "Succeeded",
+      "target": "Android",
+      "development": true,
+      "totalBytes": 246176706,
+      "durationSeconds": 49.554421
+    }
+  },
+  "release_packaged_debugger_assets": 0,
+  "sample_reflection_type_in_il2cpp_output": true,
+  "prefabs": "28 prefabs, no missing scripts (MCP)",
+  "guid_audit": {
+    "owned_meta_count": 397,
+    "duplicates": [],
+    "upstream_overlap": [],
+    "changed_existing_meta": []
+  },
+  "runtime_asmdefs": [
+    "Dreamy.Debugger.Runtime",
+    "Dreamy.Debugger.InputSystem",
+    "Dreamy.Debugger.Engine",
+    "Dreamy.Debugger.Foundation",
+    "Dreamy.Debugger.Presentation"
+  ],
+  "editor_state": {
+    "scene": "Assets/_Project/Scenes/BootstrapScene.unity",
+    "dirty": false,
+    "playing": false,
+    "console_errors": 0
+  },
+  "open_gates": [
+    "On-device GPU lifecycle/cancellation and weak-device profiling",
+    "Mobile input, safe area, rotation and IL2CPP runtime smoke",
+    "iOS/Xcode and native crash/ANR/OOM acceptance",
+    "Remote HTTPS relay and real phone-to-Telegram delivery",
+    "Production disclosure/consent, masking, withdrawal and deletion",
+    "Gmail pending; full SR settings parity / advanced option layouts are backlog"
+  ],
+  "sr_coexistence_compile": [
+    "DreamyDebug @ Dreamy.Debugger.Presentation",
+    "SRDebug @ StompyRobot.SRDebugger"
+  ],
+  "committed_candidate": "8a0e19c",
+  "commit_note": "Package committed after verifying all 804 exported files still match the tested archive. Original package_head/dirty_worktree fields describe the historical test run."
+}

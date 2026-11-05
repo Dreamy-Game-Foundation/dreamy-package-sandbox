@@ -74,6 +74,9 @@ namespace Dreamy.Template
 
         private void Awake()
         {
+            Application.targetFrameRate = 60;
+            QualitySettings.vSyncCount = 1;
+
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
             InitializeAsync().Forget();

@@ -1,0 +1,13 @@
+{
+  "baseline": {
+    "Logo": 1,
+    "DreamyBanner": 1,
+    "DreamyBrand": 2
+  },
+  "current": {
+    "Logo": 1,
+    "DreamyBanner": 1,
+    "DreamyBrand": 2
+  },
+  "changed_meta_guids": []
+}

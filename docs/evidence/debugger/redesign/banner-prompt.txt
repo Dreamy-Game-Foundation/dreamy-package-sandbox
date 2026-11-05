@@ -1,0 +1,5 @@
+Built-in image_gen, supplied Assets/DreamyLogo.png as reference.
+
+Use case: logo-brand. Create a production horizontal banner asset for Dreamy Game Studio diagnostic Unity tooling, using supplied original logo. Output very wide landscape about 5:1 aspect. Full bleed solid deep red #9E1008 background with extremely subtle darker diagonal bands at far right, flat graphic no mockup. Preserve original DREAMY bold italic ivory wordmark and distinctive horizontal slash exactly as closely as possible, GAME STUDIO beneath in small ivory condensed lettering. Center the logo group on the banner, occupying about 70 percent of banner width and 65 percent of height. Minimize top/bottom padding. No additional words, no DEBUGGER word, no border, no drop shadow outside logo, no buttons, no UI, no presentation backdrop. Crisp high-resolution typography. Keep original logo letter shapes and proportions, recompose horizontal canvas rather than stretching letters.
+
+Generated output: 2048x683; packaged as Runtime/Branding/DreamyBanner.png.

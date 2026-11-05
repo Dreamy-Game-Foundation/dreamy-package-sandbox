@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-05",
+  "scope": "Read-only runtime/code audit; documentation and evidence artifacts only",
+  "package_head": "0e66ce113c9af77a2cbac5922b8e8e63cf5d9726",
+  "manifest_version": "0.2.0-preview.5",
+  "reference_graphy_commit": "1068f3de2bc9f1e4a905150abd59f31e6dead679",
+  "existing_test_receipt": "../runtime-ui/verification.json",
+  "existing_test_results": {
+    "EditMode": {
+      "passed": "72",
+      "failed": "0",
+      "end-time": "2026-11-05 03:10:23Z"
+    },
+    "PlayMode": {
+      "passed": "21",
+      "failed": "0",
+      "end-time": "2026-11-05 03:10:34Z"
+    }
+  },
+  "fingerprint_drift": [],
+  "probes": [
+    {
+      "name": "Registry observer failure",
+      "kind": "managed-only MCP",
+      "input": "Changed subscriber throws InvalidOperationException; Register one readonly option",
+      "observed": {
+        "register_threw": true,
+        "remaining_registrations": 1
+      },
+      "expected_contract": "No orphaned registration when caller receives an error / always receive cleanup lease"
+    },
+    {
+      "name": "Value invalidation",
+      "kind": "managed-only MCP + inspected UI binding source",
+      "input": "Register balance=100 and Add action; subscribe Changed after registration; execute Add",
+      "observed": {
+        "balance_after_action": 110,
+        "change_notifications_after_action": 0
+      },
+      "limit": "Not a new rendered UI interaction test; UI refresh paths inspected in DataBoundControl/OptionsTabController/bridge"
+    },
+    {
+      "name": "Low-FPS rule integration",
+      "kind": "managed-only MCP simulation",
+      "input": {
+        "stable_frames": 1024,
+        "stable_fps": 60,
+        "new_fps": 20,
+        "threshold": 30,
+        "sustain_seconds": 3,
+        "cooldown_seconds": 60
+      },
+      "observed": {
+        "warning_delay_from_drop_seconds": 28.65
+      },
+      "limit": "Algorithm simulation, not a hardware benchmark"
+    },
+    {
+      "name": "Version drift",
+      "kind": "read-only MCP",
+      "observed": {
+        "DreamyDebug.Version": "0.2.0-preview.1",
+        "package.json": "0.2.0-preview.5"
+      }
+    },
+    {
+      "name": "Profiler legend",
+      "kind": "read-only LoadPrefabContents; unloaded in finally",
+      "observed": {
+        "Render_legend_all_ancestors_active": true,
+        "Update_legend_all_ancestors_active": true,
+        "sampler_populates": "FrameTime and OtherTime; no measured RenderTime/UpdateTime"
+      }
+    }
+  ],
+  "release_decision": "HOLD; fix P1 and validate immutable candidate before tagging. Production/device gates remain open.",
+  "no_actions": [
+    "No runtime/prefab/settings changes",
+    "No version bump",
+    "No external report sends",
+    "No git commit/tag/push"
+  ]
+}

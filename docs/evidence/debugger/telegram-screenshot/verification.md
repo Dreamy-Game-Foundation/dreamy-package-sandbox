@@ -1,0 +1,7 @@
+# Manual fake screenshot report — 2026-11-04
+
+Game started from BootstrapScene and reached MainScene. Invoked the gameplay Damage button (health 100 to 90), unlocked Options through PIN, then clicked the actual Create fake report action control. Report 38e2ebde9e454e6ca5ced5cfa3619b30 was durably accepted by the local relay; Telegram destination state delivered, one attempt, no error. JSON and screenshot were sent. Persisted JPEG: 39,714 bytes; screenshotReason captured. Viewed the exact stored image and verified real gameplay with health 90. No older client reports were flushed.
+
+Both runtime fake action and Editor fake button now share CreateAndSendFakeReportAsync: one in-flight manual report, async hidden-overlay/HUD capture, durable outbox storage, then a targeted send of only this new report when uploads are configured. Disabled/failed capture falls back to text and retains its reason. Failed/offline delivery stays in the outbox; no delivery guarantee is shown from relay acceptance alone. Project screenshot policy enabled; automatic error reporting remains disabled.
+
+Focused fresh consumer receipts before concurrent visual redesign edits: 66 EditMode + 13 PlayMode passed. Added tests for targeted send preserving older reports, single-flight fake creation and capture-disabled fallback. A later Editor compile detected a missing DebuggerRedesignAssets banner constant from parallel visual edits; resolved to the existing banner asset path. No unrelated branding/HUD/font/logo work was committed or reverted by this report task.

@@ -1,0 +1,13 @@
+{
+  "reportId": "7f8e64f6b7fa400ca3fb386da95509b8",
+  "synthetic": true,
+  "transport": "Unity C# RelayTransport",
+  "relayAcknowledgement": "Accepted",
+  "destination": "telegram",
+  "deliveryState": "delivered",
+  "attempts": 1,
+  "error": "",
+  "attachment": "report.json; text-only, no screenshot requested",
+  "gmail": "pending",
+  "scope": "One explicitly requested test report; old client outbox not flushed. Delivered means Telegram API acknowledged, not recipient read."
+}

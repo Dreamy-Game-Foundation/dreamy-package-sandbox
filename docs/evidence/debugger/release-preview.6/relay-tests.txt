@@ -1,0 +1,25 @@
+test_acceptance_is_durable_and_duplicate_is_idempotent (test_relay.RelayTests.test_acceptance_is_durable_and_duplicate_is_idempotent) ... ok
+test_connection_closes_after_transaction_and_rolls_back_on_failure (test_relay.RelayTests.test_connection_closes_after_transaction_and_rolls_back_on_failure) ... ok
+test_destination_retry_respects_retry_after (test_relay.RelayTests.test_destination_retry_respects_retry_after) ... ok
+test_fake_delivery_is_persisted_without_external_network (test_relay.RelayTests.test_fake_delivery_is_persisted_without_external_network) ... ok
+test_invalid_id_cannot_escape_storage (test_relay.RelayTests.test_invalid_id_cannot_escape_storage) ... ok
+test_invalid_jpeg (test_relay.RelayTests.test_invalid_jpeg) ... ok
+test_mismatched_idempotency_key_is_rejected (test_relay.RelayTests.test_mismatched_idempotency_key_is_rejected) ... ok
+test_payload_caps (test_relay.RelayTests.test_payload_caps) ... ok
+test_permanent_destination_failure_is_dead (test_relay.RelayTests.test_permanent_destination_failure_is_dead) ... ok
+test_rate_limit (test_relay.RelayTests.test_rate_limit) ... ok
+test_schema_validation (test_relay.RelayTests.test_schema_validation) ... ok
+test_storage_quota_returns_retryable_status (test_relay.RelayTests.test_storage_quota_returns_retryable_status) ... ok
+test_unknown_fields_are_not_persisted (test_relay.RelayTests.test_unknown_fields_are_not_persisted) ... ok
+test_wrong_key_is_rejected (test_relay.RelayTests.test_wrong_key_is_rejected) ... ok
+test_bad_token_http_error_does_not_leak_url (test_telegram_setup.SetupTests.test_bad_token_http_error_does_not_leak_url) ... ok
+test_discovery_only_reads_and_never_launches_relay (test_telegram_setup.SetupTests.test_discovery_only_reads_and_never_launches_relay) ... ok
+test_editor_asset_id_formats (test_telegram_setup.SetupTests.test_editor_asset_id_formats) ... ok
+test_invalid_input_can_retry_privately (test_telegram_setup.SetupTests.test_invalid_input_can_retry_privately) ... ok
+test_token_copy_wrappers_are_normalized (test_telegram_setup.SetupTests.test_token_copy_wrappers_are_normalized) ... ok
+test_wrong_identifiers_and_empty_input_are_explained_without_echo (test_telegram_setup.SetupTests.test_wrong_identifiers_and_empty_input_are_explained_without_echo) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 7.060s
+
+OK

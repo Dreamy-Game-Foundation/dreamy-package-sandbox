@@ -1,0 +1,54 @@
+ M Documentation~/PLATFORM_SUPPORT.md
+ M Documentation~/REPORTING.md
+ M Editor/DebuggerAssetBuilder.cs
+ M Editor/DebuggerWindow.cs
+ M README.md
+ M Runtime/Engine/DebuggerRuntime.cs
+ M Runtime/Engine/PerformanceHud.cs
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/BugReportPopover.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/BugReportSheet.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/DebugPanel.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/ActionOption.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/BoolOption.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/EnumOption.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/NumberOption.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/ReadOnlyOption.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/StringOption.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/PinEntry.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/PinnedUI.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/Console.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/Options.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/Profiler.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/System.prefab
+ M Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Trigger.prefab
+ M Runtime/Imported/Presentation/UI/Prefabs/AboutTab.prefab
+ M Runtime/Imported/Presentation/UI/Prefabs/Console/Item.prefab
+ M Runtime/Imported/Presentation/UI/Prefabs/InfoBlock.prefab
+ M Runtime/Imported/Presentation/UI/Prefabs/ModalPopup.prefab
+ M Runtime/Imported/Presentation/UI/Prefabs/Options/Category.prefab
+ M Runtime/Imported/Presentation/UI/Prefabs/SideBar/ConsoleTabButtonContent.prefab
+ M Runtime/Imported/Presentation/UI/Prefabs/SideBar/Tab.prefab
+ M Runtime/Imported/Presentation/UI/Styles/Default.asset
+ M Runtime/Imported/Presentation/UI/Styles/DefaultConsoleAltRow.asset
+ M Runtime/Imported/Presentation/UI/Styles/DefaultConsoleSelectedRow.asset
+ M Runtime/Imported/Presentation/UI/Styles/DefaultTabActive.asset
+ M Runtime/Prefabs/ConfirmationPrompt.prefab
+ M Runtime/Prefabs/PerformanceHud.prefab
+ M Runtime/Reporting/OutboxPump.cs
+ M Tests/EditMode/ReportPipelineTests.cs
+ M Tests/PlayMode/OverlayIntegrationTests.cs
+ M Tools~/relay/README.md
+?? Editor/DebuggerRedesignAssets.cs
+?? Editor/DebuggerRedesignAssets.cs.meta
+?? Editor/TelegramRelaySettings.cs
+?? Editor/TelegramRelaySettings.cs.meta
+?? Runtime/Branding.meta
+?? Runtime/Branding/
+?? Runtime/Engine/HudHistoryGraphic.cs
+?? Runtime/Engine/HudHistoryGraphic.cs.meta
+?? Runtime/Imported/Foundation/Scripts/UI/DebuggerPalette.cs
+?? Runtime/Imported/Foundation/Scripts/UI/DebuggerPalette.cs.meta
+?? Tests/PlayMode/VisualThemeTests.cs
+?? Tests/PlayMode/VisualThemeTests.cs.meta
+?? Tools~/relay/telegram_setup.py
+?? Tools~/relay/test_telegram_setup.py

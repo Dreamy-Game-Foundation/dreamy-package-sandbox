@@ -52,7 +52,7 @@ MonoBehaviour:
   _richTextInConsole: 1
   _requireEntryCode: 1
   _requireEntryCodeEveryTime: 0
-  _entryCode: 03000000060000000300000006000000
+  _entryCode: 00000000000000000000000000000000
   _useDebugCamera: 0
   _debugLayer: 5
   _debugCameraDepth: 100

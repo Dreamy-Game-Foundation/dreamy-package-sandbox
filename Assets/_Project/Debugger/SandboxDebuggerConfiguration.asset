@@ -19,13 +19,28 @@ MonoBehaviour:
   Credential: 0000
   Passphrase: 0
   SessionSeconds: 300
-  InitialHud: 2
+  InitialHud: 0
   ShowCornerTrigger: 1
+  InitialHudPosition: 0
+  HudOffset: {x: 12, y: 12}
+  HudScale: 1
+  HudMemory: 1
+  HudAudio: 0
+  HudDragEnabled: 1
+  FpsGood: {r: 0.46, g: 0.83, b: 0.23, a: 1}
+  FpsCaution: {r: 0.95, g: 0.82, b: 0.2, a: 1}
+  FpsCritical: {r: 0.86, g: 0.16, b: 0.12, a: 1}
+  GoodFps: 60
+  CautionFps: 30
+  LowFpsWarning: 0
+  LowFpsThreshold: 30
+  LowFpsSustain: 3
+  LowFpsCooldown: 60
   AutoReportErrors: 0
-  AllowScreenshots: 0
+  AllowScreenshots: 1
   UploadDuringGameplay: 0
-  RelayUrl: 
+  RelayUrl: http://127.0.0.1:8765/reports
   LimitedClientKey: 
-  UploadsEnabled: 0
+  UploadsEnabled: 1
   ReportCooldownSeconds: 60
   ScreenshotLongEdge: 960

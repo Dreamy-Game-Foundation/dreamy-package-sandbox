@@ -14,7 +14,8 @@
     "com.dreamy.feedback",
     "com.dreamy.connectivity",
     "com.dreamy.feature.battle-pass",
-    "com.dreamy.debugger"
+    "com.dreamy.debugger",
+    "com.dreamy.editor-tools"
   ],
   "dependencies": {
     "com.coplaydev.unity-mcp": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#main",

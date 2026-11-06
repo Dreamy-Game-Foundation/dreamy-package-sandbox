@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "package-manager-bridge-stall",
+  "projectId": "4eda3157c453fbd1cbb046ea3973b418847e1cd4aa568bd3ed950d9c4e145f43",
+  "taskId": "dreamy-package-manager",
+  "eventId": "package-manager-bridge-stall",
+  "observedAt": "2026-11-06T09:34:12.149Z",
+  "platform": "linux",
+  "operation": "unity",
+  "outcome": "fail",
+  "signature": "Editor unresponsive during bridge EditMode job 6d3863a638fc4c25b2c70608e1b008ab; plugin disconnected; restart required",
+  "rawPromptCaptured": false,
+  "rawToolInputCaptured": false
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "observedOn": "2026-11-06",
+  "package": "com.dreamy.editor-tools",
+  "manifestVersion": "1.1.0",
+  "baseCommit": "3f8556b58164d4c9d5b9e9e797d981c94aa11141",
+  "sourceState": "working-tree",
+  "unityVersion": "6000.4.12f1",
+  "status": "verified-with-limitations",
+  "catalogEntries": 21,
+  "verification": {
+    "cleanConsumerEditMode": {
+      "passed": 46,
+      "failed": 0,
+      "skipped": 0,
+      "artifact": "EditMode.xml"
+    },
+    "sandboxEditMode": {
+      "passed": 45,
+      "failed": 0,
+      "skipped": 1,
+      "reason": "Screenshot batch-mode guard test skips in GUI Editor",
+      "artifact": "sandbox-EditMode.json"
+    },
+    "consumerOperations": "consumer-smoke.json",
+    "consumerPackageCheck": "pass",
+    "sandboxAsmdef": "pass",
+    "sandboxPackageCheck": "fail: pre-existing BOM in Assets/Packages/StompyRobot/SRF/StompyRobot.SRF.asmdef",
+    "sandboxCompileConsole": "pass: no errors after final compilation",
+    "window": "Opened Dreamy Packages at 840x552; no OnGUI errors observed",
+    "pixels": "degraded: desktop provider has no screenshot capability; AT-SPI observation timed out"
+  },
+  "scope": [
+    "Extensible bundled/remote/project catalog",
+    "GitHub SemVer tags and UPM registry metadata",
+    "Dependency preview and pinned Git install/update",
+    "Local source protection and explicit source switching",
+    "Snapshot restore and reload reconciliation",
+    "Search, filters, version selection, details and export"
+  ],
+  "deferred": [
+    "Bulk Update Selected/All",
+    "Sample import",
+    "Visual pixel inspection",
+    "Public headless automation contract"
+  ],
+  "release": "Not bumped, tagged or published"
+}

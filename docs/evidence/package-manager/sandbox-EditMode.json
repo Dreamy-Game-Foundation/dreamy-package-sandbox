@@ -1,0 +1,455 @@
+{
+  "success": true,
+  "message": "Test job status retrieved.",
+  "error": null,
+  "data": {
+    "job_id": "7dbbbb0f5dfe4642ac074a639e72508c",
+    "status": "succeeded",
+    "mode": "EditMode",
+    "started_unix_ms": 1793957431985,
+    "finished_unix_ms": 1793957433396,
+    "last_update_unix_ms": 1793957433396,
+    "progress": {
+      "completed": 46,
+      "total": 46,
+      "current_test_full_name": null,
+      "current_test_started_unix_ms": 1793957433372,
+      "last_finished_test_full_name": "Dreamy.EditorTools.Tests.PackageManagerTests.UnmappedDependencyBlocksApply",
+      "last_finished_unix_ms": 1793957433373,
+      "stuck_suspected": false,
+      "editor_is_focused": false,
+      "blocked_reason": null,
+      "failures_so_far": [],
+      "failures_capped": false
+    },
+    "error": null,
+    "result": {
+      "mode": "EditMode",
+      "summary": {
+        "total": 46,
+        "passed": 45,
+        "failed": 0,
+        "skipped": 1,
+        "durationSeconds": 0.6024584,
+        "resultState": "Skipped:Ignored"
+      },
+      "results": [
+        {
+          "name": "AtomicSavePreservesExistingFileAndCleansTemporaryFile",
+          "fullName": "Dreamy.EditorTools.Tests.CaptureOutputTests.AtomicSavePreservesExistingFileAndCleansTemporaryFile",
+          "state": "Passed",
+          "durationSeconds": 0.0127653,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "BatchCaptureFailsFastWithoutStartingJob",
+          "fullName": "Dreamy.EditorTools.Tests.CaptureOutputTests.BatchCaptureFailsFastWithoutStartingJob",
+          "state": "Skipped:Ignored",
+          "durationSeconds": 0.0021854,
+          "message": "Only applies to batch mode.",
+          "stackTrace": "at Dreamy.EditorTools.Tests.CaptureOutputTests.BatchCaptureFailsFastWithoutStartingJob () [0x00007] in ./LocalPackages/com.dreamy.editor-tools/Tests/Editor/CaptureOutputTests.cs:129\n",
+          "output": ""
+        },
+        {
+          "name": "CancellationAfterCopyPreservesCopyWithoutWritingFile",
+          "fullName": "Dreamy.EditorTools.Tests.CaptureOutputTests.CancellationAfterCopyPreservesCopyWithoutWritingFile",
+          "state": "Passed",
+          "durationSeconds": 0.0100597,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "CopyFailureStillSavesSameFrame",
+          "fullName": "Dreamy.EditorTools.Tests.CaptureOutputTests.CopyFailureStillSavesSameFrame",
+          "state": "Passed",
+          "durationSeconds": 0.0023506,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "CopyOnlyNeverInvokesStorage",
+          "fullName": "Dreamy.EditorTools.Tests.CaptureOutputTests.CopyOnlyNeverInvokesStorage",
+          "state": "Passed",
+          "durationSeconds": 0.0007784,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "FailedCopyOnlyDoesNotFallBackToSave",
+          "fullName": "Dreamy.EditorTools.Tests.CaptureOutputTests.FailedCopyOnlyDoesNotFallBackToSave",
+          "state": "Passed",
+          "durationSeconds": 0.0008276,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SaveFailurePreservesSuccessfulCopy",
+          "fullName": "Dreamy.EditorTools.Tests.CaptureOutputTests.SaveFailurePreservesSuccessfulCopy",
+          "state": "Passed",
+          "durationSeconds": 0.0006561,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SaveOnlyDoesNotTouchClipboard",
+          "fullName": "Dreamy.EditorTools.Tests.CaptureOutputTests.SaveOnlyDoesNotTouchClipboard",
+          "state": "Passed",
+          "durationSeconds": 0.0007099,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "WindowsDibPreservesBottomUpRowsAndConvertsRgbaToOpaqueBgra",
+          "fullName": "Dreamy.EditorTools.Tests.CaptureOutputTests.WindowsDibPreservesBottomUpRowsAndConvertsRgbaToOpaqueBgra",
+          "state": "Passed",
+          "durationSeconds": 0.0018138,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "AuthenticationAndRateLimitAreErrorsNotUpToDate(401)",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.AuthenticationAndRateLimitAreErrorsNotUpToDate(401)",
+          "state": "Passed",
+          "durationSeconds": 0.0481226,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "AuthenticationAndRateLimitAreErrorsNotUpToDate(403)",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.AuthenticationAndRateLimitAreErrorsNotUpToDate(403)",
+          "state": "Passed",
+          "durationSeconds": 0.0414462,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "AuthenticationAndRateLimitAreErrorsNotUpToDate(429)",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.AuthenticationAndRateLimitAreErrorsNotUpToDate(429)",
+          "state": "Passed",
+          "durationSeconds": 0.0500416,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "BundledCatalogContainsEveryLocalDreamyPackageAndIsPortable",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.BundledCatalogContainsEveryLocalDreamyPackageAndIsPortable",
+          "state": "Passed",
+          "durationSeconds": 0.0034554,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "CatalogExtendsWithoutCodeAndProjectOverridesRemote",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.CatalogExtendsWithoutCodeAndProjectOverridesRemote",
+          "state": "Passed",
+          "durationSeconds": 0.0007424,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "CatalogRejectsDuplicateEntries",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.CatalogRejectsDuplicateEntries",
+          "state": "Passed",
+          "durationSeconds": 0.0012067,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "CatalogRejectsInvalidDocuments(\"{}\")",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.CatalogRejectsInvalidDocuments(\"{}\")",
+          "state": "Passed",
+          "durationSeconds": 0.000305,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "CatalogRejectsInvalidDocuments(\"{\\\"schemaVersion\\\":2,\\\"packages\\\":[]}\")",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.CatalogRejectsInvalidDocuments(\"{\\\"schemaVersion\\\":2,\\\"packages\\\":[]}\")",
+          "state": "Passed",
+          "durationSeconds": 0.000118,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "CatalogRejectsInvalidDocuments(\"{\\\"schemaVersion\\\":1,\\\"packages\\\":[{\\\"id\\\":\\\"../../escape\\\"}]}\")",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.CatalogRejectsInvalidDocuments(\"{\\\"schemaVersion\\\":1,\\\"packages\\\":[{\\\"id\\\":\\\"../../escape\\\"}]}\")",
+          "state": "Passed",
+          "durationSeconds": 0.0001279,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "CatalogRejectsInvalidDocuments(\"{\\\"schemaVersion\\\":1,\\\"packages\\\":[{\\\"id\\\":\\\"com.test.a\\\",\\\"repository\\\":\\\"https://user:token@github.com/owner/repo\\\"}]}\")",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.CatalogRejectsInvalidDocuments(\"{\\\"schemaVersion\\\":1,\\\"packages\\\":[{\\\"id\\\":\\\"com.test.a\\\",\\\"repository\\\":\\\"https://user:token@github.com/owner/repo\\\"}]}\")",
+          "state": "Passed",
+          "durationSeconds": 0.0001426,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "ClosingOwnerCancelsLookup",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.ClosingOwnerCancelsLookup",
+          "state": "Passed",
+          "durationSeconds": 0.0434118,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "DependencyClosurePinsCommitAndDoesNotMutateManifest",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.DependencyClosurePinsCommitAndDoesNotMutateManifest",
+          "state": "Passed",
+          "durationSeconds": 0.0062287,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "DependencyCycleBlocksApply",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.DependencyCycleBlocksApply",
+          "state": "Passed",
+          "durationSeconds": 0.0012808,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "DifferentRepositoryRequiresSourceSwitch",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.DifferentRepositoryRequiresSourceSwitch",
+          "state": "Passed",
+          "durationSeconds": 0.0011057,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "DowngradeCannotBreakInstalledDependent",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.DowngradeCannotBreakInstalledDependent",
+          "state": "Passed",
+          "durationSeconds": 0.0013784,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "HighestTagIsValidatedAndDuplicateChecksAreDeduplicated",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.HighestTagIsValidatedAndDuplicateChecksAreDeduplicated",
+          "state": "Passed",
+          "durationSeconds": 0.2430215,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidVersionsAreNotComparable(\"01.0.0\")",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.InvalidVersionsAreNotComparable(\"01.0.0\")",
+          "state": "Passed",
+          "durationSeconds": 0.0002215,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidVersionsAreNotComparable(\"1.0.0-preview.01\")",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.InvalidVersionsAreNotComparable(\"1.0.0-preview.01\")",
+          "state": "Passed",
+          "durationSeconds": 0.0001073,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidVersionsAreNotComparable(\"main\")",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.InvalidVersionsAreNotComparable(\"main\")",
+          "state": "Passed",
+          "durationSeconds": 0.0000761,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidVersionsAreNotComparable(\"file:../LocalPackages/test\")",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.InvalidVersionsAreNotComparable(\"file:../LocalPackages/test\")",
+          "state": "Passed",
+          "durationSeconds": 0.0000714,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "LocalDependencyIsNeverSilentlySwitched",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.LocalDependencyIsNeverSilentlySwitched",
+          "state": "Passed",
+          "durationSeconds": 0.0012003,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "LocalRootRequiresExplicitSourceSwitch",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.LocalRootRequiresExplicitSourceSwitch",
+          "state": "Passed",
+          "durationSeconds": 0.0011874,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "OfflineRefreshRetainsCachedVersionWithExplicitError",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.OfflineRefreshRetainsCachedVersionWithExplicitError",
+          "state": "Passed",
+          "durationSeconds": 0.0423808,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "RecoveryRejectsUnrelatedManifestChanges",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.RecoveryRejectsUnrelatedManifestChanges",
+          "state": "Passed",
+          "durationSeconds": 0.0010883,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SemVerOrder(\"1.9.0\",\"1.10.0\",-1)",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder(\"1.9.0\",\"1.10.0\",-1)",
+          "state": "Passed",
+          "durationSeconds": 0.0003296,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SemVerOrder(\"1.0.0-preview.2\",\"1.0.0-preview.10\",-1)",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder(\"1.0.0-preview.2\",\"1.0.0-preview.10\",-1)",
+          "state": "Passed",
+          "durationSeconds": 0.000124,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SemVerOrder(\"1.0.0-preview.1\",\"1.0.0\",-1)",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder(\"1.0.0-preview.1\",\"1.0.0\",-1)",
+          "state": "Passed",
+          "durationSeconds": 0.0001068,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SemVerOrder(\"v2.0.0\",\"1.99.99\",1)",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder(\"v2.0.0\",\"1.99.99\",1)",
+          "state": "Passed",
+          "durationSeconds": 0.0000894,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SemVerOrder(\"1.0.0+build1\",\"1.0.0+build2\",0)",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder(\"1.0.0+build1\",\"1.0.0+build2\",0)",
+          "state": "Passed",
+          "durationSeconds": 0.0000768,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SemVerOrder(\"1.0.0-alpha.9999999999999999999\",\"1.0.0-alpha.99999999999999999999\",-1)",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder(\"1.0.0-alpha.9999999999999999999\",\"1.0.0-alpha.99999999999999999999\",-1)",
+          "state": "Passed",
+          "durationSeconds": 0.0000783,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SufficientInstalledLocalDependencyIsPreserved",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.SufficientInstalledLocalDependencyIsPreserved",
+          "state": "Passed",
+          "durationSeconds": 0.0010588,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "TagVersionMismatchDoesNotBecomeLatest",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.TagVersionMismatchDoesNotBecomeLatest",
+          "state": "Passed",
+          "durationSeconds": 0.0461364,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "UnityIncompatibleReleaseBlocksApply",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.UnityIncompatibleReleaseBlocksApply",
+          "state": "Passed",
+          "durationSeconds": 0.001014,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "UnityMinimum(\"6000.0\",\"6000.4.12f1\",True)",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.UnityMinimum(\"6000.0\",\"6000.4.12f1\",True)",
+          "state": "Passed",
+          "durationSeconds": 0.0006412,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "UnityMinimum(\"6000.4.13f1\",\"6000.4.12f1\",False)",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.UnityMinimum(\"6000.4.13f1\",\"6000.4.12f1\",False)",
+          "state": "Passed",
+          "durationSeconds": 0.0001248,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "UnityMinimum(\"6000.5\",\"6000.4.12f1\",False)",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.UnityMinimum(\"6000.5\",\"6000.4.12f1\",False)",
+          "state": "Passed",
+          "durationSeconds": 0.000097,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "UnmappedDependencyBlocksApply",
+          "fullName": "Dreamy.EditorTools.Tests.PackageManagerTests.UnmappedDependencyBlocksApply",
+          "state": "Passed",
+          "durationSeconds": 0.0009986,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        }
+      ]
+    }
+  },
+  "hint": null
+}

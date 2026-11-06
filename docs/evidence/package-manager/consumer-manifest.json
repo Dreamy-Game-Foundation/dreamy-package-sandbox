@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "com.dreamy.editor-tools": "file:../LocalPackages/com.dreamy.editor-tools",
+    "com.unity.test-framework": "1.6.0"
+  },
+  "testables": [
+    "com.dreamy.editor-tools"
+  ]
+}

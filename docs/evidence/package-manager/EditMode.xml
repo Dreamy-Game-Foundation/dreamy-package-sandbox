@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="46" result="Passed" total="46" passed="46" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:05Z" duration="0.6713938">
+  <test-suite type="TestSuite" id="1000" name="dreamy-package-manager-consumer-20261106" fullname="dreamy-package-manager-consumer-20261106" runstate="Runnable" testcasecount="46" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:05Z" duration="0.671394" total="46" passed="46" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1054" name="Dreamy.EditorTools.Tests.Editor.dll" fullname="/tmp/dreamy-package-manager-consumer-20261106/Library/ScriptAssemblies/Dreamy.EditorTools.Tests.Editor.dll" runstate="Runnable" testcasecount="46" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:05Z" duration="0.666040" total="46" passed="46" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="1544978" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1055" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="46" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:05Z" duration="0.665833" total="46" passed="46" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1056" name="EditorTools" fullname="Dreamy.EditorTools" runstate="Runnable" testcasecount="46" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:05Z" duration="0.665768" total="46" passed="46" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1057" name="Tests" fullname="Dreamy.EditorTools.Tests" runstate="Runnable" testcasecount="46" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:05Z" duration="0.664209" total="46" passed="46" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="CaptureOutputTests" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.038022" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1008" name="AtomicSavePreservesExistingFileAndCleansTemporaryFile" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.AtomicSavePreservesExistingFileAndCleansTemporaryFile" methodname="AtomicSavePreservesExistingFileAndCleansTemporaryFile" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="206321652" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.017674" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1010" name="BatchCaptureFailsFastWithoutStartingJob" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.BatchCaptureFailsFastWithoutStartingJob" methodname="BatchCaptureFailsFastWithoutStartingJob" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="38878891" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.000801" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1006" name="CancellationAfterCopyPreservesCopyWithoutWritingFile" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.CancellationAfterCopyPreservesCopyWithoutWritingFile" methodname="CancellationAfterCopyPreservesCopyWithoutWritingFile" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="424148030" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.004104" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="CopyFailureStillSavesSameFrame" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.CopyFailureStillSavesSameFrame" methodname="CopyFailureStillSavesSameFrame" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="593267286" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.002976" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1002" name="CopyOnlyNeverInvokesStorage" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.CopyOnlyNeverInvokesStorage" methodname="CopyOnlyNeverInvokesStorage" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="486216926" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.000599" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1007" name="FailedCopyOnlyDoesNotFallBackToSave" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.FailedCopyOnlyDoesNotFallBackToSave" methodname="FailedCopyOnlyDoesNotFallBackToSave" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="1106327390" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.000586" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="SaveFailurePreservesSuccessfulCopy" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.SaveFailurePreservesSuccessfulCopy" methodname="SaveFailurePreservesSuccessfulCopy" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="1737472924" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.000484" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1003" name="SaveOnlyDoesNotTouchClipboard" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.SaveOnlyDoesNotTouchClipboard" methodname="SaveOnlyDoesNotTouchClipboard" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="1358944516" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.000491" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1009" name="WindowsDibPreservesBottomUpRowsAndConvertsRgbaToOpaqueBgra" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.WindowsDibPreservesBottomUpRowsAndConvertsRgbaToOpaqueBgra" methodname="WindowsDibPreservesBottomUpRowsAndConvertsRgbaToOpaqueBgra" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="746797178" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.001632" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1011" name="PackageManagerTests" fullname="Dreamy.EditorTools.Tests.PackageManagerTests" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" testcasecount="37" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:05Z" duration="0.625110" total="37" passed="37" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1051" name="AuthenticationAndRateLimitAreErrorsNotUpToDate" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.AuthenticationAndRateLimitAreErrorsNotUpToDate" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.137360" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1048" name="AuthenticationAndRateLimitAreErrorsNotUpToDate(401)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.AuthenticationAndRateLimitAreErrorsNotUpToDate(401)" methodname="AuthenticationAndRateLimitAreErrorsNotUpToDate" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1096836097" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.052627" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1049" name="AuthenticationAndRateLimitAreErrorsNotUpToDate(403)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.AuthenticationAndRateLimitAreErrorsNotUpToDate(403)" methodname="AuthenticationAndRateLimitAreErrorsNotUpToDate" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="734689316" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.034373" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1050" name="AuthenticationAndRateLimitAreErrorsNotUpToDate(429)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.AuthenticationAndRateLimitAreErrorsNotUpToDate(429)" methodname="AuthenticationAndRateLimitAreErrorsNotUpToDate" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="947498050" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.049925" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1035" name="BundledCatalogContainsEveryLocalDreamyPackageAndIsPortable" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.BundledCatalogContainsEveryLocalDreamyPackageAndIsPortable" methodname="BundledCatalogContainsEveryLocalDreamyPackageAndIsPortable" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="441737136" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.070836" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1028" name="CatalogExtendsWithoutCodeAndProjectOverridesRemote" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.CatalogExtendsWithoutCodeAndProjectOverridesRemote" methodname="CatalogExtendsWithoutCodeAndProjectOverridesRemote" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="6065658" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.000745" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1034" name="CatalogRejectsDuplicateEntries" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.CatalogRejectsDuplicateEntries" methodname="CatalogRejectsDuplicateEntries" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1736756776" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.009949" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1033" name="CatalogRejectsInvalidDocuments" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.CatalogRejectsInvalidDocuments" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.001160" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1029" name="CatalogRejectsInvalidDocuments(&quot;{}&quot;)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.CatalogRejectsInvalidDocuments(&quot;{}&quot;)" methodname="CatalogRejectsInvalidDocuments" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1104265082" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.000339" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1030" name="CatalogRejectsInvalidDocuments(&quot;{\&quot;schemaVersion\&quot;:2,\&quot;packages\&quot;:[]}&quot;)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.CatalogRejectsInvalidDocuments(&quot;{\&quot;schemaVersion\&quot;:2,\&quot;packages\&quot;:[]}&quot;)" methodname="CatalogRejectsInvalidDocuments" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="698906813" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.000100" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1031" name="CatalogRejectsInvalidDocuments(&quot;{\&quot;schemaVersion\&quot;:1,\&quot;packages\&quot;:[{\&quot;id\&quot;:\&quot;../../escape\&quot;}]}&quot;)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.CatalogRejectsInvalidDocuments(&quot;{\&quot;schemaVersion\&quot;:1,\&quot;packages\&quot;:[{\&quot;id\&quot;:\&quot;../../escape\&quot;}]}&quot;)" methodname="CatalogRejectsInvalidDocuments" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="868166448" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.000100" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1032" name="CatalogRejectsInvalidDocuments(&quot;{\&quot;schemaVersion\&quot;:1,\&quot;packages\&quot;:[{\&quot;id\&quot;:\&quot;com.test.a\&quot;,\&quot;repository\&quot;:\&quot;https://user:token@github.com/owner/repo\&quot;}]}&quot;)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.CatalogRejectsInvalidDocuments(&quot;{\&quot;schemaVersion\&quot;:1,\&quot;packages\&quot;:[{\&quot;id\&quot;:\&quot;com.test.a\&quot;,\&quot;repository\&quot;:\&quot;https://user:token@github.com/owner/repo\&quot;}]}&quot;)" methodname="CatalogRejectsInvalidDocuments" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="479045570" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.000138" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1053" name="ClosingOwnerCancelsLookup" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.ClosingOwnerCancelsLookup" methodname="ClosingOwnerCancelsLookup" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1409052412" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.049865" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1036" name="DependencyClosurePinsCommitAndDoesNotMutateManifest" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.DependencyClosurePinsCommitAndDoesNotMutateManifest" methodname="DependencyClosurePinsCommitAndDoesNotMutateManifest" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="475477926" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.006593" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1042" name="DependencyCycleBlocksApply" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.DependencyCycleBlocksApply" methodname="DependencyCycleBlocksApply" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1659644786" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.001041" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1044" name="DifferentRepositoryRequiresSourceSwitch" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.DifferentRepositoryRequiresSourceSwitch" methodname="DifferentRepositoryRequiresSourceSwitch" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="562586863" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.000971" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1041" name="DowngradeCannotBreakInstalledDependent" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.DowngradeCannotBreakInstalledDependent" methodname="DowngradeCannotBreakInstalledDependent" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="381387634" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:04Z" duration="0.001675" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1046" name="HighestTagIsValidatedAndDuplicateChecksAreDeduplicated" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.HighestTagIsValidatedAndDuplicateChecksAreDeduplicated" methodname="HighestTagIsValidatedAndDuplicateChecksAreDeduplicated" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1185496797" result="Passed" start-time="2026-11-06 09:28:04Z" end-time="2026-11-06 09:28:05Z" duration="0.244102" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1023" name="InvalidVersionsAreNotComparable" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.InvalidVersionsAreNotComparable" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000798" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1019" name="InvalidVersionsAreNotComparable(&quot;01.0.0&quot;)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.InvalidVersionsAreNotComparable(&quot;01.0.0&quot;)" methodname="InvalidVersionsAreNotComparable" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1520663365" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000255" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1020" name="InvalidVersionsAreNotComparable(&quot;1.0.0-preview.01&quot;)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.InvalidVersionsAreNotComparable(&quot;1.0.0-preview.01&quot;)" methodname="InvalidVersionsAreNotComparable" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="941594297" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000092" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1021" name="InvalidVersionsAreNotComparable(&quot;main&quot;)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.InvalidVersionsAreNotComparable(&quot;main&quot;)" methodname="InvalidVersionsAreNotComparable" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="747207616" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000054" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1022" name="InvalidVersionsAreNotComparable(&quot;file:../LocalPackages/test&quot;)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.InvalidVersionsAreNotComparable(&quot;file:../LocalPackages/test&quot;)" methodname="InvalidVersionsAreNotComparable" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1098332482" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000059" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1038" name="LocalDependencyIsNeverSilentlySwitched" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.LocalDependencyIsNeverSilentlySwitched" methodname="LocalDependencyIsNeverSilentlySwitched" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="654958658" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000842" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1037" name="LocalRootRequiresExplicitSourceSwitch" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.LocalRootRequiresExplicitSourceSwitch" methodname="LocalRootRequiresExplicitSourceSwitch" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1871914920" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.002872" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1052" name="OfflineRefreshRetainsCachedVersionWithExplicitError" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.OfflineRefreshRetainsCachedVersionWithExplicitError" methodname="OfflineRefreshRetainsCachedVersionWithExplicitError" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1470891207" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.040446" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1045" name="RecoveryRejectsUnrelatedManifestChanges" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.RecoveryRejectsUnrelatedManifestChanges" methodname="RecoveryRejectsUnrelatedManifestChanges" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="879245100" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.002190" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1018" name="SemVerOrder" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.001100" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1012" name="SemVerOrder(&quot;1.9.0&quot;,&quot;1.10.0&quot;,-1)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder(&quot;1.9.0&quot;,&quot;1.10.0&quot;,-1)" methodname="SemVerOrder" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="133486635" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000313" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1013" name="SemVerOrder(&quot;1.0.0-preview.2&quot;,&quot;1.0.0-preview.10&quot;,-1)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder(&quot;1.0.0-preview.2&quot;,&quot;1.0.0-preview.10&quot;,-1)" methodname="SemVerOrder" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="535979650" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000097" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1014" name="SemVerOrder(&quot;1.0.0-preview.1&quot;,&quot;1.0.0&quot;,-1)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder(&quot;1.0.0-preview.1&quot;,&quot;1.0.0&quot;,-1)" methodname="SemVerOrder" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1629520534" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000070" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1015" name="SemVerOrder(&quot;v2.0.0&quot;,&quot;1.99.99&quot;,1)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder(&quot;v2.0.0&quot;,&quot;1.99.99&quot;,1)" methodname="SemVerOrder" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1152771688" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000056" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1016" name="SemVerOrder(&quot;1.0.0+build1&quot;,&quot;1.0.0+build2&quot;,0)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder(&quot;1.0.0+build1&quot;,&quot;1.0.0+build2&quot;,0)" methodname="SemVerOrder" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="2144841046" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000056" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1017" name="SemVerOrder(&quot;1.0.0-alpha.9999999999999999999&quot;,&quot;1.0.0-alpha.99999999999999999999&quot;,-1)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.SemVerOrder(&quot;1.0.0-alpha.9999999999999999999&quot;,&quot;1.0.0-alpha.99999999999999999999&quot;,-1)" methodname="SemVerOrder" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1122492319" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000061" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1039" name="SufficientInstalledLocalDependencyIsPreserved" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.SufficientInstalledLocalDependencyIsPreserved" methodname="SufficientInstalledLocalDependencyIsPreserved" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="144905808" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000789" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1047" name="TagVersionMismatchDoesNotBecomeLatest" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.TagVersionMismatchDoesNotBecomeLatest" methodname="TagVersionMismatchDoesNotBecomeLatest" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="996495279" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.045877" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1043" name="UnityIncompatibleReleaseBlocksApply" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.UnityIncompatibleReleaseBlocksApply" methodname="UnityIncompatibleReleaseBlocksApply" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1218578207" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000819" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1027" name="UnityMinimum" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.UnityMinimum" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.001094" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1024" name="UnityMinimum(&quot;6000.0&quot;,&quot;6000.4.12f1&quot;,True)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.UnityMinimum(&quot;6000.0&quot;,&quot;6000.4.12f1&quot;,True)" methodname="UnityMinimum" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="2059861306" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000598" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1025" name="UnityMinimum(&quot;6000.4.13f1&quot;,&quot;6000.4.12f1&quot;,False)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.UnityMinimum(&quot;6000.4.13f1&quot;,&quot;6000.4.12f1&quot;,False)" methodname="UnityMinimum" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="757633564" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000103" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1026" name="UnityMinimum(&quot;6000.5&quot;,&quot;6000.4.12f1&quot;,False)" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.UnityMinimum(&quot;6000.5&quot;,&quot;6000.4.12f1&quot;,False)" methodname="UnityMinimum" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1562003202" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000079" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1040" name="UnmappedDependencyBlocksApply" fullname="Dreamy.EditorTools.Tests.PackageManagerTests.UnmappedDependencyBlocksApply" methodname="UnmappedDependencyBlocksApply" classname="Dreamy.EditorTools.Tests.PackageManagerTests" runstate="Runnable" seed="1492753648" result="Passed" start-time="2026-11-06 09:28:05Z" end-time="2026-11-06 09:28:05Z" duration="0.000931" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: /tmp/dreamy-package-manager-consumer-20261106/EditMode-final.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

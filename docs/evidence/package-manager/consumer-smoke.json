@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "Passed": [
+    "Live GitHub core tag/version/metadata: 1.2.0",
+    "Live registry exact-version metadata: 2.0.0",
+    "Real Git install, source/version/hash verified across compilation/reload",
+    "Real Git update, source/version/hash verified across compilation/reload",
+    "Guarded restore resolves previous pinned Git version",
+    "Real UPM remove verified",
+    "Self source-switch/update: pinned Git version/revision verified after restarting the isolated consumer following assembly reload"
+  ],
+  "Degraded": [],
+  "unity": "6000.4.12f1"
+}

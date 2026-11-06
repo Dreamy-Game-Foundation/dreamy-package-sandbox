@@ -1,0 +1,23 @@
+{
+  "editor": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "project": "/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Assets",
+        "unity": "6000.4.12f1",
+        "compiling": false,
+        "playing": false,
+        "sceneDirty": false,
+        "dreamyInstalled": 21,
+        "windows": []
+      },
+      "compiler": "codedom"
+    }
+  },
+  "console": {
+    "success": true,
+    "message": "Retrieved 0 log entries.",
+    "data": []
+  }
+}

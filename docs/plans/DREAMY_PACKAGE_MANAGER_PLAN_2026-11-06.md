@@ -1,6 +1,6 @@
 # Dreamy Package Manager — kế hoạch mở rộng
 
-Ngày: 2026-11-06. Trạng thái: hoàn thành khảo sát và lập kế hoạch; chưa triển khai code.
+Ngày: 2026-11-06. Trạng thái: đã triển khai MVP bước 1–3; xem checkpoint triển khai cuối tài liệu.
 
 ## Mục tiêu
 
@@ -86,3 +86,13 @@ Không reference Runtime của các package Dreamy để liệt kê metadata; gi
 ## Checkpoint
 
 Planning complete. Chỉ thêm tài liệu này; chưa sửa code, manifest, lock hoặc package version. Chưa query release remote nên tài liệu không tuyên bố version upstream hiện tại. Bước tiếp theo nếu triển khai: bước 1, xác minh catalog/release transport rồi làm provider và UI read-only trước.
+
+
+## Checkpoint triển khai — 2026-11-06
+
+- Đã triển khai catalog 21 package, project additions/overrides và remote catalog tùy chọn; thêm package qua Catalog Settings hoặc JSON, không sửa C#.
+- Đã có resolved installed list, direct/transitive/local/unknown, tìm kiếm/lọc, stable/prerelease/version picker, release metadata, dependency preview, commit-pinned Install/Update, chuyển nguồn riêng, operation journal/restore, export và giữ Project Packages. Entry manifest chưa resolve vẫn có thể xem/xóa trong Project Packages.
+- Clean consumer: 46/46 Editor tests pass; sandbox GUI: 45 pass, 1 screenshot batch-only test skip, 0 fail. GitHub/registry lookup thật và Git install/update/remove/restore/self-update được kiểm tra trong consumer tách biệt.
+- Unity sandbox được restart theo yêu cầu; MCP đã kết nối lại, scene sạch và Console không compile/OnGUI errors. Script reconnect tạm đã xóa.
+- Static consumer package-check và sandbox asmdef pass. Sandbox package-check còn fail do BOM của asmdef StompyRobot có sẵn; không sửa file ngoài phạm vi. Pixel inspection bị giới hạn do desktop provider không hỗ trợ screenshot/AT-SPI timeout.
+- Evidence: `docs/evidence/package-manager/verification.json`, test receipts, source fingerprints và smoke harness. Chưa bump/tag/publish. Bước 4 chỉ có Export; bulk update/sample import để lần mở rộng tiếp theo.

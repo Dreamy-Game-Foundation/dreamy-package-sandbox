@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "package-manager-ambiguous-packageinfo",
+  "projectId": "4eda3157c453fbd1cbb046ea3973b418847e1cd4aa568bd3ed950d9c4e145f43",
+  "taskId": "dreamy-package-manager",
+  "eventId": "package-manager-ambiguous-packageinfo",
+  "observedAt": "2026-11-06T09:15:07.075Z",
+  "platform": "linux",
+  "operation": "unity",
+  "outcome": "fail",
+  "signature": "CS0104 PackageInfo ambiguous UnityEditor.PackageInfo and UnityEditor.PackageManager.PackageInfo",
+  "rawPromptCaptured": false,
+  "rawToolInputCaptured": false
+}

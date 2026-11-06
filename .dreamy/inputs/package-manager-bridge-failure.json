@@ -1,0 +1,1 @@
+{"schemaVersion": 1, "id": "package-manager-bridge-stall", "taskId": "dreamy-package-manager", "operation": "unity", "outcome": "fail", "signature": "Editor unresponsive during bridge EditMode job 6d3863a638fc4c25b2c70608e1b008ab; plugin disconnected; restart required"}

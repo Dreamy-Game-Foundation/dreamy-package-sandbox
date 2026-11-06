@@ -1,0 +1,1 @@
+{"schemaVersion": 1, "id": "package-manager-ambiguous-packageinfo", "taskId": "dreamy-package-manager", "operation": "unity", "outcome": "fail", "signature": "CS0104 PackageInfo ambiguous UnityEditor.PackageInfo and UnityEditor.PackageManager.PackageInfo"}

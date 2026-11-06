@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "taskId": "dreamy-package-manager",
+  "status": "complete",
+  "files": [
+    "LocalPackages/com.dreamy.editor-tools/Editor/Package/DreamyPackageToolsWindow.cs",
+    "LocalPackages/com.dreamy.editor-tools/Editor/Package/PackageCatalog.cs",
+    "LocalPackages/com.dreamy.editor-tools/Editor/Package/PackageChangePlan.cs",
+    "LocalPackages/com.dreamy.editor-tools/Editor/Package/PackageReleases.cs",
+    "LocalPackages/com.dreamy.editor-tools/Editor/Package/DreamyPackageCatalog.json",
+    "LocalPackages/com.dreamy.editor-tools/Editor/Package/PackageVersion.cs",
+    "LocalPackages/com.dreamy.editor-tools/Editor/Package/PackageOperations.cs",
+    "LocalPackages/com.dreamy.editor-tools/Tests/Editor/PackageManagerTests.cs",
+    "LocalPackages/com.dreamy.editor-tools/Tests/Editor/Dreamy.EditorTools.Tests.Editor.asmdef"
+  ],
+  "sourceFingerprint": "910cf556307b934ac041cc9b239d9b18035503fa755966fca3ce48ee8d6e84ae",
+  "requiredCommands": [
+    "validate",
+    "unity"
+  ],
+  "objective": "Extend Dreamy Package Manager with extensible catalog, releases and safe install/update",
+  "nextAction": "Complete: source and documentation implemented; clean consumer 46/46 and sandbox 45 pass/1 batch-only skip; MCP reconnected; see verification.json for limitations",
+  "updatedAt": "2026-11-06T09:33:42.143Z"
+}

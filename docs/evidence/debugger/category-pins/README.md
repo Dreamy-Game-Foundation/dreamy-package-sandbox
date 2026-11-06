@@ -1,0 +1,9 @@
+# Compact category pin buttons — completed 2026-11-06
+
+Replaced global Pin options / Done pinning selection UI with a neutral 40×40 button in each category header, next to the collapse indicator. Uses the existing pin sprite. Only the icon changes: muted = none, warning = partial, accent = all. A click pins the entire category when not all are pinned, otherwise unpins all. Search/collapse do not change the category scope. Only pinned stays a filter. Existing pin IDs/preferences and access checks are reused; no cheat value/action is executed.
+
+The old global toggle is hidden and its extra toolbar row is removed. Normal option/category selection mode stays off, with legacy selection wash forced transparent. Large pin batches yield after a nominal 4 ms work slice; button state recovers after tab exit cancels a batch. This is scheduling behavior, not a phone frame-time guarantee.
+
+Fresh source consumer: 92 EditMode + 58 PlayMode passed. Tests use the category button to pin/unpin two options, verify stable header color/zero selection-wash alpha, filter behavior, unchanged game value and zero action calls. A separate test cancels a 100-option batch by leaving Cheats and verifies it stops and can be used again. That test exposed a disabled-button state after cancellation; reapplying filters on tab re-enable fixes it.
+
+Actual sandbox MCP confirmed each category has a compact button, no active selection controls, no global pin action, the existing pin-50 sprite and a successful top raycast hit. No live game pin state or cheat values were changed. A screenshot request produced a too-narrow/cropped Game View image; it was excluded from visual acceptance rather than treated as a UI approval. Editor stopped after inspection. No mobile build/device certification or publication performed. Unrelated sample deletions and other user edits were preserved.

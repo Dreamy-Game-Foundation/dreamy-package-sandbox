@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-06",
+  "unity": "6000.4.12f1 Linux",
+  "tests": {
+    "EditMode": {
+      "id": "2",
+      "testcasecount": "92",
+      "result": "Passed",
+      "total": "92",
+      "passed": "92",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-06 04:28:08Z",
+      "end-time": "2026-11-06 04:28:10Z",
+      "duration": "2.518759"
+    },
+    "PlayMode": {
+      "id": "2",
+      "testcasecount": "58",
+      "result": "Passed",
+      "total": "58",
+      "passed": "58",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-06 04:28:20Z",
+      "end-time": "2026-11-06 04:28:30Z",
+      "duration": "9.6000072"
+    }
+  },
+  "mobileDevice": "not run"
+}

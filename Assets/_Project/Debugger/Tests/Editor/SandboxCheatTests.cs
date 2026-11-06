@@ -26,7 +26,7 @@ namespace Dreamy.Template.Debugging.Tests
             wallet = CreateWallet(saves);
             unlocked = true;
             registry = new CheatRegistry(() => unlocked);
-            lease = registry.Register(new SandboxGameCheats(wallet, wallet).CreateOptions());
+            lease = registry.Register(new GameCheatOptions(wallet, wallet).CreateOptions());
         }
 
         [TearDown] public void TearDown()
@@ -97,12 +97,29 @@ namespace Dreamy.Template.Debugging.Tests
 
         [Test] public void WalletRejectionIsVisibleWithoutClaimingSuccess()
         {
-            var model = new SandboxGameCheats(new RejectingWallet(), wallet);
+            var model = new GameCheatOptions(new RejectingWallet(), wallet);
             var other = new CheatRegistry(() => true);
             using var otherLease = other.Register(model.CreateOptions());
             other.Execute("sandbox.currency.coin.grant", true);
             Assert.That(model.LastResult, Does.StartWith("Not granted:"));
             Assert.That(wallet.GetBalance(new ResourceId("currency.coin")), Is.Zero);
+        }
+
+        [Test] public void MigrationKeepsEveryExistingIdAndCompleteCard()
+        {
+            var options = registry.Snapshot();
+            var expected = new[] { "currency.coin", "currency.gem", "card.knight", "chest.silver", "item.demo-card" }
+                .SelectMany(id => new[] { "sandbox." + id + ".balance", "sandbox." + id + ".amount", "sandbox." + id + ".grant" })
+                .Concat(new[] { "skin.hero.red", "entitlement.remove-ads", "entitlement.vip.lifetime", "entitlement.fund.starter", "entitlement.battle-pass.season-1.premium" }
+                    .SelectMany(id => new[] { "sandbox." + id + ".owned", "sandbox." + id + ".unlock" }))
+                .Concat(new[] { "sandbox.status", "sandbox.ads-adapter", "sandbox.game.TimeScale", "sandbox.game.ResetTimeScale", "sandbox.game.TargetFrameRate", "sandbox.game.VSyncCount", "sandbox.game.ActiveScene" });
+            Assert.That(options.Select(o => o.Id), Is.EquivalentTo(expected));
+            var cards = options.Where(o => o.Card != null).GroupBy(o => o.Card.Id).ToArray();
+            Assert.That(cards.Length, Is.EqualTo(10));
+            foreach (var card in cards)
+                Assert.That(card.Select(o => o.Card.Role), Is.EquivalentTo(card.First().Card.Kind == CheatCardKind.Resource
+                    ? new[] { CheatCardRole.Balance, CheatCardRole.Amount, CheatCardRole.Action }
+                    : new[] { CheatCardRole.Owned, CheatCardRole.Action }));
         }
 
         private DatasaveService CreateSaves() => new DatasaveService(new DatasaveOptions { DirectoryName = directory, CreateFileOnFirstLoad = false });

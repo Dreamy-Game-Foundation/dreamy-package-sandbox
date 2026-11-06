@@ -1,28 +1,78 @@
-# Sandbox game cheats
+# Cheat của game — partial class + attribute
 
-Cheat của game nằm trong `Runtime/SandboxGameCheats.cs`, đăng ký bởi `SandboxCheatHost` sau khi GameInstaller Ready. Host chờ wallet thật, dùng registry/access của DebuggerRuntime và giải phóng registration khi disable. Không đăng ký các biến Coin/God Mode giả của scene mẫu vào game nữa.
+Thêm cheat bằng cách tạo/sửa file `Runtime/GameCheatOptions.TenTinhNang.cs`. Không phải sửa host hay thêm `yield return`.
 
-## Sử dụng
+## Cấu trúc
 
-1. Play `Assets/_Project/Scenes/BootstrapScene.unity`.
-2. `Window → Dreamy Debugger → Cheat Panel`, nhập PIN cấu hình (mặc định `0000`). Hoặc tap góc trên trái 5 lần trong Game/Simulator.
-3. Tab Options: chọn `Coins grant amount` / `Gems grant amount`, bấm `Add Coins` / `Add Gems`, rồi Confirm.
-4. Inventory: Knight cards, Silver chests, Daily reward cards, Red hero skin.
-5. Entitlements: `Grant No Ads`, Lifetime VIP, Starter Fund, Season 1 Premium Pass. Xem `owned` và `Last cheat result` để kiểm tra kết quả.
+| File | Trách nhiệm |
+|---|---|
+| GameCheatOptions.cs | Constructor nhận wallet/balance service, đăng ký reflection một lần |
+| GameCheatOptions.Economy.cs | Coins, Gems |
+| GameCheatOptions.Inventory.cs | Cards, chests, reward items, skin |
+| GameCheatOptions.Entitlements.cs | No Ads, VIP, Starter Fund, Premium Pass |
+| GameCheatOptions.Diagnostics.cs | Kết quả thao tác và trạng thái integration |
+| GameCheatOptions.Time.cs | Time Scale, reset |
+| GameCheatOptions.Application.cs | Target FPS, VSync, scene |
+| GameCheatOptions.Wallet.cs | Helpers đọc/grant/save và xử lý lỗi, không hiện lên panel |
+| SandboxCheatHost.cs | Đợi game ready, đăng ký đúng một container, Dispose khi disable |
+| link.xml | Giữ reflected members khi stripping/IL2CPP |
 
-Mỗi thao tác grant tạo transaction ID mới, gọi IResourceWallet.TryGrant để lưu vào save economy và phát BalanceChanged cho UI. Balance là read-only; không sửa trực tiếp JSON, PlayerPrefs hay model UI. Grant amount giới hạn 1–1.000.000, có xác nhận trước khi lưu. Mở lại game vẫn giữ tài nguyên/entitlement đã cấp.
+Đây là code game-owned. Runtime package không phụ thuộc Core/Economy/Shop của game. Host dùng wallet thật; không đăng ký model Coin/God Mode giả vào game.
 
-**No Ads:** project này đã có entitlement `entitlement.remove-ads` và EntitlementEffectBinding. Callback hiện là ApplyNoAdsDemo ghi log; chưa có SDK quảng cáo. Cheat cấp ownership thật vào wallet và kích hoạt hook đó, không tạo giao dịch IAP/receipt giả. Khi tích hợp SDK, nối callback game hiện có với API No Ads của SDK. Không cung cấp nút thu hồi entitlement mua thật.
+## Cách sử dụng
 
-## Mỗi game có bộ cheat riêng
+1. Play BootstrapScene.
+2. `Window → Dreamy Debugger → Cheat Panel`, nhập PIN (mặc định 0000); hoặc tap góc trên trái 5 lần.
+3. Tab Cheats: Economy/Inventory/Entitlements có card balance/amount/action hoặc ownership/grant.
+4. Chọn amount, bấm Add rồi Confirm. Wallet lưu và phát BalanceChanged như trước.
+5. Gameplay/Application có Time Scale, Reset, Target FPS và giá trị chỉ đọc.
 
-- Dùng `BoundCheatExamples.cs` trong sample Quick Start làm mẫu: ResourceCheatOptions nhận delegate đọc balance/grant; OwnershipCheatOptions nhận delegate owned/unlock. Không phụ thuộc Core/Economy/Shop.
-- Game thay catalog ID/nhãn/delegate trong class riêng, ví dụ SandboxGameCheats. Có thể bỏ/tạo nhóm và option tùy game.
-- Chỉ host game phụ thuộc các service của game. Package debugger Runtime không tham chiếu game hoặc Dreamy Core/UI.
-- Prefab/config riêng: `Prefabs/SandboxDebugger.prefab`, `SandboxDebuggerConfiguration.asset`. Đây là variant từ package base; chỉnh ở project, không sửa package Runtime.
-- Editor setup: mở BootstrapScene, chạy `Window → Dreamy Debugger → Set up sandbox game cheats`; installer giữ config/prefab đã tùy chỉnh, không thêm host trùng. Lưu scene sau khi setup.
-- Standalone DebuggerDemo vẫn dùng ProjectCheatHost với dữ liệu giả để thử UI mà không cần bootstrap game.
+No Ads cấp entitlement thật cho sandbox; callback hiện là ApplyNoAdsDemo, chưa có ads SDK. Không tạo IAP receipt giả hoặc thu hồi ownership mua thật. Mỗi grant resource tạo transaction ID riêng; ownership đã có sẽ không grant lại.
 
-Entitlement và resource được wallet lưu lâu dài; không dùng nút reset mẫu để xóa save game. Build development/Editor mới đăng ký cheat; policy release của DebuggerRuntime/scene processor vẫn áp dụng.
+## Thêm cheat thông thường
 
-Kiểm chứng: các test ở Tests/Editor dùng thư mục save tạm riêng; không ghi vào save đang chơi. Evidence ở `docs/evidence/debugger/project-cheats`.
+```csharp
+using System.ComponentModel;
+using Dreamy.Debugger.Presentation;
+
+namespace Dreamy.Template.Debugging
+{
+    public sealed partial class GameCheatOptions
+    {
+        [Category("My feature"), DisplayName("Test amount")]
+        [NumberRange(1, 1000), Increment(10), Sort(0)]
+        public int TestAmount { get; set; } = 100;
+
+        [Category("My feature"), DisplayName("Apply"), Sort(1)]
+        public void ApplyTestAmount()
+        {
+            // Gọi service thật của game bằng TestAmount.
+        }
+    }
+}
+```
+
+Property có public setter → editable; getter-only/private setter → read-only; enum → dropdown; public void không tham số → button chạy ngay; gắn CheatConfirmation cho thao tác nguy hiểm. Resource/ownership card grants luôn confirm. Helper giữ private hoặc thêm Browsable(false). Field/static/method có tham số không tạo control. Chỉ partial cùng namespace/class/assembly mới ghép được.
+
+## Thêm thẻ tài nguyên
+
+Copy nhóm 3 member trong Economy.cs: read-only balance, amount có NumberRange, method grant. Mỗi member dùng ResourceCheat với cùng card ID/title và role tương ứng. Ví dụ card ID `sandbox.item.energy` tự sinh option ID `.balance`, `.amount`, `.grant`; ResourceId phải được catalog/wallet game hỗ trợ. Không sửa trực tiếp JSON/PlayerPrefs hoặc model UI.
+
+## Thêm ownership
+
+Copy cặp member trong Entitlements.cs: bool owned read-only + method grant có kiểm tra chưa owned. OwnershipCheat cùng card ID/title tự sinh `.owned`, `.unlock`. UI ẩn action khi đã owned; game vẫn giữ guard để automation không grant lặp.
+
+## ID và lifecycle
+
+32 option và 10 card hiện có giữ nguyên ID trước migration. CheatId chỉ định ID độc lập với tên C#; resource/ownership ID lấy từ card nên đổi tên member không làm mất pin/automation. Với option không có CheatId/card, ID mặc định là `sandbox.game.<MemberName>`: đổi tên sẽ đổi ID.
+
+Host đăng ký một lần sau GameInstaller Ready, dùng runtime.Cheats và giải phóng lease khi disable hoặc runtime đổi. Mỗi game có container/service riêng. Không extend partial trong assembly package từ code game. Các API typed vẫn hỗ trợ integration khác, nhưng không còn được dùng để liệt kê cheat trong project này.
+
+Time Scale/Target FPS thay đổi Unity trong session, không ghi wallet và không tự reset khi host disable. Có nút Reset Time Scale về 1. Target FPS không bảo đảm FPS thực tế; VSync/platform có thể ưu tiên khác. Không dùng nút reset của demo để xóa save thật.
+
+Hướng dẫn attribute đầy đủ: LocalPackages/com.dreamy.debugger/Documentation~/CHEAT_OPTIONS.md. Evidence migration: docs/evidence/debugger/attribute-migration. IL2CPP/link.xml cần được xác minh lại với build của chính game khi thêm/đổi reflected type.
+
+
+## Workflow preview.3
+
+Host dùng `runtime.RegisterCheats(Options, "sandbox.game")`, giữ lease để Dispose. Nếu container implement INotifyPropertyChanged, notification tự subscribe, coalesce ở main-thread tick và unsubscribe khi owner/runtime đóng. Typed CreateOptions vẫn có cho test/integration thấp, không cần dùng ở host mới. Các action card grant luôn confirm; Reset Time Scale là action thường chạy ngay. Dynamic changes giữ control/card/pin không đổi và chỉ dựng lại group bị ảnh hưởng.

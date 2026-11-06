@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-05",
+  "tool": "built-in image_gen",
+  "purpose": "Design concept, not implemented UI or Unity acceptance",
+  "baseline_package": "8a0e19c",
+  "baseline_project": "beca4db",
+  "prompts": "prompts.json",
+  "images": [
+    {
+      "file": "01-runtime-cheats.png",
+      "width": 1586,
+      "height": 992,
+      "bytes": 1418764,
+      "sha256": "9490b8075733fd1b0d17c4fcec0c68469e67d189ea1d95aa88298ca52b4fe46d"
+    },
+    {
+      "file": "02-console-hud.png",
+      "width": 1586,
+      "height": 992,
+      "bytes": 1483205,
+      "sha256": "06651489f5314a337f940c91d06e2e32376ff4c45214c6fc0e850f00fbb8590c"
+    },
+    {
+      "file": "03-editor-settings.png",
+      "width": 1586,
+      "height": 992,
+      "bytes": 1500305,
+      "sha256": "d756090a8ea720fa20dcfb963fa4c2166d8f1e6ec320621105e2513049a61aee"
+    }
+  ],
+  "reference_images": {
+    "logo": "LocalPackages/com.dreamy.debugger/Runtime/Branding/DreamyBanner.png",
+    "portrait": "docs/evidence/debugger/runtime-ui/portrait.png",
+    "hud": "docs/evidence/debugger/runtime-ui/hud-phone.png"
+  },
+  "review": "All three images inspected. Implementation discrepancies recorded in README.md; plan/spec takes precedence over raster labels and colors.",
+  "scope": "Research, plan and mockup delivery complete. No Unity assets or code changed."
+}

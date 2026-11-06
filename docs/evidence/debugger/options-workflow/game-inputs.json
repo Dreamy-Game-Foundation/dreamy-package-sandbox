@@ -1,0 +1,14 @@
+{
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Entitlements.cs": "a62119a3d517c60be2c82af4abeb4c1e8e3a5428fc07bad345c007d6c428afa5",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Application.cs": "0af0cc50d6c56717ce66a29374c88929dff1ca29afb4d4e23e39e2b2a4aa35da",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Time.cs": "057208322a7c426df33046ff7e16a26c7399cb2585f105c4469b90a7256ee01a",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.cs": "c828e1aea98c9ab1a065bd45e4be27ae03428ffda2b4c45e2f7344f5d56751cb",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Wallet.cs": "fe8c079c7907eb91968a6ce33d8836462c3c2fbaad5bde4e8a9c2c44c5417d21",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Diagnostics.cs": "f0c8d8c6fd3811625404d62426b26427165c926c8d7cff4dc77b5ade69662613",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Economy.cs": "8c53f4396cbfc5f9092725a3d49fcf2742ac7d8c848a003a646096b8b9e6a172",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Inventory.cs": "c801a399d8d86dd8c8320a7eb78ce7e66a51abb4184265cbdb06a3b46d6bdb2d",
+  "Assets/_Project/Debugger/Runtime/SandboxCheatHost.cs": "66d4b752a975cb17b1cfef2acccf5af6d414b0243b4562cbf9281d1bf6e7325b",
+  "Assets/_Project/Debugger/Editor/SandboxDebuggerSetup.cs": "ee2324358b50f39194c22f5256c28a41622052dc3b21f148e218f76297171a75",
+  "Assets/_Project/Debugger/Tests/Editor/SandboxCheatTests.cs": "1d508422c8c92d11001aa2d04d1931d07249b6f4acd55c8d65865d26e8d418ca",
+  "Assets/_Project/Debugger/Tests/Editor/AttributedGameCheatTests.cs": "5a8a3ef72d72feb9615fb9efabb0a9e05fddbaa513a1045361de59e34b2ef9fd"
+}

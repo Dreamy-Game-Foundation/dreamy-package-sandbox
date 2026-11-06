@@ -1,0 +1,18 @@
+{
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Entitlements.cs": "a62119a3d517c60be2c82af4abeb4c1e8e3a5428fc07bad345c007d6c428afa5",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Application.cs": "0af0cc50d6c56717ce66a29374c88929dff1ca29afb4d4e23e39e2b2a4aa35da",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Time.cs": "fe6ae635e4874fa1c3428f663c99b9da1a1c2e224971d9801f72490b872e80f8",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.cs": "c828e1aea98c9ab1a065bd45e4be27ae03428ffda2b4c45e2f7344f5d56751cb",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Wallet.cs": "fe8c079c7907eb91968a6ce33d8836462c3c2fbaad5bde4e8a9c2c44c5417d21",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Diagnostics.cs": "f0c8d8c6fd3811625404d62426b26427165c926c8d7cff4dc77b5ade69662613",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Economy.cs": "8c53f4396cbfc5f9092725a3d49fcf2742ac7d8c848a003a646096b8b9e6a172",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Inventory.cs": "c801a399d8d86dd8c8320a7eb78ce7e66a51abb4184265cbdb06a3b46d6bdb2d",
+  "Assets/_Project/Debugger/Runtime/SandboxCheatHost.cs": "83625b2a3044a92d026e147553ec32c8c5883578db2bdde08452ff1b56d24256",
+  "Assets/_Project/Debugger/Editor/SandboxDebuggerSetup.cs": "ee2324358b50f39194c22f5256c28a41622052dc3b21f148e218f76297171a75",
+  "Assets/_Project/Debugger/Tests/Editor/SandboxCheatTests.cs": "1d508422c8c92d11001aa2d04d1931d07249b6f4acd55c8d65865d26e8d418ca",
+  "Assets/_Project/Debugger/Tests/Editor/AttributedGameCheatTests.cs": "d23ca3157525d18703f339f443558688df6ca43abe4fc62337320a5b10f7f320",
+  "Assets/_Project/Debugger/Runtime/Dreamy.Template.Debugger.asmdef": "460686539aa7f4d58dc7cce634986dab638ac3d5d478f375fbce0517cdf36d6c",
+  "Assets/_Project/Debugger/Editor/Dreamy.Template.Debugger.Editor.asmdef": "85d2adbd7f3fbff801116199e5b709d466fc7318ce23166b283b6c98db41cc82",
+  "Assets/_Project/Debugger/Tests/Editor/Dreamy.Template.Debugger.Tests.asmdef": "73a874438206c7cff5a6739403f058d661c83baefc03deac75ea7df4058cf369",
+  "Assets/_Project/Debugger/Runtime/link.xml": "15bf0d2eca63e319ceae8c1cede227d09dcd7f23012a345c955d0ac6a474e47e"
+}

@@ -1,0 +1,6 @@
+<linker>
+  <!-- Properties/actions are discovered by reflection, including across partial files. -->
+  <assembly fullname="Dreamy.Template.Debugger">
+    <type fullname="Dreamy.Template.Debugging.GameCheatOptions" preserve="all" />
+  </assembly>
+</linker>

@@ -12,7 +12,7 @@ namespace Dreamy.Template.Debugging
         private IDisposable registration;
         private DebuggerRuntime owner;
         private bool registrationFailed;
-        public SandboxGameCheats Options { get; private set; }
+        public GameCheatOptions Options { get; private set; }
 
         private void OnEnable() { registrationFailed = false; }
         private void Update()
@@ -26,8 +26,8 @@ namespace Dreamy.Template.Debugging
                 !ServiceLocator.TryGet<IResourceBalanceProvider>(out var balances)) return;
             try
             {
-                Options = new SandboxGameCheats(wallet, balances);
-                registration = runtime.Cheats.Register(Options.CreateOptions());
+                Options = new GameCheatOptions(wallet, balances);
+                registration = runtime.RegisterCheats(Options, "sandbox.game");
                 owner = runtime;
             }
             catch (Exception exception)

@@ -1,0 +1,12 @@
+{
+  "scope": "README documentation only",
+  "packageVersion": "0.3.0-preview.2",
+  "readmeSha256": "64074c74873661dbf316583651de4d06c99b744af1e33b95e58d700d0c25143e",
+  "relativeLinksChecked": 25,
+  "missingLinks": [],
+  "codeFencesBalanced": true,
+  "apiNamesComparedToRuntimeSource": true,
+  "unityTestsRun": false,
+  "reason": "No runtime/editor/test/asset changes in this documentation task",
+  "archiveScope": "Earlier preview.2 archive/build receipts cover their archived README, not this later documentation revision."
+}

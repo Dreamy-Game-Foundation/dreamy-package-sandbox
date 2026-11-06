@@ -1,0 +1,13 @@
+{
+  "Assets/_Project/Debugger/README.md": "4f9c22c9b8474d52dc63811421c73d00cbb26d07af210100755ce949a1ae0f2b",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Application.cs": "0af0cc50d6c56717ce66a29374c88929dff1ca29afb4d4e23e39e2b2a4aa35da",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Application.cs.meta": "7f1c70fa9fbae119622e6c5fab3356c14a79c11fe284ef1365648bb4822afd7c",
+  "Assets/_Project/Debugger/Runtime/link.xml": "15bf0d2eca63e319ceae8c1cede227d09dcd7f23012a345c955d0ac6a474e47e",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Time.cs": "fe6ae635e4874fa1c3428f663c99b9da1a1c2e224971d9801f72490b872e80f8",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.cs": "270216acf3344154e1887af1fa3766d5c2c0b62b3634fdf971f4c509a9020ae8",
+  "Assets/_Project/Debugger/Runtime/Dreamy.Template.Debugger.asmdef": "5d10db5d8b703c12daee7b727a59ff1180c6dba51031b753deb86609e6defd9d",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.cs.meta": "d0267c663586a94e70dcd461081ef31f8b7bfa0472ce943e117cfa4d858d4327",
+  "Assets/_Project/Debugger/Runtime/SandboxCheatHost.cs": "d40b06168967e763e245805c129a721b5fcac1dbe38aea883ed4522de7bd70f0",
+  "Assets/_Project/Debugger/Runtime/GameCheatOptions.Time.cs.meta": "565681e3ff826a144c741ac39a90ce0f7e19cd895d109058b69b774ddd102523",
+  "Assets/_Project/Debugger/Tests/Editor/AttributedGameCheatTests.cs": "9e17ef7448df9b7fb4cb8225e6738c79b768a4cae044fab4996d87168b15615d"
+}

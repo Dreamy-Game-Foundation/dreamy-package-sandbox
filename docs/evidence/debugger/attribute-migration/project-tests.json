@@ -1,0 +1,133 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "c9e0bb5130d944c1bbb58ed446ae3f13",
+      "status": "succeeded",
+      "mode": "EditMode",
+      "started_unix_ms": 1793866733679,
+      "finished_unix_ms": 1793866742931,
+      "last_update_unix_ms": 1793866742931,
+      "progress": {
+        "completed": 10,
+        "total": 10,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1793866742745,
+        "last_finished_test_full_name": "Dreamy.Template.Debugging.Tests.SandboxCheatTests.WalletRejectionIsVisibleWithoutClaimingSuccess",
+        "last_finished_unix_ms": 1793866742747,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "blocked_reason": null,
+        "failures_so_far": [],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": {
+        "mode": "EditMode",
+        "summary": {
+          "total": 10,
+          "passed": 10,
+          "failed": 0,
+          "skipped": 0,
+          "durationSeconds": 0.8258722,
+          "resultState": "Passed"
+        },
+        "results": [
+          {
+            "name": "AttributesStillEnforceRangesAccessAndActionConfirmation",
+            "fullName": "Dreamy.Template.Debugging.Tests.AttributedGameCheatTests.AttributesStillEnforceRangesAccessAndActionConfirmation",
+            "state": "Passed",
+            "durationSeconds": 0.0161198,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "PartialFilesContributeTypedOptionsAndReadOnlyProperties",
+            "fullName": "Dreamy.Template.Debugging.Tests.AttributedGameCheatTests.PartialFilesContributeTypedOptionsAndReadOnlyProperties",
+            "state": "Passed",
+            "durationSeconds": 0.0039592,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "TypedCardsAndPartialContainerCoexistAndDisposeTogether",
+            "fullName": "Dreamy.Template.Debugging.Tests.AttributedGameCheatTests.TypedCardsAndPartialContainerCoexistAndDisposeTogether",
+            "state": "Passed",
+            "durationSeconds": 0.0025484,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "CoinAndGemGrantsPersistAndPublishBalanceChanges",
+            "fullName": "Dreamy.Template.Debugging.Tests.SandboxCheatTests.CoinAndGemGrantsPersistAndPublishBalanceChanges",
+            "state": "Passed",
+            "durationSeconds": 0.0212271,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "DisposingGameRegistrationRemovesAllGameOptions",
+            "fullName": "Dreamy.Template.Debugging.Tests.SandboxCheatTests.DisposingGameRegistrationRemovesAllGameOptions",
+            "state": "Passed",
+            "durationSeconds": 0.0011634,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "InventoryGrantsUseSharedPersistentInventory",
+            "fullName": "Dreamy.Template.Debugging.Tests.SandboxCheatTests.InventoryGrantsUseSharedPersistentInventory",
+            "state": "Passed",
+            "durationSeconds": 0.0022458,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "LockedUnconfirmedAndInvalidAmountsNeverGrant",
+            "fullName": "Dreamy.Template.Debugging.Tests.SandboxCheatTests.LockedUnconfirmedAndInvalidAmountsNeverGrant",
+            "state": "Passed",
+            "durationSeconds": 0.0012286,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "MigrationKeepsEveryExistingIdAndCompleteCard",
+            "fullName": "Dreamy.Template.Debugging.Tests.SandboxCheatTests.MigrationKeepsEveryExistingIdAndCompleteCard",
+            "state": "Passed",
+            "durationSeconds": 0.0042691,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "NoAdsPersistsAndExistingEntitlementEffectRunsOnlyOnce",
+            "fullName": "Dreamy.Template.Debugging.Tests.SandboxCheatTests.NoAdsPersistsAndExistingEntitlementEffectRunsOnlyOnce",
+            "state": "Passed",
+            "durationSeconds": 0.0022056,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "WalletRejectionIsVisibleWithoutClaimingSuccess",
+            "fullName": "Dreamy.Template.Debugging.Tests.SandboxCheatTests.WalletRejectionIsVisibleWithoutClaimingSuccess",
+            "state": "Passed",
+            "durationSeconds": 0.002091,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          }
+        ]
+      }
+    },
+    "hint": null
+  }
+}

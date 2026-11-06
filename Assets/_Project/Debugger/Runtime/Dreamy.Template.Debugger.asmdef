@@ -8,7 +8,9 @@
     "Dreamy.Feature.Shop.Integration.Runtime",
     "Dreamy.Debugger.Runtime",
     "Dreamy.Debugger.Engine",
-    "Dreamy.Debugger.Sample"
+    "Dreamy.Debugger.Presentation"
   ],
-  "defineConstraints": ["!DISABLE_DREAMY_DEBUGGER"]
+  "defineConstraints": [
+    "!DISABLE_DREAMY_DEBUGGER"
+  ]
 }

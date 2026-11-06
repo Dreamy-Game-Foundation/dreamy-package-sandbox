@@ -1,0 +1,31 @@
+{
+  "status": "design-complete-implementation-pending",
+  "date": "2026-11-06",
+  "baselinePackageVersion": "0.1.2",
+  "baselinePackageCommit": "de6b75ffdb66b3b1c8fdd8bfb6a67f419d5672d6",
+  "artifacts": {
+    "runtime-concept.png": "67ebd8108862a6153a72481af494fe75c5ec423a5251f44c8d1a9b43a0d4505e",
+    "editor-concept.png": "27a09692449ff09afd801110adae6c45f850d3d28d194648f1c165cc2329e73d"
+  },
+  "observed": {
+    "categoryPin": "Clones individual OptionsControlBase controls into flow container",
+    "logo": "DreamyBanner.png RGB 2172x724 without alpha",
+    "cancelHitSurface": "Unity prefab read: Cancel Button has Text as targetGraphic; Text.raycastTarget=false; no Image hit surface",
+    "cancelDelete": "One callback toggles between deletion and cancellation based on input length",
+    "dockConsole": "Existing controller/service available for reuse"
+  },
+  "hypotheses": [
+    "Severity ellipse source requires runtime rect/layout inspection",
+    "FPS plot offset requires rect/shader/warm-up reproduction"
+  ],
+  "verification": "Read-only source and Unity prefab audit; external primary references; no implementation tests claimed",
+  "runtimeModified": false,
+  "assetsImported": false,
+  "versionBumped": false,
+  "tagCreated": false,
+  "published": false,
+  "refinements": [
+    "Runtime rail/header separator aligned, readonly balance separated from amount, Graphy-style bars",
+    "Editor Numeric/Passphrase only; hidden tap enabled; safe-area rows are status indicators"
+  ]
+}

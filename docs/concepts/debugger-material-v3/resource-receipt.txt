@@ -1,0 +1,15 @@
+Actual Unity render; synthetic values. Fonts and sprites are real imported assets.
+backspace.png 32x32 RGBA32 9144 bytes
+chevron.png 32x32 RGBA32 9144 bytes
+circle.png 32x32 RGBA32 9144 bytes
+close.png 32x32 RGBA32 9144 bytes
+console.png 32x32 RGBA32 9144 bytes
+drag.png 32x32 RGBA32 9144 bytes
+menu.png 32x32 RGBA32 9144 bytes
+performance.png 32x32 RGBA32 9144 bytes
+pin.png 32x32 RGBA32 9144 bytes
+rounded-fill.png 32x32 RGBA32 9144 bytes
+rounded-outline.png 32x32 RGBA32 9144 bytes
+search.png 32x32 RGBA32 9144 bytes
+settings.png 32x32 RGBA32 9144 bytes
+Fonts: Barlow-Regular, Barlow-SemiBold, JetBrainsMono-Regular

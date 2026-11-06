@@ -1,0 +1,135 @@
+{
+  "status": "static-unity-specimen-and-generated-concept-complete",
+  "productionIntegration": false,
+  "fullResourceGatePassed": false,
+  "files": {
+    "rounded-outline.png": {
+      "bytes": 358,
+      "sha256": "e0556bb9910e99f3eca4ba905af14989f941781329d7ad265714053a3db0dda6"
+    },
+    "menu.png": {
+      "bytes": 159,
+      "sha256": "ec54c5d941de8e684a67857e915a0e989f290314f84bee865fbc6bfe78de52ba"
+    },
+    "pin.png": {
+      "bytes": 303,
+      "sha256": "9e3811b1fa19f4c017c66134c7b7f530e737ee450090fde041bf7860fa4e2a80"
+    },
+    "JetBrainsMono-Regular.ttf": {
+      "bytes": 270224,
+      "sha256": "e6fd0d7e91550b3ed2b735d4312474362c4716edc4fc0577a0f61ed782d5aed1"
+    },
+    "close.png": {
+      "bytes": 258,
+      "sha256": "936e645424963fa6cfa1b929e4bfe43788494a11dc2514de565d1ee1c0abf9a5"
+    },
+    "Barlow-Regular.ttf": {
+      "bytes": 104068,
+      "sha256": "95aa02c7c43096e0dd44d787ba6216864a67157e402adab59b35572e0c1577ea"
+    },
+    "console.png": {
+      "bytes": 319,
+      "sha256": "e734c850e8d228f24299d95817da8bdde0d0f1a36d8535c1cb69231d13d92911"
+    },
+    "rounded-fill.png": {
+      "bytes": 254,
+      "sha256": "cf0c58203562117806499b4e525b2c82c28244ce9ed8c7f25f25588f3c80ac00"
+    },
+    "chevron.png": {
+      "bytes": 228,
+      "sha256": "1d92798afca243881e0e1ab6079e767228231a9b148b213de1f6495dd93aec6a"
+    },
+    "settings.png": {
+      "bytes": 600,
+      "sha256": "c49ac2ae720d126e155bf69f3ce5e28b221ccc89aba12a5c9b5b8eccdf26f198"
+    },
+    "Barlow-OFL.txt": {
+      "bytes": 4377,
+      "sha256": "186d750eb496a4c17a76385f82be6aea2ac1cf2de074a811d63786cf374ea73f"
+    },
+    "drag.png": {
+      "bytes": 240,
+      "sha256": "ca745e65d49ea7d58258fd32ba486866225c039f0a2c73d071f0bc48f30b2f7d"
+    },
+    "backspace.png": {
+      "bytes": 434,
+      "sha256": "b15b77dfc585d80c104a5e5ed79175109515f6f5b0724b159a3f9cec8eabfa75"
+    },
+    "search.png": {
+      "bytes": 503,
+      "sha256": "253deebc468d7866a7f556b259267150e796ff5212ac70d47ac888371fdfd049"
+    },
+    "Material-Icons-LICENSE.txt": {
+      "bytes": 11357,
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    "JetBrainsMono-OFL.txt": {
+      "bytes": 4399,
+      "sha256": "a76abf002c49097d146e86740a3105a5d00450b1592e820a1109a8c5680cd697"
+    },
+    "Barlow-SemiBold.ttf": {
+      "bytes": 108348,
+      "sha256": "86577cb32f8abe3673db53ca0f4221e6856751a4f6730c867e00f720f8bb1fc5"
+    },
+    "performance.png": {
+      "bytes": 346,
+      "sha256": "8f592c8e95401f2b661dd2a587fd7de2d5b69335f9cedc92676bbb194c849143"
+    },
+    "circle.png": {
+      "bytes": 481,
+      "sha256": "9b848baf9f71cae0f186bf7cc0bb43bba1c28a4ee317a3a0752392f424c7f8c8"
+    },
+    "source-svg/search.svg": {
+      "bytes": 372,
+      "sha256": "c25d4cdca9972ef7ed9f8e9f32553d0444afd6a7cf8cc6ca9eebf5b4073ef308"
+    },
+    "source-svg/settings.svg": {
+      "bytes": 1039,
+      "sha256": "86a35d4b8dd844c6a89f6b195b1600367cb52b8465847a0e7bbc8b3365c3983d"
+    },
+    "source-svg/backspace.svg": {
+      "bytes": 351,
+      "sha256": "8ccf0fb371dee5d307885382769b4380e0acf6fb65a318c08bf22bd893af5ef5"
+    },
+    "source-svg/performance.svg": {
+      "bytes": 286,
+      "sha256": "d7dcec25d9bb4a26bd916baf4fba14b392f3eb7a1dc582a54b82aeb9ba8b7c05"
+    },
+    "source-svg/pin.svg": {
+      "bytes": 379,
+      "sha256": "93e72d0395250e7a75c702dc0df010e6756dded05ffcebe72bb9715788518a8f"
+    },
+    "source-svg/chevron.svg": {
+      "bytes": 182,
+      "sha256": "fe0ef658114738f046347758fc2f00dddd7e98fadc930048e34675d9153472ac"
+    },
+    "source-svg/rounded-fill.svg": {
+      "bytes": 151,
+      "sha256": "694e41c20343abcb7790c2a2445ecb835dadbde01edfb7f194262e8e6e02ca20"
+    },
+    "source-svg/menu.svg": {
+      "bytes": 183,
+      "sha256": "5222c9f8a54b1023571595636174fa96d136a3c245d80168702888151193762f"
+    },
+    "source-svg/drag.svg": {
+      "bytes": 431,
+      "sha256": "5737806d54eae03d5cc02f2dbf7753ecb800fb8fba6ce93e5b1d1c3a9ed5b87b"
+    },
+    "source-svg/console.svg": {
+      "bytes": 391,
+      "sha256": "22ad5a5d2fb0c78566cd6fa022544c5cdb6c8d71fefaef82dcd9c7918b57802b"
+    },
+    "source-svg/rounded-outline.svg": {
+      "bytes": 182,
+      "sha256": "47b87fc8185b499a91a4924b0f8a4510848129cecb5ed17ea491e48b5b10691b"
+    },
+    "source-svg/circle.svg": {
+      "bytes": 134,
+      "sha256": "45eabf21220ec8056f990ab373f877099a0a9ce857366b8ea0ea84ee23affdfb"
+    },
+    "source-svg/close.svg": {
+      "bytes": 239,
+      "sha256": "b54342456d5a7f2da53795147f8af36ec76fbf5b57d792fe75f07538e6c6783e"
+    }
+  }
+}

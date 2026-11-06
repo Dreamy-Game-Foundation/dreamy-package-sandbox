@@ -1,0 +1,7 @@
+# Empty state / interface refresh
+
+No matching options is reparented into the clipped results viewport, centered with 16-unit padding. It cannot overlap or intercept the search toolbar. New regression checks hierarchy, visibility, center alignment and bounds below the toolbar. Fresh consumer without imported samples passed 84 EditMode/56 PlayMode; the lower count than previous receipts reflects omitted sample tests. Actual sandbox MCP confirmed belowSearch=true and Inter-Regular on the empty label. Editor left stopped; no game actions or reports sent.
+
+Interface assets: original static Inter Regular from official Inter 4.1 release (OFL), two unmodified grey PNG surfaces from Kenney UI Pack 2.0 (CC0). Licenses/source paths shipped under Runtime/Branding/Interface. TextureImporter configures bilinear, no mipmaps, uncompressed nine-slice sprites. Debugger catalog holds the three optional theme references. Clone styling applies font/button/background surfaces once through ObjectFactory callback, cleared on owner shutdown; runtime-generated HUD-mode/pin/detail controls apply the same skin. Missing skin retains old art. Colors/icons and game-wide fonts stay unchanged. Rebuilding the debugger catalog reinstalls the skin references.
+
+concept.png is AI-generated design reference, not a screenshot or a claim that every illustrated detail/resource icon is implemented. Concept uses restrained red/graphite, small category pins, content-level HUD controls and a clear mobile empty state. No physical phone, iOS or player build validation in this follow-up.

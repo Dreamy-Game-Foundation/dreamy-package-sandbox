@@ -1,0 +1,45 @@
+{
+  "tests": {
+    "EditMode": {
+      "id": "2",
+      "testcasecount": "84",
+      "result": "Passed",
+      "total": "84",
+      "passed": "84",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-06 07:01:10Z",
+      "end-time": "2026-11-06 07:01:13Z",
+      "duration": "2.59635"
+    },
+    "PlayMode": {
+      "id": "2",
+      "testcasecount": "56",
+      "result": "Passed",
+      "total": "56",
+      "passed": "56",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-06 07:01:23Z",
+      "end-time": "2026-11-06 07:01:35Z",
+      "duration": "11.4594727"
+    }
+  },
+  "scope": "clean package-only consumer, without imported sample tests; source UI and actual sandbox MCP; no device/build certification",
+  "assets": {
+    "LocalPackages/com.dreamy.debugger/Runtime/Branding/Interface/Kenney-LICENSE.txt": "69f7eaa5e05913b4d09cf5848f75390b5c3c9a409ef8555777803d9ca0c171fb",
+    "LocalPackages/com.dreamy.debugger/Runtime/Branding/Interface/Inter-LICENSE.txt": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+    "LocalPackages/com.dreamy.debugger/Runtime/Branding/Interface/Inter-Regular.ttf": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82",
+    "LocalPackages/com.dreamy.debugger/Runtime/Branding/Interface/SOURCES.md": "6fb226ae20652590c2a860fad0b4402192af72274020f0a4bee86bf7d061ea02",
+    "LocalPackages/com.dreamy.debugger/Runtime/Branding/Interface/Button.png": "39e281468eacb7704e6e1dc50184d7e0c09a292442dacb07267bde4cb1c1aab3",
+    "LocalPackages/com.dreamy.debugger/Runtime/Branding/Interface/Panel.png": "c91ee37858be6035143a8ae26588741e9350e5f42aed548e3ee00910092239e8"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "com.dreamy.debugger": "file:/tmp/dreamy-debugger-release-v0.1.0/final/com.dreamy.debugger-0.1.0.tgz",
+    "com.unity.test-framework": "1.6.0"
+  },
+  "testables": [
+    "com.dreamy.debugger"
+  ]
+}

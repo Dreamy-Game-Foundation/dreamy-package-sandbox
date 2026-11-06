@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "version": "0.1.0",
+  "packageCommit": "5912da131b70d7574f3e25bd18f7c046ce34024a",
+  "archive": {
+    "name": "com.dreamy.debugger",
+    "version": "0.1.0",
+    "entries": 884,
+    "sha256": "7ddec4150958bd67b41367cce530f6075c7fe370bd62abb7160b3d62424ae617",
+    "bytes": 2796940,
+    "result": "passed"
+  },
+  "committedFilesMatchArchive": 884,
+  "unity": "6000.4.12f1",
+  "editMode": {
+    "passed": 92,
+    "failed": 0
+  },
+  "playMode": {
+    "passed": 64,
+    "failed": 0
+  },
+  "relaySetupOffline": {
+    "passed": 20,
+    "failed": 0,
+    "source": "python3 -m unittest discover -v; completed successfully in 7.058s; tool output recorded during this task"
+  },
+  "documentationExamples": "Three complete README MyGame.Debugging partial/host files compiled in an isolated asmdef against final tarball",
+  "tagCreated": false,
+  "pushed": false,
+  "published": false,
+  "newDeviceBuilds": false
+}

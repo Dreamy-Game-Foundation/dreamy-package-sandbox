@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "packageVersion": "0.1.2",
+  "packageCommit": "de6b75ffdb66b3b1c8fdd8bfb6a67f419d5672d6",
+  "packagePushed": true,
+  "unity": "6000.4.12f1 Linux",
+  "consumer": "remote HTTPS Git dependency pinned to packageCommit with imported Quick Start",
+  "tests": {
+    "editModePassed": 92,
+    "playModePassed": 69,
+    "playModeGraphics": "OpenGL Core, includes actual viewport render-texture captures"
+  },
+  "gitParity": {
+    "result": "passed",
+    "sourceCommit": "de6b75ffdb66b3b1c8fdd8bfb6a67f419d5672d6",
+    "checked": 885,
+    "missing": [],
+    "different": []
+  },
+  "screenshots": {
+    "panel-852x393-closed.png": "3c12a9c1e5692e04e854ce82e494a31e7ba9148aff3a8542b0ef462539d0f4a6",
+    "pin-393x852.png": "0e4210220a7e88c6669fd322f39f24644a5ce145c1ac50121ae973d7f0f8cdc2",
+    "pin-640x300.png": "4501df9620835caca63bfaafb02dad49f293fc69e31646562ec305b2325f955b",
+    "panel-640x300-closed.png": "9b085c711f4f54159967b05eccdfd12bee1949b4395267a7d65a71a2eab9b559",
+    "panel-852x393-drawer.png": "22254fe3535e42aa553adc18878a3ceb689c7a1e41f7a244a709815f6b6e685e",
+    "passphrase-640x300.png": "fae9e4991ce5d49aed6075105dd3ecdd5abc6867500d337341c0c8e7d5bd59e1",
+    "panel-640x300-drawer.png": "0955bc5f721f197f9dda8751d6471744c61ad45e868a2862ef38adb34e776c7f",
+    "hud-landscape-852x393.png": "ecf98586e4dd81e00bee2bdea01e876ebfa33cad9c3afa1561568a865a0520f1",
+    "pin-852x393.png": "1a13dced49da69f58a9634a0ab75b8824697825d3bade2aa7667512e487a0596"
+  },
+  "changes": [
+    "HUD full viewport without safe-area/DPI boost; compact default footprint",
+    "Minimum 48 pixel transparent grip target, original small visible grip",
+    "PIN/passphrase responsive safe-area centering and height fit; landscape side-by-side numeric layout",
+    "HUD hides during keypad and restores on dismiss",
+    "Invisible trigger with sprites removed, alpha zero, retained raycast/tap behavior",
+    "Short landscape navigation rows, height/width resize and live safe-area sizers"
+  ],
+  "observedAndFixedDuringWork": [
+    "Unity missing-component placeholder is not handled by null-coalescing: use Unity-aware null check before CanvasGroup creation",
+    "Targeted workspace fixtures must remove optional auto-start sample hosts to avoid catalog contamination",
+    "Use actual keypad visibility rather than stale access prompt state to restore HUD after cancel",
+    "Smaller HUD must preserve its independently sized grip touch target"
+  ],
+  "limits": [
+    "Screenshots are isolated synthetic Unity render fixtures, not user-game/device screenshots",
+    "No new physical-phone/native keyboard/cutout acceptance or performance benchmark",
+    "No edits to planet-bunker-tu-code or unrelated package-manager work"
+  ],
+  "tagCreated": false
+}

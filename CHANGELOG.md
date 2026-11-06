@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### 2026-11-06 — Debugger landscape layout 0.1.2
+
+- Use compact full-screen-anchored HUD without safe-area insets or DPI boosting, retaining a separate minimum-48px transparent grip target.
+- Fit and center PIN/passphrase in landscape/portrait, hide HUD during access entry and keep the tap trigger visually invisible. Keep navigation visible on short screens and update safe-area sizers in Simulator/players.
+- Fresh final Git package parity and 92 EditMode/69 rendered PlayMode tests passed; screenshots/limits are recorded in docs/evidence/debugger/landscape-layout.
+
 ### 2026-11-06 — Debugger Git import hotfix 0.1.1
 
 - Reproduce and fix CS0234/CS0246 in fresh UPM Git consumers: narrow the package data ignore rule so eight option-control scripts and eight metas are shipped. Preserve asmdefs and GUIDs.

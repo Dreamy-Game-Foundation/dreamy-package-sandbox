@@ -1,0 +1,4441 @@
+[
+  {
+    "id": "com.dreamy.debugger@0.1.2",
+    "name": "com.dreamy.debugger",
+    "version": "0.1.2",
+    "size": 2806910,
+    "unpackedSize": 6774512,
+    "shasum": "359bf0068d5736d5cbd6ca0587e040d46926c450",
+    "integrity": "sha512-pQ5ivfJykSiYCzkI9l0Z4cGfexP6NojrmBlBfqAsFWEWrJI3Xm2vL+rFCyFHfsIuCHymB/9V/Dcg0Z8AAoZTng==",
+    "filename": "com.dreamy.debugger-0.1.2.tgz",
+    "files": [
+      {
+        "path": "CHANGELOG.md",
+        "size": 16610,
+        "mode": 420
+      },
+      {
+        "path": "CHANGELOG.md.meta",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/ACCEPTANCE.md",
+        "size": 2107,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/CHEAT_OPTIONS.md",
+        "size": 5874,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/Graphy-MIT-LICENSE.txt",
+        "size": 1069,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/GuidIsolationMap.json",
+        "size": 28959,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/migration-map.json",
+        "size": 8118,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/MIGRATION.md",
+        "size": 13628,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/PLATFORM_SUPPORT.md",
+        "size": 3036,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/RELEASE.md",
+        "size": 6560,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/REPORTING.md",
+        "size": 4539,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/Api.cs",
+        "size": 389,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/Api.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/AssetUtil.cs",
+        "size": 1589,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/AssetUtil.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/BugReportApi.cs",
+        "size": 6052,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/BugReportApi.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalDemo.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalDemo/Sample.unity",
+        "size": 10573,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalDemo/Sample.unity.meta",
+        "size": 90,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt.meta",
+        "size": 193,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/BG_Dark.png",
+        "size": 817,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/BG_Dark.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/BG_Light.png",
+        "size": 1648,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/BG_Light.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/DemoSprite.png",
+        "size": 581417,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/DemoSprite.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons.meta",
+        "size": 193,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Dark.meta",
+        "size": 193,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Dark/console-25.png",
+        "size": 305,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Dark/console-25.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Dark/options-25.png",
+        "size": 287,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Dark/options-25.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Dark/profiler-25.png",
+        "size": 456,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Dark/profiler-25.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Light.meta",
+        "size": 193,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Light/console-25.png",
+        "size": 236,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Light/console-25.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Light/options-25.png",
+        "size": 234,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Light/options-25.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Light/profiler-25.png",
+        "size": 395,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Icons/Light/profiler-25.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Logo_DarkBG.png",
+        "size": 3685,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Logo_DarkBG.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Logo_LightBG.png",
+        "size": 4014,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/Logo_LightBG.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/WelcomeLogo_DarkBG.png",
+        "size": 3592,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/WelcomeLogo_DarkBG.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/WelcomeLogo_LightBG.png",
+        "size": 3852,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalEditorArt/WelcomeLogo_LightBG.png.meta",
+        "size": 1161,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalOptions.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalOptions/link.xml",
+        "size": 120,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalOptions/link.xml.meta",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalOptions/SROptions.Test.cs",
+        "size": 9347,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/OriginalOptions/SROptions.Test.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/SRDebugOption.cs",
+        "size": 7290,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/SRDebugOption.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/SRScriptRecompileHelper.cs",
+        "size": 2073,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SourceArchive/SRScriptRecompileHelper.cs.meta",
+        "size": 247,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SRDebugger-original-README.txt",
+        "size": 18185,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/SRDebugger-original-README.txt.meta",
+        "size": 93,
+        "mode": 420
+      },
+      {
+        "path": "Documentation~/TRACKING.md",
+        "size": 2111,
+        "mode": 420
+      },
+      {
+        "path": "Editor.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerAssetBuilder.cs",
+        "size": 20894,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerAssetBuilder.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerBuildVerification.cs",
+        "size": 5085,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerBuildVerification.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerInterfaceAssets.cs",
+        "size": 1936,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerInterfaceAssets.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerProjectSettings.cs",
+        "size": 1434,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerProjectSettings.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerRedesignAssets.cs",
+        "size": 27300,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerRedesignAssets.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerStartupBuild.cs",
+        "size": 3008,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerStartupBuild.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerVisualVerification.cs",
+        "size": 1599,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerVisualVerification.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerWindow.cs",
+        "size": 18787,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerWindow.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerWorkspaceAssets.cs",
+        "size": 27141,
+        "mode": 420
+      },
+      {
+        "path": "Editor/DebuggerWorkspaceAssets.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Editor/Dreamy.Debugger.Editor.asmdef",
+        "size": 317,
+        "mode": 420
+      },
+      {
+        "path": "Editor/Dreamy.Debugger.Editor.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Editor/TelegramRelaySettings.cs",
+        "size": 2829,
+        "mode": 420
+      },
+      {
+        "path": "Editor/TelegramRelaySettings.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 44691,
+        "mode": 420
+      },
+      {
+        "path": "README.md.meta",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Runtime.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Access.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Access/AccessPolicy.cs",
+        "size": 3250,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Access/AccessPolicy.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Access/AccessSession.cs",
+        "size": 2149,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Access/AccessSession.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Access/TapSequence.cs",
+        "size": 1184,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Access/TapSequence.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/DreamyBanner.png",
+        "size": 1289665,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/DreamyBanner.png.meta",
+        "size": 3394,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Button.png",
+        "size": 409,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Button.png.meta",
+        "size": 3395,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Geist-LICENSE.txt",
+        "size": 4368,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Geist-LICENSE.txt.meta",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Geist-Regular.ttf",
+        "size": 126048,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Geist-Regular.ttf.meta",
+        "size": 470,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/GeistMono-Regular.ttf",
+        "size": 148516,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/GeistMono-Regular.ttf.meta",
+        "size": 475,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Inter-LICENSE.txt",
+        "size": 4380,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Inter-LICENSE.txt.meta",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Inter-Regular.ttf",
+        "size": 411640,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Inter-Regular.ttf.meta",
+        "size": 470,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Kenney-LICENSE.txt",
+        "size": 565,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Kenney-LICENSE.txt.meta",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Panel.png",
+        "size": 315,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/Panel.png.meta",
+        "size": 3395,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/SOURCES.md",
+        "size": 766,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Branding/Interface/SOURCES.md.meta",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Dreamy.Debugger.Runtime.asmdef",
+        "size": 128,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Dreamy.Debugger.Runtime.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/AndroidExitEvidence.cs",
+        "size": 1722,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/AndroidExitEvidence.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/AttributedCheatOptions.cs",
+        "size": 3154,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/AttributedCheatOptions.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/CaptureCoordinator.cs",
+        "size": 7086,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/CaptureCoordinator.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/CheatRegistrationExtensions.cs",
+        "size": 2864,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/CheatRegistrationExtensions.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ConfirmationPrompt.cs",
+        "size": 2050,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ConfirmationPrompt.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/DebuggerBootstrap.cs",
+        "size": 3668,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/DebuggerBootstrap.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/DebuggerConfiguration.cs",
+        "size": 2431,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/DebuggerConfiguration.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/DebuggerRuntime.cs",
+        "size": 20829,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/DebuggerRuntime.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/DebuggerRuntime.Preferences.cs",
+        "size": 7900,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/DebuggerRuntime.Preferences.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/DebuggerStartupAssets.cs",
+        "size": 335,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/DebuggerStartupAssets.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/Dreamy.Debugger.Engine.asmdef",
+        "size": 245,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/Dreamy.Debugger.Engine.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/GraphyHudGraph.cs",
+        "size": 2786,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/GraphyHudGraph.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/HudDragHandle.cs",
+        "size": 2469,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/HudDragHandle.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/HudHistoryGraphic.cs",
+        "size": 3168,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/HudHistoryGraphic.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/OptionsPresentationBridge.cs",
+        "size": 6159,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/OptionsPresentationBridge.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/PerformanceHud.cs",
+        "size": 15375,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/PerformanceHud.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ReportRedactor.cs",
+        "size": 675,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ReportRedactor.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/RuntimePreferences.cs",
+        "size": 6612,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/RuntimePreferences.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/SafeArea.cs",
+        "size": 763,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/SafeArea.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/SessionJournal.cs",
+        "size": 778,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/SessionJournal.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ThirdParty.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ThirdParty/Graphy.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ThirdParty/Graphy/G_GraphShader.cs",
+        "size": 5102,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ThirdParty/Graphy/G_GraphShader.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ThirdParty/Graphy/GraphMobile.shader",
+        "size": 11003,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ThirdParty/Graphy/GraphMobile.shader.meta",
+        "size": 204,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ThirdParty/Graphy/Roboto-Bold.ttf",
+        "size": 170760,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ThirdParty/Graphy/Roboto-Bold.ttf.meta",
+        "size": 471,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ThirdParty/Graphy/Roboto-LICENSE.txt",
+        "size": 11358,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ThirdParty/Graphy/Roboto-LICENSE.txt.meta",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ThirdParty/Graphy/Roboto-Regular.ttf",
+        "size": 171676,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Engine/ThirdParty/Graphy/Roboto-Regular.ttf.meta",
+        "size": 471,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Dreamy.Debugger.Foundation.asmdef",
+        "size": 87,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Dreamy.Debugger.Foundation.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/External.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/External/Jetbrains.Annotations.cs",
+        "size": 33878,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/External/Jetbrains.Annotations.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/External/MiniJSON.cs",
+        "size": 20424,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/External/MiniJSON.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Internal.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Internal/ComponentMenuPaths.cs",
+        "size": 4221,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Internal/ComponentMenuPaths.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/LICENSE",
+        "size": 1059,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/LICENSE.meta",
+        "size": 90,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/README.md",
+        "size": 498,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/README.md.meta",
+        "size": 90,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Collections.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Collections/RuntimeList.cs",
+        "size": 8368,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Collections/RuntimeList.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Components.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Components/BaseBehaviour.cs",
+        "size": 3583,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Components/BaseBehaviour.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Components/ComponentBehaviour.cs",
+        "size": 6489,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Components/ComponentBehaviour.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Components/DebugAutoSingleton.cs",
+        "size": 2421,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Components/DebugAutoSingleton.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Components/DebugSingleton.cs",
+        "size": 2349,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Components/DebugSingleton.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Coroutines.cs",
+        "size": 411,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Coroutines.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions/FloatExtensions.cs",
+        "size": 561,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions/FloatExtensions.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions/GameObjectExtensions.cs",
+        "size": 2876,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions/GameObjectExtensions.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions/IListExtensions.cs",
+        "size": 1071,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions/IListExtensions.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions/NetFxExtensions.cs",
+        "size": 424,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions/NetFxExtensions.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions/StringExtensions.cs",
+        "size": 346,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions/StringExtensions.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions/TransformExtensions.cs",
+        "size": 2775,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Extensions/TransformExtensions.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/DebugFileUtil.cs",
+        "size": 1787,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/DebugFileUtil.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/DebugMath.cs",
+        "size": 3882,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/DebugMath.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/DebugMath.Tweening.cs",
+        "size": 7996,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/DebugMath.Tweening.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/DebugMath.Tweening.Functions.cs",
+        "size": 29443,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/DebugMath.Tweening.Functions.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/DebugReflection.cs",
+        "size": 976,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/DebugReflection.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/DiagnosticsAssert.cs",
+        "size": 1767,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/DiagnosticsAssert.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/Hierarchy.cs",
+        "size": 2173,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/Hierarchy.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/MethodReference.cs",
+        "size": 851,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/MethodReference.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/ObjectFactory.cs",
+        "size": 735,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/ObjectFactory.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/PropertyReference.cs",
+        "size": 6173,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Helpers/PropertyReference.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service/Attributes.cs",
+        "size": 986,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service/Attributes.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service/DebugDependencyServiceBase.cs",
+        "size": 2421,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service/DebugDependencyServiceBase.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service/DebugSceneServiceBase.cs",
+        "size": 3455,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service/DebugSceneServiceBase.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service/IAsyncService.cs",
+        "size": 127,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service/IAsyncService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service/ServiceBase.cs",
+        "size": 514,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service/ServiceBase.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service/ServiceManager.cs",
+        "size": 15101,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/Service/ServiceManager.cs.meta",
+        "size": 182,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/ContentFitText.cs",
+        "size": 3491,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/ContentFitText.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/CopyLayoutElement.cs",
+        "size": 2705,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/CopyLayoutElement.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/CopyPreferredSize.cs",
+        "size": 1378,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/CopyPreferredSize.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/CopyPreferredSizes.cs",
+        "size": 3509,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/CopyPreferredSizes.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/CopySizeIntoLayoutElement.cs",
+        "size": 2098,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/CopySizeIntoLayoutElement.cs.meta",
+        "size": 264,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DebuggerPalette.cs",
+        "size": 1094,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DebuggerPalette.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DebugNumberButton.cs",
+        "size": 2465,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DebugNumberButton.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DebugNumberSpinner.cs",
+        "size": 6084,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DebugNumberSpinner.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DebugRetinaScaler.cs",
+        "size": 1701,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DebugRetinaScaler.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DebugSpinner.cs",
+        "size": 2254,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DebugSpinner.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DebugText.cs",
+        "size": 590,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DebugText.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DragHandle.cs",
+        "size": 5055,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/DragHandle.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/FlashGraphic.cs",
+        "size": 2003,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/FlashGraphic.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/InheritColour.cs",
+        "size": 961,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/InheritColour.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/Layout.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/Layout/FlowLayoutGroup.cs",
+        "size": 9932,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/Layout/FlowLayoutGroup.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/Layout/VirtualVerticalLayoutGroup.cs",
+        "size": 17847,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/Layout/VirtualVerticalLayoutGroup.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/LongPressButton.cs",
+        "size": 2027,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/LongPressButton.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/ResponsiveBase.cs",
+        "size": 1182,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/ResponsiveBase.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/ResponsiveEnable.cs",
+        "size": 2875,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/ResponsiveEnable.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/ResponsiveResize.cs",
+        "size": 2299,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/ResponsiveResize.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/ScrollToBottomBehaviour.cs",
+        "size": 2386,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/ScrollToBottomBehaviour.cs.meta",
+        "size": 264,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/StyleComponent.cs",
+        "size": 4930,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/StyleComponent.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/StyleRoot.cs",
+        "size": 1330,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/StyleRoot.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/StyleSheet.cs",
+        "size": 2383,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/StyleSheet.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/Unselectable.cs",
+        "size": 917,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Foundation/Scripts/UI/Unselectable.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/link.xml",
+        "size": 281,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/link.xml.meta",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Pin.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Pin/Invalid.anim",
+        "size": 5916,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Pin/Invalid.anim.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Pin/Pin.controller",
+        "size": 3012,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Pin/Pin.controller.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Pin/Result.controller",
+        "size": 1390,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Pin/Result.controller.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Trigger.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Trigger/ErrorPulse.anim",
+        "size": 8361,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Trigger/ErrorPulse.anim.meta",
+        "size": 188,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Trigger/ErrorPulse.controller",
+        "size": 4020,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Trigger/ErrorPulse.controller.meta",
+        "size": 188,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Trigger/Hidden.anim",
+        "size": 3585,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Animations/UI/Trigger/Hidden.anim.meta",
+        "size": 188,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/BugReportPopover.prefab",
+        "size": 24786,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/BugReportPopover.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/BugReportSheet.prefab",
+        "size": 83047,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/BugReportSheet.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/DebugPanel.prefab",
+        "size": 140309,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/DebugPanel.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/DockConsole.prefab",
+        "size": 856,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/DockConsole.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/ActionOption.prefab",
+        "size": 18019,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/ActionOption.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/BoolOption.prefab",
+        "size": 22850,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/BoolOption.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/EnumOption.prefab",
+        "size": 41018,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/EnumOption.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/NumberOption.prefab",
+        "size": 40179,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/NumberOption.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/ReadOnlyOption.prefab",
+        "size": 19526,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/ReadOnlyOption.prefab.meta",
+        "size": 181,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/StringOption.prefab",
+        "size": 23370,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Options/StringOption.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/PinEntry.prefab",
+        "size": 207260,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/PinEntry.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/PinnedUI.prefab",
+        "size": 218241,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/PinnedUI.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/BugReporter.prefab",
+        "size": 7285,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/BugReporter.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/Console.prefab",
+        "size": 233818,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/Console.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/Options.prefab",
+        "size": 87331,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/Options.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/Profiler.prefab",
+        "size": 145414,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/Profiler.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/System.prefab",
+        "size": 31911,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Tabs/System.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Trigger.prefab",
+        "size": 22273,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Assets/DreamyDebugger/UI/Prefabs/Trigger.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Dreamy.Debugger.Presentation.asmdef",
+        "size": 416,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Dreamy.Debugger.Presentation.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/AccessGate.cs",
+        "size": 552,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/AccessGate.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/AutoInitialize.cs",
+        "size": 1352,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/AutoInitialize.cs.meta",
+        "size": 264,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/DebugDebuggerInit.cs",
+        "size": 796,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/DebugDebuggerInit.cs.meta",
+        "size": 183,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/DebuggerAssetCatalog.cs",
+        "size": 177,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/DebuggerAssetCatalog.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/DebugOptions.Attributes.cs",
+        "size": 898,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/DebugOptions.Attributes.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/DebugOptions.cs",
+        "size": 211,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/DebugOptions.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/DebugOptions.Test.cs",
+        "size": 216,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/DebugOptions.Test.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/DreamyDebug.cs",
+        "size": 1602,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/DreamyDebug.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/IBugReporterHandler.cs",
+        "size": 1928,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/IBugReporterHandler.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/InputBridge.cs",
+        "size": 1228,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/InputBridge.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/ApiUtil.cs",
+        "size": 2451,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/ApiUtil.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/BugReportScreenshotUtil.cs",
+        "size": 522,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/BugReportScreenshotUtil.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/CircularBuffer.cs",
+        "size": 11679,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/CircularBuffer.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/EditorUtil.cs",
+        "size": 171,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/EditorUtil.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/InternalBugReporterHandler.cs",
+        "size": 402,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/InternalBugReporterHandler.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/InternalOptionsRegistry.cs",
+        "size": 1284,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/InternalOptionsRegistry.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/OptionControlFactory.cs",
+        "size": 5690,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/OptionControlFactory.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/OptionDefinition.cs",
+        "size": 3905,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/OptionDefinition.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/Paths.cs",
+        "size": 825,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/Paths.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/Service.cs",
+        "size": 4190,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/Service.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/Strings.cs",
+        "size": 1140,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/Strings.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/Util.cs",
+        "size": 6775,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Internal/Util.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/IOptionContainer.cs",
+        "size": 3685,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/IOptionContainer.cs.meta",
+        "size": 86,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Options.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Options/DebugOptions.Attributes.cs",
+        "size": 1743,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Options/DebugOptions.Attributes.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Options/DebugOptions.cs",
+        "size": 1623,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Options/DebugOptions.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/PreferenceBridge.cs",
+        "size": 704,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/PreferenceBridge.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/PresentationAssets.cs",
+        "size": 7055,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/PresentationAssets.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Profiler.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Profiler/DreamyProfilerService.cs",
+        "size": 1598,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Profiler/DreamyProfilerService.cs.meta",
+        "size": 183,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Profiler/GraphyFpsWindow.cs",
+        "size": 4915,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Profiler/GraphyFpsWindow.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Profiler/ProfilerCameraListener.cs",
+        "size": 171,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Profiler/ProfilerCameraListener.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Profiler/ProfilerLateUpdateListener.cs",
+        "size": 532,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Profiler/ProfilerLateUpdateListener.cs.meta",
+        "size": 182,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Profiler/RenderPipelineProfilerService.cs",
+        "size": 130,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Profiler/RenderPipelineProfilerService.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/ScreenshotBridge.cs",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/ScreenshotBridge.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/ConsoleFilterStateService.cs",
+        "size": 1783,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/ConsoleFilterStateService.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IBugReportService.cs",
+        "size": 1235,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IBugReportService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IConsoleFilterState.cs",
+        "size": 1359,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IConsoleFilterState.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IConsoleService.cs",
+        "size": 3328,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IConsoleService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IDebugCameraService.cs",
+        "size": 160,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IDebugCameraService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IDebugPanelService.cs",
+        "size": 924,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IDebugPanelService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IDebugService.cs",
+        "size": 8200,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IDebugService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IDebugTriggerService.cs",
+        "size": 236,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IDebugTriggerService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IDockConsoleService.cs",
+        "size": 229,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IDockConsoleService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/BugReportApiService.cs",
+        "size": 1582,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/BugReportApiService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/BugReportPopoverService.cs",
+        "size": 5050,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/BugReportPopoverService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/ConsoleFilterStateService.cs",
+        "size": 1691,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/ConsoleFilterStateService.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DebuggerService.cs",
+        "size": 12257,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DebuggerService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyCameraService.cs",
+        "size": 1138,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyCameraService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyDockConsoleService.cs",
+        "size": 4341,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyDockConsoleService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyOptionsService.cs",
+        "size": 6882,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyOptionsService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyOptionsService.ReflectionOptionContainer.cs",
+        "size": 2206,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyOptionsService.ReflectionOptionContainer.cs.meta",
+        "size": 86,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyPanelService.cs",
+        "size": 5171,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyPanelService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyPinEntryService.cs",
+        "size": 4992,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyPinEntryService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyPinnedOptionsService.cs",
+        "size": 10194,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyPinnedOptionsService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyTriggerService.cs",
+        "size": 8523,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyTriggerService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/KeyboardShortcutListenerService.cs",
+        "size": 4289,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/KeyboardShortcutListenerService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/StandardConsoleService.cs",
+        "size": 8364,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/StandardConsoleService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/SystemInformationService.cs",
+        "size": 12466,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/Implementation/SystemInformationService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IOptionsService.cs",
+        "size": 1396,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IOptionsService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IPinEntryService.cs",
+        "size": 982,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IPinEntryService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IPinnedOptionsService.cs",
+        "size": 510,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IPinnedOptionsService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IProfilerService.cs",
+        "size": 814,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/IProfilerService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/ISystemInformationService.cs",
+        "size": 3380,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/ISystemInformationService.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/ServiceSelectors.cs",
+        "size": 1,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Services/ServiceSelectors.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Settings.cs",
+        "size": 18087,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Settings.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/ConsoleEntryView.cs",
+        "size": 3665,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/ConsoleEntryView.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/ConsoleLogControl.cs",
+        "size": 6939,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/ConsoleLogControl.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/ActionControl.cs",
+        "size": 1476,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/ActionControl.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/BoolControl.cs",
+        "size": 1060,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/BoolControl.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/DataBoundControl.cs",
+        "size": 5498,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/DataBoundControl.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/EnumControl.cs",
+        "size": 2920,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/EnumControl.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/NumberControl.cs",
+        "size": 6625,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/NumberControl.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/OptionsControlBase.cs",
+        "size": 2056,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/OptionsControlBase.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/ReadOnlyControl.cs",
+        "size": 856,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/ReadOnlyControl.cs.meta",
+        "size": 264,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/StringControl.cs",
+        "size": 1300,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/StringControl.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/DebugTabButton.cs",
+        "size": 699,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/DebugTabButton.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/InfoBlock.cs",
+        "size": 1648,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/InfoBlock.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/InfoRow.cs",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/InfoRow.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/MultiTapButton.cs",
+        "size": 1585,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/MultiTapButton.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/OptionCard.cs",
+        "size": 4354,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/OptionCard.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/PinEntryControl.cs",
+        "size": 11273,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/PinEntryControl.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Profiler.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Profiler/ProfilerFPSLabel.cs",
+        "size": 890,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Profiler/ProfilerFPSLabel.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Profiler/ProfilerMemoryBlock.cs",
+        "size": 2050,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Profiler/ProfilerMemoryBlock.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Profiler/ProfilerMonoBlock.cs",
+        "size": 2379,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/Profiler/ProfilerMonoBlock.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/ProfilerEnableControl.cs",
+        "size": 1933,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/ProfilerEnableControl.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/ProfilerGraphAxisLabel.cs",
+        "size": 1385,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/ProfilerGraphAxisLabel.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/ProfilerGraphControl.cs",
+        "size": 14767,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Controls/ProfilerGraphControl.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/DebuggerTabController.cs",
+        "size": 3509,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/DebuggerTabController.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/DebugPanelRoot.cs",
+        "size": 893,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/DebugPanelRoot.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/MobileMenuController.cs",
+        "size": 8632,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/MobileMenuController.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/BugReportPopoverRoot.cs",
+        "size": 298,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/BugReportPopoverRoot.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/BugReportSheetController.cs",
+        "size": 5613,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/BugReportSheetController.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/CategoryGroup.cs",
+        "size": 4234,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/CategoryGroup.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/ConfigureCanvasFromSettings.cs",
+        "size": 1865,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/ConfigureCanvasFromSettings.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/ConsoleTabQuickViewControl.cs",
+        "size": 2173,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/ConsoleTabQuickViewControl.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/DebugPanelBackgroundBehaviour.cs",
+        "size": 1093,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/DebugPanelBackgroundBehaviour.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/DebugTab.cs",
+        "size": 1325,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/DebugTab.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/DebugTabController.cs",
+        "size": 4005,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/DebugTabController.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/DockConsoleController.cs",
+        "size": 7853,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/DockConsoleController.cs.meta",
+        "size": 264,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/DockConsoleRoot.cs",
+        "size": 123,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/DockConsoleRoot.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/ErrorNotifier.cs",
+        "size": 1239,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/ErrorNotifier.cs.meta",
+        "size": 86,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/FloatOverElement.cs",
+        "size": 1136,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/FloatOverElement.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/HandleManager.cs",
+        "size": 3365,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/HandleManager.cs.meta",
+        "size": 264,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/IEnableTab.cs",
+        "size": 128,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/IEnableTab.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/LoadingSpinnerBehaviour.cs",
+        "size": 905,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/LoadingSpinnerBehaviour.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/PinnedUIRoot.cs",
+        "size": 754,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/PinnedUIRoot.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/SafeAreaSizer.cs",
+        "size": 4394,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/SafeAreaSizer.cs.meta",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/ScrollRectPatch.cs",
+        "size": 234,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/ScrollRectPatch.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/ScrollSettingsBehaviour.cs",
+        "size": 648,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/ScrollSettingsBehaviour.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/SetLayerFromSettings.cs",
+        "size": 278,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/SetLayerFromSettings.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/TriggerRoot.cs",
+        "size": 612,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/TriggerRoot.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/VersionTextBehaviour.cs",
+        "size": 440,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Other/VersionTextBehaviour.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs/BugReportTabController.cs",
+        "size": 1285,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs/BugReportTabController.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs/ConsoleDetailPager.cs",
+        "size": 4358,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs/ConsoleDetailPager.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs/ConsoleTabController.cs",
+        "size": 14612,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs/ConsoleTabController.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs/InfoTabController.cs",
+        "size": 4106,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs/InfoTabController.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs/OptionsTabController.cs",
+        "size": 26745,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs/OptionsTabController.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs/ProfilerTabController.cs",
+        "size": 3436,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/UI/Tabs/ProfilerTabController.cs.meta",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Version.cs",
+        "size": 134,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/Scripts/Version.cs.meta",
+        "size": 264,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts/FONT LICENSE.txt",
+        "size": 4528,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts/FONT LICENSE.txt.meta",
+        "size": 93,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts/Orbitron Black.otf",
+        "size": 20232,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts/Orbitron Black.otf.meta",
+        "size": 301,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts/Orbitron Bold.otf",
+        "size": 20388,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts/Orbitron Bold.otf.meta",
+        "size": 301,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts/Orbitron Light.otf",
+        "size": 19344,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts/Orbitron Light.otf.meta",
+        "size": 301,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts/Orbitron Medium.otf",
+        "size": 19256,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts/Orbitron Medium.otf.meta",
+        "size": 301,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts/SourceCodePro-Regular.otf",
+        "size": 90056,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Fonts/SourceCodePro-Regular.otf.meta",
+        "size": 301,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/AboutTab.prefab",
+        "size": 15697,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/AboutTab.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/Console.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/Console/Item.prefab",
+        "size": 25515,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/Console/Item.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/InfoBlock.prefab",
+        "size": 27597,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/InfoBlock.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/ModalPopup.prefab",
+        "size": 32975,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/ModalPopup.prefab.meta",
+        "size": 154,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/Options.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/Options/Category.prefab",
+        "size": 23552,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/Options/Category.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/Options/DreamyWordmark.asset",
+        "size": 4911,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/Options/DreamyWordmark.asset.meta",
+        "size": 189,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/Options/TaskCard.prefab",
+        "size": 22016,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/Options/TaskCard.prefab.meta",
+        "size": 154,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/SideBar.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/SideBar/ConsoleTabButtonContent.prefab",
+        "size": 26413,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/SideBar/ConsoleTabButtonContent.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/SideBar/Tab.prefab",
+        "size": 20771,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Prefabs/SideBar/Tab.prefab.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Alert.PSD",
+        "size": 22508,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Alert.PSD.meta",
+        "size": 3760,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/BG.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/BG/footer_lodyas.png",
+        "size": 16432,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/BG/footer_lodyas.png.meta",
+        "size": 3390,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Circle.psd",
+        "size": 29006,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Circle.psd.meta",
+        "size": 3386,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/clipboard-50.png",
+        "size": 381,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/clipboard-50.png.meta",
+        "size": 3432,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/close-50.png",
+        "size": 1037,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/close-50.png.meta",
+        "size": 3433,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/collapse-32.png",
+        "size": 284,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/collapse-32.png.meta",
+        "size": 3433,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/console-64.png",
+        "size": 613,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/console-64.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/down-50.png",
+        "size": 474,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/down-50.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/feedback-64.png",
+        "size": 1303,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/feedback-64.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/Filter-50.png",
+        "size": 630,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/Filter-50.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/heart_monitor-64.png",
+        "size": 917,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/heart_monitor-64.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/info-64.png",
+        "size": 1261,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/info-64.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/menu-25.png",
+        "size": 196,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/menu-25.png.meta",
+        "size": 3433,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/menu-32.png",
+        "size": 138,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/menu-32.png.meta",
+        "size": 3433,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/menu-50.png",
+        "size": 274,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/menu-50.png.meta",
+        "size": 3433,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/message-64.png",
+        "size": 932,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/message-64.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/open-dropdown-50.png",
+        "size": 409,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/open-dropdown-50.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/outline-64.png",
+        "size": 603,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/outline-64.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/pin-50.png",
+        "size": 1088,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/pin-50.png.meta",
+        "size": 3433,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/pin-64.png",
+        "size": 1200,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/pin-64.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/refresh-50.png",
+        "size": 677,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/refresh-50.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/spider-64.png",
+        "size": 1515,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/spider-64.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/stompy_white_128.png",
+        "size": 6801,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/stompy_white_128.png.meta",
+        "size": 3396,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/trash2-32.png",
+        "size": 374,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/trash2-32.png.meta",
+        "size": 3433,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/trash2-50.png",
+        "size": 1005,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Icons/trash2-50.png.meta",
+        "size": 3434,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/loading@2x.png",
+        "size": 2252,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/loading@2x.png.meta",
+        "size": 3396,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Logo.psd",
+        "size": 48785,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Logo.psd.meta",
+        "size": 3396,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Logo@2x.psd",
+        "size": 60669,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Logo@2x.psd.meta",
+        "size": 3396,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Pin.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Pin/NumberButton_Fill@2x.psd",
+        "size": 31868,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Pin/NumberButton_Fill@2x.psd.meta",
+        "size": 3396,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Pin/NumberButton_Outline@2x.psd",
+        "size": 34054,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Pin/NumberButton_Outline@2x.psd.meta",
+        "size": 3396,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Pin/PinDot_Fill@2x.psd",
+        "size": 25402,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Pin/PinDot_Fill@2x.psd.meta",
+        "size": 3396,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Pin/PinDot_Outline@2x.psd",
+        "size": 24838,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/Pin/PinDot_Outline@2x.psd.meta",
+        "size": 3396,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/RoundedCorner-2px.psd",
+        "size": 24228,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/RoundedCorner-2px.psd.meta",
+        "size": 3396,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/RoundedCorner-2px@2x.psd",
+        "size": 26626,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/RoundedCorner-2px@2x.psd.meta",
+        "size": 3396,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/RoundedCorner-5px.psd",
+        "size": 24316,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/RoundedCorner-5px.psd.meta",
+        "size": 3396,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/RoundedCorner-5px@2x.psd",
+        "size": 29996,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Sprites/Default/RoundedCorner-5px@2x.psd.meta",
+        "size": 3400,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Styles.meta",
+        "size": 107,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Styles/Default.asset",
+        "size": 23267,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Styles/Default.asset.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Styles/DefaultConsoleAltRow.asset",
+        "size": 822,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Styles/DefaultConsoleAltRow.asset.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Styles/DefaultConsoleSelectedRow.asset",
+        "size": 831,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Styles/DefaultConsoleSelectedRow.asset.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Styles/DefaultTabActive.asset",
+        "size": 1472,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/UI/Styles/DefaultTabActive.asset.meta",
+        "size": 95,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/usr.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/usr/Assets.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/usr/Assets/DreamyDebugger.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/usr/Assets/DreamyDebugger/Settings.asset",
+        "size": 1614,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Imported/Presentation/usr/Assets/DreamyDebugger/Settings.asset.meta",
+        "size": 189,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/InputSystem.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/InputSystem/Dreamy.Debugger.InputSystem.asmdef",
+        "size": 360,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/InputSystem/Dreamy.Debugger.InputSystem.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/InputSystem/InputSystemAdapter.cs",
+        "size": 1882,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/InputSystem/InputSystemAdapter.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Metrics.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Metrics/FpsThresholdRule.cs",
+        "size": 1328,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Metrics/FpsThresholdRule.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Metrics/FrameWindow.cs",
+        "size": 1136,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Metrics/FrameWindow.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Metrics/RecentFrameWindow.cs",
+        "size": 1315,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Metrics/RecentFrameWindow.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Options.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Options/CheatAttributes.cs",
+        "size": 2612,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Options/CheatAttributes.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Options/CheatCard.cs",
+        "size": 1205,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Options/CheatCard.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Options/CheatOption.cs",
+        "size": 6706,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Options/CheatOption.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Options/CheatRegistry.cs",
+        "size": 4509,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Options/CheatRegistry.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Prefabs.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Prefabs/ConfirmationPrompt.prefab",
+        "size": 31323,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Prefabs/ConfirmationPrompt.prefab.meta",
+        "size": 154,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Prefabs/DebuggerAssets.asset",
+        "size": 3620,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Prefabs/DebuggerAssets.asset.meta",
+        "size": 189,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Prefabs/DebuggerBootstrap.prefab",
+        "size": 1499,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Prefabs/DebuggerBootstrap.prefab.meta",
+        "size": 154,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Prefabs/PerformanceHud.prefab",
+        "size": 48289,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Prefabs/PerformanceHud.prefab.meta",
+        "size": 154,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Preferences.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Preferences/PreferenceFileStore.cs",
+        "size": 3541,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Preferences/PreferenceFileStore.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Preferences/PreferenceSnapshot.cs",
+        "size": 1911,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Preferences/PreferenceSnapshot.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/CrashEvidence.cs",
+        "size": 2548,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/CrashEvidence.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/DiagnosticReport.cs",
+        "size": 1376,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/DiagnosticReport.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/DiskOutbox.cs",
+        "size": 6960,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/DiskOutbox.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/IReportTransport.cs",
+        "size": 441,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/IReportTransport.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/OutboxPump.cs",
+        "size": 2302,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/OutboxPump.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/RelayTransport.cs",
+        "size": 3479,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/RelayTransport.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/ReportBundle.cs",
+        "size": 1291,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/ReportBundle.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/ReportDispatcher.cs",
+        "size": 1271,
+        "mode": 420
+      },
+      {
+        "path": "Runtime/Reporting/ReportDispatcher.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/BoundCheatExamples.cs",
+        "size": 2919,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/BoundCheatExamples.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Dreamy.Debugger.Sample.asmdef",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Dreamy.Debugger.Sample.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Editor.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Editor/DebuggerAcceptanceWindow.cs",
+        "size": 404,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Editor/DebuggerAcceptanceWindow.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Editor/Dreamy.Debugger.Sample.Editor.asmdef",
+        "size": 201,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Editor/Dreamy.Debugger.Sample.Editor.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/FakeReportTransport.cs",
+        "size": 1508,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/FakeReportTransport.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/GameDebugOptions.cs",
+        "size": 604,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/GameDebugOptions.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/GameDebugOptions.Economy.cs",
+        "size": 868,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/GameDebugOptions.Economy.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/link.xml",
+        "size": 318,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/link.xml.meta",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/ProjectCheatHost.cs",
+        "size": 3620,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/ProjectCheatHost.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/ProjectCheats.cs",
+        "size": 859,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/ProjectCheats.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/ProjectCheats.Economy.cs",
+        "size": 611,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/ProjectCheats.Economy.cs.meta",
+        "size": 60,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/ProjectCheats.Player.cs",
+        "size": 868,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/ProjectCheats.Player.cs.meta",
+        "size": 60,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/ProjectCheats.QA.cs",
+        "size": 738,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/ProjectCheats.QA.cs.meta",
+        "size": 60,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/README.md",
+        "size": 7482,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/README.md.meta",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Tests.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Tests/Dreamy.Debugger.Sample.Tests.asmdef",
+        "size": 227,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Tests/Dreamy.Debugger.Sample.Tests.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Tests/FakeReportTests.cs",
+        "size": 2413,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Tests/FakeReportTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Tests/PlayMode.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Tests/PlayMode/Dreamy.Debugger.Sample.Tests.PlayMode.asmdef",
+        "size": 224,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Tests/PlayMode/Dreamy.Debugger.Sample.Tests.PlayMode.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Tests/PlayMode/HostLifecycleTests.cs",
+        "size": 5131,
+        "mode": 420
+      },
+      {
+        "path": "Samples~/QuickStart/Tests/PlayMode/HostLifecycleTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/AccessTests.cs",
+        "size": 5338,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/AccessTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/CheatOptionsTests.cs",
+        "size": 6330,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/CheatOptionsTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/Dreamy.Debugger.Tests.EditMode.asmdef",
+        "size": 243,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/Dreamy.Debugger.Tests.EditMode.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/PreferenceStorageTests.cs",
+        "size": 2401,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/PreferenceStorageTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/ReleaseRegressionTests.cs",
+        "size": 3604,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/ReleaseRegressionTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/ReportDispatcherTests.cs",
+        "size": 4014,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/ReportDispatcherTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/ReportPipelineTests.cs",
+        "size": 8013,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditMode/ReportPipelineTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditorIntegration.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditorIntegration/AttributedCardTests.cs",
+        "size": 3380,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditorIntegration/AttributedCardTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditorIntegration/Dreamy.Debugger.Tests.EditorIntegration.asmdef",
+        "size": 360,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditorIntegration/Dreamy.Debugger.Tests.EditorIntegration.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditorIntegration/OptionsWorkflowTests.cs",
+        "size": 4737,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditorIntegration/OptionsWorkflowTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditorIntegration/PackageAcceptanceTests.cs",
+        "size": 3668,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditorIntegration/PackageAcceptanceTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditorIntegration/ReworkTests.cs",
+        "size": 7100,
+        "mode": 420
+      },
+      {
+        "path": "Tests/EditorIntegration/ReworkTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/PlayMode.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Tests/PlayMode/Dreamy.Debugger.Tests.PlayMode.asmdef",
+        "size": 305,
+        "mode": 420
+      },
+      {
+        "path": "Tests/PlayMode/Dreamy.Debugger.Tests.PlayMode.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Tests/PlayMode/OverlayIntegrationTests.cs",
+        "size": 9879,
+        "mode": 420
+      },
+      {
+        "path": "Tests/PlayMode/OverlayIntegrationTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/PlayMode/StartupPreferencesTests.cs",
+        "size": 14026,
+        "mode": 420
+      },
+      {
+        "path": "Tests/PlayMode/StartupPreferencesTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/PlayMode/VisualThemeTests.cs",
+        "size": 19588,
+        "mode": 420
+      },
+      {
+        "path": "Tests/PlayMode/VisualThemeTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/PlayMode/WorkspaceUiTests.cs",
+        "size": 46466,
+        "mode": 420
+      },
+      {
+        "path": "Tests/PlayMode/WorkspaceUiTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "Tests/StartupEditor.meta",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "Tests/StartupEditor/Dreamy.Debugger.Tests.StartupEditor.asmdef",
+        "size": 299,
+        "mode": 420
+      },
+      {
+        "path": "Tests/StartupEditor/Dreamy.Debugger.Tests.StartupEditor.asmdef.meta",
+        "size": 166,
+        "mode": 420
+      },
+      {
+        "path": "Tests/StartupEditor/StartupEditorTests.cs",
+        "size": 3555,
+        "mode": 420
+      },
+      {
+        "path": "Tests/StartupEditor/StartupEditorTests.cs.meta",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "size": 3026,
+        "mode": 420
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md.meta",
+        "size": 158,
+        "mode": 420
+      },
+      {
+        "path": "Tools~/relay/README.md",
+        "size": 6003,
+        "mode": 420
+      },
+      {
+        "path": "Tools~/relay/server.py",
+        "size": 12684,
+        "mode": 420
+      },
+      {
+        "path": "Tools~/relay/telegram_setup.py",
+        "size": 6735,
+        "mode": 420
+      },
+      {
+        "path": "Tools~/relay/test_relay.py",
+        "size": 4587,
+        "mode": 420
+      },
+      {
+        "path": "Tools~/relay/test_telegram_setup.py",
+        "size": 2935,
+        "mode": 420
+      },
+      {
+        "path": "Tools~/verify_git_install.py",
+        "size": 2020,
+        "mode": 420
+      },
+      {
+        "path": "Tools~/verify_package.py",
+        "size": 2151,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 2136,
+        "mode": 420
+      },
+      {
+        "path": "package.json.meta",
+        "size": 163,
+        "mode": 420
+      }
+    ],
+    "entryCount": 885,
+    "bundled": []
+  }
+]

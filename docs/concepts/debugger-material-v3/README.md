@@ -1,6 +1,6 @@
 # Dreamy Debugger — Material Compact v3
 
-Status: new visual proposal, not applied to the debugger package. Prepared in response to the request to find a different UI and regenerate concept only from demonstrably available resources.
+Status at original proposal: not yet applied. Implementation update (2026-11-07): the resource-backed skin is now integrated; see [actual runtime visual review and acceptance](../../evidence/debugger/material-implementation/README.md). The historical specimen/AI claims and remaining device gates below retain their original scope. Prepared in response to the request to find a different UI and regenerate concept only from demonstrably available resources.
 
 ## View the result
 

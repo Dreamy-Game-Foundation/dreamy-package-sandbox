@@ -1,0 +1,57 @@
+[
+  [
+    "Ngang 852×393",
+    "material-cheats-852x393.png",
+    "Toolbar một hàng khi màn thấp; card tài nguyên và nút Grant cùng hàng."
+  ],
+  [
+    "Dọc 393×852",
+    "material-cheats-393x852.png",
+    "Sidebar đóng; card tự xuống hàng, logo giữ tỷ lệ."
+  ],
+  [
+    "Desktop 1280×720",
+    "material-cheats-1280x720.png",
+    "Hai card trên một hàng, chữ và icon từ tài nguyên thật."
+  ],
+  [
+    "Ngang thấp 640×300",
+    "material-cheats-640x300.png",
+    "Vùng nội dung cuộn; không thu nhỏ toàn bộ chữ để ép vừa một màn."
+  ],
+  [
+    "640×300 — đã cuộn",
+    "material-cheats-640x300-scrolled.png",
+    "Raycast thực vào Grant, mở xác nhận, Cancel không đổi số tài nguyên."
+  ],
+  [
+    "HUD + chip ghim",
+    "material-pinned-hud-852x393.png",
+    "HUD trong, neo toàn màn hình; category ghim thành chip nhỏ."
+  ],
+  [
+    "Category đã mở",
+    "material-pinned-expanded-852x393.png",
+    "Control tạo khi mở; viewport cuộn có giới hạn chiều cao."
+  ],
+  [
+    "Dock log",
+    "material-dock-852x393.png",
+    "Dùng console hiện có; nút đóng riêng, dot tròn đúng tỷ lệ."
+  ],
+  [
+    "Keypad ngang 640×300",
+    "pin-640x300.png",
+    "Keypad căn giữa, không title; × và backspace riêng. Fixture thử PIN dài 32 số."
+  ],
+  [
+    "Keypad dọc",
+    "pin-393x852.png",
+    "Giữ đủ các phím khi xoay màn hình."
+  ],
+  [
+    "Passphrase",
+    "passphrase-640x300.png",
+    "Form chuỗi mật khẩu trên màn ngang thấp. Bàn phím native chưa được kiểm tra."
+  ]
+]

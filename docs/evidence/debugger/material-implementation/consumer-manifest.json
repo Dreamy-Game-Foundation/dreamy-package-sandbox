@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "com.dreamy.debugger": "git://127.0.0.1:19976/com.dreamy.debugger.git#cef4acb9a081a109bcdc2fb5abed09920ebfdd08",
+    "com.unity.test-framework": "1.6.0"
+  },
+  "testables": [
+    "com.dreamy.debugger"
+  ]
+}

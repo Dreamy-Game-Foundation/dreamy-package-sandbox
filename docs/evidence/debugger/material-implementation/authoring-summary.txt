@@ -1,0 +1,2 @@
+[DreamyDebugger] Material assets saved. 29 prefabs • no missing scripts
+Exiting batchmode successfully now!

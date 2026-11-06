@@ -190,3 +190,8 @@ Hai board ở `docs/concepts/debugger-redesign-v2/`:
 Board là định hướng shape/hierarchy/màu; cỡ chữ/texture thực phải được dựng lại bằng layout có đo đạc, không cắt ảnh concept làm atlas UI. Text hoặc icon AI vẽ không chính xác không được trở thành contract. Source code và các gate ở trên là contract chức năng.
 
 **Đã có:** source audit, nguồn tham khảo, plan và ảnh hướng nhìn. **Chưa đạt resource gate:** chưa chốt bộ UI, chưa có specimen Unity từ tài nguyên dự kiến ship. Thiết kế chưa được xác nhận khả thi đầy đủ. Sửa lỗi runtime/keypad/pin, thay font/assets, pointer/device acceptance và release vẫn chưa thực hiện. Workflow `docs/agents/dreamy-workflow.md` không có trong checkout; dùng checkpoint thủ công này, không tuyên bố native harness đã chạy.
+
+
+## Implementation checkpoint — 2026-11-07
+
+Material Compact runtime/editor source is implemented at debugger commit cef4acb. Real texture extraction, asset mapping, runtime controls, responsive layout, pointer checks, clean Git import and archive acceptance are recorded in [visual review](../evidence/debugger/material-implementation/README.md) and its interactive gallery. Final source: 73 PlayMode and 84 package-only EditMode tests pass. Retain physical-device/texture/performance and native Editor screenshot gates as pending; do not mark the full broad resource/device gate complete from these fixtures. No tag or remote release was performed.

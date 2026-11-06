@@ -1,0 +1,10 @@
+{
+  "initial": "Pin options",
+  "selectionLabel": "Done pinning",
+  "selecting": true,
+  "raycastHit": true,
+  "parent": "Pin tools",
+  "width": 112,
+  "height": 44,
+  "filter": "Only pinned"
+}

@@ -1,0 +1,5 @@
+# Visible pin action — completed 2026-11-06
+
+Original pin control was an unlabelled icon in the Cheats header, while Pinned was a separate filter. The existing toggle is now a labelled Pin options / Done pinning action in its own toolbar row below search/category controls. Only pinned explicitly labels the filter. Entering selection clears that filter so unpinned options remain selectable. Selection/registration/security/persistence paths are reused; no game option value is changed.
+
+92 EditMode + 57 PlayMode passed in the source consumer. The added test uses the actual pin toggle and per-option checkbox to pin/filter/unpin while preserving the cheat value. Actual sandbox MCP confirms a 112×44 button in Pin tools, top raycast hit, selection toggle activation and Done pinning label. Editor stopped after inspection. No pin state was changed in the live game; no cheats or report-send actions executed. No mobile build/device certification claimed for this UI change. Existing serialized references/GUIDs and unrelated user edits preserved.

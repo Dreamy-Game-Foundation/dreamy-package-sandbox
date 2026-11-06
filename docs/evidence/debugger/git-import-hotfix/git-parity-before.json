@@ -1,0 +1,24 @@
+{
+  "result": "failed",
+  "sourceCommit": "5912da131b70d7574f3e25bd18f7c046ce34024a",
+  "checked": 884,
+  "missing": [
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/ActionControl.cs",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/ActionControl.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/BoolControl.cs",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/BoolControl.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/DataBoundControl.cs",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/DataBoundControl.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/EnumControl.cs",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/EnumControl.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/NumberControl.cs",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/NumberControl.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/OptionsControlBase.cs",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/OptionsControlBase.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/ReadOnlyControl.cs",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/ReadOnlyControl.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/StringControl.cs",
+    "Runtime/Imported/Presentation/Scripts/UI/Controls/Data/StringControl.cs.meta"
+  ],
+  "different": []
+}

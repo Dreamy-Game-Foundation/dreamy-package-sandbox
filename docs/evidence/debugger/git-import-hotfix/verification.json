@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "version": "0.1.1",
+  "affectedCommit": "5912da131b70d7574f3e25bd18f7c046ce34024a",
+  "fixedCommit": "d793eb1a3cdad43a4b7ff4e235137594eb60dc6f",
+  "rootCause": "UPM Git packaging applies broad data/ ignore rule to tracked Controls/Data scripts; npm tarball retains those scripts",
+  "before": {
+    "compilerExit": 1,
+    "missingTrackedFiles": 16,
+    "errors": [
+      "CS0234",
+      "CS0246"
+    ]
+  },
+  "after": {
+    "remoteGitParity": {
+      "result": "passed",
+      "sourceCommit": "d793eb1a3cdad43a4b7ff4e235137594eb60dc6f",
+      "checked": 885,
+      "missing": [],
+      "different": []
+    },
+    "editModePassed": 92,
+    "playModePassed": 64,
+    "localGitMinimalCompileExit": 0,
+    "remoteGitConsumerCompileAndTestsExit": 0
+  },
+  "unchanged": [
+    "asmdefs",
+    "GUIDs",
+    "runtime control implementations"
+  ],
+  "archive": {
+    "name": "com.dreamy.debugger",
+    "version": "0.1.1",
+    "entries": 885,
+    "sha256": "6848cbb69042475eb37111121e0a288ff85b2a7688b95a70c3562223f9a79cbd",
+    "bytes": 2799053,
+    "result": "passed"
+  },
+  "packagePushed": true,
+  "tagCreated": false,
+  "otherProjectMutations": false
+}

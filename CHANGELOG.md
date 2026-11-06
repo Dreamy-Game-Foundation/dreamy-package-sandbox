@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### 2026-11-06 — Debugger Git import hotfix 0.1.1
+
+- Reproduce and fix CS0234/CS0246 in fresh UPM Git consumers: narrow the package data ignore rule so eight option-control scripts and eight metas are shipped. Preserve asmdefs and GUIDs.
+- Add exact installed Git/source parity acceptance alongside archive checks; fresh Git import with sample passes 92 EditMode and 64 PlayMode tests. Package fix is available on origin/main at d793eb1.
+
 ### 2026-11-06 — Commit pending package and project changes
 
 - Prepare Editor Tools 1.1.0 with Game View Screenshot/clipboard/countdown tools and the configurable Clear Save Data shortcut; align minimum Unity to its existing 6000.4 toolbar requirement.

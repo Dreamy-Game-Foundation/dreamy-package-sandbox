@@ -1,0 +1,10 @@
+{
+    "development": false,
+    "runtime": false,
+    "catalog": false,
+    "unlocked": false,
+    "panel": false,
+    "persisted": false,
+    "passed": true,
+    "initialHud": ""
+}

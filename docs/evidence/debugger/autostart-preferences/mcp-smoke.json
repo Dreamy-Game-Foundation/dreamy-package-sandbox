@@ -1,0 +1,36 @@
+{
+  "target": "dreamy-package-sandbox@5f78127b991a2b92",
+  "baseline": {
+    "scenes": [
+      {
+        "path": "Assets/_Project/Scenes/BootstrapScene.unity",
+        "dirty": false
+      }
+    ],
+    "hosts": [
+      {
+        "name": "SandboxDebugger",
+        "active": true,
+        "mode": "Development",
+        "uploads": true,
+        "autoReport": false,
+        "gameplayUpload": false
+      }
+    ]
+  },
+  "firstPlay": {
+    "unlock": "Unlocked",
+    "runtimeCount": 1,
+    "mode": "Compact",
+    "preference": "Compact",
+    "lastError": null
+  },
+  "restart": {
+    "restored": "Compact",
+    "saved": "Compact",
+    "locked": true,
+    "owners": 1
+  },
+  "originalHudRestored": "Off",
+  "networkReportsRequested": false
+}

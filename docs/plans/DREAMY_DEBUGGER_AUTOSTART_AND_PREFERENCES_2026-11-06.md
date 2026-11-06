@@ -170,3 +170,8 @@ Tests dùng memory/temp stores và scope riêng; không đọc/ghi preferences h
 Người mới import có panel khi Play; người dùng chỉnh HUD rồi mở app/Play lại thấy lựa chọn đã lưu; project cũ không cần sửa scene để tiếp tục chạy. Release không vô tình ship UI vì Resources payload, preferences không biến thành cheat/save/security store, và có receipt mới chứng minh các phase thay vì chỉ tài liệu.
 
 Plan này chưa thay đổi behavior preview.3. Các tên API mới và build adapter là đề xuất để triển khai theo phases, không được ghi vào README như tính năng đã có trước nghiệm thu.
+
+
+## 10. Kết quả triển khai — 2026-11-06
+
+Phases 0–4 đã triển khai trong candidate 0.3.0-preview.4. Phase 5 đã qua nghiệm thu source/archive (mỗi bên 92 EditMode + 51 PlayMode), 10 test tích hợp project, build Linux development/release và Android ARM64 IL2CPP development. Player development khôi phục Compact qua lần chạy thứ hai; release không runtime/UI asset; forced-failure staging được dọn. MCP sandbox kiểm chứng lại một owner, unlock và restore HUD; trả Off/thoát Play sau thử. Xem [bằng chứng và giới hạn](../evidence/debugger/autostart-preferences/README.md). Các gate thiết bị thật, iOS, production privacy/relay vẫn mở; Gmail pending. Các đoạn đề xuất ở trên được giữ như hợp đồng đã duyệt, không phải trạng thái còn chờ làm của các phase đã nghiệm thu.

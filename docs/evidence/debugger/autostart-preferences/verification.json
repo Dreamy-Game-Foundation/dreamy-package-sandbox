@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-06",
+  "unity": "6000.4.12f1 Linux",
+  "version": "0.3.0-preview.4",
+  "archive": {
+    "name": "com.dreamy.debugger-0.3.0-preview.4.tgz",
+    "sha256": "c79f61595a236e6458f7c23f2b3eab7d6bf56f4471fb0d646d1d83ff8dea3ef4",
+    "sourceByteEqual": true
+  },
+  "tests": {
+    "source-PlayMode.xml": {
+      "result": "Passed",
+      "total": "51",
+      "passed": "51",
+      "failed": "0",
+      "start-time": "2026-11-06 03:27:44Z",
+      "end-time": "2026-11-06 03:27:54Z"
+    },
+    "game-EditMode.xml": {
+      "result": "Passed",
+      "total": "10",
+      "passed": "10",
+      "failed": "0",
+      "start-time": "2026-11-06 03:19:22Z",
+      "end-time": "2026-11-06 03:19:22Z"
+    },
+    "archive-PlayMode.xml": {
+      "result": "Passed",
+      "total": "51",
+      "passed": "51",
+      "failed": "0",
+      "start-time": "2026-11-06 03:24:29Z",
+      "end-time": "2026-11-06 03:24:38Z"
+    },
+    "source-EditMode.xml": {
+      "result": "Passed",
+      "total": "92",
+      "passed": "92",
+      "failed": "0",
+      "start-time": "2026-11-06 03:27:36Z",
+      "end-time": "2026-11-06 03:27:39Z"
+    },
+    "archive-EditMode.xml": {
+      "result": "Passed",
+      "total": "92",
+      "passed": "92",
+      "failed": "0",
+      "start-time": "2026-11-06 03:24:21Z",
+      "end-time": "2026-11-06 03:24:23Z"
+    }
+  },
+  "builds": {
+    "linux-dev": {
+      "result": "Succeeded",
+      "bytes": 164977098,
+      "debuggerAssetCount": 69
+    },
+    "linux-release": {
+      "result": "Succeeded",
+      "bytes": 86304102,
+      "debuggerAssetCount": 0
+    },
+    "android-dev": {
+      "result": "Succeeded",
+      "bytes": 251471232,
+      "debuggerAssetCount": 69
+    }
+  },
+  "protectedFiles": {
+    "existingMetaChanged": [],
+    "SRAndGameFontCount": 659,
+    "protectedChanged": []
+  },
+  "openGates": [
+    "physical Android device touch/rotation/performance/native crash",
+    "iOS",
+    "production screenshot consent/redaction/relay deployment",
+    "Gmail pending"
+  ],
+  "forcedBuildFailure": {
+    "result": "Failed",
+    "intentionalFailure": true,
+    "stagingCleaned": true,
+    "passed": true
+  },
+  "players": {
+    "player-dev-restart": {
+      "development": true,
+      "runtime": true,
+      "catalog": true,
+      "unlocked": true,
+      "panel": true,
+      "persisted": true,
+      "passed": true,
+      "initialHud": "Compact"
+    },
+    "player-release": {
+      "development": false,
+      "runtime": false,
+      "catalog": false,
+      "unlocked": false,
+      "panel": false,
+      "persisted": false,
+      "passed": true,
+      "initialHud": ""
+    },
+    "player-dev-first": {
+      "development": true,
+      "runtime": true,
+      "catalog": true,
+      "unlocked": true,
+      "panel": true,
+      "persisted": true,
+      "passed": true,
+      "initialHud": "Off"
+    }
+  },
+  "packageCommit": "001b859",
+  "mcpSmoke": "mcp-smoke.json",
+  "finalEditorState": {
+    "playing": false,
+    "scene": "Assets/_Project/Scenes/BootstrapScene.unity",
+    "dirty": false,
+    "hudPreference": "Off"
+  }
+}

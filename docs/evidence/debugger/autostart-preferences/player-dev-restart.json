@@ -1,0 +1,10 @@
+{
+    "development": true,
+    "runtime": true,
+    "catalog": true,
+    "unlocked": true,
+    "panel": true,
+    "persisted": true,
+    "passed": true,
+    "initialHud": "Compact"
+}

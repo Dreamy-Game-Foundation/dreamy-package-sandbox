@@ -1,0 +1,17 @@
+{
+  "hudAndPin": {
+    "pinFont": "Geist-Regular",
+    "keyFont": "GeistMono-Regular",
+    "hudAlpha": 0.7,
+    "hudRaycast": false,
+    "hudFont": "GeistMono-Regular"
+  },
+  "confirmation": {
+    "titleFont": "Geist-Regular",
+    "buttonFont": "Geist-Regular",
+    "sprite": "Panel",
+    "dialogAlpha": 0.98,
+    "scrimAlpha": 0.52
+  },
+  "editorStopped": true
+}

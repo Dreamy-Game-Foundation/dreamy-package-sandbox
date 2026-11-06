@@ -1,0 +1,17 @@
+{
+  "hud": {
+    "parent": "Content",
+    "rowHeight": 48,
+    "belowBanner": true,
+    "rowTop": 2497,
+    "bannerBottom": 2672
+  },
+  "trace": {
+    "pages": 4,
+    "traceRetained": 33989,
+    "fullTextMatches": true,
+    "lastPageHasTail": true
+  },
+  "editorStopped": true,
+  "reportsSent": false
+}

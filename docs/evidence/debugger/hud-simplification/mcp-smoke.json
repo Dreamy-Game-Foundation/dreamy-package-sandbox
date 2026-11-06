@@ -1,0 +1,23 @@
+{
+  "game": {
+    "state": "Ready",
+    "gameOptions": 32
+  },
+  "hud": {
+    "hud": "Compact",
+    "position": "Free",
+    "gameOptions": 32,
+    "hudInCheats": false,
+    "buttonWidth": 53.25,
+    "buttonHeight": 40,
+    "trigger": "TopLeft"
+  },
+  "restart": {
+    "gameOptions": 32,
+    "hudOptionsInCheats": 0,
+    "locked": true,
+    "owners": 1
+  },
+  "reportsSent": false,
+  "finalPlayMode": false
+}

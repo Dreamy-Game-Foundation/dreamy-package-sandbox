@@ -1,0 +1,90 @@
+{
+  "version": "0.3.0-preview.5",
+  "tests": {
+    "PlayMode.xml": {
+      "id": "2",
+      "testcasecount": "54",
+      "result": "Passed",
+      "total": "54",
+      "passed": "54",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-06 03:51:45Z",
+      "end-time": "2026-11-06 03:51:56Z",
+      "duration": "10.4131369"
+    },
+    "EditMode.xml": {
+      "id": "2",
+      "testcasecount": "92",
+      "result": "Passed",
+      "total": "92",
+      "passed": "92",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-06 03:51:33Z",
+      "end-time": "2026-11-06 03:51:35Z",
+      "duration": "2.4822418"
+    }
+  },
+  "relay": "20 passed, no live delivery",
+  "build": "Linux development succeeded",
+  "openGates": [
+    "Android/iOS builds for this candidate not run",
+    "physical-device UI/performance not run"
+  ],
+  "guidMigration": {
+    "Runtime/Imported/Presentation/Scripts/Profiler/ProfilerServiceImpl.cs.meta": "Runtime/Imported/Presentation/Scripts/Profiler/DreamyProfilerService.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/Services/Implementation/DebugCameraServiceImpl.cs.meta": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyCameraService.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/Services/Implementation/DebugPanelServiceImpl.cs.meta": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyPanelService.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/Services/Implementation/DebugTriggerImpl.cs.meta": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyTriggerService.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/Services/Implementation/DockConsoleServiceImpl.cs.meta": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyDockConsoleService.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/Services/Implementation/OptionsServiceImpl.ReflectionOptionContainer.cs.meta": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyOptionsService.ReflectionOptionContainer.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/Services/Implementation/OptionsServiceImpl.cs.meta": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyOptionsService.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/Services/Implementation/PinEntryServiceImpl.cs.meta": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyPinEntryService.cs.meta",
+    "Runtime/Imported/Presentation/Scripts/Services/Implementation/PinnedUIServiceImpl.cs.meta": "Runtime/Imported/Presentation/Scripts/Services/Implementation/DreamyPinnedOptionsService.cs.meta"
+  },
+  "archiveTests": {
+    "EditMode": {
+      "id": "2",
+      "testcasecount": "92",
+      "result": "Passed",
+      "total": "92",
+      "passed": "92",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-06 03:53:37Z",
+      "end-time": "2026-11-06 03:53:40Z",
+      "duration": "2.57251"
+    },
+    "PlayMode": {
+      "id": "2",
+      "testcasecount": "54",
+      "result": "Passed",
+      "total": "54",
+      "passed": "54",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-06 03:54:33Z",
+      "end-time": "2026-11-06 03:54:43Z",
+      "duration": "9.9243888"
+    }
+  },
+  "archiveSha256": "b94c115615ba7addfda8ada4fce880e6b1cce30fe5008118dbf8ca1a47ba565e",
+  "archiveByteEqualToSource": true
+}

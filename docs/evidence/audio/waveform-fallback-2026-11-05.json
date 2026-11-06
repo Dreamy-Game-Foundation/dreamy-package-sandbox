@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "date": "2026-11-05",
+  "scope": "Fix compressed-clip GetData errors in editor timeline fallback",
+  "observed_failure": "DrawBoundedFallback called GetData without checking load type and continued after failure, repeating Unity errors for compressed clips.",
+  "verification": {
+    "project": "dreamy-package-sandbox",
+    "unity": "6000.4.12f1",
+    "job_id": "65f62e8948e041548ed49e5cef04c200",
+    "mode": "EditMode",
+    "filter": "Dreamy.Audio.Tests.AudioTimelineFallbackTests",
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "cases": [
+      "CompressedInMemory",
+      "Streaming",
+      "DecompressOnLoad including unload/reload cache invalidation"
+    ],
+    "console_errors_after_tests": 0
+  },
+  "source_sha256": {
+    "Editor/Controls/AudioTimelineControl.cs": "384306b4308c8c2c9fcb1bcca5779c107c4fae3e0c695a86ed5718cfcdadb28f",
+    "Tests/EditMode/AudioTimelineFallbackTests.cs": "b97c63b27ebdebf52f88b5bae97d0d19ba276254726d9aa7b9b4fdd42b6cae18"
+  },
+  "limitations": [
+    "Original Chest_Drop_2cutrx asset is not present in this sandbox; regression uses generated imported Vorbis WAV fixtures.",
+    "Initial test request discovered zero tests before new test source was imported; excluded as verification.",
+    "docs/agents/dreamy-workflow.md, compatibility catalog and installed dreamy CLI were not found; no lesson recall backend available."
+  ],
+  "behavior": "Unsupported or unloaded clips show waveform-unavailable text while trim/loop markers remain editable. Import settings and runtime code are unchanged."
+}

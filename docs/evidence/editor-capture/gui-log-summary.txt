@@ -1,0 +1,1 @@
+    com.dreamy.editor-tools@file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.editor-tools (location: /run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.editor-tools)

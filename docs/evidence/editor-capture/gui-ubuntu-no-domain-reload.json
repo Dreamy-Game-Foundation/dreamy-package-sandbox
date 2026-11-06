@@ -1,0 +1,1 @@
+{"result":"passed","unity":"6000.4.12f1","width":1920,"height":841,"checks":["save","UI overlay pixels","copy only no file","copy+save","timeScale zero","duplicate","cancel","scene clean","window opens","paused frame timeout","50 sequential captures"]}

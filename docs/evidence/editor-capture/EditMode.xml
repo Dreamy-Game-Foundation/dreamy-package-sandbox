@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="9" result="Passed" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.0472196">
+  <test-suite type="TestSuite" id="1000" name="dreamy-capture-consumer" fullname="dreamy-capture-consumer" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.047220" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1011" name="Dreamy.EditorTools.Tests.Editor.dll" fullname="/tmp/dreamy-capture-consumer/Library/ScriptAssemblies/Dreamy.EditorTools.Tests.Editor.dll" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.041799" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="3719666" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1012" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.041581" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1013" name="EditorTools" fullname="Dreamy.EditorTools" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.041498" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1014" name="Tests" fullname="Dreamy.EditorTools.Tests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.041416" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="CaptureOutputTests" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.040767" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1008" name="AtomicSavePreservesExistingFileAndCleansTemporaryFile" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.AtomicSavePreservesExistingFileAndCleansTemporaryFile" methodname="AtomicSavePreservesExistingFileAndCleansTemporaryFile" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="1375135601" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.018332" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1010" name="BatchCaptureFailsFastWithoutStartingJob" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.BatchCaptureFailsFastWithoutStartingJob" methodname="BatchCaptureFailsFastWithoutStartingJob" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="1908100119" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.000877" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1006" name="CancellationAfterCopyPreservesCopyWithoutWritingFile" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.CancellationAfterCopyPreservesCopyWithoutWritingFile" methodname="CancellationAfterCopyPreservesCopyWithoutWritingFile" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="1814968042" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.005623" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="CopyFailureStillSavesSameFrame" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.CopyFailureStillSavesSameFrame" methodname="CopyFailureStillSavesSameFrame" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="626744084" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.003139" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1002" name="CopyOnlyNeverInvokesStorage" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.CopyOnlyNeverInvokesStorage" methodname="CopyOnlyNeverInvokesStorage" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="1632985190" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.000641" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1007" name="FailedCopyOnlyDoesNotFallBackToSave" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.FailedCopyOnlyDoesNotFallBackToSave" methodname="FailedCopyOnlyDoesNotFallBackToSave" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="2007164697" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.000637" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="SaveFailurePreservesSuccessfulCopy" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.SaveFailurePreservesSuccessfulCopy" methodname="SaveFailurePreservesSuccessfulCopy" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="1289900971" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.000557" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1003" name="SaveOnlyDoesNotTouchClipboard" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.SaveOnlyDoesNotTouchClipboard" methodname="SaveOnlyDoesNotTouchClipboard" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="1862431495" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.000488" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1009" name="WindowsDibPreservesBottomUpRowsAndConvertsRgbaToOpaqueBgra" fullname="Dreamy.EditorTools.Tests.CaptureOutputTests.WindowsDibPreservesBottomUpRowsAndConvertsRgbaToOpaqueBgra" methodname="WindowsDibPreservesBottomUpRowsAndConvertsRgbaToOpaqueBgra" classname="Dreamy.EditorTools.Tests.CaptureOutputTests" runstate="Runnable" seed="364868357" result="Passed" start-time="2026-11-05 10:51:43Z" end-time="2026-11-05 10:51:43Z" duration="0.001771" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: /tmp/dreamy-capture-editmode-final.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

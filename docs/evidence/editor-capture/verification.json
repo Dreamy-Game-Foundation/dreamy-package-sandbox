@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "unity": "6000.4.12f1",
+  "host": "Ubuntu 26.04.1 LTS",
+  "session": "Wayland; Unity GUI uses XWayland/OpenGL",
+  "editMode": {
+    "id": "2",
+    "testcasecount": "9",
+    "result": "Passed",
+    "total": "9",
+    "passed": "9",
+    "failed": "0",
+    "inconclusive": "0",
+    "skipped": "0",
+    "asserts": "0",
+    "engine-version": "3.5.0.0",
+    "clr-version": "4.0.30319.42000",
+    "start-time": "2026-11-05 10:51:43Z",
+    "end-time": "2026-11-05 10:51:43Z",
+    "duration": "0.0472196"
+  },
+  "gui": {
+    "result": "passed",
+    "unity": "6000.4.12f1",
+    "width": 1920,
+    "height": 841,
+    "checks": [
+      "save",
+      "UI overlay pixels",
+      "copy only no file",
+      "copy+save",
+      "timeScale zero",
+      "duplicate",
+      "cancel",
+      "scene clean",
+      "window opens",
+      "paused frame timeout",
+      "50 sequential captures"
+    ],
+    "domainReloadEnabled": false,
+    "oldPreviewDestroyedOnReplacement": true
+  },
+  "clipboardReadback": {
+    "result": "passed",
+    "readAfterUnityExit": true,
+    "mime": "image/png",
+    "width": 1920,
+    "height": 841,
+    "sha256": "434376db93fcdf4ad8c0111c0501aff3106d5e6cffae8ad8501217b6d719c717",
+    "matchesSavedFrame": true,
+    "overlayMarker": "green",
+    "background": "magenta"
+  },
+  "dependencies": {
+    "wl-clipboard": "2.2.1-2build1 extracted to /tmp; no system install",
+    "xclip": "0.13-4build1 downloaded, X11 native copy not exercised"
+  },
+  "notVerified": [
+    "Windows native clipboard/paste",
+    "Ubuntu 24.04",
+    "X11-only desktop",
+    "URP pipeline and portrait fixture",
+    "clipboard paste into specific external apps",
+    "measured peak memory"
+  ],
+  "sourceSha256": {
+    "Editor/Capture/CaptureAssemblyInfo.cs": "254fdd9239f8997bec2fdef56f087ffe72ac681b1b1efae9e9e0d5c766dcdd1f",
+    "Editor/Capture/CaptureAssemblyInfo.cs.meta": "9d83d65c8c7819d5128588b73fb1406595d018b80eecfa580dc5a1cd26f9b51f",
+    "Editor/Capture/CaptureOutput.cs": "0f4048698a5f41e401e62aa7cbbe41aacd390bb1964d9b7f7794f82767c12ae5",
+    "Editor/Capture/CaptureOutput.cs.meta": "2311888b25a479b9355cabef5d2ac73ef94b9fe9dc4fa2169fbe6e3a5fd3ca90",
+    "Editor/Capture/DreamyScreenshotWindow.cs": "d0b229ac702eefcecaf7dde2101fea109df65883c5e12eefb9d83dc5b4551ae6",
+    "Editor/Capture/DreamyScreenshotWindow.cs.meta": "05552b47c12dbad8117fbc30bf1cb146334b31c22bce654ca9f8cc9a789ee401",
+    "Editor/Capture/GameViewCapture.cs": "5774cf5b4ba27748d475174635d42631e352d837c06cfcaa3c014c6a49d052e0",
+    "Editor/Capture/GameViewCapture.cs.meta": "9915ecaddc8f43540722b5ced3d8be2a302f939afc0eef5441d7641f74c353de",
+    "Editor/Capture/ImageClipboard.cs": "b90316244a7636ad5ee58eae1d2ece74bc3daaa859ff7d4031fcbd72575896a9",
+    "Editor/Capture/ImageClipboard.cs.meta": "4d882c85ec3ff9de12e1f4526f95d5c95447f40f4cc6295d1b2584f929569231",
+    "Tests/Editor/CaptureOutputTests.cs": "0b2428a575ea7df6eaf21f0f75a3d2e796dc6d437e58210532134ad4f5876ec1",
+    "Tests/Editor/CaptureOutputTests.cs.meta": "158c839cc41609edca45e938d02c3e631b7f25ba93cc0b4802a239eb4ac6ec6a",
+    "Tests/Editor/Dreamy.EditorTools.Tests.Editor.asmdef": "ced7cbfc0662aa73ce7cadd32edf023a63a4863a4352741320ae5b6464e2a840",
+    "Tests/Editor/Dreamy.EditorTools.Tests.Editor.asmdef.meta": "1caa07af13495d111e5bd921ca1dfeeae25aa05febcf672ff90a27012996ce23",
+    "package.json": "f24afac6a643147fa5f1079bd2f1901c4f8a9a0d08c89f095c2e7b192fcc43f6"
+  }
+}

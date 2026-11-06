@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+### 2026-11-06 — Commit pending package and project changes
+
+- Prepare Editor Tools 1.1.0 with Game View Screenshot/clipboard/countdown tools and the configurable Clear Save Data shortcut; align minimum Unity to its existing 6000.4 toolbar requirement.
+- Version pending package-content changes as Economy 0.8.1, Missions 0.3.1, Tutorial 0.1.1 and Feedback 0.4.1, with matching README/changelog entries. Keep already-versioned Audio 1.0.5 and Debugger 0.1.0.
+- Commit the existing debugger project configuration/startup settings, sample import relocation, BootstrapScene cleanup, generated localization font changes, screenshot and Audio/Editor capture evidence. Preserve imported sample snapshots rather than overwriting custom code.
+- Pin committed submodule revisions; record fresh checks separately from historical GUI/device receipts. No tag/publication is part of this checkpoint.
+
 - Correct package release ordering above historical v1.x tags: Assets 1.0.1, Audio 1.0.3, DataConfig 1.0.1, Datasave 1.0.1, Editor Tools 1.0.1, and UI 1.0.5.
 - Synchronize package metadata, release notes, Audio sample import documentation, and the UI Assets dependency/lock entry.
 - Preserve existing tags, unchanged package versions/minimum dependencies, and imported sample snapshots.

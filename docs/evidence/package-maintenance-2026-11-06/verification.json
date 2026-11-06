@@ -1,0 +1,45 @@
+{
+  "status": "complete",
+  "date": "2026-11-06",
+  "packages": {
+    "com.dreamy.editor-tools": {
+      "version": "1.1.0",
+      "commit": "3f8556b58164d4c9d5b9e9e797d981c94aa11141"
+    },
+    "com.dreamy.feature.economy": {
+      "version": "0.8.1",
+      "commit": "c657d2ac1097b6e8e69f1234ae46797b5036c2bd"
+    },
+    "com.dreamy.feature.missions": {
+      "version": "0.3.1",
+      "commit": "aab042886c6a0d5aa37ecd4454c6ebe13936add8"
+    },
+    "com.dreamy.feature.tutorial": {
+      "version": "0.1.1",
+      "commit": "529193ef9f0bdf504a076a1b4a35589da1ea209c"
+    },
+    "com.dreamy.feedback": {
+      "version": "0.4.1",
+      "commit": "02de01d1f1aec1edaf689dfae2c53b949ee70650"
+    }
+  },
+  "unchangedAlreadyVersioned": {
+    "com.dreamy.audio": "1.0.5",
+    "com.dreamy.debugger": "0.1.0"
+  },
+  "verification": {
+    "editorToolsEditMode": {
+      "passed": 9,
+      "failed": 0,
+      "unity": "6000.4.12f1",
+      "startUtc": "2026-11-06 09:00:41Z",
+      "endUtc": "2026-11-06 09:00:41Z"
+    },
+    "metadataReadmeChangelogAlignment": "passed",
+    "secretPatternScan": "no matched bot tokens, GitHub token patterns or private-key headers among changed text files",
+    "diffWhitespace": "passed for text source/docs; Unity-generated .asset/.meta empty-value whitespace retained"
+  },
+  "tagCreated": false,
+  "pushed": false,
+  "published": false
+}

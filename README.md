@@ -4,6 +4,14 @@
 `LocalPackages/`. Unity Package Manager tham chiếu chúng bằng đường dẫn local
 trong `Packages/manifest.json`, nên cần khởi tạo submodule trước khi mở project.
 
+## Gói bảo trì ngày 2026-11-06
+
+Đã đồng bộ các revision: Editor Tools **1.1.0**, Economy **0.8.1**, Missions **0.3.1**, Tutorial **0.1.1**, Feedback **0.4.1**. Audio **1.0.5** và Debugger **0.1.0** đã được tăng version cùng source trước đó nên giữ nguyên. Package không đổi source sau lần tăng version gần nhất giữ version hiện tại.
+
+Editor Tools bổ sung **Tools → Dreamy → Capture → Game View Screenshot**, clipboard Windows/Ubuntu và shortcut Clear Save Data. Xem [README Editor Tools](LocalPackages/com.dreamy.editor-tools/README.md) để cài helper clipboard, chạy test và hiểu giới hạn nền tảng. Debugger mở tự động trong Editor/development build; xem [setup/API Debugger](LocalPackages/com.dreamy.debugger/README.md). Config project và imported sample được commit như snapshot đang dùng, không tự ghi đè theo phiên bản package.
+
+Các version trên là chuẩn bị phát hành; commit này không tạo tag hay publish. Sau khi checkout, cập nhật submodule theo revision repo chính. Bảng kiểm tra và checkpoint nằm tại [package maintenance](docs/evidence/package-maintenance-2026-11-06/README.md).
+
 ## Dùng Feature, currency và reward
 
 Đọc [hướng dẫn tích hợp và đánh giá mức độ sẵn sàng](LocalPackages/com.dreamy.feature.economy/Documentation~/usage-and-readiness.md)

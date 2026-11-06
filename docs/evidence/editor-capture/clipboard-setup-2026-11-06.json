@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-06",
+  "change": "In-window clipboard requirements, selectable Ubuntu install command and Copy Install Command; Windows requires no installer",
+  "verification": {
+    "unity": "6000.4.12f1",
+    "cleanConsumerCompile": "passed, exit 0",
+    "existingEditModeTests": "9 passed, 0 failed before final foldout-only refinement; final source compiled successfully",
+    "guiInteraction": "not rerun for this UI text/button addition"
+  },
+  "sourceSha256": {
+    "Editor/Capture/ImageClipboard.cs": "15e4d713681a5686767120ce4351a3a1dbd1055f3f5c0f1f05f57c4839260a0a",
+    "Editor/Capture/DreamyScreenshotWindow.cs": "48f0064fcfaebc40f22969351a2f4838d94d6f169002360224d57ea635b04450"
+  }
+}

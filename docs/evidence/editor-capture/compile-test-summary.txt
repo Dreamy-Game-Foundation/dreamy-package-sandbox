@@ -1,0 +1,18 @@
+Dreamy.EditorTools.Tests
+    com.dreamy.editor-tools@file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.editor-tools (location: /run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.editor-tools)
+[           0s] Csc Library/Bee/artifacts/2400b0aE.dag/Dreamy.EditorTools.Editor.dll (+2 others) [CacheMiss 3bbe085f619a7d7a77c1a022680774fd00000000000000000000000000000006]
+[236/245    2s] Csc Library/Bee/artifacts/2400b0aE.dag/Dreamy.EditorTools.Editor.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/2400b0aE.dag/Dreamy.EditorTools.Editor.dll (+2 others) [CacheWrite 3bbe085f619a7d7a77c1a022680774fd00000000000000000000000000000006]
+[194/245    0s] WriteText Library/Bee/artifacts/2400b0aE.dag/Dreamy.EditorTools.Editor.rsp
+[           0s] Csc Library/Bee/artifacts/2400b0aE.dag/Dreamy.EditorTools.Editor.dll (+2 others) [CacheMiss f545596c2a1e17b91b331bc3cdd5673400000000000000000000000000000006]
+[236/245    0s] Csc Library/Bee/artifacts/2400b0aE.dag/Dreamy.EditorTools.Editor.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/2400b0aE.dag/Dreamy.EditorTools.Editor.dll (+2 others) [CacheWrite f545596c2a1e17b91b331bc3cdd5673400000000000000000000000000000006]
+[237/245    0s] CopyFiles Library/ScriptAssemblies/Dreamy.EditorTools.Editor.pdb
+[238/245    0s] CopyFiles Library/ScriptAssemblies/Dreamy.EditorTools.Editor.dll
+[           0s] Csc Library/Bee/artifacts/2400b0aE.dag/Dreamy.EditorTools.Tests.Editor.dll (+2 others) [CacheMiss bab5d7dd9688ade33142f00a739bf16900000000000000000000000000000006]
+[242/245    0s] Csc Library/Bee/artifacts/2400b0aE.dag/Dreamy.EditorTools.Tests.Editor.dll (+2 others)
+[           0s] Csc Library/Bee/artifacts/2400b0aE.dag/Dreamy.EditorTools.Tests.Editor.dll (+2 others) [CacheWrite bab5d7dd9688ade33142f00a739bf16900000000000000000000000000000006]
+[243/245    0s] CopyFiles Library/ScriptAssemblies/Dreamy.EditorTools.Tests.Editor.pdb
+[244/245    0s] CopyFiles Library/ScriptAssemblies/Dreamy.EditorTools.Tests.Editor.dll
+   groupNames = Dreamy.EditorTools.Tests
+Test run completed. Exiting with code 0 (Ok). Run completed.

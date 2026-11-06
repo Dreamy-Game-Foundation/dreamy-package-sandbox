@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "com.dreamy.debugger": "file:/tmp/dreamy-debugger-release-v0.1.0/final/com.dreamy.debugger-0.1.0.tgz",
+    "com.unity.test-framework": "1.6.0",
+    "com.dreamy.editor-tools": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.editor-tools"
+  },
+  "testables": [
+    "com.dreamy.debugger",
+    "com.dreamy.editor-tools"
+  ]
+}

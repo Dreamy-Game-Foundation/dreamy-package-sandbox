@@ -1,6 +1,6 @@
 # Dreamy Debugger UI v2 — concept boards
 
-2026-11-06. Status: design proposal complete; runtime implementation pending.
+2026-11-06. Status: visual direction liked; UI resource selection and implementation feasibility unverified. The proposed UI kit is not approved.
 
 - [Runtime concept](runtime-concept.png): compact Cheats panel, alpha-style wordmark, category chip, small HUD, console dock and titleless keypad.
 - [Editor concept](editor-concept.png): compact tabbed settings, Access fields, HUD/overlay preview and typography direction.
@@ -9,6 +9,10 @@
 Images were generated with the built-in imagegen tool and copied here from its generated-images directory. They are AI design proposals, not Unity/game screenshots, functioning prototypes, imported assets or acceptance evidence. The generic gameplay backgrounds are illustrative. No runtime, prefab, importer, GUID, font, config or assembly code was changed in this design step.
 
 Design direction: graphite surfaces, restrained red accents, transparent white Dreamy wordmark, flat controls, IBM Plex Sans/Mono direction and one consistent outline icon family. Actual fonts, glyph coverage, original Dreamy silhouette, raster compression and icon licenses must be verified during implementation; the generated letters/icons are not those production assets.
+
+## Resource-first constraint
+
+The user likes the current concept's appearance but rejects choosing an unattractive UI kit or inventing an image that cannot be reproduced. Keep these boards as a visual target, not proof that resources exist. Do not generate further concepts until the resource gate in the plan passes: actual asset/font mapping, a Unity-rendered specimen using the intended shipping resources, and import/compression checks. The next visual deliverable should be a real Unity prototype screenshot. IBM Plex/Tabler remain candidates, not an approved production kit.
 
 ## Functional corrections to concept shorthand
 

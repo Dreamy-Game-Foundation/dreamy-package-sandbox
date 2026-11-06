@@ -1,10 +1,27 @@
 # Dreamy Debugger — plan UI v2 và concept
 
-Ngày: 2026-11-06. **Trạng thái: đề xuất, chưa triển khai runtime.**
+Ngày: 2026-11-06. **Trạng thái: hướng nhìn concept được người dùng đánh giá tốt; bộ UI chưa được chấp nhận, tài nguyên chưa chứng minh đủ để triển khai.**
 
 Phạm vi lần này: đọc source, đối chiếu năm ảnh người dùng, nghiên cứu nguồn UI/font, xác định hành vi, chia phase và tạo concept. Không đổi C#, prefab, importer, GUID, config, asmdef hay phiên bản package ở bước thiết kế này. Concept là ảnh thiết kế, không phải ảnh nghiệm thu Unity.
 
 Baseline: `com.dreamy.debugger` **0.1.2**. Package độc lập với Dreamy Core/UI. Giữ theme đỏ nhưng giảm mảng đỏ lớn. Giữ SR gốc để đối chiếu, không sửa nguồn SR. HUD tiếp tục không dùng safe area; panel và keypad có safe area.
+
+## Điều chỉnh bắt buộc từ phản hồi người dùng
+
+Concept hiện tại được giữ làm hướng nhìn mong muốn. Không coi bộ UI đang đề xuất là đã được chốt, không đánh dấu thiết kế hoàn tất chỉ vì ảnh AI đẹp. IBM Plex/Tabler và các nguồn bên dưới vẫn là ứng viên cho đến khi kiểm tra tài nguyên thực.
+
+**Thứ tự bắt buộc: tài nguyên thật → mẫu Unity thật → chốt khả năng dựng → mới cân nhắc gen concept.** Không gen thêm ảnh khi chưa qua gate này. Không hạ chất lượng runtime rồi viện lý do ảnh concept chỉ để minh họa; nếu không tái tạo được một chi tiết, phải chỉ rõ chỗ thiếu và chọn giải pháp khả thi trước.
+
+### Gate tài nguyên trước concept/triển khai diện rộng
+
+1. Lập mapping cho từng phần nhìn thấy: wordmark, panel, button, input, toggle, pin/move/close/backspace, chấm log, font, graph. Mỗi phần phải có asset thật với đường dẫn/license hoặc giải pháp geometry/shader đã render được trong Unity. Link web hoặc hình AI chưa đủ.
+2. Chọn và mở thử đúng file font/icon/sprite; kiểm tra glyph tiếng Việt, số/mono, padding, alpha và độ nét. Chưa chọn cả UI pack chỉ từ ảnh quảng cáo.
+3. Dựng một màn specimen/prototype nhỏ trong project/scene kiểm tra riêng bằng **đúng tài nguyên dự kiến ship**: header/logo, một resource card, category chip, HUD, keypad và vài control Editor đại diện. Chụp Unity thật, không dùng ảnh AI thay cho kết quả render.
+4. So với hướng nhìn hiện tại ở 100% zoom, ngang/dọc và canvas scale phù hợp. Ghi asset nào đáp ứng, asset nào thiếu, khác biệt nào còn lại; kiểm tra pointer cho các nút thiết yếu.
+5. Đo texture/font sau import và nén trên target dự kiến. Không chỉ dựa kích thước file nguồn hoặc budget lý thuyết.
+6. Chỉ khi bảng mapping không còn hạng mục chưa chứng minh mới đánh dấu resource gate passed. Nếu cần gen ảnh sau đó, chỉ dùng để sắp xếp đúng bộ tài nguyên/hình dạng/font đã xác thực; không thêm chi tiết đẹp nhưng không có cách dựng. Ưu tiên tiếp tục chỉnh prototype và ảnh Unity thật.
+
+Các lỗi input đã xác nhận vẫn là P0; việc sửa chúng không cần chờ thay cả skin. Phạm vi hiện tại vẫn chỉ là plan, chưa sửa runtime.
 
 ## 1. Kết quả kiểm tra source và ảnh
 
@@ -143,7 +160,7 @@ Tham khảo [Unity texture formats](https://docs.unity3d.com/6000.0/Documentatio
 
 | Phase | Việc thực hiện tiếp theo | Điều kiện nghiệm thu |
 | --- | --- | --- |
-| 0 — baseline/input blockers | Ghi lại ảnh, font/importer sizes, raycast results. Reproduce Cancel/Delete bằng pointer. Lập owner của rail/header/pinned/dock. | Có repro trước sửa và vị trí source cụ thể; không coi Invoke callback là touch test. |
+| 0 — baseline/input blockers + resource gate | Ghi baseline/input repro và dựng specimen Unity bằng tài nguyên thật theo gate phía trên. Lập asset-to-control mapping cùng owner rail/header/pinned/dock. | Có repro và asset mapping; ảnh Unity thật chứng minh chất lượng/khả năng dựng, font/importer được kiểm tra; không coi Invoke callback hay ảnh AI là nghiệm thu. |
 | 1 — keypad/hit targets | Tách Cancel/Backspace, sửa Graphic hit surfaces và capture gesture, bỏ title, thêm text fitting. | Tap số → Delete → Cancel thật; Delete khi rỗng không tự Cancel; CanCancel=false không đóng; short/long PIN, sai PIN/cooldown, passphrase, rotation, drag/no accidental submit. |
 | 2 — design foundation | Alpha wordmark, chọn font bằng specimen, icon set/ratios, token spacing/borders, đồng nhất separator. | So ảnh 100%/DPI; không ellipse, không chữ tràn, không strip logo đỏ; reference/GUID/no-missing-script pass. |
 | 3 — category pins | Category summary/chip, expansion/overflow, same registry/card adapter, cleanup/preferences. | Pin category 1/10/100/1000 option vẫn mở chip nhỏ; không chạy mutation; unpin/dispose/restore đúng ID, bounded allocation/UI work. |
@@ -172,4 +189,4 @@ Hai board ở `docs/concepts/debugger-redesign-v2/`:
 
 Board là định hướng shape/hierarchy/màu; cỡ chữ/texture thực phải được dựng lại bằng layout có đo đạc, không cắt ảnh concept làm atlas UI. Text hoặc icon AI vẽ không chính xác không được trở thành contract. Source code và các gate ở trên là contract chức năng.
 
-**Hoàn tất bước hiện tại:** source audit, nguồn tham khảo, plan và concept. **Chưa hoàn tất:** sửa lỗi runtime/keypad/pin, thay font/assets, pointer/device acceptance và release. Workflow `docs/agents/dreamy-workflow.md` không có trong checkout; dùng checkpoint thủ công này, không tuyên bố native harness đã chạy.
+**Đã có:** source audit, nguồn tham khảo, plan và ảnh hướng nhìn. **Chưa đạt resource gate:** chưa chốt bộ UI, chưa có specimen Unity từ tài nguyên dự kiến ship. Thiết kế chưa được xác nhận khả thi đầy đủ. Sửa lỗi runtime/keypad/pin, thay font/assets, pointer/device acceptance và release vẫn chưa thực hiện. Workflow `docs/agents/dreamy-workflow.md` không có trong checkout; dùng checkpoint thủ công này, không tuyên bố native harness đã chạy.

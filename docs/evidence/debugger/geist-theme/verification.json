@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-06",
+  "unity": "6000.4.12f1 Linux",
+  "tests": {
+    "EditMode": {
+      "id": "2",
+      "testcasecount": "84",
+      "result": "Passed",
+      "total": "84",
+      "passed": "84",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-06 07:30:36Z",
+      "end-time": "2026-11-06 07:30:38Z",
+      "duration": "2.0929727"
+    },
+    "PlayMode": {
+      "id": "2",
+      "testcasecount": "57",
+      "result": "Passed",
+      "total": "57",
+      "passed": "57",
+      "failed": "0",
+      "inconclusive": "0",
+      "skipped": "0",
+      "asserts": "0",
+      "engine-version": "3.5.0.0",
+      "clr-version": "4.0.30319.42000",
+      "start-time": "2026-11-06 07:30:47Z",
+      "end-time": "2026-11-06 07:30:58Z",
+      "duration": "10.2775692"
+    }
+  },
+  "fonts": {
+    "GeistMono-Regular.ttf": "3c759092cce66128efd2e87276768b01db42a59e2b11cae2a1ce959314dc0234",
+    "Geist-Regular.ttf": "9ab5743f837ab2ca0339b29ed73d6a42764b427424cfa93c831253ea766c6be3"
+  },
+  "device": "not tested"
+}

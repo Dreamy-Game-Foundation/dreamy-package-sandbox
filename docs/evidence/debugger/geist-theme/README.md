@@ -1,0 +1,7 @@
+# Geist / graphite interface — completed 2026-11-06
+
+Implements the approved restrained developer-tool direction in existing uGUI: flat panel sprite for button/background surfaces, subtle one-unit control edges, cool graphite hierarchy, muted dark brand header and localized red selection accents. Sidebar/pin/HUD/empty-state behavior remains intact. No web framework imported.
+
+Unmodified static Geist Sans and Geist Mono from official v1.9.1 release, with SIL OFL license and source mapping retained. Sans applies to UI labels; Mono applies to stack details, log previews/timestamps, numeric value fields and FPS HUD. Inter and old depth-button assets remain for compatibility, outside current default references. Catalog and stylesheet assets updated through Unity APIs; original script/meta identities preserved.
+
+Fresh package-only consumer passed 84 EditMode + 57 PlayMode, without imported sample tests. New regression checks category heading font, flat sprite identity, console Mono font and HUD Mono labels. Initial EditMode found the authored sidebar header still using the old color; its prefab color was updated through PrefabUtility, then the full suite passed. Actual sandbox MCP confirmed Geist heading/number fonts and the Panel sprite; font character queries confirmed the Vietnamese sample in both families. Editor left stopped; no game commands or reports executed. Screenshot transport again returned a cropped viewport and was excluded from visual acceptance. Physical-device aesthetics, DPI/performance and mobile builds remain unverified.

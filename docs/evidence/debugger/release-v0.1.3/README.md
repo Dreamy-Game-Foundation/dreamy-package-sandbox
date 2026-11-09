@@ -1,0 +1,7 @@
+# v0.1.3 release preparation — 2026-11-09
+
+Status: preparation complete. Fresh candidate tests: **92/92 EditMode and 74/74 PlayMode passed** in Unity 6000.4.12f1/Linux; PlayMode used OpenGL. Archive guard passed; all **931 shipped files** match the tested current package source. Manifest/runtime VersionInfo 0.1.3, author unchanged. README/import/sample paths, changelog, migration, platform support, release notes and tracking updated. Published publicly at https://github.com/Dreamy-Game-Foundation/com.dreamy.debugger/releases/tag/v0.1.3 . Main and annotated tag resolve to 55c6e281e41097229364bf97541d6b2331161eec.
+
+Archive: `.utmp/releases/debugger/0.1.3/com.dreamy.debugger-0.1.3.tgz` in the parent workspace (also built under /tmp/dreamy-release-013); exact size/hash in archive-verification.json. Do not count earlier version receipts as this artifact's proof. Candidate validation included the existing edited prefabs. A fresh consumer installed the exact GitHub tag: 84/84 package EditMode tests passed, with 931 installed files matching final commit 55c6e28. Physical-device and native Editor visual/performance gates remain open per package RELEASE.md.
+
+The referenced docs/agents/dreamy-workflow.md remains absent; maintain this manual checkpoint. Matching test XML and candidate-files.json fingerprints are attached. Release publication is complete. The GitHub asset digest and byte count match the verified archive; publication.json and fresh Git receipts are attached. Target-device acceptance remains open.

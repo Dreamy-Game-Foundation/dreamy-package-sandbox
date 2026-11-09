@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "taskId": "tutorial-integration",
+  "status": "complete",
+  "objective": "Implement Tutorial P0/P1: custom view, 2D targets, compatibility, multi-focus, recovery and gestures",
+  "baselinePackageCommit": "529193ef9f0bdf504a076a1b4a35589da1ea209c",
+  "baselineVerification": "Unity 6000.4.12f1: Tutorial EditMode 27/27 passed (job 399db003f2ac4658af02e5b340f3793e)",
+  "nextAction": "Complete; local release verified. No push or device/player verification performed.",
+  "limitations": [
+    "Referenced docs/agents/dreamy-workflow.md and compatibility registry absent",
+    "Settings aggregate harness blocked by existing imported sample mismatch"
+  ],
+  "packageCommit": "fa5dae01bd11357e17cf9d852023aec8c7bcd761",
+  "packageTag": "v0.2.0",
+  "matchingReceipt": "docs/evidence/tutorial-integration/verification.json",
+  "successfulChecks": {
+    "EditMode": 33,
+    "PlayMode": 17
+  }
+}

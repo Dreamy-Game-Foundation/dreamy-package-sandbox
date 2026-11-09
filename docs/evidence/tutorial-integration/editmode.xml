@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="33" result="Passed" total="33" passed="33" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.1534091">
+  <test-suite type="TestSuite" id="1000" name="consumer" fullname="consumer" runstate="Runnable" testcasecount="34" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.153409" total="33" passed="33" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1040" name="Dreamy.Tutorial.Editor.Tests.dll" fullname="/tmp/dreamy-tutorial-release-0.2.0-final/consumer/Library/ScriptAssemblies/Dreamy.Tutorial.Editor.Tests.dll" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.146709" total="33" passed="33" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="2772230" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1041" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.146444" total="33" passed="33" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1042" name="Tutorial" fullname="Dreamy.Tutorial" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.146371" total="33" passed="33" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1043" name="Tests" fullname="Dreamy.Tutorial.Tests" runstate="Runnable" testcasecount="33" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.146282" total="33" passed="33" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="TutorialIntegrationExtensionTests" fullname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests" classname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.117279" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1007" name="InvalidTargetLists_AreRejected" fullname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests.InvalidTargetLists_AreRejected" classname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.088372" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1004" name="InvalidTargetLists_AreRejected(&quot;,\&quot;focusTargetIds\&quot;:[\&quot;a\&quot;,\&quot;a\&quot;]&quot;)" fullname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests.InvalidTargetLists_AreRejected(&quot;,\&quot;focusTargetIds\&quot;:[\&quot;a\&quot;,\&quot;a\&quot;]&quot;)" methodname="InvalidTargetLists_AreRejected" classname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests" runstate="Runnable" seed="1989078822" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.084040" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1005" name="InvalidTargetLists_AreRejected(&quot;,\&quot;inputTargetIds\&quot;:[\&quot;\&quot;]&quot;)" fullname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests.InvalidTargetLists_AreRejected(&quot;,\&quot;inputTargetIds\&quot;:[\&quot;\&quot;]&quot;)" methodname="InvalidTargetLists_AreRejected" classname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests" runstate="Runnable" seed="136001604" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000488" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1006" name="InvalidTargetLists_AreRejected(&quot;,\&quot;inputTargetIds\&quot;:[],\&quot;blockOutsideTarget\&quot;:true&quot;)" fullname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests.InvalidTargetLists_AreRejected(&quot;,\&quot;inputTargetIds\&quot;:[],\&quot;blockOutsideTarget\&quot;:true&quot;)" methodname="InvalidTargetLists_AreRejected" classname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests" runstate="Runnable" seed="80021423" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000270" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1008" name="LegacyTarget_AndExplicitEmptyFocus_HaveDistinctSemantics" fullname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests.LegacyTarget_AndExplicitEmptyFocus_HaveDistinctSemantics" methodname="LegacyTarget_AndExplicitEmptyFocus_HaveDistinctSemantics" classname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests" runstate="Runnable" seed="316193768" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.004035" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1002" name="MultiFocus_WaitsForAllTargets_AndDoesNotChangeClickAuthority" fullname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests.MultiFocus_WaitsForAllTargets_AndDoesNotChangeClickAuthority" methodname="MultiFocus_WaitsForAllTargets_AndDoesNotChangeClickAuthority" classname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests" runstate="Runnable" seed="2081475930" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.018243" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1003" name="WaitingTimeout_NotifiesOnce_ResetsOnRecovery_AndNeverAdvances" fullname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests.WaitingTimeout_NotifiesOnce_ResetsOnRecovery_AndNeverAdvances" methodname="WaitingTimeout_NotifiesOnce_ResetsOnRecovery_AndNeverAdvances" classname="Dreamy.Tutorial.Tests.TutorialIntegrationExtensionTests" runstate="Runnable" seed="296078022" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.001329" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1009" name="TutorialModelTests" fullname="Dreamy.Tutorial.Tests.TutorialModelTests" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" testcasecount="20" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.014134" total="20" passed="20" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1011" name="Advance_RejectsDoubleClickAndWrongCompletionMode" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.Advance_RejectsDoubleClickAndWrongCompletionMode" methodname="Advance_RejectsDoubleClickAndWrongCompletionMode" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="1072030742" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000616" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1024" name="CatalogIdentityChange_DoesNotSilentlyResetProgress" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.CatalogIdentityChange_DoesNotSilentlyResetProgress" methodname="CatalogIdentityChange_DoesNotSilentlyResetProgress" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="1461302782" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000421" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1012" name="Click_RequiresAvailableAndMatchingTarget" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.Click_RequiresAvailableAndMatchingTarget" methodname="Click_RequiresAvailableAndMatchingTarget" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="1300882016" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000485" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1014" name="CompletedFlow_DoesNotReplayAfterReload" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.CompletedFlow_DoesNotReplayAfterReload" methodname="CompletedFlow_DoesNotReplayAfterReload" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="1074425900" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000390" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1021" name="FailedAdvance_PreservesTokenAndCheckpointForRetry" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.FailedAdvance_PreservesTokenAndCheckpointForRetry" methodname="FailedAdvance_PreservesTokenAndCheckpointForRetry" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="436071938" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000669" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1020" name="FailedStart_DoesNotCreateSession" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.FailedStart_DoesNotCreateSession" methodname="FailedStart_DoesNotCreateSession" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="94911215" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000301" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1030" name="InvalidConfig_IsRejected" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.InvalidConfig_IsRejected" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.001627" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1025" name="InvalidConfig_IsRejected(&quot;\&quot;revision\&quot;:1&quot;,&quot;\&quot;revision\&quot;:0&quot;)" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.InvalidConfig_IsRejected(&quot;\&quot;revision\&quot;:1&quot;,&quot;\&quot;revision\&quot;:0&quot;)" methodname="InvalidConfig_IsRejected" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="1961218585" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000272" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1026" name="InvalidConfig_IsRejected(&quot;\&quot;targetId\&quot;:\&quot;button\&quot;&quot;,&quot;\&quot;targetId\&quot;:\&quot;\&quot;&quot;)" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.InvalidConfig_IsRejected(&quot;\&quot;targetId\&quot;:\&quot;button\&quot;&quot;,&quot;\&quot;targetId\&quot;:\&quot;\&quot;&quot;)" methodname="InvalidConfig_IsRejected" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="1159503165" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000090" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1027" name="InvalidConfig_IsRejected(&quot;\&quot;signalKey\&quot;:\&quot;success\&quot;&quot;,&quot;\&quot;signalKey\&quot;:\&quot;\&quot;&quot;)" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.InvalidConfig_IsRejected(&quot;\&quot;signalKey\&quot;:\&quot;success\&quot;&quot;,&quot;\&quot;signalKey\&quot;:\&quot;\&quot;&quot;)" methodname="InvalidConfig_IsRejected" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="1736352358" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000079" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1028" name="InvalidConfig_IsRejected(&quot;\&quot;id\&quot;:\&quot;click\&quot;&quot;,&quot;\&quot;id\&quot;:\&quot;intro\&quot;&quot;)" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.InvalidConfig_IsRejected(&quot;\&quot;id\&quot;:\&quot;click\&quot;&quot;,&quot;\&quot;id\&quot;:\&quot;intro\&quot;&quot;)" methodname="InvalidConfig_IsRejected" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="212906877" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000072" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1029" name="InvalidConfig_IsRejected(&quot;\&quot;completionMode\&quot;:\&quot;Next\&quot;&quot;,&quot;\&quot;completionMode\&quot;:99&quot;)" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.InvalidConfig_IsRejected(&quot;\&quot;completionMode\&quot;:\&quot;Next\&quot;&quot;,&quot;\&quot;completionMode\&quot;:99&quot;)" methodname="InvalidConfig_IsRejected" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="516527690" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000716" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1019" name="MandatoryFlow_CannotSkip" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.MandatoryFlow_CannotSkip" methodname="MandatoryFlow_CannotSkip" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="1085787211" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000327" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1013" name="NavigationSignal_CompletesAfterTargetDisappears" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.NavigationSignal_CompletesAfterTargetDisappears" methodname="NavigationSignal_CompletesAfterTargetDisappears" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="368806157" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000373" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1022" name="PersistenceAndSubscriberReentry_ReturnBusy" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.PersistenceAndSubscriberReentry_ReturnBusy" methodname="PersistenceAndSubscriberReentry_ReturnBusy" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="1274332383" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000385" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1023" name="RemovedCheckpoint_RequiresMigration_AndExplicitMappingResumes" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.RemovedCheckpoint_RequiresMigration_AndExplicitMappingResumes" methodname="RemovedCheckpoint_RequiresMigration_AndExplicitMappingResumes" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="495885297" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000869" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1015" name="Resume_UsesStepIdAndNewSessionToken" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.Resume_UsesStepIdAndNewSessionToken" methodname="Resume_UsesStepIdAndNewSessionToken" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="872899659" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.004334" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1018" name="Skip_IsTerminalAndDistinctFromComplete" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.Skip_IsTerminalAndDistinctFromComplete" methodname="Skip_IsTerminalAndDistinctFromComplete" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="1468895956" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000441" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1010" name="Start_DuplicateAndBusyAreExplicit" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.Start_DuplicateAndBusyAreExplicit" methodname="Start_DuplicateAndBusyAreExplicit" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="636868163" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000406" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1017" name="Suspend_RevokesCallbackToken" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.Suspend_RevokesCallbackToken" methodname="Suspend_RevokesCallbackToken" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="1761140097" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000372" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1016" name="TargetLoss_WaitsWithoutAdvancing" fullname="Dreamy.Tutorial.Tests.TutorialModelTests.TargetLoss_WaitsWithoutAdvancing" methodname="TargetLoss_WaitsWithoutAdvancing" classname="Dreamy.Tutorial.Tests.TutorialModelTests" runstate="Runnable" seed="772594832" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000350" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1031" name="TutorialPresenterTests" fullname="Dreamy.Tutorial.Tests.TutorialPresenterTests" classname="Dreamy.Tutorial.Tests.TutorialPresenterTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.003250" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1034" name="CapturedOldClick_DoesNotAdvanceNextStepOrTouchDisposedView" fullname="Dreamy.Tutorial.Tests.TutorialPresenterTests.CapturedOldClick_DoesNotAdvanceNextStepOrTouchDisposedView" methodname="CapturedOldClick_DoesNotAdvanceNextStepOrTouchDisposedView" classname="Dreamy.Tutorial.Tests.TutorialPresenterTests" runstate="Runnable" seed="97770082" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000887" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1035" name="HostSignalSaveFailure_RetryPersistsWithoutRepeatingAction" fullname="Dreamy.Tutorial.Tests.TutorialPresenterTests.HostSignalSaveFailure_RetryPersistsWithoutRepeatingAction" methodname="HostSignalSaveFailure_RetryPersistsWithoutRepeatingAction" classname="Dreamy.Tutorial.Tests.TutorialPresenterTests" runstate="Runnable" seed="27963225" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000874" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1032" name="ShowTwice_BindsOnceAndDisposeStopsInputs" fullname="Dreamy.Tutorial.Tests.TutorialPresenterTests.ShowTwice_BindsOnceAndDisposeStopsInputs" methodname="ShowTwice_BindsOnceAndDisposeStopsInputs" classname="Dreamy.Tutorial.Tests.TutorialPresenterTests" runstate="Runnable" seed="116879874" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000403" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1033" name="TargetAppearsAndDisappears_WithoutAdvancing" fullname="Dreamy.Tutorial.Tests.TutorialPresenterTests.TargetAppearsAndDisappears_WithoutAdvancing" methodname="TargetAppearsAndDisappears_WithoutAdvancing" classname="Dreamy.Tutorial.Tests.TutorialPresenterTests" runstate="Runnable" seed="425268204" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.000462" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1036" name="TutorialTargetTests" fullname="Dreamy.Tutorial.Tests.TutorialTargetTests" classname="Dreamy.Tutorial.Tests.TutorialTargetTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.010863" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1039" name="DuplicateTarget_IsRejectedWithoutReplacingOriginal" fullname="Dreamy.Tutorial.Tests.TutorialTargetTests.DuplicateTarget_IsRejectedWithoutReplacingOriginal" methodname="DuplicateTarget_IsRejectedWithoutReplacingOriginal" classname="Dreamy.Tutorial.Tests.TutorialTargetTests" runstate="Runnable" seed="977845264" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.006107" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Duplicate tutorial target 'cube' in registry 'TutorialTest'.
+]]></output>
+              </test-case>
+              <test-case id="1037" name="WorldBounds_ProjectAndDisappearBehindCamera" fullname="Dreamy.Tutorial.Tests.TutorialTargetTests.WorldBounds_ProjectAndDisappearBehindCamera" methodname="WorldBounds_ProjectAndDisappearBehindCamera" classname="Dreamy.Tutorial.Tests.TutorialTargetTests" runstate="Runnable" seed="1937073105" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.002526" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1038" name="WorldClick_RequiresExactCollider_AndRespectsOccluder" fullname="Dreamy.Tutorial.Tests.TutorialTargetTests.WorldClick_RequiresExactCollider_AndRespectsOccluder" methodname="WorldClick_RequiresExactCollider_AndRespectsOccluder" classname="Dreamy.Tutorial.Tests.TutorialTargetTests" runstate="Runnable" seed="1467208406" result="Passed" start-time="2026-11-09 08:03:11Z" end-time="2026-11-09 08:03:11Z" duration="0.001303" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: /tmp/dreamy-tutorial-release-0.2.0-final/editmode.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

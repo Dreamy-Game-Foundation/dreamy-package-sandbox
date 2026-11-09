@@ -1,0 +1,16 @@
+{
+  "taskId": "tutorial-integration",
+  "status": "resolved",
+  "observedFailures": [
+    "Settings harness blocked by pre-existing sample drift",
+    "2D test camera fixture and lifecycle test-layer mismatch",
+    "Minimal consumer missing DOTween audio module",
+    "Recovery button toggled every waiting render"
+  ],
+  "matchingReceipt": "docs/evidence/tutorial-integration/verification.json",
+  "successfulChecks": {
+    "EditMode": 33,
+    "PlayMode": 17
+  },
+  "sourceFingerprint": "adc24e0b6ac7c858d7cd74201620e9dcdc742ded3700ca458ceb4c98111979da"
+}

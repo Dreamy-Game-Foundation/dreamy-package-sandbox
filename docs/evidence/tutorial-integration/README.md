@@ -10,4 +10,4 @@ Observed failures trong quá trình làm:
 - Consumer tối giản thiếu Audio module mà DOTween cần. Consumer cuối dùng built-in modules của host; không sửa dependency ngoài Tutorial.
 - Rà soát phát hiện recovery button bị tắt/bật mỗi Tick. Đã sửa và thêm test giữ button active qua waiting render, không nhân subscription sau reopen.
 
-Tag/commit local được ghi tại `release.json` sau khi tạo commit package; chưa push lên remote. Chưa có player/device/visual game acceptance.
+Tag `v0.2.0` và commit package `fa5dae0` đã push lên origin/main; chi tiết tại `release.json`. Chưa có player/device/visual game acceptance.

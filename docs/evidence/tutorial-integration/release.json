@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "commit": "fa5dae01bd11357e17cf9d852023aec8c7bcd761",
   "tag": "v0.2.0",
-  "publication": "local-only",
+  "publication": "package-commit-and-tag-pushed",
   "verifiedSourceFingerprint": "adc24e0b6ac7c858d7cd74201620e9dcdc742ded3700ca458ceb4c98111979da",
   "checks": {
     "EditMode": {
@@ -14,5 +14,6 @@
       "passed": 17,
       "total": 17
     }
-  }
+  },
+  "remote": "https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.tutorial.git"
 }

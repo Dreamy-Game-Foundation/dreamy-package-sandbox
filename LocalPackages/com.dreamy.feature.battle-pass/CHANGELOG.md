@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.1] - 2026-11-10
+
+- Hide the optional demo rebuild menu; retain the explicit batchmode Build entry point and supplied scene/prefabs.
+- Update sample instructions to use the explicit rebuild command. Runtime, schema 1 and asset GUIDs are unchanged.
+- Source version prepared locally; no remote repository, release tag or device validation is implied.
+
 ## 0.1.0 — candidate, unreleased
 
 - Added occurrence-based offline seasonal XP, Free/Premium tiers, frozen config and archived tombstones.

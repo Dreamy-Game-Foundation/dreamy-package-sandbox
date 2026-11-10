@@ -1,6 +1,6 @@
 # Dreamy Battle Pass
 
-`com.dreamy.feature.battle-pass` **0.1.0 candidate**, Unity 6000.0+. Offline Free/Premium season progression for casual/puzzle games, separate from player level and wallet balances.
+`com.dreamy.feature.battle-pass` **0.1.1 candidate**, Unity 6000.0+. Offline Free/Premium season progression for casual/puzzle games, separate from player level and wallet balances.
 
 - Explicit enrollment, 14-day duration or authored fixed UTC window, 48-hour claim grace.
 - Cumulative `long` XP, occurrence-scoped durable event receipts, bounded XP without overflow.

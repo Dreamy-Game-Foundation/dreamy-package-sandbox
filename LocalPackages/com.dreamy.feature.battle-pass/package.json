@@ -1,6 +1,6 @@
 {
   "name": "com.dreamy.feature.battle-pass",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "displayName": "Dreamy Battle Pass",
   "description": "Offline seasonal progression with Free/Premium tracks and recoverable Economy claims.",
   "unity": "6000.0",

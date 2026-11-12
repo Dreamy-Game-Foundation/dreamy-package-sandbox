@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Code executed successfully.",
+  "data": {
+    "result": {
+      "project": "/run/media/tutrinh/NewData/planet-bunker-tu-code/Assets",
+      "playing": false,
+      "compiling": false,
+      "sceneDirty": false,
+      "hasHiddenShutter": true,
+      "hasTap": true
+    },
+    "compiler": "roslyn"
+  }
+}

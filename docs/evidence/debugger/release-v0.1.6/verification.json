@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-release-v0.1.6",
+  "version": "0.1.6",
+  "scope": "Sandbox package only; no other project access/update",
+  "status": "prepared locally; not committed, tagged, pushed or published",
+  "archive": {
+    "path": "/tmp/com.dreamy.debugger-0.1.6.tgz",
+    "bytes": 3801717,
+    "sha256": "131e5fd30fb700150ac9c5d0817ef928850a54d8576487e2b8ff962f0e877877",
+    "entries": 926,
+    "verification": "Tools~/verify_package.py passed"
+  },
+  "checks": [
+    "Manifest/runtime/README/changelog version consistency",
+    "Relative documentation links",
+    "Archive matches final manifest, README, changelog, runtime version and illustrated HTML",
+    "Package/root git diff --check"
+  ],
+  "priorBehaviorEvidence": "docs/evidence/debugger/mode-hide-capture-split/verification.json: 23 PlayMode and 2 EditMode, before version preparation; retain exact recorded fingerprint",
+  "limitations": [
+    "No Android/LDPlayer runtime verification",
+    "No APK rebuild/install",
+    "No committed Git install verification"
+  ],
+  "observedFailures": [
+    {
+      "failure": "Initial npm pack ran at sandbox root with no package manifest and returned 254",
+      "response": "Run from LocalPackages/com.dreamy.debugger; final archive verification and byte parity passed"
+    }
+  ],
+  "unity": {
+    "runtimeVersion": "0.1.6",
+    "compiling": false,
+    "playing": false,
+    "sceneDirty": false,
+    "consoleErrors": 0
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-shutter-tap-feedback",
+  "sourceFingerprint": "35a63a213a53dfed8c0ec168f2d8736330f4cf3887621c9ac0dd7c80b1367519",
+  "unityVersion": "6000.4.12f1",
+  "playMode": {
+    "jobId": "8be8cc6b12e84027863d9d3db6e7ea90",
+    "passed": 22,
+    "failed": 0
+  },
+  "editMode": {
+    "jobId": "e78d725091614eee963881c4f68d1c7a",
+    "passed": 2,
+    "failed": 0
+  },
+  "visual": {
+    "jobId": "013f954585de46568bd34f4d963da506",
+    "passed": 1,
+    "png": "shutter-saved-1c72942b1cd2428eb2798dc8397ebc59.png",
+    "visuallyInspected": true
+  },
+  "inputProbes": {
+    "mouseTaps": 1,
+    "touchTaps": 1,
+    "pressReleaseInSingleInputUpdate": true,
+    "focusSettingsRestored": true,
+    "temporaryDevicesRemoved": true
+  },
+  "coverage": [
+    "Default OFF ignores taps; explicit ON enables shutter",
+    "Short tap without held pointer initiates capture; busy guard ignores duplicates",
+    "Tap acknowledgment precedes protected frame; saved feedback follows completed PNG",
+    "Pixel check shows clean PNG at feedback position; subsequent native screenshot shows saved ring",
+    "Hidden gameplay input and UI restore regressions remain passing"
+  ],
+  "editor": {
+    "playing": false,
+    "compiling": false,
+    "sceneDirty": false,
+    "consoleErrors": 0
+  },
+  "observations": [
+    {
+      "failure": "Frame polling can miss a mouse/touch press and release completed between Updates",
+      "response": "Add independent Input System tap action and bridge events; preserve legacy polling; queued mouse and touch press/release each produced exactly one event in one player input update"
+    },
+    {
+      "failure": "Input adapter initializer attribute temporarily attached to a new field while editing",
+      "response": "Move RuntimeInitializeOnLoadMethod back to Install method; compile clean before authoring and tests"
+    },
+    {
+      "failure": "Input action probes in Edit Mode produced no callbacks; typed Dynamic Update overload is internal",
+      "response": "Inspect installed Input System source and run probes in Play Mode with temporary focus behavior restored in finally; actual mouse/touch input update receipts passed"
+    }
+  ],
+  "limitations": [
+    "No physical Android/LDPlayer validation; rebuild required to use local changes",
+    "Changes are local; existing v0.1.5 tag untouched",
+    "docs/agents/dreamy-workflow.md absent"
+  ]
+}

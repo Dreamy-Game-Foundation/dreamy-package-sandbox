@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Code executed successfully.",
+  "data": {
+    "result": {
+      "playing": true,
+      "taps": 1,
+      "start": "(250.00, 120.00)",
+      "end": "(250.00, 120.00)",
+      "singleInputUpdate": true,
+      "device": "Touchscreen"
+    },
+    "compiler": "codedom"
+  }
+}

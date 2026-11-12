@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "message": "Code executed successfully.",
+  "data": {
+    "result": {
+      "wasHidden": true,
+      "enabled": true,
+      "busy": true,
+      "status": "Preparing screenshot",
+      "feedback": true,
+      "point": "(1264.00, 2617.00)",
+      "safeArea": "(x:0.00, y:102.00, width:1284.00, height:2535.00)"
+    },
+    "compiler": "codedom"
+  }
+}

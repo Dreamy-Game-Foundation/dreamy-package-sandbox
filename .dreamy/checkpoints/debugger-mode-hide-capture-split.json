@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-mode-hide-capture-split",
+  "status": "complete",
+  "objective": "In sandbox only: arm capture independently; split Capture Keep/All/Selected from manual Hide All/Selected",
+  "nextAction": null,
+  "verification": "docs/evidence/debugger/mode-hide-capture-split/verification.json",
+  "scopeConstraint": "Do not connect to or update other projects. User will update consumer packages."
+}

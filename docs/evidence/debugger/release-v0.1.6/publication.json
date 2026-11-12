@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-publish-v0.1.6",
+  "scope": "Package debugger and sandbox repositories only; no consumer project accessed or updated",
+  "packageCommit": "a88411e8b7fba93cfc34c6eea18dd3813c40b4e2",
+  "packageRemote": "https://github.com/Dreamy-Game-Foundation/com.dreamy.debugger.git",
+  "branch": "main",
+  "tag": "v0.1.6",
+  "tagType": "annotated",
+  "remoteTagCommitVerified": true,
+  "archive": {
+    "sha256": "6e17539cce2de9c051f8adf6c8617eb6c62ab2ef7b6a1edfa0cec93a038cb20a",
+    "bytes": 3801672,
+    "verification": "Final verify_package.py and version/archive byte parity passed"
+  },
+  "sandboxScope": "All current sandbox changes, including existing LocalizationFont.asset, package gitlink, documentation, observations and evidence",
+  "limitations": [
+    "No physical Android/LDPlayer runtime validation",
+    "No consumer project/APK updated in this publication task"
+  ]
+}

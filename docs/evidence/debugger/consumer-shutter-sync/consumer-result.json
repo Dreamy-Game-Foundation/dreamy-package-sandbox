@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "message": "Code executed successfully.",
+  "data": {
+    "result": {
+      "project": "/run/media/tutrinh/NewData/planet-bunker-tu-code/Assets",
+      "start": "hidden=True; enabled=True; busy=True; status=Preparing screenshot; point=(2371.00, 1150.00)",
+      "hidden": true,
+      "enabled": true,
+      "busy": false,
+      "status": "Screenshot saved • 2532 × 1170",
+      "before": "/home/tutrinh/.config/unity3d/Dreamy Game/Orbit Busters/DreamyDebugger/Screenshots/Screenshot-20261112-081849-210-324b62c8.png",
+      "path": "/home/tutrinh/.config/unity3d/Dreamy Game/Orbit Busters/DreamyDebugger/Screenshots/Screenshot-20261112-082134-338-170e1b84.png",
+      "newFile": true
+    },
+    "compiler": "roslyn"
+  }
+}

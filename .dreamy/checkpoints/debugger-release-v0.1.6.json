@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-release-v0.1.6",
+  "status": "complete",
+  "objective": "Sandbox only: update README, changelog, package/runtime version and release documentation to 0.1.6",
+  "verification": "docs/evidence/debugger/release-v0.1.6/verification.json",
+  "nextAction": null,
+  "scopeConstraint": "Do not connect to/update consumer projects"
+}

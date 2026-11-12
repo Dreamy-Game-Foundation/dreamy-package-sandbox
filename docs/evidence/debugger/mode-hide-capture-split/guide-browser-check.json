@@ -1,0 +1,20 @@
+{
+  "initial": {
+    "off": true,
+    "hidden": false,
+    "disabled": true
+  },
+  "captureWithoutHide": {
+    "enabled": true,
+    "hidden": false,
+    "status": "Saved. M\u00f4 ph\u1ecfng: PNG \u0111\u00e3 l\u01b0u. UI v\u1eabn hi\u1ec7n; ch\u01b0a b\u1ea5m Hide UI. Kh\u00f4ng b\u1eadt preview."
+  },
+  "hideIndependent": {
+    "off": true,
+    "hidden": true
+  },
+  "mobile": {
+    "width": 390,
+    "scroll": 390
+  }
+}

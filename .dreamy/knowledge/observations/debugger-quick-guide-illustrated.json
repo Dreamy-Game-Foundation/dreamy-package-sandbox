@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-quick-guide-illustrated",
+  "observations": [
+    {
+      "failure": "Waiting on decode for lazy offscreen images did not resolve during validation",
+      "resolution": "Request eager loading only in browser validation before decoding all images; retain lazy loading in delivered HTML"
+    },
+    {
+      "failure": "Hold demo relied on requestAnimationFrame progression; embedded browser did not advance frames reliably during hold validation",
+      "resolution": "Measure hold duration with performance.now and cancelable timers; actual pointer hold and early-release checks passed"
+    },
+    {
+      "failure": "Mobile min-height and aspect ratio expanded demo width beyond viewport",
+      "resolution": "Set explicit width:100%; 320px and 390px overflow checks passed"
+    },
+    {
+      "failure": "Browser command latency allowed short autoplay to finish before a subsequent pause assertion",
+      "resolution": "Validate start/pause atomically and validate full automatic playback separately"
+    }
+  ],
+  "verification": {
+    "receipt": "docs/evidence/debugger/quick-guide-illustrated/verification.json",
+    "htmlSha256": "a863e7f5dd6d5bd7f934a1569c2b0ea0fd4a114cb5901546edccdc8fc40a2024"
+  }
+}

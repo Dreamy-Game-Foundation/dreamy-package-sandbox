@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-shutter-tap-feedback",
+  "status": "complete",
+  "objective": "Opt-in hidden shutter, event-backed fast taps and clean capture acknowledgment/saved feedback",
+  "nextAction": null,
+  "limitations": [
+    "Android/LDPlayer device runtime not available",
+    "docs/agents/dreamy-workflow.md absent"
+  ],
+  "verification": "docs/evidence/debugger/shutter-tap-feedback/verification.json"
+}

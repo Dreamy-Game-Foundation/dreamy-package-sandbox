@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-input-capture-fix",
+  "status": "local changes; v0.1.5 tag unchanged",
+  "unityVersion": "6000.4.12f1",
+  "sourceCSharpFingerprint": "bc701fb1b16393015760560fae7c955a980ff98600cc7f975cf635cb2a0ffb59",
+  "finalPrefabFingerprint": "3d83fa627b165c4228013e413bb53bf58077610cbbcd0e3fe07a7302f8c04983",
+  "playMode": {
+    "jobId": "86611fba848f4ddca51f4574085f01e3",
+    "passed": 21,
+    "failed": 0
+  },
+  "editMode": {
+    "jobId": "e5c3bcea642d43a6aed2cd6b86e107b2",
+    "passed": 2,
+    "failed": 0
+  },
+  "coverage": [
+    "Hidden gameplay UI retains GraphicRaycaster hits and pointer click dispatch",
+    "Top-right release triggers native PNG without selected 30s delay",
+    "Native PNG has clean gameplay pixels; session remains hidden and review stays closed",
+    "Game-owned interactability change survives restore",
+    "Mobile native filename relative; desktop absolute",
+    "Existing cancel/restore/external focus/storage/tab-layout regressions"
+  ],
+  "research": {
+    "unity": "https://docs.unity.com/en-us/engine/6000.0/script-reference/unityengine/screencapture/capturescreenshot",
+    "android": "https://developer.android.com/about/versions/14/features/screenshot-detection",
+    "ldplayer": "https://www.ldplayer.net/support/tips-for-using-ldplayer.html"
+  },
+  "diagnosis": {
+    "observed": "User reports timeout waiting for rendered PNG; original mobile code submitted an absolute path despite documented relative filename contract",
+    "inference": "Duplicated persistent data path can prevent native PNG creation on Android; no affected device log available to confirm exact cause"
+  },
+  "editor": {
+    "playing": false,
+    "compiling": false,
+    "sceneDirty": false,
+    "consoleErrors": 0
+  },
+  "limitations": [
+    "adb devices -l reports no devices; no Android/LDPlayer runtime verification",
+    "Timeout fix is not yet confirmed on the affected device",
+    "PlayMode ran before whitespace-only prefab cleanup and unrelated overlay reauthor revert; final prefab gates ran afterward",
+    "docs/agents/dreamy-workflow.md absent"
+  ]
+}

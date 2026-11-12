@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-quick-guide",
+  "file": "LocalPackages/com.dreamy.debugger/Documentation~/QUICK_GUIDE.html",
+  "sha256": "da0da9438713864a7b7f09ec0fd14e4eeb0272a07b762e7f29b5ab115b2b42b1",
+  "verification": {
+    "browser": "Orca embedded browser through orca-cli",
+    "source": "file:// local HTML",
+    "desktopViewport": [
+      1280,
+      900
+    ],
+    "mobileViewport": [
+      390,
+      844
+    ],
+    "horizontalOverflow": false,
+    "sections": 5,
+    "brokenAnchors": 0,
+    "remoteResources": 0,
+    "hiddenSectionNavigation": "clicked table-of-contents link and confirmed #hidden URL",
+    "screenshots": "Desktop, mobile and mobile hidden-mode section visually inspected",
+    "diffCheck": "passed"
+  },
+  "scope": "HTML and README link only; no runtime or prefab changes for this documentation task"
+}

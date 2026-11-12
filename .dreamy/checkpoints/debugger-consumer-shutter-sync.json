@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-consumer-shutter-sync",
+  "status": "complete",
+  "objective": "Find why user game lacks working shutter; update stale embedded consumer package and verify input to PNG",
+  "consumer": "/run/media/tutrinh/NewData/planet-bunker-tu-code",
+  "verification": "docs/evidence/debugger/consumer-shutter-sync/verification.json",
+  "nextAction": "Rebuild/install APK to validate LDPlayer; no device connected"
+}

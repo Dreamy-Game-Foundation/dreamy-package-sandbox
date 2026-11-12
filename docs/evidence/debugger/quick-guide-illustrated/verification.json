@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-quick-guide-illustrated",
+  "html": "LocalPackages/com.dreamy.debugger/Documentation~/QUICK_GUIDE.html",
+  "sha256": "a863e7f5dd6d5bd7f934a1569c2b0ea0fd4a114cb5901546edccdc8fc40a2024",
+  "bytes": 1583594,
+  "embeddedPngHashes": [
+    "0f5a27151e8afa027ad5c12876048e879cd540684359384395e01ab6f3bd94f3",
+    "8885d8029fbe5f3a8aaff4b19d614b61697e9a4246c6ba6a08a64d53f7bb3ad1",
+    "e21db74bfc3d8b7479b650ab0049373f08904bab96488059ff98f9e6c02f1d0c",
+    "ef4f92ffaf8b615e6a1a099b00ce833892a5fc99d8d91d1ed47fac621c588d2d",
+    "da4bd17995896ce82861fc83cd0ba229c4314f3e89113c895623afdb19808a34",
+    "c6b33217467a8e81c65ea8ef838fbd1d85aac10c5e81d694877c22edc9e8fdbf"
+  ],
+  "browser": "Orca embedded browser via version-matched orca-cli",
+  "checks": {
+    "photos": [
+      {
+        "ok": true,
+        "width": 640
+      },
+      {
+        "ok": true,
+        "width": 852
+      },
+      {
+        "ok": true,
+        "width": 852
+      },
+      {
+        "ok": true,
+        "width": 393
+      },
+      {
+        "ok": true,
+        "width": 640
+      },
+      {
+        "ok": true,
+        "width": 996
+      }
+    ],
+    "shutter": {
+      "hidden": true,
+      "status": "B\u01b0\u1edbc 3. M\u00f4 ph\u1ecfng: PNG \u0111\u00e3 l\u01b0u. UI v\u1eabn \u1ea9n, kh\u00f4ng b\u1eadt preview; c\u00f3 th\u1ec3 ch\u1ee5p ti\u1ebfp."
+    },
+    "cancel": {
+      "hidden": true,
+      "status": "\u0110\u00e3 h\u1ee7y gi\u1eef. Ti\u1ebfn \u0111\u1ed9 v\u1ec1 0; UI v\u1eabn \u1ea9n.",
+      "ringHidden": true
+    },
+    "restore": {
+      "hidden": false,
+      "status": "\u0110\u00e3 kh\u00f4i ph\u1ee5c UI. \u0110\u00e2y ch\u1ec9 l\u00e0 m\u00f4 ph\u1ecfng; b\u1ea5m L\u00e0m l\u1ea1i ho\u1eb7c \u1ea8n UI \u0111\u1ec3 th\u1eed ti\u1ebfp."
+    },
+    "playPause": {
+      "running": "T\u1ea1m d\u1eebng",
+      "paused": "Ph\u00e1t h\u01b0\u1edbng d\u1eabn",
+      "status": "\u0110\u00e3 t\u1ea1m d\u1eebng. Ch\u1ecdn b\u01b0\u1edbc ho\u1eb7c ti\u1ebfp t\u1ee5c ph\u00e1t h\u01b0\u1edbng d\u1eabn."
+    },
+    "zoom": {
+      "open": true,
+      "src": true,
+      "focused": "closePhoto"
+    },
+    "desktop": {
+      "width": 1280,
+      "scroll": 1265,
+      "anchors": true,
+      "remoteResources": 0
+    },
+    "mobile": {
+      "width": 390,
+      "scroll": 390,
+      "columns": "316px"
+    },
+    "reduced": {
+      "class": true,
+      "animations": "none"
+    }
+  },
+  "fullAutomaticPlayback": {
+    "status": "\u0110\u00e3 kh\u00f4i ph\u1ee5c UI. \u0110\u00e2y ch\u1ec9 l\u00e0 m\u00f4 ph\u1ecfng; b\u1ea5m L\u00e0m l\u1ea1i ho\u1eb7c \u1ea8n UI \u0111\u1ec3 th\u1eed ti\u1ebfp.",
+    "hidden": false,
+    "label": "Ph\u00e1t l\u1ea1i h\u01b0\u1edbng d\u1eabn"
+  },
+  "smallViewport": {
+    "width": 320,
+    "scroll": 320
+  },
+  "staticChecks": [
+    "node --check passed for final inline JavaScript",
+    "Six original PNGs embedded with no image editing",
+    "No external script, stylesheet or automatic remote-resource requests",
+    "Package/root git diff --check passed",
+    "Desktop and mobile screenshots visually inspected"
+  ],
+  "scope": "Documentation and README only; animation is a labeled simulation, not a device validation receipt",
+  "observedFailures": [
+    {
+      "failure": "Waiting on decode for lazy offscreen images did not resolve during validation",
+      "resolution": "Request eager loading only in browser validation before decoding all images; retain lazy loading in delivered HTML"
+    },
+    {
+      "failure": "Hold demo relied on requestAnimationFrame progression; embedded browser did not advance frames reliably during hold validation",
+      "resolution": "Measure hold duration with performance.now and cancelable timers; actual pointer hold and early-release checks passed"
+    },
+    {
+      "failure": "Mobile min-height and aspect ratio expanded demo width beyond viewport",
+      "resolution": "Set explicit width:100%; 320px and 390px overflow checks passed"
+    },
+    {
+      "failure": "Browser command latency allowed short autoplay to finish before a subsequent pause assertion",
+      "resolution": "Validate start/pause atomically and validate full automatic playback separately"
+    }
+  ]
+}

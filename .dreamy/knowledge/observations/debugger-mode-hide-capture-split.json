@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-mode-hide-capture-split",
+  "observations": [
+    {
+      "failure": "Original Hide shared capture Keep policy and corner input required existing manual hide",
+      "response": "Separate Hide enum/presets and arm input without a manual visibility lease; independent capture and hide pixel regressions passed"
+    },
+    {
+      "failure": "Simulator safe area could set anchors beyond 1; feedback was rendered off the active Game View",
+      "response": "Sample screen size once and clamp normalized safe area anchors; native feedback pixel assertions passed"
+    },
+    {
+      "failure": "Legacy polling simulation could miss short held samples across coroutine/Update order and viewport changes",
+      "response": "Armed capture integration regression uses event-backed tap input; existing hold/poll restore tests retained"
+    },
+    {
+      "failure": "Read-only storage scan could temporarily reject capture immediately after opening tab",
+      "response": "Gate capture only during deletion, queue a later usage refresh and test capture during a real async scan"
+    }
+  ],
+  "verification": {
+    "receipt": "docs/evidence/debugger/mode-hide-capture-split/verification.json",
+    "sourceFingerprint": "45d5ac7653f6f030aacfe4f053521e7e8f50adc85c40c798993555177e0bd100",
+    "playModePassed": 23,
+    "editModePassed": 2
+  }
+}

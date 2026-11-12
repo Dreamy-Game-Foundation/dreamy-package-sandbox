@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-consumer-shutter-sync",
+  "before": {
+    "source": "Embedded package copy",
+    "packageVersion": "0.1.5",
+    "hasHiddenShutter": false,
+    "hasTapEvent": false
+  },
+  "sync": {
+    "files": 17,
+    "readme": "three-way merge",
+    "protectedCustomFiles": [
+      "Editor/DebuggerBuildVerification.cs",
+      "Editor/DebuggerStartupBuild.cs",
+      "Editor/DebuggerWindow.cs",
+      "Runtime/Engine/DebuggerBootstrap.cs",
+      "Runtime/Engine/DebuggerConfiguration.cs",
+      "Runtime/Engine/DebuggerRuntime.cs",
+      "Tests/StartupEditor/StartupEditorTests.cs",
+      "package.json"
+    ],
+    "allProtectedFilesMatchConsumerHEAD": true,
+    "backup": "/tmp/debugger-consumer-sync-nkgs0603"
+  },
+  "verification": {
+    "compile": "Live Unity consumer compilation completed; hidden-shutter and tap APIs present; zero Console errors",
+    "input": "Virtual mouse press/release via installed InputSystem adapter, no direct call to OnPointerTapped or CapturePngAsync",
+    "uiSetup": "Consumer uses legacy StandaloneInputModule; opt-in/hide UI bindings were exercised through ExecuteEvents pointer-click dispatch, not virtual InputSystem UI clicks",
+    "result": "New PNG created at 2532x1170 while mode remains hidden",
+    "png": "consumer-hidden-capture.png",
+    "pngSha256": "2058ab5eda97c0869316f863f2c35733115c4fd66a1db7d9d910d6252946d0c3",
+    "inputSettingsRestored": true,
+    "temporaryDeviceRemoved": true,
+    "playModeStopped": true
+  },
+  "limitations": [
+    "No LDPlayer/Android device connected; APK has not been rebuilt or installed",
+    "Source package version label remains 0.1.5 with local patches; no tag/push performed",
+    "Lessons recall failed with Invalid or oversized data file; existing relevant source-bound observations were read manually"
+  ]
+}

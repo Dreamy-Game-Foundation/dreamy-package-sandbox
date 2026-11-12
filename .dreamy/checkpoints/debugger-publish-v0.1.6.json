@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-publish-v0.1.6",
+  "status": "complete",
+  "objective": "Commit and push debugger package with annotated v0.1.6 tag",
+  "verification": "docs/evidence/debugger/release-v0.1.6/publication.json",
+  "nextAction": null,
+  "scopeConstraint": "Package debugger and sandbox repositories only; no consumer project accessed or updated"
+}

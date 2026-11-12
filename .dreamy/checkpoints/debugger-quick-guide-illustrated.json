@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-quick-guide-illustrated",
+  "status": "complete",
+  "objective": "Expand offline HTML with six embedded real screenshots, annotated source context, interactive capture/restore animation and detailed troubleshooting",
+  "nextAction": null,
+  "verification": "docs/evidence/debugger/quick-guide-illustrated/verification.json"
+}

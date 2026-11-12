@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-consumer-shutter-sync",
+  "observations": [
+    {
+      "failure": "Testing updated sandbox package did not validate consumer embedded copy; consumer lacked hidden-shutter APIs",
+      "response": "Inspect actual PackageInfo source/resolvedPath and consumer assembly feature presence; merge only changed package files preserving game customizations; validate consumer input to new PNG"
+    },
+    {
+      "failure": "Virtual InputSystem mouse could not operate consumer legacy StandaloneInputModule UI",
+      "response": "Keep existing EventSystem ownership; test UI click bindings with ExecuteEvents and test capture with native InputSystem queued tap; do not claim physical UI click validation"
+    }
+  ],
+  "verification": {
+    "receipt": "docs/evidence/debugger/consumer-shutter-sync/verification.json",
+    "pngCreated": true,
+    "dimensions": [
+      2532,
+      1170
+    ]
+  },
+  "limitations": [
+    "Android/LDPlayer APK not rebuilt/installed"
+  ]
+}

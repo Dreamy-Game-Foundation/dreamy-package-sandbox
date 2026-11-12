@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-mode-hide-capture-split",
+  "scope": "Sandbox package only. User explicitly prohibited accessing/updating other projects; previous consumer edits remain and have not been reverted.",
+  "sourceFingerprint": "45d5ac7653f6f030aacfe4f053521e7e8f50adc85c40c798993555177e0bd100",
+  "unityVersion": "6000.4.12f1",
+  "playMode": {
+    "jobId": "75918dae51914cec84f192bd0fcd948a",
+    "passed": 23,
+    "failed": 0
+  },
+  "editMode": {
+    "jobId": "9d321a0938994180852be5964500ea40",
+    "passed": 2,
+    "failed": 0
+  },
+  "coverage": [
+    "Armed tap captures with visible gameplay UI and ignores 30s button delay",
+    "Keep/All capture pixel output verified with no manual hide lease",
+    "Manual Hide has two choices only; Hide All hides even when capture preset is Keep",
+    "Read-only storage usage scan does not block tap capture; deletion remains exclusive",
+    "Feedback hidden from PNG; Saved/restore feedback renders in native screenshots",
+    "All existing cancellation, restoration, preview, target, storage and responsive action tests passed"
+  ],
+  "guide": {
+    "file": "Documentation~/QUICK_GUIDE.html",
+    "independentModeAndHideInteraction": "passed",
+    "mobileWidth": 390,
+    "horizontalOverflow": false
+  },
+  "observations": [
+    {
+      "failure": "Original Hide shared capture Keep policy and corner input required existing manual hide",
+      "response": "Separate Hide enum/presets and arm input without a manual visibility lease; independent capture and hide pixel regressions passed"
+    },
+    {
+      "failure": "Simulator safe area could set anchors beyond 1; feedback was rendered off the active Game View",
+      "response": "Sample screen size once and clamp normalized safe area anchors; native feedback pixel assertions passed"
+    },
+    {
+      "failure": "Legacy polling simulation could miss short held samples across coroutine/Update order and viewport changes",
+      "response": "Armed capture integration regression uses event-backed tap input; existing hold/poll restore tests retained"
+    },
+    {
+      "failure": "Read-only storage scan could temporarily reject capture immediately after opening tab",
+      "response": "Gate capture only during deletion, queue a later usage refresh and test capture during a real async scan"
+    }
+  ],
+  "limitations": [
+    "No physical Android/LDPlayer validation or APK rebuild",
+    "No commit/push/tag in this task",
+    "Other-project edits made before user scope correction remain; no further foreign-project operations performed after cleaning temporary probe state"
+  ]
+}

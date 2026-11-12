@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-input-capture-fix",
+  "observations": [
+    {
+      "failure": "Alpha hiding also disabled gameplay CanvasGroup interaction/raycast",
+      "response": "Limit input suppression to debugger groups; alpha-only gameplay masking with raycast/click regression"
+    },
+    {
+      "failure": "Mobile native screenshot request used absolute filename while poller expected persistent path",
+      "response": "Supply relative mobile filename under persistentDataPath; retain absolute desktop path; device reproduction remains pending"
+    },
+    {
+      "failure": "Unity prefab authoring emitted trailing whitespace in empty names and reauthored unrelated overlay",
+      "response": "Normalize empty m_Name whitespace and revert only the unrelated owned overlay regeneration; final prefab gate passed"
+    }
+  ],
+  "verification": {
+    "receipt": "docs/evidence/debugger/screenshot-input-capture-fix/verification.json",
+    "sourceCSharpFingerprint": "bc701fb1b16393015760560fae7c955a980ff98600cc7f975cf635cb2a0ffb59",
+    "playModePassed": 21,
+    "editModePassed": 2
+  }
+}

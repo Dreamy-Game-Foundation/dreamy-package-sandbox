@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-input-capture-fix",
+  "status": "complete",
+  "objective": "Alpha-only gameplay hiding, hidden shutter and platform-correct native screenshot paths with external capture research",
+  "nextAction": null,
+  "limitations": [
+    "Android/LDPlayer runtime unavailable",
+    "Existing LocalizationFont.asset changes left untouched",
+    "docs/agents/dreamy-workflow.md absent"
+  ],
+  "verification": "docs/evidence/debugger/screenshot-input-capture-fix/verification.json"
+}

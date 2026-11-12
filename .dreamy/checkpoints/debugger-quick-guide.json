@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-quick-guide",
+  "status": "complete",
+  "objective": "Short Vietnamese offline HTML guide for Cheats/Screenshot, with corner diagram and README link",
+  "verification": "docs/evidence/debugger/quick-guide/verification.json",
+  "nextAction": null
+}

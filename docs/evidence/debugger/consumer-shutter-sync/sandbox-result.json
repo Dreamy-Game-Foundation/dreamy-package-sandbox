@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Code executed successfully.",
+  "data": {
+    "result": {
+      "hidden": true,
+      "busy": false,
+      "status": "Screenshot saved • 1284 × 2778",
+      "path": "/home/tutrinh/.config/unity3d/DefaultCompany/DreamyTemplateProject/DreamyDebugger/Screenshots/Screenshot-20261112-081505-495-31c6a4fd.png",
+      "fileExists": true,
+      "enabled": true
+    },
+    "compiler": "codedom"
+  }
+}

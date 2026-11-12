@@ -1,0 +1,56 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "013f954585de46568bd34f4d963da506",
+      "status": "succeeded",
+      "mode": "PlayMode",
+      "started_unix_ms": 1794470254294,
+      "finished_unix_ms": 1794470264505,
+      "last_update_unix_ms": 1794470264505,
+      "progress": {
+        "completed": 1,
+        "total": 1,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1794470263927,
+        "last_finished_test_full_name": "Dreamy.Debugger.Tests.ScreenshotModeTests.SameFrameTapIsOptInAndFeedbackIsExcludedFromPng",
+        "last_finished_unix_ms": 1794470264502,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "run_in_background": null,
+        "focus_nudge_attempts": null,
+        "focus_nudge_limit": null,
+        "focus_nudge_status": null,
+        "blocked_reason": null,
+        "failures_so_far": [],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": {
+        "mode": "PlayMode",
+        "summary": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "durationSeconds": 0.6697522,
+          "resultState": "Passed"
+        },
+        "results": [
+          {
+            "name": "SameFrameTapIsOptInAndFeedbackIsExcludedFromPng",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.SameFrameTapIsOptInAndFeedbackIsExcludedFromPng",
+            "state": "Passed",
+            "durationSeconds": 0.5747855,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          }
+        ]
+      }
+    },
+    "hint": null
+  }
+}

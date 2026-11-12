@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "version": "0.1.5",
+  "packageCommit": "7e226cb600264387d2e0eddf2ddeb726e741cf72",
+  "packageRemote": "https://github.com/Dreamy-Game-Foundation/com.dreamy.debugger.git",
+  "branch": "main",
+  "tag": "v0.1.5",
+  "tagType": "annotated",
+  "remoteVerified": true,
+  "tagCommit": "7e226cb600264387d2e0eddf2ddeb726e741cf72",
+  "archive": {
+    "sha256": "aa4f9f546da756d73d299ffb580aa944da4e39b2b0f6ef5d780b8457eb3440a2",
+    "bytes": 2669018,
+    "verification": "Tools~/verify_package.py passed"
+  },
+  "scope": "All current package source/assets/docs; sandbox includes debugger gitlink, evidence/checkpoints and existing LocalizationFont.asset changes as requested",
+  "limitations": [
+    "Fresh Git consumer compile not run",
+    "Physical Android/emulator export/gestures not verified",
+    "Device performance not measured"
+  ]
+}

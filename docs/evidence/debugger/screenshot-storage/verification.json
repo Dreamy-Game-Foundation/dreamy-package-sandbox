@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-storage",
+  "unityVersion": "6000.4.12f1",
+  "sourceFingerprint": "f5072d4e20623dea5eeb314043a93f9434d77ad9f8618085f7682802e353ce6d",
+  "playMode": {
+    "jobId": "506bc08c9a8043d79d0521509a675a8e",
+    "passed": 19,
+    "failed": 0
+  },
+  "editMode": {
+    "jobId": "a0af21d295da45dba3d6b3a714cc6e3d",
+    "passed": 2,
+    "failed": 0
+  },
+  "coverage": [
+    "Owned filename count/bytes and deletion in isolated temporary directory",
+    "Foreign PNG, temporary PNG and nested files preserved; repeated deletion safe",
+    "Screenshot tab storage labels/button binding and confirmation cancellation",
+    "Existing capture, UI restore and responsive primary actions regressions"
+  ],
+  "limitations": [
+    "No physical Android or emulator validation",
+    "No measurement of large screenshot directories",
+    "docs/agents/dreamy-workflow.md absent"
+  ]
+}

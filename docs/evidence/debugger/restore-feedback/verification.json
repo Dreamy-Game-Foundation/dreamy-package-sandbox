@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-restore-feedback",
+  "unityVersion": "6000.4.12f1",
+  "packageHead": "9ede4634253634b5c217667eb3fc54d728c242bb",
+  "workingTree": "uncommitted",
+  "sourceFingerprint": "69f23e7d2bd2a62805e426291db82907d9ff448fb0b17f5f7ce06bbaf59b483c",
+  "playMode": {
+    "jobId": "a11c4e1903db494a984cc05ff0c6b36b",
+    "passed": 18,
+    "failed": 0
+  },
+  "editMode": {
+    "jobId": "b3de45aedca94345b59ea773e75811f5",
+    "passed": 2,
+    "failed": 0
+  },
+  "visual": {
+    "path": "restore-hold-progress.png",
+    "sha256": "da4bd17995896ce82861fc83cd0ba229c4314f3e89113c895623afdb19808a34",
+    "verified": "Native ScreenCapture PNG decoded; accent pixels asserted and image visually inspected"
+  },
+  "finalEditor": {
+    "playing": false,
+    "compiling": false,
+    "sceneDirty": false,
+    "consoleErrors": 0
+  },
+  "limitations": [
+    "No physical Android device or emulator touch validation",
+    "docs/agents/dreamy-workflow.md absent"
+  ]
+}

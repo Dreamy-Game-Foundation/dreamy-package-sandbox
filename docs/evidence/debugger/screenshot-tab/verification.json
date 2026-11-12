@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-tab",
+  "verifiedAtUtc": "2026-11-10T11:07:28.184349+00:00",
+  "unityVersion": "6000.4.12f1",
+  "unityInstance": "dreamy-package-sandbox@5f78127b991a2b92",
+  "packageBaseCommit": "9ede4634253634b5c217667eb3fc54d728c242bb",
+  "sourceState": "uncommitted",
+  "sourceFingerprint": {
+    "sha256": "bc4a549beadc1a29a54307cd3b86229483765ba4fd6ac5742d37dec8a3b31cc8",
+    "files": 840,
+    "algorithm": "sha256 of sorted package-relative path + space + sha256(file) + newline; all Runtime/Editor/Tests files and package.json"
+  },
+  "playMode": {
+    "jobId": "ad256c9facd142fd9f8c2e03343bbe82",
+    "summary": {
+      "total": 41,
+      "passed": 41,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 22.1503329,
+      "resultState": "Passed"
+    }
+  },
+  "editMode": {
+    "jobId": "1fadb411819741d38d8c89a034969014",
+    "summary": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 0.6067438,
+      "resultState": "Passed"
+    }
+  },
+  "androidCompile": {
+    "compiler": "UnityEditor.Compilation.AssemblyBuilder",
+    "buildTarget": "Android",
+    "UNITY_ANDROID": true,
+    "UNITY_EDITOR": false,
+    "errors": 0,
+    "source": "Runtime/Engine/ScreenshotExport.cs",
+    "sourceSha256": "5ac276add64591aafcc006300df6f493d7cae942d7bc3f34fcb94833826d9ff6",
+    "raw": "errors=0; editorDefine=False\n",
+    "playerBuildPerformed": false,
+    "deviceOrEmulatorRunPerformed": false
+  },
+  "consoleErrorsAfter": 0,
+  "sceneAfter": "Assets/_Project/Scenes/BootstrapScene.unity",
+  "sceneDirtyAfter": false,
+  "playModeAfter": false,
+  "screenshots": [
+    "panel-640x300-closed.png",
+    "panel-640x300-drawer.png",
+    "panel-640x300-last-navigation-tab.png",
+    "panel-852x393-closed.png",
+    "panel-852x393-drawer.png",
+    "panel-852x393-last-navigation-tab.png",
+    "screenshot-tab-320x300.png",
+    "screenshot-tab-393x700.png",
+    "screenshot-tab-852x260.png",
+    "sidebar-inset-0-1280x720.png",
+    "sidebar-inset-0-393x852.png",
+    "sidebar-inset-0-852x393.png",
+    "sidebar-inset-24-1280x720.png",
+    "sidebar-inset-24-393x852.png",
+    "sidebar-inset-24-852x393.png",
+    "sidebar-inset-48-1280x720.png",
+    "sidebar-inset-48-393x852.png",
+    "sidebar-inset-48-852x393.png"
+  ],
+  "iconSource": "icon-source.json",
+  "checks": [
+    "Dedicated tab and camera sprite binding, no Screenshot cheat options",
+    "Native PNG pixels with kept/hidden gameplay UI, bounded preview, full-screen review and recapture",
+    "Pointer-hold and TTL recovery, selected target subsets, focus preservation, pause/scene/expiry cleanup",
+    "Sticky actions and preset bounds at 320x300, 852x260, 393x700; compact portrait/landscape layout",
+    "Five-tab navigation: viewport-based row sizing, scrolling on short panels, inset/rotation regressions",
+    "Prefab scripts and catalog references valid",
+    "Android export C# branch compiles without UNITY_EDITOR"
+  ],
+  "limitations": [
+    "Android Gallery/Share JNI calls are compiled but not exercised on a physical device or Android emulator",
+    "No Android/iOS player build, device memory/thermal/touch verification",
+    "Native Gallery/Photos/Share not implemented on Android <10 or iOS",
+    "Referenced docs/agents/dreamy-workflow.md and local verified compatibility registry absent"
+  ],
+  "inputs": {
+    "Packages/manifest.json": "81418b66e0ceccf8b0fb260ffeea8d2a1fd3e95eb4c503ab1abc6123801863e1",
+    "Packages/packages-lock.json": "96d261729753612527ec218a8a20fbb222a1e3ab33cbe12773dd1764c587d5f5",
+    "ProjectSettings/ProjectVersion.txt": "69d50c2492c8ea34ba3cfeb5bae1184169ba7ec742a5b0e6b3bfb3659e9d5ad2"
+  }
+}

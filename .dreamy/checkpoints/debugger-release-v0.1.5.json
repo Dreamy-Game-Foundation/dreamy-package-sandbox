@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-release-v0.1.5",
+  "status": "complete",
+  "objective": "Update README, changelog, package/runtime version and release documentation",
+  "verification": "docs/evidence/debugger/release-v0.1.5/verification.json",
+  "nextAction": null
+}

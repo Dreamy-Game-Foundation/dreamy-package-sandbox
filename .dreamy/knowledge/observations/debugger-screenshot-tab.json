@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-tab",
+  "baselineLessons": "debugger-screenshot-mode observations recalled before implementation",
+  "observations": [
+    {
+      "failure": "Official assumed PNG URL returned 404",
+      "response": "Fetch official photo_camera SVG and rasterize to 32px white RGBA with librsvg/Cairo; source hash and license provenance recorded"
+    },
+    {
+      "failure": "PNG regression compared decoded width to Screen.width after Game View resized during native IO",
+      "response": "Compare file dimensions with returned capture metadata; retain pixel assertions"
+    },
+    {
+      "failure": "Grid retained the previous wider orientation through its own min-width feedback",
+      "response": "Calculate cell width from constrained parent content and assert all three preset bounds at each test viewport"
+    },
+    {
+      "failure": "Fifth navigation tab overflowed because row sizing used full panel height instead of actual tab viewport",
+      "response": "Use actual list viewport, react to tab count/viewport size, preserve scrolling and hide sidebar branding on short panels; verify last tab is reachable"
+    },
+    {
+      "failure": "Unity MCP session disconnected during domain reload immediately after a completed PlayMode job",
+      "response": "Wait for observed clean Edit Mode and retry the read-only/verification operation"
+    }
+  ],
+  "verification": {
+    "receipt": "docs/evidence/debugger/screenshot-tab/verification.json",
+    "sourceFingerprint": "bc4a549beadc1a29a54307cd3b86229483765ba4fd6ac5742d37dec8a3b31cc8",
+    "playModePassed": 41,
+    "editModePassed": 2,
+    "androidCSharpErrors": 0
+  }
+}

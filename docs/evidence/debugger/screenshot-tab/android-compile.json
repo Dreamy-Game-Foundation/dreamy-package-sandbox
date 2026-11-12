@@ -1,0 +1,12 @@
+{
+  "compiler": "UnityEditor.Compilation.AssemblyBuilder",
+  "buildTarget": "Android",
+  "UNITY_ANDROID": true,
+  "UNITY_EDITOR": false,
+  "errors": 0,
+  "source": "Runtime/Engine/ScreenshotExport.cs",
+  "sourceSha256": "5ac276add64591aafcc006300df6f493d7cae942d7bc3f34fcb94833826d9ff6",
+  "raw": "errors=0; editorDefine=False\n",
+  "playerBuildPerformed": false,
+  "deviceOrEmulatorRunPerformed": false
+}

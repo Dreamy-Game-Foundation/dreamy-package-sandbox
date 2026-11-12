@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-mode",
+  "observations": [
+    {
+      "failure": "Unity MCP initially routed to another open project",
+      "response": "Selected dreamy-package-sandbox@5f78127b991a2b92 and verified Application.dataPath before mutation"
+    },
+    {
+      "failure": "run_tests test_names supplied a fixture name and completed with zero tests",
+      "response": "Use group_names for fixture filters and require a nonzero result summary"
+    },
+    {
+      "failure": "Disable/enable of DebuggerRuntime in the same frame made AddComponent<ScreenshotMode> return null because the disallow-multiple component was pending Destroy",
+      "response": "Shutdown and reuse the owned component; rerun DisabledOwnerCanRestartWithoutDuplicateServices"
+    },
+    {
+      "failure": "Int64 option regression assumed controls populated in one frame; additional built-ins crossed the existing 32-option slicing threshold",
+      "response": "Boundedly wait for the actual Int64 controls before editing them"
+    },
+    {
+      "failure": "Combined PlayMode job became orphaned after domain reload; clearing without reload retained duplicate callbacks in next run",
+      "response": "Stop the test run, allow fresh script domain reload, then start a fresh job and inspect the final nonzero result summary"
+    },
+    {
+      "failure": "Editor PNG captures rejected unfocused Editor even though Game View can render",
+      "response": "Keep foreground rendering guard on players; permit Editor Game View capture and rely on end-of-frame plus timeout"
+    },
+    {
+      "failure": "Option controls existed before Start installed their input listeners",
+      "response": "Wait for OptionsTabController.IsBuilding to complete and a lifecycle frame before simulating edits"
+    },
+    {
+      "failure": "refresh_unity(scope=scripts) requested compilation but skipped AssetDatabase.Refresh; external script edits could remain unimported until test launch, causing mid-run reload/stale fixtures",
+      "response": "Inspect RefreshUnity.cs; explicitly refresh changed assets synchronously and wait for compilation before running tests"
+    },
+    {
+      "failure": "Native Orca desktop provider timed out for Unity accessibility reads, including no-screenshot fallback",
+      "response": "Stopped retrying desktop reads; inspected exact X11 window IDs and used native activation for the sandbox Game View only"
+    },
+    {
+      "failure": "Rendered PNG fixture lacked an explicit Camera and did not request Game View repaints in background",
+      "response": "Add a fixture-owned Camera and request repaint while awaiting capture; verify only from fresh compiled test receipts"
+    },
+    {
+      "failure": "WaitForEndOfFrame and Awaitable.EndOfFrameAsync stalled even with a fixture camera and focused Game View; CaptureScreenshotAsTexture outside the render end returned invalid gray pixels",
+      "response": "Use native ScreenCapture.CaptureScreenshot to a private PNG, wait for a complete IEND-terminated file, restore UI and publish through the existing atomic writer; fresh PNG pixel test passed"
+    }
+  ],
+  "verification": {
+    "receipt": "docs/evidence/debugger/screenshot-mode/verification.json",
+    "jobId": "a27f802458424e80bf5b6173b3a4b960",
+    "sourceFingerprint": "fa228b0048391c39fcc22ec09364e7933909c55f91ed6eeab6ea76bc73b4a20b",
+    "passed": 35,
+    "failed": 0
+  }
+}

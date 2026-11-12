@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-tab",
+  "status": "complete",
+  "objective": "Dedicated Screenshot tab with camera icon, capture/review, selected UI groups, timed external capture and pointer recovery, Editor controls, Android export",
+  "baselineReceipt": "docs/evidence/debugger/screenshot-mode/verification.json",
+  "nextAction": "Complete; changes remain local, no commit/tag/publication. Android native runtime/device verification remains a separate gate.",
+  "limitations": [
+    "Referenced docs/agents/dreamy-workflow.md absent",
+    "Native mobile runtime verification pending"
+  ],
+  "matchingReceipt": "docs/evidence/debugger/screenshot-tab/verification.json",
+  "sourceFingerprint": "bc4a549beadc1a29a54307cd3b86229483765ba4fd6ac5742d37dec8a3b31cc8"
+}

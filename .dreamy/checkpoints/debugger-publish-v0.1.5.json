@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-publish-v0.1.5",
+  "status": "complete",
+  "objective": "Commit/push package source and annotated v0.1.5 tag",
+  "verification": "docs/evidence/debugger/release-v0.1.5/publication.json",
+  "nextAction": null
+}

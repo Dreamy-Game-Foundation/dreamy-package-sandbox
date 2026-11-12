@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-mode",
+  "verifiedAtUtc": "2026-11-10T10:04:32.908201+00:00",
+  "unityVersion": "6000.4.12f1",
+  "unityInstance": "dreamy-package-sandbox@5f78127b991a2b92",
+  "packageBaseCommit": "9ede4634253634b5c217667eb3fc54d728c242bb",
+  "sourceState": "uncommitted",
+  "sourceFingerprint": {
+    "sha256": "fa228b0048391c39fcc22ec09364e7933909c55f91ed6eeab6ea76bc73b4a20b",
+    "files": 822,
+    "algorithm": "sha256 of sorted package-relative path + space + sha256(file) + newline; all Runtime/Editor/Tests files and package.json"
+  },
+  "testJobId": "a27f802458424e80bf5b6173b3a4b960",
+  "summary": {
+    "total": 35,
+    "passed": 35,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 6.9464859,
+    "resultState": "Passed"
+  },
+  "consoleErrorsAfter": 0,
+  "sceneAfter": "Assets/_Project/Scenes/BootstrapScene.unity",
+  "sceneDirtyAfter": false,
+  "playModeAfter": false,
+  "checks": [
+    "PNG decoded and center pixels compared in Keep and RegisteredTargets modes",
+    "Exact CanvasGroup restore, nested ignoreParentGroups and Canvas boundaries",
+    "New/inactive UI, keyboard and simulated three-finger restore",
+    "Nested report visibility ownership, relock, focus/pause, scene changes and shutdown",
+    "Live Screenshot option binding and debugger restart regression"
+  ],
+  "limitations": [
+    "No Android/iOS player build or physical device touch/Gallery verification",
+    "UI Toolkit, OnGUI and non-Canvas renderers require project integration",
+    "No store-resolution presets; captures current render resolution",
+    "Referenced docs/agents/dreamy-workflow.md and local verified compatibility registry absent"
+  ],
+  "inputs": {
+    "Packages/manifest.json": "81418b66e0ceccf8b0fb260ffeea8d2a1fd3e95eb4c503ab1abc6123801863e1",
+    "Packages/packages-lock.json": "96d261729753612527ec218a8a20fbb222a1e3ab33cbe12773dd1764c587d5f5",
+    "ProjectSettings/ProjectVersion.txt": "69d50c2492c8ea34ba3cfeb5bae1184169ba7ec742a5b0e6b3bfb3659e9d5ad2"
+  }
+}

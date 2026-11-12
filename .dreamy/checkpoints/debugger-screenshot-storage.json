@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-storage",
+  "status": "complete",
+  "objective": "Show local screenshot size/count and confirmed cleanup with Gallery preservation",
+  "nextAction": null,
+  "limitations": [
+    "docs/agents/dreamy-workflow.md absent",
+    "No Android device validation"
+  ],
+  "verification": "docs/evidence/debugger/screenshot-storage/verification.json",
+  "sourceFingerprint": "f5072d4e20623dea5eeb314043a93f9434d77ad9f8618085f7682802e353ce6d"
+}

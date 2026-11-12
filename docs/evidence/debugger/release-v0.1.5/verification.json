@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "version": "0.1.5",
+  "status": "prepared locally; not tagged or published",
+  "archive": {
+    "path": "/tmp/com.dreamy.debugger-0.1.5.tgz",
+    "sha256": "c4e8ceb4bc0854dffee4bb4182187bd5eb055cc7d4cdb306d94c12ce67d15768",
+    "bytes": 2669058,
+    "verification": "Tools~/verify_package.py passed; 925 archive entries"
+  },
+  "checks": [
+    "Manifest/runtime/README/changelog version consistency",
+    "Relative documentation file links",
+    "Package/root git diff --check",
+    "Archive matches final manifest, README, changelog, migration and runtime version source"
+  ],
+  "behaviorEvidence": "Earlier 19 PlayMode + 2 EditMode receipt is historical at its recorded fingerprint; no behavior change in this preparation",
+  "observedFailures": [
+    {
+      "failure": "npm pack from sandbox root exited 254 because it is not the package directory",
+      "resolution": "Ran npm pack --ignore-scripts in LocalPackages/com.dreamy.debugger; archive verification passed"
+    },
+    {
+      "failure": "Unity refresh initially required instance selection after another project connected",
+      "resolution": "Pinned dreamy-package-sandbox@5f78127b991a2b92 and refreshed that project"
+    }
+  ],
+  "limitations": [
+    "No committed Git-install validation",
+    "No Android/iOS device validation",
+    "docs/agents/dreamy-workflow.md absent"
+  ],
+  "unity": {
+    "version": "0.1.5",
+    "compiling": false,
+    "playing": false,
+    "sceneDirty": false,
+    "consoleErrors": 0
+  }
+}

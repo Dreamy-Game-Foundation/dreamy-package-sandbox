@@ -1,0 +1,8 @@
+{
+  "name": "photo_camera",
+  "family": "Google Material Icons filled",
+  "source": "https://raw.githubusercontent.com/google/material-design-icons/master/src/image/photo_camera/materialicons/24px.svg",
+  "sourceSha256": "6864753de46f4539c0ba7de6cb9c8a25ea7af4d488fd1d36837071ee207d6a1e",
+  "license": "Apache-2.0; existing bundled Material-Icons-LICENSE.txt",
+  "transform": "Original SVG rendered white at 32px with librsvg/Cairo, matching existing icons"
+}

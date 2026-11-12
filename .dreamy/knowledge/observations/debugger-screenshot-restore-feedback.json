@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-restore-feedback",
+  "observations": [
+    {
+      "failure": "Logic assertions passed while native screenshot showed no feedback",
+      "response": "Added native PNG pixel assertion and visually inspected the resulting image; state alone is insufficient evidence for a visible cue"
+    },
+    {
+      "failure": "Custom MaskableGraphic ring lacked CanvasRenderer",
+      "response": "Require CanvasRenderer explicitly, reauthor prefab, and host feedback on an independent root overlay Canvas"
+    },
+    {
+      "failure": "MCP script refresh did not import filesystem changes",
+      "response": "Use synchronous AssetDatabase.Refresh and observe compilation completion before tests"
+    }
+  ],
+  "verification": {
+    "receipt": "docs/evidence/debugger/restore-feedback/verification.json",
+    "sourceFingerprint": "69f23e7d2bd2a62805e426291db82907d9ff448fb0b17f5f7ce06bbaf59b483c",
+    "playModePassed": 18,
+    "editModePassed": 2
+  }
+}

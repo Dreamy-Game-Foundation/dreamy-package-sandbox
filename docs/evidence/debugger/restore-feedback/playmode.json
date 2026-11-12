@@ -1,0 +1,209 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "a11c4e1903db494a984cc05ff0c6b36b",
+      "status": "succeeded",
+      "mode": "PlayMode",
+      "started_unix_ms": 1794449323900,
+      "finished_unix_ms": 1794449335829,
+      "last_update_unix_ms": 1794449335829,
+      "progress": {
+        "completed": 18,
+        "total": 18,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1794449335675,
+        "last_finished_test_full_name": "Dreamy.Debugger.Tests.ScreenshotModeTests.UnselectedRegisteredGroupsRemainVisible",
+        "last_finished_unix_ms": 1794449335809,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "run_in_background": null,
+        "focus_nudge_attempts": null,
+        "focus_nudge_limit": null,
+        "focus_nudge_status": null,
+        "blocked_reason": null,
+        "failures_so_far": [],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": {
+        "mode": "PlayMode",
+        "summary": {
+          "total": 18,
+          "passed": 18,
+          "failed": 0,
+          "skipped": 0,
+          "durationSeconds": 9.739457,
+          "resultState": "Passed"
+        },
+        "results": [
+          {
+            "name": "AllCanvasesIncludesUnregisteredAndLateCanvases",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.AllCanvasesIncludesUnregisteredAndLateCanvases",
+            "state": "Passed",
+            "durationSeconds": 0.1451593,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "CancelPendingCaptureIsSingleFlightAndRestoresUi",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.CancelPendingCaptureIsSingleFlightAndRestoresUi",
+            "state": "Passed",
+            "durationSeconds": 0.1044087,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "DebuggerOnlyLeavesGameplayAndCanceledEntryUntouched",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.DebuggerOnlyLeavesGameplayAndCanceledEntryUntouched",
+            "state": "Passed",
+            "durationSeconds": 0.1636921,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "DedicatedScreenshotTabHasCameraIconAndWorkingControls",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.DedicatedScreenshotTabHasCameraIconAndWorkingControls",
+            "state": "Passed",
+            "durationSeconds": 0.2409964,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "ExternalCaptureStartsWithoutWaitingForPngDelay",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.ExternalCaptureStartsWithoutWaitingForPngDelay",
+            "state": "Passed",
+            "durationSeconds": 0.1342207,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "HoldFeedbackCancelsResetsAndStaysOutOfDiagnosticCaptures",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.HoldFeedbackCancelsResetsAndStaysOutOfDiagnosticCaptures",
+            "state": "Passed",
+            "durationSeconds": 0.6843355,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "KeyboardAndThreeFingerHoldRestoreWithoutVisibleControls",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.KeyboardAndThreeFingerHoldRestoreWithoutVisibleControls",
+            "state": "Passed",
+            "durationSeconds": 0.5803438,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "LockedSessionCannotHideOrExport",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.LockedSessionCannotHideOrExport",
+            "state": "Passed",
+            "durationSeconds": 0.1176463,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "NestedReportCaptureDoesNotUnhideManualMode",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.NestedReportCaptureDoesNotUnhideManualMode",
+            "state": "Passed",
+            "durationSeconds": 0.13303,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "NewTargetsAndPopupsAreHiddenAndClosedObjectsStayClosed",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.NewTargetsAndPopupsAreHiddenAndClosedObjectsStayClosed",
+            "state": "Passed",
+            "durationSeconds": 0.1330434,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "PngContainsGameplayWithUiKeptAndCleanPixelsWithTargetsHidden",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.PngContainsGameplayWithUiKeptAndCleanPixelsWithTargetsHidden",
+            "state": "Passed",
+            "durationSeconds": 0.4585855,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "PointerHoldAndExpiryRestoreWithoutKeyboardOrMultitouch",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.PointerHoldAndExpiryRestoreWithoutKeyboardOrMultitouch",
+            "state": "Passed",
+            "durationSeconds": 2.9840542,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "PrimaryActionsStayVisibleInPortraitAndShortLandscape",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.PrimaryActionsStayVisibleInPortraitAndShortLandscape",
+            "state": "Passed",
+            "durationSeconds": 0.1983984,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "RelockAndShutdownRestoreGameplay",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.RelockAndShutdownRestoreGameplay",
+            "state": "Passed",
+            "durationSeconds": 0.1656511,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "SceneChangeAndFocusLossRestoreUiAndCancelPendingCapture",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.SceneChangeAndFocusLossRestoreUiAndCancelPendingCapture",
+            "state": "Passed",
+            "durationSeconds": 0.1849771,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "SelectedTargetsRestoreOriginalValuesWithoutDisablingGameplay",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.SelectedTargetsRestoreOriginalValuesWithoutDisablingGameplay",
+            "state": "Passed",
+            "durationSeconds": 0.132985,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "ThreeFingerHoldFeedbackRendersAndClearsOnRelease",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.ThreeFingerHoldFeedbackRendersAndClearsOnRelease",
+            "state": "Passed",
+            "durationSeconds": 2.9339956,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "UnselectedRegisteredGroupsRemainVisible",
+            "fullName": "Dreamy.Debugger.Tests.ScreenshotModeTests.UnselectedRegisteredGroupsRemainVisible",
+            "state": "Passed",
+            "durationSeconds": 0.1339491,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          }
+        ]
+      }
+    },
+    "hint": null
+  }
+}

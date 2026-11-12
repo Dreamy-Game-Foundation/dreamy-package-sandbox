@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-restore-feedback",
+  "status": "complete",
+  "objective": "Recheck UI restoration on current source and add visible hold-progress feedback with cancel/reset behavior",
+  "baselineJobId": "03475bfe4d3747f69e3da2b4c5ae2975",
+  "baselinePassed": 16,
+  "nextAction": null,
+  "limitations": [
+    "Native device input not verified",
+    "docs/agents/dreamy-workflow.md absent"
+  ],
+  "verification": "docs/evidence/debugger/restore-feedback/verification.json",
+  "sourceFingerprint": "69f23e7d2bd2a62805e426291db82907d9ff448fb0b17f5f7ce06bbaf59b483c",
+  "playModePassed": 18,
+  "editModePassed": 2
+}

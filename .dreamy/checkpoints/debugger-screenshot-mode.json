@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-screenshot-mode",
+  "status": "complete",
+  "objective": "Screenshot Mode: hide debugger and selected/all gameplay uGUI; full-resolution local PNG; delay; restore input; lifecycle cleanup",
+  "limitations": [
+    "docs/agents/dreamy-workflow.md and local compatibility registry absent",
+    "Native device validation pending"
+  ],
+  "nextAction": "Complete; package changes left local, no commit/tag/publication. Native mobile verification remains a separate gate.",
+  "matchingReceipt": "docs/evidence/debugger/screenshot-mode/verification.json",
+  "sourceFingerprint": "fa228b0048391c39fcc22ec09364e7933909c55f91ed6eeab6ea76bc73b4a20b"
+}

@@ -13,20 +13,25 @@ MonoBehaviour:
   m_Name: SandboxDebuggerConfiguration
   m_EditorClassIdentifier: Dreamy.Debugger.Engine::Dreamy.Debugger.DebuggerConfiguration
   Mode: 1
-  RequiredTaps: 5
+  RequiredTaps: 3
   TapGapSeconds: 0.4
   SequenceTimeoutSeconds: 2.5
   Credential: 0000
   Passphrase: 0
   SessionSeconds: 300
+  PersistRuntimePreferences: 1
+  PreferenceRevision: 1
   InitialHud: 0
   ShowCornerTrigger: 1
+  TapPosition: 0
   InitialHudPosition: 0
   HudOffset: {x: 12, y: 12}
   HudScale: 1
   HudMemory: 1
   HudAudio: 0
   HudDragEnabled: 1
+  HudTapToCycle: 1
+  HudCloseButton: 1
   FpsGood: {r: 0.46, g: 0.83, b: 0.23, a: 1}
   FpsCaution: {r: 0.95, g: 0.82, b: 0.2, a: 1}
   FpsCritical: {r: 0.86, g: 0.16, b: 0.12, a: 1}
@@ -36,6 +41,8 @@ MonoBehaviour:
   LowFpsThreshold: 30
   LowFpsSustain: 3
   LowFpsCooldown: 60
+  ScreenshotRestoreKey: 289
+  ScreenshotRestoreTouchHoldSeconds: 1
   AutoReportErrors: 0
   AllowScreenshots: 1
   UploadDuringGameplay: 0

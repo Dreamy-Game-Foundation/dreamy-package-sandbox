@@ -1,0 +1,101 @@
+{
+  "editmode": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":true,\"message\":\"Test job status retrieved.\",\"error\":null,\"data\":{\"job_id\":\"2baa9f12826e4ec8865edeca1fb998a2\",\"status\":\"succeeded\",\"mode\":\"EditMode\",\"started_unix_ms\":1794562275158,\"finished_unix_ms\":1794562284852,\"last_update_unix_ms\":1794562284852,\"progress\":{\"completed\":21,\"total\":21,\"current_test_full_name\":null,\"current_test_started_unix_ms\":1794562284632,\"last_finished_test_full_name\":\"Dreamy.Debugger.Tests.AccessTests.SuccessfulUnlockResetsFailureCount\",\"last_finished_unix_ms\":1794562284632,\"stuck_suspected\":false,\"editor_is_focused\":false,\"run_in_background\":null,\"focus_nudge_attempts\":null,\"focus_nudge_limit\":null,\"focus_nudge_status\":null,\"blocked_reason\":null,\"failures_so_far\":[],\"failures_capped\":false},\"error\":null,\"result\":null},\"hint\":null}"
+      }
+    ],
+    "structuredContent": {
+      "result": {
+        "success": true,
+        "message": "Test job status retrieved.",
+        "error": null,
+        "data": {
+          "job_id": "2baa9f12826e4ec8865edeca1fb998a2",
+          "status": "succeeded",
+          "mode": "EditMode",
+          "started_unix_ms": 1794562275158,
+          "finished_unix_ms": 1794562284852,
+          "last_update_unix_ms": 1794562284852,
+          "progress": {
+            "completed": 21,
+            "total": 21,
+            "current_test_full_name": null,
+            "current_test_started_unix_ms": 1794562284632,
+            "last_finished_test_full_name": "Dreamy.Debugger.Tests.AccessTests.SuccessfulUnlockResetsFailureCount",
+            "last_finished_unix_ms": 1794562284632,
+            "stuck_suspected": false,
+            "editor_is_focused": false,
+            "run_in_background": null,
+            "focus_nudge_attempts": null,
+            "focus_nudge_limit": null,
+            "focus_nudge_status": null,
+            "blocked_reason": null,
+            "failures_so_far": [],
+            "failures_capped": false
+          },
+          "error": null,
+          "result": null
+        },
+        "hint": null
+      }
+    },
+    "isError": false
+  },
+  "playmode": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":true,\"message\":\"Test job status retrieved.\",\"error\":null,\"data\":{\"job_id\":\"4a11546fa6304088805ec37275f865ba\",\"status\":\"succeeded\",\"mode\":\"PlayMode\",\"started_unix_ms\":1794562716183,\"finished_unix_ms\":1794562739421,\"last_update_unix_ms\":1794562739421,\"progress\":{\"completed\":29,\"total\":29,\"current_test_full_name\":null,\"current_test_started_unix_ms\":1794562739148,\"last_finished_test_full_name\":\"Dreamy.Debugger.Tests.WorkspaceUiTests.PinFitsLandscapePortraitAndRotationWithEveryKeyOnScreen\",\"last_finished_unix_ms\":1794562739415,\"stuck_suspected\":false,\"editor_is_focused\":false,\"run_in_background\":null,\"focus_nudge_attempts\":null,\"focus_nudge_limit\":null,\"focus_nudge_status\":null,\"blocked_reason\":null,\"failures_so_far\":[],\"failures_capped\":false},\"error\":null,\"result\":{\"mode\":\"PlayMode\",\"summary\":{\"total\":29,\"passed\":29,\"failed\":0,\"skipped\":0,\"durationSeconds\":13.8985373,\"resultState\":\"Passed\"},\"results\":[]}},\"hint\":null}"
+      }
+    ],
+    "structuredContent": {
+      "result": {
+        "success": true,
+        "message": "Test job status retrieved.",
+        "error": null,
+        "data": {
+          "job_id": "4a11546fa6304088805ec37275f865ba",
+          "status": "succeeded",
+          "mode": "PlayMode",
+          "started_unix_ms": 1794562716183,
+          "finished_unix_ms": 1794562739421,
+          "last_update_unix_ms": 1794562739421,
+          "progress": {
+            "completed": 29,
+            "total": 29,
+            "current_test_full_name": null,
+            "current_test_started_unix_ms": 1794562739148,
+            "last_finished_test_full_name": "Dreamy.Debugger.Tests.WorkspaceUiTests.PinFitsLandscapePortraitAndRotationWithEveryKeyOnScreen",
+            "last_finished_unix_ms": 1794562739415,
+            "stuck_suspected": false,
+            "editor_is_focused": false,
+            "run_in_background": null,
+            "focus_nudge_attempts": null,
+            "focus_nudge_limit": null,
+            "focus_nudge_status": null,
+            "blocked_reason": null,
+            "failures_so_far": [],
+            "failures_capped": false
+          },
+          "error": null,
+          "result": {
+            "mode": "PlayMode",
+            "summary": {
+              "total": 29,
+              "passed": 29,
+              "failed": 0,
+              "skipped": 0,
+              "durationSeconds": 13.8985373,
+              "resultState": "Passed"
+            },
+            "results": []
+          }
+        },
+        "hint": null
+      }
+    },
+    "isError": false
+  }
+}

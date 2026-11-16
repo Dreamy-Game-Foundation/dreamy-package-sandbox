@@ -4,6 +4,12 @@
 `LocalPackages/`. Unity Package Manager tham chiếu chúng bằng đường dẫn local
 trong `Packages/manifest.json`, nên cần khởi tạo submodule trước khi mở project.
 
+## Tutorial 0.3.0 — 2026-11-16
+
+Tutorial nâng từ 0.2.0 lên **0.3.0**: sửa pending checkpoint/retry qua reopen/pause, thêm gameplay/condition bridge, input scopes, diagnostics/events và mẫu tích hợp nhiều thể loại game. Service/view interface, save schema và GUID hiện có được giữ nguyên. Bắt đầu tại [Tutorial quick start](LocalPackages/com.dreamy.feature.tutorial/README.md) hoặc [hướng dẫn mở rộng](LocalPackages/com.dreamy.feature.tutorial/Documentation~/extensibility-0.3.md).
+
+Consumer độc lập đạt **56/56 EditMode + 34/34 PlayMode** trên Unity 6000.4.12f1; sandbox MCP đạt 56/56 EditMode. [Evidence và giới hạn kiểm chứng](docs/evidence/tutorial-extensibility/README.md) ghi rõ visual/device gates còn thiếu. Imported sample cũ trong sandbox giữ nguyên như snapshot consumer; khi import sample mới cần tránh trùng assembly.
+
 ## Gói bảo trì ngày 2026-11-06
 
 Đã đồng bộ các revision: Editor Tools **1.1.0**, Economy **0.8.1**, Missions **0.3.1**, Tutorial **0.1.1**, Feedback **0.4.1**. Audio **1.0.5** và Debugger **0.1.2** đã được tăng version cùng source trước đó nên giữ nguyên. Package không đổi source sau lần tăng version gần nhất giữ version hiện tại.

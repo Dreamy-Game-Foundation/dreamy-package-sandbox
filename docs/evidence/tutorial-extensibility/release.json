@@ -1,0 +1,23 @@
+{
+  "version": "0.3.0",
+  "date": "2026-11-16",
+  "package": {
+    "remote": "https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.tutorial.git",
+    "branch": "main",
+    "commit": "dbf1f6ef6f0ced68d5ee4f73740662c466c7d331",
+    "tag": "v0.3.0",
+    "pushed": true
+  },
+  "sandbox": {
+    "remote": "https://github.com/Dreamy-Game-Foundation/dreamy-package-sandbox.git",
+    "branch": "main",
+    "packageGitlink": "dbf1f6ef6f0ced68d5ee4f73740662c466c7d331"
+  },
+  "verification": {
+    "receipt": "verification.json",
+    "editModePassed": 56,
+    "playModePassed": 34,
+    "visual": "not verified: background-only preview captures",
+    "devicePlayer": "not run"
+  }
+}

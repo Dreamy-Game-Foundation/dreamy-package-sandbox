@@ -1,0 +1,516 @@
+{
+  "sourceFingerprint": "a6675790b35b294c2aad60c0f1f6d4ac6e215a52e556664c57a47598bca2ccf7",
+  "fingerprintScheme": "package-inputs-v2",
+  "verificationScriptSha256": "5e0b1c31c3b3832e4686a37cd685269e39a562da3dbf727ca184be11f97a7802",
+  "consumer": "/tmp/tutorial-release-0.3.0-20261116/consumer",
+  "dependencies": {
+    "com.dreamy.core": {
+      "version": "1.2.0",
+      "sourceFingerprint": "eefd540779d95a9ddb653a978146f690ffa37f96627b9f13c3a90962c51913ba"
+    },
+    "com.dreamy.dataconfig": {
+      "version": "1.0.1",
+      "sourceFingerprint": "1486ba990db2061579eedd38946481d0ba4ce362ab0f278b27f4df26b5c1b44d"
+    },
+    "com.dreamy.datasave": {
+      "version": "1.0.1",
+      "sourceFingerprint": "dc59aeccc5633c978c3ff42c5524da49546da90e3f194e2aa3f1732535505866"
+    },
+    "com.dreamy.ui": {
+      "version": "1.1.0",
+      "sourceFingerprint": "dac60390f422c4746144f81642b7d4851fdcf7ff5ecbd598e6c29816f98222e3"
+    },
+    "com.dreamy.assets": {
+      "version": "1.0.1",
+      "sourceFingerprint": "fc80fa5dc9effebb7d395637ac9a8c03b5005e24b78ee01f17ef04fcdff24231"
+    }
+  },
+  "runs": [
+    {
+      "mode": "EditMode",
+      "command": [
+        "/home/tutrinh/Unity/Hub/Editor/6000.4.12f1/Editor/Unity",
+        "-batchmode",
+        "-nographics",
+        "-projectPath",
+        "/tmp/tutorial-release-0.3.0-20261116/consumer",
+        "-runTests",
+        "-testPlatform",
+        "EditMode",
+        "-assemblyNames",
+        "Dreamy.Tutorial.Editor.Tests",
+        "-testResults",
+        "/tmp/tutorial-release-0.3.0-20261116/editmode.xml",
+        "-logFile",
+        "/tmp/tutorial-release-0.3.0-20261116/editmode.log"
+      ],
+      "exitCode": 0,
+      "summary": {
+        "id": "2",
+        "testcasecount": "56",
+        "result": "Passed",
+        "total": "56",
+        "passed": "56",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-11-16 03:37:08Z",
+        "end-time": "2026-11-16 03:37:09Z",
+        "duration": "0.1838211"
+      }
+    },
+    {
+      "mode": "PlayMode",
+      "command": [
+        "/home/tutrinh/Unity/Hub/Editor/6000.4.12f1/Editor/Unity",
+        "-batchmode",
+        "-nographics",
+        "-projectPath",
+        "/tmp/tutorial-release-0.3.0-20261116/consumer",
+        "-runTests",
+        "-testPlatform",
+        "PlayMode",
+        "-assemblyNames",
+        "Dreamy.Tutorial.PlayMode.Tests;Dreamy.Tutorial.Sample.Tests",
+        "-testResults",
+        "/tmp/tutorial-release-0.3.0-20261116/playmode.xml",
+        "-logFile",
+        "/tmp/tutorial-release-0.3.0-20261116/playmode.log"
+      ],
+      "exitCode": 0,
+      "summary": {
+        "id": "2",
+        "testcasecount": "34",
+        "result": "Passed",
+        "total": "34",
+        "passed": "34",
+        "failed": "0",
+        "inconclusive": "0",
+        "skipped": "0",
+        "asserts": "0",
+        "engine-version": "3.5.0.0",
+        "clr-version": "4.0.30319.42000",
+        "start-time": "2026-11-16 03:37:18Z",
+        "end-time": "2026-11-16 03:37:19Z",
+        "duration": "0.3488772"
+      }
+    }
+  ],
+  "sourceUnchangedDuringVerification": true,
+  "resolvedPackages": {
+    "com.cysharp.unitask": {
+      "version": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.cysharp.unitask@360e370345b9",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.demigiant.dotween": {
+      "version": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/Library/PackageCache/com.demigiant.dotween@4c1537e2a618",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.dreamy.assets": {
+      "version": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.assets",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.addressables": "2.7.2",
+        "com.cysharp.unitask": "2.5.10",
+        "com.dreamy.core": "1.1.2"
+      }
+    },
+    "com.dreamy.core": {
+      "version": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.core",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.dreamy.dataconfig": {
+      "version": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.dataconfig",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      }
+    },
+    "com.dreamy.datasave": {
+      "version": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.datasave",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      }
+    },
+    "com.dreamy.feature.tutorial": {
+      "version": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.feature.tutorial",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.dreamy.core": "1.2.0",
+        "com.dreamy.dataconfig": "1.0.1",
+        "com.dreamy.datasave": "1.0.1",
+        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.unity.ugui": "2.0.0",
+        "com.unity.modules.physics": "1.0.0",
+        "com.dreamy.ui": "1.1.0",
+        "com.unity.modules.physics2d": "1.0.0"
+      }
+    },
+    "com.dreamy.ui": {
+      "version": "file:/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.ui",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.ugui": "2.0.0",
+        "com.cysharp.unitask": "2.5.10",
+        "com.demigiant.dotween": "0.0.3",
+        "com.dreamy.core": "1.1.2",
+        "com.dreamy.assets": "1.0.1"
+      }
+    },
+    "com.unity.addressables": {
+      "version": "2.9.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.profiling.core": "1.0.2",
+        "com.unity.test-framework": "1.4.5",
+        "com.unity.modules.assetbundle": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.scriptablebuildpipeline": "2.6.1",
+        "com.unity.modules.unitywebrequestassetbundle": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.ext.nunit": {
+      "version": "2.0.5",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.profiling.core": {
+      "version": "1.0.3",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.scriptablebuildpipeline": {
+      "version": "2.6.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.4.5",
+        "com.unity.modules.assetbundle": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.test-framework": {
+      "version": "1.6.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.ext.nunit": "2.0.3",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      }
+    },
+    "com.unity.ugui": {
+      "version": "2.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.ui": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0"
+      }
+    },
+    "com.unity.modules.accessibility": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.adaptiveperformance": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.subsystems": "1.0.0"
+      }
+    },
+    "com.unity.modules.ai": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.androidjni": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.animation": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.assetbundle": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.audio": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.cloth": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      }
+    },
+    "com.unity.modules.director": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.animation": "1.0.0"
+      }
+    },
+    "com.unity.modules.hierarchycore": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.imageconversion": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.imgui": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.jsonserialize": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.particlesystem": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.physics": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.physics2d": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.screencapture": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.imageconversion": "1.0.0"
+      }
+    },
+    "com.unity.modules.subsystems": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.jsonserialize": "1.0.0"
+      }
+    },
+    "com.unity.modules.terrain": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.terrainphysics": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.terrain": "1.0.0"
+      }
+    },
+    "com.unity.modules.tilemap": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.physics2d": "1.0.0"
+      }
+    },
+    "com.unity.modules.ui": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.uielements": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.ui": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.hierarchycore": "1.0.0",
+        "com.unity.modules.physics": "1.0.0"
+      }
+    },
+    "com.unity.modules.umbra": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.unityanalytics": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      }
+    },
+    "com.unity.modules.unitywebrequest": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.unitywebrequestassetbundle": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.assetbundle": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0"
+      }
+    },
+    "com.unity.modules.unitywebrequestaudio": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.audio": "1.0.0"
+      }
+    },
+    "com.unity.modules.unitywebrequesttexture": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0"
+      }
+    },
+    "com.unity.modules.unitywebrequestwww": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.unitywebrequestassetbundle": "1.0.0",
+        "com.unity.modules.unitywebrequestaudio": "1.0.0",
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.assetbundle": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0"
+      }
+    },
+    "com.unity.modules.vectorgraphics": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0"
+      }
+    },
+    "com.unity.modules.vehicles": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      }
+    },
+    "com.unity.modules.video": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.ui": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0"
+      }
+    },
+    "com.unity.modules.vr": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.xr": "1.0.0"
+      }
+    },
+    "com.unity.modules.wind": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.xr": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.subsystems": "1.0.0"
+      }
+    }
+  }
+}

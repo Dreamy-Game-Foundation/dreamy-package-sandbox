@@ -1,0 +1,966 @@
+{
+  "job_id": "c8cf69431ced4cd2bbf44e05d092b4ca",
+  "status": "succeeded",
+  "mode": "EditMode",
+  "started_unix_ms": 1794888615554,
+  "finished_unix_ms": 1794888628339,
+  "last_update_unix_ms": 1794888628339,
+  "progress": {
+    "completed": 103,
+    "total": 103,
+    "current_test_full_name": null,
+    "current_test_started_unix_ms": null,
+    "last_finished_test_full_name": "Dreamy.Template.Tests.QuestServiceStrictTests.WeeklyWindowChangesExactlyAtMondayMidnightUtcPlusSeven",
+    "last_finished_unix_ms": 1794888628127,
+    "stuck_suspected": false,
+    "editor_is_focused": false,
+    "run_in_background": true,
+    "focus_nudge_attempts": null,
+    "focus_nudge_limit": null,
+    "focus_nudge_status": null,
+    "blocked_reason": null,
+    "failures_so_far": [],
+    "failures_capped": false
+  },
+  "error": null,
+  "result": {
+    "mode": "EditMode",
+    "summary": {
+      "total": 103,
+      "passed": 103,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 4.0738079,
+      "resultState": "Passed"
+    },
+    "results": [
+      {
+        "name": "BattleResultUsesAuthoritativeAccountXpWithFreshSaveLoads",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.BattleResultUsesAuthoritativeAccountXpWithFreshSaveLoads",
+        "state": "Passed",
+        "durationSeconds": 0.2128886,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "FixedXpGoalsCoexistWithResourcePoolAndResetAtBangkokMidnight",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.FixedXpGoalsCoexistWithResourcePoolAndResetAtBangkokMidnight",
+        "state": "Passed",
+        "durationSeconds": 0.2419321,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "HomeChestRecoversAcrossEverySaveBoundary(False)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.HomeChestRecoversAcrossEverySaveBoundary(False)",
+        "state": "Passed",
+        "durationSeconds": 0.2776131,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "HomeChestRecoversAcrossEverySaveBoundary(True)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.HomeChestRecoversAcrossEverySaveBoundary(True)",
+        "state": "Passed",
+        "durationSeconds": 0.3366989,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "HomeChestsDeliverConfiguredCardsAndReplayWithoutExtraRewards",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.HomeChestsDeliverConfiguredCardsAndReplayWithoutExtraRewards",
+        "state": "Passed",
+        "durationSeconds": 0.0280569,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LaunchCurveAndMilestonesMatchApprovedLevelTable",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LaunchCurveAndMilestonesMatchApprovedLevelTable",
+        "state": "Passed",
+        "durationSeconds": 0.0338097,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LegacyLevelIsPreservedAndImportedOnlyOnce",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LegacyLevelIsPreservedAndImportedOnlyOnce",
+        "state": "Passed",
+        "durationSeconds": 0.0202868,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LevelChestConsumesOnceAndReplaysWithoutExtraRewards",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelChestConsumesOnceAndReplaysWithoutExtraRewards",
+        "state": "Passed",
+        "durationSeconds": 0.0082167,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LevelRewardBoundaryMapsTypedRewards(\"currency\",\"currency.coin\",Coin)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards(\"currency\",\"currency.coin\",Coin)",
+        "state": "Passed",
+        "durationSeconds": 0.001161,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LevelRewardBoundaryMapsTypedRewards(\"currency\",\"currency.gem\",Gem)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards(\"currency\",\"currency.gem\",Gem)",
+        "state": "Passed",
+        "durationSeconds": 0.0001297,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LevelRewardBoundaryMapsTypedRewards(\"unit\",\"unit.captain_nova\",Unit)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards(\"unit\",\"unit.captain_nova\",Unit)",
+        "state": "Passed",
+        "durationSeconds": 0.0001615,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LevelRewardBoundaryMapsTypedRewards(\"card\",\"card.volt_stein\",Card)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards(\"card\",\"card.volt_stein\",Card)",
+        "state": "Passed",
+        "durationSeconds": 0.0000691,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LevelRewardBoundaryMapsTypedRewards(\"chest\",\"chest.home.ii\",SilverChest)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards(\"chest\",\"chest.home.ii\",SilverChest)",
+        "state": "Passed",
+        "durationSeconds": 0.0000512,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LevelRewardBoundaryMapsTypedRewards(\"chest\",\"chest.home.iii\",GoldChest)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards(\"chest\",\"chest.home.iii\",GoldChest)",
+        "state": "Passed",
+        "durationSeconds": 0.000054,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LevelRewardBoundaryRejectsUnsupportedPayloads(\"chest\",\"other.iii\")",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryRejectsUnsupportedPayloads(\"chest\",\"other.iii\")",
+        "state": "Passed",
+        "durationSeconds": 0.0002739,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LevelRewardBoundaryRejectsUnsupportedPayloads(\"card\",\"unit.volt_stein\")",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryRejectsUnsupportedPayloads(\"card\",\"unit.volt_stein\")",
+        "state": "Passed",
+        "durationSeconds": 0.0000314,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LevelRewardBoundaryRejectsUnsupportedPayloads(\"cosmetic\",\"cosmetic.profile-frame.account-30\")",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryRejectsUnsupportedPayloads(\"cosmetic\",\"cosmetic.profile-frame.account-30\")",
+        "state": "Passed",
+        "durationSeconds": 0.0000151,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "LockedWeeklyClickShowsMessageAndKeepsDailySelected",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.LockedWeeklyClickShowsMessageAndKeepsDailySelected",
+        "state": "Passed",
+        "durationSeconds": 0.006541,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "MatchXpDeduplicatesAcrossRestartAndCapDoesNotStopEarning",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.MatchXpDeduplicatesAcrossRestartAndCapDoesNotStopEarning",
+        "state": "Passed",
+        "durationSeconds": 0.0277724,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "MysteryResolutionIsStableAcrossRestartAndExcludesFutureLevelUnits",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.MysteryResolutionIsStableAcrossRestartAndExcludesFutureLevelUnits",
+        "state": "Passed",
+        "durationSeconds": 0.0062409,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "PurchasedChestRecoversOneChargeAndOneRewardAcrossSaveBoundaries(False)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.PurchasedChestRecoversOneChargeAndOneRewardAcrossSaveBoundaries(False)",
+        "state": "Passed",
+        "durationSeconds": 0.0807873,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "PurchasedChestRecoversOneChargeAndOneRewardAcrossSaveBoundaries(True)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.PurchasedChestRecoversOneChargeAndOneRewardAcrossSaveBoundaries(True)",
+        "state": "Passed",
+        "durationSeconds": 0.0723669,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "QuestBatchAutoClaimsCompletedXpOnceAndWritesProgressOncePerPeriod",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.QuestBatchAutoClaimsCompletedXpOnceAndWritesProgressOncePerPeriod",
+        "state": "Passed",
+        "durationSeconds": 0.0182279,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "QuestBatchRetriesXpSaveFailureWithoutDuplicatingOriginalEvents(False)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.QuestBatchRetriesXpSaveFailureWithoutDuplicatingOriginalEvents(False)",
+        "state": "Passed",
+        "durationSeconds": 0.0390589,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "QuestBatchRetriesXpSaveFailureWithoutDuplicatingOriginalEvents(True)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.QuestBatchRetriesXpSaveFailureWithoutDuplicatingOriginalEvents(True)",
+        "state": "Passed",
+        "durationSeconds": 0.0118634,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "SilentXpUpdatesSaveAndRewardsWithoutQueuingLevelUpPanels",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.SilentXpUpdatesSaveAndRewardsWithoutQueuingLevelUpPanels",
+        "state": "Passed",
+        "durationSeconds": 0.0287494,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "XpRewardRetriesAfterProgressionSaveFailureWithoutDoubleGrant(False)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.XpRewardRetriesAfterProgressionSaveFailureWithoutDoubleGrant(False)",
+        "state": "Passed",
+        "durationSeconds": 0.0040358,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "XpRewardRetriesAfterProgressionSaveFailureWithoutDoubleGrant(True)",
+        "fullName": "Dreamy.Template.Tests.AccountProgressionIntegrationTests.XpRewardRetriesAfterProgressionSaveFailureWithoutDoubleGrant(True)",
+        "state": "Passed",
+        "durationSeconds": 0.0029251,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AiShotsAndAiEnergyCollectionDoNotEarnPlayerProgress",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.AiShotsAndAiEnergyCollectionDoNotEarnPlayerProgress",
+        "state": "Passed",
+        "durationSeconds": 0.1760848,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(PlayMatch)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(PlayMatch)",
+        "state": "Passed",
+        "durationSeconds": 0.020515,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(WinMatch)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(WinMatch)",
+        "state": "Passed",
+        "durationSeconds": 0.0154098,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(FireShot)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(FireShot)",
+        "state": "Passed",
+        "durationSeconds": 0.0167355,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(DealDamage)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(DealDamage)",
+        "state": "Passed",
+        "durationSeconds": 0.0360614,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(DestroyUnit)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(DestroyUnit)",
+        "state": "Passed",
+        "durationSeconds": 0.0461597,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(ExposeUnit)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(ExposeUnit)",
+        "state": "Passed",
+        "durationSeconds": 0.0202045,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(CollectEnergyNode)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(CollectEnergyNode)",
+        "state": "Passed",
+        "durationSeconds": 0.0096336,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(HitUnit)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(HitUnit)",
+        "state": "Passed",
+        "durationSeconds": 0.0065783,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(ExposeByTerrain)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(ExposeByTerrain)",
+        "state": "Passed",
+        "durationSeconds": 0.0073984,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(UseDifferentUnit)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(UseDifferentUnit)",
+        "state": "Passed",
+        "durationSeconds": 0.0074166,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "BattleWithoutAHumanPlayerNeverReportsCompletion",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.BattleWithoutAHumanPlayerNeverReportsCompletion",
+        "state": "Passed",
+        "durationSeconds": 0.0034379,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CompletedAndWonRemainIndependentAndRepeatedCompletionIsDeduplicated",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.CompletedAndWonRemainIndependentAndRepeatedCompletionIsDeduplicated",
+        "state": "Passed",
+        "durationSeconds": 0.0059089,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CompletedBattleBatchRetriesAfterWeeklyFailureWithoutRepeatingDaily",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.CompletedBattleBatchRetriesAfterWeeklyFailureWithoutRepeatingDaily",
+        "state": "Passed",
+        "durationSeconds": 0.0161174,
+        "message": null,
+        "stackTrace": null,
+        "output": "IOException: Injected battle Quest save failure.\nDreamy.Template.Tests.BattleQuestProgressTests+Disk.Save[T] (T value, System.String key) (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:620)\nDreamy.Template.Gameplay.Progression.QuestService+EmbeddedMissionSave.Save[T] (T data, System.String key) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Migration.cs:195)\nDreamy.Template.Gameplay.Progression.MissionProgressBatch.Commit (Dreamy.Datasave.IDatasaveService store, System.String key, System.Collections.Generic.IReadOnlyList`1[T] events) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/MissionProgressBatch.cs:84)\nDreamy.Template.Gameplay.Progression.QuestService.ReportProgressBatch (Dreamy.Template.Gameplay.Progression.QuestPeriod period, System.Collections.Generic.IReadOnlyList`1[T] events) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Strict.cs:108)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress.RetryPending () (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:179)\nUnityEngine.Debug:LogException(Exception)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress:RetryPending() (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:197)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress:RecordCompleted(Boolean, Boolean) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:140)\nDreamy.Template.Tests.BattleQuestProgressTests:CompletedBattleBatchRetriesAfterWeeklyFailureWithoutRepeatingDaily() (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:173)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions() (at /home/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:401)\n\n"
+      },
+      {
+        "name": "CompletedBattleBatchWritesEachPeriodOnceAndReplaysOriginalEventsSafely",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.CompletedBattleBatchWritesEachPeriodOnceAndReplaysOriginalEventsSafely",
+        "state": "Passed",
+        "durationSeconds": 0.0096913,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "DistinctUnitValuesAreNotShotEventIds",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.DistinctUnitValuesAreNotShotEventIds",
+        "state": "Passed",
+        "durationSeconds": 0.0100442,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "DuplicateDamageCallbackAndRestartReplayRetainOriginalEventIdentity",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.DuplicateDamageCallbackAndRestartReplayRetainOriginalEventIdentity",
+        "state": "Passed",
+        "durationSeconds": 0.0113876,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "ExposureKeepsMutationWindowsWhenFixedUpdateArrivesAfterRollover",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.ExposureKeepsMutationWindowsWhenFixedUpdateArrivesAfterRollover",
+        "state": "Passed",
+        "durationSeconds": 0.0076302,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Left,Right,False,True)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Left,Right,False,True)",
+        "state": "Passed",
+        "durationSeconds": 0.0067086,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Right,Left,False,False)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Right,Left,False,False)",
+        "state": "Passed",
+        "durationSeconds": 0.0037637,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Left,Left,False,False)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Left,Left,False,False)",
+        "state": "Passed",
+        "durationSeconds": 0.0041085,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Left,Right,True,False)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Left,Right,True,False)",
+        "state": "Passed",
+        "durationSeconds": 0.0036885,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "FailedWindowCaptureDoesNotInterruptDamageOrGrantOnALaterCallback",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.FailedWindowCaptureDoesNotInterruptDamageOrGrantOnALaterCallback",
+        "state": "Passed",
+        "durationSeconds": 0.011238,
+        "message": null,
+        "stackTrace": null,
+        "output": "IOException: Injected battle Quest save failure.\nDreamy.Template.Tests.BattleQuestProgressTests+Disk.Save[T] (T value, System.String key) (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:620)\nDreamy.Template.Gameplay.Progression.QuestService+EmbeddedMissionSave.Save[T] (T data, System.String key) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Migration.cs:195)\nDreamy.Missions.MissionModel.Commit (Dreamy.Missions.MissionSaveData next) (at ./Library/PackageCache/com.dreamy.feature.missions@1e1b4b57b738/Runtime/Domain/MissionModel.cs:436)\nDreamy.Missions.MissionModel.AdvanceWindow () (at ./Library/PackageCache/com.dreamy.feature.missions@1e1b4b57b738/Runtime/Domain/MissionModel.cs:153)\nDreamy.Missions.MissionModel.Refresh () (at ./Library/PackageCache/com.dreamy.feature.missions@1e1b4b57b738/Runtime/Domain/MissionModel.cs:141)\nDreamy.Template.Gameplay.Progression.QuestService.GetWindowId (Dreamy.Template.Gameplay.Progression.QuestPeriod period) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Strict.cs:70)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress.Capture (System.String action) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:74)\nUnityEngine.Debug:LogException(Exception)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress:Capture(String) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:81)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress:GetAction(Object, Object, String) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:208)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress:RecordDamage(DamageInfo, IDamageable, DamageResult) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:101)\nDreamy.Template.Gameplay.Battle.ExplosionService:ReportDamageApplied(DamageInfo, IDamageable, DamageResult) (at Assets/_Project/Scripts/Gameplay/Battle/ExplosionService.cs:106)\nDreamy.Template.Tests.BattleQuestProgressTests:FailedWindowCaptureDoesNotInterruptDamageOrGrantOnALaterCallback() (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:324)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions() (at /home/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:401)\n\n"
+      },
+      {
+        "name": "IneligibleCompletionDoesNotGrantAndLossOnlyGrantsPlay",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.IneligibleCompletionDoesNotGrantAndLossOnlyGrantsPlay",
+        "state": "Passed",
+        "durationSeconds": 0.0056574,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "MultipleTargetsOfOneDamageActionAndLaterDamageHaveIndependentIdentities",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.MultipleTargetsOfOneDamageActionAndLaterDamageHaveIndependentIdentities",
+        "state": "Passed",
+        "durationSeconds": 0.0109524,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "NearbyNoOpPlayerCarveThenAiCarveNeverUsesCurrentPlayerTeam",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.NearbyNoOpPlayerCarveThenAiCarveNeverUsesCurrentPlayerTeam",
+        "state": "Passed",
+        "durationSeconds": 0.0039633,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Right,Left,Character,5)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Right,Left,Character,5)",
+        "state": "Passed",
+        "durationSeconds": 0.007767,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Neutral,Right,Character,5)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Neutral,Right,Character,5)",
+        "state": "Passed",
+        "durationSeconds": 0.0041485,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Left,Character,5)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Left,Character,5)",
+        "state": "Passed",
+        "durationSeconds": 0.0033534,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Neutral,Character,5)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Neutral,Character,5)",
+        "state": "Passed",
+        "durationSeconds": 0.0033118,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Right,Bunker,5)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Right,Bunker,5)",
+        "state": "Passed",
+        "durationSeconds": 0.0044017,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Right,Character,0)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Right,Character,0)",
+        "state": "Passed",
+        "durationSeconds": 0.0032914,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "OldPayloadReplayCannotAdvanceEitherNewWindow",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.OldPayloadReplayCannotAdvanceEitherNewWindow",
+        "state": "Passed",
+        "durationSeconds": 0.0110104,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "PartialPeriodSaveRetriesOriginalPayloadWithoutRepeatingSavedPeriod",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.PartialPeriodSaveRetriesOriginalPayloadWithoutRepeatingSavedPeriod",
+        "state": "Passed",
+        "durationSeconds": 0.0110941,
+        "message": null,
+        "stackTrace": null,
+        "output": "IOException: Injected battle Quest save failure.\nDreamy.Template.Tests.BattleQuestProgressTests+Disk.Save[T] (T value, System.String key) (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:620)\nDreamy.Template.Gameplay.Progression.QuestService+EmbeddedMissionSave.Save[T] (T data, System.String key) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Migration.cs:195)\nDreamy.Template.Gameplay.Progression.MissionProgressBatch.Commit (Dreamy.Datasave.IDatasaveService store, System.String key, System.Collections.Generic.IReadOnlyList`1[T] events) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/MissionProgressBatch.cs:84)\nDreamy.Template.Gameplay.Progression.QuestService.ReportProgressBatch (Dreamy.Template.Gameplay.Progression.QuestPeriod period, System.Collections.Generic.IReadOnlyList`1[T] events) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Strict.cs:108)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress.RetryPending () (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:179)\nUnityEngine.Debug:LogException(Exception)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress:RetryPending() (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:197)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress:RecordShot(BattleTeamId, String) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:93)\nDreamy.Template.Gameplay.Battle.<LaunchPatternAsync>d__46:MoveNext() (at Assets/_Project/Scripts/Gameplay/Battle/BattleProjectileService.cs:215)\nCysharp.Threading.Tasks.CompilerServices.AsyncUniTaskVoidMethodBuilder:Start(<LaunchPatternAsync>d__46&) (at ./Library/PackageCache/com.cysharp.unitask@360e370345b9/Runtime/CompilerServices/AsyncUniTaskVoidMethodBuilder.cs:110)\nDreamy.Template.Gameplay.Battle.BattleProjectileService:LaunchPatternAsync(BattleTeamId, WeaponDefinition, Transform, Vector2, Vector2, WeaponRuntimeConfig, IShotPattern, EnergyShotModifier, BattleCharacter, Int32)\nDreamy.Template.Gameplay.Battle.BattleProjectileService:Launch(BattleTeamId, WeaponDefinition, Transform, Vector2, Vector2, EnergyShotModifier, Action`1, Int64) (at Assets/_Project/Scripts/Gameplay/Battle/BattleProjectileService.cs:170)\nDreamy.Template.Gameplay.Battle.BattleProjectileService:Launch(BattleTeamId, WeaponDefinition, Transform, Vector2, Vector2, Action`1) (at Assets/_Project/Scripts/Gameplay/Battle/BattleProjectileService.cs:134)\nDreamy.Template.Tests.Fixture:Launch(BattleTeamId) (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:499)\nDreamy.Template.Tests.BattleQuestProgressTests:PartialPeriodSaveRetriesOriginalPayloadWithoutRepeatingSavedPeriod() (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:269)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions() (at /home/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:401)\n\n"
+      },
+      {
+        "name": "PartialSaveRetryAfterRolloverNeverRecapturesEitherWindow",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.PartialSaveRetryAfterRolloverNeverRecapturesEitherWindow",
+        "state": "Passed",
+        "durationSeconds": 0.0128642,
+        "message": null,
+        "stackTrace": null,
+        "output": "IOException: Injected battle Quest save failure.\nDreamy.Template.Tests.BattleQuestProgressTests+Disk.Save[T] (T value, System.String key) (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:620)\nDreamy.Template.Gameplay.Progression.QuestService+EmbeddedMissionSave.Save[T] (T data, System.String key) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Migration.cs:195)\nDreamy.Template.Gameplay.Progression.MissionProgressBatch.Commit (Dreamy.Datasave.IDatasaveService store, System.String key, System.Collections.Generic.IReadOnlyList`1[T] events) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/MissionProgressBatch.cs:84)\nDreamy.Template.Gameplay.Progression.QuestService.ReportProgressBatch (Dreamy.Template.Gameplay.Progression.QuestPeriod period, System.Collections.Generic.IReadOnlyList`1[T] events) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Strict.cs:108)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress.RetryPending () (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:179)\nUnityEngine.Debug:LogException(Exception)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress:RetryPending() (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:197)\nDreamy.Template.Gameplay.Battle.BattleQuestProgress:RecordShot(BattleTeamId, String) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:93)\nDreamy.Template.Gameplay.Battle.<LaunchPatternAsync>d__46:MoveNext() (at Assets/_Project/Scripts/Gameplay/Battle/BattleProjectileService.cs:215)\nCysharp.Threading.Tasks.CompilerServices.AsyncUniTaskVoidMethodBuilder:Start(<LaunchPatternAsync>d__46&) (at ./Library/PackageCache/com.cysharp.unitask@360e370345b9/Runtime/CompilerServices/AsyncUniTaskVoidMethodBuilder.cs:110)\nDreamy.Template.Gameplay.Battle.BattleProjectileService:LaunchPatternAsync(BattleTeamId, WeaponDefinition, Transform, Vector2, Vector2, WeaponRuntimeConfig, IShotPattern, EnergyShotModifier, BattleCharacter, Int32)\nDreamy.Template.Gameplay.Battle.BattleProjectileService:Launch(BattleTeamId, WeaponDefinition, Transform, Vector2, Vector2, EnergyShotModifier, Action`1, Int64) (at Assets/_Project/Scripts/Gameplay/Battle/BattleProjectileService.cs:170)\nDreamy.Template.Gameplay.Battle.BattleProjectileService:Launch(BattleTeamId, WeaponDefinition, Transform, Vector2, Vector2, Action`1) (at Assets/_Project/Scripts/Gameplay/Battle/BattleProjectileService.cs:134)\nDreamy.Template.Tests.Fixture:Launch(BattleTeamId) (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:499)\nDreamy.Template.Tests.BattleQuestProgressTests:PartialSaveRetryAfterRolloverNeverRecapturesEitherWindow() (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:302)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions() (at /home/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:401)\n\n"
+      },
+      {
+        "name": "RuntimeBufferOnlyCommitsActionsAfterValidCompletion(False)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.RuntimeBufferOnlyCommitsActionsAfterValidCompletion(False)",
+        "state": "Passed",
+        "durationSeconds": 0.0069494,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "RuntimeBufferOnlyCommitsActionsAfterValidCompletion(True)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.RuntimeBufferOnlyCommitsActionsAfterValidCompletion(True)",
+        "state": "Passed",
+        "durationSeconds": 0.0062333,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "StructuralCollapseCreditsExposureOnceAfterDeferredResolve(Left,1)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.StructuralCollapseCreditsExposureOnceAfterDeferredResolve(Left,1)",
+        "state": "Passed",
+        "durationSeconds": 0.0144239,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "StructuralCollapseCreditsExposureOnceAfterDeferredResolve(Right,0)",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.StructuralCollapseCreditsExposureOnceAfterDeferredResolve(Right,0)",
+        "state": "Passed",
+        "durationSeconds": 0.0039265,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "UnrelatedMotionExposesWithoutPlayerTerrainCredit",
+        "fullName": "Dreamy.Template.Tests.BattleQuestProgressTests.UnrelatedMotionExposesWithoutPlayerTerrainCredit",
+        "state": "Passed",
+        "durationSeconds": 0.0040457,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "BatchMatchesImmutablePackageForMixedEventsAndSurvivesReload",
+        "fullName": "Dreamy.Template.Tests.MissionProgressBatchTests.BatchMatchesImmutablePackageForMixedEventsAndSurvivesReload",
+        "state": "Passed",
+        "durationSeconds": 0.0916869,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "FailedBatchDoesNotMutateLoadedStateAndCanRetryWithoutDuplicateProgress",
+        "fullName": "Dreamy.Template.Tests.MissionProgressBatchTests.FailedBatchDoesNotMutateLoadedStateAndCanRetryWithoutDuplicateProgress",
+        "state": "Passed",
+        "durationSeconds": 0.0016036,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "RefreshedWindowRejectsOriginalEventsWithoutWriting",
+        "fullName": "Dreamy.Template.Tests.MissionProgressBatchTests.RefreshedWindowRejectsOriginalEventsWithoutWriting",
+        "state": "Passed",
+        "durationSeconds": 0.0011459,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "AllTenObjectivesHaveStableDistinctKeysAndOnlyUnitUseIsDistinct",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.AllTenObjectivesHaveStableDistinctKeysAndOnlyUnitUseIsDistinct",
+        "state": "Passed",
+        "durationSeconds": 0.0306015,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(1)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(1)",
+        "state": "Passed",
+        "durationSeconds": 0.0698883,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(2)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(2)",
+        "state": "Passed",
+        "durationSeconds": 0.0222218,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(3)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(3)",
+        "state": "Passed",
+        "durationSeconds": 0.02479,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(4)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(4)",
+        "state": "Passed",
+        "durationSeconds": 0.0256026,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(5)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(5)",
+        "state": "Passed",
+        "durationSeconds": 0.0247778,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CurrencyAndCardClaimsKeepBothPeriodJournalsAcrossEitherOwnerFailure(Dreamy.Template.Gameplay.Progression.ResourceSave)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyAndCardClaimsKeepBothPeriodJournalsAcrossEitherOwnerFailure(Dreamy.Template.Gameplay.Progression.ResourceSave)",
+        "state": "Passed",
+        "durationSeconds": 0.0383844,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CurrencyAndCardClaimsKeepBothPeriodJournalsAcrossEitherOwnerFailure(Dreamy.Template.Gameplay.Progression.UnitProgressSave)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyAndCardClaimsKeepBothPeriodJournalsAcrossEitherOwnerFailure(Dreamy.Template.Gameplay.Progression.UnitProgressSave)",
+        "state": "Passed",
+        "durationSeconds": 0.0333329,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(1)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(1)",
+        "state": "Passed",
+        "durationSeconds": 0.0202827,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(2)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(2)",
+        "state": "Passed",
+        "durationSeconds": 0.0182364,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(3)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(3)",
+        "state": "Passed",
+        "durationSeconds": 0.0183704,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(4)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(4)",
+        "state": "Passed",
+        "durationSeconds": 0.0181445,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "FailedExpiredWindowSaveRetainsImportedWindowForRecreate",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.FailedExpiredWindowSaveRetainsImportedWindowForRecreate",
+        "state": "Passed",
+        "durationSeconds": 0.0226926,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "FreshSelectionAndOneFreeRerollStayUniqueEvenWhenAllGroupsConflict",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.FreshSelectionAndOneFreeRerollStayUniqueEvenWhenAllGroupsConflict",
+        "state": "Passed",
+        "durationSeconds": 0.0167287,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "MigrationPreservesBothOriginalWindowsAndAllValuesBeforeRollover(False)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.MigrationPreservesBothOriginalWindowsAndAllValuesBeforeRollover(False)",
+        "state": "Passed",
+        "durationSeconds": 0.0240844,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "MigrationPreservesBothOriginalWindowsAndAllValuesBeforeRollover(True)",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.MigrationPreservesBothOriginalWindowsAndAllValuesBeforeRollover(True)",
+        "state": "Passed",
+        "durationSeconds": 0.0613036,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "MigrationSaveFailureLeavesSourceAndBothDestinationsUnchangedUntilRecreate",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.MigrationSaveFailureLeavesSourceAndBothDestinationsUnchangedUntilRecreate",
+        "state": "Passed",
+        "durationSeconds": 0.0064163,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "MissingCardResolverLeavesIntentAndCanResumeAfterRestartWithoutNewClaimIdentity",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.MissingCardResolverLeavesIntentAndCanResumeAfterRestartWithoutNewClaimIdentity",
+        "state": "Passed",
+        "durationSeconds": 0.0229731,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "OldPendingClaimFinalizesOnlyItsOriginalWindowAndKeepsOriginalRewardAfterConfigUpdate",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.OldPendingClaimFinalizesOnlyItsOriginalWindowAndKeepsOriginalRewardAfterConfigUpdate",
+        "state": "Passed",
+        "durationSeconds": 0.0261194,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "OldWindowEventsCannotAdvanceSameIdInNewWindowAndClockRollbackCannotReopenIt",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.OldWindowEventsCannotAdvanceSameIdInNewWindowAndClockRollbackCannotReopenIt",
+        "state": "Passed",
+        "durationSeconds": 0.0055269,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "PartialTwoPeriodProgressFailureCanReplayTheSameProducerContext",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.PartialTwoPeriodProgressFailureCanReplayTheSameProducerContext",
+        "state": "Passed",
+        "durationSeconds": 0.0124189,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "ProgressKeepsDistinctValuesAndSeparateDailyWeeklyOwnersAcrossReplay",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.ProgressKeepsDistinctValuesAndSeparateDailyWeeklyOwnersAcrossReplay",
+        "state": "Passed",
+        "durationSeconds": 0.0144466,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "ResolvedCardSnapshotSurvivesSaveFailureAndUsesOriginalRequestOnRecreate",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.ResolvedCardSnapshotSurvivesSaveFailureAndUsesOriginalRequestOnRecreate",
+        "state": "Passed",
+        "durationSeconds": 0.0226879,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "StrictOwnerRejectsBothOldAndNewLegacyWritersAndUncontextualizedRecords",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.StrictOwnerRejectsBothOldAndNewLegacyWritersAndUncontextualizedRecords",
+        "state": "Passed",
+        "durationSeconds": 0.0045205,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(\"selected\")",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(\"selected\")",
+        "state": "Passed",
+        "durationSeconds": 0.0019529,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(\"entry\")",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(\"entry\")",
+        "state": "Passed",
+        "durationSeconds": 0.0014598,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(\"window\")",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(\"window\")",
+        "state": "Passed",
+        "durationSeconds": 0.001594,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(\"period\")",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(\"period\")",
+        "state": "Passed",
+        "durationSeconds": 0.0012599,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting(\"migration\")",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting(\"migration\")",
+        "state": "Passed",
+        "durationSeconds": 0.0126074,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting(\"definitions\")",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting(\"definitions\")",
+        "state": "Passed",
+        "durationSeconds": 0.0057792,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting(\"selected\")",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting(\"selected\")",
+        "state": "Passed",
+        "durationSeconds": 0.0056281,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      },
+      {
+        "name": "WeeklyWindowChangesExactlyAtMondayMidnightUtcPlusSeven",
+        "fullName": "Dreamy.Template.Tests.QuestServiceStrictTests.WeeklyWindowChangesExactlyAtMondayMidnightUtcPlusSeven",
+        "state": "Passed",
+        "durationSeconds": 0.0048738,
+        "message": null,
+        "stackTrace": null,
+        "output": ""
+      }
+    ]
+  }
+}

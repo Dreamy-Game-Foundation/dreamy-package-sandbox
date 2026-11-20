@@ -1,0 +1,61 @@
+{
+  "baselineEdit": {
+    "jobId": "fa6eb3c6a2b6417eb50728a24e3e2607",
+    "status": "failed",
+    "mode": "EditMode",
+    "summary": {
+      "total": 4,
+      "passed": 0,
+      "failed": 4,
+      "skipped": 0,
+      "durationSeconds": 0.8207066,
+      "resultState": "Failed(Child)"
+    },
+    "failures": [
+      {
+        "name": "Dreamy.Template.Debugger.Tests.PlanetCheatOptionsTests.SessionToggleRejectionDoesNotThrowAndCanRetry(\"battle.god-mode.toggle\",\"battle.god-mode.on\",True)",
+        "message": "  Expected: No Exception to be thrown\n  But was:  <System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: Command unavailable: battle.god-mode.on\n  at Dreamy.Template.Debugger.PlanetCheatOptions.Run (System.String id, System.String[] args) [0x0006c] in /run/media/tutrinh/NewData/planet-bunker-tu-code/Assets/_Pro"
+      },
+      {
+        "name": "Dreamy.Template.Debugger.Tests.PlanetCheatOptionsTests.SessionToggleRejectionDoesNotThrowAndCanRetry(\"battle.god-mode.toggle\",\"battle.god-mode.off\",False)",
+        "message": "  Expected: No Exception to be thrown\n  But was:  <System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: Command unavailable: battle.god-mode.off\n  at Dreamy.Template.Debugger.PlanetCheatOptions.Run (System.String id, System.String[] args) [0x0006c] in /run/media/tutrinh/NewData/planet-bunker-tu-code/Assets/_Pr"
+      },
+      {
+        "name": "Dreamy.Template.Debugger.Tests.PlanetCheatOptionsTests.SessionToggleRejectionDoesNotThrowAndCanRetry(\"noads.toggle\",\"noads.on\",True)",
+        "message": "  Expected: No Exception to be thrown\n  But was:  <System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: Command unavailable: noads.on\n  at Dreamy.Template.Debugger.PlanetCheatOptions.Run (System.String id, System.String[] args) [0x0006c] in /run/media/tutrinh/NewData/planet-bunker-tu-code/Assets/_Project/Debug"
+      },
+      {
+        "name": "Dreamy.Template.Debugger.Tests.PlanetCheatOptionsTests.SessionToggleRejectionDoesNotThrowAndCanRetry(\"noads.toggle\",\"noads.off\",False)",
+        "message": "  Expected: No Exception to be thrown\n  But was:  <System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: Command unavailable: noads.off\n  at Dreamy.Template.Debugger.PlanetCheatOptions.Run (System.String id, System.String[] args) [0x0006c] in /run/media/tutrinh/NewData/planet-bunker-tu-code/Assets/_Project/Debu"
+      }
+    ]
+  },
+  "finalEdit": {
+    "jobId": "f5a19d99d2b44a77a2e70b923917d049",
+    "status": "succeeded",
+    "mode": "EditMode",
+    "summary": {
+      "total": 16,
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 1.3001005,
+      "resultState": "Passed"
+    },
+    "failures": []
+  },
+  "finalPlay": {
+    "jobId": "25c2bef7bd9c4be8b70cdcdc7b27935d",
+    "status": "succeeded",
+    "mode": "PlayMode",
+    "summary": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "durationSeconds": 1.3396735,
+      "resultState": "Passed"
+    },
+    "failures": []
+  }
+}

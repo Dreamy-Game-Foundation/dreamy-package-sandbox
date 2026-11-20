@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "taskId": "missions-batch-api",
+  "status": "complete",
+  "files": [
+    "LocalPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.cs",
+    "LocalPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.Batch.cs",
+    "LocalPackages/com.dreamy.feature.missions/Runtime/Persistence/MissionSaveCopy.cs",
+    "LocalPackages/com.dreamy.feature.missions/Runtime/Contracts/IMissionBatchProgress.cs",
+    "LocalPackages/com.dreamy.feature.missions/Tests/Runtime/MissionBatchTests.cs",
+    "LocalPackages/com.dreamy.feature.missions/Tests/Runtime/MissionModelTests.cs",
+    "LocalPackages/com.dreamy.feature.missions/Tests/Runtime/MissionPeriodicTests.cs",
+    "docs/evidence/missions-batch-api-2026-11-17/README.md",
+    "docs/evidence/missions-batch-api-2026-11-17/source-inputs.json",
+    "docs/evidence/missions-batch-api-2026-11-17/final-summary.json",
+    "docs/evidence/missions-batch-api-2026-11-17/extended-validation.md",
+    "LocalPackages/com.dreamy.feature.missions/package.json",
+    "LocalPackages/com.dreamy.feature.missions/CHANGELOG.md",
+    "LocalPackages/com.dreamy.feature.missions/RELEASE_NOTES.md",
+    "docs/evidence/missions-batch-api-2026-11-17/upstream-release.json"
+  ],
+  "objective": "Implement, validate and release upstream Missions batch API v0.4.0",
+  "nextAction": "Released main + v0.4.0 at 9d146b0; remote verified and source clean. Real consumer pin unchanged; device smoke not run (no device)."
+}

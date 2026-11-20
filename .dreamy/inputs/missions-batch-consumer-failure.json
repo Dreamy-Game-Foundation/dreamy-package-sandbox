@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "missions-batch-consumer-reload-during-render",
+  "taskId": "missions-batch-api",
+  "operation": "consumer-editmode",
+  "outcome": "fail",
+  "signature": "First migrated consumer run 97/103: view rendering retried journal recovery; constructor recovery failure needs a dedicated exception; final unchanged consumer assertions 103/103 passed",
+  "evidenceRefs": [
+    "docs/evidence/missions-batch-api-2026-11-17/consumer-migrated-first-failure.xml",
+    "docs/evidence/missions-batch-api-2026-11-17/consumer-migrated.xml"
+  ]
+}

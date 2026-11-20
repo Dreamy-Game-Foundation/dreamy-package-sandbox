@@ -1,0 +1,56 @@
+{
+  "baseCommit": "2474d139cd2c9ca3d1667296be1cd30d579fb7bd",
+  "sourcePath": "/run/media/tutrinh/NewData/Unity Project/Dreamy Foundation/dreamy-package-sandbox/LocalPackages/com.dreamy.feature.missions",
+  "files": {
+    "Benchmarks~/.gitignore": "2d4696eb61e1271dff4e38e06c6a5ed2a39a9cbf8409f68a336cf5d52dd9c27d",
+    "Benchmarks~/Missions.Benchmarks.csproj": "ff7d55bbecd1f5fa9b800d02cfe8993bdf6722ce5a798ed7399fff2f3be213ac",
+    "Benchmarks~/Program.cs": "5f9b70a8c58315183ebe927fc71630b7f51f3022f7f509bf5753ac83dbc3da9e",
+    "Benchmarks~/README.md": "31e07f399dce02c8c77be073a517057d6476e242974bf69e0dd0e86cdca701f7",
+    "Documentation~/BatchProgress.md": "6a4f0577efbe8727efffe16f401994c5c27ffb49d5325e0b892c940d3642e0e2",
+    "Runtime/Contracts/IMissionBatchProgress.cs": "e8e367155f26c39adb656bcf022fbfcae24958dcd0bef38d7474b5c4a637fb71",
+    "Runtime/Contracts/IMissionBatchProgress.cs.meta": "62b1142ff82763a26cb8371fb3f6409246806332c8d890ee48d549fda01cf0db",
+    "Runtime/Domain/MissionModel.Batch.cs": "82ce5e333365623f44a0ba1cdf9abe49e7cc33e7fd3889f510881f97c0ddb94e",
+    "Runtime/Domain/MissionModel.Batch.cs.meta": "d46a3d2162a02afab3d531f5526e66b19d8d5ef7453c8d288e02b025b9c3beb8",
+    "Runtime/Domain/MissionModel.cs": "7fc046702035fcfabc368179fce7da088f31b09e484e984d68a5b52aa4913b34",
+    "Runtime/Persistence/MissionSaveCopy.cs": "e0d0e3e71543d8ac3250825c554fe0be10e3aef9af5ea9f7a6d34f538397f8c3",
+    "Runtime/Persistence/MissionSaveCopy.cs.meta": "1f32ce50b53ff95a7e173ce91c40a549d4528a2569a768443293b3451ff6ea98",
+    "Tests/Runtime/MissionBatchTests.cs": "3f3cc176bf67b8685466b6fd62669ce7d0ee53654f7169204f157c5fbbf548b5",
+    "Tests/Runtime/MissionBatchTests.cs.meta": "7e9dafb6f2f0c2d727786eb7cb9b47e29e8f88c89a77498294acecf532dce217",
+    "Tests/Runtime/MissionModelTests.cs": "ff03eb8df55a4add69b6429d0baf8f0b6df4f2a6c9eb48b12fa08fc6d19a9a9f",
+    "Tests/Runtime/MissionPeriodicTests.cs": "0768c2025d8b6e02909a784a3bd582ce5023bb0849a804240b1455fde503b6a7"
+  },
+  "dependencies": {
+    "com.dreamy.core": {
+      "head": "a491b74282456ddf7a707f5bf4e31f08c589627d",
+      "package": "1.2.0",
+      "dirty": false
+    },
+    "com.dreamy.feature": {
+      "head": "fec5ceeb850964c4a76d5b763cef3c1db406fec1",
+      "package": "0.2.0",
+      "dirty": false
+    },
+    "com.dreamy.feature.economy": {
+      "head": "2ed43e881a879d93eab9d67f88e5c1c50b0ad77e",
+      "package": "0.8.1",
+      "dirty": false
+    },
+    "com.dreamy.dataconfig": {
+      "head": "df0a952f2ce95e3742b13d3607af2eb8dcb7df3c",
+      "package": "1.0.1",
+      "dirty": false
+    },
+    "com.dreamy.datasave": {
+      "head": "8e8fcc82ff953c92986167c794e7c076b0d48236",
+      "package": "1.0.1",
+      "dirty": false
+    }
+  },
+  "patch": "docs/patches/missions-batch-api-source-v0.3.1.patch",
+  "patchSha256": "e765e2126fa865b50928ec8d5632a09ada7edfb08c7058d870c65f14e90e8d54",
+  "patchApplyCheckAgainstBase": "pass",
+  "consumerManifestSha256": "81418b66e0ceccf8b0fb260ffeea8d2a1fd3e95eb4c503ab1abc6123801863e1",
+  "consumerLockSha256": "96d261729753612527ec218a8a20fbb222a1e3ab33cbe12773dd1764c587d5f5",
+  "latestPackageReceipt": "package-final.xml",
+  "testCount": 90
+}

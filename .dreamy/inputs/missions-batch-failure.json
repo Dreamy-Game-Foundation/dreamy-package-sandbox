@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "id": "missions-batch-reload-regressions",
+  "taskId": "missions-batch-api",
+  "operation": "unity-editmode-mcp",
+  "outcome": "fail",
+  "signature": "Two legacy tests retried a stale model after Save threw; new RequiresReload contract rejects mutation"
+}

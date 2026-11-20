@@ -1,0 +1,100 @@
+--- a/Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Strict.cs
++++ b/Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Strict.cs
+@@ -102,11 +102,10 @@
+             strictBusy = true;
+             try
+             {
+-                if (GetMissionModel(period).Refresh() == MissionRefreshStatus.Busy)
+-                    return Enumerable.Repeat(MissionProgressStatus.Busy, events.Count).ToArray();
+-                IReadOnlyList<MissionProgressStatus> statuses;
+-                try { statuses = MissionProgressBatch.Commit(new EmbeddedMissionSave(datasave, period), SaveIdentity(period), events); }
+-                finally { reloadPeriods.Add(period); }
++                MissionModel model = GetMissionModel(period);
++                var inputs = events.Select(e => new MissionProgressEvent(e.EventKey, e.EventId, e.EventNamespace,
++                    e.WindowId, e.Amount, e.DistinctValue)).ToArray();
++                IReadOnlyList<MissionProgressStatus> statuses = model.ReportProgressBatch(inputs);
+                 // Forward duplicates too: the resource period may have committed before an XP save failed.
+                 XpMissions?.ReportBatch(period, events);
+                 return statuses;
+@@ -146,7 +145,7 @@
+         {
+             if (strictModels == null)
+                 throw new InvalidOperationException("A strict Quest constructor with a delivery gateway is required.");
+-            if (reloadPeriods.Contains(period))
++            if (reloadPeriods.Contains(period) || (strictModels.TryGetValue(period, out var current) && current.RequiresReload))
+             {
+                 strictModels[period] = CreateMissionModel(period);
+                 reloadPeriods.Remove(period);
+@@ -174,9 +173,18 @@
+                 {
+                     // The resolver committed a concrete bundle to this same document.
+                     // Recreate this owner so normal Missions recovery sees that snapshot.
+-                    MissionModel model = GetMissionModel(period);
+-                    status = model.GetState().Any(value => value.Definition.Id == questId && value.IsClaimed)
+-                        ? MissionClaimStatus.Claimed : MissionClaimStatus.Pending;
++                    try
++                    {
++                        MissionModel model = GetMissionModel(period);
++                        status = model.GetState().Any(value => value.Definition.Id == questId && value.IsClaimed)
++                            ? MissionClaimStatus.Claimed : MissionClaimStatus.Pending;
++                    }
++                    catch (MissionReloadRequiredException)
++                    {
++                        // Recovery could not confirm its save. Keep the old read-only snapshot and
++                        // pending reload marker; do not retry it again while building this response.
++                        status = MissionClaimStatus.GrantFailed;
++                    }
+                 }
+             }
+             finally { strictBusy = false; }
+@@ -215,7 +223,10 @@
+             QuestPeriod period = ToPeriod(tab);
+             if (!IsUnlocked(period)) return new QuestViewData(tab, Array.Empty<QuestItemViewData>(), GetResetTimerText(period),
+                 period == QuestPeriod.Daily ? "Daily Quests unlock at Account Level 3" : "Weekly Quests unlock at Account Level 6");
+-            IReadOnlyList<MissionState> states = GetMissionModel(period).GetState();
++            // Rendering a failed operation must not implicitly restart reward delivery.
++            MissionModel viewModel = strictModels.TryGetValue(period, out var existing) &&
++                (existing.RequiresReload || reloadPeriods.Contains(period)) ? existing : GetMissionModel(period);
++            IReadOnlyList<MissionState> states = viewModel.GetState();
+             var items = new QuestItemViewData[states.Count];
+             for (int i = 0; i < states.Count; i++)
+             {
+--- a/Assets/_Project/Scripts/Gameplay/Progression/AccountXpMissionService.cs
++++ b/Assets/_Project/Scripts/Gameplay/Progression/AccountXpMissionService.cs
+@@ -66,12 +66,10 @@
+         public void ReportBatch(QuestPeriod period, IReadOnlyList<QuestProgressEvent> events)
+         {
+             if (!IsUnlocked(period)) return;
+-            if (GetModel(period).Refresh() == MissionRefreshStatus.Busy)
+-                throw new InvalidOperationException("XP mission owner is busy.");
+-            var catalog = period == QuestPeriod.Daily ? config.Daily : config.Weekly;
+-            IReadOnlyList<MissionProgressStatus> statuses;
+-            try { statuses = MissionProgressBatch.Commit(saves, catalog.CatalogId, events); }
+-            finally { reloadPeriods.Add(period); }
++            MissionModel model = GetModel(period);
++            var inputs = events.Select(e => new MissionProgressEvent(e.EventKey, e.EventId, e.EventNamespace,
++                e.WindowId, e.Amount, e.DistinctValue)).ToArray();
++            IReadOnlyList<MissionProgressStatus> statuses = model.ReportProgressBatch(inputs);
+             foreach (var status in statuses)
+                 if (status == MissionProgressStatus.Busy || status == MissionProgressStatus.InvalidEvent)
+                     throw new InvalidOperationException("XP objective batch rejected: " + status);
+@@ -101,7 +99,7 @@
+ 
+         private MissionModel GetModel(QuestPeriod period)
+         {
+-            if (reloadPeriods.Remove(period))
++            if (reloadPeriods.Remove(period) || models[period].RequiresReload)
+             {
+                 var catalog = period == QuestPeriod.Daily ? config.Daily : config.Weekly;
+                 try { models[period] = new MissionModel(catalog, saves, gateway, catalog.CatalogId, clock: clock); }
+--- a/Packages/manifest.json
++++ b/Packages/manifest.json
+@@ -14,7 +14,7 @@
+     "com.dreamy.feature": "https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.git#v0.2.0",
+     "com.dreamy.feature.daily-reward": "https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.daily-reward.git#v0.2.2",
+     "com.dreamy.feature.economy": "https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.economy.git#v0.8.0",
+-    "com.dreamy.feature.missions": "https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.missions.git#v0.2.0",
++    "com.dreamy.feature.missions": "file:../ValidationPackages/com.dreamy.feature.missions",
+     "com.dreamy.feature.progression": "https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.progression.git#v0.2.1",
+     "com.dreamy.feature.settings": "https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.settings.git#v0.2.2",
+     "com.dreamy.feature.shop": "https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.shop.git#v0.2.0",

@@ -1,0 +1,13 @@
+{
+  "version": "0.4.0",
+  "repository": "https://github.com/Dreamy-Game-Foundation/com.dreamy.feature.missions",
+  "branch": "main",
+  "commit": "9d146b0c955242ed816137f63c267aa1d1d7c7e1",
+  "tag": "v0.4.0",
+  "annotatedTagObject": "c1efe1eb4047512ecf069a72ab75f687e1c36981",
+  "push": "atomic main+tag succeeded; ls-remote branch and peeled tag verified",
+  "sourceWorktree": "clean",
+  "consumerPinChanged": false,
+  "tests": "Runtime/test source parity checked against successful package 90/90, minimum-host 30/30 and consumer 103/103 receipts; release-only metadata/docs added after tests",
+  "deviceRuntime": "not run: no device available"
+}

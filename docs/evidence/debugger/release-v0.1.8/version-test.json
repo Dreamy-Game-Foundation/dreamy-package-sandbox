@@ -1,0 +1,10 @@
+{
+  "result": "passed",
+  "unity": "6000.4.12f1",
+  "platform": "Linux Editor batchmode",
+  "test": "Dreamy.Debugger.Tests.ReworkTests.PublicRuntimeVersionMatchesPackageManifest",
+  "total": 1,
+  "passed": 1,
+  "failed": 0,
+  "note": "Fresh version test; unchanged behavior sources retain their earlier source-bound 16 EditMode + 4 PlayMode receipts."
+}

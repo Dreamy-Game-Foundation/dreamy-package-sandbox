@@ -1,0 +1,16 @@
+{
+  "name": "com.dreamy.debugger",
+  "version": "0.1.8",
+  "entries": 926,
+  "sha256": "815ebeebc8fd77520d6120bc5f4e168d30e39ab2d622f50b7a2cca0ff5d8ae9f",
+  "bytes": 3810001,
+  "result": "passed",
+  "dependenciesUnchanged": true,
+  "behaviorSourcesMatchPriorTestReceipts": true,
+  "readmeLinksExist": true,
+  "manifestRuntimeDocsAligned": true,
+  "archivePath": "/tmp/dreamy-debugger-release-0.1.8/com.dreamy.debugger-0.1.8.tgz",
+  "sourceCommit": "1516f9fff4f62e7b3acb5f38b566509f5e47291b",
+  "archiveFilesCompared": 926,
+  "archiveMatchesCommittedTree": true
+}

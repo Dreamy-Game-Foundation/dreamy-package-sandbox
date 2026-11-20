@@ -1,0 +1,19 @@
+{
+  "unity": "6000.4.12f1",
+  "debuggerVersion": "0.1.7 + local hotfix",
+  "sha256": {
+    "Assets/_Project/Debugger/PlanetCheatOptions.cs": "5431d5d74b96f4e7c4729db134ef6a68d7d3aec77adab47cf60fc7aa6f815c78",
+    "Assets/_Project/Debugger/Tests/PlanetCheatOptionsTests.cs": "ac7810a3d17865d5069667b945377d788fc9caadd86c889e33a8042b240b658a",
+    "Packages/com.dreamy.debugger/Runtime/Imported/Presentation/Scripts/UI/Controls/Data/DataBoundControl.cs": "0e26e71789ed7ca57e9a7af913488684bf4e210e33f2c7c04e4428c4b56b5e38",
+    "Packages/com.dreamy.debugger/Runtime/Imported/Presentation/Scripts/UI/Controls/Data/BoolControl.cs": "c973c6fc59381a7687d9177c8c2ee69e6bcba1c0c17ba922d7529f20e74b9f42",
+    "Packages/com.dreamy.debugger/Tests/PlayMode/VisualThemeTests.cs": "8618212e6cd9854456afdb4d0dceba70525c383b761a9339c196ae7078291264"
+  },
+  "maintainedAndEmbeddedSourcesMatch": true,
+  "scopeAfterUserCorrection": {
+    "consumerEmbeddedPackageEditsRemoved": true,
+    "maintainedPackageHotfixRetained": true,
+    "gameAdapterFixRetained": true,
+    "consumerPackageUpdatePending": true,
+    "note": "Recorded hashes describe the tested hotfix before removal from the embedded consumer, not its current installed package."
+  }
+}

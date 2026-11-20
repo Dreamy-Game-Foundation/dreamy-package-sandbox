@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "taskId": "debugger-release-v0.1.8",
+  "status": "complete",
+  "files": [
+    "LocalPackages/com.dreamy.debugger/package.json",
+    "LocalPackages/com.dreamy.debugger/Runtime/Imported/Presentation/Scripts/Version.cs",
+    "LocalPackages/com.dreamy.debugger/CHANGELOG.md",
+    "LocalPackages/com.dreamy.debugger/README.md"
+  ],
+  "objective": "Release debugger 0.1.8 and commit/push all sandbox changes while leaving Planet Packages/ unchanged",
+  "nextAction": "Package 1516f9fff4f62e7b3acb5f38b566509f5e47291b and v0.1.8 pushed; sandbox sync committed/pushed separately. Planet owner updates its embedded package later."
+}

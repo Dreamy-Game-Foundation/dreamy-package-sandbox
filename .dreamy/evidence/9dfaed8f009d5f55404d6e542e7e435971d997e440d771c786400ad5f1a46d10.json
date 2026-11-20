@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "missions-batch-api-validate-1794886387473-3b5752cc",
+  "taskId": "missions-batch-api",
+  "commandId": "validate",
+  "platform": "linux",
+  "files": [
+    "LocalPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.cs",
+    "LocalPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.Batch.cs",
+    "LocalPackages/com.dreamy.feature.missions/Runtime/Persistence/MissionSaveCopy.cs",
+    "LocalPackages/com.dreamy.feature.missions/Runtime/Contracts/IMissionBatchProgress.cs",
+    "LocalPackages/com.dreamy.feature.missions/Tests/Runtime/MissionBatchTests.cs"
+  ],
+  "sourceFingerprint": "792a35f7cd5c4186e090ac95853e225b3b1fdca5ffb70a72ed0655eb6a4c6dfc",
+  "verificationFingerprint": "d884e66819194395e86c1f9d4e6c9f6d3be645b4515fb983d364d4943a9de039",
+  "nodeVersion": "v24.19.0",
+  "status": "fail",
+  "exitCode": 1,
+  "reason": null,
+  "startedAt": "2026-11-17T03:33:07.353Z",
+  "completedAt": "2026-11-17T03:33:07.473Z",
+  "logHash": "56cf26d5cf4abafac26e829a2a23ac8a2d26f2494fc589fad766d6d80f263f1c",
+  "inputsUnchanged": true
+}

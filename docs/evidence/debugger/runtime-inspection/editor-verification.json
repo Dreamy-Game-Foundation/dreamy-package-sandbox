@@ -1,0 +1,16 @@
+{
+  "instance": "dreamy-package-sandbox@4c906ebe8d7b45ef",
+  "projectRoot": "D:/Game/dreamy-package-sandbox",
+  "packagePath": "D:/Game/dreamy-package-sandbox/LocalPackages/com.dreamy.debugger",
+  "activeScene": "Assets/_Project/Scenes/BootstrapScene.unity",
+  "sceneDirty": false,
+  "consoleErrorsAtFinalRead": 0,
+  "validSceneCatalogEntries": 1,
+  "prefabValidation": "35 prefabs / no missing scripts",
+  "methods": [
+    "mcp__unityMCP__read_console",
+    "mcp__unityMCP__manage_scene get_active",
+    "PackageInfo.FindForAssetPath",
+    "DebuggerAssetBuilder.ValidatePrefabs"
+  ]
+}

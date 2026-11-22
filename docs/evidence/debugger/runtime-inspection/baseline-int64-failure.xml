@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-22 18:19:39Z" end-time="2026-11-22 18:19:40Z" duration="0.6806601">
+  <test-suite type="TestSuite" id="1110" name="DreamyDebuggerBaselineInspection" fullname="DreamyDebuggerBaselineInspection" runstate="Runnable" testcasecount="99" result="Failed" site="Child" start-time="2026-11-22 18:19:39Z" end-time="2026-11-22 18:19:40Z" duration="0.680660" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1105" name="Dreamy.Debugger.Tests.PlayMode.dll" fullname="C:/Users/trinh/AppData/Local/Temp/DreamyDebuggerBaselineInspection/Library/ScriptAssemblies/Dreamy.Debugger.Tests.PlayMode.dll" runstate="Runnable" testcasecount="99" result="Failed" site="Child" start-time="2026-11-22 18:19:39Z" end-time="2026-11-22 18:19:40Z" duration="0.666346" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="3780" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1106" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="99" result="Failed" site="Child" start-time="2026-11-22 18:19:39Z" end-time="2026-11-22 18:19:40Z" duration="0.661466" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1107" name="Debugger" fullname="Dreamy.Debugger" runstate="Runnable" testcasecount="99" result="Failed" site="Child" start-time="2026-11-22 18:19:39Z" end-time="2026-11-22 18:19:40Z" duration="0.660099" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1108" name="Tests" fullname="Dreamy.Debugger.Tests" runstate="Runnable" testcasecount="99" result="Failed" site="Child" start-time="2026-11-22 18:19:39Z" end-time="2026-11-22 18:19:40Z" duration="0.659233" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1001" name="OverlayIntegrationTests" fullname="Dreamy.Debugger.Tests.OverlayIntegrationTests" classname="Dreamy.Debugger.Tests.OverlayIntegrationTests" runstate="Runnable" testcasecount="10" result="Failed" site="Child" start-time="2026-11-22 18:19:39Z" end-time="2026-11-22 18:19:40Z" duration="0.655927" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1007" name="Int64OptionsRenderEditStepPreciselyAndKeepBounds" fullname="Dreamy.Debugger.Tests.OverlayIntegrationTests.Int64OptionsRenderEditStepPreciselyAndKeepBounds" methodname="Int64OptionsRenderEditStepPreciselyAndKeepBounds" classname="Dreamy.Debugger.Tests.OverlayIntegrationTests" runstate="Runnable" seed="438891043" result="Failed" start-time="2026-11-22 18:19:39Z" end-time="2026-11-22 18:19:40Z" duration="0.639980" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected string length 3 but was 1. Strings differ at index 0.
+  Expected: "126"
+  But was:  "0"
+  -----------^
+]]></message>
+                  <stack-trace><![CDATA[at Dreamy.Debugger.Tests.OverlayIntegrationTests+<Int64OptionsRenderEditStepPreciselyAndKeepBounds>d__10.MoveNext () [0x00353] in C:\Users\trinh\orca\workspaces\dreamy-package-sandbox\main\LocalPackages\com.dreamy.debugger\Tests\PlayMode\OverlayIntegrationTests.cs:83
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@996f223345ba\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:44
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler
+[DreamyDebugger] Failed to set 'Int64 amount': Specified argument was out of the range of valid values.
+Parameter name: value
+Saving results to: C:/Users/trinh/AppData/Local/Temp/DreamyDebuggerBaselineInspection/baseline.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

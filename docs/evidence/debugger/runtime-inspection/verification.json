@@ -1,0 +1,50 @@
+{
+  "branch": "main",
+  "package_baseline": "1516f9fff4f62e7b3acb5f38b566509f5e47291b",
+  "package_commit": "8593c75b4f17110fdbad09770bcd852e5b2785df",
+  "package_working_tree_clean": true,
+  "unity": "6000.4.12f1",
+  "tests": {
+    "editmode.xml": {
+      "result": "Passed",
+      "total": "102",
+      "passed": "102",
+      "failed": "0",
+      "start-time": "2026-11-22 18:39:16Z",
+      "end-time": "2026-11-22 18:39:19Z"
+    },
+    "playmode-scene.xml": {
+      "result": "Passed",
+      "total": "5",
+      "passed": "5",
+      "failed": "0",
+      "start-time": "2026-11-22 18:39:31Z",
+      "end-time": "2026-11-22 18:39:32Z"
+    },
+    "playmode-regression-earlier.xml": {
+      "result": "Failed(Child)",
+      "total": "102",
+      "passed": "101",
+      "failed": "1",
+      "start-time": "2026-11-22 18:16:58Z",
+      "end-time": "2026-11-22 18:18:01Z"
+    },
+    "baseline-int64-failure.xml": {
+      "result": "Failed(Child)",
+      "total": "1",
+      "passed": "0",
+      "failed": "1",
+      "start-time": "2026-11-22 18:19:39Z",
+      "end-time": "2026-11-22 18:19:40Z"
+    }
+  },
+  "notes": [
+    "Package source is committed; see package_commit and the checkpoint for source-push status.",
+    "tested-source-sha256.json retains test-time bytes; only generated YAML trailing whitespace was normalized before commit.",
+    "Earlier broad PlayMode run: one Int64 Cheats failure reproduced on the untouched 0.1.8 baseline.",
+    "World-space runtime camera renders are not Device Simulator or physical-device evidence.",
+    "Earlier Windows smoke predates later search/UI refinements and is not exact-final-source build proof.",
+    "Android native IL2CPP attempt failed due to no space on C:. No Android runtime result.",
+    "User requested no further builds. No build or public release is certified by this checkpoint."
+  ]
+}

@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dreamy · Runtime Hierarchy concept</title>
+<style>
+@font-face{font-family:Barlow;src:url("../../../LocalPackages/com.dreamy.debugger/Runtime/Branding/Material/Barlow-Regular.ttf")}
+@font-face{font-family:Barlow;src:url("../../../LocalPackages/com.dreamy.debugger/Runtime/Branding/Material/Barlow-SemiBold.ttf");font-weight:600}
+@font-face{font-family:JetBrains;src:url("../../../LocalPackages/com.dreamy.debugger/Runtime/Branding/Material/JetBrainsMono-Regular.ttf")}
+:root{color-scheme:dark;--back:#101216;--tree:#16191e;--panel:#1c1f25;--control:#272c34;--line:#343943;--text:#f1edf0;--muted:#aab0bb;--accent:#f58aa0;--chosen:#39212c;--action:#ae3652;--radius:5px;font:16px Barlow,system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--back);color:var(--text)}button,input,select{font:inherit;color:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.48}[hidden]{display:none!important}
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.shell{height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr);padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.top{height:56px;display:flex;align-items:center;gap:12px;padding:0 18px;background:var(--panel);border-bottom:1px solid var(--line)}
+.brand{font-weight:600;letter-spacing:.085em;font-size:15px}.divider{height:19px;width:1px;background:var(--line);margin:0 2px}
+.tab-title{font-size:17px;font-weight:600}.glyph{width:18px;height:18px;object-fit:contain;flex:none}.search-icon{width:16px;height:16px;position:relative;flex:none}.search-icon::before{content:"";position:absolute;top:1px;left:1px;width:8px;height:8px;border:1.5px solid currentColor;border-radius:50%}.search-icon::after{content:"";position:absolute;top:10px;left:10px;width:5px;height:1.5px;background:currentColor;transform:rotate(45deg);transform-origin:left}.icon-button{width:44px;height:44px;display:grid;place-items:center;padding:0;border:0;border-radius:var(--radius);background:transparent;color:var(--muted)}.icon-button:hover{color:var(--text);background:var(--control)}
+.menu-wrap{position:relative;margin-left:auto}.menu{position:absolute;right:0;top:48px;z-index:2;width:178px;padding:5px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 28px #0006}.menu button{display:block;width:100%;min-height:40px;text-align:left;border:0;background:transparent;border-radius:4px;padding:6px 10px}.menu button:hover:enabled{background:var(--control)}
+.workspace{display:grid;min-width:0;min-height:0;grid-template-columns:clamp(245px,26vw,340px) minmax(0,1fr)}
+.tree-pane,.inspector{min-width:0;min-height:0;display:flex;flex-direction:column}.tree-pane{background:var(--tree);border-right:1px solid var(--line)}
+.tree-search{display:flex;gap:8px;align-items:center;margin:14px 12px 10px;padding:0 10px;height:40px;flex:none;background:var(--back);border:1px solid var(--line);border-radius:var(--radius);color:var(--muted)}.tree-search:focus-within{border-color:var(--accent)}
+.tree-search input{width:100%;min-width:0;padding:0 2px;height:100%;border:0;background:transparent;color:var(--text);outline:0}.tree-search input::placeholder{color:var(--muted)}
+.tree-scroll,.properties{min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-color:#454b55 transparent}.tree-scroll{padding:0 8px 12px}.tree-row{display:flex;align-items:stretch;min-width:0;margin-left:calc(var(--depth)*17px);border-radius:var(--radius);min-height:34px;color:var(--text)}.tree-row:hover{background:var(--panel)}.tree-row.selected{background:var(--chosen);box-shadow:inset 2px 0 var(--accent)}.tree-row.inactive{color:var(--muted)}
+.tree-row button{border:0;background:transparent;min-width:0;padding:0;color:inherit}.tree-row .branch{width:30px;flex:none;display:grid;place-items:center}.branch img,.summary-arrow{height:13px;width:13px;object-fit:contain;transition:transform .12s}.branch[aria-expanded="true"] img,details[open]>summary .summary-arrow{transform:rotate(90deg)}.branch-space{width:30px;flex:none}.tree-select{flex:1;display:flex;align-items:center;gap:9px;text-align:left}.tree-select span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.tree-row .tree-select{padding-right:8px}.tree-row.scene .tree-select{font-weight:600;color:var(--muted)}.empty{color:var(--muted);padding:14px 12px;line-height:1.45}
+.inspector-scroll{display:flex;flex:1;min-height:0;flex-direction:column}.properties{flex:1;padding:0 clamp(14px,3.1vw,42px) 18px}.inspect-content{max-width:770px;margin:auto}
+.object-head{display:flex;align-items:center;gap:12px;padding:22px 0 13px}.object-head .glyph{width:25px;height:25px}.object-head h1{margin:0;min-width:0;overflow-wrap:anywhere;font-size:27px;line-height:1.13;font-weight:600;flex:1}.object-head h1:focus{outline:none}.active{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:14px;flex:none;min-height:34px}.active input,.check input{width:17px;height:17px;accent-color:var(--accent)}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-bottom:16px}.meta label{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:14px}.meta select{flex:1;min-width:0;margin-left:auto}
+.components{border-top:1px solid var(--line)}.component{border-bottom:1px solid var(--line)}.component summary{display:flex;align-items:center;gap:9px;cursor:pointer;min-height:42px;font-weight:600;list-style:none}.component summary::-webkit-details-marker{display:none}.component summary:hover{color:var(--accent)}.component summary .glyph{height:18px;width:18px}.component summary .summary-arrow{margin-left:1px}
+.fields{display:grid;gap:5px;padding:0 0 10px 24px}.field{display:grid;grid-template-columns:minmax(90px,29%) minmax(0,1fr);gap:8px;align-items:center;min-height:34px}.field-name{color:var(--muted);font-size:15px}.axes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.number{display:flex;align-items:center;min-width:0;height:32px;border:1px solid var(--line);border-radius:var(--radius);background:var(--control)}.field>.number{width:min(100%,184px)}.number:focus-within,.number:has([aria-invalid=true]){border-color:var(--accent)}.number span{padding-left:8px;color:var(--muted);font:12px JetBrains,monospace}.number input,.touch-value{flex:1;width:100%;min-width:0;padding:4px 7px;border:0;background:transparent;font:13px JetBrains,monospace;text-align:left}.number input:focus-visible{outline:0}.touch-value{display:none;height:100%}.control{min-height:32px;border:1px solid var(--line);border-radius:var(--radius);background:var(--control);padding:4px 8px}.check{display:flex;align-items:center;min-height:34px}.check input{margin-left:0}
+.back{display:none}.editor-actions{display:flex;gap:8px;align-items:center;padding:8px 14px;background:var(--panel);border-top:1px solid var(--line)}.feedback{margin:0 auto 0 0;color:var(--accent);font-size:14px}.action{min-height:40px;padding:0 14px;border-radius:var(--radius);border:1px solid var(--line);background:var(--control)}.primary{background:var(--action);border-color:transparent;color:white}.status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+dialog{padding:0;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--text);width:min(400px,calc(100% - 24px));max-height:calc(100% - 24px);margin:auto}dialog::backdrop{background:#080a0dc9}.sheet-body{padding:14px;overflow:auto}.sheet-title{margin:0 0 10px;font-size:19px;font-weight:600}.step-controls{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:6px}.step-controls input{min-width:0;text-align:center;font:16px JetBrains,monospace}.step-controls .action{padding:0;min-height:44px;font-size:20px}.sheet-feedback{margin:8px 0 0;color:var(--accent)}.sheet-feedback:empty{display:none}.sheet-footer{display:flex;justify-content:flex-end;gap:8px;padding:8px 14px;border-top:1px solid var(--line)}.sheet-footer .action{min-height:44px}
+@media (max-width:740px),(max-height:460px){
+ .workspace{grid-template-columns:minmax(0,1fr)}.tree-pane{border-right:0}.workspace[data-view="tree"] .inspector,.workspace[data-view="inspector"] .tree-pane{display:none}
+ .top{height:48px;padding:0 12px}.tree-row{min-height:44px}.tree-row .branch,.branch-space{width:44px}.tree-search{height:44px}.properties{padding:0 14px 16px}.back{display:flex;gap:5px;align-items:center;min-height:44px;align-self:flex-start;border:0;background:transparent;color:var(--muted);padding:0 11px}.back img{transform:rotate(180deg)}.object-head{padding:1px 0 10px}.object-head h1{font-size:24px}.active,.component summary,.number,.meta select,.check{min-height:44px}.fields{padding-left:16px}.number input{display:none}.touch-value{display:block}.meta{padding-bottom:10px}.meta label{gap:5px}
+}
+@media (max-width:450px){.fields{padding-left:5px}.field{grid-template-columns:minmax(72px,27%) minmax(0,1fr)}.axes{gap:4px}.number span{padding-left:5px}.touch-value{padding:4px;font-size:12px}.meta{gap:8px}.meta select{padding-left:4px}}
+@media (min-width:600px) and (max-height:460px){.back{position:absolute;top:2px;left:212px}.properties{padding-top:9px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+ <header class="top">
+  <span class="brand">DREAMY</span><span class="divider" aria-hidden="true"></span>
+  <img class="glyph" src="../../../LocalPackages/com.dreamy.debugger/Runtime/Branding/Material/hierarchy.png" alt="">
+  <span class="tab-title">Hierarchy</span>
+  <div class="menu-wrap">
+   <button class="icon-button" id="options" type="button" aria-label="Hierarchy actions" aria-expanded="false"><span style="font:600 22px Barlow">···</span></button>
+   <div class="menu" id="menu" hidden><button type="button" data-command="refresh">Refresh</button><button type="button" data-command="undo">Undo</button><button type="button" data-command="redo">Redo</button></div>
+  </div>
+ </header>
+ <main class="workspace" data-view="tree">
+  <aside class="tree-pane" aria-label="Hierarchy">
+   <label class="tree-search"><span class="search-icon" aria-hidden="true"></span><input id="search" type="search" placeholder="Search objects" aria-label="Search objects"></label>
+   <div class="tree-scroll" id="tree"></div>
+  </aside>
+  <section class="inspector" aria-label="Inspector">
+   <button class="back" type="button"><img class="summary-arrow" alt="" src="../../../LocalPackages/com.dreamy.debugger/Runtime/Branding/Material/inspector-chevron.png">Objects</button>
+   <div class="inspector-scroll">
+    <div class="properties"><div class="inspect-content" id="inspect"></div></div>
+    <div class="editor-actions" id="draftActions" hidden><p class="feedback" id="inlineError" role="alert"></p><button class="action" id="discard" type="button">Cancel</button><button class="action primary" id="apply" type="button">Apply</button></div>
+   </div>
+  </section>
+ </main>
+ <div class="status" role="status" id="status"></div>
+</div>
+<dialog id="numberDialog" aria-labelledby="sheetTitle">
+ <form id="stepForm">
+  <div class="sheet-body">
+   <h2 class="sheet-title" id="sheetTitle"></h2>
+   <div class="step-controls"><button class="action" id="minus" type="button" aria-label="Decrease by 0.1">−</button><input class="control" id="stepValue" inputmode="decimal" aria-label="Value"><button class="action" id="plus" type="button" aria-label="Increase by 0.1">+</button></div>
+   <p class="sheet-feedback" id="sheetError" role="alert"></p>
+  </div>
+  <div class="sheet-footer"><button class="action" id="closeSheet" type="button">Cancel</button><button class="action primary" type="submit">Apply</button></div>
+ </form>
+</dialog>
+<script>
+const assetRoot = '../../../LocalPackages/com.dreamy.debugger/Runtime/Branding/Material/';
+const glyph = name => '<img class="glyph" alt="" src="' + assetRoot + name + '.png">';
+const arrow = '<img class="summary-arrow" alt="" src="' + assetRoot + 'inspector-chevron.png">';
+const $ = selector => document.querySelector(selector);
+const compact = matchMedia('(max-width:740px),(max-height:460px)');
+const scene = {id:'lab',name:'Hierarchy Inspector Lab',icon:'hierarchy',children:[
+ {id:'environment',name:'Environment',children:[{id:'ground',name:'Ground',components:['collider','mesh']},{id:'light',name:'Directional Light',icon:'inspector-light',components:['light']}]},
+ {id:'samples',name:'Samples',children:[
+  {id:'cube',name:'Physics Cube',position:[-1.5,1,0],tag:'Player',components:['rigidbody','collider','mesh']},
+  {id:'sphere',name:'Physics Sphere',position:[1.5,1,0],components:['rigidbody','sphere','mesh']},
+  {id:'sensor',name:'Inactive Trigger',active:false,components:['collider']},
+  {id:'audio',name:'Audio Source',icon:'inspector-audio',components:['audio']}
+ ]},
+ {id:'camera',name:'Main Camera',tag:'MainCamera',icon:'inspector-camera',components:['camera']},
+ {id:'canvas',name:'Preview Canvas',icon:'inspector-canvas',components:['canvas'],children:[{id:'marker',name:'Preview Marker',layer:'UI',components:['image']}]}
+]};
+const objects = new Map();
+function index(node) {
+ if (node !== scene) {
+  node.values = {position:node.position || [0,0,0],rotation:[0,0,0],scale:[1,1,1],
+   active:node.active !== false,tag:node.tag || 'Untagged',layer:node.layer || 'Default',mass:1,gravity:true,kinematic:true,trigger:false,
+   renderer:true,volume:0.8,intensity:1,fieldOfView:60,canvas:true,image:true};
+  node.open = new Set(node.id === 'cube' ? ['transform','rigidbody'] : ['transform']);
+  objects.set(node.id,node);
+ }
+ node.children?.forEach(index);
+}
+index(scene);
+const expanded = new Set(['lab','environment','samples']);
+const workspace = $('.workspace'), tree = $('#tree'), inspector = $('#inspect');
+const dialog = $('#numberDialog'), stepValue = $('#stepValue'), options = $('#options'), menu = $('#menu');
+let selected = objects.get('cube'), draft = null, sheet = null;
+const undo = [], redo = [];
+if (new URLSearchParams(location.search).get('view') === 'inspector') workspace.dataset.view = 'inspector';
+function announce(message) { $('#status').textContent = message; }
+function matches(node, query) {
+ return node.name.toLowerCase().includes(query) || node.children?.some(child => matches(child,query));
+}
+function renderTree() {
+ const query = $('#search').value.trim().toLowerCase();
+ function renderNode(node,depth) {
+  if (query && !matches(node,query)) return '';
+  const hasChildren = Boolean(node.children?.length);
+  const isOpen = expanded.has(node.id) || Boolean(query);
+  const branch = hasChildren ? '<button class="branch" type="button" data-branch="'+node.id+'" aria-label="Children of '+node.name+'" aria-expanded="'+isOpen+'">'+arrow+'</button>' : '<span class="branch-space"></span>';
+  const label = glyph(node.icon || 'hierarchy-object')+'<span>'+node.name+'</span>';
+  const target = node === scene ? '<span class="tree-select">'+label+'</span>' : '<button class="tree-select" type="button" data-object="'+node.id+'" aria-pressed="'+(node === selected)+'">'+label+'</button>';
+  const row = '<div class="tree-row '+(node === selected ? 'selected ' : '')+(node.values?.active === false ? 'inactive ' : '')+(node === scene ? 'scene' : '')+'" style="--depth:'+depth+'">'+branch+target+'</div>';
+  return row + (isOpen && hasChildren ? node.children.map(child => renderNode(child,depth+1)).join('') : '');
+ }
+ tree.innerHTML = renderNode(scene,0) || '<p class="empty">No matching objects.</p>';
+}
+const fields = {
+ transform:['Transform','transform',[['Position','position','vector'],['Rotation','rotation','vector'],['Scale','scale','vector']]],
+ rigidbody:['Rigidbody','rigidbody',[['Mass','mass','number'],['Use Gravity','gravity','bool'],['Is Kinematic','kinematic','bool']]],
+ collider:['Box Collider','box-collider',[['Is Trigger','trigger','bool']]],
+ sphere:['Sphere Collider','sphere-collider',[['Is Trigger','trigger','bool']]],
+ mesh:['Mesh Renderer','mesh',[['Enabled','renderer','bool']]],
+ audio:['Audio Source','audio',[['Volume','volume','number']]],
+ light:['Light','light',[['Intensity','intensity','number']]],
+ camera:['Camera','camera',[['Field of View','fieldOfView','number']]],
+ canvas:['Canvas','canvas',[['Enabled','canvas','bool']]],
+ image:['Image','image',[['Enabled','image','bool']]]
+};
+function number(label,key,axis) {
+ const axisName = axis == null ? '' : 'XYZ'[axis];
+ const value = axis == null ? selected.values[key] : selected.values[key][axis];
+ const title = label + (axisName ? ' · '+axisName : '');
+ const attrs = ' data-value="'+key+'" data-axis="'+(axis ?? '')+'" aria-label="'+title+'"';
+ return '<div class="number">'+(axisName ? '<span aria-hidden="true">'+axisName+'</span>' : '')+
+  '<input type="text" inputmode="decimal" value="'+value+'"'+attrs+'><button type="button" class="touch-value"'+attrs+'>'+value+'</button></div>';
+}
+function fieldRow([label,key,kind]) {
+ if (kind === 'bool') return '<label class="field"><span class="field-name">'+label+'</span><span class="check"><input type="checkbox" data-choice="'+key+'"'+(selected.values[key] ? ' checked' : '')+'></span></label>';
+ if (kind === 'vector') return '<div class="field"><span class="field-name">'+label+'</span><div class="axes">'+[0,1,2].map(axis=>number(label,key,axis)).join('')+'</div></div>';
+ return '<div class="field"><span class="field-name">'+label+'</span>'+number(label,key,null)+'</div>';
+}
+function selectField(label, key, values) {
+ return '<label>'+label+'<select class="control" data-choice="'+key+'">'+values.map(value=>'<option'+(value===selected.values[key]?' selected':'')+'>'+value+'</option>').join('')+'</select></label>';
+}
+function renderInspector() {
+ const heading = '<div class="object-head">'+glyph(selected.icon || 'hierarchy-object')+'<h1 tabindex="-1">'+selected.name+'</h1><label class="active"><input type="checkbox" data-choice="active"'+(selected.values.active?' checked':'')+'>Active</label></div>';
+ const meta = '<div class="meta">'+selectField('Tag','tag',['Untagged','Player','MainCamera'])+selectField('Layer','layer',['Default','UI','Ignore Raycast'])+'</div>';
+ const groups = ['transform',...(selected.components || [])].map(key=>{
+  const [title,icon,rows] = fields[key];
+  return '<details class="component" data-component="'+key+'"'+(selected.open.has(key)?' open':'')+'><summary>'+arrow+glyph('inspector-'+icon)+title+'</summary><div class="fields">'+rows.map(fieldRow).join('')+'</div></details>';
+ });
+ inspector.innerHTML = heading+meta+'<div class="components">'+groups.join('')+'</div>';
+}
+function hasDraft() { return draft && draft.text !== String(read(draft)); }
+function read(edit) { return edit.axis == null ? edit.object.values[edit.key] : edit.object.values[edit.key][edit.axis]; }
+function write(edit,value) {
+ if (edit.axis == null) edit.object.values[edit.key] = value;
+ else edit.object.values[edit.key][edit.axis] = value;
+}
+function syncValues() {
+ for (const control of inspector.querySelectorAll('[data-value], [data-choice]')) {
+  const key = control.dataset.choice || control.dataset.value;
+  const axis = control.dataset.axis;
+  const value = axis ? selected.values[key][Number(axis)] : selected.values[key];
+  if (control.type === 'checkbox') control.checked = value;
+  else if (control.matches('button')) control.textContent = value;
+  else control.value = value;
+ }
+}
+function record(edit,value) {
+ const before = read(edit);
+ if (Object.is(value,before)) return;
+ write(edit,value); undo.push({...edit,before,after:value}); redo.length=0;
+ syncValues(); if (edit.key === 'active') renderTree(); updateMenu();
+ announce('Value updated');
+}
+function editFor(control) {
+ return {object:selected, key:control.dataset.value, axis:control.dataset.axis === '' ? null : Number(control.dataset.axis)};
+}
+function parse(text) {
+ const clean = text.trim().replace(',','.');
+ return /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(clean) && Number.isFinite(Number(clean)) ? Number(clean) : null;
+}
+function validateNumber(edit,value) {
+ if (value === null) return 'Enter a valid number.';
+ if (edit.key === 'mass' && value <= 0) return 'Mass must be greater than 0.';
+ if (edit.key === 'volume' && (value < 0 || value > 1)) return 'Volume must be between 0 and 1.';
+ return '';
+}
+function showDraft() { $('#draftActions').hidden = !hasDraft(); }
+function clearDraft() { draft?.control.removeAttribute('aria-invalid'); draft=null; $('#inlineError').textContent=''; showDraft(); syncValues(); }
+function applyDraft() {
+ if (!hasDraft()) { clearDraft(); return true; }
+ const value = parse(draft.text);
+ const error = validateNumber(draft,value);
+ if (error) { $('#inlineError').textContent = error; draft.control.setAttribute('aria-invalid','true'); draft.control.focus(); return false; }
+ record(draft,value); clearDraft(); return true;
+}
+function openSheet(control) {
+ sheet = {...editFor(control), origin:control};
+ $('#sheetTitle').textContent = control.getAttribute('aria-label');
+ $('#sheetError').textContent = '';
+ stepValue.value = read(sheet);
+ dialog.showModal();
+ $('#minus').focus();
+}
+function nudge(delta) {
+ const value = parse(stepValue.value);
+ if (value === null) { $('#sheetError').textContent = 'Enter a valid number.'; return; }
+ stepValue.value = Number((value + delta).toPrecision(12));
+ $('#sheetError').textContent = '';
+}
+function updateMenu() {
+ $('[data-command="undo"]').disabled = !undo.length;
+ $('[data-command="redo"]').disabled = !redo.length;
+}
+function showMenu(open) {
+ menu.hidden = !open; options.setAttribute('aria-expanded',open);
+ if (open) menu.querySelector('button').focus();
+}
+$('#search').addEventListener('input',renderTree);
+tree.addEventListener('click',event=>{
+ const branch = event.target.closest('[data-branch]');
+ if (branch && !$('#search').value.trim()) {
+  const id = branch.dataset.branch;
+  if (expanded.has(id)) expanded.delete(id); else expanded.add(id);
+  renderTree(); tree.querySelector('[data-branch="'+id+'"]').focus(); return;
+ }
+ const row = event.target.closest('[data-object]');
+ if (!row || (hasDraft() && objects.get(row.dataset.object) !== selected)) {
+  if (row) { $('#inlineError').textContent='Apply or cancel the current edit first.'; $('#apply').focus(); }
+  return;
+ }
+ const next = objects.get(row.dataset.object);
+ if (next !== selected) { selected=next; renderInspector(); $('.properties').scrollTop=0; }
+ workspace.dataset.view='inspector';
+ tree.querySelectorAll('[data-object]').forEach(item=>{
+  const active = item.dataset.object === selected.id;
+  item.setAttribute('aria-pressed',active); item.parentElement.classList.toggle('selected',active);
+ });
+ if (compact.matches) inspector.querySelector('h1').focus({preventScroll:true});
+});
+$('.back').addEventListener('click',()=>{workspace.dataset.view='tree'; tree.querySelector('[aria-pressed="true"]')?.focus({preventScroll:true});});
+inspector.addEventListener('toggle',event=>{
+ if (!event.target.matches('.component')) return;
+ const key = event.target.dataset.component;
+ if (event.target.open) selected.open.add(key); else selected.open.delete(key);
+},true);
+inspector.addEventListener('input',event=>{
+ const control=event.target;
+ if (!control.matches('input[data-value]')) return;
+ if (draft && draft.control !== control && hasDraft()) {
+  control.value=read(editFor(control)); $('#inlineError').textContent='Apply or cancel the current edit first.'; draft.control.focus(); return;
+ }
+ workspace.dataset.view='inspector'; control.removeAttribute('aria-invalid');
+ draft={...editFor(control),control,text:control.value}; $('#inlineError').textContent=''; showDraft();
+});
+inspector.addEventListener('change',event=>{
+ const control=event.target, key=control.dataset.choice;
+ if (!key) return;
+ if (hasDraft()) {
+  if (control.type==='checkbox') control.checked=selected.values[key]; else control.value=selected.values[key];
+  $('#inlineError').textContent='Apply or cancel the current edit first.'; $('#apply').focus(); return;
+ }
+ record({object:selected,key},control.type==='checkbox'?control.checked:control.value);
+});
+inspector.addEventListener('click',event=>{ const control=event.target.closest('button[data-value]'); if(control) openSheet(control); });
+inspector.addEventListener('keydown',event=>{if(event.key==='Enter' && event.target.matches('input[data-value]')) {event.preventDefault();applyDraft();}});
+$('#discard').addEventListener('click',clearDraft);
+$('#apply').addEventListener('click',applyDraft);
+$('#minus').addEventListener('click',()=>nudge(-0.1));
+$('#plus').addEventListener('click',()=>nudge(0.1));
+$('#closeSheet').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('close',()=>{if(sheet?.origin.offsetParent) sheet.origin.focus(); sheet=null;});
+$('#stepForm').addEventListener('submit',event=>{
+ event.preventDefault();
+ const value=parse(stepValue.value), error=validateNumber(sheet,value);
+ if(error){$('#sheetError').textContent=error;stepValue.focus();return;}
+ record(sheet,value);dialog.close();
+});
+options.addEventListener('click',()=>showMenu(menu.hidden));
+menu.addEventListener('click',event=>{
+ const command=event.target.dataset.command; if(!command) return;
+ showMenu(false); options.focus();
+ if(hasDraft()){ $('#inlineError').textContent='Apply or cancel the current edit first.'; return; }
+ if(command==='refresh'){renderTree();syncValues();announce('View refreshed');return;}
+ const source=command==='undo'?undo:redo,target=command==='undo'?redo:undo;
+ const edit=source.pop(); if(!edit)return;
+ write(edit,command==='undo'?edit.before:edit.after);target.push(edit);syncValues();renderTree();updateMenu();announce(command==='undo'?'Edit undone':'Edit redone');
+});
+document.addEventListener('click',event=>{if(!menu.hidden&&!event.target.closest('.menu-wrap'))showMenu(false);});
+document.addEventListener('keydown',event=>{
+ if (event.key==='Escape'&&!dialog.open) {
+  if(!menu.hidden){showMenu(false);options.focus();}else if(hasDraft())clearDraft();
+ }
+ if(event.key.toLowerCase()==='f'&&(event.ctrlKey||event.metaKey)&&!dialog.open){
+  event.preventDefault(); workspace.dataset.view='tree'; $('#search').focus();
+ }
+});
+renderTree(); renderInspector(); updateMenu();
+</script>
+</body>
+</html>

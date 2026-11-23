@@ -19,6 +19,7 @@ MonoBehaviour:
   Credential: 0000
   Passphrase: 0
   SessionSeconds: 300
+  AllowSceneEditing: 1
   PersistRuntimePreferences: 1
   PreferenceRevision: 1
   InitialHud: 0

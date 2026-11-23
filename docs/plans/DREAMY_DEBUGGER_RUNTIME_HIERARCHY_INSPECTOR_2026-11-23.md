@@ -1,314 +1,362 @@
-# Dreamy Debugger — Runtime Hierarchy + Inspector
+# Dreamy Debugger — Scene Workspace V2
 
-Ngày: 2026-11-23. Trạng thái: **candidate nội bộ đã triển khai và push source package lên main** (`8593c75`). Kiểm chứng: 102/102 EditMode, 5/5 PlayMode Scene/Inspector. Tiến độ từng hạng mục, source/test và các gate còn mở ở [checkpoint](../evidence/debugger/runtime-inspection/CHECKPOINT.md). Người dùng không yêu cầu chạy thêm build; chưa chứng nhận khả năng phát hành Asset Store.
+Ngày cập nhật: **2026-11-23**. Trạng thái: **đã triển khai lát cắt Hierarchy UI + numeric/vector quick edit + Tag/Layer trong Unity**. 18/18 targeted EditMode và 8/8 PlayMode đạt. Phạm vi hoàn tất và các phase V2 còn mở ghi trong [checkpoint](../design/debugger-scene-v2/CHECKPOINT.md).
 
-Baseline khi lập plan: sandbox `f7933dd`; submodule `LocalPackages/com.dreamy.debugger` tại `1516f9fff4f62e7b3acb5f38b566509f5e47291b`, package `0.1.8`. Các phần đánh dấu **đề xuất** bên dưới giữ lại thiết kế gốc; đối chiếu checkpoint để phân biệt phần đã triển khai và gate còn mở.
+Thiết kế lại Runtime Hierarchy + Inspector để có chất lượng hình ảnh phù hợp sản phẩm thương mại, dễ hiểu như một workspace Editor và chỉnh nhanh theo từng kiểu dữ liệu. **Hỗ trợ cả màn hình dọc, ngang, resize và xoay trong lúc sử dụng** là acceptance bắt buộc theo yêu cầu mới nhất.
 
-## 1. Có cần thiết không?
+Plan này thay thế thiết kế UI/lộ trình cũ. Source candidate V1 được giữ làm nền tảng, không triển khai lại toàn bộ backend từ đầu.
 
-**Nên có, ưu tiên cao cho sản phẩm debugger thương mại toàn diện.** Console trả lời “lỗi gì”; Hierarchy + Inspector giúp trả lời “object nào, còn tồn tại không, đang active không, component và giá trị hiện tại là gì”. Lợi ích rõ nhất khi lỗi chỉ xuất hiện trên Android/iOS hoặc player build, nơi không có Unity Editor Inspector.
+## 1. Baseline và vấn đề thực tế
 
-| Tình huống của khách hàng | Giá trị thực tế |
-| --- | --- |
-| Popup không hiện trên device | Tìm object inactive, kiểm tra parent, activeSelf/activeInHierarchy và RectTransform |
-| Nhân vật đứng sai vị trí | Kiểm tra local/world transform và sửa giá trị để thử giả thuyết |
-| Sau chuyển scene còn object cũ | Duyệt scene và DontDestroyOnLoad, nhận biết object đã hủy |
-| Gameplay có trạng thái sai | Xem field của MonoBehaviour, không phải thêm cheat riêng cho mỗi biến |
-| QA gửi bug khó tái hiện | Copy object path/component/member để đính kèm báo cáo thủ công |
+- Sandbox `b79b485`; debugger `8593c75b4f17110fdbad09770bcd852e5b2785df`. Manifest debugger vẫn `0.1.8`, minimum Unity `6000.0`; sandbox dùng Unity `6000.4.12f1`, uGUI `2.0.0`. Không thêm TMP hay Dreamy UI dependency chỉ cho feature này.
+- Đã đọc manifest/lock, asmdefs, `SceneTabController`, `HierarchyRowView`, `InspectorRowView`, `InspectionMember`, `SceneInspectionAssets`, docs và [checkpoint V1](../evidence/debugger/runtime-inspection/CHECKPOINT.md). Đã xem ảnh runtime V1 desktop 1920×1080 và portrait 390×844.
+- Runtime assembly thuần .NET (`noEngineReferences: true`); Engine tham chiếu Runtime/Foundation/Presentation/uGUI; không thêm chiều Presentation → Engine. Giữ access/session/root owner, enum `DefaultTabs.Scene=6`, catalog và define disable.
+- Workflow `docs/agents/dreamy-workflow.md` và compatibility catalog được nhắc trong hướng dẫn không có ở checkout này. Nhận định API dựa trên manifest/lock/source đã đọc. Lessons screenshot/input cục bộ nhắc giữ owner hide/restore và không để blocker input tồn tại sau close; receipt đó không chứng nhận Scene V2.
 
-Đây là đánh giá sản phẩm từ workflow, **chưa phải bằng chứng tăng doanh số hoặc nghiên cứu khách hàng**. Không bắt buộc để mọi debugger được bán, và không phải yêu cầu submission phải có Hierarchy. Nếu chỉ định vị “console + screenshot”, có thể phát hành trước; nếu quảng bá “runtime debugging toolkit”, nên hoàn tất phạm vi P0 dưới đây trước khi marketing tính năng này.
+| Quan sát V1 | Hệ quả | Quyết định V2 |
+| --- | --- | --- |
+| Toolbar có ba nút lớn Refresh/Pause/Read only | Chiếm chỗ nhưng thiếu phân cấp | Toolbar gọn; icon + tooltip; Edit có trạng thái rõ |
+| Search lặp path dài dưới từng object | Cây giống log, khó nhận cấp bậc | Scene header, tên một dòng; context chỉ khi cần |
+| TreeHeight 52; Inspector entry 76/108 cho nhiều loại | Mật độ thấp, cuộn nhiều | Row kind/density, drawer riêng theo kiểu |
+| Vector là chuỗi `0, 0, 0` | Khó sửa một trục, dễ nhập sai | Ba ô X/Y/Z, scrub, stepper |
+| Type/ID/hint xuất hiện thường trực | Metadata lấn át giá trị | Tooltip/details; chỉ hiện lỗi khi có |
+| Portrait nhiều header/nút trước field | Tốn chiều cao, ít dữ liệu nhìn thấy | Header gọn, navigation hai trang, editor sheet |
 
-Điểm khác biệt nên là trải nghiệm liền mạch với Console/Cheats/Screenshot, UI mobile dễ dùng, IL2CPP được kiểm chứng và package độc lập. Bản miễn phí tham khảo đã cung cấp nhiều chức năng tương tự; chỉ thêm một cây object sẽ chưa đủ tạo khác biệt.
+**Flow mục tiêu:** mở Scene → tìm object → hiểu object đang chọn → thấy Transform và field quan trọng → chỉnh riêng X mà không nhập lại Y/Z → biết draft/applied/conflict → Back về đúng vị trí cây.
 
-## 2. Source hiện tại và ràng buộc
+## 2. Nghiên cứu UnityRuntimeInspector
 
-Các đường dẫn trong bảng tính từ `LocalPackages/com.dreamy.debugger/`, trừ nơi ghi rõ sandbox.
+Repo tham khảo đã được clone, đọc README, xem `DarkSkin.png` và đọc các source dưới đây. Snapshot HEAD ngày khảo sát: **`2d461b975725f4713aee5eb3857661e361ab8d27`**, trùng snapshot đã ghi trong plan gốc. Link được ghim SHA để không lẫn hành vi của revision khác.
 
-| Bằng chứng đã đọc | Kết luận và tác động |
-| --- | --- |
-| Sandbox `ProjectSettings/ProjectVersion.txt` | Unity `6000.4.12f1`; đây là môi trường hiện tại, không chứng minh support mọi Unity 6 |
-| Sandbox `Packages/manifest.json`, `Packages/packages-lock.json`; package `package.json` | Debugger local, uGUI `2.0.0`; manifest debugger yêu cầu Unity `6000.0`, không phụ thuộc Dreamy Core/UI/DataConfig/Datasave |
-| `Runtime/Dreamy.Debugger.Runtime.asmdef` | Pure .NET, `noEngineReferences: true`; không đưa Transform/GameObject/uGUI vào assembly này |
-| `Runtime/Engine/Dreamy.Debugger.Engine.asmdef` | Engine phụ thuộc Runtime/Foundation/Presentation/uGUI; bị loại khi `DISABLE_DREAMY_DEBUGGER` |
-| `Runtime/Imported/Presentation/Dreamy.Debugger.Presentation.asmdef` | Presentation không phụ thuộc Engine; không được thêm chiều phụ thuộc ngược tạo vòng |
-| `Runtime/Engine/DebuggerRuntime.cs`, `DebuggerConfiguration.cs` | Có owner khởi tạo, access session, mode Off/Development/Qa/ReleaseDiagnostics, teardown; tái sử dụng thay vì singleton mới |
-| `Runtime/Imported/Presentation/Scripts/UI/Other/DebugTabController.cs` | Có AddTab, sort, ActiveTabChanged và activation; dùng đường tích hợp này |
-| `Runtime/Imported/Presentation/Scripts/UI/DebuggerTabController.cs` | Getter ActiveTab dùng Enum.Parse; tab key mới cần xử lý tương thích, không dùng key tùy ý rồi bỏ qua getter này |
-| `Runtime/Imported/Presentation/Scripts/Settings.cs` | DefaultTabs hiện có giá trị 0–5, Screenshot=5; không đổi số cũ |
-| `Runtime/Imported/Presentation/Scripts/PresentationAssets.cs`, `DebuggerAssetCatalog.cs`; `Runtime/Prefabs/DebuggerAssets.asset` | Tab/prefab/font/icon được đưa qua catalog; phải ship binding đầy đủ cho consumer |
-| `Runtime/Engine/ScreenshotTabController.cs`, `Editor/ScreenshotTabAssets.cs` | Có tiền lệ controller ở Engine, authoring chỉ trong Editor và prefab được lưu sẵn |
-| `Runtime/Imported/Foundation/Scripts/UI/DebuggerPalette.cs`; `Documentation~/MATERIAL_UI.md` | Material Compact: Barlow + JetBrains Mono, sprite nhỏ, uGUI Text; dùng cùng palette/font, không thêm TMP chỉ cho feature này |
-| `Tests/EditMode`, `Tests/PlayMode`, `Tests/EditorIntegration`, `Tests/StartupEditor` | Có các tầng test để mở rộng; kết quả cũ không thay thế test tính năng mới |
-| `Documentation~/RELEASE.md`, `README.md`, `package.json` | Package hiện mô tả dùng nội bộ; license `UNLICENSED`; chưa phải artifact có quyền phân phối công khai được xác nhận |
+| Source đã đọc | Quan sát | Áp dụng cho Dreamy |
+| --- | --- | --- |
+| [HierarchyField](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/Scripts/RuntimeHierarchy/HierarchyField.cs) | Indent theo depth; selected/inactive riêng; expand có vùng click riêng | Cây một dòng, selected/focus riêng, chevron đúng hit target |
+| [Vector3Field](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/Scripts/RuntimeInspector/Fields/Vector3Field.cs) | Ba input riêng, đổi từng axis, refresh từng ô | X/Y/Z độc lập về UX; compound member có conflict policy |
+| [TransformField](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/Scripts/RuntimeInspector/Fields/TransformField.cs) | Local Position/Rotation/Scale có nhãn dễ hiểu | Transform card ba dòng chính, advanced foldout |
+| [NumberField](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/Scripts/RuntimeInspector/Fields/NumberField.cs) | Input dùng handler theo kiểu | Giữ kiểu gốc, bổ sung numeric gesture của Dreamy |
+| [NumberRangeField](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/Scripts/RuntimeInspector/Fields/NumberRangeField.cs) | RangeAttribute chọn slider + ô số; slider đi qua float | Range mới dùng slider; số precision cao giữ canonical numeric |
+| [BoundInputField](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/Scripts/RuntimeInspector/Helpers/BoundInputField.cs) | Giữ text khi focus, cache, màu invalid | Refresh không reset caret/draft, lỗi inline |
+| [ColorField](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/Scripts/RuntimeInspector/Fields/ColorField.cs) | Swatch mở picker, Color/Color32 | Swatch/alpha/picker; bổ sung HDR policy rõ |
+| [ObjectReferenceField](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/Scripts/RuntimeInspector/Fields/ObjectReferenceField.cs) | Picker, inspect/drop reference, lookup qua Resources | P0 chip + Reveal readonly; assignment P1; tránh global scan mỗi click |
+| [UISkin](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/Scripts/RuntimeInspector/Skin/UISkin.cs) | Font, line height, indent, label ratio và màu theo skin | Theme tokens/density, cập nhật theo event/version |
+| [RecycledListView](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/Scripts/RuntimeInspector/Helpers/RecycledListView/RecycledListView.cs) | Pool item theo viewport, resize invalidation | Giữ virtualization; Inspector dùng model row kind/height |
 
-Sandbox không có `toolkit.json` hoặc `compatibility/dreamy-packages.json` tại thời điểm khảo sát. Plan dựa trên manifest/lock/asmdef/source thực tế, không khẳng định API từ toolkit chưa được xác minh.
+Scrub số, stepper, transaction và value history trong plan là **đề xuất bổ sung cho Dreamy**, không gán nhầm cho upstream. Một số drawer upstream ghi khi input hợp lệ; Dreamy phải giữ access/conflict policy của mình.
 
-### Gate thương mại cần giải quyết sớm
+Chọn phát triển tiếp module Dreamy, tham khảo UX và port chọn lọc khi có ích. Không bắt khách cài cả upstream. Nếu port, ghi file gốc/SHA/diff/license; GitHub source dùng [MIT](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/LICENSE.txt), ColorWheel có [BSD 3-Clause riêng](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/ExternalResources/ColorWheel/ColorWheelLICENSE.txt). Chỉ nhập notice của phần thực sự sử dụng; không nhầm điều kiện GitHub với bản tải từ Asset Store.
 
-`Documentation~/RELEASE.md` ghi rõ vendor-derived content giữ điều kiện upstream và version change không cấp quyền phân phối công khai. Phải lập inventory source/font/icon/shader, đối chiếu quyền phân phối từng phần trong `Runtime/Imported`, đặc biệt Presentation và mọi nội dung xuất phát từ SRDebugger. Foundation có file MIT riêng; **không suy rộng license đó cho toàn bộ Presentation**.
+## 3. Concept hình ảnh: Material Compact — cùng theme Dreamy hiện tại
 
-Nếu không có quyền phù hợp: thay thế phần bị hạn chế bằng implementation/asset có quyền phân phối rõ ràng trước khi bán. Đổi namespace hoặc reskin không giải quyết quyền source. Đây là blocker của **commercial release**, không ngăn viết plan hay prototype nội bộ. Lập danh sách file ảnh hưởng và rebaseline kiến trúc nếu phải thay shell trước khi triển khai tích hợp sâu.
+Chỉ đạo mới nhất: đồng nhất theme hiện tại, đổi tên hiển thị tab thành **Hierarchy**, đổi icon tab thành cây phân cấp, ưu tiên icon object/component dễ nhận như gallery Unity Editor người dùng gửi và giảm thông tin thừa. Quyết định này thay thế hướng accent xanh lam trước đó. Dùng `DebuggerPalette` hiện tại làm nguồn token, Barlow/JetBrains Mono và Material Compact control assets hiện có. Độ hoàn thiện đến từ bố cục, mật độ và trạng thái, không thay toàn debugger sang skin mới.
 
-## 3. Tham khảo UnityRuntimeInspector và quyết định tái sử dụng
+### Đổi tên và icon tab
 
-Repo được yêu cầu: [yasirkula/UnityRuntimeInspector](https://github.com/yasirkula/UnityRuntimeInspector/tree/master). Snapshot khảo sát qua GitHub API: `2d461b975725f4713aee5eb3857661e361ab8d27`.
+- UI title/long title/sidebar/tooltip/QuickStart hiển thị **Hierarchy** (đúng chính tả); hai pane bên trong vẫn là Hierarchy và Inspector. Thay `Icon_Options` đang dùng bằng style riêng dự kiến `Icon_Hierarchy`, glyph cây phân nhánh có node, đọc được ở cùng kích thước các tab khác.
+- Giữ internal tab key `Scene`, catalog address, `DefaultTabs.Scene=6`, GUID và preference identity để consumer hiện có không mất binding. Đây là đổi nhãn hiển thị; nếu sau này đổi public identifier phải có migration riêng. Không chỉ đổi key tùy ý vì getter ActiveTab đang parse enum.
+- Icon normal/selected/disabled lấy tint cùng hệ sidebar hiện tại. Không dùng icon camera/landscape cho Hierarchy hoặc thêm nền badge khác tab lân cận.
 
-[README tại snapshot](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/.github/README.md) mô tả hai panel kết nối selection, configurable refresh, skin/drawer, collection, tìm kiếm scene và DontDestroyOnLoad. Dùng làm checklist UX và hành vi. [RecycledListView](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/Scripts/RuntimeInspector/Helpers/RecycledListView/RecycledListView.cs) là tham khảo cụ thể cho viewport recycling và pooling; cần tự benchmark trong Dreamy.
+### Giảm thông tin trên màn hình chính
 
-| Hướng | Đánh giá |
-| --- | --- |
-| Bắt khách cài nguyên upstream | Nhanh để thử nhưng thêm setup, khả năng trùng dependency và skin khác; không chọn cho trải nghiệm mặc định |
-| Vendor nguyên repo rồi reskin | Có thể giảm công backend nhưng kéo theo phạm vi bảo trì/license; cần audit đầy đủ, không mặc định chọn |
-| **Dreamy-native module, tham khảo hành vi; port có chọn lọc nếu có lợi** | **Hướng đề xuất**: một owner access/input/catalog, UI đồng nhất, phạm vi có thể kiểm thử; không bắt buộc port source để hoàn thành P0 |
+- Mặc định chỉ có search/filter, object name/selection, component header và value. Bỏ dòng “Runtime workspace”, nhãn SCRIPT, ID/type lặp lại, hint hướng dẫn thường trực và counter kỹ thuật trong footer.
+- Breadcrumb một dòng chỉ khi hữu ích; tag/layer/instance ID/full path ở menu **Details**. Footer chỉ xuất hiện khi scan, pending edit, lỗi hoặc conflict; không chiếm chiều cao lúc idle.
+- Readonly/Edit hiển thị một trạng thái rõ; hướng dẫn gesture ở tooltip/first-use help. Tooltip không thay accessibility/touch details. Lỗi vẫn hiện sát field, không giấu thông tin cần quyết định.
+- Giới hạn màu: accent Dreamy cho selected/focus/edit; màu nhận biết object/component chỉ ở icon nhỏ; X/Y/Z có chữ đi kèm. Không biến từng card/field thành một màu khác nhau.
 
-Nếu port: ghim SHA, ghi rõ file nào copied/modified, giữ copyright và license, chọn namespace tránh trùng upstream, test cùng project đã cài upstream. [LICENSE MIT](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/LICENSE.txt) có điều kiện giữ thông báo. [ColorWheel license](https://github.com/yasirkula/UnityRuntimeInspector/blob/2d461b975725f4713aee5eb3857661e361ab8d27/Plugins/RuntimeInspector/ExternalResources/ColorWheel/ColorWheelLICENSE.txt) là BSD 3-Clause riêng; nếu không mang ColorWheel thì không nhập asset đó. Phân biệt source GitHub với bản tải từ Asset Store và điều kiện phân phối tương ứng. Kết quả audit license phải được ghi nhận trước khi đưa code bên thứ ba vào artifact thương mại.
+[Concept HTML tương tác](../design/debugger-scene-v2/concept.html): chọn object, search, foldout, ô X/Y/Z, ±, scrub desktop, slider và reflow hẹp. Dữ liệu giả; không phải ảnh runtime hay evidence touch. Font browser là minh họa; Unity tiếp tục Barlow + JetBrains Mono hiện có và notice OFL.
 
-## 4. Phạm vi phát hành
+| Token | Giá trị ban đầu | Vai trò |
+| --- | --- | --- |
+| Canvas / Panel | `#101216` / `#1C1F25` | DebuggerPalette.Background / Surface |
+| Raised / Input | `#272C34` / `#272C34` | DebuggerPalette.Control; flat/sliced theo shell |
+| Border | `#363E49` | DebuggerPalette.Border |
+| Text / secondary | `#EEF0F4` / `#99A3B2` | DebuggerPalette.Ivory / Muted |
+| Accent / selection fill | `#CB465D` / `#39212C` | DebuggerPalette.Accent / Selected |
+| Success / warning / error | `#88D6B4` / `#E8BC70` / `#F0929A` | Applied / draft / conflict |
+| X / Y / Z | `#F09C9C` / `#91D4B2` / `#99BCFF` | Luôn kèm chữ axis |
+| Spacing | 4, 8, 12, 16, 24 | Nhịp toàn module |
+| Radius | 4 control, 6 card, 8 popup | Gọn, không biến mọi control thành pill |
 
-### P0 — bản đầu đủ hữu ích và được bán như một feature hoàn chỉnh
+Text thường 13–14 logical units desktop, 15–16 touch; title 16–18; số Mono. Mục tiêu contrast chữ thường ≥4.5:1, indicator/focus ≥3:1; cần đo trên render thật. Không coi palette dự kiến là đã kiểm chứng. Không auto-size tới mức khó đọc.
 
-- Một tab **Scene** trong debugger; desktop có Hierarchy + Inspector song song, mobile dùng hai trang trong cùng tab.
-- Hierarchy theo loaded scene, bao gồm inactive object; hỗ trợ DontDestroyOnLoad bằng public runtime API, ẩn cây debugger mặc định.
-- Expand/collapse lazy, single selection, reveal selected, search tên object không phân biệt hoa thường; filter scene/active. Kết quả tìm kiếm kèm scene/path để phân biệt tên trùng.
-- Cập nhật spawn/destroy/reparent/rename/scene unload mà không mất selection/scroll không cần thiết. Không dùng tên/path làm identity.
-- Inspector header: tên, scene, path, instance ID trong session, tag/layer read-only; activeSelf có thể sửa, activeInHierarchy read-only.
-- Transform: local position/rotation Euler/scale có thể sửa; world position read-only. RectTransform có drawer riêng cho anchoredPosition, sizeDelta, anchors, pivot; cảnh báo giá trị có thể bị LayoutGroup/Animator ghi đè.
-- Component foldout, trạng thái enabled nếu component hỗ trợ, missing script hiển thị rõ, filter theo tên component/member.
-- Field public và `[SerializeField]` thuộc kiểu được hỗ trợ; chính sách chi tiết ở mục 6. Properties tắt mặc định, chỉ dùng adapter/allowlist rõ ràng.
-- Drawer bool, numeric chuẩn, string, enum/flags, Vector2/3/4, Vector2Int/Vector3Int, Color, UnityEngine.Object read-only + inspect/reveal reference. Không hứa object picker trong P0.
-- Array một chiều/List<T> có paging và sửa phần tử kiểu được hỗ trợ; kích thước read-only. Serializable class/struct có giới hạn độ sâu và phát hiện cycle.
-- Chỉnh sửa chỉ trong session đã unlock và mode cho phép. Nút Refresh/Pause view, Read only/Edit rõ ràng. Không ghi các giá trị này vào asset/save của game.
-- Prefab/font/icon/catalog hoàn chỉnh, QuickStart demo, tài liệu giới hạn, test player IL2CPP.
-
-### P1 — sau khi P0 đạt gate
-
-Picker chọn object trong scene (loại trừ UI debugger), reference picker có type filter, pin/watch một số member có giới hạn, custom drawer API public ổn định, copy snapshot có lọc dữ liệu, Undo phiên runtime theo tập member đã kiểm thử. Properties nâng cao và adapters Renderer/Camera/Light chỉ sau khi kiểm chứng side effect.
-
-### P2 — chỉ làm khi có nhu cầu xác nhận
-
-Multi-select, add/remove component, delete/duplicate object, drag reparent, invoke method có whitelist, material editor, lưu/replay snapshot, remote inspector. Những phần này tăng mạnh rủi ro và phạm vi support; không nằm trong quảng cáo P0.
-
-Không hứa: thay thế Unity Editor, SerializedObject/PropertyDrawer/CustomEditor chạy trong player, ECS hierarchy, inspection mọi managed object, debug từ máy khác hoặc đồng bộ network authority.
-
-## 5. Kiến trúc và điểm tích hợp
-
-### Owner và chiều phụ thuộc
-
-Đề xuất đặt implementation Unity-facing tại `Runtime/Engine/SceneInspection/`, trong Engine assembly hiện có. Tránh thêm assembly cho đến khi có nhu cầu tách thực tế; feature flag và lifecycle vẫn do root hiện tại quản lý.
+## 4. Desktop và landscape rộng
 
 ```text
-DebuggerRuntime + DebuggerConfiguration + access policy
-  -> SceneInspectionSession
-       -> HierarchyIndex / SelectionState
-       -> MemberDescriptorCache / InspectorBinding
-       -> InspectionWritePolicy
-  -> SceneTabController -> HierarchyView / InspectorView -> saved prefabs
-
-Engine -> Presentation -> Foundation
-Engine -> Runtime (pure .NET contracts hiện có)
-Editor -> Engine/Presentation (authoring + catalog + tests)
+ Dreamy / Hierarchy                           [Read only / Edit] [⋯]
+ ┌ HIERARCHY ─────────────┬ INSPECTOR ──────────────────────────────┐
+ │ Search objects…       │ ◇ Player               [✓ Active] [⋯]  │
+ │ [Scene ▾] [Filter ▾]   │ Level / Characters / Player             │
+ │ ▾ DemoLevel           │ Tag Player · Layer Default              │
+ │   ▸ Environment       │ ▾ Transform                      Local  │
+ │   ▾ Characters        │   Position [X 0.00][Y 1.20][Z 0.00]     │
+ │     ◇ Player          │   Rotation [X 0.00][Y 0.00][Z 0.00]     │
+ │       ◇ Visuals       │   Scale    [X 1.00][Y 1.00][Z 1.00]     │
+ │     ◇ Dummy           │ ▾ Player Controller              [✓]   │
+ │ ▸ DontDestroyOnLoad   │   Speed    [━━━━●────────] [5.50]       │
+ │                       │   Health   [−] [100] [+]                │
+ └ 124 objects · Live ───┴ Position X changed    [Reload] [Apply] ──┘
 ```
 
-Tên trên là thiết kế đề xuất. Leaf views nhận session/binding tường minh; không gọi service locator ở mỗi row. Không có dependency sang project `Assets/`, Dreamy Core/UI hoặc upstream plugin để dùng P0.
+Hierarchy khởi đầu 28–32% width, tham khảo minimum tree 240 và Inspector 420 logical units. Splitter clamp theo rect thực, vùng hit ≥8 desktop/lớn hơn trên touch; không làm pane nhỏ dưới min để giữ split bằng mọi giá. Label column ~35–40%, có min/max; resize không làm axis biến mất.
 
-### Hợp đồng dữ liệu và lifecycle
+Toolbar cao dự kiến 40 desktop/48 touch. Refresh nhỏ + tooltip; Pause ghi **Pause inspection**, không đổi `Time.timeScale`. Edit có lock/pencil + chữ. Menu chứa density, refresh interval, details. Live nghĩa đang quan sát, khác Live edit. Scan/status không làm toolbar nhảy chiều cao.
 
-- Node identity dùng instance ID kèm kiểm tra Unity object còn sống và generation của session/index. Tránh ID reuse sau destroy; scene identity dùng handle trong session. Path chỉ phục vụ hiển thị/copy, có thể đổi sau reparent.
-- Cache descriptor theo Type; không giữ strong reference mọi object trong static cache. Selection và bindings được clear khi unload/destroy/stop. Pool có capacity và clear bindings/listeners khi trả row.
-- Scene index lấy roots theo scene, duyệt theo budget; sceneLoaded/sceneUnloaded đánh dấu dirty. Thay đổi bên trong scene phát hiện qua bounded reconciliation vì không có một event public tổng quát cho mọi thay đổi GameObject.
-- DontDestroyOnLoad: spike kiểm chứng `gameObject.scene` của một helper do debugger sở hữu sau DontDestroyOnLoad và lấy roots từ scene đó bằng API public; helper có HideInHierarchy và bị filter khỏi kết quả. Không reflection UnityEditor/internal API; nếu spike không đạt player gate thì không đánh dấu P0 hoàn tất.
-- Filtering loại debugger bootstrap/presentation/HUD/overlay theo root owner/reference, không chỉ theo tên. Có tùy chọn nội bộ xem debugger roots; user game không bị ẩn nhầm vì đặt tên trùng.
-- `OnEnable`: bind owner, reconcile dirty data. `OnDisable`/đổi tab/đóng panel: dừng refresh, cancel scan, hủy draft chưa commit, bỏ input focus. Giữ selection/expanded IDs còn hợp lệ trong RAM để reopen.
-- Access hết hạn/lock/mode đổi: hủy draft, đóng quyền edit ngay; mọi write kiểm tra lại policy. Teardown không tạo service mới. Reset static state cho Enter Play Mode không Domain Reload.
-- Search chạy incremental với generation token; query mới hủy kết quả query cũ. Hiển thị “Scanning…” và số lượng kết quả tạm thời; không giả vờ đã tìm hết scene nếu scan chưa xong.
+## 5. Portrait, landscape thấp và responsive
 
-### Tích hợp navigation/configuration
+**Hai yếu tố độc lập:** orientation và vùng nội dung thực. Portrait tablet có thể đủ rộng để split; landscape phone có thể thiếu chiều cao hoặc width sau safe area/sidebar nên phải dùng compact. Không quyết định chỉ bằng `Screen.width > Screen.height`.
 
-1. Đề xuất thêm `DefaultTabs.Scene = 6`, giữ nguyên 0–5 và key `Scene`; đối chiếu Enum.Parse/OpenTab/disabled tabs/default tab/persistence. Getter dùng TryParse để custom key không làm crash nếu cần mở rộng.
-2. Thêm `SceneTab.prefab` vào catalog và builder theo tiền lệ Screenshot. Test catalog cũ thiếu entry phải fallback/hide tab có kiểm soát, không NullReference. Không thêm cả catalog và AddTab thủ công khiến tab nhân đôi.
-3. Cấu hình đề xuất: EnableSceneInspection=true cho Development/Qa; AllowSceneEditing=false mặc định; hierarchy/member refresh interval; scan budget; depth/page/cache limits. Inspector bắt đầu Read only; chuyển Edit chỉ khi cấu hình cho phép và session unlock.
-4. `Off`, `ReleaseDiagnostics` và build không được policy cho phép: không tạo scene index/tab/listener. `DISABLE_DREAMY_DEBUGGER` phải compile sạch; audit thêm dependency/resource để không quảng cáo “zero bytes” chỉ dựa vào define.
-5. Có thể nhớ split ratio/filter/layout trong preference namespace của debugger; không nhớ credential/draft/object ID qua app restart. Giá trị field đã edit không được serialize tự động.
+| Điều kiện vùng khả dụng sau shell/SafeArea | Layout | Quy tắc |
+| --- | --- | --- |
+| Rộng ≥~760 và đủ minimum hai pane | Split | Tree + Inspector đồng thời; breakpoint là số khởi đầu cần đo |
+| Hẹp hơn hoặc không đủ min pane | Two-page | Hierarchy / Inspector; Back giữ state |
+| Landscape thấp, keyboard mở hoặc popup lớn | Compact + editor sheet | Thu metadata/header, editor có scroll riêng, action luôn tới được |
+| Portrait rộng | Split nếu đạt min; cho chọn one-pane | Không cố ép theo orientation name |
 
-## 6. Inspector: quy tắc phản chiếu và ghi giá trị
+Các ngưỡng là logical Canvas units, cần kiểm tra live CanvasScaler/render mode/reference resolution/match/parent rect trước authoring. Một độ phân giải 1920 không có nghĩa workspace rộng 1920 units.
 
-| Chủ đề | Contract P0 |
+### Portrait phone
+
+- Header gọn, navigation Hierarchy/Inspector. Chọn object mở Inspector; chưa chọn có empty state “Choose object”. Back trả đúng search/filter/scroll/expanded state.
+- Path dài ở details mở khi tap; ID/tag/layer không chiếm thường trực nhiều hàng. Trên 390×844, mục tiêu thấy Transform và ít nhất một component header tiếp theo khi keyboard đóng, kiểm chứng bằng fixture đúng scaler.
+- Vector label trên, ba ô X/Y/Z dưới nếu đủ min width; nếu không, xếp mỗi axis một dòng. Không cắt số âm/lớn chỉ để giữ ba cột.
+- Touch hit target mục tiêu ≥44 logical units và kiểm tra sau scaling trên thiết bị. Không nhét sáu nút ± vào một vector row nhỏ; tap field mở numeric sheet có stepper đầy đủ.
+
+### Landscape phone
+
+- Toolbar một hàng gọn; metadata thu vào details; ưu tiên chiều cao danh sách. Split chỉ nếu hai pane thực sự đọc và bấm được.
+- Numeric sheet dùng side sheet hoặc dialog giới hạn width và scroll nội dung; không lấy gần hết chiều cao bằng một bottom sheet rồi che Apply.
+- Notch bên trái/phải: nền full bleed, vùng điều khiển giữ trong SafeArea owner hiện tại. Test cả hai hướng landscape nếu project cho phép.
+
+### Rotation / resize khi đang dùng
+
+1. Lưu state độc lập với view: selected object identity, expanded branches, query/filter, anchor object + scroll offset của mỗi pane, component foldout, draft và active member.
+2. Khi dimensions/insets/keyboard thay đổi, chọn layout mới qua event và rebuild geometry có kiểm soát; không polling full layout mỗi frame.
+3. Giữ selection/draft và focus nếu field vẫn hợp lệ; kết thúc pointer capture/repeat đang chạy trước reflow. Không commit ngầm vì input bị recreate.
+4. Giữ popup trong safe rect mới; nếu phải đổi popup thành sheet, dùng cùng edit model. Nếu target biến mất, cancel có thông báo. Không tạo sheet thứ hai.
+5. Keyboard/IME: field đang focus nhìn thấy, Apply/Cancel tới được; text composition không bị refresh cắt ngang. Escape/Back đóng tầng editor → popup → compact Inspector → debugger.
+6. Font-size/user scaling: reflow hoặc scroll, không giảm font để fit. Scroll luôn tới item cuối, có clearance cho footer/sheet.
+
+Chỉ một SafeArea owner; background bên ngoài inset subtree. Không thêm inset lần hai vào tab nếu shell đã xử lý. World-space mode phải có layout contract/available rect riêng; không tự lấy screen safe area áp lên world-space canvas.
+
+## 6. Hierarchy UX
+
+1. Scene header có icon/count; DontDestroyOnLoad riêng. Cây thường tên một dòng, icon, chevron; path ở breadcrumb/details. Search chỉ thêm path khi cần phân biệt kết quả trùng.
+2. Indent 16 desktop/18 touch; guide line tùy chọn. Lá không có chevron nhưng giữ cột thẳng. Deep tree dùng horizontal scroll/reveal path, không indent tới mức tên chỉ còn vài ký tự.
+3. Tap row chọn; chevron chỉ expand. Desktop Up/Down chọn, Right expand/child, Left collapse/parent, Home/End. Ctrl/Cmd+F chỉ khi workspace focus, không giành phím của input/IME/game.
+4. Selection có fill + vạch trái; focus có outline khác; inactive text dịu và badge, selected inactive vẫn đọc được. Không dùng eye icon khiến nhầm visibility với `activeSelf`.
+5. Menu chuột phải/long press: Copy name/path, Reveal selected, Expand/Collapse branch. Touch không phụ thuộc hover. Search có clear/count/highlight, cancel query cũ, ancestor context. Filter chọn rõ scene/active thay cycle khó đoán.
+6. Giữ identity theo object/session khi spawn/destroy/reparent/rename; không dùng path/name làm key. Giữ scroll anchor; target destroyed/unloaded không tự chọn object mới cùng row index.
+7. Row desktop 28–32, touch 44–48 units; scene/search row height riêng. Virtualization biết row kind/height, pool bounded. Không dựng 10k UI objects để có tree đẹp.
+
+P0 single selection. Multi-object edit/reparent/delete/add/remove component là P2 có policy riêng; không thêm nút giả khiến hiểu đã hỗ trợ.
+
+## 7. Inspector và typed drawers
+
+Header object: icon, tên, activeSelf toggle, breadcrumb; activeInHierarchy tách badge khi parent inactive. Theo chỉ đạo triển khai mới, **Tag/Layer được sửa trong Edit mode**: Tag nhập tên đã tồn tại, Layer dropdown các layer có tên; mặc định chỉ áp dụng object đang chọn, không thay children. Các write đều kiểm tra access/conflict. Component card có chevron, type icon, tên và Behaviour.enabled checkbox khi supported; toggle không collapse. Raw type/ID ở details.
+
+| Dữ liệu | Drawer P0 | Thao tác |
+| --- | --- | --- |
+| float/double/decimal | Numeric | Scrub, ±, nhập chính xác; giữ kiểu gốc |
+| Integer gồm long/ulong | Integer | Step nguyên, checked overflow; không qua float/double để lưu integer |
+| RangeAttribute/adapter range | Slider + số | Range rõ; numeric canonical khi slider không đủ precision |
+| Vector2/3/4, VectorInt | Ô theo axis | X/Y/Z/W, màu + chữ, copy/paste có kiểm tra |
+| Transform | Position/Rotation/Scale | Local mặc định; World theo allowlist adapter |
+| RectTransform | UI transform card | Anchors/pivot/anchoredPosition/sizeDelta/offset đúng mode, driven field rõ |
+| bool | Checkbox | Discrete commit qua policy |
+| enum | Dropdown | Search khi dài; unknown value vẫn hiển thị |
+| flags | Checklist popup | Giữ unknown bits, underlying signed/unsigned đúng |
+| Color/Color32 | Swatch + checkerboard | RGBA/hex/HSV/alpha, HDR policy |
+| string | Input, mở multiline khi cần | Copy đầy đủ; không parse rich text từ value |
+| Unity Object | Chip tên/type + Reveal | Null/Destroyed rõ; assignment P1 |
+| Class/struct | Foldout | Depth/cycle guard, write-back đúng |
+| Array/List | Count + trang + typed element | P0 sửa phần tử; resize/reorder P1 |
+| Unsupported/missing script | Info row | Lý do ngắn, không giả editable |
+
+Label thân thiện “Move Speed”; raw member path trong details/tooltip. Parse metadata `[Range]`, `[Tooltip]`, `[Header]`, `[Space]` vào descriptor, precedence không vượt hide/readonly/access. Không gọi arbitrary property/method của Unity component: giữ eligible fields và allowlist adapter.
+
+Height theo drawer/model; error hiện inline khi cần; offsets cập nhật khi foldout/error/reflow. Không hardcode 108 cho mọi value, không nested ContentSizeFitter sâu.
+
+## 8. Numeric và Transform: chỉnh từng ô
+
+### Scalar
+
+- Click số nhập chính xác. Scrub trên label/grip riêng, cursor rõ; drag ngang có delta. Shift Fine ×0.1, Ctrl/Cmd Coarse ×10 khi không xung đột OS/input. Giá trị tính từ baseline + tổng drag, tránh cộng sai số mỗi frame.
+- Step integer mặc định 1, floating 0.1, cấu hình theo member. Nhấn giữ delay ~350 ms rồi repeat giới hạn; pointer cancel/lock/hide dừng ngay. Một click không sinh hai write.
+- Touch numeric sheet gồm object/member path, số chính xác, −/+, step 0.01/0.1/1/10, Fine/Normal/Coarse và Apply/Cancel. Vertical drag trong list ưu tiên scroll; không nhận nhầm scroll thành scrub.
+- Wheel mặc định scroll; chỉ đổi số khi field active và modifier được chỉ dẫn. Không đổi game chỉ vì rê chuột qua field.
+- Slider chỉ khi có range. Với double/decimal và số nguyên lớn, không round-trip canonical qua slider float; tắt slider hoặc dùng normalized projection có giới hạn rõ. Không tự đoán mọi float nên có min/max.
+- Giữ incomplete draft `-`, `1e`; không reset 0. Reject overflow, âm unsigned, NaN/Infinity mặc định. Cho số mũ float/double; locale decimal policy công bố rõ, internal invariant. Display rút gọn khác giá trị lưu, full precision ở editor/details.
+
+### Vector / Transform
+
+- X/Y/Z có input riêng và Tab order; sửa X không yêu cầu gõ lại vector. Mỗi axis có gesture/stepper; commit model vẫn biết đây là composite member.
+- Baseline toàn vector: gameplay đổi Y trong lúc user sửa X → conflict mặc định, không im lặng ghi đè Y/Z. Merge theo axis chỉ là tùy chọn adapter sau kiểm chứng riêng.
+- Euler rotation hiển thị độ, giữ display draft để tránh jump 0/360 khi scrub. Quaternion không đưa bốn số vào giao diện phổ thông; advanced nếu có phải validate/normalize và mô tả representation.
+- Uniform scale link mặc định off; nhân theo ratio, xử lý gốc 0 bằng fallback rõ. Không tự link vì ba trục tình cờ bằng nhau.
+- Local/World đổi label lẫn adapter. Test parent rotated/nonuniform scale. World Scale readonly P0; không hứa ghi `lossyScale`. RectTransform driven field có lý do/cảnh báo, không giả là field tự do.
+- Quick actions “Position Zero”, “Rotation Identity”, “Scale One” trong menu có nghĩa runtime cụ thể. Khác Reload current; không gọi là reset về prefab/default khi không có nguồn authoring đáng tin.
+
+## 9. Commit, Live preview và value history
+
+Tái sử dụng/extend `InspectionMember.TryRead/TryCommit`, nested struct/list write-back và policy. View không ghi trực tiếp gameplay fields. Thực hiện transaction foundation trước khi nối gesture write.
+
+**Default Commit:** text tạo draft, Enter/Apply ghi, blur không ghi; Escape/Cancel bỏ draft. Scrub/slider preview UI rồi commit một lần khi thả gesture hợp lệ. Bool/enum là discrete command sau khi Edit session đã xác nhận; không confirm từng click.
+
+**Live preview opt-in:** bật có chủ đích trong Edit settings, ghi qua cùng gateway khi gesture, cap tối đa một write/member/frame và có frequency cap. Mỗi write kiểm tra quyền/current expected value. Gameplay ghi chồng → dừng preview/báo Changed externally. Không đóng băng game để tránh conflict.
+
+Transaction lifecycle đề xuất:
+
+1. Begin giữ target/session generation/member path/type, baseline, before-value; edit model độc lập row pool.
+2. Update parse/validate theo kiểu; default chỉ preview UI. Live write rồi read-back actual value và cập nhật expected-value.
+3. End commit hoặc cancel. Default cancel bỏ draft. Live cancel chỉ thử restore before-value qua access/conflict; thất bại thì nói rõ giá trị đã giữ, không giả đã rollback.
+4. Hide/tab switch/lock/destroy/unload/pointer cancel dừng capture/repeat và hủy draft. Live write đã xảy ra là thay đổi thực; không ép restore sau khi mất quyền.
+5. Read-back sau setter: game clamp/normalize thì hiện actual value. Collection đổi index/identity invalidate draft/history phù hợp, không ghi nhầm item mới cùng index.
+
+History P0 ví dụ 50 commands/session, một scrub một command. Undo/Redo kiểm tra current expected/access/target validity, không force overwrite conflict. Ctrl/Cmd+Z/Y chỉ khi workspace focus và input không đang dùng text undo; có menu thay thế. Clear object references khi session kết thúc; không lưu history vào player save.
+
+History chỉ khôi phục giá trị đã ghi; không hoàn tác mọi event/network/save/spawn side effect. Edit/Live confirmation phải nói rõ, không quảng cáo tương đương `UnityEditor.Undo`.
+
+## 10. States và input ownership
+
+| State | Hiển thị/hành động |
 | --- | --- |
-| Field eligibility | Instance fields public hoặc private/protected có `[SerializeField]`, kiểu hỗ trợ; loại static, const, `[NonSerialized]`, `[HideInInspector]`, obsolete. readonly chỉ xem. Kế thừa được duyệt có kiểm soát, tránh member trùng tên |
-| Unity components | Transform/RectTransform/Behaviour dùng adapter tường minh. Không reflect bừa toàn bộ properties của Renderer/Material; tránh getter tạo instance hoặc gọi API gây side effect |
-| Properties | Chỉ opt-in/allowlist, không indexer, có getter phù hợp; setter cần policy riêng. Getter ném lỗi chỉ đánh dấu member, không phá cả inspector; ngắt auto retry gây log spam |
-| Custom struct | Write-back từ leaf qua từng struct cha đến field owner; list/array element struct phải ghi trả đúng index. Test nested struct là release gate |
-| Reference và cycle | Unity fake-null/destroyed, null managed value, cycle và max depth có trạng thái riêng. Không tự tạo object mới khi gặp null |
-| Unsupported | Dictionary, multidimensional arrays, SerializeReference polymorphic editing, delegate/event, generic open type, pointer: nhãn Unsupported/read-only, không crash hoặc biến mất im lặng |
-| Validation | Parse invariant cho số, không mất precision long/ulong/double/decimal do ép qua float. Không nhận overflow/NaN/Infinity. Enum có giá trị lạ vẫn render; flags giữ bits hợp lệ theo policy |
-| Commit | Numeric/string/vector có draft, Enter/Apply mới write; Escape/Cancel bỏ draft; blur không tự ghi. Mobile có nút Apply rõ ràng. Toggle/enum ghi một lần từ thao tác đã xác nhận khi đang Edit |
-| Concurrent changes | Trong lúc focus không ghi đè draft. Trước commit đọc lại giá trị; nếu khác baseline thì báo conflict và yêu cầu Reload hoặc Apply lại có chủ đích |
-| Failure | Setter throw hoặc game từ chối: hiển thị lỗi và đọc lại giá trị thật. Không hứa rollback side effect tùy ý; không dùng UnityEditor.Undo trong runtime |
-| Session effect | Đây là sửa trạng thái đang chạy. Lifecycle OnEnable/OnDisable hoặc setter của game có thể tự lưu/đồng bộ dữ liệu; UI nhắc rõ khi bật Edit. Debugger không thể bảo đảm game không có side effect |
+| Readonly config/mode | Lock + lý do; copy/reveal vẫn dùng được |
+| Edit | Pencil + chữ; member readonly vẫn có lý do riêng |
+| Draft valid | Marker vàng/delta, Apply/Cancel theo active editor |
+| Invalid | Giữ input, lỗi ngắn, không ghi partial |
+| Applied | Highlight ~200 ms, status không nhảy layout |
+| Conflict | Current/candidate/baseline ở details; Reload/Cancel |
+| Destroyed/unloaded | Target unavailable; dừng edit, Choose object |
+| Empty/no results/scanning | Lời nhắc, count/progress, clear filter |
 
-Giới hạn mặc định đề xuất: depth 4, collection page 32, string preview 256 ký tự, string edit tối đa 4096 ký tự có thông báo; không dùng giới hạn kỹ thuật làm khóa upsell. Có cấu hình phù hợp và trạng thái “truncated/next page” rõ ràng.
+Không dùng màu/hover làm nguồn thông tin duy nhất. Unicode/tên dài có ellipsis + details, không bật rich-text interpretation cho name/path/value. Decorative graphic tắt raycast. Modal/popup reuse shell input gating và EventSystem; không tự tắt action maps của game rồi quên restore.
 
-**IL2CPP/AOT:** không Reflection.Emit hay runtime expression compilation làm điều kiện hoạt động. Cache metadata; built-in drawers/adapters có code tĩnh. Với type của khách chỉ được dùng qua reflection, cung cấp mẫu preserve cụ thể và công cụ Editor opt-in tạo file trong project của khách; không preserve mọi assembly mặc định. Unity mô tả `[Preserve]` và `link.xml` cho code bị stripping; `link.xml` của consumer nên nằm dưới Assets, không coi file trong package là đủ ([Unity manual](https://docs.unity.com/en-us/engine/6000.0/manual/programming-environment/script-compilation/managed-code-stripping/preserving)). Type/member thiếu metadata hiển thị Unsupported/unavailable với hướng dẫn, không tuyên bố inspection toàn bộ IL2CPP tự động.
+Draft/focus không mất khi refresh/pool. Scroll field khỏi viewport giữ draft hợp lệ trong model; row unbind dừng gesture/listener/tooltip/repeat. Popup/editor model sống đến khi đóng hoặc invalid; không giữ target vô hạn qua pooled view.
 
-## 7. UI/UX — Scene workspace đồng bộ Material Compact
+## 11. Asset, icon, sprite và quyền thương mại
 
-### Layout desktop/landscape
+### Gallery icon Unity Editor theo yêu cầu
 
-```text
-+-----------------------------------------------------------------------+
-| Dreamy Debugger                 Scene                       [Close]   |
-+------------+----------------------------------------------------------+
-| Console    | [Search objects...] [All scenes v] [Inactive] [Refresh]   |
-| Cheats     +-----------------------+----------------------------------+
-| Performance| HIERARCHY             | INSPECTOR                        |
-| Screenshot | v Gameplay            | Player       [Read only / Edit]  |
-| > Scene    |   v Characters        | Gameplay / Characters / Player   |
-| System     |     > Player  SELECTED| Active [on]  In hierarchy: Yes   |
-|            |     > Enemy           +----------------------------------+
-|            |   > UI                | v Transform                      |
-|            | > DontDestroyOnLoad   | Local position  X 0  Y 1  Z 0    |
-|            |                       | Rotation        X 0  Y 0  Z 0    |
-|            |                       | Scale           X 1  Y 1  Z 1    |
-|            |                       | v PlayerController [enabled]     |
-|            |                       | Speed                    [ 5.0 ] |
-+------------+-----------------------+----------------------------------+
-| Live view | 1 selected | 128 objects | [Pause view] | [Copy path]      |
-+-----------------------------------------------------------------------+
-```
+Đã xem [jasursadikov/unity-editor-icons](https://github.com/jasursadikov/unity-editor-icons) và README. Repo mô tả gallery icon xuất từ Unity Editor, có PNG/JSON và tên tra cứu. Dùng làm reference cho **ngữ nghĩa và nhận diện**: hierarchy tree, GameObject cube, Transform axes, Camera, Light, script, RectTransform/Canvas, Rigidbody/Collider. Không suy ra quyền redistribute artwork Unity từ việc repo public; chưa xác nhận license cho phép bundle các PNG này trong package thương mại.
 
-Đây là wireframe cấu trúc, không phải screenshot Unity hoặc bằng chứng UI đã hoàn thành. Tái sử dụng shell/navigation hiện có; tên tab cũ trong wireframe chỉ mô tả vai trò.
+Phương án thực hiện: ưu tiên glyph tương đương từ Material đã có hoặc tự author icon generic cùng ngôn ngữ nét/khối. Map đề xuất: Hierarchy → account_tree; GameObject → deployed_code/cube; Transform → open_with; Camera → videocam; Light → lightbulb; Script → code; Canvas/RectTransform → dashboard/crop; Collider → outline shape. Tên glyph cần xác nhận file nguồn khi import. Nếu có quyền rõ cho từng Unity-derived PNG mới được bundle nó; lưu notice/provenance. Không dùng `EditorGUIUtility.IconContent` trong runtime player.
 
-- Breakpoint theo **content width sau rail và safe area**: từ 900 logical units dùng split, 720–899 cho phép split nếu hai pane đạt minimum 280/360; nhỏ hơn chuyển stacked navigation. Split mặc định 38/62, kéo được và clamp minimum.
-- Mobile portrait: toolbar gọn, Hierarchy toàn chiều rộng; chọn node mở Inspector với Back giữ scroll/query/expanded state. Breadcrumb tối đa 2 dòng, có Copy full path. Không ép hai cột chữ nhỏ trên màn 390px.
-- Status Pause view chỉ dừng refresh debugger, **không đổi Time.timeScale**. Khi pause vẫn kiểm tra target còn sống trước thao tác; stale value có nhãn.
+Icon “sinh động” bằng ngữ nghĩa, tint có giới hạn và state feedback: chevron xoay ngắn khi mở, selected chuyển màu nhẹ; không chạy animation lặp trong cây. Mọi icon có fallback generic cho component lạ, cache theo type, không lookup/allocate mỗi frame.
 
-### Token và asset
+Đã tra nguồn license ngày 2026-11-23. Ưu tiên **Material icons đã bundle** để cùng hệ shell. Nếu concept cần outline mới, thử trọn nhóm Scene bằng Tabler rồi chọn một bộ; không trộn nhiều stroke style trong toolbar.
 
-| Token | Giá trị / sử dụng |
+| Nguồn | License nguồn ghi nhận | Quyết định |
+| --- | --- | --- |
+| [Material icons](https://github.com/google/material-design-icons/blob/master/LICENSE) | Apache 2.0, package đã có notice | Ưu tiên reuse, ghim revision/file mới, ghi sửa đổi |
+| [Tabler Icons](https://github.com/tabler/tabler-icons/blob/main/LICENSE) | MIT, cho phép bán bản sao kèm notice | Subset outline dự phòng, giữ copyright/license |
+| [Lucide](https://lucide.dev/license) | ISC; subset Feather có MIT riêng | Thay thế nếu phù hợp, giữ notice liên quan; không cần dùng cùng Tabler |
+
+Asset ledger theo từng file thực nhập: source URL, revision, license/notice path, modifications, hash, export settings. “Free download” không đủ để kết luận có quyền redistribute trong package bán. License icon mới không đóng gate Imported Presentation hiện có.
+
+| Nhóm cần có | Nội dung | Cách làm |
+| --- | --- | --- |
+| Navigation | tree/scene/search/filter/chevron/back/clear/more/refresh/pause/play | Vector cùng hệ, kiểm tra 16/20/24 logical units |
+| Object/component | cube/transform/rect/camera/light/script/canvas/collider/warning | Generic icon có quyền rõ; không lấy Unity Editor built-in art để bán lại |
+| Editing | lock/pencil/check/cancel/plus/minus/undo/redo/copy/link/locate | Tint theo state; hit surface tách artwork |
+| Controls | rounded fill/outline/focus ring/selection stripe/checkmark/checkerboard | Tự author SVG/shape, PNG RGBA 9-slice, border/padding đúng |
+| Empty states | Choose object/No results/Missing target | Có thể gen minh họa original nhỏ bằng AI |
+
+Runtime ship PNG Sprite + meta; SVG/source và recipe ở authoring assets. Raster 1×/2× theo display thực, atlas/padding/filter/alpha kiểm tra trên render. Không thêm dependency SVG runtime chỉ để dùng vài icon. Các glyph/control cần sắc nét dùng vector-derived sprite, không gen AI thay cho số/chevron/checkbox.
+
+AI optional brief: geometric object tree, graphite/rose, transparent, ít chi tiết, không chữ/logo/trademark/vendor artwork. Lưu prompt/model/tool/date/hash/reference và điều kiện sử dụng khi tạo; review quyền thương mại và yêu cầu disclosure lúc phát hành. Không hứa độc quyền/copyright chỉ vì AI tạo. Nhiệm vụ plan hiện tại chưa tạo/import sprite runtime; chỉ cần gen khi chọn minh họa bitmap phụ.
+
+Upstream MIT/BSD và icon license không giải quyết quyền source `Runtime/Imported/Presentation` của debugger. Audit đó vẫn là release gate đã có trong `Documentation~/RELEASE.md`.
+
+## 12. Kiến trúc và file map dự kiến
+
+Tên mới bên dưới là đề xuất, không phải API đang tồn tại.
+
+| Phần | Owner/thay đổi |
 | --- | --- |
-| Background / Surface / Control | `#101216` / `#1C1F25` / `#272C34` theo DebuggerPalette hiện tại |
-| Border / Text / Muted | `#363E49` / `#EEF0F4` / `#99A3B2` |
-| Accent / Selected / Warning | `#CB465D` / `#39212C` / `#E7B65A`; selection còn có indicator, lỗi có text/icon |
-| Spacing / Radius | 4–8–12–16 logical units / radius 4–6 |
-| Row | Desktop 30–32; touch 44–48. Tree indent 16, vùng chevron có hit surface riêng |
-| Typography | Barlow Regular/SemiBold cho labels, JetBrains Mono cho numeric/path; body 14–16, caption không dưới 12 ở scale chuẩn |
-| Icons | Cùng hệ Material hiện tại: tree, search, tune, refresh, chevron, lock, copy, back; icon vuông, preserveAspect; thêm notice nếu nguồn mới |
+| Index/projection | Giữ SceneInspectionSession/HierarchyProjection; scene/search/object row kinds, icon cache |
+| Write/metadata | InspectionMember/descriptors + typed numeric operations, edit transaction, bounded history trong Engine |
+| View/controller | SceneTabController orchestration/navigation; tách drawer registry khỏi InspectorRowView dùng chung |
+| Numeric | NumericFieldView/NumericScrubHandle/NumericEditSheet; normalized input qua bridge hiện tại |
+| Typed views | Vector/Range/Color/Flags/Reference/ComponentHeader views và prefab riêng |
+| Theme | SceneInspectionTheme + density/layout tokens, bridge palette/fonts, không đổi toàn shell palette |
+| Overlay | Popup host theo session trong shell, reuse visibility/access/input owner |
+| Editor | Sửa authoring explicit hiện có khớp saved prefab; không generator tạm chạy lúc consumer import |
+| Catalog | Một Scene entry, thêm theme/drawer binding ổn định; fallback catalog cũ |
 
-Không dùng nền đỏ toàn pane, blur hoặc font mới làm dependency. Flat background phủ đủ rect; sliced sprite chỉ cho control/card. Không auto-size đến mức chữ khó đọc.
+Giữ GUID cũ cho prefab còn dùng, `.meta` mới cho asset mới; kiểm tra nested overrides và consumers. Author bằng Editor API/MCP đúng instance, dirty/save/reopen/validate; không rewrite hàng loạt YAML để reskin. Runtime thuần .NET không nhận UnityEditor/Unity types.
 
-### Components/prefab đề xuất
+Implementation/assets thuộc submodule package; sandbox giữ plan/demo/evidence. Khách không cần copy sandbox code. Không tự publish/tag package vì viết plan.
 
-`Runtime/Prefabs/SceneInspection/`: `SceneTab.prefab`, `HierarchyRow.prefab`, `ComponentHeader.prefab`, `InspectorValueRow.prefab`, numeric/vector/enum/color drawer prefabs. Drawer động instantiate từ template và pool; layout lớn author sẵn trong prefab, không dựng toàn UI bằng tọa độ trong Update.
+## 13. Hiệu năng và lifecycle
 
-Tree flatten chỉ những branch mở; virtualization theo row height cố định. Inspector dùng flattened rows có row kind/height rõ ràng, prefix offsets cho viewport, expanded complex section rebuild model khi cần. Tránh lồng ContentSizeFitter/LayoutGroup sâu trên hàng nghìn entry. Pool tách theo drawer type và reset state trước bind lại.
+- Hierarchy theo height từng row kind/density; Inspector flattened model + prefix offsets. Pool theo drawer type, capacity giới hạn. Không rebuild toàn Inspector mỗi polling tick.
+- Reflow theo dimension/density/theme event, bỏ layout polling không cần thiết; không ForceRebuild liên tục khi scrub/splitter.
+- Hidden/disabled/locked dừng index/member polling, tooltip, repeat, gesture. Unscaled time; giữ scan budget/cancel search hiện có.
+- Fixture: 1k/10k objects, depth 20, collection 1k, 50 visible scalar members, 100 spawn/destroy mỗi giây. Mục tiêu để đo: selection cached <100 ms, search 10k <500 ms, CPU p95 feature <2 ms/frame trên Android đại diện đã chọn. Không quảng cáo zero-GC reflection.
+- Đo bytes/refresh, steady CPU và spike selection/search/drag riêng. Reopen 100 lần và load/unload 20 vòng: pool/listener/history không tăng vô hạn; history/session không giữ destroyed targets.
 
-### Interaction và trạng thái bắt buộc
+## 14. Scope và lộ trình V2
 
-- Chevron chỉ expand, row chọn; click active toggle không đồng thời chọn/expand sai. Desktop có hover/focus, arrow keys; Ctrl+F chỉ bắt khi Scene workspace có focus. Escape đóng editor/popup rồi Back trước khi đóng debugger.
-- ActiveSelf và Behaviour.enabled là write action: validate access ngay lúc commit. Vô hiệu hóa parent có thể làm nhiều child inactive; UI vẫn phân biệt checkbox activeSelf với badge inactiveInHierarchy.
-- Empty selection, scene rỗng, no results, scanning, scene unloaded, target destroyed, missing script, member error, read-only và access expired đều có text ngắn + hành động phù hợp.
-- Form không mất caret khi refresh/pool; popup enum/color ở top overlay của debugger và có Cancel. Không dùng hover làm cách duy nhất đọc giá trị dài trên touch.
-- IME/soft keyboard: field đang focus luôn nhìn thấy trong safe viewport; Apply/Cancel không bị bàn phím che. Rotation giữ selection và draft hợp lệ hoặc cancel có thông báo.
-- Decorative text/icon tắt raycast; nút có Image hit surface riêng. Respect EventSystem hiện có, không tạo EventSystem trùng. Chỉ block input trong panel/modal; tích hợp cơ chế input gating hiện tại, không tự disable action map của game rồi quên restore.
-- UI test bằng pointer/raycast/touch thực; `onClick.Invoke()` đơn thuần không chứng minh nút bấm được.
-- Chụp ảnh review ở 1920×1080, 1280×720, portrait 390×844 và tablet 1024×768 với tên dài, Unicode, inactive branches, member errors. Dùng Game View thật sau prefab authoring; screenshot concept không phải release evidence.
+**P0:** concept/theme, tree trực quan, typed drawers, quick numeric/vector/range/color/flags, transaction/live/history policy, dọc/ngang/resize/rotation, docs và targeted regression.
 
-## 8. Hiệu năng và nền tảng
+**P1:** reference assignment picker theo scope/type, drag reference, collections resize/reorder, pinned members, Light theme, extension UX. **P2:** multi-object edit, reparent, add/remove component, arbitrary property/method, remote inspection/gizmos — spec riêng khi có nhu cầu.
 
-Các con số dưới đây là **mục tiêu khởi đầu cần đo**, chưa phải claim marketing. Chốt model thiết bị Android đại diện tại Phase 0 và ghi OS/backend/thermal state cùng kết quả.
+Ước lượng phần còn lại V2 trên backend hiện có, một Unity developer với UI/QA hỗ trợ; không cộng lại toàn bộ 22–34 ngày của plan V1.
 
-- Refresh hierarchy/member mặc định 0.25 giây, name/search reconciliation chậm hơn khi cần; chạy theo unscaled time. Không quét toàn scene mỗi frame. Tắt tab/lock không còn scan/member polling.
-- Chia scan theo frame, budget đề xuất 1 ms desktop/2 ms mobile; nếu không đủ thì tăng latency có hiển thị, không block một frame để “đúng refresh interval”. Startup chỉ tạo index khi mở Scene lần đầu.
-- Fixture: 1k và 10k objects, sâu 20 tầng, nhiều tên trùng, 100 spawn/destroy mỗi giây; selected component 100 members, collection 1k entries. Không tạo 10k GameObject row UI.
-- Mục tiêu sau warm-up: selection cập nhật dưới 100 ms khi index sẵn; search 10k trả kết quả cuối dưới 500 ms trên thiết bị đã chốt; steady open CPU p95 phần feature dưới 2 ms/frame trên Android đại diện. Nếu không đạt thì tối ưu/điều chỉnh phạm vi và công bố latency thực.
-- Không hứa zero-GC với reflection value types. Đo allocations/frame và bytes/refresh riêng; mục tiêu ban đầu trung bình dưới 1 KB/frame cho fixture inspector 50 visible scalar members, không full-panel rebuild mỗi refresh. Báo cả spike thay selection/search, không che bằng trung bình.
-- Loop mở/đóng 100 lần và load/unload 20 lần: object/listener/pool không tăng vô hạn; capture heap sau warm-up và sau cleanup. Pool capacity cấu hình; không cache scene object qua session.
-- Windows player và Android ARM64 IL2CPP là gate P0. iOS IL2CPP là gate trước khi quảng bá iOS; chưa có Mac/device thì giữ unsupported/unverified rõ ràng. WebGL, consoles, XR không nằm trong support ban đầu.
-- Kiểm tra Built-in/URP cho overlay và demo trong fresh consumer; không kéo URP vào debugger để vẽ UI. HDRP chỉ ghi support sau smoke test. Unity 2022.3 không mặc định hỗ trợ vì package hiện khai báo minimum 6000.0.
-
-## 9. Kế hoạch thực hiện và điều kiện qua từng phase
-
-Ước lượng cho một lập trình viên Unity có kinh nghiệm, QA/UI tham gia khi cần: **22–34 ngày công**, không tính thay thế phần source thiếu quyền phân phối, thời gian chờ Asset Store hoặc thiết bị chưa có. Đây là ước lượng lập kế hoạch, cập nhật sau spike.
-
-| Phase | Công việc / file chính | Kết quả và gate | Ngày công |
+| Phase | Việc làm | Bàn giao/gate | Ngày công |
 | --- | --- | --- | --- |
-| 0. Baseline và spike | Inventory license; đọc startup/input/catalog/tests; spike DDOL, IL2CPP field reflection, struct write-back; xác định device/support matrix | Quyết định giữ/thay shell, dataset benchmark, proof-of-concept hoạt động trong player; danh sách blocker rõ ràng | 2–3 |
-| 1. Domain/session | Thêm Engine/SceneInspection session, selection, index, lifecycle, access/write policy, config | Test scene/object identity, lock và teardown; không tạo phụ thuộc vòng hoặc scan khi đóng | 3–4 |
-| 2. Hierarchy | Incremental index/search/filter, flattened tree, recycling rows, scene headers/DDOL | 10k fixture scroll/search được; spawn/destroy/reparent/unload không stale selection | 3–4 |
-| 3. Inspector | Descriptor cache, adapters, scalar/enum/vector/color/reference, nested struct, paged collection, draft/error handling | Test getter/setter lỗi, precision, cycle, struct write-back, focus conflict; IL2CPP smoke chạy lại | 5–7 |
-| 4. UI integration | SceneTab/controller/prefabs, catalog, enum, responsive split/mobile, keyboard/touch, visual polish | Screenshot Unity thật ở 4 viewport; pointer/raycast và IME pass; cũ vẫn hoạt động | 4–6 |
-| 5. Consumer và performance | Fresh project, packaged artifact, input matrix, Mono/IL2CPP, device profiler, regressions | Source và artifact cùng fingerprint; build/runtime/CPU/GC evidence, không claim platform chưa test | 3–6 |
-| 6. Docs và release candidate | QuickStart, extension/stripping guide, limitations, notices, changelog, Asset Store material | Release checklist đạt, clean import, không thiếu dependencies; commercial license gate đóng | 2–4 |
+| A. Design baseline | Concept desktop/dọc/ngang thấp, theme, icon inventory, đo scaler/SafeArea | Layout/state spec, numeric UX; concept không thay Unity gate | 1–2 |
+| B. Tree/shell | Toolbar, scene header, selection, icons, filter menu, adaptive navigation | Saved prefabs, actual renders dọc/ngang, state qua rotation | 2–3 |
+| C. Edit foundation | Typed operations, transactions, read-back/conflict/access/history | Model checks precision/overflow/cancel meaningful | 2–3 |
+| D. Numeric/Transform | Scalar/vector/range, scrub/±, touch sheet, allowlist adapters | Sửa X không đổi Y/Z; readonly/step/rotation/cancellation đúng | 3–4 |
+| E. Inspector polish | Foldout, enum/flags/color/reference/collections, metadata, state visuals | Popup focus/back, alpha/HDR, nested write-back/pool đúng | 2–3 |
+| F. Integration | Input/layout/rotation matrix, lifecycle/profiler/regression | Receipts theo source, pending player/device rõ | 2–4 |
+| G. Candidate/docs | QuickStart, shortcuts, limitations, asset ledger/notices, checkpoint | Reviewable candidate, bindings đủ, migration rõ | 1–2 |
 
-Checkpoint sau mỗi phase: commit SHA source, phạm vi đã xong/còn thiếu, test XML/log/screenshot/build hashes và blocker trong `docs/evidence/debugger/runtime-inspection/`. Không dùng receipt từ feature UI cũ để đóng gate mới. Khi tiếp tục ở turn sau, đọc checkpoint rồi kiểm tra lại baseline thay vì làm lại từ đầu.
+Tổng dự kiến **13–21 ngày công**, cập nhật sau spike; không gồm thay source thiếu quyền phân phối, chờ device/build/store. Prototype hôm nay là đầu vào Phase A.
 
-## 10. File map triển khai dự kiến
+## 15. Acceptance và verification matrix
 
-**Package submodule sở hữu reusable implementation:**
+### Layout bắt buộc
 
-- Mới: `Runtime/Engine/SceneInspection/` gồm session/index/selection/descriptor/binding/write policy/controllers/views/drawers, cùng `.meta`.
-- Mới: `Runtime/Prefabs/SceneInspection/` và icon chọn lọc dưới `Runtime/Branding/Material/`; meta GUID cố định.
-- Sửa nhỏ: `Runtime/Engine/DebuggerRuntime.cs`, `DebuggerConfiguration.cs`, teardown/preferences nếu cần.
-- Sửa nhỏ có regression: `Runtime/Imported/Presentation/Scripts/Settings.cs`, `UI/DebuggerTabController.cs`, catalog asset và skin icon entry. Không sửa hàng loạt Imported để tiện feature.
-- Mới: `Editor/SceneInspectionAssets.cs` theo tiền lệ `ScreenshotTabAssets.cs`; sửa `Editor/DebuggerAssetBuilder.cs` đúng catalog registration. Tool chỉ chạy explicit trong maintainer checkout, không tự regenerate/write PackageCache khi khách import.
-- Tests: test classes mới đúng các thư mục/asmdef hiện có; không để Runtime assembly chứa UnityEditor reference.
-- Docs/sample: `Documentation~/RUNTIME_INSPECTION.md`, sample scene/component trong `Samples~/QuickStart`, cập nhật README/CHANGELOG/release/third-party notices; nếu thêm sample riêng thì khai báo package manifest.
+| Nhóm | Viewport đề xuất | Nội dung kiểm chứng |
+| --- | --- | --- |
+| Desktop landscape | 1920×1080, 1280×720 | Splitter min/max, keyboard, số/tên dài |
+| Phone portrait | 390×844, 360×800 | Two-page, vector reflow, sheet/IME, item cuối |
+| Phone landscape | 844×390, 800×360 | Chiều cao thấp, compact/split theo rect thực, keyboard |
+| Wide phone landscape | 2340×1080, 2400×1080 | Scaler/aspect, notch hai bên, khoảng bấm |
+| Tablet cả hai hướng | 1024×768, 768×1024 | Split/compact đổi theo min pane, touch |
+| Resize/rotation | Portrait ↔ landscape khi search/draft/popup đang mở | Identity/scroll/focus/draft giữ đúng, không write ngầm |
 
-**Sandbox sở hữu demo integration/evidence/plan**, không chứa implementation debugger mà khách phải copy để package hoạt động. Thay đổi package cần commit trong repo submodule, sau đó cập nhật gitlink ở sandbox; không coi commit sandbox là đã publish package.
+No-inset và inset bất đối xứng thực/fixture được ghi rõ; kiểm tra cả landscape trái/phải khi được hỗ trợ. Đây là viewport matrix, không giả danh thiết bị thật. Đo rect sau CanvasScaler, không screen-pixel-only. Safe area, keyboard, font scaling và shell sidebar cùng tham gia vào available rect.
 
-## 11. Kiểm thử và acceptance
+### Flow và kiểm tra kỹ thuật
 
-| Tầng | Các tình huống cần chứng minh |
+1. Mở Scene, tìm inactive object cùng tên ở scene khác, chọn đúng, reveal reference, Back giữ search/scroll. Destroy/unload giữa selection không stale.
+2. Edit Position X `0 → 1.25` bằng ô/gesture/±, giữ Y/Z. Long/ulong precision, overflow, nested struct/list, slider range và flags unknown bits đúng.
+3. Enter/Apply commit; blur không ghi text; Escape/Cancel bỏ draft. Readonly không khởi gesture. Revocation/hide/pointer cancel/rotation dừng repeat/capture đúng.
+4. Gameplay thay current giữa edit → conflict. Live read-back clamp, cancel restore thất bại báo rõ. Undo một gesture một command, không giữ reference qua session.
+5. Touch vertical scroll không đổi số; popup không click-through; close không để input blocker treo. Focus/IME không bị refresh cướp.
+
+| Tầng evidence | Phạm vi |
 | --- | --- |
-| EditMode/model | Flatten/search ancestor context; identity/generation; filtering; eligibility kế thừa; invariant parse/overflow; long precision; enum flags; cache limits; nested struct và list element write-back |
-| PlayMode/runtime | Multi-scene, DDOL, inactive hierarchy, duplicate names, spawn/destroy/reparent/rename; selected object/component bị destroy; scene unload khi draft mở; pause với timeScale=0; access expiry giữa edit và commit; mode Off/ReleaseDiagnostics |
-| PlayMode/UI | Recycling không giữ stale listener; refresh không phát write event; caret/draft không bị reset; missing script/unsupported/cycle/errors; back stack; split clamps; no duplicate tab |
-| EditorIntegration/startup | Catalog mới/cũ, GUID/bindings, automatic/manual bootstrap; enable/disable/restart, Domain Reload off; no auto scene mutations; define disable compile; missing optional input assembly |
-| Input/device | Legacy Input, Input System và Both trong consumer riêng; desktop pointer + keyboard, touch scroll/tap, safe area, rotation, soft keyboard; không chạm xuyên panel hoặc khóa gameplay sau close |
-| Build/AOT | Fresh Unity 6000.0 supported baseline và sandbox 6000.4; Windows player; Android ARM64 IL2CPP mức stripping hỗ trợ kể cả High nếu listing hứa; validate values và setters trong player, không chỉ build thành công |
-| Regression | Cheats, console/dock, PIN/session timeout, HUD, Screenshot hide/restore/capture, report local queue; screenshot mode không để Scene input blocker treo và không tự attach dữ liệu inspector vào report |
-| Artifact | UPM/tarball và Asset Store import thực tế có đủ prefab/font/icon/notice/sample; không dependency file:../LocalPackages, không cần sandbox source hoặc upstream cài sẵn |
+| EditMode/model | Parse/round-trip/precision/overflow, compound conflict, history bounds, metadata, nested writes |
+| PlayMode/UI | Pointer thật cho select/chevron/scrub/stepper/splitter, no write on refresh, pooling/focus |
+| Integration | Catalog cũ/mới, một Scene entry, GUID/font/icon, Domain Reload off, shell/access/screenshot/cheats regression |
+| Input | Legacy/Input System/Both trong consumer phù hợp; keyboard/pointer/touch/IME |
+| Visual | Actual Unity renders đủ dọc/ngang, recorded scaler/data/state; so concept, sửa và chụp lại |
+| Device/performance | CPU/GC/thermal và touch thực trên thiết bị ghi nhận |
+| Player/artifact | Exact-final-source AOT/stripping/define disabled, fresh consumer/export import khi được yêu cầu |
 
-Release acceptance P0: người dùng cài package vào project sạch, import sample, mở Scene, tìm inactive object, chọn nó, xem components, bật Edit bằng config/session, sửa supported value và thấy game nhận thay đổi; unload scene rồi reopen không lỗi, đóng tab không scan tiếp. Thực hiện flow trên player IL2CPP và quay/chụp evidence từ artifact cuối.
+Chỉ chạy check cần thiết theo change/failure. `onClick.Invoke()` không chứng minh raycast, ảnh concept không chứng minh Unity layout, archive structure check không thay import consumer. Kết quả V1 102/102 EditMode và 5/5 focused PlayMode là lịch sử. Broad regression V1 còn một Int64 Cheats failure đã tái hiện baseline, theo dõi riêng.
 
-Các lệnh có sẵn để dùng đúng mục đích:
+User trước đã yêu cầu **không cần thêm build**; giữ giới hạn đó. Editor/static/docs có thể tiếp tục; player/AOT để pending cho tới chỉ đạo mới. Windows smoke cũ trước final V1 và Android hết ổ C: không đóng gate V2.
 
-```powershell
-# Xác nhận phạm vi thay đổi, gồm submodule.
-git diff --check
-git -C LocalPackages/com.dreamy.debugger diff --check
+## 16. Release và checkpoint tiếp tục
 
-# Sau khi đã đóng gói candidate .tgz thật; script cần đường dẫn archive.
-python LocalPackages/com.dreamy.debugger/Tools~/verify_package.py <candidate.tgz>
+Gate trước thương mại: audit Imported Presentation/font/icon/shader/source, notices file port, clean artifact import và support matrix theo test thực. Reskin không cấp quyền cho vendor source. Đây là release gate đã có, không ngăn thiết kế/triển khai candidate nội bộ.
 
-# Chỉ theo dõi một test job Unity MCP đã khởi chạy; không tự tạo test job.
-node tools/unity-test-watch.mjs <existing-job-id> --target=<verified-unity-instance>
-```
+Version vẫn `0.1.8`; chọn preview version sau khi có API/migration cụ thể, không ghi đè published artifact cùng version. Không tự release/tag/store submit trong nhiệm vụ này.
 
-Mẫu batchmode khi chạy trên consumer kiểm thử riêng, thay đường dẫn thực tế và không chạy project đang có Editor lock:
+[Checkpoint V2](../design/debugger-scene-v2/CHECKPOINT.md) ghi tiến độ của plan mới. Giữ checkpoint V1 nguyên làm hồ sơ lịch sử; handoff `DEBUGGER_RESUME_2026-11-23.md` có trạng thái trước implementation, không dùng để suy ra hiện tại chưa có code.
 
-```powershell
-& '<Unity.exe>' -batchmode -projectPath '<isolated-consumer>' -runTests -testPlatform EditMode -testResults '<editmode.xml>' -logFile '<editmode.log>'
-& '<Unity.exe>' -batchmode -projectPath '<isolated-consumer>' -runTests -testPlatform PlayMode -testResults '<playmode.xml>' -logFile '<playmode.log>'
-```
-
-Exit code, XML results và runtime evidence đều phải kiểm tra; lệnh mẫu không phải kết quả đã chạy. Hôm nay chỉ tạo plan: không cần build/test runtime chưa thay đổi.
-
-## 12. Asset Store và định nghĩa hoàn tất
-
-Đối chiếu lại [Submission Guidelines chính thức](https://assetstore.unity.com/publishing/submission-guidelines) tại ngày nộp. Bản đọc khi lập plan yêu cầu mô tả chính xác dependency/giới hạn, tài liệu cho code/configuration, tổ chức package và API phù hợp; không tự suy ra được chấp thuận submission.
-
-- [ ] Inventory quyền phân phối hoàn tất, đặc biệt Imported Presentation; root license/EULA/third-party notices nhất quán. Có bằng chứng thay thế hoặc quyền phù hợp cho phần không được phân phối.
-- [ ] Sản phẩm hoạt động độc lập trong project sạch; không yêu cầu Dreamy sandbox hoặc tài khoản/relay để dùng Hierarchy/Inspector.
-- [ ] Offline docs gồm setup, scope supported members, chỉnh giá trị có side effect, custom types/stripping, input, performance limits, cách tắt feature cho release.
-- [ ] Asset Store export một root folder phù hợp, namespace riêng, meta/reference bền vững, không duplicate vendor assets; thử import artifact này riêng với UPM.
-- [ ] Chốt Unity minimum theo test thực, không hạ từ 6000.0 xuống 2022.3 chỉ để rộng thị trường. Chỉ liệt kê platform/pipeline đã qua test; kiểm tra lại quy định theo phiên bản Editor dùng nộp.
-- [ ] Demo scene và marketing screenshots/video từ feature thật; nói rõ “in-player local inspection”, không gợi ý remote debugger hoặc Unity Editor parity.
-- [ ] Không tự thu thập/upload object names/values/snapshot. Copy path cục bộ; report attachment nếu có ở P1 phải do người dùng chủ động và có redaction.
-- [ ] Build có feature disabled được kiểm tra compile và resources; default ReleaseDiagnostics không expose editing. Access gate là cơ chế vận hành QA, không quảng cáo PIN là bảo vệ tuyệt đối trước reverse engineering.
-- [ ] Candidate version đề xuất `0.2.0-preview.1` rồi `0.2.0` nếu thay đổi vẫn additive; quyết định `1.0.0` thương mại sau khi đóng toàn bộ gate, không chỉ vì thêm tab.
-- [ ] Public API/migration giữ enum số cũ, GUID cũ, default config an toàn; client cũ không bật edit bất ngờ sau upgrade.
-- [ ] Changelog, test/build receipts và artifact hash khớp candidate cuối; support policy và known limitations đi cùng listing.
-- [ ] Khi nộp, khai báo AI assistance nếu thuộc nội dung mà guidelines hiện hành yêu cầu; review lại yêu cầu này trên portal.
-
-**Thứ tự bắt đầu được đề xuất:** Phase 0 inventory + spike → Hierarchy/index + UI shell → Inspector read-only → edit có policy → mobile/IL2CPP/performance → artifact và release docs. Chỉ xem feature hoàn tất khi cả flow người dùng, regression và quyền phân phối đều được chứng minh; chưa đạt gate thì giữ candidate nội bộ và ghi rõ phần còn mở.
+Bước tiếp theo: đo live scaler/SafeArea/available rect trong đúng Unity instance; author tree/header và một lát cắt Numeric + Transform đẹp ở **dọc, ngang rộng, ngang thấp và tablet**. Xây transaction foundation trước khi nối gesture vào gameplay; chỉ mở rộng các drawer còn lại sau khi lát cắt đạt cả hình thức và thao tác.

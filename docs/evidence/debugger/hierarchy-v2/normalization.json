@@ -1,0 +1,14 @@
+{
+  "whitespace_only_files": [
+    "Runtime/Imported/Presentation/UI/Styles/DefaultTabActive.asset",
+    "Runtime/Branding/Material/hierarchy.png.meta",
+    "Runtime/Prefabs/SceneInspection/InspectorValueRow.prefab",
+    "Runtime/Branding/Material/hierarchy-object.png.meta",
+    "Runtime/Imported/Presentation/UI/Styles/DefaultConsoleSelectedRow.asset",
+    "Runtime/Prefabs/SceneInspection/HierarchyRow.prefab",
+    "Runtime/Prefabs/SceneInspection/SceneTab.prefab",
+    "Runtime/Imported/Presentation/UI/Styles/Default.asset",
+    "Runtime/Imported/Presentation/UI/Styles/DefaultConsoleAltRow.asset"
+  ],
+  "notes": "Unity-generated trailing whitespace only; C# bytes unchanged after tests."
+}

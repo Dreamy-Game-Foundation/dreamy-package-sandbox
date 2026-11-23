@@ -1,0 +1,59 @@
+{
+  "unity": "6000.4.12f1",
+  "package": "com.dreamy.debugger 0.1.8",
+  "editMode": {
+    "filter": "Dreamy.Debugger.Tests.AccessTests|SceneInspection",
+    "passed": 39,
+    "total": 39,
+    "utc": "2026-11-23 10:30:13Z",
+    "receiptSha256": "2bf5fcaf78569f34c240092fbe9f6519e2d44bfc5c1513724d6c66f00ee74863"
+  },
+  "playMode": {
+    "filter": "Dreamy.Debugger.Tests.SceneInspection",
+    "passed": 9,
+    "total": 9,
+    "utc": "2026-11-23 10:30:07Z",
+    "receiptSha256": "fe35ce78224850f581e46a1fda8bb84686be2b7957da58bbd099c644121ee0ce"
+  },
+  "liveLab": {
+    "scene": "Assets/_Project/Scenes/HierarchyInspectorLab.unity",
+    "pinUnlock": true,
+    "selected": "Inspect me \u00b7 Physics cube",
+    "beforeApplyMass": 1,
+    "afterApplyMass": 2.75,
+    "afterUndoMass": 1,
+    "layerPickerOpened": true,
+    "propertyActionsHiddenByDefault": true,
+    "prefabIconCount": 41,
+    "consoleErrors": 0
+  },
+  "visualReview": {
+    "id": "57fe458c-9da8-4f96-890e-ccb5b347c63c",
+    "capture": "Unity Lab Play Mode, world-space viewport renders",
+    "sizes": [
+      "1280x720",
+      "390x844",
+      "844x390"
+    ]
+  },
+  "earlierFailure": "The first test invoked Copy on a pooled row after commit had unbound the row. The follow-up uses the rendered row after one frame and verified the user-visible value.",
+  "limits": [
+    "Device touch, keyboard, simulated notch and player builds were not run",
+    "The workflow markdown referenced by AGENTS instructions is absent in this checkout"
+  ],
+  "sourceSha256": {
+    "LocalPackages/com.dreamy.debugger/Editor/SceneInspectionAssets.cs": "603fd7d06125576bce3e9a63cb1586e02535fdec834d84ade1b9858f002cfc45",
+    "LocalPackages/com.dreamy.debugger/Runtime/Engine/SceneInspection/SceneTabController.cs": "1482786f2978cb8f36a371f63091877b4c9a9a3300d5e3d8d07d2524b19bd4e1",
+    "LocalPackages/com.dreamy.debugger/Runtime/Engine/SceneInspection/InspectorRowView.cs": "143e4b06e7ca5a1d0f3a02e9ab22520a6783d2f1680002ffe584aba72e08cd28",
+    "LocalPackages/com.dreamy.debugger/Runtime/Engine/SceneInspection/TouchNumberEditor.cs": "75dad1b77bb9e29da719aa6a4816239b7c1e903a78f0f0a9892e02a1079da57e",
+    "LocalPackages/com.dreamy.debugger/Runtime/Prefabs/SceneInspection/SceneTab.prefab": "a2e5726afe1155c83b50ed7df2d45087d595c9e014ce902ca065853aecfd6e5c",
+    "LocalPackages/com.dreamy.debugger/Runtime/Prefabs/SceneInspection/HierarchyRow.prefab": "36a0fb68fd7edda955272a87a3e82c8c00329fe9c353541e22c4a0aef93ec96d",
+    "LocalPackages/com.dreamy.debugger/Runtime/Prefabs/SceneInspection/InspectorValueRow.prefab": "9f41740e9f0d69ec9586dca649902376c4bc8e0da76982e26da60261a924d268",
+    "LocalPackages/com.dreamy.debugger/Runtime/Branding/Material/inspector-rigidbody.png": "b2c6f1e7aa7dc6131e98e8cc3914db4b8a047016b8647872f75aead1fedb0cb9",
+    "LocalPackages/com.dreamy.debugger/Runtime/Branding/Material/inspector-box-collider.png": "43785f7609c0618b2629eb715589c1171da067b02468e2a8b68e4e0196aa4fd9",
+    "Assets/_Project/Scenes/HierarchyInspectorLab.unity": "73d3fddb708f7d303b99e6b8c9ad829a3b70d4d9141a2d39c5dac72f2c90ae7f",
+    "Assets/_Project/Debugger/HierarchyInspectorLabConfiguration.asset": "c48e0e81fa5f3f30a4b23293a6461183aa4431bf1bd7781d944be9f8bf605c44",
+    "LocalPackages/com.dreamy.debugger/Tests/PlayMode/SceneInspectionUiTests.cs": "6c35dafb9c9a80302fe2541ffe062af50795222fd719f9a0ee7ea1c9738160c3",
+    "LocalPackages/com.dreamy.debugger/Tests/PlayMode/SceneInspectionQuickEditTests.cs": "fd19bb6f7feeab7e4a8efdc1fc8552611d4ba5a70c9564b61f308f8e35fae24d"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "unity": "6000.4.12f1",
+  "packageVersion": "0.1.8",
+  "ugui": "2.0.0",
+  "inputSystem": "1.19.0",
+  "environment": "Isolated Unity Editor test project with matching runtime source and shipped prefabs. The Default style differed only by one trailing space from Unity reserialization. Sandbox MCP readiness/ping timed out.",
+  "editMode": {
+    "filter": "Dreamy.Debugger.Tests.AccessTests|SceneInspection",
+    "startUtc": "2026-11-23 09:44:06Z",
+    "finishUtc": "2026-11-23 09:44:06Z",
+    "total": 39,
+    "passed": 39,
+    "failed": 0,
+    "receiptSha256": "90679647d1c4337435fa0d814d00962ff3fbf10c31a4dfbf10d5ae2b2038b77b"
+  },
+  "playMode": {
+    "filter": "Dreamy.Debugger.Tests.SceneInspection",
+    "startUtc": "2026-11-23 09:43:59Z",
+    "finishUtc": "2026-11-23 09:43:59Z",
+    "total": 9,
+    "passed": 9,
+    "failed": 0,
+    "receiptSha256": "d6504d15cd8292395aa11226c9ec2779624a7f00577a92a25c6d222592d5ff64"
+  },
+  "observedRegression": "An early run could not find a matching property in the visible rows when unrelated component headers occupied the filtered list. Matching runs passed after filtering out the unrelated headers.",
+  "testedUi": [
+    "Tag picker, type/tag/layer filtering, pin, invariant copy, Undo/Redo and gameplay conflict",
+    "Color slider and exact alpha, flags preserve unknown bits, assignable loaded reference and Reveal",
+    "Compare, configurable label and group, relock dismisses picker and new unlock clears history",
+    "Color Apply button fully in viewport at 390x844 and 844x390"
+  ],
+  "visualReview": {
+    "run": "54bf9e9c-1e87-4e3c-8877-aa92f2c97e03",
+    "method": "Unity camera renders in world-space UI",
+    "viewports": [
+      "390x844",
+      "844x390"
+    ]
+  },
+  "verificationLimits": [
+    "Sandbox scene P1 not rerun directly",
+    "Physical touch, keyboard/IME, safe areas and player builds not tested",
+    "Referenced Dreamy workflow is absent from this checkout"
+  ],
+  "sourceSha256": {
+    "Editor/SceneInspectionAssets.cs": "f09ef34dbd632bb2031be2a43fbde73be6681eece0d9075ef93b4d4cf820d89e",
+    "Runtime/Access/AccessSession.cs": "374d1411bc84479b531a3c00aae35516c15881af07d47feed07afbcf4c9f54c8",
+    "Runtime/Engine/DebuggerConfiguration.cs": "d25469c42688ee935831f80f91052d36aa9ab2beba1893792005f3cb2a049c4d",
+    "Runtime/Engine/SceneInspection/HierarchyProjection.cs": "6f403918d4d5f9ce3fe8ee09e36d9c5af403adcdbd6c51adbeb2ae235516d29f",
+    "Runtime/Engine/SceneInspection/HierarchyRowView.cs": "e22c559508c4a179b01aaa17115be43233474778794a33a15b6b7fc98a832c20",
+    "Runtime/Engine/SceneInspection/InspectionHistory.cs": "ceb7ec022de0c5f25cee243e1c497e063d46b1c1ca9f65e4a6761f3d284e8a93",
+    "Runtime/Engine/SceneInspection/InspectionMember.cs": "d2eee213b0d9ba3c1c87ef2d1d15694146cadac172b7c6663aad330fc4924835",
+    "Runtime/Engine/SceneInspection/InspectionNumbers.cs": "450d28a76306055942b049ed581ad185b91701e1fd23d129dd5522c2f4ee4f14",
+    "Runtime/Engine/SceneInspection/InspectionPicker.cs": "a4989ebc8f43eb016ffa2e15dce3fb226418a95cd35ecfea7a47b0668f191548",
+    "Runtime/Engine/SceneInspection/InspectorComponentCatalog.cs": "5d23f4d54a898b42e94d105855e189a4824959f8c6183e9c99c0b72674cf5837",
+    "Runtime/Engine/SceneInspection/InspectorRowView.cs": "2f936ed0c7c23e116073aa24c7ae2897630b791543e581784bf18e75c6773d07",
+    "Runtime/Engine/SceneInspection/NumericDragHandle.cs": "4725e65baeb14f64fe85e8c9fc5feedbf49e31a35414f6cf9ca3c059de766e15",
+    "Runtime/Engine/SceneInspection/SceneInspectionSession.cs": "bb2e09337acb8d5071fb9d83f79b5356868a968c78b4f9c6b23d57cc2228e5da",
+    "Runtime/Engine/SceneInspection/SceneSplitHandle.cs": "56d8728a555fbc0d58d1fe4619ab3284792dd6fa6f008ff1c56b9face83e6b0f",
+    "Runtime/Engine/SceneInspection/SceneTabController.cs": "96ee26dfe7c74d0c7a4014c90394d54da62663fee66021183c125ce6c50b732d",
+    "Runtime/Engine/SceneInspection/TouchNumberEditor.cs": "9336e8a7ea9d5f68eac8c497b6a01ed9f42d3b6918068b415be0366e2cdf31b4",
+    "Runtime/Engine/SceneInspection/TouchNumberField.cs": "38e9d3fb59ba5d9097bf8ec5619a528130fd16ec1bc789203b605333e915ddcc",
+    "Runtime/Imported/Presentation/UI/Styles/Default.asset": "14fa37d227095bfa6bb958483525b5d629edde97b8c487c55e033f1a20769c75",
+    "Runtime/Prefabs/SceneInspection/HierarchyRow.prefab": "36a0fb68fd7edda955272a87a3e82c8c00329fe9c353541e22c4a0aef93ec96d",
+    "Runtime/Prefabs/SceneInspection/InspectorValueRow.prefab": "758b9fe94db4698af1dee65a8ed6466570bf90b2c791a7b61a34fbadb8c9be3c",
+    "Runtime/Prefabs/SceneInspection/SceneTab.prefab": "90497e4c85acbbd9f57aad11f150341080d94543585805b6896c52703241719c",
+    "Tests/PlayMode/SceneInspectionUiTests.cs": "1544fc887d1bc8887a7e5506d4b5c0e596a764572c09ce23a116a5f41a9294d3"
+  }
+}

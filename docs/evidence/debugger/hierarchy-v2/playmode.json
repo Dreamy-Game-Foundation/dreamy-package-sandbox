@@ -1,0 +1,119 @@
+{
+  "result": {
+    "success": true,
+    "message": "Test job status retrieved.",
+    "error": null,
+    "data": {
+      "job_id": "9e686c6dbbd64ab38d728e3c668487fc",
+      "status": "succeeded",
+      "mode": "PlayMode",
+      "started_unix_ms": 1795404882596,
+      "finished_unix_ms": 1795404893983,
+      "last_update_unix_ms": 1795404893983,
+      "progress": {
+        "completed": 8,
+        "total": 8,
+        "current_test_full_name": null,
+        "current_test_started_unix_ms": 1795404893916,
+        "last_finished_test_full_name": "Dreamy.Debugger.Tests.SceneInspectionUiTests.TypedChoicesRefreshWithoutSyntheticWritesAndRecheckAccess",
+        "last_finished_unix_ms": 1795404893967,
+        "stuck_suspected": false,
+        "editor_is_focused": false,
+        "run_in_background": null,
+        "focus_nudge_attempts": null,
+        "focus_nudge_limit": null,
+        "focus_nudge_status": null,
+        "blocked_reason": null,
+        "failures_so_far": [],
+        "failures_capped": false
+      },
+      "error": null,
+      "result": {
+        "mode": "PlayMode",
+        "summary": {
+          "total": 8,
+          "passed": 8,
+          "failed": 0,
+          "skipped": 0,
+          "durationSeconds": 1.5617997,
+          "resultState": "Passed"
+        },
+        "results": [
+          {
+            "name": "AxisDraftsAndLabelDragRespectConflictAndAccess",
+            "fullName": "Dreamy.Debugger.Tests.SceneInspectionQuickEditTests.AxisDraftsAndLabelDragRespectConflictAndAccess",
+            "state": "Passed",
+            "durationSeconds": 0.063687,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "IntegerScrubbingPreservesLargeValuesAndRejectsOverflow",
+            "fullName": "Dreamy.Debugger.Tests.SceneInspectionQuickEditTests.IntegerScrubbingPreservesLargeValuesAndRejectsOverflow",
+            "state": "Passed",
+            "durationSeconds": 0.0050567,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "TagAndLayerWritesAreScopedAndRecheckAccessAndConflict",
+            "fullName": "Dreamy.Debugger.Tests.SceneInspectionQuickEditTests.TagAndLayerWritesAreScopedAndRecheckAccessAndConflict",
+            "state": "Passed",
+            "durationSeconds": 0.0018817,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "AccessExpiryAndPauseDoNotKeepEditingOrScanAfterSuspend",
+            "fullName": "Dreamy.Debugger.Tests.SceneInspectionRuntimeTests.AccessExpiryAndPauseDoNotKeepEditingOrScanAfterSuspend",
+            "state": "Passed",
+            "durationSeconds": 0.0516404,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "IndexTracksInactiveRenameReparentDestroyAndDdolUsingPublicSceneApi",
+            "fullName": "Dreamy.Debugger.Tests.SceneInspectionRuntimeTests.IndexTracksInactiveRenameReparentDestroyAndDdolUsingPublicSceneApi",
+            "state": "Passed",
+            "durationSeconds": 0.0618921,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "DraftBlurConflictApplyAndRevocationPreserveAuthoritativeValue",
+            "fullName": "Dreamy.Debugger.Tests.SceneInspectionUiTests.DraftBlurConflictApplyAndRevocationPreserveAuthoritativeValue",
+            "state": "Passed",
+            "durationSeconds": 0.0503951,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          },
+          {
+            "name": "SceneTabOpensOncePoolsRowsAndRespectsRelock",
+            "fullName": "Dreamy.Debugger.Tests.SceneInspectionUiTests.SceneTabOpensOncePoolsRowsAndRespectsRelock",
+            "state": "Passed",
+            "durationSeconds": 1.1576092,
+            "message": null,
+            "stackTrace": null,
+            "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+          },
+          {
+            "name": "TypedChoicesRefreshWithoutSyntheticWritesAndRecheckAccess",
+            "fullName": "Dreamy.Debugger.Tests.SceneInspectionUiTests.TypedChoicesRefreshWithoutSyntheticWritesAndRecheckAccess",
+            "state": "Passed",
+            "durationSeconds": 0.0502025,
+            "message": null,
+            "stackTrace": null,
+            "output": ""
+          }
+        ]
+      }
+    },
+    "hint": null
+  }
+}

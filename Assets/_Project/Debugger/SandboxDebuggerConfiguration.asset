@@ -19,6 +19,12 @@ MonoBehaviour:
   Credential: 0000
   Passphrase: 0
   SessionSeconds: 300
+  EnableSceneInspection: 1
+  AllowSceneEditing: 1
+  SceneRefreshSeconds: 0.25
+  SceneScanBudgetMilliseconds: 1
+  InspectionMaxDepth: 4
+  InspectionPageSize: 32
   PersistRuntimePreferences: 1
   PreferenceRevision: 1
   InitialHud: 0

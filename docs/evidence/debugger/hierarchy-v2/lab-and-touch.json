@@ -1,0 +1,480 @@
+{
+  "unity": "6000.4.12f1",
+  "scene": "Assets/_Project/Scenes/HierarchyInspectorLab.unity",
+  "authoredObjects": 33,
+  "playMode": {
+    "job_id": "0c4fd6ca4c2849358d318587c2270314",
+    "status": "succeeded",
+    "mode": "PlayMode",
+    "started_unix_ms": 1795425584899,
+    "finished_unix_ms": 1795425597387,
+    "last_update_unix_ms": 1795425597387,
+    "progress": {
+      "completed": 9,
+      "total": 9,
+      "current_test_full_name": null,
+      "current_test_started_unix_ms": 1795425597318,
+      "last_finished_test_full_name": "Dreamy.Debugger.Tests.SceneInspectionUiTests.TypedChoicesRefreshWithoutSyntheticWritesAndRecheckAccess",
+      "last_finished_unix_ms": 1795425597370,
+      "stuck_suspected": false,
+      "editor_is_focused": false,
+      "run_in_background": null,
+      "focus_nudge_attempts": null,
+      "focus_nudge_limit": null,
+      "focus_nudge_status": null,
+      "blocked_reason": null,
+      "failures_so_far": [],
+      "failures_capped": false
+    },
+    "error": null,
+    "result": {
+      "mode": "PlayMode",
+      "summary": {
+        "total": 9,
+        "passed": 9,
+        "failed": 0,
+        "skipped": 0,
+        "durationSeconds": 1.6630745,
+        "resultState": "Passed"
+      },
+      "results": [
+        {
+          "name": "AxisDraftsAndLabelDragRespectConflictAndAccess",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionQuickEditTests.AxisDraftsAndLabelDragRespectConflictAndAccess",
+          "state": "Passed",
+          "durationSeconds": 0.0767226,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "IntegerScrubbingPreservesLargeValuesAndRejectsOverflow",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionQuickEditTests.IntegerScrubbingPreservesLargeValuesAndRejectsOverflow",
+          "state": "Passed",
+          "durationSeconds": 0.0054742,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "TagAndLayerWritesAreScopedAndRecheckAccessAndConflict",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionQuickEditTests.TagAndLayerWritesAreScopedAndRecheckAccessAndConflict",
+          "state": "Passed",
+          "durationSeconds": 0.0018339,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "TouchNumberSheetAppliesOneDraftAndRetainsOtherAxes",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionQuickEditTests.TouchNumberSheetAppliesOneDraftAndRetainsOtherAxes",
+          "state": "Passed",
+          "durationSeconds": 0.0554743,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "AccessExpiryAndPauseDoNotKeepEditingOrScanAfterSuspend",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionRuntimeTests.AccessExpiryAndPauseDoNotKeepEditingOrScanAfterSuspend",
+          "state": "Passed",
+          "durationSeconds": 0.049057,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "IndexTracksInactiveRenameReparentDestroyAndDdolUsingPublicSceneApi",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionRuntimeTests.IndexTracksInactiveRenameReparentDestroyAndDdolUsingPublicSceneApi",
+          "state": "Passed",
+          "durationSeconds": 0.0689381,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "DraftBlurConflictApplyAndRevocationPreserveAuthoritativeValue",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionUiTests.DraftBlurConflictApplyAndRevocationPreserveAuthoritativeValue",
+          "state": "Passed",
+          "durationSeconds": 0.0495772,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SceneTabOpensOncePoolsRowsAndRespectsRelock",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionUiTests.SceneTabOpensOncePoolsRowsAndRespectsRelock",
+          "state": "Passed",
+          "durationSeconds": 1.1824811,
+          "message": null,
+          "stackTrace": null,
+          "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+        },
+        {
+          "name": "TypedChoicesRefreshWithoutSyntheticWritesAndRecheckAccess",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionUiTests.TypedChoicesRefreshWithoutSyntheticWritesAndRecheckAccess",
+          "state": "Passed",
+          "durationSeconds": 0.0511114,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        }
+      ]
+    }
+  },
+  "editMode": {
+    "job_id": "02dc9dda86f14fcb871ab988ef2fb2b4",
+    "status": "succeeded",
+    "mode": "EditMode",
+    "started_unix_ms": 1795425615402,
+    "finished_unix_ms": 1795425625020,
+    "last_update_unix_ms": 1795425625020,
+    "progress": {
+      "completed": 18,
+      "total": 18,
+      "current_test_full_name": null,
+      "current_test_started_unix_ms": 1795425624820,
+      "last_finished_test_full_name": "Dreamy.Debugger.Tests.SceneInspectionTests.WritesNestedStructBackToOwner",
+      "last_finished_unix_ms": 1795425624821,
+      "stuck_suspected": false,
+      "editor_is_focused": false,
+      "run_in_background": null,
+      "focus_nudge_attempts": null,
+      "focus_nudge_limit": null,
+      "focus_nudge_status": null,
+      "blocked_reason": null,
+      "failures_so_far": [],
+      "failures_capped": false
+    },
+    "error": null,
+    "result": {
+      "mode": "EditMode",
+      "summary": {
+        "total": 18,
+        "passed": 18,
+        "failed": 0,
+        "skipped": 0,
+        "durationSeconds": 0.895049,
+        "resultState": "Passed"
+      },
+      "results": [
+        {
+          "name": "BudgetedSearchCancelsOldQueryAndKeepsAncestorContext",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.BudgetedSearchCancelsOldQueryAndKeepsAncestorContext",
+          "state": "Passed",
+          "durationSeconds": 0.0171697,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "CatalogShipsBoundSceneAndRowPrefabsWithoutChangingOldEnumValues",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.CatalogShipsBoundSceneAndRowPrefabsWithoutChangingOldEnumValues",
+          "state": "Passed",
+          "durationSeconds": 0.002061,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "EligibilityDoesNotInvokePropertiesOrExposeHiddenFields",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.EligibilityDoesNotInvokePropertiesOrExposeHiddenFields",
+          "state": "Passed",
+          "durationSeconds": 0.0017395,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "FlagsPreserveHighUnsignedBits",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.FlagsPreserveHighUnsignedBits",
+          "state": "Passed",
+          "durationSeconds": 0.0008254,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidNumbersNeverCommit(\"9223372036854775808\",System.Int64)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.InvalidNumbersNeverCommit(\"9223372036854775808\",System.Int64)",
+          "state": "Passed",
+          "durationSeconds": 0.0011459,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidNumbersNeverCommit(\"NaN\",System.Single)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.InvalidNumbersNeverCommit(\"NaN\",System.Single)",
+          "state": "Passed",
+          "durationSeconds": 0.0009296,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidNumbersNeverCommit(\"Infinity\",System.Double)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.InvalidNumbersNeverCommit(\"Infinity\",System.Double)",
+          "state": "Passed",
+          "durationSeconds": 0.0013882,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidNumbersNeverCommit(\"1,NaN,2\",UnityEngine.Vector3)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.InvalidNumbersNeverCommit(\"1,NaN,2\",UnityEngine.Vector3)",
+          "state": "Passed",
+          "durationSeconds": 0.0006434,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidNumbersNeverCommit(\"2147483648,0\",UnityEngine.Vector2Int)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.InvalidNumbersNeverCommit(\"2147483648,0\",UnityEngine.Vector2Int)",
+          "state": "Passed",
+          "durationSeconds": 0.0006495,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "NumericPrecisionSurvivesRoundTrip(\"9223372036854775807\",System.Int64)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.NumericPrecisionSurvivesRoundTrip(\"9223372036854775807\",System.Int64)",
+          "state": "Passed",
+          "durationSeconds": 0.0011465,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "NumericPrecisionSurvivesRoundTrip(\"18446744073709551615\",System.UInt64)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.NumericPrecisionSurvivesRoundTrip(\"18446744073709551615\",System.UInt64)",
+          "state": "Passed",
+          "durationSeconds": 0.0009371,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "NumericPrecisionSurvivesRoundTrip(\"1.2345678901234567\",System.Double)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.NumericPrecisionSurvivesRoundTrip(\"1.2345678901234567\",System.Double)",
+          "state": "Passed",
+          "durationSeconds": 0.0005674,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "NumericPrecisionSurvivesRoundTrip(\"79228162514264337593543950335\",System.Decimal)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.NumericPrecisionSurvivesRoundTrip(\"79228162514264337593543950335\",System.Decimal)",
+          "state": "Passed",
+          "durationSeconds": 0.0014246,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "RejectsConflictAndExpiredAccessWithoutWriting",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.RejectsConflictAndExpiredAccessWithoutWriting",
+          "state": "Passed",
+          "durationSeconds": 0.0011369,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "RejectsReadonlyAndDestroyedOwners",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.RejectsReadonlyAndDestroyedOwners",
+          "state": "Passed",
+          "durationSeconds": 0.0010073,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "WritesCollectionStructBackToItsSlot(False)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.WritesCollectionStructBackToItsSlot(False)",
+          "state": "Passed",
+          "durationSeconds": 0.0017258,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "WritesCollectionStructBackToItsSlot(True)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.WritesCollectionStructBackToItsSlot(True)",
+          "state": "Passed",
+          "durationSeconds": 0.0006845,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "WritesNestedStructBackToOwner",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.WritesNestedStructBackToOwner",
+          "state": "Passed",
+          "durationSeconds": 0.0007304,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        }
+      ]
+    }
+  },
+  "runtime": {
+    "selected": "Inspect me · Physics cube",
+    "editBadge": "Editing",
+    "eventSystems": 1,
+    "coverage": [
+      {
+        "type": "UnityEngine.Transform",
+        "key": "transform",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.MeshFilter",
+        "key": "mesh-filter",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.BoxCollider",
+        "key": "box-collider",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.MeshRenderer",
+        "key": "mesh",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.Rigidbody",
+        "key": "rigidbody",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.Rigidbody2D",
+        "key": "rigidbody-2d",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.CircleCollider2D",
+        "key": "circle-collider-2d",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.BoxCollider2D",
+        "key": "box-collider-2d",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.Camera",
+        "key": "camera",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.AudioListener",
+        "key": "audio-listener",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.Light",
+        "key": "light",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.Rendering.Universal.UniversalAdditionalLightData",
+        "key": "light",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.AudioSource",
+        "key": "audio",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.RectTransform",
+        "key": "rect",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.Canvas",
+        "key": "canvas",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.UI.CanvasScaler",
+        "key": "canvas-scaler",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.UI.GraphicRaycaster",
+        "key": "graphic-raycaster",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.CanvasRenderer",
+        "key": "canvas-renderer",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.UI.Text",
+        "key": "text",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.UI.Image",
+        "key": "image",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.UI.Slider",
+        "key": "slider",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "UnityEngine.UI.Toggle",
+        "key": "toggle",
+        "custom": false,
+        "assigned": true
+      },
+      {
+        "type": "Dreamy.Template.Debugging.HierarchyInspectorLab",
+        "key": "lab",
+        "custom": true,
+        "assigned": true
+      }
+    ]
+  },
+  "touchCommit": {
+    "before": 1,
+    "beforeApply": 1,
+    "after": 2.75,
+    "closed": true,
+    "canEditAfterRelock": false
+  },
+  "prefabCheck": "35 prefabs, no missing scripts",
+  "evidenceLimit": "Synthetic touch events and runtime world-space renders. No phone, OS keyboard, or physical pointer validation."
+}

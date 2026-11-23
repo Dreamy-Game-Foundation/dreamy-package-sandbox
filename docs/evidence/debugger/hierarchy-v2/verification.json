@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-23",
+  "sandbox_baseline": "b79b485",
+  "package_baseline": "8593c75b4f17110fdbad09770bcd852e5b2785df",
+  "status": "uncommitted implementation candidate",
+  "unity": "6000.4.12f1",
+  "instance": "dreamy-package-sandbox@5f78127b991a2b92",
+  "playmode_job": "9e686c6dbbd64ab38d728e3c668487fc",
+  "playmode_passed": 8,
+  "editmode_job": "f17f87ebc0744aab88a557c15cb71d8f",
+  "editmode_passed": 18,
+  "prefabs_checked": 35,
+  "missing_scripts": 0,
+  "scene_catalog_entries": 1,
+  "console_errors_at_final_read": 0,
+  "active_scene": "Assets/_Project/Scenes/BootstrapScene.unity",
+  "scene_dirty_at_final_read": false,
+  "visual_review_run": "2d606999-2cab-4a30-b9b8-ff57ca91b36d",
+  "render_sizes": ["1920x1080", "1280x720", "390x844", "844x390", "1024x768", "768x1024"],
+  "evidence_limit": "Runtime camera renders in public world-space mode; not physical input, IME, safe area, performance or player build proof.",
+  "source_note": "See source-sha256.json. Generated YAML/meta trailing whitespace normalized after tests; C# unchanged. No release tag or build."
+}

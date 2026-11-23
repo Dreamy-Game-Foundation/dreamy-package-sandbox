@@ -1,0 +1,329 @@
+{
+  "unity": "6000.4.12f1",
+  "source": "Uncommitted Inspector follow-up",
+  "playmode": {
+    "job_id": "39b20d5ffcc144e0aef662fe1a25d597",
+    "status": "succeeded",
+    "mode": "PlayMode",
+    "started_unix_ms": 1795420552264,
+    "finished_unix_ms": 1795420563811,
+    "last_update_unix_ms": 1795420563811,
+    "progress": {
+      "completed": 8,
+      "total": 8,
+      "current_test_full_name": null,
+      "current_test_started_unix_ms": 1795420563745,
+      "last_finished_test_full_name": "Dreamy.Debugger.Tests.SceneInspectionUiTests.TypedChoicesRefreshWithoutSyntheticWritesAndRecheckAccess",
+      "last_finished_unix_ms": 1795420563794,
+      "stuck_suspected": false,
+      "editor_is_focused": false,
+      "run_in_background": null,
+      "focus_nudge_attempts": null,
+      "focus_nudge_limit": null,
+      "focus_nudge_status": null,
+      "blocked_reason": null,
+      "failures_so_far": [],
+      "failures_capped": false
+    },
+    "error": null,
+    "result": {
+      "mode": "PlayMode",
+      "summary": {
+        "total": 8,
+        "passed": 8,
+        "failed": 0,
+        "skipped": 0,
+        "durationSeconds": 1.5500618,
+        "resultState": "Passed"
+      },
+      "results": [
+        {
+          "name": "AxisDraftsAndLabelDragRespectConflictAndAccess",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionQuickEditTests.AxisDraftsAndLabelDragRespectConflictAndAccess",
+          "state": "Passed",
+          "durationSeconds": 0.0598223,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "IntegerScrubbingPreservesLargeValuesAndRejectsOverflow",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionQuickEditTests.IntegerScrubbingPreservesLargeValuesAndRejectsOverflow",
+          "state": "Passed",
+          "durationSeconds": 0.0047556,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "TagAndLayerWritesAreScopedAndRecheckAccessAndConflict",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionQuickEditTests.TagAndLayerWritesAreScopedAndRecheckAccessAndConflict",
+          "state": "Passed",
+          "durationSeconds": 0.0016652,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "AccessExpiryAndPauseDoNotKeepEditingOrScanAfterSuspend",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionRuntimeTests.AccessExpiryAndPauseDoNotKeepEditingOrScanAfterSuspend",
+          "state": "Passed",
+          "durationSeconds": 0.0497886,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "IndexTracksInactiveRenameReparentDestroyAndDdolUsingPublicSceneApi",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionRuntimeTests.IndexTracksInactiveRenameReparentDestroyAndDdolUsingPublicSceneApi",
+          "state": "Passed",
+          "durationSeconds": 0.067505,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "DraftBlurConflictApplyAndRevocationPreserveAuthoritativeValue",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionUiTests.DraftBlurConflictApplyAndRevocationPreserveAuthoritativeValue",
+          "state": "Passed",
+          "durationSeconds": 0.0482692,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "SceneTabOpensOncePoolsRowsAndRespectsRelock",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionUiTests.SceneTabOpensOncePoolsRowsAndRespectsRelock",
+          "state": "Passed",
+          "durationSeconds": 1.1529542,
+          "message": null,
+          "stackTrace": null,
+          "output": "[DreamyDebugger] Bug Report handler set to Dreamy.Debugger.DebuggerRuntime+OutboxReportHandler\n"
+        },
+        {
+          "name": "TypedChoicesRefreshWithoutSyntheticWritesAndRecheckAccess",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionUiTests.TypedChoicesRefreshWithoutSyntheticWritesAndRecheckAccess",
+          "state": "Passed",
+          "durationSeconds": 0.0490945,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        }
+      ]
+    }
+  },
+  "editmode": {
+    "job_id": "c5f721f0f56e48e49bbbd8c08e560c10",
+    "status": "succeeded",
+    "mode": "EditMode",
+    "started_unix_ms": 1795420578602,
+    "finished_unix_ms": 1795420589279,
+    "last_update_unix_ms": 1795420589279,
+    "progress": {
+      "completed": 18,
+      "total": 18,
+      "current_test_full_name": null,
+      "current_test_started_unix_ms": 1795420589062,
+      "last_finished_test_full_name": "Dreamy.Debugger.Tests.SceneInspectionTests.WritesNestedStructBackToOwner",
+      "last_finished_unix_ms": 1795420589065,
+      "stuck_suspected": false,
+      "editor_is_focused": false,
+      "run_in_background": null,
+      "focus_nudge_attempts": null,
+      "focus_nudge_limit": null,
+      "focus_nudge_status": null,
+      "blocked_reason": null,
+      "failures_so_far": [],
+      "failures_capped": false
+    },
+    "error": null,
+    "result": {
+      "mode": "EditMode",
+      "summary": {
+        "total": 18,
+        "passed": 18,
+        "failed": 0,
+        "skipped": 0,
+        "durationSeconds": 1.8757754,
+        "resultState": "Passed"
+      },
+      "results": [
+        {
+          "name": "BudgetedSearchCancelsOldQueryAndKeepsAncestorContext",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.BudgetedSearchCancelsOldQueryAndKeepsAncestorContext",
+          "state": "Passed",
+          "durationSeconds": 0.030265,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "CatalogShipsBoundSceneAndRowPrefabsWithoutChangingOldEnumValues",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.CatalogShipsBoundSceneAndRowPrefabsWithoutChangingOldEnumValues",
+          "state": "Passed",
+          "durationSeconds": 0.0028141,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "EligibilityDoesNotInvokePropertiesOrExposeHiddenFields",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.EligibilityDoesNotInvokePropertiesOrExposeHiddenFields",
+          "state": "Passed",
+          "durationSeconds": 0.0015452,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "FlagsPreserveHighUnsignedBits",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.FlagsPreserveHighUnsignedBits",
+          "state": "Passed",
+          "durationSeconds": 0.0017364,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidNumbersNeverCommit(\"9223372036854775808\",System.Int64)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.InvalidNumbersNeverCommit(\"9223372036854775808\",System.Int64)",
+          "state": "Passed",
+          "durationSeconds": 0.0064003,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidNumbersNeverCommit(\"NaN\",System.Single)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.InvalidNumbersNeverCommit(\"NaN\",System.Single)",
+          "state": "Passed",
+          "durationSeconds": 0.005024,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidNumbersNeverCommit(\"Infinity\",System.Double)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.InvalidNumbersNeverCommit(\"Infinity\",System.Double)",
+          "state": "Passed",
+          "durationSeconds": 0.0034299,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidNumbersNeverCommit(\"1,NaN,2\",UnityEngine.Vector3)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.InvalidNumbersNeverCommit(\"1,NaN,2\",UnityEngine.Vector3)",
+          "state": "Passed",
+          "durationSeconds": 0.0011683,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "InvalidNumbersNeverCommit(\"2147483648,0\",UnityEngine.Vector2Int)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.InvalidNumbersNeverCommit(\"2147483648,0\",UnityEngine.Vector2Int)",
+          "state": "Passed",
+          "durationSeconds": 0.0010833,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "NumericPrecisionSurvivesRoundTrip(\"9223372036854775807\",System.Int64)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.NumericPrecisionSurvivesRoundTrip(\"9223372036854775807\",System.Int64)",
+          "state": "Passed",
+          "durationSeconds": 0.0020202,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "NumericPrecisionSurvivesRoundTrip(\"18446744073709551615\",System.UInt64)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.NumericPrecisionSurvivesRoundTrip(\"18446744073709551615\",System.UInt64)",
+          "state": "Passed",
+          "durationSeconds": 0.0017029,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "NumericPrecisionSurvivesRoundTrip(\"1.2345678901234567\",System.Double)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.NumericPrecisionSurvivesRoundTrip(\"1.2345678901234567\",System.Double)",
+          "state": "Passed",
+          "durationSeconds": 0.0009356,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "NumericPrecisionSurvivesRoundTrip(\"79228162514264337593543950335\",System.Decimal)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.NumericPrecisionSurvivesRoundTrip(\"79228162514264337593543950335\",System.Decimal)",
+          "state": "Passed",
+          "durationSeconds": 0.0016788,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "RejectsConflictAndExpiredAccessWithoutWriting",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.RejectsConflictAndExpiredAccessWithoutWriting",
+          "state": "Passed",
+          "durationSeconds": 0.0031067,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "RejectsReadonlyAndDestroyedOwners",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.RejectsReadonlyAndDestroyedOwners",
+          "state": "Passed",
+          "durationSeconds": 0.001027,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "WritesCollectionStructBackToItsSlot(False)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.WritesCollectionStructBackToItsSlot(False)",
+          "state": "Passed",
+          "durationSeconds": 0.0034414,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "WritesCollectionStructBackToItsSlot(True)",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.WritesCollectionStructBackToItsSlot(True)",
+          "state": "Passed",
+          "durationSeconds": 0.0016953,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        },
+        {
+          "name": "WritesNestedStructBackToOwner",
+          "fullName": "Dreamy.Debugger.Tests.SceneInspectionTests.WritesNestedStructBackToOwner",
+          "state": "Passed",
+          "durationSeconds": 0.0021743,
+          "message": null,
+          "stackTrace": null,
+          "output": ""
+        }
+      ]
+    }
+  },
+  "manual": {
+    "configuration": "Assets/DebuggerConfiguration.asset",
+    "beforeAllowSceneEditing": false,
+    "afterAllowSceneEditing": true,
+    "control": "Rigidbody Mass",
+    "before": 1,
+    "after": 2.75,
+    "entry": "Hierarchy > Enable editing > Confirm > Apply",
+    "prefabsChecked": 35,
+    "missingScripts": 0,
+    "inspectorSprites": 25
+  },
+  "notes": "Unity-generated YAML and meta trailing whitespace normalized after checks."
+}

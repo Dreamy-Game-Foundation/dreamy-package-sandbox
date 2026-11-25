@@ -19,7 +19,15 @@ MonoBehaviour:
   Credential: 0000
   Passphrase: 0
   SessionSeconds: 300
+  EnableSceneInspection: 1
   AllowSceneEditing: 1
+  HierarchyMemberPresentation: []
+  HierarchyProjectTags: []
+  HierarchyComponentIcons: []
+  SceneRefreshSeconds: 0.25
+  SceneScanBudgetMilliseconds: 1
+  InspectionMaxDepth: 4
+  InspectionPageSize: 32
   PersistRuntimePreferences: 1
   PreferenceRevision: 1
   InitialHud: 0
@@ -43,12 +51,15 @@ MonoBehaviour:
   LowFpsSustain: 3
   LowFpsCooldown: 60
   ScreenshotRestoreKey: 289
+  ScreenshotCaptureKey: 0
+  ScreenshotOutputSubdirectory:
   ScreenshotRestoreTouchHoldSeconds: 1
-  AutoReportErrors: 0
-  AllowScreenshots: 0
-  UploadDuringGameplay: 0
-  RelayUrl: 
+  AutoReportErrors: 1
+  AllowAutoReportingControls: 1
+  AllowScreenshots: 1
+  UploadDuringGameplay: 1
+  RelayUrl: http://127.0.0.1:8765/reports
   LimitedClientKey: 
-  UploadsEnabled: 0
+  UploadsEnabled: 1
   ReportCooldownSeconds: 60
-  ScreenshotLongEdge: 960
+  ScreenshotLongEdge: 1440

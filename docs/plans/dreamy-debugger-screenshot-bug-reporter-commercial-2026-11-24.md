@@ -157,9 +157,15 @@ Giả định một dev Unity/package toàn thời gian, có quyền dùng thi�
 - [ ] **P0 · Hiệu năng và chính sách dữ liệu.** Đo frame time, GC và bộ nhớ khi idle/chụp trên thiết bị yếu. Kiểm build thường, màn nhạy cảm, tắt upload, xóa report local và phạm vi retention phía relay.
 - [ ] **Cổng release.** Chạy lại các fixture rộng từng lỗi hoặc timeout, nghiệm thu clean import/upgrade và ma trận Unity/pipeline đã chọn, xác nhận tương thích build và thiết bị trước khi chốt listing, artifact và rollback.
 
+### Telegram · Kiểm chứng tích hợp
+
+- Đã bổ sung **Send Telegram Test Report** trong Unity Editor. Route riêng chỉ chuyển một report tổng hợp đến Telegram. Unity hiển thị mã report sau khi relay lưu, và lệnh `server.py --delivery-status` đọc trạng thái giao nhận từ SQLite. Telegram giữ cùng mã trên JSON và ảnh khi có đính kèm.
+- Chạy trên Linux với Unity 6000.4.12f1 và relay Python. Từ Editor ở Edit Mode, gửi mẫu qua HTTP loopback. Relay lưu mã `d61fbd88affc4a9cad4cd535ff516c38`, gọi Bot API giả lập với `report.json` và ghi `delivered` sau một lần gửi, chỉ cho Telegram. Console Unity trả về 0 lỗi. Suite relay/setup đạt 28/28, có kiểm tra ack lỗi và retry theo thời gian Telegram trả về.
+- Nghiệm thu bot thật, chat nhận thật và Android qua relay HTTPS vẫn mở. [Hướng dẫn thao tác và kiểm tra receipt](../../LocalPackages/com.dreamy.debugger/Documentation~/REPORTING.md#telegram-test-from-the-editor)
+
 ### Sau bản thương mại đầu tiên
 
-- [ ] **P2 · Telegram.** Nghiệm thu gửi thật qua HTTPS relay và hoàn thiện hướng dẫn vận hành.
+- [ ] **P2 · Telegram thương mại.** Nghiệm thu gửi thật qua HTTPS relay trên các nền tảng dự kiến công bố.
 - [ ] **P2 · Email và Custom Endpoint.** Bổ sung adapter và ví dụ endpoint có kiểm thử.
 - [ ] **P2 · State History và AI export.** Tích hợp lịch sử đã lọc theo hợp đồng của host và bundle offline có schema/mẫu.
 - [ ] **P2 · Screenshot nâng cao.** Preset độ phân giải/tỉ lệ và batch screenshot có giới hạn dung lượng, hủy và kết quả từng ảnh.

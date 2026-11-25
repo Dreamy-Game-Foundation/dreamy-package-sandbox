@@ -58,8 +58,9 @@ MonoBehaviour:
   AllowAutoReportingControls: 1
   AllowScreenshots: 1
   UploadDuringGameplay: 1
-  RelayUrl: http://127.0.0.1:8765/reports
-  LimitedClientKey: 
+  RelayUrl: http://127.0.0.1:8766/reports
+  LimitedClientKey: dreamy-discord-qa
+  ReportingMode: 2
   UploadsEnabled: 1
   ReportCooldownSeconds: 60
-  ScreenshotLongEdge: 1440
+  ScreenshotLongEdge: 960

@@ -4,7 +4,13 @@ Ngày lập 2026-11-27. Publisher **ThunderPunch Studio**. Tên sản phẩm là
 
 ## Tiến độ triển khai
 
-- Đã tạo [repo GitHub private](https://github.com/Thunder-Punch-Studio/com.thunderpunch.debugger) dưới organization **Thunder-Punch-Studio**. Submodule sandbox trỏ đến preview `46176cb`, phiên bản `0.1.0-preview.2`.
+- Repo cũ đã được xóa theo yêu cầu và [repo GitHub private mới cùng tên](https://github.com/Thunder-Punch-Studio/com.thunderpunch.debugger) đã được tạo lại. Submodule sandbox trỏ đến `c7f6798`, phiên bản `0.2.0-preview.2`. Lịch sử preview cũ còn dưới ref backup local. Những checkout sandbox trước khi đổi pin có thể cần ref backup hoặc checkout commit sandbox mới để lấy submodule từ GitHub.
+- Bản rebuild bắt đầu từ 1.093 file Dreamy khớp từng byte với checkout nguồn tại thời điểm sao chép. Đã đổi package, namespace, GUID, menu, đường dẫn lưu/cache và màu giao diện. Logo chính thức của studio được dùng nguyên PNG cho Unity Editor và runtime. Ba logo vendor cũ và các asset logo tạm đã được bỏ. Mã kế thừa trong `Runtime/Imported` vẫn cần rà tiếp trước khi phát hành công khai.
+- Kiểm chứng bản logo chính thức đạt EditMode 178/178, Windows Direct3D 11 PlayMode 115/115 và EditMode 178/178 khi cài archive cạnh Dreamy. Regression Python của rebuild đạt 48/48 cho relay và 2/2 cho công cụ sync. Archive `0.2.0-preview.2` có SHA-256 `5d6b60a502e09e5522187b67d13e953f0743e187467785fb20b14a2353d4581f`. Chưa kiểm thử APK hoặc phát hành Asset Store.
+
+### Lịch sử preview đã được thay thế
+
+- Preview độc lập trước khi reset repo dừng ở `46176cb`, phiên bản `0.1.0-preview.2`.
 - Preview độc lập có Log Capture và Editor Log Monitor, dùng mã và giao diện mới. Unity 6000.4.12f1 chạy qua 3/3 test ThunderPunch khi cài riêng và 3/3 khi cài cùng Dreamy trong project sạch. Việc kiểm thử cả hai debugger trong scene gameplay vẫn cần thực hiện. Dry-run qua 2/2 test Python. Quét 16 GUID ThunderPunch và 570 GUID Dreamy cho kết quả 0 GUID trùng.
 - Đã tạo [quy tắc sync](../debugger/sync-policy.md), [kiểm kê nguồn](../debugger/asset-provenance.md) và [ledger](../debugger/sync-ledger.jsonl). Allowlist thương mại còn trống. Chưa port hệ thống Dreamy, thử sync hai chiều hay chuẩn bị nộp Asset Store.
 - Preview.2 bổ sung overlay QA, FPS, log, kiểm tra scene chỉ đọc, điều khiển giá trị integer do game đăng ký và lưu report local với PNG tùy chọn. Unity 6000.4.12f1 qua 5/5 test từ archive trong project sạch và 5/5 khi chạy test ThunderPunch cạnh Dreamy. Build Windows Release thành công và assembly bản build không chứa hook overlay, screenshot hay đăng ký log QA. Chụp PNG thật, Android/iOS và trải nghiệm trên thiết bị vẫn chưa được kiểm.

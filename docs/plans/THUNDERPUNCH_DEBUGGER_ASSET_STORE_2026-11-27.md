@@ -4,6 +4,14 @@ Ngày lập 2026-11-27. Publisher **ThunderPunch Studio**. Tên sản phẩm là
 
 ## Tiến độ triển khai
 
+### Preview độc lập không có Relay
+
+- `0.3.0-preview.2` bổ sung PIN, Full/Read Only/Off, lọc Console và cây scene, HUD FPS/bộ nhớ, thêm kiểu Inspector, toggle và action, xem ảnh report, và gửi trực tiếp lại khi có mạng trong cùng phiên QA.
+- [Bảng tính năng hiện tại](../../LocalPackages/com.thunderpunch.debugger/Documentation~/FEATURE_PARITY.md) ghi rõ phạm vi đã có và các chênh lệch với bản rebuild cũ. Relay được loại khỏi phạm vi. Kiểm tra vận hành Android và xác nhận giao nhận thật vẫn cần thiết bị và tài khoản đích thử nghiệm.
+- Package `main` ở `783e01f` và nhánh `independent` ở `e98c098`, cùng một cây source. Unity 6000.4.12f1 qua **17/17** từ archive với Null Graphics và **17/17** với Direct3D 11. Python sync qua **4/4**. Windows Release build thành công. Kiểm tra assembly xác nhận không có overlay, log hook, PIN runtime hoặc bộ gửi Direct QA.
+- Android Development ARM64 IL2CPP build thành công sau khi chuyển Gradle cache và TEMP sang ổ D do ổ C hết dung lượng. APK có INTERNET, ABI `arm64-v8a`, debuggable và chữ ký APK v2 hợp lệ. ADB không thấy thiết bị, nên kiểm thử trên điện thoại và giao nhận Discord/Telegram chưa có kết quả.
+- Artifact local nằm trong `D:/Game/ThunderPunch-Studio/ParityNoRelay/Artifacts`. UPM SHA-256 `ae7919757b443662ae619f5de8454e50720bd3050bcf191293625dee01dfae24`. APK SHA-256 `f961eef6891374ecafacf9173ca84b9a2142959669e68fc79967e2c8b470be2e`. Artifact nhị phân được giữ ngoài Git.
+
 ### Bản ThunderPunch độc lập
 
 - ThunderPunch `0.3.0-preview.1` thay bản rebuild trên nhánh `main` tại `24a3b92`. Nhánh `independent` tại `1a04a00` dùng lịch sử của preview viết riêng. Bản rebuild kế thừa nằm ở `archive/private-rebuild`.

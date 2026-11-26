@@ -1,6 +1,6 @@
 # 07 — Direct QA reporting
 
-**Current checkpoint (2026-11-26)** · Editor verification passed for saved Discord and Telegram setup, three delivery-mode checklists, formatted Direct reports, and screenshot orientation. Android build is deferred at the user's request. Physical-device delivery and offline/retry acceptance remain open.
+**Current checkpoint (2026-11-26)** · The user confirmed Direct QA reporting works on the Android APK they tested. The tested APK revision and provider coverage were unspecified. Editor verification passed for saved Discord and Telegram setup, delivery-mode checklists, formatted Direct reports, and screenshot orientation. The per-case Android acceptance matrix remains open.
 
 ## Architecture and tasks
 
@@ -89,3 +89,31 @@ APK and receipts are at `~/Downloads/DreamyDebuggerQA-2026-11-26/` on the Linux 
 - Reports now shows a dedicated checklist for Local Only, Direct QA, and Relay. Local relay tools, mobile HTTPS setup, capture options, and developer tests are collapsible.
 - Direct QA reads the current project's saved Discord and Telegram profiles through the OS credential store. It fills missing session entries and masks provider credentials in the Editor. Relay can fill the chosen local URL and its saved limited key. The active configuration already has a limited key, while neither local launcher has a separate saved ingest-key file.
 - The helper restored both real saved profiles on Linux without sending a message. Unity screenshots used fixture credentials and covered the three modes at normal width and Direct QA at 440 px. The push checkpoint reran the regression checks with 85 EditMode, 6 PlayMode, and 46 Python tests passed. APK build and device testing remain deferred.
+
+## Post-audit hardening
+
+- [x] Persist the Direct QA destination with each queued report. Destination changes and app restarts cannot redirect new bound reports. Existing reports without a destination require explicit assignment before Direct QA can send them. Older Relay entries retain their existing routing.
+- [x] Require separate Android Development credential embedding consent. Editing or restoring a different profile clears consent. On-device setup is available from Delivery tools with session-only credentials and text verification.
+- [x] Preserve per-destination receipts and mark ambiguous provider failures, including 5xx without an acknowledgement, as unconfirmed. Retry requires explicit approval.
+- [x] Restore the authoritative numeric Cheats value after a rejected edit. Suppress local Relay autostart while its setup UI is hidden.
+- [ ] Verify live Discord and Telegram, manual and automatic reports, attachments, offline restart, and the PC-off case on a new Android ARM64 IL2CPP APK. **BLOCKED**. ADB listed zero devices, and this pass did not build or open an APK. The earlier user confirmation still applies to their tested APK.
+- [ ] Verify Hierarchy/Inspector reflection against a real game component in Android IL2CPP, plus physical touch, native gallery/share and weak-device performance. **BLOCKED** on device.
+- [ ] Confirm redistribution rights for vendor-derived assets and code before commercial publication. **BLOCKED**. The local release notes describe internal distribution restrictions. The package version remains 0.1.8 for this unpublished candidate.
+
+### 2026-11-27 verification
+
+| Check | Status | Evidence |
+| --- | --- | --- |
+| Clean consumer EditMode | PASS 178/178 | Unity 6000.4.12f1 installed and tested the candidate via a local UPM tarball. Tests cover staging opt-in, destination isolation and retained ambiguous delivery. |
+| Windows Direct3D 11 PlayMode | PASS 115/115 | Full local package suite, including Cheats input reversion and session credential field visibility/clearing. |
+| Python relay regression | PASS 48/48 | All relay and setup tests ran locally. Provider delivery was not exercised by this run. |
+| UPM archive/source check | PASS | 1092 files matched byte-for-byte. No staged build preset. Candidate SHA-256: `41ca63399353e748fb2495ffff7c7dacb6a5dea2f5747cc6738fb5bccc9bd6b6`. |
+| Physical Android and commercial redistribution | BLOCKED | Zero ADB devices. The vendor redistribution permission remains unverified. |
+
+Local receipts: `D:/Game/DreamyDebuggerValidation/debugger-review-candidate-edit.xml`, `D:/Game/DreamyDebuggerValidation/debugger-review-candidate-play.xml`. This candidate is neither tagged nor published.
+
+## Dreamy outbox sync checkpoint
+
+Dreamy hardening and both outbox fixes are on package `main` at `071a8159d1898614171cbb0c2def151dbaa8e5bb`. The published source matches the tested review branch after line-ending normalization. Unity 6000.4.12f1 passed 180/180 EditMode tests, including recovery from a locked report and a locked temporary cleanup file. Receipt: `D:/Game/ThunderPunch-Studio/Finish/DreamyValidation/dreamy-sync-editmode.xml`.
+
+The newer ThunderPunch APK is a separate fixture. Its success at build and signature checks does not change Dreamy's physical-device or commercial redistribution status.

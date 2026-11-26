@@ -4,9 +4,11 @@ Ngày lập 2026-11-27. Publisher **ThunderPunch Studio**. Tên sản phẩm là
 
 ## Tiến độ triển khai
 
-- Đã tạo [repo GitHub private](https://github.com/Thunder-Punch-Studio/com.thunderpunch.debugger) dưới organization **Thunder-Punch-Studio**. Submodule sandbox trỏ đến preview `b2e53a9`, phiên bản `0.1.0-preview.1`.
+- Đã tạo [repo GitHub private](https://github.com/Thunder-Punch-Studio/com.thunderpunch.debugger) dưới organization **Thunder-Punch-Studio**. Submodule sandbox trỏ đến preview `46176cb`, phiên bản `0.1.0-preview.2`.
 - Preview độc lập có Log Capture và Editor Log Monitor, dùng mã và giao diện mới. Unity 6000.4.12f1 chạy qua 3/3 test ThunderPunch khi cài riêng và 3/3 khi cài cùng Dreamy trong project sạch. Việc kiểm thử cả hai debugger trong scene gameplay vẫn cần thực hiện. Dry-run qua 2/2 test Python. Quét 16 GUID ThunderPunch và 570 GUID Dreamy cho kết quả 0 GUID trùng.
 - Đã tạo [quy tắc sync](../debugger/sync-policy.md), [kiểm kê nguồn](../debugger/asset-provenance.md) và [ledger](../debugger/sync-ledger.jsonl). Allowlist thương mại còn trống. Chưa port hệ thống Dreamy, thử sync hai chiều hay chuẩn bị nộp Asset Store.
+- Preview.2 bổ sung overlay QA, FPS, log, kiểm tra scene chỉ đọc, điều khiển giá trị integer do game đăng ký và lưu report local với PNG tùy chọn. Unity 6000.4.12f1 qua 5/5 test từ archive trong project sạch và 5/5 khi chạy test ThunderPunch cạnh Dreamy. Build Windows Release thành công và assembly bản build không chứa hook overlay, screenshot hay đăng ký log QA. Chụp PNG thật, Android/iOS và trải nghiệm trên thiết bị vẫn chưa được kiểm.
+- Archive UPM preview.2 có 40 file khớp byte-for-byte với source và SHA-256 `d77e273ab2db0c751038ed59b8c1fa5200210cb62dcd0e59471c143e74a83181`. Đây là artifact kiểm thử nội bộ. Các chức năng đang có ở Dreamy như Inspector chỉnh field, report tự động và gửi Discord/Telegram vẫn nằm ngoài preview.2.
 
 ## Mục tiêu và cách duy trì
 

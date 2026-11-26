@@ -4,6 +4,15 @@ Ngày lập 2026-11-27. Publisher **ThunderPunch Studio**. Tên sản phẩm là
 
 ## Tiến độ triển khai
 
+### Bản ThunderPunch độc lập
+
+- ThunderPunch `0.3.0-preview.1` thay bản rebuild trên nhánh `main` tại `24a3b92`. Nhánh `independent` tại `1a04a00` dùng lịch sử của preview viết riêng. Bản rebuild kế thừa nằm ở `archive/private-rebuild`.
+- Archive có 58 file khớp source, không có tài sản hoặc mã import từ Dreamy, SRDebugger hay Graphy. Package chỉ khai báo dependency vào module Unity. Logo trùng byte với PNG studio cung cấp.
+- Archive cài riêng trong Unity 6000.4.12f1, qua **14/14 EditMode**, gồm một test đi qua Play Mode. Bộ test sync Python **4/4**. Build Windows Release thành công và assembly không có overlay, log hook hoặc sender QA. Kiểm tra kết nối provider thật và Android/iOS vẫn chưa thực hiện.
+- Phạm vi của preview gồm Console, FPS, Hierarchy, Inspector scalar đánh dấu, controls integer, report tự động local và gửi ZIP có chủ đích qua Discord/Telegram. Relay, PIN và các kiểu Inspector phức tạp của bản cũ chưa có trong bản độc lập. Hướng dẫn đổi component và nối lại API host nằm trong tài liệu tương thích của package.
+
+### Bản rebuild lưu trữ
+
 - [Repo GitHub private](https://github.com/Thunder-Punch-Studio/com.thunderpunch.debugger) và submodule sandbox đang dùng `cdd58d1`, phiên bản `0.2.0-preview.3`. Lịch sử preview trước lần xóa repo vẫn có ref backup local.
 - Đã chạy đồng bộ hai chiều với hai lỗi thật ở outbox. Dreamy sang ThunderPunch giữ report khi tạm thời không thể đọc. ThunderPunch sang Dreamy tiếp tục hoạt động khi dọn dẹp gặp file bị khóa. Chi tiết SHA, phạm vi và fixture ở [ledger](../debugger/sync-ledger.jsonl). Dreamy có review ref local `review/thunderpunch-sync-2026-11-27` và working tree đã nhận hai thay đổi.
 - Preview.3 đạt EditMode **180/180** ở mỗi package, PlayMode **115/115** khi cài chung và bật ThunderPunch với Dreamy ở **Mode Off**. Một lần bật đồng thời cả hai trả thêm các object UI trong Hierarchy, nên cấu hình đó chưa được nghiệm thu. Python relay **48/48** và sync **4/4**. Windows ReleaseDiagnostics build thành công và kiểm tra assembly không thấy Direct QA sender hay preset staging.

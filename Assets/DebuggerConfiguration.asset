@@ -54,13 +54,13 @@ MonoBehaviour:
   ScreenshotCaptureKey: 0
   ScreenshotOutputSubdirectory:
   ScreenshotRestoreTouchHoldSeconds: 1
+  ReportingMode: 2
   AutoReportErrors: 1
   AllowAutoReportingControls: 1
   AllowScreenshots: 1
   UploadDuringGameplay: 1
   RelayUrl: http://127.0.0.1:8766/reports
   LimitedClientKey: dreamy-discord-qa
-  ReportingMode: 2
   UploadsEnabled: 1
   ReportCooldownSeconds: 60
   ScreenshotLongEdge: 960

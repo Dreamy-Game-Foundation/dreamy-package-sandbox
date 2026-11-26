@@ -1,0 +1,12 @@
+{
+  "approved": [
+    {
+      "path": "Runtime/Reporting/DiskOutbox.cs",
+      "evidence": "DBG-TP-005 and DBG-TP-006, private operational sync of local report retention fix"
+    },
+    {
+      "path": "Tests/EditMode/ReportPipelineTests.cs",
+      "evidence": "DBG-TP-005 and DBG-TP-006, private shared regression fixture"
+    }
+  ]
+}

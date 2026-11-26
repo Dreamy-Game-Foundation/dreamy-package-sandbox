@@ -23,6 +23,18 @@ Kế hoạch triển khai và các điều kiện nghiệm thu nằm trong [kế
 4. Mọi dòng `blocked-unapproved` cần bằng chứng hoặc ghi loại trừ trước khi port. `review-port` đưa file vào phạm vi review. Khi mapping được triển khai, review cả namespace, đường dẫn, GUID và scene/prefab references trước commit. Một lần chạy lặp phải cho kết quả giống nhau.
 5. Ghi SHA commit, version, test receipts và ghi chú migration của từng repo trong ledger. Cập nhật changelog khách hàng tương ứng. Khi rollback, revert commit port hoặc pin lại gitlink và ghi revision đã quay về. Xử lý rollback dữ liệu theo migration của phiên bản.
 
+## Áp dụng thay đổi đã review
+
+`port.py` gom các thay đổi C# hợp lệ thành một bản vá ba chiều, đổi namespace/định danh được hỗ trợ và giữ line endings của đích. Chạy mặc định để review. Chỉ thêm `--apply` khi phạm vi đã đúng. Tool dừng nếu có xung đột và giữ nguyên working tree trước khi áp dụng. Tệp mới, xóa tệp, prefab, GUID và override của theme tiếp tục xử lý riêng.
+
+```powershell
+python -B <ThunderPunchRepo>/Tools~/sync/port.py <source-repo> <base-sha> <head-sha> docs/debugger/sync-private-allowlist.json <destination-repo> dreamy thunderpunch
+```
+
+Để chạy hướng ngược, đổi thứ tự repo và đặt hai tham số cuối là `thunderpunch dreamy`. Allowlist private áp dụng cho nhánh nội bộ. [Allowlist thương mại](sync-allowlist.json) được kiểm riêng theo [kiểm kê nguồn](asset-provenance.md).
+
+Khi cài hai package trong một project, chọn một debugger để hoạt động và đặt **Mode Off** ở package còn lại. Hai debugger bật cùng lúc chưa được xác nhận là cấu hình hỗ trợ. Khi kiểm thử port, ghi rõ package nào active.
+
 ## Sổ theo dõi
 
 Mỗi dòng JSON trong ledger có `id`, `scope`, `summary`, `paths`, `dreamy`, `thunderpunch`, `compatibility`, `verification` và `status`. SHA hoặc version chưa có dùng `null`. Pending hoặc deferred phải ghi điều kiện còn thiếu.

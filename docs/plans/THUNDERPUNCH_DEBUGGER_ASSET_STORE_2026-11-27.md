@@ -4,7 +4,14 @@ Ngày lập 2026-11-27. Publisher **ThunderPunch Studio**. Tên sản phẩm là
 
 ## Tiến độ triển khai
 
-- Repo cũ đã được xóa theo yêu cầu và [repo GitHub private mới cùng tên](https://github.com/Thunder-Punch-Studio/com.thunderpunch.debugger) đã được tạo lại. Submodule sandbox trỏ đến `c7f6798`, phiên bản `0.2.0-preview.2`. Lịch sử preview cũ còn dưới ref backup local. Những checkout sandbox trước khi đổi pin có thể cần ref backup hoặc checkout commit sandbox mới để lấy submodule từ GitHub.
+- [Repo GitHub private](https://github.com/Thunder-Punch-Studio/com.thunderpunch.debugger) và submodule sandbox đang dùng `cdd58d1`, phiên bản `0.2.0-preview.3`. Lịch sử preview trước lần xóa repo vẫn có ref backup local.
+- Đã chạy đồng bộ hai chiều với hai lỗi thật ở outbox. Dreamy sang ThunderPunch giữ report khi tạm thời không thể đọc. ThunderPunch sang Dreamy tiếp tục hoạt động khi dọn dẹp gặp file bị khóa. Chi tiết SHA, phạm vi và fixture ở [ledger](../debugger/sync-ledger.jsonl). Dreamy có review ref local `review/thunderpunch-sync-2026-11-27` và working tree đã nhận hai thay đổi.
+- Preview.3 đạt EditMode **180/180** ở mỗi package, PlayMode **115/115** khi cài chung và bật ThunderPunch với Dreamy ở **Mode Off**. Một lần bật đồng thời cả hai trả thêm các object UI trong Hierarchy, nên cấu hình đó chưa được nghiệm thu. Python relay **48/48** và sync **4/4**. Windows ReleaseDiagnostics build thành công và kiểm tra assembly không thấy Direct QA sender hay preset staging.
+- [Hồ sơ Store](../../LocalPackages/com.thunderpunch.debugger/Documentation~/ASSET_STORE_READINESS.md) và Third-Party Notices đã được bổ sung. Archive preview.3 có 1.088 file khớp source, SHA-256 `3dd69205f9cb1ce5e1a121283fb86d9ad21c444cccc77319e42ad560ff97dfc5`. Không có thiết bị ADB để nghiệm thu Android. Source vendor và các asset phụ thuộc vẫn cần bằng chứng quyền hoặc bản thay thế độc lập.
+
+### Mốc rebuild đã kiểm trước đó
+
+- Repo private được tạo lại cùng tên, sau đó pin `c7f6798` cho `0.2.0-preview.2`. Checkout sandbox ở commit trước lần tạo lại repo có thể cần ref backup hoặc đổi sang commit sandbox mới.
 - Bản rebuild bắt đầu từ 1.093 file Dreamy khớp từng byte với checkout nguồn tại thời điểm sao chép. Đã đổi package, namespace, GUID, menu, đường dẫn lưu/cache và màu giao diện. Logo chính thức của studio được dùng nguyên PNG cho Unity Editor và runtime. Ba logo vendor cũ và các asset logo tạm đã được bỏ. Mã kế thừa trong `Runtime/Imported` vẫn cần rà tiếp trước khi phát hành công khai.
 - Kiểm chứng bản logo chính thức đạt EditMode 178/178, Windows Direct3D 11 PlayMode 115/115 và EditMode 178/178 khi cài archive cạnh Dreamy. Regression Python của rebuild đạt 48/48 cho relay và 2/2 cho công cụ sync. Archive `0.2.0-preview.2` có SHA-256 `5d6b60a502e09e5522187b67d13e953f0743e187467785fb20b14a2353d4581f`. Chưa kiểm thử APK hoặc phát hành Asset Store.
 

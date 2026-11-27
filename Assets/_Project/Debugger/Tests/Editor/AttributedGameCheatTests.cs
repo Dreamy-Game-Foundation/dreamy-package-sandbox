@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using Dreamy.Debugger.Options;
+using ThunderPunch.Debugger.Options;
 using Dreamy.Economy;
 using NUnit.Framework;
 using UnityEngine;

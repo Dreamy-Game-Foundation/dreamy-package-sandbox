@@ -3,7 +3,7 @@
   "references": [
     "Dreamy.Template.Debugger",
     "Dreamy.Template.Runtime",
-    "Dreamy.Debugger.Runtime",
+    "ThunderPunch.Debugger.Runtime",
     "Dreamy.Economy.Runtime",
     "Dreamy.Datasave.Runtime",
     "Dreamy.Feature.Shop.Integration.Runtime"

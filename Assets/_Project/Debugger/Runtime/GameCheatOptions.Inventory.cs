@@ -1,6 +1,6 @@
 using System.ComponentModel;
-using Dreamy.Debugger.Options;
-using Dreamy.Debugger.Presentation;
+using ThunderPunch.Debugger.Options;
+using ThunderPunch.Debugger.Presentation;
 using Dreamy.Economy;
 
 namespace Dreamy.Template.Debugging

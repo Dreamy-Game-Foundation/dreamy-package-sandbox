@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Dreamy.Debugger.Options;
+using ThunderPunch.Debugger.Options;
 
-namespace Dreamy.Debugger.Sample
+namespace ThunderPunch.Debugger.Sample
 {
     public enum DemoDifficulty { Easy, Normal, Hard }
 

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Dreamy.Debugger.Options;
+using ThunderPunch.Debugger.Options;
 
-namespace Dreamy.Debugger.Sample
+namespace ThunderPunch.Debugger.Sample
 {
     /// <summary>Editable template. Bind these delegates to your game's resource service.</summary>
     public sealed class ResourceCheatOptions

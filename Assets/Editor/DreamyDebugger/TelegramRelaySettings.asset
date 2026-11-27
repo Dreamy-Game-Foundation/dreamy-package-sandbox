@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 657296f83bb14b5a0aef415b1bc6ec94, type: 3}
+  m_Script: {fileID: 11500000, guid: 5935bda14bf65b718064a0f6542a5af8, type: 3}
   m_Name: TelegramRelaySettings
-  m_EditorClassIdentifier: Dreamy.Debugger.Editor::Dreamy.Debugger.Editor.TelegramRelaySettings
+  m_EditorClassIdentifier: ThunderPunch.Debugger.Editor::ThunderPunch.Debugger.Editor.TelegramRelaySettings
   ChatId: -5443567953

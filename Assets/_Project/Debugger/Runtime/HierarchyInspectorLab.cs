@@ -1,9 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Dreamy.Debugger;
-using Dreamy.Debugger.Presentation;
-using Dreamy.Debugger.SceneInspection;
+using ThunderPunch.Debugger;
+using ThunderPunch.Debugger.Presentation;
+using ThunderPunch.Debugger.SceneInspection;
 using UnityEngine;
 
 namespace Dreamy.Template.Debugging

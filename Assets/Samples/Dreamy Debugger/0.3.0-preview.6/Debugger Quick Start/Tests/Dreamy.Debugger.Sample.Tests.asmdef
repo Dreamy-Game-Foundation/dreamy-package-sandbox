@@ -1,8 +1,8 @@
 {
-  "name": "Dreamy.Debugger.Sample.Tests",
+  "name": "ThunderPunch.Debugger.Sample.Tests",
   "references": [
-    "Dreamy.Debugger.Runtime",
-    "Dreamy.Debugger.Sample"
+    "ThunderPunch.Debugger.Runtime",
+    "ThunderPunch.Debugger.Sample"
   ],
   "includePlatforms": [
     "Editor"

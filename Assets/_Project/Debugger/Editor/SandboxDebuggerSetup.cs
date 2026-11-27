@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using Dreamy.Debugger;
+using ThunderPunch.Debugger;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -37,7 +37,7 @@ namespace Dreamy.Template.Debugging.Editor
             var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(PrefabPath);
             if (prefab == null)
             {
-                var source = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/com.dreamy.debugger/Runtime/Prefabs/DebuggerBootstrap.prefab");
+                var source = AssetDatabase.LoadAssetAtPath<GameObject>("Packages/com.thunderpunch.debugger/Runtime/Prefabs/DebuggerBootstrap.prefab");
                 var authoring = (GameObject)PrefabUtility.InstantiatePrefab(source);
                 try
                 {

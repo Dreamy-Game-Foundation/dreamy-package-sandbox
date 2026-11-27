@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using Dreamy.Debugger;
-using Dreamy.Debugger.Options;
+using ThunderPunch.Debugger;
+using ThunderPunch.Debugger.Options;
 using Dreamy.Economy;
 
 namespace Dreamy.Template.Debugging

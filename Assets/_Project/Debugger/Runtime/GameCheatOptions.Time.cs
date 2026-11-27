@@ -1,5 +1,5 @@
 using System.ComponentModel;
-using Dreamy.Debugger.Presentation;
+using ThunderPunch.Debugger.Presentation;
 using UnityEngine;
 
 namespace Dreamy.Template.Debugging

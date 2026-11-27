@@ -1,7 +1,7 @@
 using System.ComponentModel;
-using Dreamy.Debugger.Options;
+using ThunderPunch.Debugger.Options;
 
-namespace Dreamy.Debugger.Sample
+namespace ThunderPunch.Debugger.Sample
 {
     public sealed partial class ProjectCheats
     {
@@ -12,7 +12,7 @@ namespace Dreamy.Debugger.Sample
         public bool GodMode { get => godMode; set => SetValue(ref godMode, value); }
 
         [Category("Gameplay"), CheatId("game.speed"), DisplayName("Speed")]
-        [Dreamy.Debugger.Presentation.NumberRange(0.1, 5)]
+        [ThunderPunch.Debugger.Presentation.NumberRange(0.1, 5)]
         public float Speed { get => speed; set => SetValue(ref speed, value); }
 
         [Category("Gameplay"), CheatId("game.difficulty"), DisplayName("Difficulty")]

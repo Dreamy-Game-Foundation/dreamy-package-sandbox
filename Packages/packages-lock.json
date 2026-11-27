@@ -84,8 +84,8 @@
         "com.unity.nuget.newtonsoft-json": "3.2.1"
       }
     },
-    "com.dreamy.debugger": {
-      "version": "file:../LocalPackages/com.dreamy.debugger",
+    "com.thunderpunch.debugger": {
+      "version": "file:../../com.thunderpunch.debugger-rebrand",
       "depth": 0,
       "source": "local",
       "dependencies": {

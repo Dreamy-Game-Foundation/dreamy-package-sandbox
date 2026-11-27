@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ef336202f340ac58bf42cd4e92da6c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 370374f94844519d93d16de055c092f6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Dreamy.Debugger.Editor::Dreamy.Debugger.Editor.DebuggerProjectSettings
+  m_EditorClassIdentifier: ThunderPunch.Debugger.Editor::ThunderPunch.Debugger.Editor.DebuggerProjectSettings
   Loading: 0
   Configuration: {fileID: 11400000, guid: 346108348976216af8defb6218ee229b, type: 2}

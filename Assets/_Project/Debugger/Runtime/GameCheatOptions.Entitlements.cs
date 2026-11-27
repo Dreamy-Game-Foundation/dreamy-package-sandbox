@@ -1,5 +1,5 @@
 using System.ComponentModel;
-using Dreamy.Debugger.Options;
+using ThunderPunch.Debugger.Options;
 using Dreamy.Feature.Shop.Integration;
 
 namespace Dreamy.Template.Debugging

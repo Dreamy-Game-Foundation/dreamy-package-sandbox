@@ -1,9 +1,9 @@
 {
-  "name": "Dreamy.Debugger.Sample.Tests.PlayMode",
+  "name": "ThunderPunch.Debugger.Sample.Tests.PlayMode",
   "references": [
-    "Dreamy.Debugger.Runtime",
-    "Dreamy.Debugger.Sample",
-    "Dreamy.Debugger.Engine"
+    "ThunderPunch.Debugger.Runtime",
+    "ThunderPunch.Debugger.Sample",
+    "ThunderPunch.Debugger.Engine"
   ],
   "optionalUnityReferences": [
     "TestAssemblies"

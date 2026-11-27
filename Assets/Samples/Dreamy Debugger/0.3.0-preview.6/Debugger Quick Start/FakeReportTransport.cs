@@ -1,9 +1,9 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Dreamy.Debugger.Reporting;
+using ThunderPunch.Debugger.Reporting;
 
-namespace Dreamy.Debugger.Sample
+namespace ThunderPunch.Debugger.Sample
 {
     public enum FakeReportOutcome { Success, Offline, RateLimited, ServerError, Reject, Timeout }
     /// <summary>No sockets, credentials, file IO or real destinations. Configure before starting a send.</summary>

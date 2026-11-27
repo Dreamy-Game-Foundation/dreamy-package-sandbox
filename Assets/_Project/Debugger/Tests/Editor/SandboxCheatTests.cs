@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
-using Dreamy.Debugger.Options;
+using ThunderPunch.Debugger.Options;
 using Dreamy.Datasave;
 using Dreamy.Economy;
 using Dreamy.Feature.Shop.Integration;

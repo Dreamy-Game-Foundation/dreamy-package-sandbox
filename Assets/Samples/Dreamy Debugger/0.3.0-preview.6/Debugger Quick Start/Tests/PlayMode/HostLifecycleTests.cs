@@ -1,11 +1,11 @@
 using System;
 using System.Collections;
-using Dreamy.Debugger.Access;
+using ThunderPunch.Debugger.Access;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace Dreamy.Debugger.Sample.Tests
+namespace ThunderPunch.Debugger.Sample.Tests
 {
     public sealed class HostLifecycleTests
     {

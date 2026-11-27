@@ -1,11 +1,11 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Dreamy.Debugger.Options;
-using Dreamy.Debugger.Reporting;
+using ThunderPunch.Debugger.Options;
+using ThunderPunch.Debugger.Reporting;
 using NUnit.Framework;
 
-namespace Dreamy.Debugger.Sample.Tests
+namespace ThunderPunch.Debugger.Sample.Tests
 {
     public sealed class FakeReportTests
     {

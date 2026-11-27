@@ -1,7 +1,7 @@
 using System.ComponentModel;
-using Dreamy.Debugger.Options;
+using ThunderPunch.Debugger.Options;
 
-namespace Dreamy.Debugger.Sample
+namespace ThunderPunch.Debugger.Sample
 {
     public sealed partial class ProjectCheats
     {

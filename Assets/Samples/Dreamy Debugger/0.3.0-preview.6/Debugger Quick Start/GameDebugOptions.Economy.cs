@@ -1,8 +1,8 @@
 using System.ComponentModel;
-using Dreamy.Debugger.Options;
-using Dreamy.Debugger.Presentation;
+using ThunderPunch.Debugger.Options;
+using ThunderPunch.Debugger.Presentation;
 
-namespace Dreamy.Debugger.Sample
+namespace ThunderPunch.Debugger.Sample
 {
     public partial class GameDebugOptions
     {

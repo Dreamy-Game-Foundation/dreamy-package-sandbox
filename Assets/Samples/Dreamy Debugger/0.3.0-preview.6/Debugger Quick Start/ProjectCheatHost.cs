@@ -1,9 +1,9 @@
 using System;
-using Dreamy.Debugger.Access;
-using Dreamy.Debugger.Options;
+using ThunderPunch.Debugger.Access;
+using ThunderPunch.Debugger.Options;
 using UnityEngine;
 
-namespace Dreamy.Debugger.Sample
+namespace ThunderPunch.Debugger.Sample
 {
     /// <summary>Explicit opt-in demo host. No input interception or automatic startup.</summary>
     public sealed class ProjectCheatHost : MonoBehaviour

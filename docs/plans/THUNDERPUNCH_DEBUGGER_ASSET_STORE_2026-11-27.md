@@ -4,6 +4,32 @@ Ngày lập 2026-11-27. Publisher **ThunderPunch Studio**. Tên sản phẩm là
 
 ## Tiến độ triển khai
 
+### Bản đổi thương hiệu cho QA nội bộ
+
+- Checkout riêng `qa/dreamy-rebrand` ở `bfe23a0`, trên nền `archive/private-rebuild` (`cdd58d1`). Bản độc lập và các sửa đổi đang làm được giữ ở checkout sandbox.
+- So với Dreamy `071a815`, 21/22 file của delta từ `9027182` giống nhau sau khi quy đổi tên. File còn lại chỉ khác nhận diện HTTP và phiên bản ThunderPunch. Quét runtime, Editor và prefab/scene không thấy phụ thuộc tới tên hoặc GUID Dreamy. Package chỉ khai báo dependency Unity.
+- Gói UPM được cài trong project sạch chỉ có ThunderPunch. Unity 6000.4.12f1 trên Linux đạt 178 EditMode pass, hai fixture Windows được bỏ qua theo thiết kế, và 6 PlayMode tập trung pass. Python relay và sync đạt 48/48 và 4/4. SHA-256 của gói QA `cb10f2343227d4072aa961a46ec11d4eec4f709704ed5c727d4a66d3e6008b86`.
+- Bản này giữ mã và asset kế thừa cho QA nội bộ. Việc phân phối công khai vẫn tùy kết quả rà quyền.
+
+### Sandbox chuyển sang ThunderPunch rebuild
+
+- Sandbox dùng checkout QA `bfe23a0` ở thư mục cùng cấp `com.thunderpunch.debugger-rebrand`. Manifest và lock chỉ nạp debugger này. Dreamy Debugger và checkout ThunderPunch độc lập được giữ làm source, còn cấu hình auto-start SRDebugger đặt Off.
+- Mã host, sample, config và scene Hierarchy đã chuyển sang API ThunderPunch. Tham chiếu package dùng bảng GUID của rebuild, còn GUID project được giữ nguyên.
+- Đối chiếu 265 tệp C# Runtime và Editor ở mỗi package cho thấy không thiếu tệp. Có 255 tệp giống nhau sau khi quy đổi tên và 10 tệp khác ở palette, logo, trình tạo asset, fallback sample và nhận diện phiên bản. Package khai báo dependency Unity.
+- Bản Linux Development chỉ cài ThunderPunch từ tarball đã render Console, Hierarchy và Cheats ở 1080 × 680, cùng Report ở 480 × 850. Ảnh dùng scene QA và nằm trong visual-review local.
+- Bản sao sandbox đạt 36 EditMode, hai test khóa file dành riêng cho Windows được bỏ qua. Hai test chuyển đổi xác nhận chỉ ThunderPunch rebuild được Unity Package Manager nạp, SRDebugger Off và scene Hierarchy nạp một runtime ThunderPunch, không có Missing Script.
+- Full PlayMode trên Linux OpenGL ở lượt chạy cuối với profile Unity sạch đạt 115/115 từ tarball. Lượt đồ họa đầu trên profile đã dùng trước đó đạt 111/115, và cả bốn ca đều pass khi chạy riêng. Android thật và giao nhận provider thật chưa được thử trong lượt này.
+
+### Chuyển tiếp tính năng Dreamy sang ThunderPunch
+
+- Mốc `DBG-TP-010` đang ở working tree ThunderPunch, dựa trên `783e01f`. Tính năng được triển khai bằng mã ThunderPunch, với định danh, logo và dữ liệu riêng.
+- Đã bổ sung khởi động QA tự động tùy chọn, phím tắt và mở từ góc màn hình, PIN/passphrase có hạn phiên, Console gộp/copy/ghim và mở Hierarchy từ log có context.
+- Hierarchy có nhánh thu gọn, chỉnh tag/layer, active, bật/tắt Behaviour, chỉnh từng trục Transform, field lồng, phần tử collection hiện có và chọn scene reference. Controls hỗ trợ kiểu giá trị, stable ID, property/action opt-in qua attribute, lọc và ghim nhóm.
+- Có HUD kéo được, lịch sử frame time, thông tin hệ thống và chế độ PNG riêng với canvas được chỉ định. Reporting có checklist Editor, stack trace và context có cấu trúc, Direct Discord/Telegram có tóm tắt, hàng đợi nhiều report và gửi lỗi tự động khi người vận hành bật trong phiên đã xác minh đích nhận.
+- Unity 6000.4.12f1 trên Linux qua 25/25 EditMode khi cài riêng và 25/25 khi cài cạnh Dreamy. Công cụ sync qua 4/4. Linux Release build thành công và kiểm tra assembly loại trừ mã khởi động QA, overlay, bộ gửi Direct và chụp ảnh. Không phát hiện trùng GUID giữa hai package.
+- Linux Development player chụp được PNG 768 × 432 đúng nội dung fixture. Canvas được chọn đã ẩn trong lúc chụp và được khôi phục sau đó, còn canvas khác vẫn bật.
+- Bản độc lập chưa có preset credential nhúng vào Development APK, native gallery/share, resize collection, asset-reference picker, toàn bộ drawer/component Unity, profiler chuyên sâu, hoặc tương thích trực tiếp prefab và card Dreamy. Relay nằm ngoài phạm vi của bản độc lập. Điện thoại thật, provider thật và Asset Store vẫn chờ.
+
 ### Preview độc lập không có Relay
 
 - `0.3.0-preview.2` bổ sung PIN, Full/Read Only/Off, lọc Console và cây scene, HUD FPS/bộ nhớ, thêm kiểu Inspector, toggle và action, xem ảnh report, và gửi trực tiếp lại khi có mạng trong cùng phiên QA.

@@ -1,6 +1,6 @@
 using System;
 using Dreamy.Core;
-using Dreamy.Debugger;
+using ThunderPunch.Debugger;
 using Dreamy.Economy;
 using UnityEngine;
 
@@ -21,7 +21,7 @@ namespace Dreamy.Template.Debugging
         }
         private IDisposable registration;
         private DebuggerRuntime owner;
-        private Dreamy.Debugger.Options.CheatRegistry registeredRegistry;
+        private ThunderPunch.Debugger.Options.CheatRegistry registeredRegistry;
         private bool registrationFailed;
         public GameCheatOptions Options { get; private set; }
 

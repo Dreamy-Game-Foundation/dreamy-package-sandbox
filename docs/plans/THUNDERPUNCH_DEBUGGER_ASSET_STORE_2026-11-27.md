@@ -33,7 +33,7 @@ Ngày lập 2026-11-27. Publisher **ThunderPunch Studio**. Tên sản phẩm là
 ### Preview độc lập không có Relay
 
 - `0.3.0-preview.2` bổ sung PIN, Full/Read Only/Off, lọc Console và cây scene, HUD FPS/bộ nhớ, thêm kiểu Inspector, toggle và action, xem ảnh report, và gửi trực tiếp lại khi có mạng trong cùng phiên QA.
-- [Bảng tính năng hiện tại](../../LocalPackages/com.thunderpunch.debugger/Documentation~/FEATURE_PARITY.md) ghi rõ phạm vi đã có và các chênh lệch với bản rebuild cũ. Relay được loại khỏi phạm vi. Kiểm tra vận hành Android và xác nhận giao nhận thật vẫn cần thiết bị và tài khoản đích thử nghiệm.
+- Bảng tính năng của bản độc lập tại revision `905fd34` ghi phạm vi đã có và chênh lệch với rebuild. Relay được loại khỏi bản độc lập. Kiểm tra vận hành Android và xác nhận giao nhận thật vẫn cần thiết bị và tài khoản đích thử nghiệm.
 - Package `main` ở `783e01f` và nhánh `independent` ở `e98c098`, cùng một cây source. Unity 6000.4.12f1 qua **17/17** từ archive với Null Graphics và **17/17** với Direct3D 11. Python sync qua **4/4**. Windows Release build thành công. Kiểm tra assembly xác nhận không có overlay, log hook, PIN runtime hoặc bộ gửi Direct QA.
 - Android Development ARM64 IL2CPP build thành công sau khi chuyển Gradle cache và TEMP sang ổ D do ổ C hết dung lượng. APK có INTERNET, ABI `arm64-v8a`, debuggable và chữ ký APK v2 hợp lệ. ADB không thấy thiết bị, nên kiểm thử trên điện thoại và giao nhận Discord/Telegram chưa có kết quả.
 - Artifact local nằm trong `D:/Game/ThunderPunch-Studio/ParityNoRelay/Artifacts`. UPM SHA-256 `ae7919757b443662ae619f5de8454e50720bd3050bcf191293625dee01dfae24`. APK SHA-256 `f961eef6891374ecafacf9173ca84b9a2142959669e68fc79967e2c8b470be2e`. Artifact nhị phân được giữ ngoài Git.
@@ -50,7 +50,7 @@ Ngày lập 2026-11-27. Publisher **ThunderPunch Studio**. Tên sản phẩm là
 - [Repo GitHub private](https://github.com/Thunder-Punch-Studio/com.thunderpunch.debugger) và submodule sandbox đang dùng `cdd58d1`, phiên bản `0.2.0-preview.3`. Lịch sử preview trước lần xóa repo vẫn có ref backup local.
 - Đã chạy đồng bộ hai chiều với hai lỗi thật ở outbox. Dreamy sang ThunderPunch giữ report khi tạm thời không thể đọc. ThunderPunch sang Dreamy tiếp tục hoạt động khi dọn dẹp gặp file bị khóa. Chi tiết SHA, phạm vi và fixture ở [ledger](../debugger/sync-ledger.jsonl). Dreamy có review ref local `review/thunderpunch-sync-2026-11-27` và working tree đã nhận hai thay đổi.
 - Preview.3 đạt EditMode **180/180** ở mỗi package, PlayMode **115/115** khi cài chung và bật ThunderPunch với Dreamy ở **Mode Off**. Một lần bật đồng thời cả hai trả thêm các object UI trong Hierarchy, nên cấu hình đó chưa được nghiệm thu. Python relay **48/48** và sync **4/4**. Windows ReleaseDiagnostics build thành công và kiểm tra assembly không thấy Direct QA sender hay preset staging.
-- [Hồ sơ Store](../../LocalPackages/com.thunderpunch.debugger/Documentation~/ASSET_STORE_READINESS.md) và Third-Party Notices đã được bổ sung. Archive preview.3 có 1.088 file khớp source, SHA-256 `3dd69205f9cb1ce5e1a121283fb86d9ad21c444cccc77319e42ad560ff97dfc5`. Không có thiết bị ADB để nghiệm thu Android. Source vendor và các asset phụ thuộc vẫn cần bằng chứng quyền hoặc bản thay thế độc lập.
+- [Hồ sơ Store](../../LocalPackages/com.thunderpunch.debugger-rebrand/Documentation~/ASSET_STORE_READINESS.md) và Third-Party Notices đã được bổ sung. Archive preview.3 có 1.088 file khớp source, SHA-256 `3dd69205f9cb1ce5e1a121283fb86d9ad21c444cccc77319e42ad560ff97dfc5`. Không có thiết bị ADB để nghiệm thu Android. Source vendor và các asset phụ thuộc vẫn cần bằng chứng quyền hoặc bản thay thế độc lập.
 
 ### Mốc rebuild đã kiểm trước đó
 
@@ -68,7 +68,7 @@ Ngày lập 2026-11-27. Publisher **ThunderPunch Studio**. Tên sản phẩm là
 
 ## Mục tiêu và cách duy trì
 
-Tạo submodule riêng tại `LocalPackages/com.thunderpunch.debugger`, trỏ tới repo riêng do ThunderPunch Studio sở hữu. Package có ID `com.thunderpunch.debugger`, namespace gốc `ThunderPunch.Debugger`, bộ UI và tài sản thương hiệu riêng. Package Dreamy tiếp tục phát hành theo ID, API, GUID và lịch sử version của nó. Khách cài ThunderPunch chỉ cần các dependency đã công bố của ThunderPunch.
+Từ 2026-11-28, sandbox duy trì một checkout ThunderPunch tại `LocalPackages/com.thunderpunch.debugger-rebrand`, trỏ tới repo do ThunderPunch Studio sở hữu. Package giữ ID `com.thunderpunch.debugger`, namespace `ThunderPunch.Debugger` và các GUID đang được sử dụng. Dùng chính checkout này để chuẩn bị bản thương mại. Rà quyền theo tệp và thay phần cần thiết ngay trong codebase đó. Bản độc lập trước đây được giữ làm lịch sử tham chiếu trong Git. Package Dreamy có ID, API, GUID và lịch sử phát hành riêng.
 
 **Dùng Dreamy làm upstream cho phần logic chung đã được phép phân phối.** Sửa logic chung một lần tại upstream rồi đồng bộ qua pipeline có danh sách cho phép. Nếu lỗi được phát hiện ở ThunderPunch, thêm regression test và đưa bản sửa logic chung vào Dreamy trước, sau đó đồng bộ lại ThunderPunch. UI, logo, menu, prefab trình bày và cấu hình sản phẩm do từng package sở hữu. Agent có thể đưa cải tiến hành vi UI về Dreamy qua PR riêng áp dụng theme của Dreamy. Mỗi repo có branch, changelog, tag và lịch phát hành riêng.
 

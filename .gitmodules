@@ -58,10 +58,7 @@
 [submodule "LocalPackages/com.dreamy.debugger"]
 	path = LocalPackages/com.dreamy.debugger
 	url = https://github.com/Dreamy-Game-Foundation/com.dreamy.debugger.git
-[submodule "LocalPackages/com.thunderpunch.debugger"]
-	path = LocalPackages/com.thunderpunch.debugger
-	url = https://github.com/Thunder-Punch-Studio/com.thunderpunch.debugger.git
 [submodule "LocalPackages/com.thunderpunch.debugger-rebrand"]
 	path = LocalPackages/com.thunderpunch.debugger-rebrand
 	url = https://github.com/Thunder-Punch-Studio/com.thunderpunch.debugger.git
-	branch = qa/dreamy-rebrand
+	branch = main

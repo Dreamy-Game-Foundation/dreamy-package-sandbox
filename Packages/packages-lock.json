@@ -84,8 +84,27 @@
         "com.unity.nuget.newtonsoft-json": "3.2.1"
       }
     },
+    "com.dreamy.debugger": {
+      "version": "file:../LocalPackages/com.dreamy.debugger",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.ugui": "2.0.0",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.modules.screencapture": "1.0.0",
+        "com.unity.modules.androidjni": "1.0.0",
+        "com.unity.modules.animation": "1.0.0",
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.physics2d": "1.0.0",
+        "com.unity.modules.particlesystem": "1.0.0"
+      }
+    },
     "com.thunderpunch.debugger": {
-      "version": "file:../../com.thunderpunch.debugger-rebrand",
+      "version": "file:../LocalPackages/com.thunderpunch.debugger-rebrand",
       "depth": 0,
       "source": "local",
       "dependencies": {

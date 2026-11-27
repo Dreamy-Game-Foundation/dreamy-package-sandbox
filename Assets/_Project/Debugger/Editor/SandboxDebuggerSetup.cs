@@ -14,7 +14,7 @@ namespace Dreamy.Template.Debugging.Editor
         public const string PrefabPath = Root + "/Prefabs/SandboxDebugger.prefab";
         public const string ConfigPath = Root + "/SandboxDebuggerConfiguration.asset";
 
-        [MenuItem("Window/Dreamy Debugger/Set up sandbox game cheats", priority = 110)]
+        [MenuItem("Window/ThunderPunch Debugger/Set up sandbox game cheats", priority = 110)]
         public static void InstallIntoStartupScene()
         {
             if (EditorApplication.isPlayingOrWillChangePlaymode || PrefabStageUtility.GetCurrentPrefabStage() != null)

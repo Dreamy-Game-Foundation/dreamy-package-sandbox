@@ -13,7 +13,7 @@ Ngày lập 2026-11-27. Publisher **ThunderPunch Studio**. Tên sản phẩm là
 
 ### Sandbox chuyển sang ThunderPunch rebuild
 
-- Sandbox dùng checkout QA `bfe23a0` ở thư mục cùng cấp `com.thunderpunch.debugger-rebrand`. Manifest và lock chỉ nạp debugger này. Dreamy Debugger và checkout ThunderPunch độc lập được giữ làm source, còn cấu hình auto-start SRDebugger đặt Off.
+- Sandbox ghim bản QA `bfe23a0` tại submodule `LocalPackages/com.thunderpunch.debugger-rebrand`. Dreamy và ThunderPunch rebuild có menu và cấu hình riêng. Dreamy khởi động thủ công, ThunderPunch tự khởi động. Bản ThunderPunch độc lập được giữ làm source. SRDebugger Off.
 - Mã host, sample, config và scene Hierarchy đã chuyển sang API ThunderPunch. Tham chiếu package dùng bảng GUID của rebuild, còn GUID project được giữ nguyên.
 - Đối chiếu 265 tệp C# Runtime và Editor ở mỗi package cho thấy không thiếu tệp. Có 255 tệp giống nhau sau khi quy đổi tên và 10 tệp khác ở palette, logo, trình tạo asset, fallback sample và nhận diện phiên bản. Package khai báo dependency Unity.
 - Bản Linux Development chỉ cài ThunderPunch từ tarball đã render Console, Hierarchy và Cheats ở 1080 × 680, cùng Report ở 480 × 850. Ảnh dùng scene QA và nằm trong visual-review local.

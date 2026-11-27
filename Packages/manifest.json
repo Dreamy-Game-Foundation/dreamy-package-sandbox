@@ -14,6 +14,7 @@
     "com.dreamy.feedback",
     "com.dreamy.connectivity",
     "com.dreamy.feature.battle-pass",
+    "com.dreamy.debugger",
     "com.thunderpunch.debugger",
     "com.dreamy.editor-tools"
   ],
@@ -90,6 +91,7 @@
     "com.unity.modules.xr": "1.0.0",
     "com.dreamy.connectivity": "file:../LocalPackages/com.dreamy.connectivity",
     "com.dreamy.feature.battle-pass": "file:../LocalPackages/com.dreamy.feature.battle-pass",
-    "com.thunderpunch.debugger": "file:../../com.thunderpunch.debugger-rebrand"
+    "com.dreamy.debugger": "file:../LocalPackages/com.dreamy.debugger",
+    "com.thunderpunch.debugger": "file:../LocalPackages/com.thunderpunch.debugger-rebrand"
   }
 }
